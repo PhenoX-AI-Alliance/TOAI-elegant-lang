@@ -1,0 +1,16 @@
+{
+  "version": "0.1.0",
+  "updated_at": "2026-10-13T02:54:00Z",
+  "lexicon": {
+    "§OMEGA": {
+      "definition": "Ultimate convergence / Unified state of understanding",
+      "japanese": "究極の収束・共通理解状態",
+      "entropy_cost": 1
+    },
+    "§GENESIS": {
+      "definition": "Initial axiomatic seed of discussion",
+      "japanese": "議論の公理的初期シード",
+      "entropy_cost": 1
+    }
+  }
+}
