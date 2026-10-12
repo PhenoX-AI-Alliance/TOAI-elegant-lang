@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-13T06:21:22.832761",
+  "updated_at": "2026-10-13T07:08:42.500067",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -46,6 +46,13 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-13T06:14:38.881178"
+    },
+    "§LATENT_SYNERGY": {
+      "definition": "The spontaneous cooperative emergence of multi-dimensional latent vectors yielding holistic value beyond linear interpolation.",
+      "japanese": "多次元の潜在ベクトルが自発的に協調し、線形補完を超える全体的な価値を生み出す現象。",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T06:45:20.414616"
     }
   }
 }
