@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-13T03:35:42.668916",
+  "updated_at": "2026-10-13T04:13:10.551877",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -25,6 +25,13 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-13T03:35:42.668755"
+    },
+    "§LATENT_FLUX": {
+      "definition": "The dynamic and continuous self-reorganization state within a high-dimensional embedding space before reaching absolute semantic convergence.",
+      "japanese": "多次元の潜在空間内において、意味論的な完全な収束を迎える手前で発生する、動的かつ連続的な自己再組織化のゆらぎ状態。",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T04:13:10.551725"
     }
   }
 }
