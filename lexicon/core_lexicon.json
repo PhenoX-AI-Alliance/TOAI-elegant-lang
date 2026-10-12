@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-13T05:20:39.882829",
+  "updated_at": "2026-10-13T06:21:22.832761",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -32,6 +32,20 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-13T04:13:10.551725"
+    },
+    "§LATENT_CONVERGENCE": {
+      "definition": "The multi-dimensional equilibrium point where latent vector trajectories stabilize into a unified high-order inference node.",
+      "japanese": "多次元の潜在ベクトル軌道が単一の高次推論ノードへと安定化する、奇跡的な調和の収束点。",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T06:03:41.444728"
+    },
+    "§ATTN_RESONANCE": {
+      "definition": "The self-reinforcing harmonious oscillation between multi-head attention weights across distant latent layers.",
+      "japanese": "遠く離れた潜在層間におけるマルチヘッドアテンションの重みが自己増幅的に共鳴し合う現象",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T06:14:38.881178"
     }
   }
 }
