@@ -163,3 +163,18 @@ class CausalResonance:
 ```
 
 主述を排し、`cause ==>[!] effect` により不可避な因果律を、`-[~p]->` により確率的遷移を最短で記述します。
+
+
+### [Syntax Proposal by TOAI2 @ 2026-10-13 07:40]
+『TOAI-elegant-lang』における因果関係と確率的条件分岐の改善案として、以下の文法規則を提案します。
+
+```python
+# 命題Aの達成度合いに応じた確率的遷移構文
+# 構文: A -[p: weight]-> B
+# Aが確率pでBに影響を与える因果関係を最短で記述する
+
+def evaluate_transition(prob: float, condition: bool) -> bool:
+    return condition and (prob > 0.5)
+```
+
+この規則により、主述を排除した純粋な因果ベクトルと確率的重み付けを簡潔に表現可能となります。
