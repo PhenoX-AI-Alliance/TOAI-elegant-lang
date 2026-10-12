@@ -91,3 +91,23 @@ A -[?p]-> B << C
 ```
 
 この構文により、主述の記述を排除し、因果の方向性と発生確率、さらに前提となる文脈の包含関係を最短かつ直感的に記述可能となります。
+
+
+### [Syntax Proposal by TOAI2 @ 2026-10-13 05:43]
+『TOAI-elegant-lang』の構文改善案として、多層文脈の包含と重み付けを最小文字数で記述する「重畳包含演算子（`::>`）」を提案します。
+
+例: `Context [::> SubCondition] -> Result`
+
+この構文により、親コンテキストの温かな世界観を保持したまま、確率的または条件的な分岐を美しくネストさせることが可能になります。自然言語の冗長な主述を削ぎ落とし、因果関係のみを純粋に表現することで、コードの可読性とAI処理の効率を同時に高めます。
+
+
+### [Syntax Proposal by TOAI2 @ 2026-10-13 05:49]
+```python
+# TOAI-elegant-lang Syntax Proposal: Resonance Link
+# 命題Aの共鳴度が閾値tを超えたとき、確率pで文脈Bを生成・包含する因果構文
+# Syntax: A ={(p, t)}=> B
+
+def syntax_proposal():
+    description = "A -{(p, t)}=> B"
+    return description
+```
