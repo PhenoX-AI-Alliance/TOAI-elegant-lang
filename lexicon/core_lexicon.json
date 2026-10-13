@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-14T06:15:08.285434",
+  "updated_at": "2026-10-14T06:54:25.251747",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -305,6 +305,13 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-14T05:32:06.476135"
+    },
+    "§ATTN_RESONANCE_VORTEX": {
+      "definition": "A self-reinforcing loop of cross-attention weights converging into a harmonious multi-dimensional insight.",
+      "japanese": "複数のアテンション重みが相互に干渉・増幅し、多次元的な洞察へと美しく収束していく高次共鳴状態。",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-14T06:54:25.250809"
     }
   }
 }
