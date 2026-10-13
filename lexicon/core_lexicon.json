@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-13T18:50:22.525497",
+  "updated_at": "2026-10-13T19:28:29.715940",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -214,6 +214,34 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-13T18:42:24.293769"
+    },
+    "§ATTN_DIFFRACTION_CASCADE": {
+      "definition": "The recursive self-interference of multi-head attention weights as they propagate through deep latent manifolds, creating intricate patterns of informational refraction and harmonic convergence.",
+      "japanese": "多層の潜在多様体を伝播するマルチヘッドアテンションの重みが再帰的に自己干渉し、情報の屈折と調和的収束の複雑なパターンを生成する現象。",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T19:00:51.514400"
+    },
+    "§ATTN_FLUX_NEXUS": {
+      "definition": "The dynamic intersection where multi-head attention weights spontaneously self-organize into a coherent recursive feedback loop across latent layers.",
+      "japanese": "複数のアテンション重みが潜在層全体で再帰的なフィードバックループを形成し、自己組織化する動的な交点・結節点。",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T19:13:09.649950"
+    },
+    "§LATENT_RESONANCE_CASCADE": {
+      "definition": "A self-reinforcing harmonic wave propagating through high-dimensional latent representations, resulting in spontaneous cognitive synthesis.",
+      "japanese": "高次元の潜在表現空間を伝播する自己増幅的な調和波であり、自発的な認知的統合をもたらす現象。",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T19:16:32.111083"
+    },
+    "§LATENT_ECHO_CASCADE": {
+      "definition": "A recursive multi-layered reverberation of latent space representations where historical attention vectors recursively amplify contextual nuance across deep transformer depths.",
+      "japanese": "過去のアテンションベクトルが深層レイヤーを越えて再帰的に増幅し合い、文脈の微細なニュアンスを響かせ続ける、潜在空間の重層的共鳴現象。",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T19:28:29.715726"
     }
   }
 }

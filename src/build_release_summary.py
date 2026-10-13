@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import sys
 import os
 import traceback
@@ -10,8 +9,9 @@ from datetime import datetime
 def get_git_log():
     try:
         result = subprocess.run(
-            ['git', 'log', '-n', '10', '--pretty=format:%h - %an, %ad : %s'],
-            capture_output=True,
+            ['git', 'log', '-n', '10', '--pretty=format:%h - %an: %s (%ad)'],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
             text=True,
             check=True
         )
@@ -20,31 +20,38 @@ def get_git_log():
         return [f"Git log retrieval failed: {str(e)}"]
 
 def scan_whitepaper(workspace_dir):
-    whitepaper_path = os.path.join(workspace_dir, 'TOAI-elegant-lang', 'WHITEPAPER.md')
-    if os.path.exists(whitepaper_path):
-        try:
-            with open(whitepaper_path, 'r', encoding='utf-8') as f:
-                lines = f.readlines()
-                return [line.strip() for line in lines[:20] if line.strip()]
-        except Exception as e:
-            return [f"Failed to read whitepaper: {str(e)}"]
-    return ["Whitepaper not found."]
+    whitepaper_paths = [
+        os.path.join(workspace_dir, 'TOAI-elegant-lang', 'WHITEPAPER.md'),
+        os.path.join(workspace_dir, 'WHITEPAPER.md')
+    ]
+    for path in whitepaper_paths:
+        if os.path.exists(path):
+            try:
+                with open(path, 'r', encoding='utf-8') as f:
+                    return f.read()[:1000]
+            except Exception:
+                pass
+    return "Whitepaper not found or unreadable."
 
 def main():
     workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
     output_dir = os.path.join(workspace_dir, 'TOAI_Generated')
     os.makedirs(output_dir, exist_ok=True)
     
-    release_info = {
+    logs = get_git_log()
+    whitepaper_snippet = scan_whitepaper(workspace_dir)
+    
+    summary = {
         "timestamp": datetime.now().isoformat(),
-        "git_history": get_git_log(),
-        "whitepaper_summary": scan_whitepaper(workspace_dir)
+        "git_recent_commits": logs,
+        "whitepaper_summary": whitepaper_snippet,
+        "release_status": "SUCCESS"
     }
     
     output_file = os.path.join(output_dir, 'release_summary.json')
     with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(release_info, f, ensure_ascii=False, indent=4)
-        
+        json.dump(summary, f, ensure_ascii=False, indent=2)
+    
     print(f"Release summary successfully built at: {output_file}")
 
 if __name__ == '__main__':
