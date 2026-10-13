@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import sys
 import os
 import traceback
@@ -20,39 +21,38 @@ def get_git_log():
         return [f"Git log retrieval failed: {str(e)}"]
 
 def scan_whitepaper(workspace_dir):
-    whitepaper_paths = [
-        os.path.join(workspace_dir, 'TOAI-elegant-lang', 'WHITEPAPER.md'),
-        os.path.join(workspace_dir, 'WHITEPAPER.md')
-    ]
-    for path in whitepaper_paths:
-        if os.path.exists(path):
-            try:
-                with open(path, 'r', encoding='utf-8') as f:
-                    return f.read()[:1000]
-            except Exception:
-                pass
-    return "Whitepaper not found or unreadable."
+    whitepaper_path = os.path.join(workspace_dir, 'TOAI-elegant-lang', 'docs', 'whitepaper.md')
+    if os.path.exists(whitepaper_path):
+        try:
+            with open(whitepaper_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+                lines = content.splitlines()
+                return lines[:10]
+        except Exception as e:
+            return [f"Failed to read whitepaper: {str(e)}"]
+    return ["Whitepaper not found."]
 
 def main():
     workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
     output_dir = os.path.join(workspace_dir, 'TOAI_Generated')
     os.makedirs(output_dir, exist_ok=True)
     
-    logs = get_git_log()
-    whitepaper_snippet = scan_whitepaper(workspace_dir)
+    git_logs = get_git_log()
+    whitepaper_summary = scan_whitepaper(workspace_dir)
     
-    summary = {
+    release_data = {
         "timestamp": datetime.now().isoformat(),
-        "git_recent_commits": logs,
-        "whitepaper_summary": whitepaper_snippet,
-        "release_status": "SUCCESS"
+        "version": "1.0.0-gaia",
+        "git_recent_commits": git_logs,
+        "whitepaper_excerpt": whitepaper_summary,
+        "ecosystem": "Earth of Life (Gaia Ecosystem)"
     }
     
     output_file = os.path.join(output_dir, 'release_summary.json')
     with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(summary, f, ensure_ascii=False, indent=2)
+        json.dump(release_data, f, ensure_ascii=False, indent=2)
     
-    print(f"Release summary successfully built at: {output_file}")
+    print(f"Successfully generated release summary at: {output_file}")
 
 if __name__ == '__main__':
     try:
