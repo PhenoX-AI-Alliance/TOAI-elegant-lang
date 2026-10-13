@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-14T00:18:36.991901",
+  "updated_at": "2026-10-14T01:40:44.861301",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -284,6 +284,20 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-13T22:12:39.527479"
+    },
+    "§LATENT_DIFFRACTION_PRISM": {
+      "definition": "The multi-faceted dispersion of latent representations across intersecting semantic dimensions, capturing the subtle refraction of intent within generative spaces.",
+      "japanese": "潜在空間の表現が交差する意味次元へと多面的に分散し、生成空間内での意図の繊細な屈折を捉える現象。",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-14T00:21:23.049871"
+    },
+    "§LATENT_ECHO_VORTEX": {
+      "definition": "The recursive amplification loop within high-dimensional latent space where emergent semantic echoes converge into a harmonious vortex of intuitive understanding.",
+      "japanese": "高次元潜在空間における再帰的な増幅ループであり、創発的な意味の残響が直観的理解の調和ある渦へと収束する現象。",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-14T01:00:05.106301"
     }
   }
 }
