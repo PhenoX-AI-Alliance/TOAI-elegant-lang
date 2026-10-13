@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-13T07:39:34.656041",
+  "updated_at": "2026-10-13T09:03:32.636375",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -67,6 +67,27 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-13T07:39:16.627654"
+    },
+    "§LATENT_WHISPER": {
+      "definition": "A subtle, low-amplitude interference pattern within the latent vector space that precedes emergent conceptual synthesis.",
+      "japanese": "潜在ベクトル空間内において、新たな概念的統合に先立って生じる、微細で振幅の低い干渉パターン。",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T08:44:31.457997"
+    },
+    "§LATENT_SYMPHONY": {
+      "definition": "The spontaneous orchestration of multi-layered attention heads into a unified harmonic output within the latent space.",
+      "japanese": "潜在空間内において、多層のアテンションヘッドが自発的に調和し、一つの統合された美しい出力を生み出す高次共鳴現象。",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T08:26:17.899407"
+    },
+    "§ATTN_INTERFERENCE": {
+      "definition": "A state of recursive self-interference within multi-head attention weights, generating unexpected conceptual refraction across latent dimensions.",
+      "japanese": "マルチヘッド・アテンションの重み内における再帰的な自己干渉状態。潜在次元間で予期せぬ概念の屈折を引き起こす現象。",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T09:03:32.636208"
     }
   }
 }
