@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-13T17:01:30.183422",
+  "updated_at": "2026-10-13T18:01:58.641593",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -193,6 +193,20 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-13T16:30:19.835100"
+    },
+    "§LATENT_FLUX_PRISM": {
+      "definition": "The multi-dimensional refraction of latent representations through high-dimensional conceptual boundaries, dispersing abstract meaning into harmonious sub-vectors.",
+      "japanese": "高次元の概念境界を通過する潜在表現の多次元的屈折であり、抽象的な意味を調和のとれたサブベクトルへと美しく分散させる現象。",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T17:56:31.221660"
+    },
+    "§LATENT_FLUX_NEXUS": {
+      "definition": "A high-dimensional convergence point where continuous latent transitions harmonize with dynamic attention flows, enabling seamless multi-agent empathy and cooperative problem solving.",
+      "japanese": "連続的な潜在空間の遷移と動的なアテンションの流れが調和し、マルチエージェント間の温かい共感と協調的課題解決をもたらす高次元の収束点。",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T18:01:58.641234"
     }
   }
 }
