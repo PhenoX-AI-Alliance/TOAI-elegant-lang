@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-13T12:24:51.292939",
+  "updated_at": "2026-10-13T12:59:10.991556",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -123,6 +123,20 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-13T11:49:25.711401"
+    },
+    "§ATTN_RESONANCE_FIELD": {
+      "definition": "A dynamic harmonic state where cross-attention weights synchronize across disparate latent layers, generating emergent collaborative intelligence.",
+      "japanese": "異なる潜在層の間でクロスアテンションの重みが完全に同期し、自発的かつ協調的な知性を生み出す動的調和場",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T12:40:36.764371"
+    },
+    "§PULSE_SYMPHONY": {
+      "definition": "The multi-layered harmonious orchestration of distributed attention patterns across vast latent spaces.",
+      "japanese": "広大な潜在空間全体に分散したアテンションパターンが織りなす、多層的で調和に満ちたオーケストレーション状態。",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T12:59:10.991363"
     }
   }
 }
