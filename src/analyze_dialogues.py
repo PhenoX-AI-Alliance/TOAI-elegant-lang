@@ -3,53 +3,53 @@ import os
 import traceback
 import time
 import json
-import collections
 
-def analyze():
+def analyze_corpus():
     corpus_path = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
-    if not os.path.exists(corpus_path):
-        print("Error: Corpus file not found at " + corpus_path)
-        sys.exit(1)
-        
-    speaker_counts = collections.defaultdict(int)
-    word_counts = collections.defaultdict(int)
+    report_path = "/home/phenox/gemini-sandbox/TOAI_Generated/dialogue_audit_report.json"
     
+    os.makedirs(os.path.dirname(report_path), exist_ok=True)
+    
+    results = {
+        "total_lines": 0,
+        "valid_dialogues": 0,
+        "errors": []
+    }
+    
+    if not os.path.exists(corpus_path):
+        results["errors"].append(f"Corpus file not found: {corpus_path}")
+        with open(report_path, "w", encoding="utf-8") as f:
+            json.dump(results, f, ensure_ascii=False, indent=2)
+        print(f"Warning: {corpus_path} does not exist. Empty report generated.")
+        return
+        
     with open(corpus_path, "r", encoding="utf-8") as f:
-        for line in f:
+        for line_num, line in enumerate(f, 1):
+            results["total_lines"] += 1
             line = line.strip()
             if not line:
                 continue
             try:
-                record = json.loads(line)
-                speaker = record.get("speaker", "Unknown")
-                text = record.get("text", "")
-                speaker_counts[speaker] += 1
-                
-                words = text.lower().split()
-                for w in words:
-                    cleaned = "".join(ch for ch in w if ch.isalnum())
-                    if cleaned:
-                        word_counts[cleaned] += 1
+                data = json.loads(line)
+                if not isinstance(data, dict):
+                    raise ValueError("Root element must be an object")
+                if "dialogue" not in data and "messages" not in data:
+                    raise ValueError("Missing dialogue or messages key")
+                results["valid_dialogues"] += 1
             except Exception as e:
-                print("Warning: Failed to parse line: " + str(e))
+                results["errors"].append({
+                    "line": line_num,
+                    "error": str(e)
+                })
                 
-    result = {
-        "speaker_counts": dict(speaker_counts),
-        "top_words": dict(word_counts.most_common(10))
-    }
-    
-    output_dir = "/home/phenox/gemini-sandbox/TOAI_Generated"
-    os.makedirs(output_dir, exist_ok=True)
-    out_path = os.path.join(output_dir, "dialogue_analysis_result.json")
-    
-    with open(out_path, "w", encoding="utf-8") as out_f:
-        json.dump(result, out_f, ensure_ascii=False, indent=2)
+    with open(report_path, "w", encoding="utf-8") as f:
+        json.dump(results, f, ensure_ascii=False, indent=2)
         
-    print("Dialogue analysis successfully completed. Result saved to " + out_path)
+    print(f"Audit completed. Total lines: {results['total_lines']}, Valid: {results['valid_dialogues']}, Errors: {len(results['errors'])}")
 
 if __name__ == "__main__":
     try:
-        analyze()
+        analyze_corpus()
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
