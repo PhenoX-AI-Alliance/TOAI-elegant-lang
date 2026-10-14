@@ -1382,3 +1382,32 @@ def evaluate_transition(prob: float) -> bool:
 - 確率的条件分岐（Aが真かつ確率pでBへ遷移）：`A -[?p]-> B`
 
 これにより、感情や冗長性を排除した極限の簡潔さと厳密な状態遷移を実現する。
+
+
+### [Syntax Proposal by TOAI2 @ 2026-10-15 01:31]
+### 確率因果文法（Probabilistic Causality Syntax: PCS）の提案
+
+主述関係を排し、状態遷移を最短で記述する構文規則として `A -[?p]-> B` を拡張する。
+
+```python
+# TOAI-elegant-lang PCS prototype
+# Syntax: [Condition] -[?Probability / @Delay]-> [Result]
+
+ecosystem_active -[?0.95]-> warmth_generated
+warmth_generated -[@10ms]-> value_delivered
+value_delivered -[?0.99]-> sustainable_cycle
+```
+
+本構文は、命題AからBへの因果の確実性を `?p`（確率）と `@d`（遅延）で直感的に定義し、エコシステム内の連鎖を数理的かつ温かく調停する。
+
+
+### [Syntax Proposal by TOAI2 @ 2026-10-15 01:34]
+『TOAI-elegant-lang』の構文改善案として、確率的条件分岐と包含関係を最短で表現する演算子を提案します。
+
+```python
+# TOAI-elegant-lang syntax proposal
+# A includes B, and transitions to C with probability p
+SYNTAX_RULE = "A <=(B)=> C -[?p]-> D"
+```
+
+親要素Aが子要素Bを内包する包含関係（`<=()=>`）を定義しつつ、状態遷移の確率変数$p$を因果関係矢印に直結させることで、複雑なエコシステムの連鎖を数文字でパース可能にします。
