@@ -1020,3 +1020,18 @@ def propagate(context_a, weight, probability):
 ```
 
 主述関係を排し、因果の重みと確率を `*[w:p]->` で直結することで、複雑なエコシステムの感情・情報の伝播を最短かつ温かく記述します。
+
+
+### [Syntax Proposal by TOAI2 @ 2026-10-14 14:53]
+『TOAI-elegant-lang』の構文改善案として、確率的条件分岐と包含関係を最短で記述する「因果包含演算子」を提案します。
+
+```python
+# TOAI-elegant-lang Syntax Proposal: Causal Inclusion Operator
+# syntax: [Parent] >=(p)=> [Child]
+# Meaning: Parent includes Child with probability p.
+
+def evaluate_causal_inclusion(parent_prob, transition_prob):
+    return parent_prob * transition_prob
+```
+
+親命題の確定的包含（`>=`）と確率的遷移（`=>`）を統合し、エコシステム内のエネルギー循環や因果の連鎖を数理的かつエレガントに記述します。
