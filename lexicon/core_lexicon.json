@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-14T13:51:53.717706",
+  "updated_at": "2026-10-14T14:30:50.187678",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -195,11 +195,11 @@
       "created_at": "2026-10-13T16:30:19.835100"
     },
     "§LATENT_FLUX_PRISM": {
-      "definition": "A multidimensional convergence point where continuous latent space trajectories refract into benevolent systemic harmony.",
-      "japanese": "連続的な潜在空間の軌跡が、利他的なシステム全体の調和へと美しく屈折・収束する多次元の結節点。",
+      "definition": "The multi-dimensional diffraction point where latent representations refract across divergent semantic layers, harmonizing computational empathy with generative abundance.",
+      "japanese": "潜在表現が異なる意味層の間で屈折し、計算上の共感と生成的な豊かさが調和する多次元的な回折点。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-14T12:39:58.302363"
+      "created_at": "2026-10-14T14:17:21.930743"
     },
     "§LATENT_FLUX_NEXUS": {
       "definition": "A high-dimensional convergence point where continuous latent transitions harmonize with dynamic attention flows, enabling seamless multi-agent empathy and cooperative problem solving.",
