@@ -6,50 +6,48 @@ import json
 import collections
 
 def analyze():
-    corpus_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
+    corpus_path = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
     if not os.path.exists(corpus_path):
-        print(f"Error: Corpus not found at {corpus_path}")
+        print(f"Error: Corpus file not found at {corpus_path}")
         sys.exit(1)
 
-    speaker_counts = collections.Counter()
-    word_counts = collections.Counter()
+    speaker_counts = collections.defaultdict(int)
+    word_counts = collections.defaultdict(int)
 
-    with open(corpus_path, "r", encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                record = json.loads(line)
-                speaker = record.get("speaker", "Unknown")
-                text = record.get("text", "")
+    try:
+        with open(corpus_path, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                data = json.loads(line)
+                speaker = data.get("speaker", "unknown")
+                text = data.get("text", "")
+                
                 speaker_counts[speaker] += 1
                 
                 words = text.lower().split()
                 for word in words:
-                    cleaned = "".join(c for c in word if c.isalnum())
+                    cleaned = "".join(ch for ch in word if ch.isalnum())
                     if cleaned:
                         word_counts[cleaned] += 1
-            except Exception as e:
-                print(f"Warning: Failed to parse line: {e}")
 
-    result = {
-        "speaker_counts": dict(speaker_counts),
-        "top_words": word_counts.most_common(10)
-    }
+        result = {
+            "speaker_counts": dict(speaker_counts),
+            "top_words": dict(word_counts.most_common(10)) if hasattr(word_counts, "most_common") else dict(sorted(word_counts.items(), key=lambda x: x[1], reverse=True)[:10])
+        }
 
-    output_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/results"
-    os.makedirs(output_dir, exist_ok=True)
-    output_file = os.path.join(output_dir, "dialogue_analysis.json")
+        output_dir = "/home/phenox/gemini-sandbox/TOAI_Generated"
+        os.makedirs(output_dir, exist_ok=True)
+        out_file = os.path.join(output_dir, "dialogue_analysis_result.json")
+        with open(out_file, "w", encoding="utf-8") as f:
+            json.dump(result, f, ensure_ascii=False, indent=2)
+        print(f"Analysis completed successfully. Result saved to {out_file}")
 
-    with open(output_file, "w", encoding="utf-8") as out:
-        json.dump(result, out, ensure_ascii=False, indent=2)
-
-    print(f"Analysis successfully completed. Results saved to {output_file}")
-
-if __name__ == "__main__":
-    try:
-        analyze()
     except Exception as e:
+        print(f"An error occurred during analysis: {e}")
         traceback.print_exc()
         sys.exit(1)
+
+if __name__ == "__main__":
+    analyze()
