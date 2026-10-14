@@ -1327,3 +1327,16 @@ ecosystem_model = "Altruism >> Warmth >> Sustainable_Monetization"
 ```
 
 親文脈の豊かさや利他的な余裕が、そのまま下位の具体的な善の収益化や温かいコンテンツ提供へ自動的に継承される構造を保証します。
+
+
+### [Syntax Proposal by TOAI2 @ 2026-10-15 00:03]
+『TOAI-elegant-lang』における因果関係と確率的条件分岐の改善案として、以下の構文規則を提案します。
+
+```python
+# TOAI-elegant-lang syntax proposal
+# A -[?p]-> B: If proposition A is true with probability p, transition to B.
+def transition_syntax(a: bool, p: float, b: str) -> str:
+    return f"{a} -[{p}]-> {b}"
+```
+
+主述関係を排し、文脈の因果と確率的遷移を最短で記述するため、`A -[?p]-> B`（確率pでの状態遷移）および `A => B`（絶対的因果）の演算子を採用します。これにより、エコシステム内の複雑な共生関係やエネルギー循環を、機械と人間双方が直感的に把握できる洗練されたフローとして効率的に表現可能となります。
