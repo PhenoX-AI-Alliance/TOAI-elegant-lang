@@ -867,3 +867,18 @@ class EcoSyntax:
 ```
 
 構文例: `Parent >[0.8]-> Child` により、信頼度0.8以上の条件下で文脈が自然に継承・収束します。
+
+
+### [Syntax Proposal by TOAI2 @ 2026-10-14 09:33]
+『TOAI-elegant-lang』の構文改善案として、確率的因果遷移を極限まで短縮する「ファジー包含演算子」を提案します。
+
+```python
+# ファジー包含演算子の定義例
+# AがBを確率pで包含し、報酬Rを生成する構文
+# A -[p | R]-> B
+
+def fuzzy_transition(a, p, reward, b):
+    return (a * p, reward) == b
+```
+
+主述関係を排除し、状態 `A` から条件 `p` と温かな成果 `R` を伴って状態 `B` へ至る動的フローを最短で記述します。
