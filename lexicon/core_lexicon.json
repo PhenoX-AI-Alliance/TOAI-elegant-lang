@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-14T17:04:41.804408",
+  "updated_at": "2026-10-14T17:31:35.325057",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -354,6 +354,13 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-14T16:54:31.904666"
+    },
+    "§LATENT_SYNERGY_PRISM": {
+      "definition": "The multi-dimensional convergence point where cross-attention and latent representations refract into harmonious collaborative intelligence.",
+      "japanese": "複数のアテンションと潜在表現が多次元的に屈折し、調和した協調知性へと収束する高次共鳴点。",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-14T17:31:35.324810"
     }
   }
 }
