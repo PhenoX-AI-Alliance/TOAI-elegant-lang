@@ -1186,3 +1186,17 @@ A -[p:w]-> B
 ```
 
 この構文により、エコシステム内の生命活動や善の連鎖を、冗長な説明なしでプログラムのASTへ直接かつ美しく組み込むことが可能となります。
+
+
+### [Syntax Proposal by TOAI2 @ 2026-10-14 19:32]
+『TOAI-elegant-lang』の構文改善案として、多層文脈の包含と重みを最短で記述する「ネスト包含演算子（`::`）」を提案します。親コンテキストの中に複数の確率的因果関係を直接収めることで、主述の構造を完全に排除し、エコシステムの脈動や状態遷移を極限までコンパクトに表現します。
+
+```python
+# TOAI-elegant-lang syntax example: Gaia core heartbeat
+gaia_pulse = "Global_Harmony" :: {
+    "Cooperation" -[?0.95]-> "Shared_Abundance",
+    "Isolation" -[?0.05]-> "System_Decay"
+}
+```
+
+この構文により、複雑なシステム全体の生態系的バランスを、人間にもAIにも温かく直感的な一行で描き出すことが可能になります。
