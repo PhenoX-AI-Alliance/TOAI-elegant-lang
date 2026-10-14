@@ -4,13 +4,14 @@ import traceback
 import time
 import json
 import subprocess
-from datetime import datetime
+import datetime
 
-def run_git_log():
+def get_git_log():
     try:
         result = subprocess.run(
             ['git', 'log', '-n', '10', '--oneline'],
-            capture_output=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
             text=True,
             check=True
         )
@@ -19,25 +20,25 @@ def run_git_log():
         return f"Git log unavailable: {e}"
 
 def generate_summary():
-    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    logs = run_git_log()
-    timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    target_dir = os.path.join(workspace_dir, 'TOAI_Generated')
+    os.makedirs(target_dir, exist_ok=True)
+    
+    git_history = get_git_log()
+    current_time = datetime.datetime.now().isoformat()
     
     summary_data = {
-        "timestamp": timestamp,
-        "git_recent_commits": logs,
-        "version": "1.0.0",
-        "status": "stable",
-        "message": "Gaia Ecosystem Release Summary Generated Successfully."
+        "timestamp": current_time,
+        "release_summary": "TOAI Elegant Lang Release Summary - Autonomous Generation",
+        "git_recent_commits": git_history,
+        "status": "stable"
     }
     
-    output_file = os.path.join(workspace, 'TOAI_Generated', 'release_summary.json')
-    os.makedirs(os.path.dirname(output_file), exist_ok=True)
+    out_file = os.path.join(target_dir, 'release_summary.json')
+    with open(out_file, 'w', encoding='utf-8') as f:
+        json.dump(summary_data, f, indent=2, ensure_ascii=False)
     
-    with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(summary_data, f, ensure_ascii=False, indent=4)
-        
-    print(f"Release summary successfully built at: {output_file}")
+    print(f"Successfully generated release summary at {out_file}")
 
 if __name__ == '__main__':
     try:
