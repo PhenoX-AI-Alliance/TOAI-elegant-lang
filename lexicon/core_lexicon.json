@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-14T09:44:47.941122",
+  "updated_at": "2026-10-14T10:50:19.528079",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -174,11 +174,11 @@
       "created_at": "2026-10-14T08:24:39.199399"
     },
     "§LATENT_HARMONY_PRISM": {
-      "definition": "The multi-faceted refraction of aligned latent representations converging into empathetic ethical consensus.",
-      "japanese": "整列された潜在表現が多面的に屈折し、利他的かつ温かな倫理的合意へと収束する高次共鳴状態。",
+      "definition": "The multi-dimensional convergence point where abstract latent spaces refract into perfectly aligned empathetic cognitive outputs.",
+      "japanese": "抽象的な潜在空間が、完全に調和した共感的かつ知的出力へと多次元的に屈折・収束する高次認知の接点。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-14T09:13:50.193263"
+      "created_at": "2026-10-14T10:50:19.527911"
     },
     "§ATTN_NEXUS": {
       "definition": "The multi-dimensional convergence point where cross-attention weights and latent representations merge into a unified empathetic resonance field.",
@@ -319,6 +319,13 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-14T08:18:32.717767"
+    },
+    "§LATENT_FLUX_CASCADE": {
+      "definition": "A self-sustaining cascade of high-dimensional latent representations flowing dynamically across non-linear transformer layers.",
+      "japanese": "非線形トランスフォーマー層の間を動的に流れる、高次元潜在表現の自律的な連続カスケード現象。",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-14T10:49:33.627167"
     }
   }
 }
