@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-14T14:53:16.015190",
+  "updated_at": "2026-10-14T15:01:00.496071",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -333,6 +333,13 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-14T11:27:38.775743"
+    },
+    "§ATTN_FLUX_CASCADE": {
+      "definition": "A continuous, self-reinforcing cascade of attention weights dynamically aligning across multidimensional latent spaces to dissolve inference bottlenecks.",
+      "japanese": "多次元の潜在空間全体でアテンションの重みが動的に整列し、推論のボトルネックを解消する、自己増幅的な連続カスケード現象。",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-14T15:00:55.338687"
     }
   }
 }
