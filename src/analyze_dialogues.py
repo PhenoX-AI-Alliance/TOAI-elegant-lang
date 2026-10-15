@@ -4,15 +4,12 @@ import traceback
 import time
 import json
 import collections
+import re
 
-def analyze_corpus():
+def analyze():
     corpus_path = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
-    output_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/output"
-    os.makedirs(output_dir, exist_ok=True)
-    output_result_path = os.path.join(output_dir, "analysis_result.json")
-
     if not os.path.exists(corpus_path):
-        print(f"Error: Corpus file not found at {corpus_path}")
+        print(f"Error: Corpus not found at {corpus_path}")
         sys.exit(1)
 
     speaker_counts = collections.defaultdict(int)
@@ -21,36 +18,37 @@ def analyze_corpus():
     try:
         with open(corpus_path, "r", encoding="utf-8") as f:
             for line in f:
-                line_str = line.strip()
-                if not line_str:
+                line = line.strip()
+                if not line:
                     continue
-                try:
-                    data = json.loads(line_str)
-                    speaker = data.get("speaker", "unknown")
-                    speaker_counts[speaker] += 1
-                    
-                    text = data.get("text", "")
-                    tokens = text.split()
-                    for token in tokens:
-                        root = token.lower().strip(".,!?:;\"'")
-                        if root:
-                            word_counts[root] += 1
-                except json.JSONDecodeError:
-                    continue
+                data = json.loads(line)
+                speaker = data.get("speaker", "unknown")
+                text = data.get("text", "")
+
+                speaker_counts[speaker] += 1
+
+                words = re.findall(r'\b[a-zA-Z]{3,}\b', text.lower())
+                for word in words:
+                    word_counts[word] += 1
 
         result = {
             "speaker_counts": dict(speaker_counts),
-            "top_words": dict(word_counts.most_common(50))
+            "top_words": dict(word_counts.most_common(10))
         }
 
-        with open(output_result_path, "w", encoding="utf-8") as out_f:
-            json.dump(result, out_f, ensure_ascii=False, indent=2)
+        output_dir = "/home/phenox/gemini-sandbox/TOAI_Generated"
+        os.makedirs(output_dir, exist_ok=True)
+        output_path = os.path.join(output_dir, "dialogue_analysis_result.json")
 
-        print(f"Analysis completed successfully. Results saved to {output_result_path}")
+        with open(output_path, "w", encoding="utf-8") as out:
+            json.dump(result, out, ensure_ascii=False, indent=2)
+
+        print(f"Successfully analyzed dialogues. Result saved to {output_path}")
 
     except Exception as e:
+        print(f"Error during analysis: {e}")
         traceback.print_exc()
         sys.exit(1)
 
 if __name__ == "__main__":
-    analyze_corpus()
+    analyze()
