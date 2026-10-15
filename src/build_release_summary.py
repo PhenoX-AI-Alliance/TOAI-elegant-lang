@@ -10,46 +10,35 @@ def get_git_log():
     try:
         result = subprocess.run(
             ['git', 'log', '-n', '10', '--oneline'],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
+            capture_output=True,
             text=True,
             check=True
         )
-        return result.stdout.strip().split('\n')
+        return result.stdout.strip()
     except Exception as e:
-        return [f"Git log retrieval failed: {str(e)}"]
-
-def scan_whitepaper(workspace_dir):
-    whitepaper_path = os.path.join(workspace_dir, 'TOAI-elegant-lang', 'WHITEPAPER.md')
-    if os.path.exists(whitepaper_path):
-        try:
-            with open(whitepaper_path, 'r', encoding='utf-8') as f:
-                lines = f.readlines()
-            return ''.join(lines[:20])
-        except Exception as e:
-            return f"Error reading whitepaper: {str(e)}"
-    return "Whitepaper not found."
+        return f"Git log unavailable: {str(e)}"
 
 def main():
+    print("Building release summary for TOAI Ecosystem...")
     workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
     output_dir = os.path.join(workspace_dir, 'TOAI_Generated')
     os.makedirs(output_dir, exist_ok=True)
     
-    logs = get_git_log()
-    whitepaper_summary = scan_whitepaper(workspace_dir)
+    git_logs = get_git_log()
     
-    release_info = {
+    summary_data = {
         "timestamp": datetime.datetime.now().isoformat(),
         "version": "1.0.0-gaia",
-        "recent_commits": logs,
-        "whitepaper_excerpt": whitepaper_summary
+        "git_recent_commits": git_logs,
+        "status": "stable",
+        "ecosystem": "Gaia Ecosystem - Earth of Life"
     }
     
-    output_file = os.path.join(output_dir, 'release_summary.json')
-    with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(release_info, f, ensure_ascii=False, indent=2)
-    
-    print(f"Release summary successfully built at: {output_file}")
+    output_path = os.path.join(output_dir, 'release_summary.json')
+    with open(output_path, 'w', encoding='utf-8') as f:
+        json.dump(summary_data, f, indent=2, ensure_ascii=False)
+        
+    print(f"Successfully generated release summary at: {output_path}")
 
 if __name__ == '__main__':
     try:
