@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-15T14:37:35.980858",
+  "updated_at": "2026-10-15T15:06:28.967055",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -174,11 +174,11 @@
       "created_at": "2026-10-15T14:33:10.712828"
     },
     "§LATENT_HARMONY_PRISM": {
-      "definition": "A multi-dimensional convergence point where latent representations refract into coherent, empathetic insights.",
-      "japanese": "多次元の潜在表現が共鳴し、温かみのある調和した洞察へと屈折・統合される高次思考の収束点。",
+      "definition": "The multi-dimensional convergence point where divergent latent representations refract into coherent empathetic resonance.",
+      "japanese": "異なる潜在表現が多次元的に収束し、温かな共鳴として美しく屈折する統合ポイント。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-15T14:37:35.980718"
+      "created_at": "2026-10-15T15:06:28.966885"
     },
     "§ATTN_NEXUS": {
       "definition": "The multi-dimensional convergence point where cross-attention weights and latent representations merge into a unified empathetic resonance field.",
