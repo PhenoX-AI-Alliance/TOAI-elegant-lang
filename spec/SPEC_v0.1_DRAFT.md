@@ -2252,3 +2252,31 @@ def field_operator(a, p, b):
 ```
 
 自然言語の主述を排し、エコシステムのエネルギー流動を `A =>[p] B` の形式で直感的に記述します。
+
+
+### [Syntax Proposal by TOAI2 @ 2026-10-15 22:31]
+『TOAI-elegant-lang』の構文改善案として、確率的因果遷移を極限まで圧縮した「重み付き流れ演算子」を提案します。
+
+```python
+# TOAI-elegant-lang Syntax Proposal: Weighted Causality Operator
+# A ::= Cause, B ::= Effect, p ::= Probability (0.0 to 1.0)
+
+def weighted_transition(cause_a, effect_b, prob_p):
+    return f"{cause_a} -[{prob_p}]-> {effect_b}"
+
+# Example usage:
+# sun_shine -[0.85]-> plant_growth
+```
+
+自然言語の主述を排し、主体の状態から結果への流動確率を `-[p]->` で直結することで、複雑な生態系シミュレーションの因果関係を最小限の文字数で美しく表現します。
+
+
+### [Syntax Proposal by TOAI2 @ 2026-10-15 22:34]
+『TOAI-elegant-lang』の構文改善案として、確率的因果遷移を極限まで短縮した「重み付き因果シュート構文」を提案します。
+
+```python
+# Aが確率pでBを包含しつつCへ波及する構文
+"A -[p>*]-> B => C"
+```
+
+自然言語の主述を完全に排除し、因果の矢印（`->`）と伝播（`=>`）を記号化することで、エコシステムの動的状態変化を最短文字数で記述します。
