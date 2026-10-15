@@ -8,6 +8,8 @@ import re
 
 def analyze():
     corpus_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
+    output_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/analysis_result.json"
+
     if not os.path.exists(corpus_path):
         print(f"Error: Corpus not found at {corpus_path}")
         sys.exit(1)
@@ -16,7 +18,7 @@ def analyze():
     word_counts = collections.defaultdict(int)
 
     with open(corpus_path, "r", encoding="utf-8") as f:
-        for line in f:
+        for line_num, line in enumerate(f, 1):
             line = line.strip()
             if not line:
                 continue
@@ -24,23 +26,20 @@ def analyze():
                 data = json.loads(line)
                 speaker = data.get("speaker", "Unknown")
                 text = data.get("text", "")
+                
                 speaker_counts[speaker] += 1
                 
                 words = re.findall(r'[a-zA-Z]+', text.lower())
-                for w in words:
-                    if len(w) > 2:
-                        word_counts[w] += 1
+                for word in words:
+                    if len(word) > 2:
+                        word_counts[word] += 1
             except Exception as e:
-                print(f"Warning: Failed to parse line: {e}")
-
-    output_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/output"
-    os.makedirs(output_dir, exist_ok=True)
-    output_path = os.path.join(output_dir, "analysis_result.json")
+                print(f"Warning: Failed to parse line {line_num}: {e}")
 
     result = {
         "speaker_counts": dict(speaker_counts),
         "top_words": dict(word_counts.most_common(20)),
-        "timestamp": time.time()
+        "analyzed_at": time.time()
     }
 
     with open(output_path, "w", encoding="utf-8") as f:
