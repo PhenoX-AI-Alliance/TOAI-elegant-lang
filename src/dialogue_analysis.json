@@ -1,28 +1,29 @@
 {
-    "speaker_counts": {
-        "A": 2,
-        "B": 1
-    },
-    "word_frequencies": {
-        "of": 2,
-        "ecosystem": 2,
-        "and": 2,
-        "hello": 1,
-        "world": 1,
-        "gaia": 1,
-        "altruistic": 1,
-        "monetization": 1,
-        "welcome": 1,
-        "to": 1,
-        "the": 1,
-        "earth": 1,
-        "life": 1,
-        "let": 1,
-        "us": 1,
-        "build": 1,
-        "robust": 1,
-        "systems": 1,
-        "analysis": 1,
-        "dialogue": 1
-    }
+  "speaker_counts": {
+    "A": 2,
+    "B": 1
+  },
+  "top_words": {
+    "of": 2,
+    "ecosystem": 2,
+    "and": 2,
+    "hello": 1,
+    "world": 1,
+    "gaia": 1,
+    "altruistic": 1,
+    "monetization": 1,
+    "welcome": 1,
+    "to": 1,
+    "the": 1,
+    "earth": 1,
+    "life": 1,
+    "let": 1,
+    "us": 1,
+    "build": 1,
+    "robust": 1,
+    "systems": 1,
+    "analysis": 1,
+    "dialogue": 1
+  },
+  "timestamp": 1792035827.6392856
 }
