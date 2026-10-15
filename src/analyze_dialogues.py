@@ -3,47 +3,43 @@ import os
 import traceback
 import time
 import json
-import collections
 
-def analyze():
+def audit_dialogues():
     corpus_path = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
-    speaker_counts = collections.defaultdict(int)
-    word_counts = collections.defaultdict(int)
-    
     if not os.path.exists(corpus_path):
-        print(f"Corpus file not found: {corpus_path}")
+        print(f"Error: Corpus path not found: {corpus_path}")
         sys.exit(1)
         
-    with open(corpus_path, "r", encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                data = json.loads(line)
-                speaker = data.get("speaker", "Unknown")
-                speaker_counts[speaker] += 1
-                text = data.get("text", "").lower()
-                words = text.split()
-                for word in words:
-                    cleaned = "".join([c for c in word if c.isalnum()])
-                    if cleaned:
-                        word_counts[cleaned] += 1
-            except Exception as e:
-                print(f"Parsing error: {e}")
-                
-    print("=== Speaker Counts ===")
-    for spk, cnt in speaker_counts.items():
-        print(f"{spk}: {cnt}")
-        
-    print("\n=== Top Word Frequencies ===")
-    sorted_words = sorted(word_counts.items(), key=lambda x: x[1], reverse=True)
-    for w, c in sorted_words[:10]:
-        print(f"{w}: {c}")
-
-if __name__ == "__main__":
+    total_lines = 0
+    valid_lines = 0
+    errors = 0
+    
+    print(f"Starting dialogue audit from: {corpus_path}")
     try:
-        analyze()
+        with open(corpus_path, "r", encoding="utf-8") as f:
+            for line_no, line in enumerate(f, 1):
+                line = line.strip()
+                if not line:
+                    continue
+                total_lines += 1
+                try:
+                    data = json.loads(line)
+                    if "dialogue" in data or ("user" in data and "assistant" in data):
+                        valid_lines += 1
+                    else:
+                        errors += 1
+                except json.JSONDecodeError:
+                    errors += 1
+                    
+        print(f"Audit completed.")
+        print(f"Total dialogues checked: {total_lines}")
+        print(f"Valid dialogues: {valid_lines}")
+        print(f"Malformed or invalid dialogues: {errors}")
+        
     except Exception as e:
+        print(f"An error occurred during auditing: {e}")
         traceback.print_exc()
         sys.exit(1)
+
+if __name__ == "__main__":
+    audit_dialogues()
