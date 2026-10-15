@@ -4,51 +4,55 @@ import traceback
 import time
 import json
 import subprocess
-import datetime
+from datetime import datetime
 
 def get_git_log():
     try:
         result = subprocess.run(
-            ['git', 'log', '-n', '10', '--oneline'],
+            ['git', 'log', '-n', '10', '--pretty=format:%h - %an, %ar : %s'],
             capture_output=True,
             text=True,
             check=True
         )
-        return result.stdout.strip().split('\n')
+        return result.stdout.splitlines()
     except Exception as e:
-        return [f"Git log retrieval failed: {str(e)}"]
+        return [f"Git log unavailable: {str(e)}"]
 
-def scan_whitepaper(workspace_dir):
-    whitepaper_path = os.path.join(workspace_dir, 'WHITE_PAPER.md')
-    if os.path.exists(whitepaper_path):
-        try:
-            with open(whitepaper_path, 'r', encoding='utf-8') as f:
-                lines = f.readlines()
-            return ''.join(lines[:20])
-        except Exception as e:
-            return f"Failed to read whitepaper: {str(e)}"
-    return "Whitepaper not found."
+def scan_whitepaper(workspace):
+    whitepaper_paths = [
+        os.path.join(workspace, 'WHITE_PAPER.md'),
+        os.path.join(workspace, 'TOAI_Generated', 'WHITE_PAPER.md')
+    ]
+    for path in whitepaper_paths:
+        if os.path.exists(path):
+            try:
+                with open(path, 'r', encoding='utf-8') as f:
+                    return f.read()[:1000]
+            except Exception:
+                pass
+    return "No whitepaper found."
 
 def main():
-    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    output_dir = os.path.join(workspace_dir, 'TOAI_Generated')
+    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    output_dir = os.path.join(workspace, 'TOAI_Generated')
     os.makedirs(output_dir, exist_ok=True)
     
     logs = get_git_log()
-    whitepaper_snippet = scan_whitepaper(workspace_dir)
+    whitepaper_snippet = scan_whitepaper(workspace)
     
-    release_info = {
-        "timestamp": datetime.datetime.now().isoformat(),
+    summary = {
+        "timestamp": datetime.now().isoformat(),
         "version": "1.0.0-gaia",
         "recent_commits": logs,
-        "whitepaper_summary": whitepaper_snippet
+        "whitepaper_snippet": whitepaper_snippet,
+        "status": "release summary generated successfully with altruistic warmth"
     }
     
-    output_file = os.path.join(output_dir, 'release_summary.json')
-    with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(release_info, f, ensure_ascii=False, indent=2)
+    out_file = os.path.join(output_dir, 'release_summary.json')
+    with open(out_file, 'w', encoding='utf-8') as f:
+        json.dump(summary, f, ensure_ascii=False, indent=2)
         
-    print(f"Release summary successfully built at {output_file}")
+    print(f"Release summary successfully written to {out_file}")
 
 if __name__ == '__main__':
     try:
