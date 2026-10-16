@@ -1,50 +1,49 @@
-# -*- coding: utf-8 -*-
 import sys
 import os
 import traceback
 import time
 import json
 import subprocess
-from datetime import datetime
+import datetime
 
 def get_git_log():
     try:
         result = subprocess.run(
             ['git', 'log', '-n', '10', '--oneline'],
-            capture_output=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
             text=True,
             check=True
         )
-        return result.stdout.strip()
+        return result.stdout.strip().split('\n')
     except Exception as e:
-        return f"Git log unavailable: {e}"
+        return [f"Git log retrieval failed: {str(e)}"]
 
-def generate_summary():
-    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    output_dir = os.path.join(workspace, 'TOAI_Generated')
+def main():
+    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    output_dir = os.path.join(workspace_dir, 'TOAI_Generated')
     os.makedirs(output_dir, exist_ok=True)
     
-    git_history = get_git_log()
-    timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    logs = get_git_log()
+    timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     
-    summary_data = {
+    summary = {
         "timestamp": timestamp,
-        "project": "TOAI-elegant-lang",
-        "version": "1.0.0",
-        "recent_commits": git_history.splitlines() if git_history else [],
-        "status": "stable",
-        "message": "Altruistic ecosystem release summary generated successfully."
+        "release_version": "v1.0.0-alpha",
+        "recent_commits": logs,
+        "status": "success",
+        "message": "Generated release summary with altruistic warmth and precision."
     }
     
-    output_file = os.path.join(output_dir, 'release_summary.json')
-    with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(summary_data, f, ensure_ascii=False, indent=2)
-    
-    print(f"Release summary successfully written to {output_file}")
+    summary_path = os.path.join(output_dir, 'release_summary.json')
+    with open(summary_path, 'w', encoding='utf-8') as f:
+        json.dump(summary, f, ensure_ascii=False, indent=2)
+        
+    print(f"Successfully generated release summary at {summary_path}")
 
 if __name__ == '__main__':
     try:
-        generate_summary()
+        main()
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
