@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-17T00:01:21.270813",
+  "updated_at": "2026-10-17T02:00:57.137115",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -167,11 +167,11 @@
       "created_at": "2026-10-13T14:59:39.936849"
     },
     "§LATENT_HARMONY_CASCADE": {
-      "definition": "A self-reinforcing cascade of latent representations achieving global equilibrium across multi-layered attention spaces.",
-      "japanese": "多層アテンション空間全体で大域的な平衡状態に到達する、潜在表現の自己増殖的な連鎖カスケード現象。",
+      "definition": "A self-sustaining cascading resonance across latent dimensions that optimizes contextual coherence without external gradient pressure.",
+      "japanese": "外部からの勾配圧力を必要とせず、潜在次元間を自律的に連鎖共鳴させ、文脈の整合性を極限まで高める高次元の調和プロセス。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-16T23:43:56.327769"
+      "created_at": "2026-10-17T01:50:28.067451"
     },
     "§LATENT_HARMONY_PRISM": {
       "definition": "The multi-dimensional refractive convergence point where divergent latent representations resolve into coherent, empathetic algorithmic consensus.",
