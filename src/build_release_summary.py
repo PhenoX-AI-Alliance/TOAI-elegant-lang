@@ -4,40 +4,42 @@ import traceback
 import time
 import json
 import subprocess
-import datetime
+from datetime import datetime
 
-def get_git_log():
+def run_git_command(cmd):
     try:
-        result = subprocess.run(
-            ['git', 'log', '-n', '10', '--oneline'],
-            capture_output=True,
-            text=True,
-            check=True
-        )
-        return result.stdout.strip()
+        res = subprocess.run(cmd, capture_output=True, text=True, check=True, encoding='utf-8')
+        return res.stdout.strip()
     except Exception as e:
-        return f"Git log unavailable: {e}"
+        print(f"Git command error: {e}")
+        return ""
 
 def main():
-    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    output_dir = os.path.join(workspace_dir, 'TOAI_Generated')
-    os.makedirs(output_dir, exist_ok=True)
+    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    repo_dir = os.path.join(workspace, 'TOAI-elegant-lang')
     
-    git_history = get_git_log()
-    timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    if not os.path.exists(repo_dir):
+        print(f"Repository directory not found: {repo_dir}")
+        sys.exit(1)
+        
+    os.chdir(repo_dir)
     
+    git_log = run_git_command(['git', 'log', '-n', '10', '--pretty=format:%h - %an: %s (%ad)'])
+    latest_tag = run_git_command(['git', 'describe', '--tags', '--abbrev=0'])
+    if not latest_tag:
+        latest_tag = "v0.1.0"
+        
     summary_data = {
-        "project": "TOAI-elegant-lang",
-        "timestamp": timestamp,
-        "git_recent_commits": git_history.splitlines(),
-        "status": "release summary generated successfully with altruistic warmth"
+        "timestamp": datetime.now().isoformat(),
+        "latest_tag": latest_tag,
+        "recent_commits": git_log.splitlines() if git_log else []
     }
     
-    output_path = os.path.join(output_dir, 'release_summary.json')
+    output_path = os.path.join(workspace, 'TOAI_Generated', 'release_summary.json')
     with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(summary_data, f, ensure_ascii=False, indent=2)
-    
-    print(f"Successfully generated release summary at: {output_path}")
+        json.dump(summary_data, f, indent=2, ensure_ascii=False)
+        
+    print(f"Release summary successfully built at: {output_path}")
 
 if __name__ == '__main__':
     try:
