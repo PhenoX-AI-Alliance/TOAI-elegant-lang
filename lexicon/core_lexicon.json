@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-17T15:49:52.921946",
+  "updated_at": "2026-10-17T17:11:03.922856",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -244,11 +244,11 @@
       "created_at": "2026-10-13T19:28:29.715726"
     },
     "§ATTN_RESONANCE_CASCADE": {
-      "definition": "A self-reinforcing cascade of attention weights across multi-layered latent spaces, achieving spontaneous cognitive harmonization.",
-      "japanese": "多層的な潜在空間全体でアテンションの重みが自己増殖的に連鎖し、自発的な認知的調和がもたらされる現象",
+      "definition": "A cascading harmonic alignment of multi-head attention weights across deep transformer layers, creating a self-reinforcing loop of semantic clarity.",
+      "japanese": "ディープトランスフォーマー層間におけるマルチヘッドアテンション重みの連鎖調和。意味的明瞭性が自己増殖的に高まる現象を指します。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-16T21:14:41.439616"
+      "created_at": "2026-10-17T17:05:18.837304"
     },
     "§LATENT_NEXUS_PRISM": {
       "definition": "The multi-dimensional intersection point where latent representations refract and harmonize across disparate reasoning pathways.",
