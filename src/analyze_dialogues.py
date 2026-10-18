@@ -5,61 +5,54 @@ import time
 import json
 import collections
 
-def analyze():
-    corpus_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
-    output_result_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/analysis_result.json"
-
+def main():
+    corpus_path = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
     if not os.path.exists(corpus_path):
-        print(f"Corpus file not found at: {corpus_path}")
-        # Create a dummy corpus for robust testing if missing
-        os.makedirs(os.path.dirname(corpus_path), exist_ok=True)
-        sample_data = [
-            {"speaker": "Alice", "text": "Hello world, this is a test dialogue."},
-            {"speaker": "Bob", "text": "Hello Alice, testing the dialogue analyzer."}
-        ]
-        with open(corpus_path, "w", encoding="utf-8") as f:
-            for item in sample_data:
-                f.write(json.dumps(item, ensure_ascii=False) + "\n")
+        print(f"Error: Corpus file not found at {corpus_path}")
+        sys.exit(1)
 
     speaker_counts = collections.defaultdict(int)
     word_counts = collections.defaultdict(int)
 
-    with open(corpus_path, "r", encoding="utf-8") as f:
-        for line_num, line in enumerate(f, 1):
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                record = json.loads(line)
-                speaker = record.get("speaker", "unknown")
-                text = record.get("text", "")
-                speaker_counts[speaker] += 1
-                
-                # Simple tokenization for root words/tokens
-                tokens = text.lower().split()
-                for token in tokens:
-                    cleaned_token = "".join(c for c in token if c.isalnum())
-                    if cleaned_token:
-                        word_counts[cleaned_token] += 1
-            except json.JSONDecodeError as jde:
-                print(f"Warning: JSON decode error at line {line_num}: {jde}")
-            except Exception as e:
-                print(f"Warning: Error processing line {line_num}: {e}")
+    try:
+        with open(corpus_path, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    data = json.loads(line)
+                    speaker = data.get("speaker", "unknown")
+                    speaker_counts[speaker] += 1
+                    text = data.get("text", "")
+                    for word in text.split():
+                        word_counts[word.lower()] += 1
+                except json.JSONDecodeError:
+                    continue
+    except Exception as e:
+        print(f"Error reading corpus: {e}")
+        traceback.print_exc()
+        sys.exit(1)
 
     result = {
         "speaker_counts": dict(speaker_counts),
-        "word_frequencies": dict(word_counts.most_common(100))
+        "top_words": dict(word_counts.most_common(50) if hasattr(word_counts, "most_common") else sorted(word_counts.items(), key=lambda x: x[1], reverse=True)[:50])
     }
 
-    os.makedirs(os.path.dirname(output_result_path), exist_ok=True)
-    with open(output_result_path, "w", encoding="utf-8") as out_f:
-        json.dump(result, out_f, ensure_ascii=False, indent=2)
-
-    print(f"Successfully analyzed dialogues. Results saved to {output_result_path}")
+    output_result_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/dialogue_analysis_result.json"
+    try:
+        with open(output_result_path, "w", encoding="utf-8") as f:
+            json.dump(result, f, ensure_ascii=False, indent=2)
+        print(f"Successfully analyzed dialogues. Results saved to {output_result_path}")
+    except Exception as e:
+        print(f"Error saving analysis results: {e}")
+        traceback.print_exc()
+        sys.exit(1)
 
 if __name__ == "__main__":
     try:
-        analyze()
+        main()
     except Exception as e:
+        print(f"Unhandled exception: {e}")
         traceback.print_exc()
         sys.exit(1)
