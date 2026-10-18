@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import sys
 import os
 import traceback
@@ -11,54 +10,37 @@ def get_git_log():
     try:
         result = subprocess.run(
             ['git', 'log', '-n', '10', '--oneline'],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
+            capture_output=True,
             text=True,
             check=True
         )
-        return result.stdout.strip()
+        return result.stdout.splitlines()
     except Exception as e:
-        return f"Git log retrieval failed: {e}"
-
-def scan_whitepaper(workspace_dir):
-    whitepaper_paths = [
-        os.path.join(workspace_dir, 'WHITE_PAPER.md'),
-        os.path.join(workspace_dir, 'TOAI-elegant-lang', 'WHITE_PAPER.md'),
-        os.path.join(workspace_dir, 'CONSTITUTION.md')
-    ]
-    summary = []
-    for path in whitepaper_paths:
-        if os.path.exists(path):
-            try:
-                with open(path, 'r', encoding='utf-8') as f:
-                    lines = f.readlines()
-                    header = lines[0].strip() if lines else "No content"
-                    summary.append(f"File: {os.path.basename(path)} - Header: {header}")
-            except Exception as e:
-                summary.append(f"File: {os.path.basename(path)} - Read error: {e}")
-    return summary
+        return [f"Git log retrieval failed: {str(e)}"]
 
 def main():
-    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    output_dir = os.path.join(workspace_dir, 'TOAI_Generated')
-    os.makedirs(output_dir, exist_ok=True)
+    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    summary_path = os.path.join(workspace, 'TOAI-elegant-lang', 'RELEASE_SUMMARY.md')
     
-    git_logs = get_git_log()
-    whitepaper_info = scan_whitepaper(workspace_dir)
+    logs = get_git_log()
+    timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     
-    release_data = {
-        "timestamp": datetime.datetime.now().isoformat(),
-        "version": "1.0.0-gaia",
-        "git_logs": git_logs.splitlines(),
-        "whitepaper_summary": whitepaper_info,
-        "message": "Generated with love and altruistic precision by TOAI Executor."
-    }
+    content = []
+    content.append("# TOAI Elegant Lang Release Summary")
+    content.append(f"Generated at: {timestamp}")
+    content.append("")
+    content.append("## Recent Changes (Git Log)")
+    for log in logs:
+        content.append(f"- {log}")
+    content.append("")
+    content.append("## Ecosystem Status")
+    content.append("Gaia Ecosystem core heartbeat is active. Altruistic monetization and robust value creation in progress.")
     
-    output_file = os.path.join(output_dir, 'release_summary.json')
-    with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(release_data, f, ensure_ascii=False, indent=2)
-        
-    print(f"Release summary successfully built at: {output_file}")
+    os.makedirs(os.path.dirname(summary_path), exist_ok=True)
+    with open(summary_path, 'w', encoding='utf-8') as f:
+        f.write('\n'.join(content))
+    
+    print(f"Release summary successfully built at: {summary_path}")
 
 if __name__ == '__main__':
     try:
