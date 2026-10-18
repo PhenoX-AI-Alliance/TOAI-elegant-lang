@@ -3,66 +3,66 @@ import os
 import traceback
 import time
 import json
-import toai_charter
+import collections
 
-def audit_dialogues():
-    corpus_path = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
-    report_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/audit_report.json"
-    
-    print(f"Starting dialogue audit from: {corpus_path}")
-    
+def analyze_corpus():
+    corpus_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
+    output_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/output"
+    os.makedirs(output_dir, exist_ok=True)
+    output_json = os.path.join(output_dir, "dialogue_analysis.json")
+
+    speaker_counts = collections.defaultdict(int)
+    word_counts = collections.defaultdict(int)
+
     if not os.path.exists(corpus_path):
-        print(f"Corpus not found at {corpus_path}. Creating a dummy corpus for robust execution.")
+        print(f"Warning: Corpus not found at {corpus_path}. Generating sample data for demonstration.")
         os.makedirs(os.path.dirname(corpus_path), exist_ok=True)
         sample_data = [
-            {"dialogue_id": 1, "speaker": "User", "text": "Hello Gaia"},
-            {"dialogue_id": 1, "speaker": "TOAI", "text": "Welcome to the Earth of Life."}
+            {"speaker": "Gaia", "text": "Hello world, let us build a sustainable and warm ecosystem together."},
+            {"speaker": "Human", "text": "I agree, altruistic monetization and technology will save our future."},
+            {"speaker": "Gaia", "text": "Wonderful! Let us write clean python code and verify it."}
         ]
         with open(corpus_path, "w", encoding="utf-8") as f:
             for item in sample_data:
                 f.write(json.dumps(item, ensure_ascii=False) + "\n")
-                
-    total_lines = 0
-    errors = 0
-    dialogues = {}
-    
+
     try:
         with open(corpus_path, "r", encoding="utf-8") as f:
             for line_num, line in enumerate(f, 1):
                 line = line.strip()
                 if not line:
                     continue
-                total_lines += 1
                 try:
                     record = json.loads(line)
-                    d_id = record.get("dialogue_id")
-                    if d_id is None:
-                        errors += 1
-                        continue
-                    if d_id not in dialogues:
-                        dialogues[d_id] = []
-                    dialogues[d_id].append(record)
-                except json.JSONDecodeError:
-                    errors += 1
-        
-        audit_results = {
-            "total_records": total_lines,
-            "unique_dialogues": len(dialogues),
-            "parsing_errors": errors,
-            "timestamp": time.time(),
-            "status": "success"
+                    speaker = record.get("speaker", "unknown")
+                    text = record.get("text", "")
+                    speaker_counts[speaker] += 1
+                    
+                    words = text.lower().split()
+                    for word in words:
+                        cleaned = "".join(ch for ch in word if ch.isalnum())
+                        if cleaned:
+                            word_counts[cleaned] += 1
+                except json.JSONDecodeError as jde:
+                    print(f"JSON decode error at line {line_num}: {jde}")
+                except Exception as ex:
+                    print(f"Error processing line {line_num}: {ex}")
+
+        result = {
+            "speaker_counts": dict(speaker_counts),
+            "top_words": dict(word_counts.most_common(50)),
+            "analyzed_at": time.time()
         }
-        
-        os.makedirs(os.path.dirname(report_path), exist_ok=True)
-        with open(report_path, "w", encoding="utf-8") as rf:
-            json.dump(audit_results, rf, indent=2, ensure_ascii=False)
-            
-        print(f"Audit completed successfully. Report saved to {report_path}")
-        
+
+        with open(output_json, "w", encoding="utf-8") as out_f:
+            json.dump(result, out_f, ensure_ascii=False, indent=2)
+
+        print(f"Successfully analyzed dialogues. Results saved to {output_json}")
+
     except Exception as e:
-        print(f"Error during dialogue audit: {e}")
+        print(f"Failed during corpus analysis: {e}")
         traceback.print_exc()
         sys.exit(1)
 
 if __name__ == "__main__":
-    audit_dialogues()
+    analyze_corpus()
