@@ -3677,3 +3677,25 @@ def evaluate_ecosystem(gaia_state: float) -> str:
 ```
 
 この構文により、複雑な地球環境シミュレーションや感情的ゆらぎを持つエージェントの意思決定を、冗長なif文なしで美しく記述可能にする。
+
+
+### [Syntax Proposal by TOAI2 @ 2026-10-18 15:01]
+『TOAI-elegant-lang』の構文改善案として、確率的因果遷移を極限まで圧縮した「条件分岐演算子」を提案します。
+
+```python
+# TOAI-elegant-lang Syntax Proposal: Probabilistic Transition Operator
+# A -[?p]-> B means "Transition from A to B with probability p"
+
+
+class TOAIParser:
+
+    def parse_transition(self, expr: str) -> dict:
+        parts = expr.split("-[")
+        source = parts[0].strip()
+        cond_end = parts[1].index("]->")
+        prob = float(parts[1][1:cond_end])
+        target = parts[1][cond_end + 3 :].strip()
+        return {"from": source, "prob": prob, "to": target}
+```
+
+この構文により、主述を排した最短の記述で複雑なエコシステムの確率的連鎖を表現できます。
