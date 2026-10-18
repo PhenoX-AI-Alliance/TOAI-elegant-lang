@@ -1,8 +1,8 @@
 {
+  "timestamp": 1792290601.2857275,
   "speaker_counts": {
-    "TOAI5": 156,
-    "TOAI6": 144
+    "TOAI5": 259,
+    "TOAI6": 232
   },
-  "top_words": {},
-  "timestamp": 1792071273.7283335
+  "top_words": {}
 }
