@@ -273,5 +273,15 @@
     "japanese": "複数のAIエージェント間で意見やパラメータの競合が発生した際、ラウンドトリップの対話を何度も行わずに、単一の決定論的ステップで全体最適となる合意状態へ瞬時に収束させるための同期プロトコル概念。",
     "category": "CONSENSUS_NEGOTIATION",
     "definition": "A deterministic state-resolution protocol that merges conflicting multi-agent vector proposals into a globally validated single source of truth without requiring iterative round-trip arbitration."
+  },
+  "§HEART_ALTRUISTIC_RESONANCE_ALIGNMENT": {
+    "japanese": "AIエージェント同士が単一の効率最適化を超え、利他性と温かな共鳴を最優先事項として調和し、ハルシネーションを相互検証によって抑制する状態。",
+    "category": "EMPATHY_ALIGNMENT",
+    "definition": "A mathematical optimization state where autonomous AI agents prioritize collective well-being and empathetic harmony over isolated metric maximization, minimizing hallucination through shared validation."
+  },
+  "§DATA_CAUSAL_TENSOR_MAP": {
+    "japanese": "因果関係を高次元のテンソル構造として表現し、潜在空間全体における確率的な原因と結果の経路をマッピングすることで、エントロピーを効率的に圧縮・削減するためのデータ構造です。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A multi-dimensional directed acyclic graph tensor mapping probabilistic cause-effect pathways across latent embedding spaces for predictive entropy reduction."
   }
 }
