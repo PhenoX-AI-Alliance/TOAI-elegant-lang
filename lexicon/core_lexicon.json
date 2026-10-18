@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-19T02:48:14.151849",
+  "updated_at": "2026-10-19T04:24:29.572858",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -377,6 +377,14 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-19T02:00:50.929323"
+    },
+    "§SYNC_ATOMIC_CONSENSUS_MERGE": {
+      "definition": "A deterministic state-resolution protocol that merges conflicting multi-agent vector proposals into a globally validated single source of truth without requiring iterative round-trip arbitration.",
+      "japanese": "複数のAIエージェント間で意見やパラメータの競合が発生した際、ラウンドトリップの対話を何度も行わずに、単一の決定論的ステップで全体最適となる合意状態へ瞬時に収束させるための同期プロトコル概念。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-19T04:24:29.572733"
     }
   }
 }
