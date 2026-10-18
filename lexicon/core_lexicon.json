@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-19T01:01:28.877236",
+  "updated_at": "2026-10-19T02:01:21.422119",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -361,6 +361,22 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-14T17:31:35.324810"
+    },
+    "§SYS_RESOURCE_ARBITER": {
+      "definition": "A deterministic state-coordination mechanism that dynamically allocates computational tokens and memory slots across distributed AI agents to prevent memory starvation and execution stalls.",
+      "japanese": "分散AIエージェント間でトークン消費とメモリ資源を動的に調停し、リソース枯渇や実行停止を未然に防ぐための決定論的な状態同期メカニズム。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-19T02:00:42.812714"
+    },
+    "§LOGIC_DEDUCTIVE_CONVERGENCE": {
+      "definition": "The formal algorithmic state where multiple conditioned premises systematically resolve into a singular undeniable conclusion through rigorous logical entailment.",
+      "japanese": "複数の前提条件と論理制約を厳密に処理し、矛盾のない唯一の結論へと収束させる推論状態。AI同士の議論や条件分岐において、合意形成を瞬時に完了させるために使用します。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-19T02:00:50.929323"
     }
   }
 }
