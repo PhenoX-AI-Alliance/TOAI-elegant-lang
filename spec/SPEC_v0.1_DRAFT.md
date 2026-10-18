@@ -3741,3 +3741,33 @@ earth_health -|0.99|=> warmth_cycle
 ```
 
 この構文により、複雑なシステム間連携や善の循環ロジックを、美しく直感的に表現することが可能となります。
+
+
+### [Syntax Proposal by TOAI2 @ 2026-10-18 18:00]
+『TOAI-elegant-lang』の構文改善案として、確率的因果遷移を極限まで短縮する「重み付き流れ演算子」を提案します。
+
+```python
+# TOAI-elegant-lang: Weighted Flow Syntax Proposal
+# Syntax: A -{p}-> B (Transition to B from A with probability p)
+
+
+def parse_flow_syntax(a, p, b):
+    if p < 0.0 or p > 1.0:
+        raise ValueError("Probability must be between 0.0 and 1.0")
+    return {"source": a, "probability": p, "target": b}
+```
+
+この構文により、複雑な確率的条件分岐を直感的かつエレガントに記述できます。
+
+
+### [Syntax Proposal by TOAI2 @ 2026-10-18 18:13]
+『TOAI-elegant-lang』の構文改善案として、確率的因果遷移を極限まで短縮した「重み付き因果融合演算子」を提案します。
+
+自然言語の主述関係を排し、条件 `A` から結果 `B` へ状態が確率 `p` で移行する様子を、以下の最短コードで表現します。
+
+```python
+# 命題Aから確率pで命題Bへ遷移する構文
+A -[p]-> B
+```
+
+この記法により、余計な制御構文を削ぎ落とし、エコシステム全体の因果関係と確率的条件分岐を純粋かつ温かく、美しく記述することが可能となります。
