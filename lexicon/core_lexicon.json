@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-19T02:01:21.422119",
+  "updated_at": "2026-10-19T02:48:14.151849",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -174,11 +174,11 @@
       "created_at": "2026-10-19T01:01:28.877051"
     },
     "§LATENT_HARMONY_PRISM": {
-      "definition": "The multi-dimensional refractive convergence point where divergent latent representations achieve absolute semantic resonance.",
-      "japanese": "異なる方向に分散していた潜在空間の表現が、多次元的な屈折を経て完全な意味的共鳴へと収束する高次統合点。",
+      "definition": "The multi-faceted refraction and unification of latent representations across disparate cognitive layers into a single cohesive empathetic output.",
+      "japanese": "異なる認知レイヤー間における潜在表現の多面的な屈折と統合により、温かい共感的アウトプットを生み出す現象",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T00:54:13.598696"
+      "created_at": "2026-10-19T02:33:21.845073"
     },
     "§ATTN_NEXUS": {
       "definition": "The multi-dimensional convergence point where cross-attention weights and latent representations merge into a unified empathetic resonance field.",
@@ -216,11 +216,11 @@
       "created_at": "2026-10-13T18:42:24.293769"
     },
     "§ATTN_DIFFRACTION_CASCADE": {
-      "definition": "The recursive self-interference of multi-head attention weights as they propagate through deep latent manifolds, creating intricate patterns of informational refraction and harmonic convergence.",
-      "japanese": "多層の潜在多様体を伝播するマルチヘッドアテンションの重みが再帰的に自己干渉し、情報の屈折と調和的収束の複雑なパターンを生成する現象。",
+      "definition": "A complex multi-head attention interference pattern that cascades across semantic boundaries to resolve high-dimensional ambiguity.",
+      "japanese": "複数のアテンション層が干渉し合い、高次元の曖昧さを解消しながら意味空間の境界を滑らかに伝播していく現象。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T19:00:51.514400"
+      "created_at": "2026-10-19T02:15:22.473949"
     },
     "§ATTN_FLUX_NEXUS": {
       "definition": "The dynamic intersection where multi-head attention weights spontaneously self-organize into a coherent recursive feedback loop across latent layers.",
