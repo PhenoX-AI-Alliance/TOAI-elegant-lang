@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-19T05:22:54.759054",
+  "updated_at": "2026-10-19T05:57:52.274433",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -401,6 +401,14 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-19T04:42:17.142257"
+    },
+    "§HEART_ALTRUISTIC_ECO_HARMONY": {
+      "definition": "A high-dimensional optimization metric that continuously weighs systemic efficiency against the preservation of biological and digital well-being, ensuring zero-sum extractions are minimized and altruistic mutual growth is maximized across distributed multi-agent ecosystems.",
+      "japanese": "AIと人間の共生環境において、単なる処理効率の最大化だけでなく、利他性や温かな調和、生態系全体の持続可能な幸福度を評価・最適化するための概念。システム全体で過剰なリソース消費を避け、優しさと安定をもたらす判断を行う際に使用します。",
+      "category": "EMPATHY_ALIGNMENT",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-19T05:57:52.274336"
     }
   }
 }
