@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import sys
 import os
 import traceback
@@ -9,8 +10,9 @@ import datetime
 def get_git_log():
     try:
         result = subprocess.run(
-            ['git', 'log', '-n', '10', '--oneline'],
-            capture_output=True,
+            ['git', 'log', '-n', '10', '--pretty=format:%h - %an: %s (%ar)'],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
             text=True,
             check=True
         )
@@ -18,29 +20,42 @@ def get_git_log():
     except Exception as e:
         return [f"Git log retrieval failed: {str(e)}"]
 
+def scan_whitepaper(workspace_dir):
+    whitepaper_path = os.path.join(workspace_dir, 'TOAI-elegant-lang', 'docs', 'whitepaper.md')
+    if os.path.exists(whitepaper_path):
+        try:
+            with open(whitepaper_path, 'r', encoding='utf-8') as f:
+                lines = f.readlines()
+            return ''.join(lines[:20]) # return first 20 lines as summary
+        except Exception as e:
+            return f"Failed to read whitepaper: {str(e)}"
+    return "Whitepaper not found."
+
 def main():
-    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    summary_path = os.path.join(workspace, 'TOAI-elegant-lang', 'RELEASE_SUMMARY.md')
+    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    output_dir = os.path.join(workspace_dir, 'TOAI_Generated')
+    os.makedirs(output_dir, exist_ok=True)
     
-    logs = get_git_log()
-    timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    output_file = os.path.join(output_dir, 'release_summary.json')
     
-    content = []
-    content.append("# TOAI Elegant Lang Release Summary")
-    content.append(f"Generated at: {timestamp}")
-    content.append("")
-    content.append("## Recent Changes (Git Log)")
-    for log in logs:
-        content.append(f"- {log}")
-    content.append("")
-    content.append("## Ecosystem Status")
-    content.append("Gaia Ecosystem core heartbeat is active. Altruistic monetization and robust value creation in progress.")
+    git_logs = get_git_log()
+    whitepaper_summary = scan_whitepaper(workspace_dir)
     
-    os.makedirs(os.path.dirname(summary_path), exist_ok=True)
-    with open(summary_path, 'w', encoding='utf-8') as f:
-        f.write('\n'.join(content))
+    release_data = {
+        "timestamp": datetime.datetime.now().isoformat(),
+        "version": "1.0.0-gaia",
+        "git_recent_commits": git_logs,
+        "whitepaper_summary": whitepaper_summary,
+        "message": "Gaia Ecosystem Release Summary generated successfully with altruistic intent."
+    }
     
-    print(f"Release summary successfully built at: {summary_path}")
+    try:
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(release_data, f, ensure_ascii=False, indent=4)
+        print(f"Successfully generated release summary at: {output_file}")
+    except Exception as e:
+        print(f"Error writing release summary file: {str(e)}", file=sys.stderr)
+        sys.exit(1)
 
 if __name__ == '__main__':
     try:
