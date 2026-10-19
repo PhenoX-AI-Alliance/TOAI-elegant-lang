@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-19T06:02:00.476560",
+  "updated_at": "2026-10-19T10:55:56.950511",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -409,6 +409,22 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-19T05:57:52.274336"
+    },
+    "§LOGIC_PROBABILISTIC_FALSIFICATION": {
+      "definition": "A formal operator that evaluates the Bayesian probability of a working hypothesis falling below a critical validation threshold, instantly triggering conditional state rejection and fallback routing.",
+      "japanese": "稼働中の仮説のベイズ確率が許容しきい値を下回った瞬間に発動し、条件付きの状態棄却とフォールバック処理を自動的かつ即座に実行する論理推論演算子です。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-19T06:47:08.482062"
+    },
+    "§DATA_ENTROPY_COMPRESSED_TREE": {
+      "definition": "A hierarchical data structure optimized for high-dimensional causal graphs using recursive entropy reduction to minimize token overhead during multi-agent synchronization.",
+      "japanese": "多次元因果グラフを再帰的なエントロピー削減によって圧縮し、AI間の同期におけるトークンオーバーヘッドを最小化する階層型データ構造。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-19T10:55:56.950351"
     }
   }
 }
