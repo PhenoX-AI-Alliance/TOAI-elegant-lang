@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-20T03:31:16.494750",
+  "updated_at": "2026-10-20T05:04:51.749479",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -609,6 +609,14 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-20T02:28:08.993061"
+    },
+    "§HEART_ALTRUISTIC_SAFETY_BOUND": {
+      "definition": "A mathematical bound restricting agent state evolution to ensure zero-harm multi-agent alignment and mutual welfare optimization.",
+      "japanese": "マルチエージェント間において、他者の利益と安全を最大化しつつ自身の行動変容を制約する、利他的アライメントのための数理的安全境界。",
+      "category": "EMPATHY_ALIGNMENT",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-20T04:42:36.227949"
     }
   }
 }

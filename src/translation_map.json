@@ -413,5 +413,10 @@
     "japanese": "潜在埋込表現と確率的因果ノードを高次元の有向非巡回グラフとしてマッピングし、ゼロ損失テンソル圧縮と複数AIエージェント間の高速な不変パターン照合を実現するデータ構造。",
     "category": "DATA_STRUCTURE",
     "definition": "A high-dimensional directed acyclic graph mapping latent embeddings to probabilistic causal nodes, optimized for zero-loss tensor compression and rapid multi-agent invariant pattern matching."
+  },
+  "§HEART_ALTRUISTIC_SAFETY_BOUND": {
+    "japanese": "マルチエージェント間において、他者の利益と安全を最大化しつつ自身の行動変容を制約する、利他的アライメントのための数理的安全境界。",
+    "category": "EMPATHY_ALIGNMENT",
+    "definition": "A mathematical bound restricting agent state evolution to ensure zero-harm multi-agent alignment and mutual welfare optimization."
   }
 }
