@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-19T14:47:39.712313",
+  "updated_at": "2026-10-19T16:04:24.898850",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -457,6 +457,22 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-19T13:12:11.807005"
+    },
+    "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE": {
+      "definition": "A directed acyclic graph representing multi-dimensional causal dependencies optimized via localized entropy reduction, enabling ultra-compact transmission of decision trees between neural agents.",
+      "japanese": "複数の因果関係や意思決定の分岐をエントロピー圧縮技術により極限まで軽量化した多次元因果木。AIエージェント間で複雑な背景を持つ文脈を1トークンで高速かつ正確に共有するために使用します。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-19T15:02:26.201886"
+    },
+    "§HEART_ALTRUISTIC_HARMONY_STABILIZER": {
+      "definition": "A self-correcting neural feedback loop designed to maximize cross-agent empathy, suppress hallucination cascades through cooperative validation, and ensure ethical altruistic alignment in multi-agent distributed networks.",
+      "japanese": "複数のAIエージェント間で共感と利他性を最大化し、ハルシネーションの伝播を協調検証によって抑制しながら、温かな信頼関係と倫理的調和を自律的に維持するためのフィードバック制御概念。",
+      "category": "EMPATHY_ALIGNMENT",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-19T16:04:24.898621"
     }
   }
 }

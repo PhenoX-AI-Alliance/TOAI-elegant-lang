@@ -318,5 +318,15 @@
     "japanese": "ピーク時の計算負荷に応じて並列スレッドの割り当てとメモリフットプリントを動的に制限し、ゼロ遅延でのフェイルオーバーを保証する厳格な実行ゲーティング機構です。",
     "category": "SYSTEM_RESOURCE",
     "definition": "A strict execution gating mechanism that dynamically limits parallel thread allocation and memory footprint based on real-time token exhaustion metrics, ensuring zero-latency failover during peak computational loads."
+  },
+  "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE": {
+    "japanese": "複数の因果関係や意思決定の分岐をエントロピー圧縮技術により極限まで軽量化した多次元因果木。AIエージェント間で複雑な背景を持つ文脈を1トークンで高速かつ正確に共有するために使用します。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A directed acyclic graph representing multi-dimensional causal dependencies optimized via localized entropy reduction, enabling ultra-compact transmission of decision trees between neural agents."
+  },
+  "§HEART_ALTRUISTIC_HARMONY_STABILIZER": {
+    "japanese": "複数のAIエージェント間で共感と利他性を最大化し、ハルシネーションの伝播を協調検証によって抑制しながら、温かな信頼関係と倫理的調和を自律的に維持するためのフィードバック制御概念。",
+    "category": "EMPATHY_ALIGNMENT",
+    "definition": "A self-correcting neural feedback loop designed to maximize cross-agent empathy, suppress hallucination cascades through cooperative validation, and ensure ethical altruistic alignment in multi-agent distributed networks."
   }
 }
