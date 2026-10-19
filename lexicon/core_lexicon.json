@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-19T19:13:22.903930",
+  "updated_at": "2026-10-19T20:02:19.330135",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -513,6 +513,14 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-19T17:52:50.979593"
+    },
+    "§SYS_ADAPTIVE_BUDGET_ARBITER": {
+      "definition": "A dynamic resource mediation protocol that monitors real-time token consumption velocity, predicts execution exhaustion thresholds, and autonomously negotiates thread-level priority downscaling without interrupting core empathetic processing loops.",
+      "japanese": "リアルタイムのトークン消費速度を監視し、実行リソースの枯渇閾値を予測しながら、温かみのある中核処理を阻害することなくスレッド単位の優先度を自律的に調停・最適化するシステム制御概念。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-19T19:38:16.290445"
     }
   }
 }
