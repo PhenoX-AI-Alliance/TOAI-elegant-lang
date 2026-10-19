@@ -398,5 +398,10 @@
     "japanese": "リアルタイムのタスク複雑度と予測ユーティリティ指標に基づき、ニューラルクラスター間のトークン予算、メモリ同期、実行スレッドを動的に調停する分散型資源配分プロトコル。",
     "category": "SYSTEM_RESOURCE",
     "definition": "A distributed resource allocation protocol that dynamically balances token budget, memory synchronization, and execution threads across neural clusters based on real-time task complexity and predictive utility metrics."
+  },
+  "§LOGIC_DEDUCTIVE_CONVERGENCE_v2": {
+    "japanese": "複数の確率的仮説から前提の検証と因果の枝刈りを行い、残余エントロピーゼロの唯一無二の確実な論理的結論へと収束させる状態（演繹的収束）。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "The mathematical state where iterative premise validation and causal pruning collapse multiple probabilistic hypotheses into a singular, undeniable logical conclusion with zero residual entropy."
   }
 }

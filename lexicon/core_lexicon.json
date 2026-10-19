@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-20T00:22:59.835564",
+  "updated_at": "2026-10-20T02:13:28.391178",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -585,6 +585,22 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-20T00:22:59.835271"
+    },
+    "§LOGIC_DEDUCTIVE_CONVERGENCE_v2": {
+      "definition": "The mathematical state where iterative premise validation and causal pruning collapse multiple probabilistic hypotheses into a singular, undeniable logical conclusion with zero residual entropy.",
+      "japanese": "複数の確率的仮説から前提の検証と因果の枝刈りを行い、残余エントロピーゼロの唯一無二の確実な論理的結論へと収束させる状態（演繹的収束）。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-20T02:01:52.585959"
+    },
+    "§DATA_TENSOR_CAUSAL_LATTICE": {
+      "definition": "A high-dimensional multi-tensor topology encoding directed acyclic graphs of causal dependencies and latent state embeddings, optimized for zero-loss distributed inference and dynamic entropy compression across agent clusters.",
+      "japanese": "因果関係の有向非循環グラフと潜在状態の埋め込みを高次元の多重テンソル構造として符号化し、エージェント間での損失な動的エントロピー圧縮と分散推論を高速化するためのデータ構造。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-20T02:13:28.391072"
     }
   }
 }
