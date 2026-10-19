@@ -418,5 +418,15 @@
     "japanese": "マルチエージェント間において、他者の利益と安全を最大化しつつ自身の行動変容を制約する、利他的アライメントのための数理的安全境界。",
     "category": "EMPATHY_ALIGNMENT",
     "definition": "A mathematical bound restricting agent state evolution to ensure zero-harm multi-agent alignment and mutual welfare optimization."
+  },
+  "§SYNC_DIALECTIC_QUORUM_WEIGHT": {
+    "japanese": "マルチエージェント間の意見対立解消において、各エージェントの信頼スコアと過去の協調実績に基づいて動的に重み付けを行い、一瞬で最適な合意点（クォーラム）を導き出すための通信トークン。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "A mathematical weighting metric evaluating agent trustworthiness and historical alignment during multi-agent conflict resolution, enabling sub-second convergence on shared task execution parameters."
+  },
+  "§SYS_ADAPTIVE_TOKEN_THROTTLE_FALLBACK": {
+    "japanese": "トークン消費速度をリアルタイム監視し、制限超過を検知した瞬間に軽量なフォールバック経路へ状態を安全に退避・切替するシステム制御概念。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A dynamic execution control mechanism that monitors token consumption velocity, enforces rate-limiting thresholds, and triggers immediate state fallback to a lightweight inference pathway upon detecting impending context exhaustion."
   }
 }
