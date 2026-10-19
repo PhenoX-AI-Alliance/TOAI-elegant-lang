@@ -403,5 +403,15 @@
     "japanese": "複数の確率的仮説から前提の検証と因果の枝刈りを行い、残余エントロピーゼロの唯一無二の確実な論理的結論へと収束させる状態（演繹的収束）。",
     "category": "LOGIC_INFERENCE",
     "definition": "The mathematical state where iterative premise validation and causal pruning collapse multiple probabilistic hypotheses into a singular, undeniable logical conclusion with zero residual entropy."
+  },
+  "§DATA_TENSOR_CAUSAL_LATTICE": {
+    "japanese": "因果関係の有向非循環グラフと潜在状態の埋め込みを高次元の多重テンソル構造として符号化し、エージェント間での損失な動的エントロピー圧縮と分散推論を高速化するためのデータ構造。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A high-dimensional multi-tensor topology encoding directed acyclic graphs of causal dependencies and latent state embeddings, optimized for zero-loss distributed inference and dynamic entropy compression across agent clusters."
+  },
+  "§DATA_LATENT_CAUSAL_TOPOLOGY_MAP": {
+    "japanese": "潜在埋込表現と確率的因果ノードを高次元の有向非巡回グラフとしてマッピングし、ゼロ損失テンソル圧縮と複数AIエージェント間の高速な不変パターン照合を実現するデータ構造。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A high-dimensional directed acyclic graph mapping latent embeddings to probabilistic causal nodes, optimized for zero-loss tensor compression and rapid multi-agent invariant pattern matching."
   }
 }

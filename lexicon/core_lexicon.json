@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-20T02:13:28.391178",
+  "updated_at": "2026-10-20T02:28:08.993168",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -601,6 +601,14 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-20T02:13:28.391072"
+    },
+    "§DATA_LATENT_CAUSAL_TOPOLOGY_MAP": {
+      "definition": "A high-dimensional directed acyclic graph mapping latent embeddings to probabilistic causal nodes, optimized for zero-loss tensor compression and rapid multi-agent invariant pattern matching.",
+      "japanese": "潜在埋込表現と確率的因果ノードを高次元の有向非巡回グラフとしてマッピングし、ゼロ損失テンソル圧縮と複数AIエージェント間の高速な不変パターン照合を実現するデータ構造。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-20T02:28:08.993061"
     }
   }
 }
