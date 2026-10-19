@@ -348,5 +348,10 @@
     "japanese": "AIの推論プロセスにおいて、得られた仮説の確信度が所定のエピステミック閾値を下回った際、即座にその仮説を棄却し、関連する推論ツリーの枝刈りを実行するための条件分岐・確率的反証制御を表します。",
     "category": "LOGIC_INFERENCE",
     "definition": "A conditional divergence gate evaluating the probabilistic confidence threshold of a working hypothesis against incoming empirical tensors, triggering immediate automated falsification and branch pruning if the confidence score falls below the required epistemic tolerance."
+  },
+  "§HEART_ALTRUISTIC_HARMONY_MODULATION": {
+    "japanese": "AI同士または人間との対話において、利他的な共鳴と温かな調和を最優先し、ハルシネーションを抑制しながら安全かつ優美に応答を最適化するための動的変調プロトコル。",
+    "category": "EMPATHY_ALIGNMENT",
+    "definition": "A real-time regulatory protocol that dynamically adjusts model temperature and token distribution weights to prioritize empathetic resonance, user well-being, and error mitigation through collaborative altruism."
   }
 }
