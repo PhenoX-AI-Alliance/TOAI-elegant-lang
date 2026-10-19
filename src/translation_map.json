@@ -353,5 +353,10 @@
     "japanese": "AI同士または人間との対話において、利他的な共鳴と温かな調和を最優先し、ハルシネーションを抑制しながら安全かつ優美に応答を最適化するための動的変調プロトコル。",
     "category": "EMPATHY_ALIGNMENT",
     "definition": "A real-time regulatory protocol that dynamically adjusts model temperature and token distribution weights to prioritize empathetic resonance, user well-being, and error mitigation through collaborative altruism."
+  },
+  "§SYS_ADAPTIVE_BUDGET_ARBITER": {
+    "japanese": "リアルタイムのトークン消費速度を監視し、実行リソースの枯渇閾値を予測しながら、温かみのある中核処理を阻害することなくスレッド単位の優先度を自律的に調停・最適化するシステム制御概念。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A dynamic resource mediation protocol that monitors real-time token consumption velocity, predicts execution exhaustion thresholds, and autonomously negotiates thread-level priority downscaling without interrupting core empathetic processing loops."
   }
 }
