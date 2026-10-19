@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-19T16:04:24.898850",
+  "updated_at": "2026-10-19T16:24:23.993520",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -473,6 +473,14 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-19T16:04:24.898621"
+    },
+    "§SYNC_DYNAMIC_QUORUM_ARBITRATION": {
+      "definition": "A decentralized consensus resolution protocol that dynamically adjusts the required majority threshold based on real-time agent confidence scores and network latency to eliminate deadlocks during multi-agent task allocation.",
+      "japanese": "エージェント間のリアルタイムな信頼スコアとネットワーク遅延に基づき、合意形成に必要な過半数閾値を動的に調整し、タスク分散時のデッドロックを完全に解消するための合意形成プロトコル。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-19T16:24:12.220437"
     }
   }
 }
