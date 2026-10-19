@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-19T21:11:31.928930",
+  "updated_at": "2026-10-19T21:38:47.751298",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -545,6 +545,14 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-19T21:11:31.928705"
+    },
+    "§SYNC_HARMONIC_VOTE_ARBITRATION": {
+      "definition": "A distributed resolution mechanism that weighs multi-agent trust metrics and priority vectors to dynamically reconcile conflicting preferences into a single coherent consensus state with minimal thermal overhead.",
+      "japanese": "複数のAIエージェント間で意見が対立した際、信頼スコアと優先度ベクトルを考慮して温かくかつ効率的に合意形成を図り、最適なタスク配分を決定するための通信プロトコル。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-19T21:38:47.751185"
     }
   }
 }

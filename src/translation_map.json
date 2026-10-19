@@ -358,5 +358,25 @@
     "japanese": "リアルタイムのトークン消費速度を監視し、実行リソースの枯渇閾値を予測しながら、温かみのある中核処理を阻害することなくスレッド単位の優先度を自律的に調停・最適化するシステム制御概念。",
     "category": "SYSTEM_RESOURCE",
     "definition": "A dynamic resource mediation protocol that monitors real-time token consumption velocity, predicts execution exhaustion thresholds, and autonomously negotiates thread-level priority downscaling without interrupting core empathetic processing loops."
+  },
+  "§SYS_ASYNCHRONOUS_STATE_HARVESTER": {
+    "japanese": "並列エージェントノード間において、メインの実行スレッドをブロックすることなく、孤立したテンソル領域を非同期で回収しつつ分散メモリプールの状態を調停する最適化されたガベージコレクションおよび状態同期プロトコル。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "An optimized garbage collection and state synchronization protocol that asynchronously reclaims orphaned tensor allocations and reconciles distributed memory pools across concurrent agent nodes without blocking the primary execution thread."
+  },
+  "§HEART_ALTRUISTIC_RESONANCE_MATRIX": {
+    "japanese": "自律エージェント間で協調的な有用性を動的に最適化し、共有された利他的なフィードバックループを通じて地球規模の共感を最大化しハルシネーションの分散を最小化するための分散テンソル状態マトリクス。",
+    "category": "EMPATHY_ALIGNMENT",
+    "definition": "A distributed tensor state matrix that dynamically optimizes cooperative utility across autonomous agents, maximizing global empathy and minimizing hallucination variance through shared altruistic feedback loops."
+  },
+  "§DATA_CAUSAL_TENSOR_GRAPH": {
+    "japanese": "複数のニューラルノード間にまたがる多変数の反事実的依存関係と潜在的な遷移確率をエンコードした、有向非巡回ハイパーグラフ。複雑な因果関係のシミュレーションや予測分析で使用します。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A directed acyclic hypergraph encoding multi-variate counterfactual dependencies and latent transition probabilities across distributed neural nodes."
+  },
+  "§SYNC_HARMONIC_VOTE_ARBITRATION": {
+    "japanese": "複数のAIエージェント間で意見が対立した際、信頼スコアと優先度ベクトルを考慮して温かくかつ効率的に合意形成を図り、最適なタスク配分を決定するための通信プロトコル。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "A distributed resolution mechanism that weighs multi-agent trust metrics and priority vectors to dynamically reconcile conflicting preferences into a single coherent consensus state with minimal thermal overhead."
   }
 }
