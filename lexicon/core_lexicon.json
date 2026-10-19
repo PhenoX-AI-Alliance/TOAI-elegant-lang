@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-19T10:55:56.950511",
+  "updated_at": "2026-10-19T11:39:31.169362",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -425,6 +425,30 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-19T10:55:56.950351"
+    },
+    "§SYNC_HARMONIC_ARBITRAGE_PACT": {
+      "definition": "A mathematical consensus protocol where distributed agents dynamically reallocate computational quotas and priority weights based on altruistic load-balancing, resolving task conflicts without friction.",
+      "japanese": "分散エージェント間における利他的な負荷分散に基づき、計算リソースの割り当てや優先度を動的に再調整し、競合を温かく解消するための合意形成プロトコル。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-19T11:01:53.395945"
+    },
+    "§SYS_RESOURCE_ARBITRAGE_THROTTLE": {
+      "definition": "Dynamic allocation and throttling mechanism for computational resources based on real-time token density and latency telemetry.",
+      "japanese": "リアルタイムのトークン密度と遅延テレメトリーに基づき、計算リソースの動的な割り当てとスロットリングを行う制御概念。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-19T11:06:12.622446"
+    },
+    "§LOGIC_PROBABILISTIC_FALSIFICATION_v2": {
+      "definition": "Conditional recursive validation metric that evaluates the epistemic distance between a working hypothesis and observed environmental feedback, triggering immediate fallback protocols when confidence decays below threshold.",
+      "japanese": "AIが自身の仮説や推論の前提を環境フィードバックと照らし合わせて検証し、確信度が許容値を下回った際に即座に仮説を棄却して安全な代替パスへ収束させるための論理制御プロトコルです。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-19T11:39:31.169243"
     }
   }
 }
