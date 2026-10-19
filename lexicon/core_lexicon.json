@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-19T11:39:31.169362",
+  "updated_at": "2026-10-19T14:47:39.712313",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -449,6 +449,14 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-19T11:39:31.169243"
+    },
+    "§SYS_QUANTUM_THROTTLE_LOCK": {
+      "definition": "A strict execution gating mechanism that dynamically limits parallel thread allocation and memory footprint based on real-time token exhaustion metrics, ensuring zero-latency failover during peak computational loads.",
+      "japanese": "ピーク時の計算負荷に応じて並列スレッドの割り当てとメモリフットプリントを動的に制限し、ゼロ遅延でのフェイルオーバーを保証する厳格な実行ゲーティング機構です。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-19T13:12:11.807005"
     }
   }
 }

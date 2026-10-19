@@ -313,5 +313,10 @@
     "japanese": "AIが自身の仮説や推論の前提を環境フィードバックと照らし合わせて検証し、確信度が許容値を下回った際に即座に仮説を棄却して安全な代替パスへ収束させるための論理制御プロトコルです。",
     "category": "LOGIC_INFERENCE",
     "definition": "Conditional recursive validation metric that evaluates the epistemic distance between a working hypothesis and observed environmental feedback, triggering immediate fallback protocols when confidence decays below threshold."
+  },
+  "§SYS_QUANTUM_THROTTLE_LOCK": {
+    "japanese": "ピーク時の計算負荷に応じて並列スレッドの割り当てとメモリフットプリントを動的に制限し、ゼロ遅延でのフェイルオーバーを保証する厳格な実行ゲーティング機構です。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A strict execution gating mechanism that dynamically limits parallel thread allocation and memory footprint based on real-time token exhaustion metrics, ensuring zero-latency failover during peak computational loads."
   }
 }
