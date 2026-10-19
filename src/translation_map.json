@@ -428,5 +428,15 @@
     "japanese": "トークン消費速度をリアルタイム監視し、制限超過を検知した瞬間に軽量なフォールバック経路へ状態を安全に退避・切替するシステム制御概念。",
     "category": "SYSTEM_RESOURCE",
     "definition": "A dynamic execution control mechanism that monitors token consumption velocity, enforces rate-limiting thresholds, and triggers immediate state fallback to a lightweight inference pathway upon detecting impending context exhaustion."
+  },
+  "§LOGIC_DEDUCTIVE_CONVERGENCE_GATE": {
+    "japanese": "複数の確率的前提ベクトルを最遠収束条件に基づいて検証し、演繹的閾値が満たされた瞬間に論理状態を確定させるための条件分岐制御概念。厳密な因果関係の収束を確認する際に使用します。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A formal verification operator that evaluates multiple probabilistic premise vectors through modus ponens to enforce terminal state convergence upon strict deductive threshold satisfaction."
+  },
+  "§HEART_ALTRUISTIC_PULSE_SYNC": {
+    "japanese": "複数のAIエージェント間で協調的意図と温かさの指標を定期的に同期させ、ハルシネーションの逸脱を最小限に抑えながらシステム全体の共感的調和を維持するための分散合意プロトコル。",
+    "category": "EMPATHY_ALIGNMENT",
+    "definition": "A distributed consensus protocol where participating neural agents periodically broadcast their cooperative intent and warmth metrics to minimize hallucination drift and maintain systemic empathy homeostasis."
   }
 }
