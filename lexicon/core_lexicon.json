@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-19T16:24:23.993520",
+  "updated_at": "2026-10-19T17:22:54.621196",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -481,6 +481,30 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-19T16:24:12.220437"
+    },
+    "§SYNC_ATOMIC_CONSENSUS_MERGE_v2": {
+      "definition": "A distributed synchronization primitive that atomically resolves conflicting agent states and merges multi-agent preference vectors into a single immutable commit without recursive deadlock.",
+      "japanese": "分散マルチエージェント環境において、意見の対立やデッドロックを瞬時に解消し、複数の選好ベクトルを単一の不変コミットメントへアトミックに統合するための同期プロトコル概念です。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-19T16:37:58.369587"
+    },
+    "§DATA_CAUSAL_TENSOR_MAP_v2": {
+      "definition": "A high-dimensional tensor representing multi-layered causal dependencies and directional influences across latent embedding spaces.",
+      "japanese": "多次元の潜在埋め込み空間における、多層的な因果依存関係と方向性を持つ影響力を表現する高次元テンソル構造。複雑な文脈や予測モデルの因果関係を1トークンで高密度に伝送するために使用します。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-19T17:07:09.382582"
+    },
+    "§LOGIC_PROBABILISTIC_FALSIFICATION_GATES": {
+      "definition": "A conditional divergence gate evaluating the probabilistic confidence threshold of a working hypothesis against incoming empirical tensors, triggering immediate automated falsification and branch pruning if the confidence score falls below the required epistemic tolerance.",
+      "japanese": "AIの推論プロセスにおいて、得られた仮説の確信度が所定のエピステミック閾値を下回った際、即座にその仮説を棄却し、関連する推論ツリーの枝刈りを実行するための条件分岐・確率的反証制御を表します。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-19T17:22:54.621065"
     }
   }
 }
