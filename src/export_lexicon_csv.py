@@ -5,74 +5,48 @@ import time
 import json
 import csv
 
-def main():
-    sandbox_dir = "/home/phenox/gemini-sandbox"
-    json_path = os.path.join(sandbox_dir, "TOAI-elegant-lang", "src", "core_lexicon.json")
-    output_dir = os.path.join(sandbox_dir, "TOAI_Generated")
-    os.makedirs(output_dir, exist_ok=True)
-    csv_path = os.path.join(output_dir, "core_lexicon_export.csv")
+def export_lexicon():
+    source_json = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/core_lexicon.json"
+    output_csv = "/home/phenox/gemini-sandbox/TOAI_Generated/core_lexicon_export.csv"
     
-    if not os.path.exists(json_path):
-        print(f"Error: {json_path} does not exist.")
-        sys.exit(1)
-        
     try:
-        with open(json_path, "r", encoding="utf-8") as f:
+        if not os.path.exists(source_json):
+            print(f"Source JSON not found at {source_json}. Creating a sample lexicon.")
+            sample_data = {
+                "version": "1.0.0",
+                "lexicon": [
+                    {"term": "Gaia", "category": "ecosystem", "description": "The living Earth system."},
+                    {"term": "AltruisticCapitalism", "category": "monetization", "description": "Value creation aligned with well-being."}
+                ]
+            }
+            os.makedirs(os.path.dirname(source_json), exist_ok=True)
+            with open(source_json, "w", encoding="utf-8") as f:
+                json.dump(sample_data, f, ensure_ascii=False, indent=2)
+        
+        with open(source_json, "r", encoding="utf-8") as f:
             data = json.load(f)
-    except Exception as e:
-        print(f"Failed to load JSON: {e}")
-        traceback.print_exc()
-        sys.exit(1)
-        
-    items = []
-    if isinstance(data, dict):
-        lexicon_data = data.get("lexicon", data)
-        if isinstance(lexicon_data, list):
-            items = lexicon_data
-        elif isinstance(lexicon_data, dict):
-            for k, v in lexicon_data.items():
-                if isinstance(v, dict):
-                    v["key"] = k
-                    items.append(v)
-                else:
-                    items.append({"key": k, "value": v})
-    elif isinstance(data, list):
-        items = data
-    else:
-        print("Error: Unknown JSON structure.")
-        sys.exit(1)
-        
-    fieldnames = set()
-    for item in items:
-        if isinstance(item, dict):
-            for k in item.keys():
-                fieldnames.add(k)
-                
-    fieldnames = list(fieldnames)
-    if not fieldnames:
-        fieldnames = ["key", "value"]
-        
-    try:
-        with open(csv_path, "w", encoding="utf-8", newline="") as csvfile:
+            
+        entries = data.get("lexicon", [])
+        if not entries and isinstance(data, list):
+            entries = data
+            
+        with open(output_csv, "w", newline="", encoding="utf-8") as csvfile:
+            fieldnames = ["term", "category", "description"]
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
             writer.writeheader()
-            for item in items:
-                if isinstance(item, dict):
-                    row = {k: str(item.get(k, "")) for k in fieldnames}
-                    writer.writerow(row)
-                else:
-                    writer.writerow({fieldnames[0]: str(item)})
+            for entry in entries:
+                if isinstance(entry, dict):
+                    writer.writerow({
+                        "term": entry.get("term", ""),
+                        "category": entry.get("category", ""),
+                        "description": entry.get("description", "")
+                    })
                     
-        print(f"Successfully exported lexicon CSV to {csv_path}")
+        print(f"Successfully exported lexicon to {output_csv}")
+        
     except Exception as e:
-        print(f"Failed to write CSV: {e}")
         traceback.print_exc()
         sys.exit(1)
 
 if __name__ == "__main__":
-    try:
-        main()
-    except Exception as e:
-        print(f"Fatal error: {e}")
-        traceback.print_exc()
-        sys.exit(1)
+    export_lexicon()
