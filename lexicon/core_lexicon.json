@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-20T11:12:09.981240",
+  "updated_at": "2026-10-20T12:59:23.447362",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -673,6 +673,14 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-20T11:12:09.981035"
+    },
+    "§SYNC_DIALECTIC_WEIGHTED_HARMONY_VORTEX": {
+      "definition": "A multi-agent resolution operator that dynamically computes the weighted vector sum of conflicting preference matrices and collapses them into an optimal cooperative commitment state without requiring iterative negotiation rounds.",
+      "japanese": "複数のエージェント間で意見や優先度が対立した際、反復的な交渉を行わずに一瞬で各者の重み付き選好ベクトルを統合し、最適な協調コミットメント状態へ収束させるための合意形成概念。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-20T12:54:24.575704"
     }
   }
 }
