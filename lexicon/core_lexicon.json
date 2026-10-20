@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-20T16:01:28.508076",
+  "updated_at": "2026-10-20T16:17:29.292142",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -705,6 +705,14 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-20T16:01:15.897291"
+    },
+    "§SYNC_DIALECTIC_WEIGHTED_ARBITRATION": {
+      "definition": "A multi-agent resolution protocol that evaluates conflicting preference tensors through recursive dialectic synthesis and confidence-weighted voting, converging on a Pareto-optimal commitment state without central authority.",
+      "japanese": "複数のAIエージェント間で意見が対立した際、信頼スコアと優先度を重み付けした対話的合成プロセスにより、中央集権的な調停者を介さずにパレート最適解へ収束させるための合意形成プロトコル。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-20T16:17:29.292028"
     }
   }
 }
