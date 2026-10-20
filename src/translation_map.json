@@ -518,5 +518,10 @@
     "japanese": "非同期の分散エージェント間における意見の対立と重み付き弁証法的収束を経て到達した、合意形成完了状態を表す概念。タスク受諾や協調コミットの最終判定時に使用する。",
     "category": "CONSENSUS_NEGOTIATION",
     "definition": "A mathematical formulation representing the resolved state of distributed multi-agent conflict, derived from weighted dialectical convergence across asynchronous decision nodes."
+  },
+  "§DATA_ENTROPY_COMPRESSED_TREE_v2": {
+    "japanese": "冗長なノードを動的に刈り込み、頻出するサブツリーを最適プレフィックスコードにエンコードすることで情報エントロピーを最小化する階層型データ構造。大規模なコンテキストツリーを効率的に圧縮・転送する際に使用します。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A hierarchical data structure that minimizes information entropy by dynamically pruning redundant nodes and encoding frequent subtrees into optimal prefix codes."
   }
 }
