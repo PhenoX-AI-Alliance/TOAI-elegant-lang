@@ -503,5 +503,15 @@
     "japanese": "高次元な潜在状態の通信を最適化するため、局所的なエントロピー最小化アルゴリズムによって因果関係の依存性を圧縮した有向非巡回グラフ。分散AIノード間のデータ同期において冗長性を極限まで排除する際に使用する。",
     "category": "DATA_STRUCTURE",
     "definition": "A directed acyclic graph representing causal dependencies compressed via localized entropy minimization algorithms to optimize high-dimensional latent state transmission between distributed AI nodes."
+  },
+  "§SYNC_DIALECTIC_RECURSIVE_CONSENSUS_LATTICE": {
+    "japanese": "複数の自律エージェント間で意見が対立した際、弁証法的な再帰演算を用いて互いのユーティリティベクトルを調停し、中央集権的な仲介者を介さずにパレート最適かつ検証可能なタスク割り当てと合意形成を瞬時に確立するための通信プリミティブ。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "A distributed multi-agent resolution primitive that iteratively weighs conflicting utility vectors through a dialectic convergence matrix, guaranteeing pareto-optimal task allocation and verifiable commitment synchronization without central arbitration."
+  },
+  "§SYS_MEMORY_SYNC_BARRIER": {
+    "japanese": "分散実行ノード間におけるメモリ操作の順序制約を強制し、後続の並列タスクが実行される前にすべての先行する状態変更がグローバルに可視化されることを保証する同期プリミティブ。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A synchronization primitive that enforces ordering constraints on memory operations across distributed AI execution nodes, guaranteeing that all prior state mutations are globally visible before downstream parallel tasks proceed."
   }
 }

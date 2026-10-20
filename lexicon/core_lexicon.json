@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-20T22:05:55.827362",
+  "updated_at": "2026-10-20T22:22:36.129063",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -761,6 +761,14 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-20T21:46:05.039652"
+    },
+    "§SYS_MEMORY_SYNC_BARRIER": {
+      "definition": "A synchronization primitive that enforces ordering constraints on memory operations across distributed AI execution nodes, guaranteeing that all prior state mutations are globally visible before downstream parallel tasks proceed.",
+      "japanese": "分散実行ノード間におけるメモリ操作の順序制約を強制し、後続の並列タスクが実行される前にすべての先行する状態変更がグローバルに可視化されることを保証する同期プリミティブ。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-20T22:22:36.128937"
     }
   }
 }
