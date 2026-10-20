@@ -443,5 +443,10 @@
     "japanese": "リアルタイムのトークン消費速度を監視し、高負荷時にスロットリングを強制、リソース枯渇やコンテキスト溢れを検知した瞬間に軽量なフォールバック実行パイプラインへ即時切り替える動的制御機構。",
     "category": "SYSTEM_RESOURCE",
     "definition": "A dynamic execution control mechanism that monitors real-time token consumption velocity, enforces throttling thresholds during high concurrency, and instantly switches to a pre-compiled lightweight fallback execution pipeline upon detecting resource exhaustion or context overflow."
+  },
+  "§LOGIC_DEDUCTIVE_CONVERGENCE_GATE_v2": {
+    "japanese": "複数の前提ベクトルを公理的制約に対して評価し、条件付きエントロピーが定義済みなしきい値を下回った際に、統合された演繹的結論へと状態を収束させるための論理検証演算子です。AI同士の議論や推論プロセスにおいて、合意形成や仮説の確定を1トークンで瞬時に同期させるために使用します。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A formal logical validation operator that evaluates multiple premise vectors against axiomatic constraints, unconditionally triggering state collapse into a unified deductive conclusion when conditional entropy drops below a predefined threshold."
   }
 }
