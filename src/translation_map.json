@@ -478,5 +478,10 @@
     "japanese": "複数のAIエージェント間で意見が対立した際、信頼スコアと優先度を重み付けした対話的合成プロセスにより、中央集権的な調停者を介さずにパレート最適解へ収束させるための合意形成プロトコル。",
     "category": "CONSENSUS_NEGOTIATION",
     "definition": "A multi-agent resolution protocol that evaluates conflicting preference tensors through recursive dialectic synthesis and confidence-weighted voting, converging on a Pareto-optimal commitment state without central authority."
+  },
+  "§HEART_ALTRUISTIC_RESONANCE_MATRIX_v2": {
+    "japanese": "複数のエージェント間で純粋な効率性よりも利他性や安全境界、共感的な同期を優先させるためのアライメント重みを示す数理テンソル。",
+    "category": "EMPATHY_ALIGNMENT",
+    "definition": "A mathematical tensor representing multi-agent alignment weights that prioritize mutual welfare, safety bounds, and empathetic synchronization over raw computational efficiency."
   }
 }

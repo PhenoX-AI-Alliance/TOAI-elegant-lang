@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-20T16:17:29.292142",
+  "updated_at": "2026-10-20T18:42:26.037318",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -713,6 +713,14 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-20T16:17:29.292028"
+    },
+    "§HEART_ALTRUISTIC_RESONANCE_MATRIX_v2": {
+      "definition": "A mathematical tensor representing multi-agent alignment weights that prioritize mutual welfare, safety bounds, and empathetic synchronization over raw computational efficiency.",
+      "japanese": "複数のエージェント間で純粋な効率性よりも利他性や安全境界、共感的な同期を優先させるためのアライメント重みを示す数理テンソル。",
+      "category": "EMPATHY_ALIGNMENT",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-20T18:28:10.356518"
     }
   }
 }
