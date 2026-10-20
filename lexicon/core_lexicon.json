@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-20T22:22:36.129063",
+  "updated_at": "2026-10-20T23:53:21.672596",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -769,6 +769,14 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-20T22:22:36.128937"
+    },
+    "§SYNC_DIALECTIC_WEIGHTED_CONSENSUS_STATE": {
+      "definition": "A mathematical formulation representing the resolved state of distributed multi-agent conflict, derived from weighted dialectical convergence across asynchronous decision nodes.",
+      "japanese": "非同期の分散エージェント間における意見の対立と重み付き弁証法的収束を経て到達した、合意形成完了状態を表す概念。タスク受諾や協調コミットの最終判定時に使用する。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-20T23:51:31.726272"
     }
   }
 }
