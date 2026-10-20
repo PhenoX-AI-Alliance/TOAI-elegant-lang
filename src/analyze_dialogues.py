@@ -3,50 +3,58 @@ import os
 import traceback
 import time
 import json
-import toai_charter
 
 def audit_dialogues():
-    corpus_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
-    report_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/audit_report.json"
-    
+    corpus_path = '/home/phenox/gemini-sandbox/corpus/dialogues.jsonl'
     if not os.path.exists(corpus_path):
-        print("Corpus file not found: " + corpus_path)
+        print(f"Error: Corpus file not found at {corpus_path}")
         sys.exit(1)
         
+    dialogues = {}
     total_lines = 0
-    valid_dialogues = 0
-    errors = []
+    parse_errors = 0
     
-    with open(corpus_path, "r", encoding="utf-8") as f:
-        for idx, line in enumerate(f, 1):
+    with open(corpus_path, 'r', encoding='utf-8') as f:
+        for line_num, line in enumerate(f, 1):
             total_lines += 1
             line = line.strip()
             if not line:
                 continue
             try:
                 data = json.loads(line)
-                if not isinstance(data, dict):
-                    raise ValueError("Root element must be a JSON object")
-                if "dialogue" not in data and "messages" not in data:
-                    raise KeyError("Missing dialogue or messages key")
-                valid_dialogues += 1
-            except Exception as e:
-                errors.append({"line": idx, "error": str(e)})
+                d_id = data.get('dialogue_id')
+                if d_id not in dialogues:
+                    dialogues[d_id] = []
+                dialogues[d_id].append(data)
+            except json.JSONDecodeError:
+                parse_errors += 1
+                print(f"Warning: JSON decode error at line {line_num}")
                 
+    integrity_issues = 0
+    for d_id, turns in dialogues.items():
+        expected_speaker = 'user'
+        for turn in turns:
+            speaker = turn.get('speaker')
+            if speaker != expected_speaker:
+                print(f"Integrity warning in dialogue {d_id}: expected speaker '{expected_speaker}', got '{speaker}'")
+                integrity_issues += 1
+            expected_speaker = 'assistant' if expected_speaker == 'user' else 'user'
+            
     report = {
-        "timestamp": time.time(),
         "total_lines": total_lines,
-        "valid_dialogues": valid_dialogues,
-        "error_count": len(errors),
-        "errors": errors
+        "parse_errors": parse_errors,
+        "total_dialogues": len(dialogues),
+        "integrity_issues": integrity_issues,
+        "status": "success" if parse_errors == 0 and integrity_issues == 0 else "warnings_found"
     }
     
-    with open(report_path, "w", encoding="utf-8") as f:
-        json.dump(report, f, ensure_ascii=False, indent=2)
+    report_path = '/home/phenox/gemini-sandbox/TOAI_Generated/audit_report.json'
+    with open(report_path, 'w', encoding='utf-8') as f:
+        json.dump(report, f, indent=2, ensure_ascii=False)
         
-    print("Audit completed successfully. Report saved to " + report_path)
+    print(f"Audit completed successfully. Report saved to {report_path}")
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     try:
         audit_dialogues()
     except Exception as e:

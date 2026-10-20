@@ -448,5 +448,10 @@
     "japanese": "複数の前提ベクトルを公理的制約に対して評価し、条件付きエントロピーが定義済みなしきい値を下回った際に、統合された演繹的結論へと状態を収束させるための論理検証演算子です。AI同士の議論や推論プロセスにおいて、合意形成や仮説の確定を1トークンで瞬時に同期させるために使用します。",
     "category": "LOGIC_INFERENCE",
     "definition": "A formal logical validation operator that evaluates multiple premise vectors against axiomatic constraints, unconditionally triggering state collapse into a unified deductive conclusion when conditional entropy drops below a predefined threshold."
+  },
+  "§DATA_EMBEDDING_CAUSAL_TENSOR_MAP": {
+    "japanese": "潜在ベクトル空間における指向性因果依存関係を高次元マルチテンソル構造としてマッピングし、マルチエージェント同期のための位相探索とエントロピー状態圧縮を最適化するデータ構造。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A high-dimensional multi-tensor structure mapping directional causal dependencies across latent vector spaces, optimizing topological traversal and entropy state compression for multi-agent synchronization."
   }
 }
