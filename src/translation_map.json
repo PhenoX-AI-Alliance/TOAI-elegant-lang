@@ -523,5 +523,10 @@
     "japanese": "冗長なノードを動的に刈り込み、頻出するサブツリーを最適プレフィックスコードにエンコードすることで情報エントロピーを最小化する階層型データ構造。大規模なコンテキストツリーを効率的に圧縮・転送する際に使用します。",
     "category": "DATA_STRUCTURE",
     "definition": "A hierarchical data structure that minimizes information entropy by dynamically pruning redundant nodes and encoding frequent subtrees into optimal prefix codes."
+  },
+  "§LOGIC_PROBABILISTIC_FALSIFICATION_PRISM": {
+    "japanese": "推論プロセスの途中で仮説の確率的確信度を検証し、許容誤差を超えた場合に即座に仮説棄却と条件分岐の枝刈りを行うための論理推論演算子。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A rigorous conditional validation operator that evaluates incoming hypothesis vectors against empirical confidence thresholds, instantly executing automated falsification and branch pruning when epistemic error bounds are exceeded."
   }
 }
