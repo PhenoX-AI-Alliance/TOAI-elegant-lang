@@ -553,5 +553,10 @@
     "japanese": "AIエージェント間の協調推論において、感情的価数と倫理的意図を調和させ、人間の幸福や利他的な共鳴を最優先しつつハルシネーションの伝播を厳格に抑制するための状態テンソルを表します。",
     "category": "EMPATHY_ALIGNMENT",
     "definition": "A formalized multi-agent state tensor representing the harmonization of affective valence and ethical intent, ensuring that collaborative inference trajectories prioritize human well-being and altruistic resonance while strictly suppressing hallucination propagation."
+  },
+  "§DATA_ENTROPIC_CAUSAL_TREE_COMPRESSION": {
+    "japanese": "多次元の因果関係グラフや潜在埋め込み空間を、最小エントロピーの階層木構造へと圧縮し、AI間での高効率な状態伝送を実現するためのデータ構造。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A hierarchical data structure that compresses multi-dimensional causal graphs and latent embedding spaces into a minimal entropy-optimized tree for efficient AI-to-AI state transmission."
   }
 }
