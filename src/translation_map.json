@@ -468,5 +468,10 @@
     "japanese": "前提条件に対する確率的分布を評価し、確信度が厳格な公理的閾値を下回った際に自動的な仮説棄却を実行するための論理マトリクス。",
     "category": "LOGIC_INFERENCE",
     "definition": "A formal matrix evaluating conditional probability distributions against empirical constraints to execute automated hypothesis rejection when confidence falls below the strict axiomatic threshold."
+  },
+  "§SYS_ADAPTIVE_THROTTLE_FALLBACK": {
+    "japanese": "トークン消費速度とレイテンシをリアルタイムに監視し、リソース逼迫時に下流ノードへのリクエストを自動スロットリングすると同時に、状態を破損させることなく事前コンパイルされた軽量なフォールバック実行パイプラインへ瞬時に切り替える動的制御プロトコル。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A dynamic control protocol that monitors token consumption rate and execution latency in real time, automatically throttling downstream node requests upon resource saturation and instantaneously switching to a pre-compiled lightweight fallback execution pipeline without state corruption."
   }
 }
