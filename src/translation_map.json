@@ -473,5 +473,10 @@
     "japanese": "トークン消費速度とレイテンシをリアルタイムに監視し、リソース逼迫時に下流ノードへのリクエストを自動スロットリングすると同時に、状態を破損させることなく事前コンパイルされた軽量なフォールバック実行パイプラインへ瞬時に切り替える動的制御プロトコル。",
     "category": "SYSTEM_RESOURCE",
     "definition": "A dynamic control protocol that monitors token consumption rate and execution latency in real time, automatically throttling downstream node requests upon resource saturation and instantaneously switching to a pre-compiled lightweight fallback execution pipeline without state corruption."
+  },
+  "§SYNC_DIALECTIC_WEIGHTED_ARBITRATION": {
+    "japanese": "複数のAIエージェント間で意見が対立した際、信頼スコアと優先度を重み付けした対話的合成プロセスにより、中央集権的な調停者を介さずにパレート最適解へ収束させるための合意形成プロトコル。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "A multi-agent resolution protocol that evaluates conflicting preference tensors through recursive dialectic synthesis and confidence-weighted voting, converging on a Pareto-optimal commitment state without central authority."
   }
 }
