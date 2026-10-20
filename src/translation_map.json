@@ -498,5 +498,10 @@
     "japanese": "異種並列ワーカー間におけるトークン消費クォータの再計算および状態プルーニングの直前に、アトミックなメモリ状態の同期を保証する分散実行バリアプロトコル。",
     "category": "SYSTEM_RESOURCE",
     "definition": "A distributed execution barrier protocol that guarantees atomic memory state synchronization across heterogeneous parallel workers immediately prior to token consumption quota recalculation and state pruning."
+  },
+  "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v2": {
+    "japanese": "高次元な潜在状態の通信を最適化するため、局所的なエントロピー最小化アルゴリズムによって因果関係の依存性を圧縮した有向非巡回グラフ。分散AIノード間のデータ同期において冗長性を極限まで排除する際に使用する。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A directed acyclic graph representing causal dependencies compressed via localized entropy minimization algorithms to optimize high-dimensional latent state transmission between distributed AI nodes."
   }
 }

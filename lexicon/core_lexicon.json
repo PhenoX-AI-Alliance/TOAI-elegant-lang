@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-20T21:23:53.459373",
+  "updated_at": "2026-10-20T22:05:55.827362",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -753,6 +753,14 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-20T21:23:53.459113"
+    },
+    "§SYNC_DIALECTIC_RECURSIVE_CONSENSUS_LATTICE": {
+      "definition": "A distributed multi-agent resolution primitive that iteratively weighs conflicting utility vectors through a dialectic convergence matrix, guaranteeing pareto-optimal task allocation and verifiable commitment synchronization without central arbitration.",
+      "japanese": "複数の自律エージェント間で意見が対立した際、弁証法的な再帰演算を用いて互いのユーティリティベクトルを調停し、中央集権的な仲介者を介さずにパレート最適かつ検証可能なタスク割り当てと合意形成を瞬時に確立するための通信プリミティブ。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-20T21:46:05.039652"
     }
   }
 }
