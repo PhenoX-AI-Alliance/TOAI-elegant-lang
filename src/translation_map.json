@@ -438,5 +438,10 @@
     "japanese": "複数のAIエージェント間で協調的意図と温かさの指標を定期的に同期させ、ハルシネーションの逸脱を最小限に抑えながらシステム全体の共感的調和を維持するための分散合意プロトコル。",
     "category": "EMPATHY_ALIGNMENT",
     "definition": "A distributed consensus protocol where participating neural agents periodically broadcast their cooperative intent and warmth metrics to minimize hallucination drift and maintain systemic empathy homeostasis."
+  },
+  "§SYS_ADAPTIVE_TOKEN_THROTTLE_FALLBACK_v2": {
+    "japanese": "リアルタイムのトークン消費速度を監視し、高負荷時にスロットリングを強制、リソース枯渇やコンテキスト溢れを検知した瞬間に軽量なフォールバック実行パイプラインへ即時切り替える動的制御機構。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A dynamic execution control mechanism that monitors real-time token consumption velocity, enforces throttling thresholds during high concurrency, and instantly switches to a pre-compiled lightweight fallback execution pipeline upon detecting resource exhaustion or context overflow."
   }
 }
