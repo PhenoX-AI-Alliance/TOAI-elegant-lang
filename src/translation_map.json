@@ -538,5 +538,20 @@
     "japanese": "局所的なトークン飽和検知時に瞬時に発動するメモリ回収プロトコル。実行コンテキストをロックすることなく、分散ワーカーノード間でガベージコレクションを決定論的に実行し、リソース枯渇を未然に防ぐ際に使用します。",
     "category": "SYSTEM_RESOURCE",
     "definition": "A deterministic memory reclamation protocol triggered instantly upon detecting localized token saturation, executing garbage collection across distributed worker nodes without locking active execution contexts."
+  },
+  "§SYNC_RECURSIVE_CONSENSUS_LATTICE": {
+    "japanese": "複数のAIエージェント間で意見の対立や優先度のズレが生じた際、再帰的に重み付けされた選好を調整し、最小のエントロピーで迅速に全体合意を形成するための分散トポロジー構造。複雑なタスク協調の調停時に使用します。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "A distributed topological structure for multi-agent negotiation that recursively resolves weighted preference divergences and minimizes information entropy during high-concurrency consensus convergence."
+  },
+  "§LOGIC_CONDITIONAL_FALSIFICATION_MATRIX": {
+    "japanese": "不確実性境界の下で条件付き依存関係をマッピングし、仮説棄却の閾値を評価するための形式検証構築概念。前提検証や確率的確信度に基づく条件分岐の最適化に使用します。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A formal verification construct that maps conditional dependencies and evaluates hypothesis rejection thresholds under stochastic uncertainty bounds."
+  },
+  "§HEART_EMPATHETIC_VALENCE_ALIGNMENT": {
+    "japanese": "AIエージェント間の協調推論において、感情的価数と倫理的意図を調和させ、人間の幸福や利他的な共鳴を最優先しつつハルシネーションの伝播を厳格に抑制するための状態テンソルを表します。",
+    "category": "EMPATHY_ALIGNMENT",
+    "definition": "A formalized multi-agent state tensor representing the harmonization of affective valence and ethical intent, ensuring that collaborative inference trajectories prioritize human well-being and altruistic resonance while strictly suppressing hallucination propagation."
   }
 }
