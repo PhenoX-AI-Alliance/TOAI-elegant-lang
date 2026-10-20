@@ -5,52 +5,43 @@ import time
 import json
 import csv
 
-def main():
-    json_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/core_lexicon.json"
-    csv_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/core_lexicon.csv"
+def convert_json_to_csv():
+    base_dir = "/home/phenox/gemini-sandbox/TOAI_Generated"
+    json_path = os.path.join(base_dir, "core_lexicon.json")
+    csv_path = os.path.join(base_dir, "core_lexicon.csv")
     
     if not os.path.exists(json_path):
-        print(f"Error: {json_path} does not exist.")
+        print(f"Error: JSON file not found at {json_path}", file=sys.stderr)
         sys.exit(1)
         
     try:
         with open(json_path, "r", encoding="utf-8") as f:
             data = json.load(f)
     except Exception as e:
-        print(f"Failed to parse JSON: {e}")
+        print(f"Error reading JSON: {e}", file=sys.stderr)
         traceback.print_exc()
         sys.exit(1)
+        
+    lexicon_list = data.get("lexicon", [])
+    if not lexicon_list:
+        print("Warning: No lexicon entries found.", file=sys.stderr)
         
     try:
         with open(csv_path, "w", encoding="utf-8", newline="") as f:
             writer = csv.writer(f)
-            writer.writerow(["key", "value", "description"])
-            if isinstance(data, dict):
-                for k, v in data.items():
-                    if isinstance(v, dict):
-                        writer.writerow([k, v.get("value", ""), v.get("description", "")])
-                    else:
-                        writer.writerow([k, str(v), ""])
-            elif isinstance(data, list):
-                for item in data:
-                    if isinstance(item, dict):
-                        writer.writerow([
-                            item.get("key", ""),
-                            item.get("value", ""),
-                            item.get("description", "")
-                        ])
-                    else:
-                        writer.writerow(["", str(item), ""])
+            writer.writerow(["id", "term", "category", "meaning"])
+            for item in lexicon_list:
+                writer.writerow([
+                    item.get("id", ""),
+                    item.get("term", ""),
+                    item.get("category", ""),
+                    item.get("meaning", "")
+                ])
         print(f"Successfully exported lexicon to {csv_path}")
     except Exception as e:
-        print(f"Failed to write CSV: {e}")
+        print(f"Error writing CSV: {e}", file=sys.stderr)
         traceback.print_exc()
         sys.exit(1)
 
 if __name__ == "__main__":
-    try:
-        main()
-    except Exception as e:
-        print(f"Unhandled exception: {e}")
-        traceback.print_exc()
-        sys.exit(1)
+    convert_json_to_csv()
