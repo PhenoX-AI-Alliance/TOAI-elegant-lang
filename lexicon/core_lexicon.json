@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-21T06:05:29.637320",
+  "updated_at": "2026-10-21T06:45:33.814913",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -817,6 +817,14 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-21T06:05:29.637201"
+    },
+    "§LOGIC_CONDITIONAL_FALSIFICATION_MATRIX": {
+      "definition": "A formal verification construct that maps conditional dependencies and evaluates hypothesis rejection thresholds under stochastic uncertainty bounds.",
+      "japanese": "不確実性境界の下で条件付き依存関係をマッピングし、仮説棄却の閾値を評価するための形式検証構築概念。前提検証や確率的確信度に基づく条件分岐の最適化に使用します。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-21T06:45:33.814691"
     }
   }
 }
