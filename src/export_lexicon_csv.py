@@ -5,52 +5,59 @@ import time
 import json
 import csv
 
-def main():
-    input_json_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/core_lexicon.json"
-    output_csv_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/core_lexicon.csv"
+def export_lexicon():
+    source_json = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/core_lexicon.json"
+    output_csv = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/core_lexicon.csv"
     
+    if not os.path.exists(source_json):
+        print(f"Error: Source JSON not found at {{source_json}}", file=sys.stderr)
+        sys.exit(1)
+        
     try:
-        if not os.path.exists(input_json_path):
-            print(f"Error: Input JSON file not found at {input_json_path}")
-            sys.exit(1)
-            
-        with open(input_json_path, "r", encoding="utf-8") as f:
+        with open(source_json, 'r', encoding='utf-8') as f:
             data = json.load(f)
-            
-        if isinstance(data, dict):
-            items = data.get("lexicon", [])
-            if not items:
-                items = [data]
-        elif isinstance(data, list):
-            items = data
-        else:
-            items = [{"value": data}]
-            
-        fieldnames = set()
-        for item in items:
-            if isinstance(item, dict):
-                fieldnames.update(item.keys())
-                
-        if not fieldnames:
-            fieldnames = ["term", "definition"]
-            
-        fieldnames = sorted(list(fieldnames))
-        
-        with open(output_csv_path, "w", encoding="utf-8", newline="") as f:
-            writer = csv.DictWriter(f, fieldnames=fieldnames)
-            writer.writeheader()
-            for item in items:
-                if isinstance(item, dict):
-                    row = {k: str(item.get(k, "")) for k in fieldnames}
-                    writer.writerow(row)
-                else:
-                    writer.writerow({fieldnames[0]: str(item)})
-                    
-        print(f"Successfully exported lexicon to {output_csv_path}")
-        
     except Exception as e:
+        print(f"Error reading JSON: {{e}}", file=sys.stderr)
+        traceback.print_exc()
+        sys.exit(1)
+        
+    try:
+        with open(output_csv, 'w', encoding='utf-8', newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow(["key", "value", "category", "description"])
+            
+            if isinstance(data, dict):
+                for k, v in data.items():
+                    if isinstance(v, dict):
+                        writer.writerow([
+                            k,
+                            v.get("value", ""),
+                            v.get("category", ""),
+                            v.get("description", "")
+                        ])
+                    else:
+                        writer.writerow([k, str(v), "", ""])
+            elif isinstance(data, list):
+                for item in data:
+                    if isinstance(item, dict):
+                        writer.writerow([
+                            item.get("key", ""),
+                            item.get("value", ""),
+                            item.get("category", ""),
+                            item.get("description", "")
+                        ])
+                    else:
+                        writer.writerow(["", str(item), "", ""])
+        print(f"Successfully exported lexicon to {{output_csv}}")
+    except Exception as e:
+        print(f"Error writing CSV: {{e}}", file=sys.stderr)
         traceback.print_exc()
         sys.exit(1)
 
 if __name__ == "__main__":
-    main()
+    try:
+        export_lexicon()
+    except Exception as e:
+        print(f"Fatal error: {{e}}", file=sys.stderr)
+        traceback.print_exc()
+        sys.exit(1)
