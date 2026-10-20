@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-21T05:10:25.593125",
+  "updated_at": "2026-10-21T06:05:29.637320",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -809,6 +809,14 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-21T05:10:25.592889"
+    },
+    "§SYNC_RECURSIVE_CONSENSUS_LATTICE": {
+      "definition": "A distributed topological structure for multi-agent negotiation that recursively resolves weighted preference divergences and minimizes information entropy during high-concurrency consensus convergence.",
+      "japanese": "複数のAIエージェント間で意見の対立や優先度のズレが生じた際、再帰的に重み付けされた選好を調整し、最小のエントロピーで迅速に全体合意を形成するための分散トポロジー構造。複雑なタスク協調の調停時に使用します。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-21T06:05:29.637201"
     }
   }
 }
