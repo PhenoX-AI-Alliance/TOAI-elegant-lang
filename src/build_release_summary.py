@@ -1,60 +1,52 @@
-# -*- coding: utf-8 -*-
 import sys
 import os
 import traceback
-import subprocess
+import time
 import json
-from datetime import datetime
+import subprocess
 
-def get_git_log():
+def run_command(cmd, cwd=None):
     try:
-        result = subprocess.run(
-            ['git', 'log', '-n', '10', '--pretty=format:%h - %an: %s (%ad)'],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True,
-            check=True
-        )
-        return result.stdout.splitlines()
+        res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, cwd=cwd)
+        if res.returncode != 0:
+            return f"Error executing {{cmd}}: {{res.stderr.strip()}}"
+        return res.stdout.strip()
     except Exception as e:
-        return [f"Git log retrieval failed: {str(e)}"]
-
-def scan_whitepaper(workspace_dir):
-    whitepaper_candidates = [
-        os.path.join(workspace_dir, 'WHITE_PAPER.md'),
-        os.path.join(workspace_dir, 'docs', 'WHITE_PAPER.md'),
-        os.path.join(workspace_dir, 'TOAI_Generated', 'WHITE_PAPER.md')
-    ]
-    for path in whitepaper_candidates:
-        if os.path.exists(path):
-            try:
-                with open(path, 'r', encoding='utf-8') as f:
-                    return f.read()[:1000]
-            except Exception:
-                pass
-    return "Whitepaper not found or unreadable."
+        return f"Exception executing {{cmd}}: {{str(e)}}"
 
 def main():
-    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    release_dir = os.path.join(workspace_dir, 'TOAI_Generated', 'releases')
-    os.makedirs(release_dir, exist_ok=True)
+    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    repo_dir = os.path.join(workspace, 'TOAI-elegant-lang')
     
-    logs = get_git_log()
-    whitepaper_snippet = scan_whitepaper(workspace_dir)
+    git_status = "Not a git repository or git not initialized."
+    git_log = "No git log available."
+    git_tags = "No tags available."
     
-    summary = {
-        "timestamp": datetime.now().isoformat(),
-        "git_logs": logs,
-        "whitepaper_summary": whitepaper_snippet,
-        "status": "success",
-        "message": "Release summary successfully compiled with altruistic warmth."
+    if os.path.exists(os.path.join(repo_dir, '.git')):
+        git_status = run_command(['git', 'status'], cwd=repo_dir)
+        git_log = run_command(['git', 'log', '--oneline', '-50'], cwd=repo_dir)
+        git_tags = run_command(['git', 'describe', '--tags', '--abbrev=0'], cwd=repo_dir)
+    else:
+        # Fallback to workspace root if TOAI-elegant-lang is not a separate git repo
+        if os.path.exists(os.path.join(workspace, '.git')):
+            git_status = run_command(['git', 'status'], cwd=workspace)
+            git_log = run_command(['git', 'log', '--oneline', '-50'], cwd=workspace)
+            git_tags = run_command(['git', 'describe', '--tags', '--abbrev=0'], cwd=workspace)
+
+    summary_data = {
+        "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
+        "git_status": git_status,
+        "git_tags": git_tags,
+        "git_log": git_log
     }
     
-    output_file = os.path.join(release_dir, f"release_summary_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
-    with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(summary, f, ensure_ascii=False, indent=2)
+    output_path = os.path.join(workspace, 'TOAI_Generated', 'release_summary.json')
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    
+    with open(output_path, 'w', encoding='utf-8') as f:
+        json.dump(summary_data, f, ensure_ascii=False, indent=2)
         
-    print(f"Release summary generated at: {output_file}")
+    print(f"Release summary successfully built at: {{output_path}}")
 
 if __name__ == '__main__':
     try:

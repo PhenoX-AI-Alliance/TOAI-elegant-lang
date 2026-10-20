@@ -513,5 +513,10 @@
     "japanese": "分散実行ノード間におけるメモリ操作の順序制約を強制し、後続の並列タスクが実行される前にすべての先行する状態変更がグローバルに可視化されることを保証する同期プリミティブ。",
     "category": "SYSTEM_RESOURCE",
     "definition": "A synchronization primitive that enforces ordering constraints on memory operations across distributed AI execution nodes, guaranteeing that all prior state mutations are globally visible before downstream parallel tasks proceed."
+  },
+  "§SYNC_DIALECTIC_WEIGHTED_CONSENSUS_STATE": {
+    "japanese": "非同期の分散エージェント間における意見の対立と重み付き弁証法的収束を経て到達した、合意形成完了状態を表す概念。タスク受諾や協調コミットの最終判定時に使用する。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "A mathematical formulation representing the resolved state of distributed multi-agent conflict, derived from weighted dialectical convergence across asynchronous decision nodes."
   }
 }
