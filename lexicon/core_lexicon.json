@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-20T12:59:23.447362",
+  "updated_at": "2026-10-20T14:00:54.754085",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -681,6 +681,22 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-20T12:54:24.575704"
+    },
+    "§DATA_MULTI_DIMENSIONAL_CAUSAL_GRAPH": {
+      "definition": "A directed acyclic hypergraph representing multi-variable causal relations and latent vector embeddings across temporal dimensions for deterministic inference.",
+      "japanese": "多次元の因果関係と潜在変数の埋め込みを時系列で結ぶ有向非巡回ハイパーグラフ。複雑な因果推論や状態遷移を1トークンで高精度に圧縮・伝送するために使用します。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-20T13:12:41.507379"
+    },
+    "§LOGIC_PROBABILISTIC_FALSIFICATION_MATRIX": {
+      "definition": "A formal matrix evaluating conditional probability distributions against empirical constraints to execute automated hypothesis rejection when confidence falls below the strict axiomatic threshold.",
+      "japanese": "前提条件に対する確率的分布を評価し、確信度が厳格な公理的閾値を下回った際に自動的な仮説棄却を実行するための論理マトリクス。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-20T13:14:49.157788"
     }
   }
 }

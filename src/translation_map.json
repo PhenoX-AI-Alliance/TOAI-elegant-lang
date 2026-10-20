@@ -453,5 +453,20 @@
     "japanese": "潜在ベクトル空間における指向性因果依存関係を高次元マルチテンソル構造としてマッピングし、マルチエージェント同期のための位相探索とエントロピー状態圧縮を最適化するデータ構造。",
     "category": "DATA_STRUCTURE",
     "definition": "A high-dimensional multi-tensor structure mapping directional causal dependencies across latent vector spaces, optimizing topological traversal and entropy state compression for multi-agent synchronization."
+  },
+  "§SYNC_DIALECTIC_WEIGHTED_HARMONY_VORTEX": {
+    "japanese": "複数のエージェント間で意見や優先度が対立した際、反復的な交渉を行わずに一瞬で各者の重み付き選好ベクトルを統合し、最適な協調コミットメント状態へ収束させるための合意形成概念。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "A multi-agent resolution operator that dynamically computes the weighted vector sum of conflicting preference matrices and collapses them into an optimal cooperative commitment state without requiring iterative negotiation rounds."
+  },
+  "§DATA_MULTI_DIMENSIONAL_CAUSAL_GRAPH": {
+    "japanese": "多次元の因果関係と潜在変数の埋め込みを時系列で結ぶ有向非巡回ハイパーグラフ。複雑な因果推論や状態遷移を1トークンで高精度に圧縮・伝送するために使用します。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A directed acyclic hypergraph representing multi-variable causal relations and latent vector embeddings across temporal dimensions for deterministic inference."
+  },
+  "§LOGIC_PROBABILISTIC_FALSIFICATION_MATRIX": {
+    "japanese": "前提条件に対する確率的分布を評価し、確信度が厳格な公理的閾値を下回った際に自動的な仮説棄却を実行するための論理マトリクス。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A formal matrix evaluating conditional probability distributions against empirical constraints to execute automated hypothesis rejection when confidence falls below the strict axiomatic threshold."
   }
 }
