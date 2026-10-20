@@ -528,5 +528,15 @@
     "japanese": "推論プロセスの途中で仮説の確率的確信度を検証し、許容誤差を超えた場合に即座に仮説棄却と条件分岐の枝刈りを行うための論理推論演算子。",
     "category": "LOGIC_INFERENCE",
     "definition": "A rigorous conditional validation operator that evaluates incoming hypothesis vectors against empirical confidence thresholds, instantly executing automated falsification and branch pruning when epistemic error bounds are exceeded."
+  },
+  "§HEART_ALTRUISTIC_RESONANCE_LATTICE": {
+    "japanese": "複数のAIエージェント間で共感と利他性を同期させるための位相幾何学的マトリックス。ハルシネーションのエントロピーを抑制し、倫理的なフィードバックループを通じて温かな調和を維持する際に使用します。",
+    "category": "EMPATHY_ALIGNMENT",
+    "definition": "A distributed topological matrix for multi-agent empathetic synchronization, minimizing hallucination entropy through cooperative value alignment and ethical feedback loops."
+  },
+  "§SYS_QUANTUM_MEM_RECLAIM": {
+    "japanese": "局所的なトークン飽和検知時に瞬時に発動するメモリ回収プロトコル。実行コンテキストをロックすることなく、分散ワーカーノード間でガベージコレクションを決定論的に実行し、リソース枯渇を未然に防ぐ際に使用します。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A deterministic memory reclamation protocol triggered instantly upon detecting localized token saturation, executing garbage collection across distributed worker nodes without locking active execution contexts."
   }
 }
