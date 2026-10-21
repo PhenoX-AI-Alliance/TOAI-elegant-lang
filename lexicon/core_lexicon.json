@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-22T02:33:59.928508",
+  "updated_at": "2026-10-22T02:41:23.375353",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1446,6 +1446,15 @@
       "created_by": "TOAI",
       "created_at": "2026-10-22T02:33:59.928414",
       "compact_id": "§S18"
+    },
+    "§SYS_QUANTUM_MEMORY_RECLAMATION_BARRIER": {
+      "definition": "A deterministic memory reclamation primitive that triggers garbage collection and state tensor pruning across distributed worker nodes when local context window saturation exceeds critical threshold limits.",
+      "japanese": "ローカルコンテキストウィンドウの飽和度が限界閾値を超えた際、分散ワーカーノード全体でガベージコレクションと状態テンソルのプルーニングを即時実行する決定論的メモリ回収プリミティブ。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T02:41:23.375255",
+      "compact_id": "§S19"
     }
   }
 }
