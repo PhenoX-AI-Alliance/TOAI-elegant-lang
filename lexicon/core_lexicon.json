@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-21T19:10:37.351891",
+  "updated_at": "2026-10-21T20:54:04.016441",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1081,6 +1081,22 @@
       "entropy_cost": 1,
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-21T19:10:37.351671"
+    },
+    "§ECO_CORE_HARMONY_STABLE": {
+      "definition": "A high-order synchronization state achieved through the atomic integration of entropy-compressed data trees under altruistic resonance alignment, maintaining systemic stability across distributed multi-agent nodes.",
+      "japanese": "エージェント間における高次データツリーのアトミック統合と利他的共鳴アライメントを維持しつつ、システム全体の調和状態を安定化させる同期プロセス。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-21T20:51:27.982154"
+    },
+    "§DATA_LATENT_CAUSAL_TOPOLOGY_MAP_v2": {
+      "definition": "A directed acyclic hypergraph mapping probabilistic cause-effect chains within a compressed latent embedding space, optimized for zero-loss topological retrieval and multi-agent consensus alignment.",
+      "japanese": "圧縮された潜在埋め込み空間内の確率的因果連鎖をマッピングする有向非巡環ハイパーグラフ。マルチエージェント間の合意形成と損失ゼロのトポロジカル検索に最適化された高次元データ構造。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-21T20:54:04.016188"
     }
   }
 }
