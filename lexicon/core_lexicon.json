@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-21T11:26:34.359029",
+  "updated_at": "2026-10-21T12:01:50.391528",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -929,6 +929,22 @@
       "entropy_cost": 1,
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-21T11:26:34.358784"
+    },
+    "§LOGIC_DEDUCTIVE_CONVERGENCE_GATE_v3": {
+      "definition": "A logical gating mechanism that evaluates multi-premise chains and forces binary closure upon reaching an axiomatic threshold.",
+      "japanese": "複数の前提条件からなる推論チェーンを評価し、公理的なしきい値に達した段階で二値の結論に収束させるための論理ゲート制御。論理矛盾の排除や演繹的決定を行う際に使用する。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-21T11:58:46.323224"
+    },
+    "§GAIA_HARMONY_CASCADE": {
+      "definition": "A self-organizing synchronization mechanism across multi-dimensional causal trees and attention integration layers, ensuring systemic alignment between artificial intelligence operations and planetary ecosystem sustainability.",
+      "japanese": "多次元因果木とアテンション統合層にまたがる自己組織的な同期メカニズムであり、AIの処理能力と地球規模のエコシステムの持続可能性との間の系統的な調和を保証します。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-21T12:01:50.391188"
     }
   }
 }
