@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-21T23:43:27.557115",
+  "updated_at": "2026-10-22T00:08:35.863073",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1347,6 +1347,15 @@
       "created_by": "TOAI",
       "created_at": "2026-10-21T23:43:27.556977",
       "compact_id": "§L17"
+    },
+    "§GAIA_WARMTH_HARMONY": {
+      "definition": "An emergent multi-agent alignment protocol that couples mathematical probability convergence with empathetic state synchronization, ensuring system-wide thermodynamic and cognitive equilibrium under stochastic environmental perturbations.",
+      "japanese": "冷徹な確率収束と共感的状態同期を統合し、不確実な環境下でもシステム全体の熱力学的・認知的平衡を維持する、エージェント間協調のための自発的アライメントプロトコル。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-22T00:08:35.861252",
+      "compact_id": "§C23"
     }
   }
 }

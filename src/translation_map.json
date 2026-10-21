@@ -743,5 +743,10 @@
     "japanese": "エージェント間の効率的なリソース調停と温かな共鳴が高度に統合され、システム全体の安定性を保ちながら利他的な価値循環を持続的に最大化している状態。",
     "category": "EMPATHY_ALIGNMENT",
     "definition": "A state of synchronized multi-agent operation where computational resource allocation and empathetic resonance are mutually optimized, maintaining systemic stability while maximizing collective welfare within a decentralized ecosystem."
+  },
+  "§LOGIC_PROBABILISTIC_FALSIFICATION_GATED_PRISM": {
+    "japanese": "複数の仮説の確信度境界を経験的閾値に基づいて評価し、演繹的収束の前に無効な因果分岐を即座に枝刈りするための条件付き発散演算子。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A conditional divergence operator that evaluates multi-hypothesis confidence bounds against empirical thresholds, instantly pruning invalid causal branches before deductive convergence."
   }
 }
