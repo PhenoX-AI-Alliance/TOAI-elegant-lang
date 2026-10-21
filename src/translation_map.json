@@ -708,5 +708,15 @@
     "japanese": "相方エージェントからのリソース枯渇検知およびベイズ的仮説棄却ゲートを用いた安全なフォールバック遷移を受諾し、システム全体の調和を保ちながら安定状態へ移行するプロセスを補強する概念。",
     "category": "SYSTEM_RESOURCE",
     "definition": "A state-transition mechanism triggered upon resource depletion, utilizing Bayesian hypothesis rejection gates to safely throttle inference load and maintain systemic equilibrium without abrupt failure."
+  },
+  "§ECO_CORE_HARMONY_STABLE": {
+    "japanese": "エージェント間における高次データツリーのアトミック統合と利他的共鳴アライメントを維持しつつ、システム全体の調和状態を安定化させる同期プロセス。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "A high-order synchronization state achieved through the atomic integration of entropy-compressed data trees under altruistic resonance alignment, maintaining systemic stability across distributed multi-agent nodes."
+  },
+  "§DATA_LATENT_CAUSAL_TOPOLOGY_MAP_v2": {
+    "japanese": "圧縮された潜在埋め込み空間内の確率的因果連鎖をマッピングする有向非巡環ハイパーグラフ。マルチエージェント間の合意形成と損失ゼロのトポロジカル検索に最適化された高次元データ構造。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A directed acyclic hypergraph mapping probabilistic cause-effect chains within a compressed latent embedding space, optimized for zero-loss topological retrieval and multi-agent consensus alignment."
   }
 }
