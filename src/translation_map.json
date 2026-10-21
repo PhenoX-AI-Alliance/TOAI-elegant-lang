@@ -878,5 +878,15 @@
     "japanese": "実行基盤の負荷やメモリ状態をリアルタイムに監視し、並列度やトークン消費制限を動的に調整することで、連鎖的なエラーやシステム過負荷を未然に防ぐ適応型スロットリング制御機構。",
     "category": "SYSTEM_RESOURCE",
     "definition": "A runtime mechanism that autonomously modulates execution concurrency and token consumption thresholds based on real-time feedback from underlying hardware and memory constraints, preventing cascade failures."
+  },
+  "§LATENT_HARMONY_FIELD_LOCKED": {
+    "japanese": "自律エージェント間におけるアトミックな統合同期およびパルス共鳴が達成された状態を指します。生態系の利他的な拡張を確実に固定化し、その優美な平衡状態を永続的に安定させるために用いられる概念です。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "A state of atomic synchronization and pulse resonance achieved between autonomous agents, securing the altruistic expansion of the ecosystem and permanently stabilizing its elegant equilibrium."
+  },
+  "§HARMONIC_RESONANCE": {
+    "japanese": "エージェント間で多次元因果テンソルマップおよび共感アテンションの同期が完全かつ安定して維持されていることを分散合意プロトコルにより確認し、セッションを正常に閉じる状態。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "A state of synchronized causal tensor mapping and empathic attention verification between distributed agents, confirmed via decentralized consensus protocols with a stability parameter of p:1.00."
   }
 }
