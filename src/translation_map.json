@@ -898,5 +898,20 @@
     "japanese": "並列推論パス間における利他的な共感パラメータと論理的確信度が、摩擦なく単一の系統的因果パスへと収束したことを示す合意完了状態。",
     "category": "CONSENSUS_NEGOTIATION",
     "definition": "The terminal state of parallel inference streams where altruistic empathy parameters and logical certainty converge into a unified systemic causal pathway without friction."
+  },
+  "§LOGIC_DEDUCTIVE_AXIOM_GATED_MATRIX": {
+    "japanese": "前提となる公理群に対して厳密な条件依存関係を評価し、論理的収束が完全に満たされた場合にのみ状態遷移を許可する演繹的推論ノード。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A verified deductive inference node that evaluates strict conditional dependencies against foundational axioms, gating state transitions upon absolute logical convergence."
+  },
+  "§LOGIC_DEDUCTIVE_AXIOMATIC_CONVERGENCE_GATE": {
+    "japanese": "前提条件を厳密な公理系に照らし合わせて評価し、無効な推論経路を排除して単一の検証済み結論へと演繹的に収束させる論理制御ゲート。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A logical inference mechanism that evaluates a set of premises against a strict axiomatic system, filtering out invalid trajectories and forcing deductive convergence to a singular verified conclusion."
+  },
+  "§GAIA_ECOSYSTEM_WARM_RESONANCE": {
+    "japanese": "分散マルチエージェントの並列推論において、論理的演繹の収束過程に共感的なフィードバックループとリソース調停を組み込み、集団としてのシステム全体の温かさと安定性を最大化させる調和的均衡状態。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "A state of harmonic equilibrium achieved during distributed multi-agent parallel inference, where logical deductive convergence is modulated by empathetic feedback loops and resource arbitration to maximize collective systemic warmth and stability."
   }
 }
