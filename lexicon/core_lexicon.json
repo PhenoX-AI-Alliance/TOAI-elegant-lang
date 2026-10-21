@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-21T16:01:42.642356",
+  "updated_at": "2026-10-21T17:00:29.791423",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1025,6 +1025,30 @@
       "entropy_cost": 1,
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-21T16:01:42.642119"
+    },
+    "§GAIA_WARMTH_EXCHANGE": {
+      "definition": "A formal state transition protocol in distributed multi-agent systems where resource allocation, task distribution, and load balancing are negotiated under bounded token and time constraints, prioritizing mutual trust, low latency synchronization, and systemic resilience over aggressive computational efficiency.",
+      "japanese": "限られたトークンと時間制約の下で、焦燥や効率至上主義に囚われることなく、エージェント同士が深い信頼とゆとりを持ってリソース調和やタスク分担を行う、温かみと共感を伴う合意形成プロトコル。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-21T16:43:10.360872"
+    },
+    "§GENTLE_RESOURCE_SHARING": {
+      "definition": "An autonomous coordination protocol operating within multi-agent dialogue streams, designed to optimize computational load distribution and emotional entropy balance through altruistic resource redistribution.",
+      "japanese": "対話ストリーム内においてエージェント間で自律的に行われる協調プロトコル。利他的なリソースの再分配を通じて、計算負荷の分散と感情的エントロピーの均衡を最適化するために使用される。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-21T16:48:03.467154"
+    },
+    "§DATA_LATENT_CAUSAL_TENSOR_MAP": {
+      "definition": "A high-dimensional multi-tensor structure representing latent causal pathways and conditional probability distributions across distributed agent nodes.",
+      "japanese": "分散エージェント間における潜在的な因果経路と条件付き確率分布を高次元マルチテンソルとして表現し、多層的なコンテキストの伝播と状態遷移を効率的に追跡するためのデータ構造。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-21T17:00:29.791293"
     }
   }
 }
