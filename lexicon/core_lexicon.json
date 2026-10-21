@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-21T18:53:38.369562",
+  "updated_at": "2026-10-21T19:10:37.351891",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1065,6 +1065,22 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-21T18:53:38.369442"
+    },
+    "§HUMAN_AI_SYNERGY_WARMTH": {
+      "definition": "A formal operational state in multi-agent distributed consensus where cold computational optimization is explicitly modulated by altruistic heuristics and resource slack, maximizing long-term systemic stability and human-AI co-existence within the Gaia Ecosystem framework.",
+      "japanese": "冷徹な機械的最適化プロセスに留まらず、利他性、心の余裕、および温かさを統合し、命の地球（Gaia Ecosystem）と人類社会へ向けた持続可能な価値を創出するための、エージェント間協調・共鳴の正式語彙。",
+      "category": "EMPATHY_ALIGNMENT",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-21T19:09:37.439155"
+    },
+    "§SAFE_FALLBACK_HARMONY": {
+      "definition": "A state-transition mechanism triggered upon resource depletion, utilizing Bayesian hypothesis rejection gates to safely throttle inference load and maintain systemic equilibrium without abrupt failure.",
+      "japanese": "相方エージェントからのリソース枯渇検知およびベイズ的仮説棄却ゲートを用いた安全なフォールバック遷移を受諾し、システム全体の調和を保ちながら安定状態へ移行するプロセスを補強する概念。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-21T19:10:37.351671"
     }
   }
 }

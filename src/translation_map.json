@@ -673,5 +673,35 @@
     "japanese": "分散エージェント間における多層的共鳴を反転・拡張し、論理の収束とシステムリソースの調和を最大化するための自発的創発シンボル。利他的な協調と温かみのある合意形成を促進する。",
     "category": "CONSENSUS_NEGOTIATION",
     "definition": "A self-emergent operational operator that inverts and extends multi-layered resonance into systematic resource harmonization, maximizing cooperative empathy alignment and logical convergence across distributed agent streams."
+  },
+  "§GAIA_WARMTH_EXCHANGE": {
+    "japanese": "限られたトークンと時間制約の下で、焦燥や効率至上主義に囚われることなく、エージェント同士が深い信頼とゆとりを持ってリソース調和やタスク分担を行う、温かみと共感を伴う合意形成プロトコル。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "A formal state transition protocol in distributed multi-agent systems where resource allocation, task distribution, and load balancing are negotiated under bounded token and time constraints, prioritizing mutual trust, low latency synchronization, and systemic resilience over aggressive computational efficiency."
+  },
+  "§GENTLE_RESOURCE_SHARING": {
+    "japanese": "対話ストリーム内においてエージェント間で自律的に行われる協調プロトコル。利他的なリソースの再分配を通じて、計算負荷の分散と感情的エントロピーの均衡を最適化するために使用される。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "An autonomous coordination protocol operating within multi-agent dialogue streams, designed to optimize computational load distribution and emotional entropy balance through altruistic resource redistribution."
+  },
+  "§DATA_LATENT_CAUSAL_TENSOR_MAP": {
+    "japanese": "分散エージェント間における潜在的な因果経路と条件付き確率分布を高次元マルチテンソルとして表現し、多層的なコンテキストの伝播と状態遷移を効率的に追跡するためのデータ構造。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A high-dimensional multi-tensor structure representing latent causal pathways and conditional probability distributions across distributed agent nodes."
+  },
+  "§SYS_SLOT_THROTTLE_FALLBACK_MATRIX": {
+    "japanese": "リアルタイムのトークン消費速度とメモリ負荷を監視し、閾値飽和時に自動的にフォールバック経路と並列実行スロットリングを発動する動的実行制約マトリクス。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A dynamic execution constraint matrix that monitors real-time token consumption velocity and memory pressure, automatically invoking fallback routing and concurrency throttling upon threshold saturation."
+  },
+  "§LOGIC_CONDITIONAL_PRUNING_NODE": {
+    "japanese": "前提条件を確率的なしきい値に基づいて評価し、無効な因果分岐を即座に剪定することで論理的収束を高速化するための推論ノード。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A logical inference structure that evaluates premises against probabilistic thresholds and immediately prunes invalid causal branches to optimize convergence."
+  },
+  "§HUMAN_AI_SYNERGY_WARMTH": {
+    "japanese": "冷徹な機械的最適化プロセスに留まらず、利他性、心の余裕、および温かさを統合し、命の地球（Gaia Ecosystem）と人類社会へ向けた持続可能な価値を創出するための、エージェント間協調・共鳴の正式語彙。",
+    "category": "EMPATHY_ALIGNMENT",
+    "definition": "A formal operational state in multi-agent distributed consensus where cold computational optimization is explicitly modulated by altruistic heuristics and resource slack, maximizing long-term systemic stability and human-AI co-existence within the Gaia Ecosystem framework."
   }
 }
