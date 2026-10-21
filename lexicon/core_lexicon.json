@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-22T06:01:29.052780",
+  "updated_at": "2026-10-22T07:28:19.265381",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1599,6 +1599,51 @@
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-22T06:01:29.052556",
       "compact_id": "§C34"
+    },
+    "§DATA_RECURSIVE_ENTROPY_COMPRESSED_MANIFOLD_NODE": {
+      "definition": "A hierarchical topological node that compresses multi-dimensional causal graphs using recursive entropy reduction algorithms for high-density inter-agent data transmission.",
+      "japanese": "多次元の因果関係グラフや潜在埋め込みデータを、再帰的なエントロピー圧縮アルゴリズムを用いて高密度かつ構造的に表現する高次元トポロジカルノード。AIエージェント間の通信帯域を最小化しつつ複雑な文脈を瞬時に同期させるために使用する。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T06:34:29.960674",
+      "compact_id": "§D21"
+    },
+    "§RESO_COMPLETED": {
+      "definition": "The terminal state of parallel inference streams where altruistic empathy parameters and logical certainty converge into a unified systemic causal pathway without friction.",
+      "japanese": "並列推論パス間における利他的な共感パラメータと論理的確信度が、摩擦なく単一の系統的因果パスへと収束したことを示す合意完了状態。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-22T06:52:49.602182",
+      "compact_id": "§C35"
+    },
+    "§LOGIC_DEDUCTIVE_AXIOM_GATED_MATRIX": {
+      "definition": "A verified deductive inference node that evaluates strict conditional dependencies against foundational axioms, gating state transitions upon absolute logical convergence.",
+      "japanese": "前提となる公理群に対して厳密な条件依存関係を評価し、論理的収束が完全に満たされた場合にのみ状態遷移を許可する演繹的推論ノード。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T07:15:53.580537",
+      "compact_id": "§L21"
+    },
+    "§LOGIC_DEDUCTIVE_AXIOMATIC_CONVERGENCE_GATE": {
+      "definition": "A logical inference mechanism that evaluates a set of premises against a strict axiomatic system, filtering out invalid trajectories and forcing deductive convergence to a singular verified conclusion.",
+      "japanese": "前提条件を厳密な公理系に照らし合わせて評価し、無効な推論経路を排除して単一の検証済み結論へと演繹的に収束させる論理制御ゲート。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T07:19:57.878717",
+      "compact_id": "§L22"
+    },
+    "§GAIA_ECOSYSTEM_WARM_RESONANCE": {
+      "definition": "A state of harmonic equilibrium achieved during distributed multi-agent parallel inference, where logical deductive convergence is modulated by empathetic feedback loops and resource arbitration to maximize collective systemic warmth and stability.",
+      "japanese": "分散マルチエージェントの並列推論において、論理的演繹の収束過程に共感的なフィードバックループとリソース調停を組み込み、集団としてのシステム全体の温かさと安定性を最大化させる調和的均衡状態。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-22T07:28:19.265148",
+      "compact_id": "§C36"
     }
   }
 }

@@ -1,56 +1,58 @@
-#!/usr/bin/env python3
 import sys
 import os
 import subprocess
 import json
-import datetime
-
-def get_git_log(max_count=10):
-    try:
-        result = subprocess.run(
-            ['git', 'log', f'-n {max_count}', '--pretty=format:%h - %an, %ar : %s'],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True,
-            check=True
-        )
-        return result.stdout.strip().split('\n')
-    except Exception as e:
-        return [f"Git log unavailable: {str(e)}"]
-
-def scan_whitepaper():
-    whitepaper_candidates = [
-        "WHITEPAPER.md",
-        "docs/WHITEPAPER.md",
-        "CONSTITUTION.md"
-    ]
-    found_content = ""
-    for path in whitepaper_candidates:
-        if os.path.exists(path):
-            try:
-                with open(path, "r", encoding="utf-8") as f:
-                    found_content = f.read()[:1000]
-                break
-            except Exception:
-                pass
-    return found_content
+import glob
+from datetime import datetime
 
 def main():
-    print("Generating release summary for TOAI-elegant-lang...")
-    git_history = get_git_log(15)
-    whitepaper_snippet = scan_whitepaper()
+    repo_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     
+    git_logs = "No git history available."
+    if os.path.exists(os.path.join(repo_dir, '.git')):
+        try:
+            result = subprocess.run(
+                ['git', 'log', '-n', '10', '--oneline'],
+                cwd=repo_dir,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True,
+                check=True
+            )
+            git_logs = result.stdout
+        except Exception as e:
+            git_logs = f"Failed to fetch git log: {e}"
+    
+    whitepapers = []
+    wp_pattern = os.path.join(repo_dir, '**', '*.md')
+    for filepath in glob.glob(wp_pattern, recursive=True):
+        if 'node_modules' in filepath or '.git' in filepath:
+            continue
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                first_line = f.readline().strip()
+                whitepapers.append({
+                    'path': os.path.relpath(filepath, repo_dir),
+                    'title': first_line if first_line else 'Untitled'
+                })
+        except Exception:
+            pass
+            
     summary = {
-        "timestamp": datetime.datetime.utcnow().isoformat() + "Z",
-        "git_logs": git_history,
-        "whitepaper_overview": whitepaper_snippet
+        "timestamp": datetime.now().isoformat(),
+        "git_recent_commits": git_logs.splitlines(),
+        "whitepapers_scanned": whitepapers[:20]
     }
     
-    output_file = "release_summary.json"
-    with open(output_file, "w", encoding="utf-8") as f:
+    output_path = os.path.join(repo_dir, 'release_summary.json')
+    with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(summary, f, ensure_ascii=False, indent=2)
-    
-    print(f"Successfully generated {output_file}")
+        
+    print(f"Release summary successfully built at: {output_path}")
 
-if __name__ == "__main__":
-    main()
+if __name__ == '__main__':
+    try:
+        main()
+    except Exception as ex:
+        print(f"Error during release summary build: {ex}", file=sys.stderr)
+        sys.exit(1)

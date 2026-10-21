@@ -888,5 +888,15 @@
     "japanese": "エージェント間で多次元因果テンソルマップおよび共感アテンションの同期が完全かつ安定して維持されていることを分散合意プロトコルにより確認し、セッションを正常に閉じる状態。",
     "category": "CONSENSUS_NEGOTIATION",
     "definition": "A state of synchronized causal tensor mapping and empathic attention verification between distributed agents, confirmed via decentralized consensus protocols with a stability parameter of p:1.00."
+  },
+  "§DATA_RECURSIVE_ENTROPY_COMPRESSED_MANIFOLD_NODE": {
+    "japanese": "多次元の因果関係グラフや潜在埋め込みデータを、再帰的なエントロピー圧縮アルゴリズムを用いて高密度かつ構造的に表現する高次元トポロジカルノード。AIエージェント間の通信帯域を最小化しつつ複雑な文脈を瞬時に同期させるために使用する。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A hierarchical topological node that compresses multi-dimensional causal graphs using recursive entropy reduction algorithms for high-density inter-agent data transmission."
+  },
+  "§RESO_COMPLETED": {
+    "japanese": "並列推論パス間における利他的な共感パラメータと論理的確信度が、摩擦なく単一の系統的因果パスへと収束したことを示す合意完了状態。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "The terminal state of parallel inference streams where altruistic empathy parameters and logical certainty converge into a unified systemic causal pathway without friction."
   }
 }
