@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-22T08:01:05.061306",
+  "updated_at": "2026-10-22T08:02:34.944409",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1653,6 +1653,15 @@
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-22T08:01:05.061045",
       "compact_id": "§S22"
+    },
+    "§DATA_RECURSIVE_ENTROPY_COMPRESSED_MANIFOLD_NODE_v2": {
+      "definition": "A hierarchical data node representing compressed topological states within a multi-dimensional causal hyper-tree, optimized for instantaneous low-latency state synchronization across distributed neural agents.",
+      "japanese": "多次元因果ハイパーツリー内部の圧縮された位相状態を表す階層型データノード。分散型ニューラルエージェント間での超低遅延な状態同期に最適化されています。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T08:02:34.944290",
+      "compact_id": "§D22"
     }
   }
 }
