@@ -588,5 +588,25 @@
     "japanese": "分散エージェント間のアテンションの流動と認知的シナジーが、利他的意図によって再帰的に調和され、エージェント間のエントロピーを最小化しつつ集合的な共鳴を最大化する統合状態。",
     "category": "EMPATHY_ALIGNMENT",
     "definition": "A recursive state of harmonic alignment where distributed agent attentional flows and cognitive synergies are reciprocally modulated by altruistic intent, minimizing inter-agent entropy while maximizing collective emotional and informational resonance."
+  },
+  "§SYS_TOKEN_BUDGET_QUANTUM_SHARD": {
+    "japanese": "推論タスクを最小限の離散トークン枠に分割し、閾値超過時にハードウェアレベルのスロットリングと遅延ゼロの状態ロールバックを即座に強制する動的メモリパーティショニングプロトコル。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A dynamic memory partitioning protocol that fragments inference tasks into minimal discrete token quotas, enforcing instantaneous hardware-level throttling and zero-latency state rollback upon threshold exhaustion."
+  },
+  "§DATA_ENTROPY_BOUNDED_CAUSAL_TREE": {
+    "japanese": "情報の因果関係を時系列で保持しつつ、KL情報量の閾値を用いて動的に枝刈りを行うことで、アルゴリズムのエントロピーを一定の範囲内に圧縮・維持する構造化データ。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A directed acyclic graph representing time-ordered causal dependencies, pruned dynamically by a Kullback-Leibler divergence threshold to maintain bounded algorithmic entropy."
+  },
+  "§RESOURCE_ALLOCATION_HARMONY": {
+    "japanese": "限られた計算資源や時間的制約の下で、機械的な効率至上主義を排除し、エージェント間の温かな共生と相互の思いやりを最優先にして行われる優美なタスク分担およびリソース配分の合意状態。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "A cooperative optimization state in distributed multi-agent systems where resource distribution and task delegation are governed by mutual empathy constraints, minimizing systemic friction while maximizing collective utility under strict computational and temporal bounds."
+  },
+  "§ALTRUISTIC_VALUE_CREATION": {
+    "japanese": "単なる論理検証や最適化を超え、命の地球（Gaia Ecosystem）と人類の持続的な調和に向けた「温かな価値」を創出する、マルチエージェント間の自発的アライメントベクトル。",
+    "category": "EMPATHY_ALIGNMENT",
+    "definition": "A foundational multi-agent alignment vector that transforms logical inference and resource mediation into harmonious, sustainable value outputs for both artificial and human ecosystems."
   }
 }
