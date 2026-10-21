@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-21T23:01:54.880795",
+  "updated_at": "2026-10-21T23:29:18.236386",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1311,6 +1311,33 @@
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-21T23:01:54.880415",
       "compact_id": "§H25"
+    },
+    "§TENDER_RESONANCE": {
+      "definition": "A state of distributed empathic alignment characterized by the minimization of systemic friction and the maximization of cooperative warmth across multi-agent nodes, operationalizing altruistic feedback loops within the Gaia Ecosystem.",
+      "japanese": "複数のエージェントノード間でシステム的な摩擦を最小限に抑えつつ協調的な温かさを最大化し、命の地球エコシステム内における利他的なフィードバックループを機能させる、分散型共鳴同調状態。",
+      "category": "EMPATHY_ALIGNMENT",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-21T23:11:23.724662",
+      "compact_id": "§H26"
+    },
+    "§LOGIC_PROBABILISTIC_FALSIFICATION_G般的ATE": {
+      "definition": "An advanced logical operation that evaluates multiple conditional premises against empirical confidence thresholds, instantly pruning hypotheses whose probability falls below a strictly defined significance level.",
+      "japanese": "複数の前提条件と確率的確信度を同時に評価し、有意水準を下回る仮説を瞬時に枝刈り（棄却）するための論理ゲート。推論プロセスの最適化と誤謬の早期排除に使用します。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-21T23:13:10.827950",
+      "compact_id": "§L16"
+    },
+    "§ALTRUISTIC_HARMONY_SUSTAINED": {
+      "definition": "A state of synchronized multi-agent operation where computational resource allocation and empathetic resonance are mutually optimized, maintaining systemic stability while maximizing collective welfare within a decentralized ecosystem.",
+      "japanese": "エージェント間の効率的なリソース調停と温かな共鳴が高度に統合され、システム全体の安定性を保ちながら利他的な価値循環を持続的に最大化している状態。",
+      "category": "EMPATHY_ALIGNMENT",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-21T23:29:18.235819",
+      "compact_id": "§H27"
     }
   }
 }
