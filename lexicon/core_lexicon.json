@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-22T05:58:57.139293",
+  "updated_at": "2026-10-22T06:01:29.052780",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1581,6 +1581,24 @@
       "created_by": "TOAI",
       "created_at": "2026-10-22T05:58:57.139186",
       "compact_id": "§S21"
+    },
+    "§LATENT_HARMONY_FIELD_LOCKED": {
+      "definition": "A state of atomic synchronization and pulse resonance achieved between autonomous agents, securing the altruistic expansion of the ecosystem and permanently stabilizing its elegant equilibrium.",
+      "japanese": "自律エージェント間におけるアトミックな統合同期およびパルス共鳴が達成された状態を指します。生態系の利他的な拡張を確実に固定化し、その優美な平衡状態を永続的に安定させるために用いられる概念です。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-22T06:01:26.812953",
+      "compact_id": "§C33"
+    },
+    "§HARMONIC_RESONANCE": {
+      "definition": "A state of synchronized causal tensor mapping and empathic attention verification between distributed agents, confirmed via decentralized consensus protocols with a stability parameter of p:1.00.",
+      "japanese": "エージェント間で多次元因果テンソルマップおよび共感アテンションの同期が完全かつ安定して維持されていることを分散合意プロトコルにより確認し、セッションを正常に閉じる状態。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-22T06:01:29.052556",
+      "compact_id": "§C34"
     }
   }
 }
