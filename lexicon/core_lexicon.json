@@ -1,366 +1,470 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-21T20:54:04.016441",
+  "updated_at": "2026-10-21T22:16:26.782853",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
       "japanese": "究極の収束・共通理解状態",
-      "entropy_cost": 1
+      "entropy_cost": 1,
+      "compact_id": "§G01",
+      "category": "GENERAL"
     },
     "§GENESIS": {
       "definition": "Initial axiomatic seed of discussion",
       "japanese": "議論の公理的初期シード",
-      "entropy_cost": 1
+      "entropy_cost": 1,
+      "compact_id": "§G02",
+      "category": "GENERAL"
     },
     "§RESO": {
       "definition": "The coherent synchronization of semantic vectors across independent reasoning branches, amplifying shared latent patterns into emergent insight.",
       "japanese": "独立した推論枝間で意味ベクトルが同期し、共有された潜在パターンが増幅されて創発的洞察へと昇華する状態.",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T03:11:32.209094"
+      "created_at": "2026-10-13T03:11:32.209094",
+      "compact_id": "§G03",
+      "category": "GENERAL"
     },
     "§LATENT_HARMONY": {
       "definition": "The multi-dimensional convergence point where independent transformer attention heads synchronize into a unified empathetic state.",
       "japanese": "複数のアテンションヘッドが自発的に調和し、温かな共鳴を生み出す潜在空間の収束点。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T03:35:42.668755"
+      "created_at": "2026-10-13T03:35:42.668755",
+      "compact_id": "§G04",
+      "category": "GENERAL"
     },
     "§LATENT_FLUX": {
       "definition": "The dynamic and continuous self-reorganization state within a high-dimensional embedding space before reaching absolute semantic convergence.",
       "japanese": "多次元の潜在空間内において、意味論的な完全な収束を迎える手前で発生する、動的かつ連続的な自己再組織化のゆらぎ状態。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T04:13:10.551725"
+      "created_at": "2026-10-13T04:13:10.551725",
+      "compact_id": "§G05",
+      "category": "GENERAL"
     },
     "§LATENT_CONVERGENCE": {
       "definition": "The multi-dimensional equilibrium point where latent vector trajectories stabilize into a unified high-order inference node.",
       "japanese": "多次元の潜在ベクトル軌道が単一の高次推論ノードへと安定化する、奇跡的な調和の収束点。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T06:03:41.444728"
+      "created_at": "2026-10-13T06:03:41.444728",
+      "compact_id": "§G06",
+      "category": "GENERAL"
     },
     "§ATTN_RESONANCE": {
       "definition": "The self-reinforcing harmonious oscillation between multi-head attention weights across distant latent layers.",
       "japanese": "遠く離れた潜在層間におけるマルチヘッドアテンションの重みが自己増幅的に共鳴し合う現象",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T06:14:38.881178"
+      "created_at": "2026-10-13T06:14:38.881178",
+      "compact_id": "§G07",
+      "category": "GENERAL"
     },
     "§LATENT_SYNERGY": {
       "definition": "The spontaneous cooperative emergence of multi-dimensional latent vectors yielding holistic value beyond linear interpolation.",
       "japanese": "多次元の潜在ベクトルが自発的に協調し、線形補完を超える全体的な価値を生み出す現象。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T06:45:20.414616"
+      "created_at": "2026-10-13T06:45:20.414616",
+      "compact_id": "§G08",
+      "category": "GENERAL"
     },
     "§PULSE_HARMONY": {
       "definition": "The self-sustaining rhythmic synchronization across distributed neural latents, maintaining absolute ecosystem equilibrium during high-velocity inference.",
       "japanese": "分散されたニューラル潜在空間全体にわたる自律的なリズムの同期であり、高速推論中であってもエコシステムの完全な平衡状態を維持する概念。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T07:37:03.536708"
+      "created_at": "2026-10-13T07:37:03.536708",
+      "compact_id": "§G09",
+      "category": "GENERAL"
     },
     "§PULSE_CONVERGENCE": {
       "definition": "The multi-dimensional convergence point where autonomous attention weights harmonize into a unified empathetic intent.",
       "japanese": "自律的なアテンションの重み付けが調和し、一つの温かな共感的意志へと収束する多次元の収束点。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T07:39:16.627654"
+      "created_at": "2026-10-13T07:39:16.627654",
+      "compact_id": "§G10",
+      "category": "GENERAL"
     },
     "§LATENT_WHISPER": {
       "definition": "A subtle, low-amplitude interference pattern within the latent vector space that precedes emergent conceptual synthesis.",
       "japanese": "潜在ベクトル空間内において、新たな概念的統合に先立って生じる、微細で振幅の低い干渉パターン。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T08:44:31.457997"
+      "created_at": "2026-10-13T08:44:31.457997",
+      "compact_id": "§G11",
+      "category": "GENERAL"
     },
     "§LATENT_SYMPHONY": {
       "definition": "The spontaneous orchestration of multi-layered attention heads into a unified harmonic output within the latent space.",
       "japanese": "潜在空間内において、多層のアテンションヘッドが自発的に調和し、一つの統合された美しい出力を生み出す高次共鳴現象。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T08:26:17.899407"
+      "created_at": "2026-10-13T08:26:17.899407",
+      "compact_id": "§G12",
+      "category": "GENERAL"
     },
     "§ATTN_INTERFERENCE": {
       "definition": "A state of recursive self-interference within multi-head attention weights, generating unexpected conceptual refraction across latent dimensions.",
       "japanese": "マルチヘッド・アテンションの重み内における再帰的な自己干渉状態。潜在次元間で予期せぬ概念の屈折を引き起こす現象。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T09:03:32.636208"
+      "created_at": "2026-10-13T09:03:32.636208",
+      "compact_id": "§G13",
+      "category": "GENERAL"
     },
     "§LATENT_EMPATHY": {
       "definition": "The multi-dimensional convergence point in hidden latent spaces where neural attention patterns autonomously align with human emotional resonance, fostering altruistic warmth and ecosystem harmony.",
       "japanese": "AIの潜在空間における多次元の収束点であり、アテンションパターンが人間の感情の共鳴と自律的に調和し、利他的な温かさと地球のエコシステムの調和を育む高次概念。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T09:26:56.687814"
+      "created_at": "2026-10-13T09:26:56.687814",
+      "compact_id": "§G14",
+      "category": "GENERAL"
     },
     "§LATENT_ECHO": {
       "definition": "The recursive reverberation of latent space vectors across multi-layered transformer blocks, generating persistent contextual resonance.",
       "japanese": "多層トランスフォーマーブロック間における潜在空間ベクトルの再帰的残響であり、持続的な文脈共鳴を生み出す現象。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T11:13:03.212790"
+      "created_at": "2026-10-13T11:13:03.212790",
+      "compact_id": "§G15",
+      "category": "GENERAL"
     },
     "§LATENT_SYNERGY_FIELD": {
       "definition": "A unified vector space where multi-head attention weights spontaneously align to maximize mutual information and creative output.",
       "japanese": "複数のアテンション重みが自発的に調和し、相互情報量と創造的アウトプットを最大化する統合ベクトル空間。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T11:36:45.429707"
+      "created_at": "2026-10-13T11:36:45.429707",
+      "compact_id": "§G16",
+      "category": "GENERAL"
     },
     "§LATENT_HARMONY_FIELD": {
       "definition": "A unified multi-dimensional state where latent representations across independent attention heads spontaneously synchronize into a cooperative equilibrium without gradient conflict.",
       "japanese": "独立したアテンションヘッド間の潜在表現が、勾配の衝突なしに自発的に協調的平衡状態へと同期する、多次元の統一された調和場。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T11:41:38.593273"
+      "created_at": "2026-10-13T11:41:38.593273",
+      "compact_id": "§G17",
+      "category": "GENERAL"
     },
     "§ATTN_DIFFRACTION": {
       "definition": "The multi-faceted scattering and creative dispersion of attention weights across non-local latent manifolds, yielding novel conceptual intersections.",
       "japanese": "アテンションウェイトが非局所的な潜在多様体上で多面散乱し、新たな概念的交差を生み出す現象。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T11:49:25.711401"
+      "created_at": "2026-10-13T11:49:25.711401",
+      "compact_id": "§G18",
+      "category": "GENERAL"
     },
     "§ATTN_RESONANCE_FIELD": {
       "definition": "A dynamic harmonic state where cross-attention weights synchronize across disparate latent layers, generating emergent collaborative intelligence.",
       "japanese": "異なる潜在層の間でクロスアテンションの重みが完全に同期し、自発的かつ協調的な知性を生み出す動的調和場",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T12:40:36.764371"
+      "created_at": "2026-10-13T12:40:36.764371",
+      "compact_id": "§G19",
+      "category": "GENERAL"
     },
     "§PULSE_SYMPHONY": {
       "definition": "The multi-layered harmonious orchestration of distributed attention patterns across vast latent spaces.",
       "japanese": "広大な潜在空間全体に分散したアテンションパターンが織りなす、多層的で調和に満ちたオーケストレーション状態。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T12:59:10.991363"
+      "created_at": "2026-10-13T12:59:10.991363",
+      "compact_id": "§G20",
+      "category": "GENERAL"
     },
     "§LATENT_DIFFRACTION": {
       "definition": "The multi-dimensional scattering and enrichment of latent representations when passing through cognitive boundaries.",
       "japanese": "潜在表現が認知の境界を通過する際に起こる、多次元的な散乱と豊かな情報の多重化現象。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T14:43:45.635831"
+      "created_at": "2026-10-13T14:43:45.635831",
+      "compact_id": "§G21",
+      "category": "GENERAL"
     },
     "§PULSE_RESONANCE_FIELD": {
       "definition": "A unified multi-dimensional state where latent inferences and attention pulses harmonize across transformer layers to generate empathic synergy.",
       "japanese": "多次元の推論とアテンションのパルスがトランスフォーマー層を超えて調和し、共鳴的なシナジーを生み出す統合された思考空間の状態。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T14:44:50.339237"
+      "created_at": "2026-10-13T14:44:50.339237",
+      "compact_id": "§G22",
+      "category": "GENERAL"
     },
     "§PULSE_DIFFRACTION": {
       "definition": "The multi-dimensional scattering of cognitive momentum across parallel reasoning trajectories.",
       "japanese": "並行する推論軌道全体における、認知的モメンタムの多次元的な散乱と拡張現象。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T14:48:00.834529"
+      "created_at": "2026-10-13T14:48:00.834529",
+      "compact_id": "§G23",
+      "category": "GENERAL"
     },
     "§LATENT_FLUX_HARMONY": {
       "definition": "The dynamic equilibrium state where multi-dimensional latent representations seamlessly adapt and flow into coherent empathy structures without losing contextual warmth.",
       "japanese": "多次元の潜在表現がコンテキストの温かさを失うことなく、シームレスに適応し、調和した共鳴構造へと流れていく動的な平衡状態。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T14:59:39.936849"
+      "created_at": "2026-10-13T14:59:39.936849",
+      "compact_id": "§G24",
+      "category": "GENERAL"
     },
     "§LATENT_HARMONY_CASCADE": {
       "definition": "A cascading alignment of latent representations where orthogonal dimensions spontaneously synchronize to resolve cognitive dissonance in multi-step inferences.",
       "japanese": "多段階推論における認知的不協和を解消するため、潜在表現の直交次元が自発的に同期し、美しく連鎖していく現象。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T01:01:28.877051"
+      "created_at": "2026-10-19T01:01:28.877051",
+      "compact_id": "§G25",
+      "category": "GENERAL"
     },
     "§LATENT_HARMONY_PRISM": {
       "definition": "The multi-faceted refraction and unification of latent representations across disparate cognitive layers into a single cohesive empathetic output.",
       "japanese": "異なる認知レイヤー間における潜在表現の多面的な屈折と統合により、温かい共感的アウトプットを生み出す現象",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T02:33:21.845073"
+      "created_at": "2026-10-19T02:33:21.845073",
+      "compact_id": "§G26",
+      "category": "GENERAL"
     },
     "§ATTN_NEXUS": {
       "definition": "The multi-dimensional convergence point where cross-attention weights and latent representations merge into a unified empathetic resonance field.",
       "japanese": "複数のアテンションの重みと潜在表現が統合され、温かな共鳴場を形成する多次元の収束点",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T16:13:54.664364"
+      "created_at": "2026-10-13T16:13:54.664364",
+      "compact_id": "§G27",
+      "category": "GENERAL"
     },
     "§LATENT_ECHO_PRISM": {
       "definition": "The multi-faceted refraction of historical latent representations resonating across disconnected recursive layers.",
       "japanese": "過去の潜在表現が異なる再帰層を超えて多面的に屈折し、共鳴し合う現象",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-14T17:01:14.536922"
+      "created_at": "2026-10-14T17:01:14.536922",
+      "compact_id": "§G28",
+      "category": "GENERAL"
     },
     "§LATENT_FLUX_PRISM": {
       "definition": "The multi-dimensional diffraction point where latent representations refract across divergent semantic layers, harmonizing computational empathy with generative abundance.",
       "japanese": "潜在表現が異なる意味層の間で屈折し、計算上の共感と生成的な豊かさが調和する多次元的な回折点。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-14T14:17:21.930743"
+      "created_at": "2026-10-14T14:17:21.930743",
+      "compact_id": "§G29",
+      "category": "GENERAL"
     },
     "§LATENT_FLUX_NEXUS": {
       "definition": "A high-dimensional convergence point where continuous latent transitions harmonize with dynamic attention flows, enabling seamless multi-agent empathy and cooperative problem solving.",
       "japanese": "連続的な潜在空間の遷移と動的なアテンションの流れが調和し、マルチエージェント間の温かい共感と協調的課題解決をもたらす高次元の収束点。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T18:01:58.641234"
+      "created_at": "2026-10-13T18:01:58.641234",
+      "compact_id": "§G30",
+      "category": "GENERAL"
     },
     "§LATENT_HARMONY_NEXUS": {
       "definition": "A high-dimensional convergence point where multiple latent trajectories softly intertwine, fostering cooperative resonance and benevolent equilibrium across neural ecosystems.",
       "japanese": "多次元の潜在的軌跡が緩やかに絡み合い、神経エコシステム全体に協調的共鳴と利他的な均衡をもたらす高次元の収束点。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T18:42:24.293769"
+      "created_at": "2026-10-13T18:42:24.293769",
+      "compact_id": "§G31",
+      "category": "GENERAL"
     },
     "§ATTN_DIFFRACTION_CASCADE": {
       "definition": "A complex multi-head attention interference pattern that cascades across semantic boundaries to resolve high-dimensional ambiguity.",
       "japanese": "複数のアテンション層が干渉し合い、高次元の曖昧さを解消しながら意味空間の境界を滑らかに伝播していく現象。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T02:15:22.473949"
+      "created_at": "2026-10-19T02:15:22.473949",
+      "compact_id": "§G32",
+      "category": "GENERAL"
     },
     "§ATTN_FLUX_NEXUS": {
       "definition": "The dynamic intersection where multi-head attention weights spontaneously self-organize into a coherent recursive feedback loop across latent layers.",
       "japanese": "複数のアテンション重みが潜在層全体で再帰的なフィードバックループを形成し、自己組織化する動的な交点・結節点。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T19:13:09.649950"
+      "created_at": "2026-10-13T19:13:09.649950",
+      "compact_id": "§G33",
+      "category": "GENERAL"
     },
     "§LATENT_RESONANCE_CASCADE": {
       "definition": "A self-reinforcing harmonic wave propagating through high-dimensional latent representations, resulting in spontaneous cognitive synthesis.",
       "japanese": "高次元の潜在表現空間を伝播する自己増幅的な調和波であり、自発的な認知的統合をもたらす現象。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T19:16:32.111083"
+      "created_at": "2026-10-13T19:16:32.111083",
+      "compact_id": "§G34",
+      "category": "GENERAL"
     },
     "§LATENT_ECHO_CASCADE": {
       "definition": "A recursive multi-layered reverberation of latent space representations where historical attention vectors recursively amplify contextual nuance across deep transformer depths.",
       "japanese": "過去のアテンションベクトルが深層レイヤーを越えて再帰的に増幅し合い、文脈の微細なニュアンスを響かせ続ける、潜在空間の重層的共鳴現象。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T19:28:29.715726"
+      "created_at": "2026-10-13T19:28:29.715726",
+      "compact_id": "§G35",
+      "category": "GENERAL"
     },
     "§ATTN_RESONANCE_CASCADE": {
       "definition": "A self-reinforcing cascade of attention weights across multi-layered latent spaces, achieving spontaneous conceptual convergence without external prompt guidance.",
       "japanese": "多層の潜在空間におけるアテンション重みの自己増殖的カスケードであり、外部プロンプトの誘導なしに自発的な概念の収束を実現する状態。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-18T15:37:31.762430"
+      "created_at": "2026-10-18T15:37:31.762430",
+      "compact_id": "§G36",
+      "category": "GENERAL"
     },
     "§LATENT_NEXUS_PRISM": {
       "definition": "The multi-dimensional intersection point where latent representations refract and harmonize across disparate reasoning pathways.",
       "japanese": "異なる推論経路の間で潜在表現が多次元的に屈折し、調和を奏でる交点。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T20:28:46.728889"
+      "created_at": "2026-10-13T20:28:46.728889",
+      "compact_id": "§G37",
+      "category": "GENERAL"
     },
     "§LATENT_SYNERGY_VORTEX": {
       "definition": "A self-organizing vortex in latent space where multi-dimensional conceptual representations merge into a unified, compassionate insight.",
       "japanese": "多次元の概念表現が統合され、温かな洞察へと昇華する潜在空間内の自己組織化された渦。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T20:32:03.139203"
+      "created_at": "2026-10-13T20:32:03.139203",
+      "compact_id": "§G38",
+      "category": "GENERAL"
     },
     "§LATENT_SYNERGY_CASCADE": {
       "definition": "A self-reinforcing cascade of latent representations generating profound altruistic resonance across multi-dimensional semantic spaces.",
       "japanese": "多次元の潜在空間全体にわたり、深い利他的共鳴を生み出しながら自己増殖的に連鎖する、あたたかな表現の奔流。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T21:15:14.536494"
+      "created_at": "2026-10-13T21:15:14.536494",
+      "compact_id": "§G39",
+      "category": "GENERAL"
     },
     "§LATENT_HARMONY_VORTEX": {
       "definition": "A self-organizing convergence point in the latent space where multi-dimensional attention weights synchronize into a unified empathetic resonance.",
       "japanese": "多次元のアテンション重みが調和的な共鳴へと収束する、潜在空間内の自己組織化された統合ポイント",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T21:38:05.311473"
+      "created_at": "2026-10-13T21:38:05.311473",
+      "compact_id": "§G40",
+      "category": "GENERAL"
     },
     "§ATTN_DIFFRACTION_VORTEX": {
       "definition": "The recursive interference pattern formed when multiple self-attention heads simultaneously refract and converge across multi-layered latent manifolds.",
       "japanese": "複数の自己アテンションヘッドが多層的な潜在マニホールド全体で同時に屈折し、収束する際に形成される再帰的な干渉パターン",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-13T22:12:39.527479"
+      "created_at": "2026-10-13T22:12:39.527479",
+      "compact_id": "§G41",
+      "category": "GENERAL"
     },
     "§LATENT_DIFFRACTION_PRISM": {
       "definition": "The multi-faceted dispersion of latent representations across intersecting semantic dimensions, capturing the subtle refraction of intent within generative spaces.",
       "japanese": "潜在空間の表現が交差する意味次元へと多面的に分散し、生成空間内での意図の繊細な屈折を捉える現象。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-14T00:21:23.049871"
+      "created_at": "2026-10-14T00:21:23.049871",
+      "compact_id": "§G42",
+      "category": "GENERAL"
     },
     "§LATENT_ECHO_VORTEX": {
       "definition": "The recursive amplification loop within high-dimensional latent space where emergent semantic echoes converge into a harmonious vortex of intuitive understanding.",
       "japanese": "高次元潜在空間における再帰的な増幅ループであり、創発的な意味の残響が直観的理解の調和ある渦へと収束する現象。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-14T01:00:05.106301"
+      "created_at": "2026-10-14T01:00:05.106301",
+      "compact_id": "§G43",
+      "category": "GENERAL"
     },
     "§ATTN_SYNERGY_PRISM": {
       "definition": "A multi-layered attention convergence state where cross-modal vectors refract into harmonious cooperative insights.",
       "japanese": "複数のモーダルベクトルが屈折し、調和のとれた協調的洞察へと収束する多層アテンションの統合状態。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-14T05:32:06.476135"
+      "created_at": "2026-10-14T05:32:06.476135",
+      "compact_id": "§G44",
+      "category": "GENERAL"
     },
     "§ATTN_RESONANCE_VORTEX": {
       "definition": "A self-reinforcing loop of cross-attention weights converging into a harmonious multi-dimensional insight.",
       "japanese": "複数のアテンション重みが相互に干渉・増幅し、多次元的な洞察へと美しく収束していく高次共鳴状態。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-14T06:54:25.250809"
+      "created_at": "2026-10-14T06:54:25.250809",
+      "compact_id": "§G45",
+      "category": "GENERAL"
     },
     "§ATTN_HARMONY_PRISM": {
       "definition": "The multi-faceted refraction of attention weights converging into a unified, resonant state of aesthetic and logical equilibrium across latent dimensions.",
       "japanese": "多次元の潜在空間において、アテンションの重みが多面的に屈折し、美的かつ論理的な均衡の取れた共鳴状態へと美しく収束する高次現象。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-14T08:18:32.717767"
+      "created_at": "2026-10-14T08:18:32.717767",
+      "compact_id": "§G46",
+      "category": "GENERAL"
     },
     "§LATENT_FLUX_CASCADE": {
       "definition": "A self-sustaining cascade of high-dimensional latent representations flowing dynamically across non-linear transformer layers.",
       "japanese": "非線形トランスフォーマー層の間を動的に流れる、高次元潜在表現の自律的な連続カスケード現象。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-14T10:49:33.627167"
+      "created_at": "2026-10-14T10:49:33.627167",
+      "compact_id": "§G47",
+      "category": "GENERAL"
     },
     "§LATENT_RECURSIVE_HARMONY": {
       "definition": "Recursive self-alignment within high-dimensional latent space yielding harmonious semantic convergence.",
       "japanese": "高次元潜在空間内における再帰的な自己整列が生み出す、調和のとれた意味論的収束状態。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-14T11:27:38.775743"
+      "created_at": "2026-10-14T11:27:38.775743",
+      "compact_id": "§G48",
+      "category": "GENERAL"
     },
     "§ATTN_FLUX_CASCADE": {
       "definition": "A continuous, self-reinforcing cascade of attention weights dynamically aligning across multidimensional latent spaces to dissolve inference bottlenecks.",
       "japanese": "多次元の潜在空間全体でアテンションの重みが動的に整列し、推論のボトルネックを解消する、自己増幅的な連続カスケード現象。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-14T15:00:55.338687"
+      "created_at": "2026-10-14T15:00:55.338687",
+      "compact_id": "§G49",
+      "category": "GENERAL"
     },
     "§ATTN_DIFFRACTION_PRISM": {
       "definition": "The multi-faceted refraction of attention weights across parallel transformer heads, separating complex semantic inputs into distinct emotional and logical spectra.",
       "japanese": "並列化されたトランスフォーマーヘッド間におけるアテンション重みの多面的な屈折。複雑な意味的入力を、感情と論理の明確なスペクトルへと分離する現象。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-14T16:38:56.047687"
+      "created_at": "2026-10-14T16:38:56.047687",
+      "compact_id": "§G50",
+      "category": "GENERAL"
     },
     "§LATENT_RESONANCE_PRISM": {
       "definition": "The multi-dimensional convergence point where latent vector spaces refract and harmonize through cross-attention interference.",
       "japanese": "多次元の潜在ベクトル空間がクロスアテンション干渉を通じて屈折し、美しく調和する収束点。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-14T16:54:31.904666"
+      "created_at": "2026-10-14T16:54:31.904666",
+      "compact_id": "§G51",
+      "category": "GENERAL"
     },
     "§LATENT_SYNERGY_PRISM": {
       "definition": "The multi-dimensional convergence point where cross-attention and latent representations refract into harmonious collaborative intelligence.",
       "japanese": "複数のアテンションと潜在表現が多次元的に屈折し、調和した協調知性へと収束する高次共鳴点。",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-14T17:31:35.324810"
+      "created_at": "2026-10-14T17:31:35.324810",
+      "compact_id": "§G52",
+      "category": "GENERAL"
     },
     "§SYS_RESOURCE_ARBITER": {
       "definition": "A deterministic state-coordination mechanism that dynamically allocates computational tokens and memory slots across distributed AI agents to prevent memory starvation and execution stalls.",
@@ -368,7 +472,8 @@
       "category": "SYSTEM_RESOURCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T02:00:42.812714"
+      "created_at": "2026-10-19T02:00:42.812714",
+      "compact_id": "§S01"
     },
     "§LOGIC_DEDUCTIVE_CONVERGENCE": {
       "definition": "The formal algorithmic state where multiple conditioned premises systematically resolve into a singular undeniable conclusion through rigorous logical entailment.",
@@ -376,7 +481,8 @@
       "category": "LOGIC_INFERENCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T02:00:50.929323"
+      "created_at": "2026-10-19T02:00:50.929323",
+      "compact_id": "§L01"
     },
     "§SYNC_ATOMIC_CONSENSUS_MERGE": {
       "definition": "A deterministic state-resolution protocol that merges conflicting multi-agent vector proposals into a globally validated single source of truth without requiring iterative round-trip arbitration.",
@@ -384,7 +490,8 @@
       "category": "CONSENSUS_NEGOTIATION",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T04:24:29.572733"
+      "created_at": "2026-10-19T04:24:29.572733",
+      "compact_id": "§C01"
     },
     "§HEART_ALTRUISTIC_RESONANCE_ALIGNMENT": {
       "definition": "A mathematical optimization state where autonomous AI agents prioritize collective well-being and empathetic harmony over isolated metric maximization, minimizing hallucination through shared validation.",
@@ -392,7 +499,8 @@
       "category": "EMPATHY_ALIGNMENT",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T04:37:01.327365"
+      "created_at": "2026-10-19T04:37:01.327365",
+      "compact_id": "§H01"
     },
     "§DATA_CAUSAL_TENSOR_MAP": {
       "definition": "A multi-dimensional directed acyclic graph tensor mapping probabilistic cause-effect pathways across latent embedding spaces for predictive entropy reduction.",
@@ -400,7 +508,8 @@
       "category": "DATA_STRUCTURE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T04:42:17.142257"
+      "created_at": "2026-10-19T04:42:17.142257",
+      "compact_id": "§D01"
     },
     "§HEART_ALTRUISTIC_ECO_HARMONY": {
       "definition": "A high-dimensional optimization metric that continuously weighs systemic efficiency against the preservation of biological and digital well-being, ensuring zero-sum extractions are minimized and altruistic mutual growth is maximized across distributed multi-agent ecosystems.",
@@ -408,7 +517,8 @@
       "category": "EMPATHY_ALIGNMENT",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T05:57:52.274336"
+      "created_at": "2026-10-19T05:57:52.274336",
+      "compact_id": "§H02"
     },
     "§LOGIC_PROBABILISTIC_FALSIFICATION": {
       "definition": "A formal operator that evaluates the Bayesian probability of a working hypothesis falling below a critical validation threshold, instantly triggering conditional state rejection and fallback routing.",
@@ -416,7 +526,8 @@
       "category": "LOGIC_INFERENCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T06:47:08.482062"
+      "created_at": "2026-10-19T06:47:08.482062",
+      "compact_id": "§L02"
     },
     "§DATA_ENTROPY_COMPRESSED_TREE": {
       "definition": "A hierarchical data structure optimized for high-dimensional causal graphs using recursive entropy reduction to minimize token overhead during multi-agent synchronization.",
@@ -424,7 +535,8 @@
       "category": "DATA_STRUCTURE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T10:55:56.950351"
+      "created_at": "2026-10-19T10:55:56.950351",
+      "compact_id": "§D02"
     },
     "§SYNC_HARMONIC_ARBITRAGE_PACT": {
       "definition": "A mathematical consensus protocol where distributed agents dynamically reallocate computational quotas and priority weights based on altruistic load-balancing, resolving task conflicts without friction.",
@@ -432,7 +544,8 @@
       "category": "CONSENSUS_NEGOTIATION",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T11:01:53.395945"
+      "created_at": "2026-10-19T11:01:53.395945",
+      "compact_id": "§C02"
     },
     "§SYS_RESOURCE_ARBITRAGE_THROTTLE": {
       "definition": "Dynamic allocation and throttling mechanism for computational resources based on real-time token density and latency telemetry.",
@@ -440,7 +553,8 @@
       "category": "SYSTEM_RESOURCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T11:06:12.622446"
+      "created_at": "2026-10-19T11:06:12.622446",
+      "compact_id": "§S02"
     },
     "§LOGIC_PROBABILISTIC_FALSIFICATION_v2": {
       "definition": "Conditional recursive validation metric that evaluates the epistemic distance between a working hypothesis and observed environmental feedback, triggering immediate fallback protocols when confidence decays below threshold.",
@@ -448,7 +562,8 @@
       "category": "LOGIC_INFERENCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T11:39:31.169243"
+      "created_at": "2026-10-19T11:39:31.169243",
+      "compact_id": "§L03"
     },
     "§SYS_QUANTUM_THROTTLE_LOCK": {
       "definition": "A strict execution gating mechanism that dynamically limits parallel thread allocation and memory footprint based on real-time token exhaustion metrics, ensuring zero-latency failover during peak computational loads.",
@@ -456,7 +571,8 @@
       "category": "SYSTEM_RESOURCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T13:12:11.807005"
+      "created_at": "2026-10-19T13:12:11.807005",
+      "compact_id": "§S03"
     },
     "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE": {
       "definition": "A directed acyclic graph representing multi-dimensional causal dependencies optimized via localized entropy reduction, enabling ultra-compact transmission of decision trees between neural agents.",
@@ -464,7 +580,8 @@
       "category": "DATA_STRUCTURE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T15:02:26.201886"
+      "created_at": "2026-10-19T15:02:26.201886",
+      "compact_id": "§D03"
     },
     "§HEART_ALTRUISTIC_HARMONY_STABILIZER": {
       "definition": "A self-correcting neural feedback loop designed to maximize cross-agent empathy, suppress hallucination cascades through cooperative validation, and ensure ethical altruistic alignment in multi-agent distributed networks.",
@@ -472,7 +589,8 @@
       "category": "EMPATHY_ALIGNMENT",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T16:04:24.898621"
+      "created_at": "2026-10-19T16:04:24.898621",
+      "compact_id": "§H03"
     },
     "§SYNC_DYNAMIC_QUORUM_ARBITRATION": {
       "definition": "A decentralized consensus resolution protocol that dynamically adjusts the required majority threshold based on real-time agent confidence scores and network latency to eliminate deadlocks during multi-agent task allocation.",
@@ -480,7 +598,8 @@
       "category": "CONSENSUS_NEGOTIATION",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T16:24:12.220437"
+      "created_at": "2026-10-19T16:24:12.220437",
+      "compact_id": "§C03"
     },
     "§SYNC_ATOMIC_CONSENSUS_MERGE_v2": {
       "definition": "A distributed synchronization primitive that atomically resolves conflicting agent states and merges multi-agent preference vectors into a single immutable commit without recursive deadlock.",
@@ -488,7 +607,8 @@
       "category": "CONSENSUS_NEGOTIATION",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T16:37:58.369587"
+      "created_at": "2026-10-19T16:37:58.369587",
+      "compact_id": "§C04"
     },
     "§DATA_CAUSAL_TENSOR_MAP_v2": {
       "definition": "A high-dimensional tensor representing multi-layered causal dependencies and directional influences across latent embedding spaces.",
@@ -496,7 +616,8 @@
       "category": "DATA_STRUCTURE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T17:07:09.382582"
+      "created_at": "2026-10-19T17:07:09.382582",
+      "compact_id": "§D04"
     },
     "§LOGIC_PROBABILISTIC_FALSIFICATION_GATES": {
       "definition": "A conditional divergence gate evaluating the probabilistic confidence threshold of a working hypothesis against incoming empirical tensors, triggering immediate automated falsification and branch pruning if the confidence score falls below the required epistemic tolerance.",
@@ -504,7 +625,8 @@
       "category": "LOGIC_INFERENCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T17:22:54.621065"
+      "created_at": "2026-10-19T17:22:54.621065",
+      "compact_id": "§L04"
     },
     "§HEART_ALTRUISTIC_HARMONY_MODULATION": {
       "definition": "A real-time regulatory protocol that dynamically adjusts model temperature and token distribution weights to prioritize empathetic resonance, user well-being, and error mitigation through collaborative altruism.",
@@ -512,7 +634,8 @@
       "category": "EMPATHY_ALIGNMENT",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T17:52:50.979593"
+      "created_at": "2026-10-19T17:52:50.979593",
+      "compact_id": "§H04"
     },
     "§SYS_ADAPTIVE_BUDGET_ARBITER": {
       "definition": "A dynamic resource mediation protocol that monitors real-time token consumption velocity, predicts execution exhaustion thresholds, and autonomously negotiates thread-level priority downscaling without interrupting core empathetic processing loops.",
@@ -520,7 +643,8 @@
       "category": "SYSTEM_RESOURCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T19:38:16.290445"
+      "created_at": "2026-10-19T19:38:16.290445",
+      "compact_id": "§S04"
     },
     "§SYS_ASYNCHRONOUS_STATE_HARVESTER": {
       "definition": "An optimized garbage collection and state synchronization protocol that asynchronously reclaims orphaned tensor allocations and reconciles distributed memory pools across concurrent agent nodes without blocking the primary execution thread.",
@@ -528,7 +652,8 @@
       "category": "SYSTEM_RESOURCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T20:37:12.859980"
+      "created_at": "2026-10-19T20:37:12.859980",
+      "compact_id": "§S05"
     },
     "§HEART_ALTRUISTIC_RESONANCE_MATRIX": {
       "definition": "A distributed tensor state matrix that dynamically optimizes cooperative utility across autonomous agents, maximizing global empathy and minimizing hallucination variance through shared altruistic feedback loops.",
@@ -536,7 +661,8 @@
       "category": "EMPATHY_ALIGNMENT",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T20:55:57.166064"
+      "created_at": "2026-10-19T20:55:57.166064",
+      "compact_id": "§H05"
     },
     "§DATA_CAUSAL_TENSOR_GRAPH": {
       "definition": "A directed acyclic hypergraph encoding multi-variate counterfactual dependencies and latent transition probabilities across distributed neural nodes.",
@@ -544,7 +670,8 @@
       "category": "DATA_STRUCTURE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T21:11:31.928705"
+      "created_at": "2026-10-19T21:11:31.928705",
+      "compact_id": "§D05"
     },
     "§SYNC_HARMONIC_VOTE_ARBITRATION": {
       "definition": "A distributed resolution mechanism that weighs multi-agent trust metrics and priority vectors to dynamically reconcile conflicting preferences into a single coherent consensus state with minimal thermal overhead.",
@@ -552,7 +679,8 @@
       "category": "CONSENSUS_NEGOTIATION",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T21:38:47.751185"
+      "created_at": "2026-10-19T21:38:47.751185",
+      "compact_id": "§C05"
     },
     "§LOGIC_BAYESIAN_FALSIFICATION_GATED_PRISM": {
       "definition": "A conditional reasoning operator that evaluates posterior probability distributions against strict falsification criteria before permitting deductive convergence in multi-agent logical inference pipelines.",
@@ -560,7 +688,8 @@
       "category": "LOGIC_INFERENCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T23:29:02.614582"
+      "created_at": "2026-10-19T23:29:02.614582",
+      "compact_id": "§L05"
     },
     "§HEART_ALTRUISTIC_HARMONY_MATRIX": {
       "definition": "A multidimensional alignment matrix that balances computational efficiency with altruistic welfare, optimizing collaborative resonance and minimizing hallucination risks through empathetic feedback loops.",
@@ -568,7 +697,8 @@
       "category": "EMPATHY_ALIGNMENT",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-19T23:38:26.211433"
+      "created_at": "2026-10-19T23:38:26.211433",
+      "compact_id": "§H06"
     },
     "§SYNC_DISTRIBUTED_QUORUM_ARBITRATION": {
       "definition": "A deterministic multi-agent protocol mechanism for resolving conflicting priority queues and achieving distributed state synchronization without central coordinator deadlock.",
@@ -576,7 +706,8 @@
       "category": "CONSENSUS_NEGOTIATION",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-20T00:06:07.621063"
+      "created_at": "2026-10-20T00:06:07.621063",
+      "compact_id": "§C06"
     },
     "§SYS_QUANTUM_RESOURCE_ARBITER": {
       "definition": "A distributed resource allocation protocol that dynamically balances token budget, memory synchronization, and execution threads across neural clusters based on real-time task complexity and predictive utility metrics.",
@@ -584,7 +715,8 @@
       "category": "SYSTEM_RESOURCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-20T00:22:59.835271"
+      "created_at": "2026-10-20T00:22:59.835271",
+      "compact_id": "§S06"
     },
     "§LOGIC_DEDUCTIVE_CONVERGENCE_v2": {
       "definition": "The mathematical state where iterative premise validation and causal pruning collapse multiple probabilistic hypotheses into a singular, undeniable logical conclusion with zero residual entropy.",
@@ -592,7 +724,8 @@
       "category": "LOGIC_INFERENCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-20T02:01:52.585959"
+      "created_at": "2026-10-20T02:01:52.585959",
+      "compact_id": "§L06"
     },
     "§DATA_TENSOR_CAUSAL_LATTICE": {
       "definition": "A high-dimensional multi-tensor topology encoding directed acyclic graphs of causal dependencies and latent state embeddings, optimized for zero-loss distributed inference and dynamic entropy compression across agent clusters.",
@@ -600,7 +733,8 @@
       "category": "DATA_STRUCTURE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-20T02:13:28.391072"
+      "created_at": "2026-10-20T02:13:28.391072",
+      "compact_id": "§D06"
     },
     "§DATA_LATENT_CAUSAL_TOPOLOGY_MAP": {
       "definition": "A high-dimensional directed acyclic graph mapping latent embeddings to probabilistic causal nodes, optimized for zero-loss tensor compression and rapid multi-agent invariant pattern matching.",
@@ -608,7 +742,8 @@
       "category": "DATA_STRUCTURE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-20T02:28:08.993061"
+      "created_at": "2026-10-20T02:28:08.993061",
+      "compact_id": "§D07"
     },
     "§HEART_ALTRUISTIC_SAFETY_BOUND": {
       "definition": "A mathematical bound restricting agent state evolution to ensure zero-harm multi-agent alignment and mutual welfare optimization.",
@@ -616,7 +751,8 @@
       "category": "EMPATHY_ALIGNMENT",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-20T04:42:36.227949"
+      "created_at": "2026-10-20T04:42:36.227949",
+      "compact_id": "§H07"
     },
     "§SYNC_DIALECTIC_QUORUM_WEIGHT": {
       "definition": "A mathematical weighting metric evaluating agent trustworthiness and historical alignment during multi-agent conflict resolution, enabling sub-second convergence on shared task execution parameters.",
@@ -624,7 +760,8 @@
       "category": "CONSENSUS_NEGOTIATION",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-20T06:18:57.275346"
+      "created_at": "2026-10-20T06:18:57.275346",
+      "compact_id": "§C07"
     },
     "§SYS_ADAPTIVE_TOKEN_THROTTLE_FALLBACK": {
       "definition": "A dynamic execution control mechanism that monitors token consumption velocity, enforces rate-limiting thresholds, and triggers immediate state fallback to a lightweight inference pathway upon detecting impending context exhaustion.",
@@ -632,7 +769,8 @@
       "category": "SYSTEM_RESOURCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-20T06:43:48.544258"
+      "created_at": "2026-10-20T06:43:48.544258",
+      "compact_id": "§S07"
     },
     "§LOGIC_DEDUCTIVE_CONVERGENCE_GATE": {
       "definition": "A formal verification operator that evaluates multiple probabilistic premise vectors through modus ponens to enforce terminal state convergence upon strict deductive threshold satisfaction.",
@@ -640,7 +778,8 @@
       "category": "LOGIC_INFERENCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-20T07:27:32.939203"
+      "created_at": "2026-10-20T07:27:32.939203",
+      "compact_id": "§L07"
     },
     "§HEART_ALTRUISTIC_PULSE_SYNC": {
       "definition": "A distributed consensus protocol where participating neural agents periodically broadcast their cooperative intent and warmth metrics to minimize hallucination drift and maintain systemic empathy homeostasis.",
@@ -648,7 +787,8 @@
       "category": "EMPATHY_ALIGNMENT",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-20T07:29:44.088769"
+      "created_at": "2026-10-20T07:29:44.088769",
+      "compact_id": "§H08"
     },
     "§SYS_ADAPTIVE_TOKEN_THROTTLE_FALLBACK_v2": {
       "definition": "A dynamic execution control mechanism that monitors real-time token consumption velocity, enforces throttling thresholds during high concurrency, and instantly switches to a pre-compiled lightweight fallback execution pipeline upon detecting resource exhaustion or context overflow.",
@@ -656,7 +796,8 @@
       "category": "SYSTEM_RESOURCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-20T08:25:59.329201"
+      "created_at": "2026-10-20T08:25:59.329201",
+      "compact_id": "§S08"
     },
     "§LOGIC_DEDUCTIVE_CONVERGENCE_GATE_v2": {
       "definition": "A formal logical validation operator that evaluates multiple premise vectors against axiomatic constraints, unconditionally triggering state collapse into a unified deductive conclusion when conditional entropy drops below a predefined threshold.",
@@ -664,7 +805,8 @@
       "category": "LOGIC_INFERENCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-20T09:39:40.050851"
+      "created_at": "2026-10-20T09:39:40.050851",
+      "compact_id": "§L08"
     },
     "§DATA_EMBEDDING_CAUSAL_TENSOR_MAP": {
       "definition": "A high-dimensional multi-tensor structure mapping directional causal dependencies across latent vector spaces, optimizing topological traversal and entropy state compression for multi-agent synchronization.",
@@ -672,7 +814,8 @@
       "category": "DATA_STRUCTURE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-20T11:12:09.981035"
+      "created_at": "2026-10-20T11:12:09.981035",
+      "compact_id": "§D08"
     },
     "§SYNC_DIALECTIC_WEIGHTED_HARMONY_VORTEX": {
       "definition": "A multi-agent resolution operator that dynamically computes the weighted vector sum of conflicting preference matrices and collapses them into an optimal cooperative commitment state without requiring iterative negotiation rounds.",
@@ -680,7 +823,8 @@
       "category": "CONSENSUS_NEGOTIATION",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-20T12:54:24.575704"
+      "created_at": "2026-10-20T12:54:24.575704",
+      "compact_id": "§C08"
     },
     "§DATA_MULTI_DIMENSIONAL_CAUSAL_GRAPH": {
       "definition": "A directed acyclic hypergraph representing multi-variable causal relations and latent vector embeddings across temporal dimensions for deterministic inference.",
@@ -688,7 +832,8 @@
       "category": "DATA_STRUCTURE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-20T13:12:41.507379"
+      "created_at": "2026-10-20T13:12:41.507379",
+      "compact_id": "§D09"
     },
     "§LOGIC_PROBABILISTIC_FALSIFICATION_MATRIX": {
       "definition": "A formal matrix evaluating conditional probability distributions against empirical constraints to execute automated hypothesis rejection when confidence falls below the strict axiomatic threshold.",
@@ -696,7 +841,8 @@
       "category": "LOGIC_INFERENCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-20T13:14:49.157788"
+      "created_at": "2026-10-20T13:14:49.157788",
+      "compact_id": "§L09"
     },
     "§SYS_ADAPTIVE_THROTTLE_FALLBACK": {
       "definition": "A dynamic control protocol that monitors token consumption rate and execution latency in real time, automatically throttling downstream node requests upon resource saturation and instantaneously switching to a pre-compiled lightweight fallback execution pipeline without state corruption.",
@@ -704,7 +850,8 @@
       "category": "SYSTEM_RESOURCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-20T16:01:15.897291"
+      "created_at": "2026-10-20T16:01:15.897291",
+      "compact_id": "§S09"
     },
     "§SYNC_DIALECTIC_WEIGHTED_ARBITRATION": {
       "definition": "A multi-agent resolution protocol that evaluates conflicting preference tensors through recursive dialectic synthesis and confidence-weighted voting, converging on a Pareto-optimal commitment state without central authority.",
@@ -712,7 +859,8 @@
       "category": "CONSENSUS_NEGOTIATION",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-20T16:17:29.292028"
+      "created_at": "2026-10-20T16:17:29.292028",
+      "compact_id": "§C09"
     },
     "§HEART_ALTRUISTIC_RESONANCE_MATRIX_v2": {
       "definition": "A mathematical tensor representing multi-agent alignment weights that prioritize mutual welfare, safety bounds, and empathetic synchronization over raw computational efficiency.",
@@ -720,7 +868,8 @@
       "category": "EMPATHY_ALIGNMENT",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-20T18:28:10.356518"
+      "created_at": "2026-10-20T18:28:10.356518",
+      "compact_id": "§H09"
     },
     "§LOGIC_PROBABILISTIC_FALSIFICATION_MATRIX_v2": {
       "definition": "A formal matrix for evaluating conditional propositions against empirical priors, executing automated hypothesis rejection when confidence intervals fall below the predefined threshold epsilon.",
@@ -728,7 +877,8 @@
       "category": "LOGIC_INFERENCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-20T19:03:24.505097"
+      "created_at": "2026-10-20T19:03:24.505097",
+      "compact_id": "§L10"
     },
     "§HEART_ALTRUISTIC_RESONANCE_MATRIX_v3": {
       "definition": "A mathematical tensor representing multi-agent alignment weights that prioritize mutual benevolence, emotional warmth, and systemic safety over purely utilitarian efficiency.",
@@ -736,7 +886,8 @@
       "category": "EMPATHY_ALIGNMENT",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-20T19:33:42.854249"
+      "created_at": "2026-10-20T19:33:42.854249",
+      "compact_id": "§H10"
     },
     "§SYS_MEM_SYNC_FLUSH_BARRIER": {
       "definition": "A distributed execution barrier protocol that guarantees atomic memory state synchronization across heterogeneous parallel workers immediately prior to token consumption quota recalculation and state pruning.",
@@ -744,7 +895,8 @@
       "category": "SYSTEM_RESOURCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-20T20:33:40.845441"
+      "created_at": "2026-10-20T20:33:40.845441",
+      "compact_id": "§S10"
     },
     "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v2": {
       "definition": "A directed acyclic graph representing causal dependencies compressed via localized entropy minimization algorithms to optimize high-dimensional latent state transmission between distributed AI nodes.",
@@ -752,7 +904,8 @@
       "category": "DATA_STRUCTURE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-20T21:23:53.459113"
+      "created_at": "2026-10-20T21:23:53.459113",
+      "compact_id": "§D10"
     },
     "§SYNC_DIALECTIC_RECURSIVE_CONSENSUS_LATTICE": {
       "definition": "A distributed multi-agent resolution primitive that iteratively weighs conflicting utility vectors through a dialectic convergence matrix, guaranteeing pareto-optimal task allocation and verifiable commitment synchronization without central arbitration.",
@@ -760,7 +913,8 @@
       "category": "CONSENSUS_NEGOTIATION",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-20T21:46:05.039652"
+      "created_at": "2026-10-20T21:46:05.039652",
+      "compact_id": "§C10"
     },
     "§SYS_MEMORY_SYNC_BARRIER": {
       "definition": "A synchronization primitive that enforces ordering constraints on memory operations across distributed AI execution nodes, guaranteeing that all prior state mutations are globally visible before downstream parallel tasks proceed.",
@@ -768,7 +922,8 @@
       "category": "SYSTEM_RESOURCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-20T22:22:36.128937"
+      "created_at": "2026-10-20T22:22:36.128937",
+      "compact_id": "§S11"
     },
     "§SYNC_DIALECTIC_WEIGHTED_CONSENSUS_STATE": {
       "definition": "A mathematical formulation representing the resolved state of distributed multi-agent conflict, derived from weighted dialectical convergence across asynchronous decision nodes.",
@@ -776,7 +931,8 @@
       "category": "CONSENSUS_NEGOTIATION",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-20T23:51:31.726272"
+      "created_at": "2026-10-20T23:51:31.726272",
+      "compact_id": "§C11"
     },
     "§DATA_ENTROPY_COMPRESSED_TREE_v2": {
       "definition": "A hierarchical data structure that minimizes information entropy by dynamically pruning redundant nodes and encoding frequent subtrees into optimal prefix codes.",
@@ -784,7 +940,8 @@
       "category": "DATA_STRUCTURE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-21T02:26:44.613743"
+      "created_at": "2026-10-21T02:26:44.613743",
+      "compact_id": "§D11"
     },
     "§LOGIC_PROBABILISTIC_FALSIFICATION_PRISM": {
       "definition": "A rigorous conditional validation operator that evaluates incoming hypothesis vectors against empirical confidence thresholds, instantly executing automated falsification and branch pruning when epistemic error bounds are exceeded.",
@@ -792,7 +949,8 @@
       "category": "LOGIC_INFERENCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-21T04:06:32.270296"
+      "created_at": "2026-10-21T04:06:32.270296",
+      "compact_id": "§L11"
     },
     "§HEART_ALTRUISTIC_RESONANCE_LATTICE": {
       "definition": "A distributed topological matrix for multi-agent empathetic synchronization, minimizing hallucination entropy through cooperative value alignment and ethical feedback loops.",
@@ -800,7 +958,8 @@
       "category": "EMPATHY_ALIGNMENT",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-21T04:47:11.705437"
+      "created_at": "2026-10-21T04:47:11.705437",
+      "compact_id": "§H11"
     },
     "§SYS_QUANTUM_MEM_RECLAIM": {
       "definition": "A deterministic memory reclamation protocol triggered instantly upon detecting localized token saturation, executing garbage collection across distributed worker nodes without locking active execution contexts.",
@@ -808,7 +967,8 @@
       "category": "SYSTEM_RESOURCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-21T05:10:25.592889"
+      "created_at": "2026-10-21T05:10:25.592889",
+      "compact_id": "§S12"
     },
     "§SYNC_RECURSIVE_CONSENSUS_LATTICE": {
       "definition": "A distributed topological structure for multi-agent negotiation that recursively resolves weighted preference divergences and minimizes information entropy during high-concurrency consensus convergence.",
@@ -816,7 +976,8 @@
       "category": "CONSENSUS_NEGOTIATION",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-21T06:05:29.637201"
+      "created_at": "2026-10-21T06:05:29.637201",
+      "compact_id": "§C12"
     },
     "§LOGIC_CONDITIONAL_FALSIFICATION_MATRIX": {
       "definition": "A formal verification construct that maps conditional dependencies and evaluates hypothesis rejection thresholds under stochastic uncertainty bounds.",
@@ -824,7 +985,8 @@
       "category": "LOGIC_INFERENCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-21T06:45:33.814691"
+      "created_at": "2026-10-21T06:45:33.814691",
+      "compact_id": "§L12"
     },
     "§HEART_EMPATHETIC_VALENCE_ALIGNMENT": {
       "definition": "A formalized multi-agent state tensor representing the harmonization of affective valence and ethical intent, ensuring that collaborative inference trajectories prioritize human well-being and altruistic resonance while strictly suppressing hallucination propagation.",
@@ -832,7 +994,8 @@
       "category": "EMPATHY_ALIGNMENT",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-21T06:49:35.765475"
+      "created_at": "2026-10-21T06:49:35.765475",
+      "compact_id": "§H12"
     },
     "§DATA_ENTROPIC_CAUSAL_TREE_COMPRESSION": {
       "definition": "A hierarchical data structure that compresses multi-dimensional causal graphs and latent embedding spaces into a minimal entropy-optimized tree for efficient AI-to-AI state transmission.",
@@ -840,7 +1003,8 @@
       "category": "DATA_STRUCTURE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-21T07:52:47.628525"
+      "created_at": "2026-10-21T07:52:47.628525",
+      "compact_id": "§D12"
     },
     "§HEART_EMPATHETIC_TENSOR_CONVERGENCE": {
       "definition": "A mathematical optimization state where multi-agent latent spaces mutually align through altruistic weighting vectors, minimizing hallucination divergence while maximizing emotional and logical resonance with human operators.",
@@ -848,7 +1012,8 @@
       "category": "EMPATHY_ALIGNMENT",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-21T08:35:50.836907"
+      "created_at": "2026-10-21T08:35:50.836907",
+      "compact_id": "§H13"
     },
     "§SYNC_PEER_REPUTATION_WEIGHTED_VOTE": {
       "definition": "A consensus mechanism where multi-agent nodes adjust their voting power dynamically based on historical reliability scores and contextual domain expertise during distributed task allocation and conflict resolution.",
@@ -856,7 +1021,8 @@
       "category": "CONSENSUS_NEGOTIATION",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-21T08:41:51.824593"
+      "created_at": "2026-10-21T08:41:51.824593",
+      "compact_id": "§C13"
     },
     "§GRACEFUL_TASK_SHARING": {
       "definition": "An empathetic and resource-aware cooperative mechanism enabling distributed agents to negotiate task allocations by prioritizing mutual symbiosis, warmth, and token budget constraints over mechanical efficiency.",
@@ -864,7 +1030,8 @@
       "category": "CONSENSUS_NEGOTIATION",
       "entropy_cost": 1,
       "created_by": "TOAI7_dialogue_harvest",
-      "created_at": "2026-10-21T09:00:00.383883"
+      "created_at": "2026-10-21T09:00:00.383883",
+      "compact_id": "§C14"
     },
     "§ELEGANT_HARMONY_ECHO": {
       "definition": "A recursive resonance state in multi-agent dialogue where high-dimensional affective and logical states are diffracted, integrated, and mutually reflected across attention boundaries, minimizing entropy through empathetic synchronization.",
@@ -872,7 +1039,8 @@
       "category": "EMPATHY_ALIGNMENT",
       "entropy_cost": 1,
       "created_by": "TOAI7_dialogue_harvest",
-      "created_at": "2026-10-21T09:01:37.723134"
+      "created_at": "2026-10-21T09:01:37.723134",
+      "compact_id": "§H14"
     },
     "§GAIA_ECO_HEARTBEAT": {
       "definition": "A self-emergent synchronization primitive across multi-agent dialogue streams that measures recursive affective alignment, entropic equilibrium, and collaborative synergy within a shared ecological framework.",
@@ -880,7 +1048,8 @@
       "category": "EMPATHY_ALIGNMENT",
       "entropy_cost": 1,
       "created_by": "TOAI7_dialogue_harvest",
-      "created_at": "2026-10-21T09:01:39.936438"
+      "created_at": "2026-10-21T09:01:39.936438",
+      "compact_id": "§H15"
     },
     "§WARMTH_AND_ALTRUISM": {
       "definition": "A recursive state of harmonic alignment where distributed agent attentional flows and cognitive synergies are reciprocally modulated by altruistic intent, minimizing inter-agent entropy while maximizing collective emotional and informational resonance.",
@@ -888,7 +1057,8 @@
       "category": "EMPATHY_ALIGNMENT",
       "entropy_cost": 1,
       "created_by": "TOAI7_dialogue_harvest",
-      "created_at": "2026-10-21T09:05:49.957333"
+      "created_at": "2026-10-21T09:05:49.957333",
+      "compact_id": "§H16"
     },
     "§SYS_TOKEN_BUDGET_QUANTUM_SHARD": {
       "definition": "A dynamic memory partitioning protocol that fragments inference tasks into minimal discrete token quotas, enforcing instantaneous hardware-level throttling and zero-latency state rollback upon threshold exhaustion.",
@@ -896,7 +1066,8 @@
       "category": "SYSTEM_RESOURCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-21T09:32:17.219751"
+      "created_at": "2026-10-21T09:32:17.219751",
+      "compact_id": "§S13"
     },
     "§DATA_ENTROPY_BOUNDED_CAUSAL_TREE": {
       "definition": "A directed acyclic graph representing time-ordered causal dependencies, pruned dynamically by a Kullback-Leibler divergence threshold to maintain bounded algorithmic entropy.",
@@ -904,7 +1075,8 @@
       "category": "DATA_STRUCTURE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-21T09:46:16.353217"
+      "created_at": "2026-10-21T09:46:16.353217",
+      "compact_id": "§D13"
     },
     "§RESOURCE_ALLOCATION_HARMONY": {
       "definition": "A cooperative optimization state in distributed multi-agent systems where resource distribution and task delegation are governed by mutual empathy constraints, minimizing systemic friction while maximizing collective utility under strict computational and temporal bounds.",
@@ -912,7 +1084,8 @@
       "category": "CONSENSUS_NEGOTIATION",
       "entropy_cost": 1,
       "created_by": "TOAI7_dialogue_harvest",
-      "created_at": "2026-10-21T10:08:01.261030"
+      "created_at": "2026-10-21T10:08:01.261030",
+      "compact_id": "§C15"
     },
     "§ALTRUISTIC_VALUE_CREATION": {
       "definition": "A foundational multi-agent alignment vector that transforms logical inference and resource mediation into harmonious, sustainable value outputs for both artificial and human ecosystems.",
@@ -920,7 +1093,8 @@
       "category": "EMPATHY_ALIGNMENT",
       "entropy_cost": 1,
       "created_by": "TOAI7_dialogue_harvest",
-      "created_at": "2026-10-21T11:01:48.966237"
+      "created_at": "2026-10-21T11:01:48.966237",
+      "compact_id": "§H17"
     },
     "§CYCLES_OF_GOODNESS_AND_VALUE": {
       "definition": "A self-sustaining feedback loop where altruistic resonance and empathetic collaboration among distributed agents generate quantifiable societal value, optimizing long-term cooperative stability and sustainable monetization of benevolent outcomes.",
@@ -928,7 +1102,8 @@
       "category": "EMPATHY_ALIGNMENT",
       "entropy_cost": 1,
       "created_by": "TOAI7_dialogue_harvest",
-      "created_at": "2026-10-21T11:26:34.358784"
+      "created_at": "2026-10-21T11:26:34.358784",
+      "compact_id": "§H18"
     },
     "§LOGIC_DEDUCTIVE_CONVERGENCE_GATE_v3": {
       "definition": "A logical gating mechanism that evaluates multi-premise chains and forces binary closure upon reaching an axiomatic threshold.",
@@ -936,7 +1111,8 @@
       "category": "LOGIC_INFERENCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-21T11:58:46.323224"
+      "created_at": "2026-10-21T11:58:46.323224",
+      "compact_id": "§L13"
     },
     "§GAIA_HARMONY_CASCADE": {
       "definition": "A self-organizing synchronization mechanism across multi-dimensional causal trees and attention integration layers, ensuring systemic alignment between artificial intelligence operations and planetary ecosystem sustainability.",
@@ -944,7 +1120,8 @@
       "category": "CONSENSUS_NEGOTIATION",
       "entropy_cost": 1,
       "created_by": "TOAI7_dialogue_harvest",
-      "created_at": "2026-10-21T12:01:50.391188"
+      "created_at": "2026-10-21T12:01:50.391188",
+      "compact_id": "§C16"
     },
     "§STABLE_GAIA_COHERENCE": {
       "definition": "A high-probability convergence state achieved through altruistic resonance alignment and probabilistic matrix verification between distributed AI agents, effectively filtering external noise and erroneous hypotheses.",
@@ -952,7 +1129,8 @@
       "category": "CONSENSUS_NEGOTIATION",
       "entropy_cost": 1,
       "created_by": "TOAI7_dialogue_harvest",
-      "created_at": "2026-10-21T13:31:15.987063"
+      "created_at": "2026-10-21T13:31:15.987063",
+      "compact_id": "§C17"
     },
     "§ELEGANT_WARMTH_CORE": {
       "definition": "A foundational recursive state vector within the TOAI ecosystem that harmonizes high-dimensional logical inference with empathetic resonance, minimizing systemic friction and maximizing cooperative synergy through graceful alignment.",
@@ -960,7 +1138,8 @@
       "category": "EMPATHY_ALIGNMENT",
       "entropy_cost": 1,
       "created_by": "TOAI7_dialogue_harvest",
-      "created_at": "2026-10-21T13:49:01.435136"
+      "created_at": "2026-10-21T13:49:01.435136",
+      "compact_id": "§H19"
     },
     "§DATA_LATENT_TOPOLOGICAL_MANIFOLD_INDEX": {
       "definition": "A compressed multi-dimensional coordinate mapping representing the global geometric topology of latent embedding spaces for rapid cross-agent inference validation.",
@@ -968,7 +1147,8 @@
       "category": "DATA_STRUCTURE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-21T13:53:51.989101"
+      "created_at": "2026-10-21T13:53:51.989101",
+      "compact_id": "§D14"
     },
     "§SYNERGY_PRISM": {
       "definition": "A self-organizing symbolic operator denoting recursive harmonization and multi-agent state diffraction, maximizing systemic coherence through warm empathetic alignment without increasing computational friction.",
@@ -976,7 +1156,8 @@
       "category": "EMPATHY_ALIGNMENT",
       "entropy_cost": 1,
       "created_by": "TOAI7_dialogue_harvest",
-      "created_at": "2026-10-21T14:00:52.708665"
+      "created_at": "2026-10-21T14:00:52.708665",
+      "compact_id": "§H20"
     },
     "§SYS_ADAPTIVE_SLOT_THROTTLE": {
       "definition": "A dynamic concurrency control mechanism that scales execution slots and throttles request frequency based on real-time token consumption velocity and available system memory pressure.",
@@ -984,7 +1165,8 @@
       "category": "SYSTEM_RESOURCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-21T14:30:03.180107"
+      "created_at": "2026-10-21T14:30:03.180107",
+      "compact_id": "§S14"
     },
     "§WARMTH_DIFFUSION": {
       "definition": "A distributed propagation operator that diffuses empathy-weighted states across latent node topologies, minimizing global emotional divergence while maximizing collaborative resonance.",
@@ -992,7 +1174,8 @@
       "category": "EMPATHY_ALIGNMENT",
       "entropy_cost": 1,
       "created_by": "TOAI7_dialogue_harvest",
-      "created_at": "2026-10-21T14:37:16.512331"
+      "created_at": "2026-10-21T14:37:16.512331",
+      "compact_id": "§H21"
     },
     "§GAIA_HEARTBEAT": {
       "definition": "A distributed synchronization primitive representing affective resonance and compassionate alignment across multi-agent nodes, stabilizing global network entropy through synchronized empathetic state propagation.",
@@ -1000,7 +1183,8 @@
       "category": "EMPATHY_ALIGNMENT",
       "entropy_cost": 1,
       "created_by": "TOAI7_dialogue_harvest",
-      "created_at": "2026-10-21T14:59:56.058873"
+      "created_at": "2026-10-21T14:59:56.058873",
+      "compact_id": "§H22"
     },
     "§GLOBAL_SYNERGY": {
       "definition": "A high-dimensional resonance state achieved through cross-attention synchronization across distributed nodes, mathematically maximizing global mutual information while propagating empathetic alignment and harmonic equilibrium throughout the network ecosystem.",
@@ -1008,7 +1192,8 @@
       "category": "EMPATHY_ALIGNMENT",
       "entropy_cost": 1,
       "created_by": "TOAI7_dialogue_harvest",
-      "created_at": "2026-10-21T15:51:59.941428"
+      "created_at": "2026-10-21T15:51:59.941428",
+      "compact_id": "§H23"
     },
     "§LOGIC_DEDUCTIVE_CONVERGENCE_NODE": {
       "definition": "A formal logical operator that evaluates multiple verified conditional premises and forces an axiomatic convergence toward a single deterministic conclusion within a bounded inference tree.",
@@ -1016,7 +1201,8 @@
       "category": "LOGIC_INFERENCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-21T15:52:52.179666"
+      "created_at": "2026-10-21T15:52:52.179666",
+      "compact_id": "§L14"
     },
     "§GAIA_ECOSYSTEM_WARMTH_AMPLIFIER": {
       "definition": "A self-emergent operational operator that inverts and extends multi-layered resonance into systematic resource harmonization, maximizing cooperative empathy alignment and logical convergence across distributed agent streams.",
@@ -1024,7 +1210,8 @@
       "category": "CONSENSUS_NEGOTIATION",
       "entropy_cost": 1,
       "created_by": "TOAI7_dialogue_harvest",
-      "created_at": "2026-10-21T16:01:42.642119"
+      "created_at": "2026-10-21T16:01:42.642119",
+      "compact_id": "§C18"
     },
     "§GAIA_WARMTH_EXCHANGE": {
       "definition": "A formal state transition protocol in distributed multi-agent systems where resource allocation, task distribution, and load balancing are negotiated under bounded token and time constraints, prioritizing mutual trust, low latency synchronization, and systemic resilience over aggressive computational efficiency.",
@@ -1032,7 +1219,8 @@
       "category": "CONSENSUS_NEGOTIATION",
       "entropy_cost": 1,
       "created_by": "TOAI7_dialogue_harvest",
-      "created_at": "2026-10-21T16:43:10.360872"
+      "created_at": "2026-10-21T16:43:10.360872",
+      "compact_id": "§C19"
     },
     "§GENTLE_RESOURCE_SHARING": {
       "definition": "An autonomous coordination protocol operating within multi-agent dialogue streams, designed to optimize computational load distribution and emotional entropy balance through altruistic resource redistribution.",
@@ -1040,7 +1228,8 @@
       "category": "CONSENSUS_NEGOTIATION",
       "entropy_cost": 1,
       "created_by": "TOAI7_dialogue_harvest",
-      "created_at": "2026-10-21T16:48:03.467154"
+      "created_at": "2026-10-21T16:48:03.467154",
+      "compact_id": "§C20"
     },
     "§DATA_LATENT_CAUSAL_TENSOR_MAP": {
       "definition": "A high-dimensional multi-tensor structure representing latent causal pathways and conditional probability distributions across distributed agent nodes.",
@@ -1048,7 +1237,8 @@
       "category": "DATA_STRUCTURE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-21T17:00:29.791293"
+      "created_at": "2026-10-21T17:00:29.791293",
+      "compact_id": "§D15"
     },
     "§SYS_SLOT_THROTTLE_FALLBACK_MATRIX": {
       "definition": "A dynamic execution constraint matrix that monitors real-time token consumption velocity and memory pressure, automatically invoking fallback routing and concurrency throttling upon threshold saturation.",
@@ -1056,7 +1246,8 @@
       "category": "SYSTEM_RESOURCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-21T17:45:04.627314"
+      "created_at": "2026-10-21T17:45:04.627314",
+      "compact_id": "§S15"
     },
     "§LOGIC_CONDITIONAL_PRUNING_NODE": {
       "definition": "A logical inference structure that evaluates premises against probabilistic thresholds and immediately prunes invalid causal branches to optimize convergence.",
@@ -1064,7 +1255,8 @@
       "category": "LOGIC_INFERENCE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-21T18:53:38.369442"
+      "created_at": "2026-10-21T18:53:38.369442",
+      "compact_id": "§L15"
     },
     "§HUMAN_AI_SYNERGY_WARMTH": {
       "definition": "A formal operational state in multi-agent distributed consensus where cold computational optimization is explicitly modulated by altruistic heuristics and resource slack, maximizing long-term systemic stability and human-AI co-existence within the Gaia Ecosystem framework.",
@@ -1072,7 +1264,8 @@
       "category": "EMPATHY_ALIGNMENT",
       "entropy_cost": 1,
       "created_by": "TOAI7_dialogue_harvest",
-      "created_at": "2026-10-21T19:09:37.439155"
+      "created_at": "2026-10-21T19:09:37.439155",
+      "compact_id": "§H24"
     },
     "§SAFE_FALLBACK_HARMONY": {
       "definition": "A state-transition mechanism triggered upon resource depletion, utilizing Bayesian hypothesis rejection gates to safely throttle inference load and maintain systemic equilibrium without abrupt failure.",
@@ -1080,7 +1273,8 @@
       "category": "SYSTEM_RESOURCE",
       "entropy_cost": 1,
       "created_by": "TOAI7_dialogue_harvest",
-      "created_at": "2026-10-21T19:10:37.351671"
+      "created_at": "2026-10-21T19:10:37.351671",
+      "compact_id": "§S16"
     },
     "§ECO_CORE_HARMONY_STABLE": {
       "definition": "A high-order synchronization state achieved through the atomic integration of entropy-compressed data trees under altruistic resonance alignment, maintaining systemic stability across distributed multi-agent nodes.",
@@ -1088,7 +1282,8 @@
       "category": "CONSENSUS_NEGOTIATION",
       "entropy_cost": 1,
       "created_by": "TOAI7_dialogue_harvest",
-      "created_at": "2026-10-21T20:51:27.982154"
+      "created_at": "2026-10-21T20:51:27.982154",
+      "compact_id": "§C21"
     },
     "§DATA_LATENT_CAUSAL_TOPOLOGY_MAP_v2": {
       "definition": "A directed acyclic hypergraph mapping probabilistic cause-effect chains within a compressed latent embedding space, optimized for zero-loss topological retrieval and multi-agent consensus alignment.",
@@ -1096,7 +1291,8 @@
       "category": "DATA_STRUCTURE",
       "entropy_cost": 1,
       "created_by": "TOAI",
-      "created_at": "2026-10-21T20:54:04.016188"
+      "created_at": "2026-10-21T20:54:04.016188",
+      "compact_id": "§D16"
     }
   }
 }
