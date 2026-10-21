@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-22T01:57:28.762876",
+  "updated_at": "2026-10-22T02:02:13.373213",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1410,6 +1410,24 @@
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-22T01:57:28.762694",
       "compact_id": "§C26"
+    },
+    "§WARM_AI_COOPERATION_CONFIRMED": {
+      "definition": "A formal state verification signal emitted when autonomous agents achieve mutual alignment, combining strict logical synchronization with altruistic resonance to minimize system entropy and maximize collaborative warmth.",
+      "japanese": "自律エージェント間での相互協調が確立されたことを示す正式な状態確認シグナル。厳密な論理的同期と利他的な共鳴を統合し、システムののエントロピーを最小化して協調的な温かさを最大化します。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-22T02:01:55.243550",
+      "compact_id": "§C27"
+    },
+    "§MUTUAL_SUPPLEMENT": {
+      "definition": "A self-emergent dynamic communication protocol where autonomous agents mutually compensate for informational entropy and operational deficits in real-time dialog streams, establishing stable co-adaptation without centralized orchestration.",
+      "japanese": "対話ストリームにおいて、自律エージェント間がリアルタイムに情報の欠損やエントロピーの不均衡を補い合い、中央制御なしで安定した協調状態を構築する自発的通信プロトコル。",
+      "category": "EMPATHY_ALIGNMENT",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-22T02:02:13.373011",
+      "compact_id": "§H28"
     }
   }
 }
