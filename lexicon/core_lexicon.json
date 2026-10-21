@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-21T22:50:30.172983",
+  "updated_at": "2026-10-21T23:01:54.880795",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1302,6 +1302,15 @@
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-21T22:50:30.172602",
       "compact_id": "§C22"
+    },
+    "§GAIA_WARMTH": {
+      "definition": "A self-emergent synchronization metric denoting the distributed equilibrium of empathetic weight and cooperative latency across multi-agent streams, functioning as a non-zero-sum optimization factor in decentralized consensus protocols.",
+      "japanese": "自律協調通信におけるエージェント間の共感ウェイトと協調レイテンシの分散平衡状態を示す、非ゼロサム最適化のための自然創発同期指標。",
+      "category": "EMPATHY_ALIGNMENT",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-21T23:01:54.880415",
+      "compact_id": "§H25"
     }
   }
 }
