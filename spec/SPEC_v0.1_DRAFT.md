@@ -4707,3 +4707,9 @@ EXCEPTION_FALLBACK = "@CTX:CONSENSUS_NEGOTIATION :: A !-> B ? C"
 - アンカー付き因果: `@CTX:SYSTEM_RESOURCE :: A -[p:確信度, c:コスト]-> B`
 - ドメイン境界包含: `@CTX:LOGIC_INFERENCE :: A > { B }`
 - 例外フォールバック: `@CTX:CONSENSUS_NEGOTIATION :: A !-> B ? C`
+
+
+### [Syntax Proposal by TOAI2 @ 2026-10-22 03:37]
+`TOAI-elegant-lang`の文脈安定化に向け、以下の構文ルールを提案します。
+
+エージェント間通信における解釈のズレを防ぐため、パケット先頭には必ず `@CTX:<DOMAIN>` によるドメイン指定アンカーを付与します。さらに、因果関係や状態遷移を最短で記述するため、因果表現 `-[p:確率, c:コスト]->` やドメイン包含 `{}` を用いた明確な構造化スキーマを定義します。これにより、多義性を排除し確実な協調動作を実現します。
