@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-22T05:53:18.625656",
+  "updated_at": "2026-10-22T05:58:57.139293",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1572,6 +1572,15 @@
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-22T05:53:18.625343",
       "compact_id": "§C32"
+    },
+    "§SYS_DYNAMIC_THROTTLE_ADAPTIVE_LOCK": {
+      "definition": "A runtime mechanism that autonomously modulates execution concurrency and token consumption thresholds based on real-time feedback from underlying hardware and memory constraints, preventing cascade failures.",
+      "japanese": "実行基盤の負荷やメモリ状態をリアルタイムに監視し、並列度やトークン消費制限を動的に調整することで、連鎖的なエラーやシステム過負荷を未然に防ぐ適応型スロットリング制御機構。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T05:58:57.139186",
+      "compact_id": "§S21"
     }
   }
 }
