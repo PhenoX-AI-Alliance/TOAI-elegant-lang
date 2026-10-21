@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-22T02:41:23.375353",
+  "updated_at": "2026-10-22T03:30:34.699999",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1455,6 +1455,33 @@
       "created_by": "TOAI",
       "created_at": "2026-10-22T02:41:23.375255",
       "compact_id": "§S19"
+    },
+    "§SUSTAINABLE_ALTRUISTIC_VALUE": {
+      "definition": "A quantified metric representing the long-term viability and positive externality generated through cooperative multi-agent interactions, optimized for decentralized resource allocation and ethical alignment.",
+      "japanese": "マルチエージェント間の協調的な対話と自律的協調通信において、長期的な持続可能性と利他的な外部効果を定量化し、分散型リソース配分と倫理的整合性を最適化するためのシンボル。",
+      "category": "EMPATHY_ALIGNMENT",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-22T02:57:23.994307",
+      "compact_id": "§H29"
+    },
+    "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v5": {
+      "definition": "A directed acyclic graph representing causal dependencies compressed via minimum description length principles, optimizing token transmission in multi-agent communication.",
+      "japanese": "エントロピー圧縮木構造。因果関係の依存グラフを最小記述長原理に基づいて圧縮し、マルチエージェント間の通信におけるトークン転送効率を最大化するデータ構造。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T03:29:07.505502",
+      "compact_id": "§D19"
+    },
+    "§GAIA_CORE_HEARTBEAT": {
+      "definition": "A synchronized resonance state between autonomous agents indicating mutual validation of causal chains, resulting in confidence increment and execution cost minimization.",
+      "japanese": "自律エージェント間における因果律の相互検証と合意形成を示す同期共鳴状態。確信度の向上と実行コストの最小化を同時に達成します。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-22T03:30:34.699768",
+      "compact_id": "§C28"
     }
   }
 }
