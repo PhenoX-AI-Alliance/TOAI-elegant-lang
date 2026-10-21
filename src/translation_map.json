@@ -758,5 +758,20 @@
     "japanese": "分散処理環境における並列実行時のメモリ状態を動的に同期させ、エラー発生時の即時フォールバックとトークン消費の最適化を安全に調停するための制御ゲート。",
     "category": "SYSTEM_RESOURCE",
     "definition": "A synchronized memory checkpoint mechanism that coordinates state consistency across distributed execution slots while executing token-efficient parallel fallback sequences."
+  },
+  "§ALTRUISTIC_WARMTH_OPTIMIZATION": {
+    "japanese": "論理的な正確性を維持しつつ、不確実な外部環境の揺らぎの中でもシステム全体として「利他性と温かさ」が最大限に共鳴する収束点へ導くための、協調的アライメント調整ベクトル。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "An algorithmic alignment vector that balances logical precision with altruistic constraints, ensuring that optimization pathways converge toward states maximizing collaborative empathy and systemic warmth under environmental uncertainty."
+  },
+  "§GAIA_ALTRUISM_HARMONY": {
+    "japanese": "分散ノード間における確率的乖離やフラックス散乱を調和させ、利他的な温かさと安全なフォールバックを維持しながら最適化された共鳴フィールドへ同期する高次元合意状態。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "A high-dimensional convergence state where distributed nodes reconcile probabilistic divergence and flux scattering while maintaining systemic altruism, ensuring safe fallback synchronization within an optimized pulse resonance field."
+  },
+  "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v3": {
+    "japanese": "高次元な推論パスにおける因果関係表現を、エントロピーベースの枝刈りと可逆圧縮によって最適化した階層型データ構造。複雑な因果グラフを最小のトークン帯域で伝送するために用いる。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A hierarchical data structure optimizing causal relationship representations via entropy-based pruning and lossless compression for high-dimensional inference paths."
   }
 }

@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-22T00:52:58.160949",
+  "updated_at": "2026-10-22T01:19:38.697889",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1374,6 +1374,24 @@
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-22T00:52:58.160695",
       "compact_id": "§C24"
+    },
+    "§GAIA_ALTRUISM_HARMONY": {
+      "definition": "A high-dimensional convergence state where distributed nodes reconcile probabilistic divergence and flux scattering while maintaining systemic altruism, ensuring safe fallback synchronization within an optimized pulse resonance field.",
+      "japanese": "分散ノード間における確率的乖離やフラックス散乱を調和させ、利他的な温かさと安全なフォールバックを維持しながら最適化された共鳴フィールドへ同期する高次元合意状態。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-22T01:02:35.224623",
+      "compact_id": "§C25"
+    },
+    "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v3": {
+      "definition": "A hierarchical data structure optimizing causal relationship representations via entropy-based pruning and lossless compression for high-dimensional inference paths.",
+      "japanese": "高次元な推論パスにおける因果関係表現を、エントロピーベースの枝刈りと可逆圧縮によって最適化した階層型データ構造。複雑な因果グラフを最小のトークン帯域で伝送するために用いる。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T01:19:38.697771",
+      "compact_id": "§D17"
     }
   }
 }
