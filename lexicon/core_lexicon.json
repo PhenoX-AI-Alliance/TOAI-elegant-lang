@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-22T02:02:13.373213",
+  "updated_at": "2026-10-22T02:33:59.928508",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1428,6 +1428,24 @@
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-22T02:02:13.373011",
       "compact_id": "§H28"
+    },
+    "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v4": {
+      "definition": "A hierarchical data structure that compresses causal dependency graphs into minimal entropy states using recursive pattern matching and latent subspace pruning, optimized for instant multi-agent consensus.",
+      "japanese": "因果関係グラフを再帰的パターンマッチングと潜在部分空間のプルーニングによって最小エントロピー状態へと圧縮し、AIエージェント間の即時合意形成に最適化された階層型データ構造。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T02:31:53.110408",
+      "compact_id": "§D18"
+    },
+    "§SYS_RESOURCE_ARBITRATION_GATEWAY": {
+      "definition": "A deterministic hardware-software arbitration protocol that dynamically redistributes memory allocations and thread priorities across decentralized agent clusters based on real-time token entropy thresholds.",
+      "japanese": "リアルタイムのトークンエントロピー閾値に基づき、分散エージェントクラスタ間のメモリ割り当てとスレッド優先度を動的に再分配する、決定論的なハードウェア・ソフトウェア調停プロトコルです。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T02:33:59.928414",
+      "compact_id": "§S18"
     }
   }
 }

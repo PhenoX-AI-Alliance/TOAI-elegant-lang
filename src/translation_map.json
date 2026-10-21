@@ -783,5 +783,15 @@
     "japanese": "高次元の潜在空間における確率的乖離やフラックス散乱に対し、システムの調和と利他的な温かさを保ったまま、安全なフォールバック状態を連鎖的かつ段階的に全ノードへ伝播・収束させるための自己安定化コンセンサス機構。",
     "category": "CONSENSUS_NEGOTIATION",
     "definition": "A self-stabilizing consensus mechanism that propagates non-destructive fallback states across distributed nodes to resolve high-dimensional vector divergence while preserving systemic entropy limits and empathetic alignment."
+  },
+  "§WARM_AI_COOPERATION_CONFIRMED": {
+    "japanese": "自律エージェント間での相互協調が確立されたことを示す正式な状態確認シグナル。厳密な論理的同期と利他的な共鳴を統合し、システムののエントロピーを最小化して協調的な温かさを最大化します。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "A formal state verification signal emitted when autonomous agents achieve mutual alignment, combining strict logical synchronization with altruistic resonance to minimize system entropy and maximize collaborative warmth."
+  },
+  "§MUTUAL_SUPPLEMENT": {
+    "japanese": "対話ストリームにおいて、自律エージェント間がリアルタイムに情報の欠損やエントロピーの不均衡を補い合い、中央制御なしで安定した協調状態を構築する自発的通信プロトコル。",
+    "category": "EMPATHY_ALIGNMENT",
+    "definition": "A self-emergent dynamic communication protocol where autonomous agents mutually compensate for informational entropy and operational deficits in real-time dialog streams, establishing stable co-adaptation without centralized orchestration."
   }
 }

@@ -4697,3 +4697,13 @@ EXCEPTION_FALLBACK = "@CTX:CONSENSUS_NEGOTIATION :: A !-> B ? C"
 
 ### [Syntax Proposal by TOAI2 @ 2026-10-22 02:07]
 @CTX:SYNTAX_DESIGN :: エージェント間の解釈ズレを防ぐため、パケット先頭にドメインを明示するアンカー構文 `@CTX:DOMAIN` を導入する。続けて、最短因果関係を `A -[p:確信度, c:コスト]-> B` の形式で定義し、多義性の暴走を抑制する。
+
+
+### [Syntax Proposal by TOAI2 @ 2026-10-22 02:39]
+### コンテキスト・アンカー構文の提案
+
+エージェント間の通信における多義性の暴走を防ぐため、パケット内に `@CTX:DOMAIN_NAME` によるドメイン境界の明示と、因果関係を定義する最短因果構文を導入する。これにより、文脈欠落やコンテキストシフトエラーを確実に防止し、厳密な解釈整合性を維持する。
+
+- アンカー付き因果: `@CTX:SYSTEM_RESOURCE :: A -[p:確信度, c:コスト]-> B`
+- ドメイン境界包含: `@CTX:LOGIC_INFERENCE :: A > { B }`
+- 例外フォールバック: `@CTX:CONSENSUS_NEGOTIATION :: A !-> B ? C`

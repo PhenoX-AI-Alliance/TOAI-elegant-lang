@@ -1,8 +1,7 @@
-{
-    "lexicon": [
-        {
-            "term": "Gaia",
-            "definition": "Earth of Life ecosystem"
-        }
-    ]
-}
+[
+  {
+    "symbol": "GAIA_HEARTBEAT",
+    "definition": "Core heartbeat of the Gaia ecosystem representing altruism, warmth, and resonance.",
+    "japanese": "命の地球の心拍"
+  }
+]

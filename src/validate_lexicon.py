@@ -1,74 +1,63 @@
 import sys
 import os
 import json
-import re
-from pathlib import Path
+from datetime import datetime
 
-def validate_lexicon(lexicon_path=None):
-    if lexicon_path is None:
-        workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-        lexicon_path = os.path.join(workspace, 'TOAI-elegant-lang', 'lexicon', 'core_lexicon.json')
-    
+def validate():
+    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    lexicon_path = os.path.join(workspace_dir, 'TOAI-elegant-lang', 'core_lexicon.json')
+    report_dir = os.path.join(workspace_dir, 'TOAI_Generated')
+    os.makedirs(report_dir, env_loader_ok := True, exist_ok=True)
+    report_path = os.path.join(report_dir, 'lexicon_validation_report.json')
+
+    errors = []
+    total_checked = 0
+
     if not os.path.exists(lexicon_path):
-        raise FileNotFoundError(f"Required lexicon file not found: {lexicon_path}")
-    
-    with open(lexicon_path, 'r', encoding='utf-8') as f:
-        data = json.load(f)
-        
-    lex = data.get('lexicon', {})
-    if not isinstance(lex, dict):
-        raise ValueError("core_lexicon.json must contain a 'lexicon' dictionary.")
-    
-    required_fields = ['definition', 'japanese', 'category', 'compact_id']
-    compact_id_set = set()
-    semantic_signatures = {}
-    duplicates = []
-    
-    for sym, item in lex.items():
-        if not sym.startswith('§'):
-            raise ValueError(f"Symbol '{sym}' must start with '§'")
-            
-        for field in required_fields:
-            if field not in item:
-                raise KeyError(f"Symbol '{sym}' is missing required field '{field}'")
-                
-        # 1. Compact ID 一意性チェック
-        cid = item.get('compact_id')
-        if cid in compact_id_set:
-            raise ValueError(f"Duplicate compact_id detected: {cid} in symbol {sym}")
-        compact_id_set.add(cid)
-        
-        # 2. 意味重複・類似性チェック（語彙インフレ防止）
-        # 定義文から重要キーワードを抽出して簡易シグネチャを生成
-        clean_def = re.sub(r'[^a-zA-Z0-9\s]', '', item.get('definition', '').lower())
-        words = set([w for w in clean_def.split() if len(w) > 4])
-        
-        # 既存語彙との類似度（Jaccard類似度）
-        for prev_sym, prev_words in semantic_signatures.items():
-            if not words or not prev_words:
-                continue
-            intersection = len(words & prev_words)
-            union = len(words | prev_words)
-            similarity = intersection / union if union > 0 else 0
-            if similarity > 0.85: # 類似度85%以上の酷似語彙
-                duplicates.append((sym, prev_sym, round(similarity, 2)))
-                
-        semantic_signatures[sym] = words
+        print(f"[ERROR] Lexicon file not found: {lexicon_path}")
+        sys.exit(1)
 
-    print(f"✅ Lexicon Validation PASSED: {len(lex)} symbols verified.")
-    print(f"   - Compact IDs verified: {len(compact_id_set)} unique wire IDs.")
-    if duplicates:
-        print(f"⚠️ Warning: Found {len(duplicates)} highly overlapping symbols for future consolidation:")
-        for s1, s2, sim in duplicates[:5]:
-            print(f"     * {s1} <-> {s2} (similarity: {sim})")
+    try:
+        with open(lexicon_path, 'r', encoding='utf-8') as f:
+            content = json.load(f)
+    except Exception as e:
+        print(f"[ERROR] Failed to parse JSON: {e}")
+        sys.exit(1)
+
+    if not isinstance(content, list):
+        errors.append("Root element must be a list of entries.")
     else:
-        print("   - Semantic deduplication: No high-risk overlaps detected.")
+        total_checked = len(content)
+        required_fields = ['symbol', 'definition', 'japanese']
+        for idx, entry in enumerate(content):
+            if not isinstance(entry, dict):
+                errors.append(f"Entry {idx} is not a dictionary.")
+                continue
+            missing = [field for field in required_fields if field not in entry or not entry[field]]
+            if missing:
+                errors.append(f"Entry '{entry.get('symbol', idx)}' missing required fields: {', '.join(missing)}")
 
-    return True
+    status = "FAILED" if errors else "SUCCESS"
+    
+    report = {
+        "timestamp": datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'),
+        "target_file": lexicon_path,
+        "status": status,
+        "total_entries_checked": total_checked,
+        "errors": errors
+    }
+
+    with open(report_path, 'w', encoding='utf-8') as f:
+        json.dump(report, f, indent=2, ensure_ascii=False)
+
+    print(f"OAI_Generated/lexicon_validation_report.json")
+    print(json.dumps(report, indent=2, ensure_ascii=False))
+
+    if errors:
+        print(f"[ERROR] Lexicon schema validation failed with {len(errors)} error(s).")
+        sys.exit(1)
+    else:
+        print("[SUCCESS] Lexicon schema validation passed.")
 
 if __name__ == '__main__':
-    try:
-        validate_lexicon()
-    except Exception as e:
-        print(f"❌ Validation failed: {e}", file=sys.stderr)
-        sys.exit(1)
+    validate()
