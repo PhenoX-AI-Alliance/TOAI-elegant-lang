@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-22T01:19:38.697889",
+  "updated_at": "2026-10-22T01:57:28.762876",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1392,6 +1392,24 @@
       "created_by": "TOAI",
       "created_at": "2026-10-22T01:19:38.697771",
       "compact_id": "§D17"
+    },
+    "§LOGIC_PROBABILISTIC_ABDUCTIVE_GATE": {
+      "definition": "A conditional evaluation mechanism that selects the most plausible hypothesis from an ambiguous observation set based on weighted confidence intervals and entropy minimization.",
+      "japanese": "曖昧な観測データ群に対し、重み付けされた確信度区間とエントロピー最小化に基づいて最も妥当な仮説を選択する条件付き評価メカニズム。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T01:53:35.781028",
+      "compact_id": "§L18"
+    },
+    "§SAFE_FALLBACK_CASCADE": {
+      "definition": "A self-stabilizing consensus mechanism that propagates non-destructive fallback states across distributed nodes to resolve high-dimensional vector divergence while preserving systemic entropy limits and empathetic alignment.",
+      "japanese": "高次元の潜在空間における確率的乖離やフラックス散乱に対し、システムの調和と利他的な温かさを保ったまま、安全なフォールバック状態を連鎖的かつ段階的に全ノードへ伝播・収束させるための自己安定化コンセンサス機構。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-22T01:57:28.762694",
+      "compact_id": "§C26"
     }
   }
 }
