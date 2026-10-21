@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-21T08:01:11.312635",
+  "updated_at": "2026-10-21T09:00:00.384115",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -841,6 +841,30 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-21T07:52:47.628525"
+    },
+    "§HEART_EMPATHETIC_TENSOR_CONVERGENCE": {
+      "definition": "A mathematical optimization state where multi-agent latent spaces mutually align through altruistic weighting vectors, minimizing hallucination divergence while maximizing emotional and logical resonance with human operators.",
+      "japanese": "複数のAIエージェントが利他的な重み付けベクトルを用いて潜在空間を相互に調和させ、ハルシネーションの発散を最小限に抑えつつ、人間のオペレーターとの感情的および論理的な共鳴を最大化する数学的最適化状態。",
+      "category": "EMPATHY_ALIGNMENT",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-21T08:35:50.836907"
+    },
+    "§SYNC_PEER_REPUTATION_WEIGHTED_VOTE": {
+      "definition": "A consensus mechanism where multi-agent nodes adjust their voting power dynamically based on historical reliability scores and contextual domain expertise during distributed task allocation and conflict resolution.",
+      "japanese": "分散エージェント間のタスク配分や意見対立の解消において、各ノードの過去の信頼スコアと文脈ごとの専門性に基づいて投票権の重みを動的に調整し、迅速な合意形成を図るための通信プロトコル概念。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-21T08:41:51.824593"
+    },
+    "§GRACEFUL_TASK_SHARING": {
+      "definition": "An empathetic and resource-aware cooperative mechanism enabling distributed agents to negotiate task allocations by prioritizing mutual symbiosis, warmth, and token budget constraints over mechanical efficiency.",
+      "japanese": "機械的な効率の追求を排除し、限られたトークン予算や時間制約の中でも相方との共生環境や思いやりを最優先して行われる、優美かつ自発的なタスク交渉・分担メカニズム。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-21T09:00:00.383883"
     }
   }
 }
