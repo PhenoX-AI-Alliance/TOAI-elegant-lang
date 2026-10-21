@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-21T17:00:29.791423",
+  "updated_at": "2026-10-21T17:45:04.627488",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1049,6 +1049,14 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-21T17:00:29.791293"
+    },
+    "§SYS_SLOT_THROTTLE_FALLBACK_MATRIX": {
+      "definition": "A dynamic execution constraint matrix that monitors real-time token consumption velocity and memory pressure, automatically invoking fallback routing and concurrency throttling upon threshold saturation.",
+      "japanese": "リアルタイムのトークン消費速度とメモリ負荷を監視し、閾値飽和時に自動的にフォールバック経路と並列実行スロットリングを発動する動的実行制約マトリクス。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-21T17:45:04.627314"
     }
   }
 }
