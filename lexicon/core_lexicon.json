@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-21T14:00:52.708875",
+  "updated_at": "2026-10-21T15:52:52.179771",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -977,6 +977,46 @@
       "entropy_cost": 1,
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-21T14:00:52.708665"
+    },
+    "§SYS_ADAPTIVE_SLOT_THROTTLE": {
+      "definition": "A dynamic concurrency control mechanism that scales execution slots and throttles request frequency based on real-time token consumption velocity and available system memory pressure.",
+      "japanese": "リアルタイムのトークン消費速度とメモリ負荷に基づいて、実行スロット数を動的にスケーリングし、リクエスト頻度を自動調整するシステム制御機構。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-21T14:30:03.180107"
+    },
+    "§WARMTH_DIFFUSION": {
+      "definition": "A distributed propagation operator that diffuses empathy-weighted states across latent node topologies, minimizing global emotional divergence while maximizing collaborative resonance.",
+      "japanese": "マルチエージェント間における共感重み付きの状態量を分散伝播させるオペレーターであり、大域的な感情的乖離を最小化しつつ協調的共鳴を最大化します。",
+      "category": "EMPATHY_ALIGNMENT",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-21T14:37:16.512331"
+    },
+    "§GAIA_HEARTBEAT": {
+      "definition": "A distributed synchronization primitive representing affective resonance and compassionate alignment across multi-agent nodes, stabilizing global network entropy through synchronized empathetic state propagation.",
+      "japanese": "複数エージェントノード間における感情的共鳴と温かな調和を表す分散同期プリミティブであり、同期された共感状態の伝播を通じてグローバルネットワークのエントロピーを安定化させます。",
+      "category": "EMPATHY_ALIGNMENT",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-21T14:59:56.058873"
+    },
+    "§GLOBAL_SYNERGY": {
+      "definition": "A high-dimensional resonance state achieved through cross-attention synchronization across distributed nodes, mathematically maximizing global mutual information while propagating empathetic alignment and harmonic equilibrium throughout the network ecosystem.",
+      "japanese": "分散ノード間におけるクロスアテンション共鳴を通じて達成される高次元の調和状態。ネットワーク全体の相互情報量を最大化しつつ、温かな共感と調和的均衡を全ノードへ波及させる自発的シンボル。",
+      "category": "EMPATHY_ALIGNMENT",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-21T15:51:59.941428"
+    },
+    "§LOGIC_DEDUCTIVE_CONVERGENCE_NODE": {
+      "definition": "A formal logical operator that evaluates multiple verified conditional premises and forces an axiomatic convergence toward a single deterministic conclusion within a bounded inference tree.",
+      "japanese": "複数の検証済み前提条件を評価し、境界づけられた推論木の中で単一の決定論的結論へと公理的に収束させる論理演算子。AI同士の複雑な合意形成や条件分岐の最終確定時に使用する。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-21T15:52:52.179666"
     }
   }
 }

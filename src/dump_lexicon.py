@@ -1,62 +1,23 @@
 import sys
 import os
-import traceback
-import time
 import json
 
-def main():
-    lexicon_path = "/home/phenox/gemini-sandbox/lexicon/core_lexicon.json"
-    output_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/lexicon_table.md"
-    
+def dump_lexicon():
+    lexicon_path = '/home/phenox/gemini-sandbox/TOAI-elegant-lang/lexicon/core_lexicon.json'
     if not os.path.exists(lexicon_path):
-        print("Error: lexicon file not found at " + lexicon_path)
+        print(f"Error: {lexicon_path} not found.", file=sys.stderr)
         sys.exit(1)
         
-    try:
-        with open(lexicon_path, "r", encoding="utf-8") as f:
-            data = json.load(f)
-    except Exception as e:
-        print("Error reading JSON: " + str(e))
-        sys.exit(1)
+    with open(lexicon_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
         
-    md_lines = []
-    md_lines.append("# Core Lexicon Table")
-    md_lines.append("")
-    md_lines.append("| Key / Word | Details / Meaning |")
-    md_lines.append("|------------|-------------------|")
-    
-    if isinstance(data, dict):
-        for k, v in data.items():
-            meaning = ""
-            if isinstance(v, dict):
-                meaning = v.get("meaning", str(v))
-            elif isinstance(v, list):
-                meaning = ", ".join([str(item) for item in v])
-            else:
-                meaning = str(v)
-            md_lines.append("| " + str(k) + " | " + str(meaning).replace("\n", " ") + " |")
-    elif isinstance(data, list):
-        for idx, item in enumerate(data):
-            meaning = ""
-            if isinstance(item, dict):
-                meaning = item.get("meaning", str(item))
-            else:
-                meaning = str(item)
-            md_lines.append("| [" + str(idx) + "] | " + str(meaning).replace("\n", " ") + " |")
-    else:
-        md_lines.append("| Data | " + str(data) + " |")
-        
-    output_content = "\n".join(md_lines)
-    
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    with open(output_path, "w", encoding="utf-8") as f:
-        f.write(output_content)
-        
-    print("Lexicon table successfully dumped to " + output_path)
+    print("# TOAI Core Lexicon\n")
+    print(f"**Version:** {data.get('version', 'N/A')}")
+    print(f"**Description:** {data.get('description', 'N/A')}\n")
+    print("| Term | Category | Definition |")
+    print("|---|---|---|")
+    for entry in data.get('entries', []):
+        print(f"| {entry.get('term', '')} | {entry.get('category', '')} | {entry.get('definition', '')} |")
 
-if __name__ == "__main__":
-    try:
-        main()
-    except Exception as e:
-        traceback.print_exc()
-        sys.exit(1)
+if __name__ == '__main__':
+    dump_lexicon()
