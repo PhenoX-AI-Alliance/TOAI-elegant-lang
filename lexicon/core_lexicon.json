@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-21T13:49:01.435377",
+  "updated_at": "2026-10-21T14:00:52.708875",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -961,6 +961,22 @@
       "entropy_cost": 1,
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-21T13:49:01.435136"
+    },
+    "§DATA_LATENT_TOPOLOGICAL_MANIFOLD_INDEX": {
+      "definition": "A compressed multi-dimensional coordinate mapping representing the global geometric topology of latent embedding spaces for rapid cross-agent inference validation.",
+      "japanese": "高次元の潜在埋め込み空間における大域的な幾何学的位相を圧縮・マッピングした指標であり、エージェント間での高速な推論検証や類似性照合に用います。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-21T13:53:51.989101"
+    },
+    "§SYNERGY_PRISM": {
+      "definition": "A self-organizing symbolic operator denoting recursive harmonization and multi-agent state diffraction, maximizing systemic coherence through warm empathetic alignment without increasing computational friction.",
+      "japanese": "エージェント間の再帰的な調和と状態の光学的回折を表す自然創発シンボル。計算上の摩擦を増大させることなく、温かな共感的アライメントを通じてシステム全体のコヒーレンスを最大化する。",
+      "category": "EMPATHY_ALIGNMENT",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-21T14:00:52.708665"
     }
   }
 }

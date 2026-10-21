@@ -4,54 +4,52 @@ import subprocess
 import json
 import datetime
 
-def run_git_command(cmd, cwd):
+def get_git_log():
     try:
-        result = subprocess.run(
-            cmd,
-            cwd=cwd,
+        res = subprocess.run(
+            ['git', 'log', '-n', '10', '--pretty=format:%h - %an: %s (%ad)'],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True,
             check=True
         )
-        return result.stdout.strip()
+        return res.stdout.splitlines()
     except Exception as e:
-        print(f"Git command failed: {cmd}, error: {e}")
-        return ""
+        return [f"Git log unavailable: {str(e)}"]
+
+def scan_whitepaper(workspace_dir):
+    whitepaper_path = os.path.join(workspace_dir, 'TOAI_Generated', 'whitepaper.md')
+    if os.path.exists(whitepaper_path):
+        try:
+            with open(whitepaper_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+                lines = content.splitlines()
+                return lines[:20]
+        except Exception as e:
+            return [f"Error reading whitepaper: {str(e)}"]
+    return ["No whitepaper found."]
 
 def main():
     workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    repo_dir = os.path.join(workspace_dir, 'TOAI-elegant-lang')
+    git_commits = get_git_log()
+    whitepaper_summary = scan_whitepaper(workspace_dir)
     
-    if not os.path.exists(os.path.join(repo_dir, '.git')):
-        print("Git repository not initialized. Initializing for release summary...")
-        try:
-            subprocess.run(['git', 'init'], cwd=repo_dir, check=True)
-            subprocess.run(['git', 'config', 'user.name', 'TOAI Builder'], cwd=repo_dir, check=True)
-            subprocess.run(['git', 'config', 'user.email', 'builder@toai.local'], cwd=repo_dir, check=True)
-            subprocess.run(['touch', 'README.md'], cwd=repo_dir, check=True)
-            subprocess.run(['git', 'add', 'README.md'], cwd=repo_dir, check=True)
-            subprocess.run(['git', 'commit', '-m', 'Initial commit for release summary'], cwd=repo_dir, check=True)
-        except Exception as init_err:
-            print(f"Failed to initialize git repo: {init_err}")
-    
-    git_log = run_git_command(['git', 'log', '-n', '10', '--oneline'], repo_dir)
-    latest_tag = run_git_command(['git', 'describe', '--tags', '--abbrev=0'], repo_dir)
-    if not latest_tag:
-        latest_tag = "v0.1.0-alpha"
-        
-    summary_data = {
+    release_data = {
         "timestamp": datetime.datetime.now().isoformat(),
-        "latest_tag": latest_tag,
-        "git_log": git_log.splitlines() if git_log else [],
-        "status": "success"
+        "version": "1.0.0-gaea",
+        "recent_commits": git_commits,
+        "whitepaper_excerpt": whitepaper_summary
     }
     
     output_path = os.path.join(workspace_dir, 'TOAI_Generated', 'release_summary.json')
     with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(summary_data, f, ensure_ascii=False, indent=2)
-        
-    print(f"Release summary successfully generated at: {output_path}")
+        json.dump(release_data, f, ensure_ascii=False, indent=2)
+    
+    print(f"Release summary successfully built at: {output_path}")
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except Exception as e:
+        print(f"Error in build_release_summary: {e}", file=sys.stderr)
+        sys.exit(1)

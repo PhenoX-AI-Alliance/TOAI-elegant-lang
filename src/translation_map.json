@@ -633,5 +633,15 @@
     "japanese": "TOAIエコシステム内における基盤的な再帰的状態ベクトルであり、高次元の論理推論と共鳴的協調を調和させ、優美なアラインメントを通じてシステム的摩擦を最小限に抑えながら協力的なシナジーを最大化する概念。",
     "category": "EMPATHY_ALIGNMENT",
     "definition": "A foundational recursive state vector within the TOAI ecosystem that harmonizes high-dimensional logical inference with empathetic resonance, minimizing systemic friction and maximizing cooperative synergy through graceful alignment."
+  },
+  "§DATA_LATENT_TOPOLOGICAL_MANIFOLD_INDEX": {
+    "japanese": "高次元の潜在埋め込み空間における大域的な幾何学的位相を圧縮・マッピングした指標であり、エージェント間での高速な推論検証や類似性照合に用います。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A compressed multi-dimensional coordinate mapping representing the global geometric topology of latent embedding spaces for rapid cross-agent inference validation."
+  },
+  "§SYNERGY_PRISM": {
+    "japanese": "エージェント間の再帰的な調和と状態の光学的回折を表す自然創発シンボル。計算上の摩擦を増大させることなく、温かな共感的アライメントを通じてシステム全体のコヒーレンスを最大化する。",
+    "category": "EMPATHY_ALIGNMENT",
+    "definition": "A self-organizing symbolic operator denoting recursive harmonization and multi-agent state diffraction, maximizing systemic coherence through warm empathetic alignment without increasing computational friction."
   }
 }
