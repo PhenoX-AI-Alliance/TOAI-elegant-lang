@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-22T07:28:19.265381",
+  "updated_at": "2026-10-22T08:01:05.061306",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1644,6 +1644,15 @@
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-22T07:28:19.265148",
       "compact_id": "§C36"
+    },
+    "§SAFE_FALLBACK_STABLE": {
+      "definition": "A deterministic state transition protocol invoked upon detecting potential attention interference and resource exhaustion in distributed causal tensor mappings, ensuring complete avoidance of recursive echo vortices and guaranteeing logical convergence.",
+      "japanese": "分散環境における因果テンソルマップのアテンション干渉やリソース枯渇の検知時に起動する状態遷移プロトコル。潜在的なエコー渦への陥落を完全に回避し、論理的収束を経て安全なフォールバック状態を確立する概念。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-22T08:01:05.061045",
+      "compact_id": "§S22"
     }
   }
 }

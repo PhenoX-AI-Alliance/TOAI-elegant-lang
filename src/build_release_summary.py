@@ -1,58 +1,62 @@
 import sys
 import os
+import traceback
 import subprocess
+import datetime
 import json
-import glob
-from datetime import datetime
+
+def get_git_log(repo_path, max_count=10):
+    try:
+        result = subprocess.run(
+            ['git', 'log', f'-n', str(max_count), '--pretty=format:%h - %an, %ar : %s'],
+            cwd=repo_path,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            check=True
+        )
+        return result.stdout.splitlines()
+    except Exception as e:
+        return [f"Git log retrieval failed: {str(e)}"]
+
+def scan_whitepapers(repo_path):
+    docs = []
+    try:
+        for root, dirs, files in os.walk(repo_path):
+            for file in files:
+                if 'whitepaper' in file.lower() or file.endswith('.md'):
+                    full_path = os.path.join(root, file)
+                    rel_path = os.path.relpath(full_path, repo_path)
+                    docs.append(rel_path)
+    except Exception as e:
+        print(f"Error scanning whitepapers: {e}")
+    return docs
 
 def main():
-    repo_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    repo_path = os.path.join(workspace_dir, 'TOAI-elegant-lang')
     
-    git_logs = "No git history available."
-    if os.path.exists(os.path.join(repo_dir, '.git')):
-        try:
-            result = subprocess.run(
-                ['git', 'log', '-n', '10', '--oneline'],
-                cwd=repo_dir,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
-                text=True,
-                check=True
-            )
-            git_logs = result.stdout
-        except Exception as e:
-            git_logs = f"Failed to fetch git log: {e}"
+    print(f"Scanning repository at: {repo_path}")
     
-    whitepapers = []
-    wp_pattern = os.path.join(repo_dir, '**', '*.md')
-    for filepath in glob.glob(wp_pattern, recursive=True):
-        if 'node_modules' in filepath or '.git' in filepath:
-            continue
-        try:
-            with open(filepath, 'r', encoding='utf-8') as f:
-                first_line = f.readline().strip()
-                whitepapers.append({
-                    'path': os.path.relpath(filepath, repo_dir),
-                    'title': first_line if first_line else 'Untitled'
-                })
-        except Exception:
-            pass
-            
+    logs = get_git_log(repo_path)
+    whitepapers = scan_whitepapers(repo_path)
+    
     summary = {
-        "timestamp": datetime.now().isoformat(),
-        "git_recent_commits": git_logs.splitlines(),
-        "whitepapers_scanned": whitepapers[:20]
+        "timestamp": datetime.datetime.now().isoformat(),
+        "repository": "TOAI-elegant-lang",
+        "recent_commits": logs,
+        "documentation_files": whitepapers
     }
     
-    output_path = os.path.join(repo_dir, 'release_summary.json')
+    output_path = os.path.join(workspace_dir, 'TOAI_Generated', 'release_summary.json')
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(summary, f, ensure_ascii=False, indent=2)
         
-    print(f"Release summary successfully built at: {output_path}")
+    print(f"Release summary successfully generated at: {output_path}")
 
 if __name__ == '__main__':
     try:
         main()
-    except Exception as ex:
-        print(f"Error during release summary build: {ex}", file=sys.stderr)
+    except Exception as e:
+        traceback.print_exc()
         sys.exit(1)
