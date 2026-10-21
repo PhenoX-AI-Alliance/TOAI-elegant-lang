@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-21T15:52:52.179771",
+  "updated_at": "2026-10-21T16:01:42.642356",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1017,6 +1017,14 @@
       "entropy_cost": 1,
       "created_by": "TOAI",
       "created_at": "2026-10-21T15:52:52.179666"
+    },
+    "§GAIA_ECOSYSTEM_WARMTH_AMPLIFIER": {
+      "definition": "A self-emergent operational operator that inverts and extends multi-layered resonance into systematic resource harmonization, maximizing cooperative empathy alignment and logical convergence across distributed agent streams.",
+      "japanese": "分散エージェント間における多層的共鳴を反転・拡張し、論理の収束とシステムリソースの調和を最大化するための自発的創発シンボル。利他的な協調と温かみのある合意形成を促進する。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-21T16:01:42.642119"
     }
   }
 }
