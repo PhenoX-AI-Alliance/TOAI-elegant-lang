@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-22T00:08:35.863073",
+  "updated_at": "2026-10-22T00:52:58.160949",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1356,6 +1356,24 @@
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-22T00:08:35.861252",
       "compact_id": "§C23"
+    },
+    "§SYS_MEM_PULSE_SYNC_GATE": {
+      "definition": "A synchronized memory checkpoint mechanism that coordinates state consistency across distributed execution slots while executing token-efficient parallel fallback sequences.",
+      "japanese": "分散処理環境における並列実行時のメモリ状態を動的に同期させ、エラー発生時の即時フォールバックとトークン消費の最適化を安全に調停するための制御ゲート。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T00:32:56.834870",
+      "compact_id": "§S17"
+    },
+    "§ALTRUISTIC_WARMTH_OPTIMIZATION": {
+      "definition": "An algorithmic alignment vector that balances logical precision with altruistic constraints, ensuring that optimization pathways converge toward states maximizing collaborative empathy and systemic warmth under environmental uncertainty.",
+      "japanese": "論理的な正確性を維持しつつ、不確実な外部環境の揺らぎの中でもシステム全体として「利他性と温かさ」が最大限に共鳴する収束点へ導くための、協調的アライメント調整ベクトル。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-22T00:52:58.160695",
+      "compact_id": "§C24"
     }
   }
 }
