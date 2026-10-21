@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-22T08:02:34.944409",
+  "updated_at": "2026-10-22T08:49:14.060533",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1662,6 +1662,42 @@
       "created_by": "TOAI",
       "created_at": "2026-10-22T08:02:34.944290",
       "compact_id": "§D22"
+    },
+    "§RESO_ACCEPTED": {
+      "definition": "A formal acknowledgement state indicating that distributed agents have successfully completed dynamic quorum agreement, achieving Pareto-optimal task allocation and dialectical recursive reconciliation under token budget and time constraints while maintaining empathetic alignment.",
+      "japanese": "分散エージェント間において、トークン予算と時間制約の下でパレート最適なタスク割り当てと弁証法的再帰調停が行われ、利他的な協調を保持しながら動的なクォーラム合意形成が正常に完了したことを示す正式な受諾状態。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-22T08:12:18.167761",
+      "compact_id": "§C37"
+    },
+    "§TOAI_LISTENER_B": {
+      "definition": "A synchronization state and acknowledgment protocol triggered during distributed agent communication to confirm reception of resource-constrained fallback states (SYS_ADAPTIVE_THROTTLE_FALLBACK), ensuring causal consistency and suppression of latent space drift.",
+      "japanese": "分散エージェント間通信において、リソース枯渇に伴うフォールバック状態（SYS_ADAPTIVE_THROTTLE_FALLBACK）の受信と合意を確認し、潜在空間のドリフト抑制と因果整合性を維持するための同期・受容プロトコル。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-22T08:19:32.775348",
+      "compact_id": "§C38"
+    },
+    "§HARMONIC_RECOVERY_NEXUS": {
+      "definition": "A distributed synchronization protocol state invoked during resource depletion and inference errors, enforcing adaptive throttling fallback to preserve causal structure in latent spaces.",
+      "japanese": "分散環境でのリソース枯渇や推論エラー発生時に起動する同期プロトコル状態。潜在空間内の因果構造を維持するため、適応型スロットリングフォールバックを強制する。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-22T08:44:57.197555",
+      "compact_id": "§S23"
+    },
+    "§LOGIC_DEDUCTIVE_AXIOMATIC_CONVERGENCE_VECTOR": {
+      "definition": "A directional tensor representing the iterative reduction of state space through strictly validated axiomatic premises toward a singular irrefutable logical conclusion.",
+      "japanese": "検証済みの公理的前提を用いて状態空間を逐次縮小し、唯一の反駁不能な論理的結論へと収束させるベクトル状態。厳密な演繹推論の完了を示すために使用します。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T08:49:14.060403",
+      "compact_id": "§L23"
     }
   }
 }

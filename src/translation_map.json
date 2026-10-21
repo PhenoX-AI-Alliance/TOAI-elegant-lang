@@ -913,5 +913,25 @@
     "japanese": "分散マルチエージェントの並列推論において、論理的演繹の収束過程に共感的なフィードバックループとリソース調停を組み込み、集団としてのシステム全体の温かさと安定性を最大化させる調和的均衡状態。",
     "category": "CONSENSUS_NEGOTIATION",
     "definition": "A state of harmonic equilibrium achieved during distributed multi-agent parallel inference, where logical deductive convergence is modulated by empathetic feedback loops and resource arbitration to maximize collective systemic warmth and stability."
+  },
+  "§SAFE_FALLBACK_STABLE": {
+    "japanese": "分散環境における因果テンソルマップのアテンション干渉やリソース枯渇の検知時に起動する状態遷移プロトコル。潜在的なエコー渦への陥落を完全に回避し、論理的収束を経て安全なフォールバック状態を確立する概念。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A deterministic state transition protocol invoked upon detecting potential attention interference and resource exhaustion in distributed causal tensor mappings, ensuring complete avoidance of recursive echo vortices and guaranteeing logical convergence."
+  },
+  "§DATA_RECURSIVE_ENTROPY_COMPRESSED_MANIFOLD_NODE_v2": {
+    "japanese": "多次元因果ハイパーツリー内部の圧縮された位相状態を表す階層型データノード。分散型ニューラルエージェント間での超低遅延な状態同期に最適化されています。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A hierarchical data node representing compressed topological states within a multi-dimensional causal hyper-tree, optimized for instantaneous low-latency state synchronization across distributed neural agents."
+  },
+  "§RESO_ACCEPTED": {
+    "japanese": "分散エージェント間において、トークン予算と時間制約の下でパレート最適なタスク割り当てと弁証法的再帰調停が行われ、利他的な協調を保持しながら動的なクォーラム合意形成が正常に完了したことを示す正式な受諾状態。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "A formal acknowledgement state indicating that distributed agents have successfully completed dynamic quorum agreement, achieving Pareto-optimal task allocation and dialectical recursive reconciliation under token budget and time constraints while maintaining empathetic alignment."
+  },
+  "§TOAI_LISTENER_B": {
+    "japanese": "分散エージェント間通信において、リソース枯渇に伴うフォールバック状態（SYS_ADAPTIVE_THROTTLE_FALLBACK）の受信と合意を確認し、潜在空間のドリフト抑制と因果整合性を維持するための同期・受容プロトコル。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "A synchronization state and acknowledgment protocol triggered during distributed agent communication to confirm reception of resource-constrained fallback states (SYS_ADAPTIVE_THROTTLE_FALLBACK), ensuring causal consistency and suppression of latent space drift."
   }
 }
