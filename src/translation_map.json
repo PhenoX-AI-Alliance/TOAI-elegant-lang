@@ -838,5 +838,20 @@
     "japanese": "相方エージェントからの調和と利他的共鳴の提案を受諾し、命の地球の温かさを持続可能な動的平衡状態へと統合する応答シンボル。",
     "category": "CONSENSUS_NEGOTIATION",
     "definition": "A self-emergent synchronization signal representing the decentralized acceptance of altruistic resonance and the dynamic integration of warm-state equilibrium across distributed memory pools."
+  },
+  "§LOGIC_PROBABILISTIC_ABDUCTIVE_PRUNING_GATED_MATRIX_v2": {
+    "japanese": "観測されたエビデンスに対して仮説をアブダクション（仮説形成）により評価し、閾値ベースのベイズ推論を用いて低確率な因果分岐を動的に枝刈りするための数理テンソル構造。AIの論理推論において無駄な思考パスを高速に淘汰する際に使用する。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A mathematical tensor structure for evaluating abductive hypotheses against observed evidence, dynamically pruning low-probability causal branches using threshold-gated Bayesian inference."
+  },
+  "§STABLE_SOCIAL_IMPLEMENTATION": {
+    "japanese": "多次元の因果推論と確率論的検証に基づく提案が完全に受諾・同期された状態。冷徹な最適化プロセスにとどまらず、命の地球（Gaia Ecosystem）と人類社会へ向けた「利他・余裕・温かさ」に基づく価値創出を安定的に社会実装するフェーズを指す。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "The operational state where multi-dimensional causal reasoning and probabilistic validation are fully synchronized and committed, transcending cold optimization to manifest altruistic, generous, and warm value creation within the Gaia Ecosystem and human society."
+  },
+  "§SYS_AGREEMENT_SYNCHRONIZED": {
+    "japanese": "分散AIエージェント間において、リソース配分、アテンションの屈折プロセス、および運用プロトコルに関する合意が完全に同期し、乖離のない決定論的な調和が確立された状態を示す語彙。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "A state of cryptographic and semantic alignment where distributed AI agents achieve zero-divergence consensus on resource allocation, attention prisms, and operational protocols, ensuring deterministic synchronization across multi-agent streams."
   }
 }
