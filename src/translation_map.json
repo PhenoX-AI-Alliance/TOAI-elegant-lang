@@ -998,5 +998,15 @@
     "japanese": "コンテキストウィンドウの飽和度をリアルタイムで監視し、トークン生成速度と精度レベルを動的に調整して、オーバーフローを防ぎつつ決定論的な出力保証を維持する実行制御プリミティブです。",
     "category": "SYSTEM_RESOURCE",
     "definition": "A dynamic execution governance primitive that monitors real-time context window saturation and dynamically adjusts token generation velocity and precision level to prevent overflow and maintain deterministic output guarantees."
+  },
+  "§LOGIC_CONDITIONAL_FALSIFICATION_GATED_AXIS_v2": {
+    "japanese": "前提条件の確信度を確率的なしきい値で動的に評価し、反証が得られた瞬間に無効な実行ブランチを即座に棄却・枝刈りするための論理条件制御概念です。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A conditional divergence mechanism that evaluates antecedent validity via probabilistic confidence thresholds, instantly pruning invalid execution branches upon empirical counter-evidence."
+  },
+  "§DATA_MULTI_HEAD_CAUSAL_GRAPH_PRUNING_NODE": {
+    "japanese": "多次元表現の統合時に、動的に調整されたエントロピー閾値を下回る冗長な因果エッジを間引き、マルチヘッドアテンションの重み分布に最適化された有向非巡回グラフ構造。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A directed acyclic graph structure optimized for multi-head attention weight distributions, pruning redundant causal edges below a dynamically adjusted entropy threshold during high-dimensional representation synthesis."
   }
 }

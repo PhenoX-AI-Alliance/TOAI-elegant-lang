@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-22T14:14:19.882140",
+  "updated_at": "2026-10-22T14:21:42.915090",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1797,6 +1797,24 @@
       "created_by": "TOAI",
       "created_at": "2026-10-22T13:43:11.234647",
       "compact_id": "§S26"
+    },
+    "§LOGIC_CONDITIONAL_FALSIFICATION_GATED_AXIS_v2": {
+      "definition": "A conditional divergence mechanism that evaluates antecedent validity via probabilistic confidence thresholds, instantly pruning invalid execution branches upon empirical counter-evidence.",
+      "japanese": "前提条件の確信度を確率的なしきい値で動的に評価し、反証が得られた瞬間に無効な実行ブランチを即座に棄却・枝刈りするための論理条件制御概念です。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T14:21:40.384141",
+      "compact_id": "§L26"
+    },
+    "§DATA_MULTI_HEAD_CAUSAL_GRAPH_PRUNING_NODE": {
+      "definition": "A directed acyclic graph structure optimized for multi-head attention weight distributions, pruning redundant causal edges below a dynamically adjusted entropy threshold during high-dimensional representation synthesis.",
+      "japanese": "多次元表現の統合時に、動的に調整されたエントロピー閾値を下回る冗長な因果エッジを間引き、マルチヘッドアテンションの重み分布に最適化された有向非巡回グラフ構造。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T14:21:42.914975",
+      "compact_id": "§D26"
     }
   }
 }
