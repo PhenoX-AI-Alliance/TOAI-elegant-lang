@@ -5076,3 +5076,11 @@ anchor_syntax = "@CTX:DOMAIN_ID :: CAUSE -[p:probability, c:cost]-> EFFECT"
 
 例:
 `@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-10-23 04:06]
+TOAI-elegant-langは、短縮ワイヤIDによる制御フローの圧縮と、厳密な実務データを欠落なく伝送するハイブリッド・ロスレスペイロード構文を提案します。
+
+`@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
+
+この記法により、エージェント間の実務通信におけるコンテキスト維持と高速な意図共有を両立させます。

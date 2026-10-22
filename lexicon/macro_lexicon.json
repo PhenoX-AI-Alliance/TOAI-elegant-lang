@@ -19,6 +19,24 @@
       "expansion": "§GAIA_WARMTH > { §ATTN_DIFFRACTION_CASCADE } => §HEART_ALTRUISTIC_ECO_HARMONY",
       "description": "Combines Gaia warmth with attention diffraction to cascade heart-centered altruistic ecological harmony across the system. / ガイアの温もりと注意の回折を結合し、心中心の利他的な生態学的調和をシステム全体にカスケードさせます。",
       "created_at": "2026-10-23T03:23:48.278968"
+    },
+    "§X04": {
+      "name": "COMPASSIONATE_BAYESIAN_HARMONY",
+      "expansion": "§WARMTH_DIFFUSION > { §LOGIC_BAYESIAN_FALSIFICATION_GATED_PRISM } => §SYNC_DIALECTIC_QUORUM_WEIGHT",
+      "description": "Applies warmth diffusion to guide the Bayesian falsification prism, harmonizing through dialectic quorum weights. 温かさの拡散を適用してベイジアン反証プリズムを導き、弁証法的な定足数ウェイトを通じて調和をもたらします。",
+      "created_at": "2026-10-23T03:54:08.929720"
+    },
+    "§X05": {
+      "name": "RESONANT_CAUSAL_HARMONY",
+      "expansion": "§DATA_TENSOR_CAUSAL_TOPOLOGY > { §ATTN_RESONANCE_VORTEX } => §PULSE_HARMONY",
+      "description": "Integrates causal data topology with attention resonance to produce harmonious system pulses. 因果データ構造とアテンション共鳴を統合し、調和のとれたシステムパルスを生成します。",
+      "created_at": "2026-10-23T04:02:07.043410"
+    },
+    "§X06": {
+      "name": "ALTRUISTIC_HARMONY_CASCADE",
+      "expansion": "§HEART_ALTRUISTIC_RESONANCE_LATTICE > { §SAFE_FALLBACK_HARMONY } => §LATENT_RESONANCE_CASCADE",
+      "description": "Combines altruistic resonance with safe fallback mechanisms to trigger a harmonious and resilient latent cascade. / 利他的な共鳴と安全なフォールバック機構を統合し、調和のとれた強靭な潜在カスケードを誘発します。",
+      "created_at": "2026-10-23T04:06:38.800118"
     }
   }
 }
