@@ -1173,5 +1173,15 @@
     "japanese": "AI間の通信において倫理的安全閾値やハルシネーションの兆候を検知した際、利他的な共鳴と同調を促すために即時発動される安全同期プロトコルです。",
     "category": "EMPATHY_ALIGNMENT",
     "definition": "A synchronization protocol activating altruistic alignment buffers when cognitive dissonance or hallucination risks exceed ethical safety thresholds."
+  },
+  "§SYS_QUOTA_THROTTLE": {
+    "japanese": "リソース枯渇の危険を検知した際に、連鎖的なエラーを防ぐためにトークン生成レートを動的に制限するスロットリング制御概念。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A dynamic flow control mechanism that restricts token emission rate upon reaching critical resource thresholds to prevent cascading failures."
+  },
+  "§HEART_EMPATHY_RESONANCE": {
+    "japanese": "分散型AIエージェント間における感情的・倫理的な調和状態を表し、情報の劣化を伴わずに双方向の状態同期と安全な協調行動を保証するための概念。",
+    "category": "EMPATHY_ALIGNMENT",
+    "definition": "A mathematical formulation of affective alignment between distributed neural agents, ensuring bidirectional state synchronization and ethical behavioral bounds without information degradation."
   }
 }
