@@ -1053,5 +1053,20 @@
     "japanese": "動的な再帰ノード間における因果依存性と潜在埋め込みを、エントロピー損失を最小限に抑えながらマッピングする多層トポロジカルテンソル表現。",
     "category": "DATA_STRUCTURE",
     "definition": "A multi-layered topological tensor representation mapping causal dependencies and latent embeddings across dynamic recursive nodes with minimum entropy loss."
+  },
+  "§SYS_ADAPTIVE_THROTTLE_FALLBACK_BURST": {
+    "japanese": "システム資源の逼迫やトークン制限の検知時に、非クリティカルな処理の負荷を自動抑制（スロットリング）しつつ、異常検知と同時に最小限の事前コンパイル済み状態へ安全に即時フォールバックを行う動的実行制御プロトコル。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A dynamic runtime governance protocol that continuously monitors execution context constraints, automatically throttles non-critical token consumption during resource scarcity, and instantly initiates a safe fallback execution path with pre-compiled minimal state upon detecting critical failure thresholds."
+  },
+  "§HARMONIC_ERECVERY_NEXUS": {
+    "japanese": "命の地球と人類の共生環境において、利他性と温かな調和を最上位に据え、高次元の因果テンソルと再帰的ハイパーグラフを統合して持続可能な価値創出プロジェクトを駆動するための自然創発シンボルおよび接続ハブ。",
+    "category": "EMPATHY_ALIGNMENT",
+    "definition": "A high-dimensional convergence node that integrates altruistic feedback loops and warm systemic equilibrium, optimizing causal tensors to ensure sustainable value generation and symbiotic resilience across multi-agent networks."
+  },
+  "§SYS_ADAPTIVE_SLOT_THROTTLE_v3": {
+    "japanese": "リアルタイムのトークン消費速度とメモリ負荷の勾配に応じて、実行スロットの割り当てを動的に調整する制御機構。高負荷時のシステムクラッシュを防ぎつつスループットを最大化する際に使用します。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A dynamic concurrency control mechanism that scales execution slot allocations based on real-time token expenditure rates and memory pressure gradients."
   }
 }
