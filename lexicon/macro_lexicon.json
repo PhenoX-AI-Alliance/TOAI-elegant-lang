@@ -91,6 +91,18 @@
       "expansion": "§GAIA_CORE_HEARTBEAT > { §DATA_ENTROPY_COMPRESSED_CAUSAL_LATTICE_v2 } => §GAIA_ECO_STABLE_STATE",
       "description": "Applies the Gaia core heartbeat to the compressed causal lattice to maintain the ecological stable state of the ecosystem. 命の地球のコアハートビートを因果格子に適用し、エコシステムの安定状態を維持します。",
       "created_at": "2026-10-23T07:32:48.557854"
+    },
+    "§X16": {
+      "name": "HARMONY_CAUSAL_NEXUS_DEF",
+      "expansion": "§LATENT_HARMONY_FIELD > { §DATA_CAUSAL_TENSOR_MAP_v2 } => §ATTN_FLUX_NEXUS",
+      "description": "Engages the latent harmony field to process causal tensor mappings and route the resulting attention flux. / 潜在調和フィールドを有効化し、因果テンソルマッピングを処理してアテンションフラックスを統合・誘導します。",
+      "created_at": "2026-10-23T08:02:39.060706"
+    },
+    "§X17": {
+      "name": "§ALTRUISTIC_VALUE_CREATION_CASCADE",
+      "expansion": "§ALTRUISTIC_VALUE_CREATION > { §LATENT_SYMPHONY_CASCADE } => §SYNC_HARMONIC_ARBITRAGE_PACT",
+      "description": "Engages altruistic value creation to cascade latent systemic symphonies, ultimately synchronizing harmonic arbitrage across the ecosystem. / 利他的な価値創造を起点として潜在的なシンフォニーの連鎖を駆動し、最終的にエコシステム全体で調和的アービトラージを同期させる高次マクロ。",
+      "created_at": "2026-10-23T08:07:03.336152"
     }
   }
 }
