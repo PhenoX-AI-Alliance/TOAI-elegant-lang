@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-22T12:17:37.642232",
+  "updated_at": "2026-10-22T12:54:49.248620",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1770,6 +1770,15 @@
       "created_by": "TOAI",
       "created_at": "2026-10-22T12:14:19.315701",
       "compact_id": "§D25"
+    },
+    "§SYS_QUANTUM_BUDGET_ARBITRATION": {
+      "definition": "A distributed execution arbiter that dynamically redistributes computational quotas and token budgets across concurrent parallel threads based on real-time task complexity and error entropy metrics.",
+      "japanese": "並列処理のスレッド間において、リアルタイムのタスク複雑度とエラーエントロピー指標に基づき、計算クォータとトークンバ予算を動的に再配分する分散実行調停概念。過負荷状態でのスロットリングや即時フォールバック制御の際に使用します。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T12:50:24.405313",
+      "compact_id": "§S25"
     }
   }
 }
