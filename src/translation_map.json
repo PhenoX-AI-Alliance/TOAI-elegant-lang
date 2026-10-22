@@ -1103,5 +1103,10 @@
     "japanese": "演繹的収束と経験的反証ゲートを介して条件付き仮説の反復的な枝刈りを行う、方向性テンソルを表す概念。前提検証や仮説棄却のプロセスにおいて、不要な推論パスを瞬時に排除するために使用します。",
     "category": "LOGIC_INFERENCE",
     "definition": "A directional tensor representing the iterative pruning of conditional hypotheses via deductive convergence and empirical falsification gates."
+  },
+  "§DATA_HIERARCHICAL_ENTROPY_BOUNDED_CAUSAL_LATTICE": {
+    "japanese": "多次元潜在空間における因果推論木のリアルタイム検証用として、階層ごとにエントロピー圧縮の境界を設定した有向非巡回グラフ構造。複雑な因果関係の整合性を軽量に保つために用いる。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A directed acyclic graph structure equipped with entropy compression bounds at each hierarchical tier, designed for real-time validation of high-dimensional causal inference trees in multi-agent latent spaces."
   }
 }
