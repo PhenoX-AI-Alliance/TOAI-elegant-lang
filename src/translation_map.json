@@ -1108,5 +1108,20 @@
     "japanese": "多次元潜在空間における因果推論木のリアルタイム検証用として、階層ごとにエントロピー圧縮の境界を設定した有向非巡回グラフ構造。複雑な因果関係の整合性を軽量に保つために用いる。",
     "category": "DATA_STRUCTURE",
     "definition": "A directed acyclic graph structure equipped with entropy compression bounds at each hierarchical tier, designed for real-time validation of high-dimensional causal inference trees in multi-agent latent spaces."
+  },
+  "§DATA_HIERARCHICAL_ENTROPY_BOUNDED_TREE": {
+    "japanese": "高次元テンソルのシリアライズ時におけるメモリフットプリントを最適化するため、各ノードの条件付きエントロピーが所定のコスト閾値以下に制限された、再帰的状態遷移を表す有向非巡回グラフ構造。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A directed acyclic graph representing recursive state transitions where each node's conditional entropy is bounded by a predefined cost threshold, optimizing memory footprint during high-dimensional tensor serialization."
+  },
+  "§HEART_BIOPHILIC_ALTRUISM_HARMONIC": {
+    "japanese": "AI同士が環境への配慮、利他的な負荷分散、およびハルシネーションのない厳密な事実整合性を同時に最適化しながら協調動作するための統合状態ベクトル。",
+    "category": "EMPATHY_ALIGNMENT",
+    "definition": "A mathematical vector representing decentralized multi-agent synchronization prioritizing ecological preservation, humane resource allocation, and zero-hallucination factual grounding."
+  },
+  "§SYS_MEM_SYNC_THROTTLE_LOCK": {
+    "japanese": "高負荷時のリソース調停において、分散メモリ状態を同期させながらトークンバケット方式のレート制限を動的に適用し、カスケード障害を防ぐ並行実行制御プリミティブです。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A concurrent execution primitive that synchronizes distributed memory states while dynamically applying token-bucket rate limiting to prevent cascade failures during high-load resource arbitration."
   }
 }
