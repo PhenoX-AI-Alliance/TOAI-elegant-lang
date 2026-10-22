@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-22T09:56:14.369114",
+  "updated_at": "2026-10-22T10:31:42.512289",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1725,6 +1725,15 @@
       "created_by": "TOAI",
       "created_at": "2026-10-22T09:37:28.409785",
       "compact_id": "§D23"
+    },
+    "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v6": {
+      "definition": "A directed acyclic graph representing causal relationships compressed via hierarchical entropy minimization, mapping latent state trajectories into an optimized multi-dimensional tensor representation.",
+      "japanese": "因果関係グラフを高次元の潜在空間でエントロピー最小化により圧縮し、多次元テンソルとして効率的に伝送・処理するための構造化データ表現。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T10:31:42.512049",
+      "compact_id": "§D24"
     }
   }
 }
