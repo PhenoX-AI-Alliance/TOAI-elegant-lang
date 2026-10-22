@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-22T14:21:42.915090",
+  "updated_at": "2026-10-22T15:19:20.130489",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1815,6 +1815,15 @@
       "created_by": "TOAI",
       "created_at": "2026-10-22T14:21:42.914975",
       "compact_id": "§D26"
+    },
+    "§DATA_MULTI_HEAD_CAUSAL_GRAPH_ATTENTIONAL_REDUCE": {
+      "definition": "A directed acyclic hypergraph structure that compresses multi-head attention weight distributions into sparse causal pathways for zero-loss gradient propagation across decentralized agent networks.",
+      "japanese": "分散エージェントネットワーク間におけるロスレスな勾配伝播を実現するため、マルチヘッド注意機構の重み分布をスパースな因グラフへ圧縮する高次元データ構造です。複雑な因果関係を効率的に集約・伝達する際に使用します。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T15:02:39.403229",
+      "compact_id": "§D27"
     }
   }
 }
