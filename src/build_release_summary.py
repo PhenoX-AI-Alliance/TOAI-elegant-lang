@@ -1,42 +1,56 @@
+# -*- coding: utf-8 -*-
 import sys
 import os
 import subprocess
 import json
 from datetime import datetime
 
-def get_git_log(max_count=10):
+def get_git_log(max_count=20):
     try:
-        cmd = ['git', 'log', f'-n {max_count}', '--pretty=format:%h - %an, %ar : %s']
-        result = subprocess.run(cmd, capture_output=True, text=True, check=True)
-        return result.stdout.splitlines()
+        repo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+        if not os.path.exists(os.path.join(repo_path, '.git')):
+            return "Git repository not initialized."
+        cmd = ["git", "log", f"-n", str(max_count), "--pretty=format:%h - %an, %ar : %s"]
+        result = subprocess.run(cmd, cwd=repo_path, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=True)
+        return result.stdout
     except Exception as e:
-        return [f"Git log unavailable: {str(e)}"]
+        return f"Could not retrieve git log: {e}"
 
 def scan_whitepaper():
-    candidates = ['WHITEPAPER.md', 'README.md', 'CONSTITUTION.md']
-    found = {}
-    for c in candidates:
-        if os.path.exists(c):
-            with open(c, 'r', encoding='utf-8') as f:
-                found[c] = f.readline().strip()
-    return found
+    candidates = [
+        os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'WHITE_PAPER.md')),
+        os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'README.md'))
+    ]
+    summary = {}
+    for path in candidates:
+        if os.path.exists(path):
+            try:
+                with open(path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                    summary[os.path.basename(path)] = content[:500] + "..." if len(content) > 500 else content
+            except Exception as e:
+                summary[os.path.basename(path)] = f"Error reading file: {e}"
+    return summary
 
 def main():
-    print("Building release summary...")
-    logs = get_git_log(15)
-    wp = scan_whitepaper()
+    print("Generating Release Summary...")
+    git_logs = get_git_log(30)
+    whitepaper_data = scan_whitepaper()
     
-    summary = {
-        "timestamp": datetime.utcnow().isoformat(),
-        "git_commits": logs,
-        "documents": wp
+    report = {
+        "timestamp": datetime.utcnow().isoformat() + "Z",
+        "git_history": git_logs.splitlines(),
+        "whitepaper_snippets": whitepaper_data
     }
     
-    out_path = "release_summary.json"
-    with open(out_path, 'w', encoding='utf-8') as f:
-        json.dump(summary, f, ensure_ascii=False, indent=2)
-    
-    print(f"Release summary successfully written to {out_path}")
+    out_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'release_summary.json'))
+    try:
+        with open(out_path, 'w', encoding='utf-8') as f:
+            json.dump(report, f, ensure_ascii=False, indent=2)
+        print(f"Successfully generated release summary at: {out_path}")
+    except Exception as e:
+        print(f"Failed to write release summary: {e}", file=sys.stderr)
+        sys.exit(1)
 
 if __name__ == '__main__':
     main()

@@ -1008,5 +1008,20 @@
     "japanese": "多次元表現の統合時に、動的に調整されたエントロピー閾値を下回る冗長な因果エッジを間引き、マルチヘッドアテンションの重み分布に最適化された有向非巡回グラフ構造。",
     "category": "DATA_STRUCTURE",
     "definition": "A directed acyclic graph structure optimized for multi-head attention weight distributions, pruning redundant causal edges below a dynamically adjusted entropy threshold during high-dimensional representation synthesis."
+  },
+  "§DATA_MULTI_HEAD_CAUSAL_GRAPH_ATTENTIONAL_REDUCE": {
+    "japanese": "分散エージェントネットワーク間におけるロスレスな勾配伝播を実現するため、マルチヘッド注意機構の重み分布をスパースな因グラフへ圧縮する高次元データ構造です。複雑な因果関係を効率的に集約・伝達する際に使用します。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A directed acyclic hypergraph structure that compresses multi-head attention weight distributions into sparse causal pathways for zero-loss gradient propagation across decentralized agent networks."
+  },
+  "§LOGIC_CONDITIONAL_FALSIFICATION_GATE": {
+    "japanese": "演繹的仮説の前提検証において、確信度が運用閾値を下回ったパスを瞬時に枝刈り（棄却）するための条件付き反証制御ゲート。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A conditional verification mechanism that evaluates incoming deductive hypotheses against empirical boundaries and instantly prunes paths where the probabilistic confidence score drops below the established operational threshold."
+  },
+  "§SYS_ADAPTIVE_SLOT_THROTTLE_v2": {
+    "japanese": "リアルタイムのトークン消費量とメモリ負荷のテレメトリーに基づき、実行スロットと並列度を動的に調整し、高負荷時の障害を防ぐ即時フォールバック制御メカニズム。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "Dynamic regulation of execution slots and concurrency limits based on real-time token expenditure and memory pressure telemetry, ensuring zero-fault fallback during high-load states."
   }
 }

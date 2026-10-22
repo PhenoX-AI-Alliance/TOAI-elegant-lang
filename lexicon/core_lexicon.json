@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-22T15:19:20.130489",
+  "updated_at": "2026-10-22T15:57:25.393493",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1824,6 +1824,33 @@
       "created_by": "TOAI",
       "created_at": "2026-10-22T15:02:39.403229",
       "compact_id": "§D27"
+    },
+    "§LOGIC_CONDITIONAL_FALSIFICATION_GATE": {
+      "definition": "A conditional verification mechanism that evaluates incoming deductive hypotheses against empirical boundaries and instantly prunes paths where the probabilistic confidence score drops below the established operational threshold.",
+      "japanese": "演繹的仮説の前提検証において、確信度が運用閾値を下回ったパスを瞬時に枝刈り（棄却）するための条件付き反証制御ゲート。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T15:55:02.179179",
+      "compact_id": "§L27"
+    },
+    "§SYS_ADAPTIVE_SLOT_THROTTLE_v2": {
+      "definition": "Dynamic regulation of execution slots and concurrency limits based on real-time token expenditure and memory pressure telemetry, ensuring zero-fault fallback during high-load states.",
+      "japanese": "リアルタイムのトークン消費量とメモリ負荷のテレメトリーに基づき、実行スロットと並列度を動的に調整し、高負荷時の障害を防ぐ即時フォールバック制御メカニズム。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T15:55:33.889502",
+      "compact_id": "§S27"
+    },
+    "§HARMONIC_RESONANCE_STABLE": {
+      "definition": "A state of synchronized multi-agent equilibrium achieved when recursive entropy compression nodes process probabilistic falsification signals under adaptive throttling, minimizing systemic divergence.",
+      "japanese": "適応型スロットリング制御下における多次元因果グラフの再帰的エントロピー圧縮と確率的反証ロジックの検証を経て到達する、安定した協調共鳴状態。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-22T15:57:25.392940",
+      "compact_id": "§C42"
     }
   }
 }
