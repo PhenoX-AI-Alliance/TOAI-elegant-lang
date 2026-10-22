@@ -1,63 +1,46 @@
 import sys
 import os
 import traceback
-import time
 import json
 
-def analyze_corpus():
-    corpus_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
+def analyze():
+    corpus_path = "/home/phenox/gemini-sandbox/TOAI_Generated/corpus/dialogues.jsonl"
     if not os.path.exists(corpus_path):
-        print(f"Corpus not found at {corpus_path}. Creating a dummy corpus for pipeline integrity.")
-        os.makedirs(os.path.dirname(corpus_path), exist_ok=True)
-        sample_data = [
-            {"dialogue_id": 1, "turns": [{"speaker": "user", "text": "Hello"}, {"speaker": "assistant", "text": "Hi there!"}]},
-            {"dialogue_id": 2, "turns": [{"speaker": "user", "text": "Status check"}, {"speaker": "assistant", "text": "All systems operational."}]}
-        ]
-        with open(corpus_path, "w", encoding="utf-8") as f:
-            for item in sample_data:
-                f.write(json.dumps(item, ensure_ascii=False) + "\n")
-
-    total_dialogues = 0
-    error_count = 0
-    dialogue_records = []
-
+        alt_corpus = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
+        if os.path.exists(alt_corpus):
+            corpus_path = alt_corpus
+        else:
+            print("Error: corpus/dialogues.jsonl not found.")
+            sys.exit(1)
+            
+    total_lines = 0
+    valid_lines = 0
+    errors = 0
+    
     with open(corpus_path, "r", encoding="utf-8") as f:
         for line_num, line in enumerate(f, 1):
             line = line.strip()
             if not line:
                 continue
+            total_lines += 1
             try:
-                record = json.loads(line)
-                total_dialogues += 1
-                if "turns" not in record or not isinstance(record["turns"], list):
-                    error_count += 1
-                else:
-                    for turn in record["turns"]:
-                        if "speaker" not in turn or "text" not in turn:
-                            error_count += 1
-                            break
-                dialogue_records.append(record)
-            except json.JSONDecodeError:
-                error_count += 1
-
-    report = {
-        "timestamp": time.time(),
-        "total_dialogues": total_dialogues,
-        "error_count": error_count,
-        "status": "success" if error_count == 0 else "warnings_detected"
-    }
-
-    report_dir = "/home/phenox/gemini-sandbox/TOAI_Generated"
-    os.makedirs(report_dir, exist_ok=True)
-    report_path = os.path.join(report_dir, "dialogue_audit_report.json")
-    with open(report_path, "w", encoding="utf-8") as f:
-        json.dump(report, f, ensure_ascii=False, indent=2)
-
-    print(f"Dialogue audit completed successfully. Report saved to {report_path}")
+                data = json.loads(line)
+                if not isinstance(data, dict):
+                    raise ValueError("Root element must be an object")
+                if "dialogue" not in data and "messages" not in data:
+                    raise ValueError("Missing dialogue or messages key")
+                valid_lines += 1
+            except Exception as e:
+                errors += 1
+                print(f"Line {line_num} error: {e}")
+                
+    print(f"Total dialogues: {total_lines}")
+    print(f"Valid dialogues: {valid_lines}")
+    print(f"Errors detected: {errors}")
 
 if __name__ == "__main__":
     try:
-        analyze_corpus()
+        analyze()
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)

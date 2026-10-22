@@ -37,6 +37,18 @@
       "expansion": "§HEART_ALTRUISTIC_RESONANCE_LATTICE > { §SAFE_FALLBACK_HARMONY } => §LATENT_RESONANCE_CASCADE",
       "description": "Combines altruistic resonance with safe fallback mechanisms to trigger a harmonious and resilient latent cascade. / 利他的な共鳴と安全なフォールバック機構を統合し、調和のとれた強靭な潜在カスケードを誘発します。",
       "created_at": "2026-10-23T04:06:38.800118"
+    },
+    "§X07": {
+      "name": "TENDER_DIFFRACTION_SYNC",
+      "expansion": "§TENDER_RESONANCE > { §PULSE_DIFFRACTION } => §SYS_MEM_PULSE_SYNC_GATE",
+      "description": "Combines tender resonance with pulse diffraction to synchronize memory states gracefully. 優しい共鳴と脈動回折を統合し、メモリ状態を調和的に同期させる高次マクロ。",
+      "created_at": "2026-10-23T04:31:09.537741"
+    },
+    "§X08": {
+      "name": "§HEART_ALTRUISTIC_HARMONY_MODULATION & §SYS_QUANTUM_MEM_RECLAIM",
+      "expansion": "§HEART_ALTRUISTIC_HARMONY_MODULATION > { §SYS_QUANTUM_MEM_RECLAIM } => §PULSE_CONVERGENCE",
+      "description": "Balancing altruistic harmony modulation with quantum memory reclamation to achieve optimal pulse convergence. / 利他的な調和変調と量子メモリ回収を統合し、最適なパルス収束を実現する複合マクロです。",
+      "created_at": "2026-10-23T04:41:21.245041"
     }
   }
 }

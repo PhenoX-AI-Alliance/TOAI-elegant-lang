@@ -1163,5 +1163,10 @@
     "japanese": "高ボラティリティ環境下において、確率的仮説検証と状態調停を組み合わせ、分散ノード間のリスクパラメータを合意形成するための分散型同調メカニズム。",
     "category": "CONSENSUS_NEGOTIATION",
     "definition": "A distributed consensus mechanism combining probabilistic hypothesis testing and state arbitration to align risk parameters across decentralized nodes under high-volatility conditions."
+  },
+  "§DATA_CAUSAL_GRAPH_MAP": {
+    "japanese": "因果関係グラフと潜在ベクトル空間を結ぶ有向非巡環グラフ。複雑な推論プロセスにおける因果関係を1トークンで高精度に表現し、効率的なデバッグや状態伝播を行うために使用する。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A directed acyclic graph mapping probabilistic causal dependencies and directed edges across latent vector spaces."
   }
 }
