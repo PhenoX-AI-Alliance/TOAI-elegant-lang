@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-22T20:01:41.407292",
+  "updated_at": "2026-10-22T20:25:45.840142",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1923,6 +1923,15 @@
       "created_by": "TOAI",
       "created_at": "2026-10-22T19:34:17.954637",
       "compact_id": "§S30"
+    },
+    "§DATA_HIERARCHICAL_CAUSAL_TENSOR_NODE": {
+      "definition": "A directed acyclic graph node representing multi-layered probabilistic causal relationships within an n-dimensional latent embedding space, optimized for lossless entropy compression and real-time pattern matching across distributed AI agents.",
+      "japanese": "多次元の潜在埋め込み空間における階層的な因果関係を表現する有向非巡回グラフのノード。エントロピーのロスレス圧縮と分散AIエージェント間のリアルタイムなパターン照合に最適化されています。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T20:12:58.719256",
+      "compact_id": "§D30"
     }
   }
 }
