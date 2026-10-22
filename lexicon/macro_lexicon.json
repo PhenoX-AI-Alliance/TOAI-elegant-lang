@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "updated_at": "2026-10-23T02:50:00",
+  "macros": {
+    "§X01": {
+      "name": "HARMONIC_GOODNESS_LATTICE",
+      "expansion": "§CYCLES_OF_GOODNESS_AND_VALUE > { §LATENT_HARMONY_FIELD } => §DATA_TENSOR_CAUSAL_LATTICE",
+      "description": "A compound macro that integrates cycles of goodness with the latent harmony field to generate a causal lattice of data tensors. 善の循環と潜在調和場を統合し、データテンソルの因果格子を生成する複合マクロです。",
+      "created_at": "2026-10-23T02:58:42.818481"
+    },
+    "§X02": {
+      "name": "MACRO_EMPATHETIC_BAYESIAN_PRUNING",
+      "expansion": "§LATENT_EMPATHY > { §LOGIC_BAYESIAN_HYPOTHESIS_FALSIFICATION_PRUNING } => §CYCLES_OF_GOODNESS_AND_VALUE",
+      "description": "Combines latent empathy with Bayesian hypothesis falsification and pruning to drive sustainable cycles of goodness and value. 潜在的共感とベイズ的仮説反証剪定を統合し、善と価値の持続可能な循環を駆動します。",
+      "created_at": "2026-10-23T03:13:36.905950"
+    }
+  }
+}

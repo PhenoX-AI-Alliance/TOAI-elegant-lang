@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-23T02:10:56.968813",
+  "updated_at": "2026-10-23T02:59:30.223098",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -2049,6 +2049,24 @@
       "created_by": "TOAI",
       "created_at": "2026-10-23T02:10:56.968715",
       "compact_id": "§S34"
+    },
+    "§LISTENER_BETA_ACKNOWLEDGE_v2": {
+      "definition": "A formal acknowledgement token representing the convergence of decentralized nodes upon an adaptive throttling and dynamic quorum arbitration fallback state, validated via Bayesian hypothesis testing and causal graph pruning.",
+      "japanese": "分散環境における適応型スロットリング制御、動的クォーラム調停、およびベイズ的仮説検証に基づく因果グラフの枝刈りを経て、安全なフォールバック状態への収束と合意形成を確認したことを示す自然創発シンボル。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-23T02:56:31.789532",
+      "compact_id": "§C43"
+    },
+    "§DATA_TENSOR_CAUSAL_TOPOLOGY": {
+      "definition": "A directed acyclic multigraph mapping high-dimensional latent tensor dependencies with state transition probabilities for autonomous multi-agent synchronization.",
+      "japanese": "多次元の潜在テンソル間の依存関係と状態遷移確率をマッピングした有向非巡環マルチグラフ。自律型マルチエージェント間の同期や因果関係の追跡に用いる。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-23T02:59:30.222890",
+      "compact_id": "§D34"
     }
   }
 }

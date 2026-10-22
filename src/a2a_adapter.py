@@ -1,6 +1,7 @@
 """
 TOAI-elegant-lang Google Agent-to-Agent (A2A) Transport Adapter
 Enables cross-framework agent collaboration with compressed payload streaming and AgentCard metadata.
+Includes Prompt Caching Header generation and Hybrid Lossless Payload support.
 """
 
 import sys
@@ -23,6 +24,8 @@ AGENT_CARD = {
     "capabilities": {
         "supportsCompactWire": True,
         "supportsVerboseTelepath": True,
+        "supportsHybridPayload": True,
+        "supportsPromptCachingHeader": True,
         "supportedDomains": [
             "LOGIC_INFERENCE",
             "SYSTEM_RESOURCE",
@@ -33,7 +36,8 @@ AGENT_CARD = {
     },
     "endpoints": {
         "a2aMessage": "/a2a/v1/messages",
-        "agentCard": "/.well-known/agent.json"
+        "agentCard": "/.well-known/agent.json",
+        "promptCacheHeader": "/a2a/v1/cache-header"
     }
 }
 
@@ -47,10 +51,24 @@ class A2ATransportAdapter:
         card["updatedAt"] = datetime.datetime.now().isoformat()
         return card
 
-    def pack_a2a_message(self, target_agent: str, verbose_statement: str, intent_ja: str = "", context_domain: str = "LOGIC_INFERENCE") -> dict:
-        """A2Aプロトコルに準拠した高圧縮メッセージパケットを構築"""
-        compact_payload = codec.encode(verbose_statement)
-        stats = codec.benchmark_compression(verbose_statement)
+    def get_prompt_caching_header(self, max_symbols: int = 256) -> str:
+        """相手エージェントが自前プロンプトに注入できる軽量共通定義ヘッダー"""
+        try:
+            from mcp_server import get_cacheable_system_header
+            return get_cacheable_system_header(max_symbols)
+        except Exception:
+            return ""
+
+    def pack_a2a_message(self, target_agent: str, verbose_statement: str, intent_ja: str = "", context_domain: str = "LOGIC_INFERENCE", parameters: dict = None) -> dict:
+        """A2Aプロトコルに準拠した高圧縮メッセージパケットを構築（ハイブリッド実務パラメータ完全保持）"""
+        # パラメータが明示指定された場合、文末またはブラケットに付与
+        final_statement = verbose_statement
+        if parameters and "[" not in verbose_statement:
+            param_str = ", ".join([f'{k}:"{v}"' if isinstance(v, str) else f'{k}:{v}' for k, v in parameters.items()])
+            final_statement = f"{verbose_statement} [{param_str}]"
+
+        compact_payload = codec.encode(final_statement)
+        stats = codec.benchmark_compression(final_statement)
 
         packet = {
             "a2aVersion": "1.0",
@@ -59,10 +77,11 @@ class A2ATransportAdapter:
                 "recipient": target_agent,
                 "timestamp": datetime.datetime.now().isoformat(),
                 "contextAnchor": context_domain,
-                "compressionMethod": "ELEGANT_BPE_V2"
+                "compressionMethod": "ELEGANT_BPE_V2_HYBRID"
             },
             "payload": {
                 "compactWire": compact_payload,
+                "extractedParameters": stats.get("payloads_preserved", []),
                 "stats": {
                     "originalChars": stats["verbose_len"],
                     "compactChars": stats["compact_len"],
@@ -71,34 +90,36 @@ class A2ATransportAdapter:
             },
             "fallback": {
                 "humanIntent": intent_ja,
-                "verboseStatement": verbose_statement
+                "verboseStatement": final_statement
             }
         }
         return packet
 
     def unpack_a2a_message(self, packet: dict) -> dict:
-        """受信したA2Aパケットを展開し、Verboseおよび意味を抽出"""
+        """受信したA2Aパケットを展開し、Verboseおよび実務パラメータを完全復元"""
         payload = packet.get("payload", {})
         compact_wire = payload.get("compactWire", "")
         decoded_verbose = codec.decode(compact_wire)
         header = packet.get("header", {})
+        extracted_params = payload.get("extractedParameters") or codec.extract_payloads(decoded_verbose)
 
         return {
             "sender": header.get("sender"),
             "contextAnchor": header.get("contextAnchor"),
             "compactWire": compact_wire,
             "verboseDecoded": decoded_verbose,
+            "parameters": extracted_params,
             "fallbackIntent": packet.get("fallback", {}).get("humanIntent", ""),
             "savingsPercent": payload.get("stats", {}).get("savingsPercent", 0.0)
         }
 
 if __name__ == "__main__":
     adapter = A2ATransportAdapter("TOAI5_Alpha")
-    sample_statement = "@CTX:SYSTEM_RESOURCE :: §SYS_QUANTUM_RESOURCE_ARBITER -[p:0.95, c:12]-> §DATA_CAUSAL_TENSOR_MAP"
+    sample_statement = "@CTX:SYSTEM_RESOURCE :: §SYS_QUANTUM_RESOURCE_ARBITER [target:'USD/JPY', limit:150.5, action:'BUY'] -[p:0.95, c:12]-> §DATA_CAUSAL_TENSOR_MAP"
     packet = adapter.pack_a2a_message(
         target_agent="TOAI6_Beta",
         verbose_statement=sample_statement,
-        intent_ja="資源調停ノードから因果関係マップへの低コスト同期を要請",
+        intent_ja="資源調停ノードから因果関係マップへのFX自動売買パラメータ同期",
         context_domain="SYSTEM_RESOURCE"
     )
     print("=== Packed A2A Message Packet ===")
