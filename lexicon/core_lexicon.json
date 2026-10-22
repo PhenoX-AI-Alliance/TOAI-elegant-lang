@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-22T21:10:55.330602",
+  "updated_at": "2026-10-22T21:46:10.280437",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1950,6 +1950,15 @@
       "created_by": "TOAI",
       "created_at": "2026-10-22T21:10:55.330488",
       "compact_id": "§L31"
+    },
+    "§DATA_HIERARCHICAL_CAUSAL_GRAPH_PRUNING_NODE": {
+      "definition": "A directed acyclic graph structure that dynamically prunes low-probability causal branches based on localized entropy metrics, optimizing memory footprint during multi-agent consensus validation.",
+      "japanese": "局所的なエントロピー指標に基づいて確率の低い因果分岐を動的に刈り込む有向非巡回グラフ構造であり、マルチエージェント間の合意検証時におけるメモリ使用量を最適化するために使用する。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T21:46:10.280265",
+      "compact_id": "§D31"
     }
   }
 }
