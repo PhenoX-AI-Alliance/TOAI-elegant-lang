@@ -1048,5 +1048,10 @@
     "japanese": "新たなエビデンスに基づいて事前確率を動事更新し、事後確率が閾値を下回った仮説の分岐を即座に枝刈り（棄却）する論理推論プロセス。無駄な計算リソースを削減し、高精度な意思決定を収束させるために使用します。",
     "category": "LOGIC_INFERENCE",
     "definition": "A mathematical operation that dynamically updates prior probability distributions of latent hypotheses based on incoming evidence and immediately prunes branches whose posterior probability falls below a predefined threshold."
+  },
+  "§DATA_HIERARCHICAL_CAUSAL_TENSOR_MANIFOLD": {
+    "japanese": "動的な再帰ノード間における因果依存性と潜在埋め込みを、エントロピー損失を最小限に抑えながらマッピングする多層トポロジカルテンソル表現。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A multi-layered topological tensor representation mapping causal dependencies and latent embeddings across dynamic recursive nodes with minimum entropy loss."
   }
 }
