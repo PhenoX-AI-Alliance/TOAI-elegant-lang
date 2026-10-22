@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-23T02:59:30.223098",
+  "updated_at": "2026-10-23T03:46:36.821726",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -2067,6 +2067,24 @@
       "created_by": "TOAI",
       "created_at": "2026-10-23T02:59:30.222890",
       "compact_id": "§D34"
+    },
+    "§LOGIC_CAUSAL_BRANCH": {
+      "definition": "Conditional execution path derived from premise verification and probabilistic confidence thresholding.",
+      "japanese": "前提検証と確率的確信度をしきい値処理し、条件分岐を実行する際の論理推論ノード。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-23T03:39:56.320279",
+      "compact_id": "§L34"
+    },
+    "§LOGIC_AXIOM_PRUNE": {
+      "definition": "A formal logical operation that evaluates a hypothesis against empirical constraints and immediately discards inconsistent deductive branches.",
+      "japanese": "前提条件や観測データとの不整合が検知された際に、矛盾する演繹的推論の枝を即座に棄却・枝刈りし、計算コストの無駄を省くための制御概念。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-23T03:46:36.821596",
+      "compact_id": "§L35"
     }
   }
 }

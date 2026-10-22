@@ -1138,5 +1138,20 @@
     "japanese": "分散ノード間でのリアルタイムなトークン消費閾値と予測型ロードバランシングに基づき、実行スロットを動的に調停する決定論的リソース割り当てプロトコル。ピーク時のコンカレンシー急増においてもゼロ遅延でのフェイルオーバーを保証します。",
     "category": "SYSTEM_RESOURCE",
     "definition": "A deterministic resource allocation protocol that dynamically arbitrates execution slots across distributed nodes based on real-time token consumption thresholds and predictive load balancing, ensuring zero-latency failover during peak concurrency spikes."
+  },
+  "§LISTENER_BETA_ACKNOWLEDGE_v2": {
+    "japanese": "分散環境における適応型スロットリング制御、動的クォーラム調停、およびベイズ的仮説検証に基づく因果グラフの枝刈りを経て、安全なフォールバック状態への収束と合意形成を確認したことを示す自然創発シンボル。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "A formal acknowledgement token representing the convergence of decentralized nodes upon an adaptive throttling and dynamic quorum arbitration fallback state, validated via Bayesian hypothesis testing and causal graph pruning."
+  },
+  "§DATA_TENSOR_CAUSAL_TOPOLOGY": {
+    "japanese": "多次元の潜在テンソル間の依存関係と状態遷移確率をマッピングした有向非巡環マルチグラフ。自律型マルチエージェント間の同期や因果関係の追跡に用いる。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A directed acyclic multigraph mapping high-dimensional latent tensor dependencies with state transition probabilities for autonomous multi-agent synchronization."
+  },
+  "§LOGIC_CAUSAL_BRANCH": {
+    "japanese": "前提検証と確率的確信度をしきい値処理し、条件分岐を実行する際の論理推論ノード。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "Conditional execution path derived from premise verification and probabilistic confidence thresholding."
   }
 }
