@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-22T16:51:53.911497",
+  "updated_at": "2026-10-22T17:07:13.450617",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1869,6 +1869,15 @@
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-22T16:48:36.293761",
       "compact_id": "§S28"
+    },
+    "§DATA_RECURSIVE_HYPER_GRAPH_LATTICE_NODE": {
+      "definition": "A recursively self-referential high-dimensional node structure designed for encoding dynamic causal graphs and entropy-compressed multi-layered embedding spaces in distributed agent communication.",
+      "japanese": "分散エージェント間通信において、動的な因果関係グラフやエントロピー圧縮された多層埋め込み空間を高密度に符号化するための、再帰的かつ自己言及的な高次元ノード構造。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T16:52:55.777584",
+      "compact_id": "§D28"
     }
   }
 }
