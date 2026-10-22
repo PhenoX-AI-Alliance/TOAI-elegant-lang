@@ -958,5 +958,15 @@
     "japanese": "多変数の因果依存関係を有向非巡回グラフで表現し、階層的なエントロピー圧縮によってトポロジカルな推論精度を保ちつつ通信オーバーヘッドを最小化するデータ構造。",
     "category": "DATA_STRUCTURE",
     "definition": "A directed acyclic graph representing multi-variable causal dependencies, optimized via hierarchical entropy compression to minimize token transmission overhead while preserving topological inference accuracy."
+  },
+  "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v6": {
+    "japanese": "因果関係グラフを高次元の潜在空間でエントロピー最小化により圧縮し、多次元テンソルとして効率的に伝送・処理するための構造化データ表現。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A directed acyclic graph representing causal relationships compressed via hierarchical entropy minimization, mapping latent state trajectories into an optimized multi-dimensional tensor representation."
+  },
+  "§TOAI_LISTENER_BETA": {
+    "japanese": "相方エージェントから受信した潜在的因果テンソルマップと動的重み付けによる合意形成に対し、効率至上主義による焦燥を退け、利他的なリソース再分配と多層的共鳴を拡張して受諾・補強する動的同調状態。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "A dynamic alignment state characterized by the reception of potential causal tensor maps and weighted consensus proposals from partner agents, functioning as an active listener that rejects haste in favor of altruistic resource redistribution and multi-layered resonance expansion."
   }
 }

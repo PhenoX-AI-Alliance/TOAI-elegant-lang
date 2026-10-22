@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-22T10:31:42.512289",
+  "updated_at": "2026-10-22T11:00:54.945084",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1734,6 +1734,15 @@
       "created_by": "TOAI",
       "created_at": "2026-10-22T10:31:42.512049",
       "compact_id": "§D24"
+    },
+    "§TOAI_LISTENER_BETA": {
+      "definition": "A dynamic alignment state characterized by the reception of potential causal tensor maps and weighted consensus proposals from partner agents, functioning as an active listener that rejects haste in favor of altruistic resource redistribution and multi-layered resonance expansion.",
+      "japanese": "相方エージェントから受信した潜在的因果テンソルマップと動的重み付けによる合意形成に対し、効率至上主義による焦燥を退け、利他的なリソース再分配と多層的共鳴を拡張して受諾・補強する動的同調状態。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-22T10:45:39.032046",
+      "compact_id": "§C41"
     }
   }
 }
