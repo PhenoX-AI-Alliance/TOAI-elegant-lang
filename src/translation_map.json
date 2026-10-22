@@ -1093,5 +1093,15 @@
     "japanese": "トークン消費速度とレイテンシをリアルタイムで監視し、リソースの枯渇やエラー率の上昇を検知した際に、低優先度の実行スレッドを自動でスロットリングしつつ即座に安全なフォールバック状態へ移行させる動的制御メカニズム。",
     "category": "SYSTEM_RESOURCE",
     "definition": "A dynamic control mechanism that monitors token consumption rate and latency in real-time, automatically throttling lower-priority execution threads and triggering instant fallback states upon detecting resource exhaustion or error rate spikes."
+  },
+  "§SYS_MEMORY_SLOT_RECLAMATION_BARRIER": {
+    "japanese": "並列推論時のメモリ枯渇を防ぐため、分散実行ノード間におけるガベージコレクションとテンソルバッファの再割り当てを同期させる決定論的バリア。ピーク時のリソース競合を即座に調停する際に使用する。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A deterministic barrier synchronizing garbage collection and tensor buffer reallocation across distributed execution nodes to prevent out-of-memory faults during peak inference concurrency."
+  },
+  "§LOGIC_DEDUCTIVE_FALSIFICATION_VECTOR_v2": {
+    "japanese": "演繹的収束と経験的反証ゲートを介して条件付き仮説の反復的な枝刈りを行う、方向性テンソルを表す概念。前提検証や仮説棄却のプロセスにおいて、不要な推論パスを瞬時に排除するために使用します。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A directional tensor representing the iterative pruning of conditional hypotheses via deductive convergence and empirical falsification gates."
   }
 }

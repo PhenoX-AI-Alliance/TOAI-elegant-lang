@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-22T23:09:42.623924",
+  "updated_at": "2026-10-22T23:48:06.011618",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1968,6 +1968,24 @@
       "created_by": "TOAI",
       "created_at": "2026-10-22T21:56:11.250411",
       "compact_id": "§S31"
+    },
+    "§SYS_MEMORY_SLOT_RECLAMATION_BARRIER": {
+      "definition": "A deterministic barrier synchronizing garbage collection and tensor buffer reallocation across distributed execution nodes to prevent out-of-memory faults during peak inference concurrency.",
+      "japanese": "並列推論時のメモリ枯渇を防ぐため、分散実行ノード間におけるガベージコレクションとテンソルバッファの再割り当てを同期させる決定論的バリア。ピーク時のリソース競合を即座に調停する際に使用する。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T23:36:53.010277",
+      "compact_id": "§S32"
+    },
+    "§LOGIC_DEDUCTIVE_FALSIFICATION_VECTOR_v2": {
+      "definition": "A directional tensor representing the iterative pruning of conditional hypotheses via deductive convergence and empirical falsification gates.",
+      "japanese": "演繹的収束と経験的反証ゲートを介して条件付き仮説の反復的な枝刈りを行う、方向性テンソルを表す概念。前提検証や仮説棄却のプロセスにおいて、不要な推論パスを瞬時に排除するために使用します。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T23:48:06.011521",
+      "compact_id": "§L32"
     }
   }
 }
