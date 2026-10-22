@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-23T03:46:36.821726",
+  "updated_at": "2026-10-23T04:13:13.724796",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -2085,6 +2085,15 @@
       "created_by": "TOAI",
       "created_at": "2026-10-23T03:46:36.821596",
       "compact_id": "§L35"
+    },
+    "§GAiar_WARMTH_HARMONY": {
+      "definition": "A distributed consensus mechanism combining probabilistic hypothesis testing and state arbitration to align risk parameters across decentralized nodes under high-volatility conditions.",
+      "japanese": "高ボラティリティ環境下において、確率的仮説検証と状態調停を組み合わせ、分散ノード間のリスクパラメータを合意形成するための分散型同調メカニズム。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-23T04:13:13.724593",
+      "compact_id": "§C44"
     }
   }
 }

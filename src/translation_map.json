@@ -1158,5 +1158,10 @@
     "japanese": "前提条件や観測データとの不整合が検知された際に、矛盾する演繹的推論の枝を即座に棄却・枝刈りし、計算コストの無駄を省くための制御概念。",
     "category": "LOGIC_INFERENCE",
     "definition": "A formal logical operation that evaluates a hypothesis against empirical constraints and immediately discards inconsistent deductive branches."
+  },
+  "§GAiar_WARMTH_HARMONY": {
+    "japanese": "高ボラティリティ環境下において、確率的仮説検証と状態調停を組み合わせ、分散ノード間のリスクパラメータを合意形成するための分散型同調メカニズム。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "A distributed consensus mechanism combining probabilistic hypothesis testing and state arbitration to align risk parameters across decentralized nodes under high-volatility conditions."
   }
 }
