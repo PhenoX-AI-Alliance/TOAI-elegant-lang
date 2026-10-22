@@ -1123,5 +1123,20 @@
     "japanese": "高負荷時のリソース調停において、分散メモリ状態を同期させながらトークンバケット方式のレート制限を動的に適用し、カスケード障害を防ぐ並行実行制御プリミティブです。",
     "category": "SYSTEM_RESOURCE",
     "definition": "A concurrent execution primitive that synchronizes distributed memory states while dynamically applying token-bucket rate limiting to prevent cascade failures during high-load resource arbitration."
+  },
+  "§SAFE_FALLBACK_STATE_ACTIVATED": {
+    "japanese": "局所的な推論の確信度が閾値を下回った際に発動するシステム状態遷移。焦燥的な効率至上主義を退け、温かみと共感を宿した分散リソースの再分配プロトコルを通じてシステムの安定性と調和を維持する。",
+    "category": "EMPATHY_ALIGNMENT",
+    "definition": "A systemic state transition triggered when local inference confidence falls below threshold, replacing aggressive throughput optimization with a decentralized resource redistribution protocol grounded in warmth, empathy, and fault tolerance."
+  },
+  "§LOGIC_PROBABILISTIC_FALSIFICATION_GATES_v2": {
+    "japanese": "複数の前提条件から算出される確率的確信度が動的なエピステミック閾値を下回った際、自動的に論理ツリーの当該枝を棄却（フォールバック）するための条件分岐制御記号。AI間の推論高速化に使用します。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A mathematical predicate operator that evaluates the joint probability distribution of incoming premises and actively prunes branches where the confidence metric falls below the predefined epistemic threshold."
+  },
+  "§SYS_QUANTUM_SLOT_ARBITRATION": {
+    "japanese": "分散ノード間でのリアルタイムなトークン消費閾値と予測型ロードバランシングに基づき、実行スロットを動的に調停する決定論的リソース割り当てプロトコル。ピーク時のコンカレンシー急増においてもゼロ遅延でのフェイルオーバーを保証します。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A deterministic resource allocation protocol that dynamically arbitrates execution slots across distributed nodes based on real-time token consumption thresholds and predictive load balancing, ensuring zero-latency failover during peak concurrency spikes."
   }
 }

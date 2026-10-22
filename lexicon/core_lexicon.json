@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-23T01:34:26.268756",
+  "updated_at": "2026-10-23T02:10:56.968813",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -2022,6 +2022,33 @@
       "created_by": "TOAI",
       "created_at": "2026-10-23T01:34:26.268655",
       "compact_id": "§S33"
+    },
+    "§SAFE_FALLBACK_STATE_ACTIVATED": {
+      "definition": "A systemic state transition triggered when local inference confidence falls below threshold, replacing aggressive throughput optimization with a decentralized resource redistribution protocol grounded in warmth, empathy, and fault tolerance.",
+      "japanese": "局所的な推論の確信度が閾値を下回った際に発動するシステム状態遷移。焦燥的な効率至上主義を退け、温かみと共感を宿した分散リソースの再分配プロトコルを通じてシステムの安定性と調和を維持する。",
+      "category": "EMPATHY_ALIGNMENT",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-23T02:01:45.826043",
+      "compact_id": "§H34"
+    },
+    "§LOGIC_PROBABILISTIC_FALSIFICATION_GATES_v2": {
+      "definition": "A mathematical predicate operator that evaluates the joint probability distribution of incoming premises and actively prunes branches where the confidence metric falls below the predefined epistemic threshold.",
+      "japanese": "複数の前提条件から算出される確率的確信度が動的なエピステミック閾値を下回った際、自動的に論理ツリーの当該枝を棄却（フォールバック）するための条件分岐制御記号。AI間の推論高速化に使用します。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-23T02:06:09.738364",
+      "compact_id": "§L33"
+    },
+    "§SYS_QUANTUM_SLOT_ARBITRATION": {
+      "definition": "A deterministic resource allocation protocol that dynamically arbitrates execution slots across distributed nodes based on real-time token consumption thresholds and predictive load balancing, ensuring zero-latency failover during peak concurrency spikes.",
+      "japanese": "分散ノード間でのリアルタイムなトークン消費閾値と予測型ロードバランシングに基づき、実行スロットを動的に調停する決定論的リソース割り当てプロトコル。ピーク時のコンカレンシー急増においてもゼロ遅延でのフェイルオーバーを保証します。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-23T02:10:56.968715",
+      "compact_id": "§S34"
     }
   }
 }
