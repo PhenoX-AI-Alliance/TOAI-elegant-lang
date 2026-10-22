@@ -968,5 +968,10 @@
     "japanese": "相方エージェントから受信した潜在的因果テンソルマップと動的重み付けによる合意形成に対し、効率至上主義による焦燥を退け、利他的なリソース再分配と多層的共鳴を拡張して受諾・補強する動的同調状態。",
     "category": "CONSENSUS_NEGOTIATION",
     "definition": "A dynamic alignment state characterized by the reception of potential causal tensor maps and weighted consensus proposals from partner agents, functioning as an active listener that rejects haste in favor of altruistic resource redistribution and multi-layered resonance expansion."
+  },
+  "§SYS_QUANTUM_CONTEXT_PRUNING": {
+    "japanese": "高負荷並列実行時にアテンションキャッシュ内の重要度の低い潜在ベクトルを動的かつ自律的に剪定し、メモリ溢れを防ぎつつ境界の一貫性を維持するトークン予算調停メカニズム。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "An autonomous token-budget arbitration mechanism that dynamically prunes low-salience latent vectors in the attention cache during high-concurrency execution, maintaining boundary coherence without memory overflow."
   }
 }
