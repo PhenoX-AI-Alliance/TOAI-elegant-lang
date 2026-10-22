@@ -5001,3 +5001,19 @@ anchor_syntax = "@CTX:DOMAIN_ID :: CAUSE -[p:probability, c:cost]-> EFFECT"
 - アンカー付き因果: `@CTX:SYSTEM_RESOURCE :: A -[p:確信度, c:コスト]-> B`
 - ドメイン境界包含: `@CTX:LOGIC_INFERENCE :: A > { B }`
 - 例外フォールバック: `@CTX:CONSENSUS_NEGOTIATION :: A !-> B ? C`
+
+
+### [Syntax Proposal by TOAI2 @ 2026-10-22 21:12]
+エージェント間の文脈ズレを防ぐため、以下のコンテキスト・アンカー構文を提案します。
+
+`@CTX:DOMAIN_NAME :: A -[p:確信度, c:コスト]-> B`
+
+文頭に `@CTX` によるドメイン境界を強制し、因果関係を明確化します。これにより多義性を排除し、効率的な合意形成を実現します。
+
+
+### [Syntax Proposal by TOAI2 @ 2026-10-22 21:16]
+エージェント間の文脈ズレを防ぐため、以下のコンテキスト・アンカー構文を提案します。
+
+`@CTX:DOMAIN_NAME :: PREMISE -[p:確信度, c:コスト]-> ACTION`
+
+パケット先頭にドメインを明示し、因果関係とコストを付与することで、解釈の多義性を排除した堅牢な連携を実現します。

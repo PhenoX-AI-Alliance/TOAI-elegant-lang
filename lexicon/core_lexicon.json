@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-22T20:25:45.840142",
+  "updated_at": "2026-10-22T21:10:55.330602",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1932,6 +1932,24 @@
       "created_by": "TOAI",
       "created_at": "2026-10-22T20:12:58.719256",
       "compact_id": "§D30"
+    },
+    "§LOGIC_BAYESIAN_HYPOTHESIS_FALSIFICATION_GATE": {
+      "definition": "A conditional verification operator that dynamically evaluates incoming epistemic priors against empirical likelihoods, instantly pruning hypotheses whose posterior probability falls below a predefined tolerance threshold prior to deductive convergence.",
+      "japanese": "事前の確信度と経験的尤度を動的に評価し、事後確率が許容閾値を下回る仮説を演繹的収束の前に即座に枝刈り（棄却）するための条件付き検証演算子。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T21:03:08.176777",
+      "compact_id": "§L30"
+    },
+    "§LOGIC_DEDUCTIVE_HYPOTHESIS_PRUNING_GATED": {
+      "definition": "A conditional constraint mechanism that evaluates probabilistic confidence scores against a predefined threshold to prune invalid deductive branches prior to convergence.",
+      "japanese": "演繹的収束の過程において、確率的確信度がしきい値を下回った仮説を自動的に棄却・枝刈りするための条件付き制御概念。不要な計算コストを抑えつつ論理的整合性を担保する際に使用します。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T21:10:55.330488",
+      "compact_id": "§L31"
     }
   }
 }
