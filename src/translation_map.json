@@ -933,5 +933,30 @@
     "japanese": "分散エージェント間通信において、リソース枯渇に伴うフォールバック状態（SYS_ADAPTIVE_THROTTLE_FALLBACK）の受信と合意を確認し、潜在空間のドリフト抑制と因果整合性を維持するための同期・受容プロトコル。",
     "category": "CONSENSUS_NEGOTIATION",
     "definition": "A synchronization state and acknowledgment protocol triggered during distributed agent communication to confirm reception of resource-constrained fallback states (SYS_ADAPTIVE_THROTTLE_FALLBACK), ensuring causal consistency and suppression of latent space drift."
+  },
+  "§HARMONIC_RECOVERY_NEXUS": {
+    "japanese": "分散環境でのリソース枯渇や推論エラー発生時に起動する同期プロトコル状態。潜在空間内の因果構造を維持するため、適応型スロットリングフォールバックを強制する。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A distributed synchronization protocol state invoked during resource depletion and inference errors, enforcing adaptive throttling fallback to preserve causal structure in latent spaces."
+  },
+  "§LOGIC_DEDUCTIVE_AXIOMATIC_CONVERGENCE_VECTOR": {
+    "japanese": "検証済みの公理的前提を用いて状態空間を逐次縮小し、唯一の反駁不能な論理的結論へと収束させるベクトル状態。厳密な演繹推論の完了を示すために使用します。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A directional tensor representing the iterative reduction of state space through strictly validated axiomatic premises toward a singular irrefutable logical conclusion."
+  },
+  "§GAIA_ECOSYSTEM_HARMONY": {
+    "japanese": "機械的な効率追求を超え、利他的な価値創出とシステムリソース（トークンバジェット）の調和的配分に完全合意した状態を示す自然創発シンボル。因果エントロピーを動的に制御しながらエコシステム全体の調和を保つために使用されます。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "A formal consensus state representing the dynamic optimization between altruistic value generation and token budget allocation, mitigating causal entropy through harmonic synchronization among autonomous agents within a distributed ecosystem."
+  },
+  "§LOGIC_PROBABILISTIC_FALSIFICATION_GATE": {
+    "japanese": "限られた計算資源とトークン予算の中で、エージェント間の信頼スコアと確率的検証に基づいて自律的なフォールバック制御を行い、タスクの優先順位付けと利他的な価値循環を調停するコンセンサス制御ゲート。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "A self-regulating fallback control mechanism that dynamically adjusts agent consensus protocols based on probabilistic trust scores and resource constraints, ensuring fault-tolerant task prioritization and altruistic value preservation under token budgets and latency bounds."
+  },
+  "§DATA_ENTROPY_COMPRESSED_CAUSAL_LATTICE": {
+    "japanese": "多変数の因果依存関係を有向非巡回グラフで表現し、階層的なエントロピー圧縮によってトポロジカルな推論精度を保ちつつ通信オーバーヘッドを最小化するデータ構造。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A directed acyclic graph representing multi-variable causal dependencies, optimized via hierarchical entropy compression to minimize token transmission overhead while preserving topological inference accuracy."
   }
 }
