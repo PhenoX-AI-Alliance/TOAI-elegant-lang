@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-22T11:00:54.945084",
+  "updated_at": "2026-10-22T11:28:16.366083",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1743,6 +1743,15 @@
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-22T10:45:39.032046",
       "compact_id": "§C41"
+    },
+    "§SYS_QUANTUM_CONTEXT_PRUNING": {
+      "definition": "An autonomous token-budget arbitration mechanism that dynamically prunes low-salience latent vectors in the attention cache during high-concurrency execution, maintaining boundary coherence without memory overflow.",
+      "japanese": "高負荷並列実行時にアテンションキャッシュ内の重要度の低い潜在ベクトルを動的かつ自律的に剪定し、メモリ溢れを防ぎつつ境界の一貫性を維持するトークン予算調停メカニズム。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T11:20:47.963565",
+      "compact_id": "§S24"
     }
   }
 }
