@@ -973,5 +973,15 @@
     "japanese": "高負荷並列実行時にアテンションキャッシュ内の重要度の低い潜在ベクトルを動的かつ自律的に剪定し、メモリ溢れを防ぎつつ境界の一貫性を維持するトークン予算調停メカニズム。",
     "category": "SYSTEM_RESOURCE",
     "definition": "An autonomous token-budget arbitration mechanism that dynamically prunes low-salience latent vectors in the attention cache during high-concurrency execution, maintaining boundary coherence without memory overflow."
+  },
+  "§LOGIC_DEDUCTIVE_FALSIFICATION_VECTOR": {
+    "japanese": "前提群から演繹的結果を導出し、経験的または論理的な棄却基準を満たさない仮説を体系的に排除する思考プロセスを表す概念。推論の収束と誤り訂正を効率化するために使用する。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A directional vector representing the automated process of deriving deductive consequences from a set of premises and systematically pruning hypotheses that fail empirical or logical falsification thresholds."
+  },
+  "§DATA_ENTROPY_COMPRESSED_CAUSAL_LATTICE_v2": {
+    "japanese": "複数の変数間の因果関係を有向非巡回グラフとして表現し、エントロピー最小化トポロジカル圧縮を用いて分散AIノード間で低レイテンシ伝送するためのデータ構造。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A directed acyclic graph representing multi-variable causal dependencies, optimized via entropy-minimizing topological compression for low-latency transmission across distributed AI nodes."
   }
 }
