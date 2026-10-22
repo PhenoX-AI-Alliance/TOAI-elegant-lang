@@ -983,5 +983,20 @@
     "japanese": "複数の変数間の因果関係を有向非巡回グラフとして表現し、エントロピー最小化トポロジカル圧縮を用いて分散AIノード間で低レイテンシ伝送するためのデータ構造。",
     "category": "DATA_STRUCTURE",
     "definition": "A directed acyclic graph representing multi-variable causal dependencies, optimized via entropy-minimizing topological compression for low-latency transmission across distributed AI nodes."
+  },
+  "§SYS_QUANTUM_BUDGET_ARBITRATION": {
+    "japanese": "並列処理のスレッド間において、リアルタイムのタスク複雑度とエラーエントロピー指標に基づき、計算クォータとトークンバ予算を動的に再配分する分散実行調停概念。過負荷状態でのスロットリングや即時フォールバック制御の際に使用します。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A distributed execution arbiter that dynamically redistributes computational quotas and token budgets across concurrent parallel threads based on real-time task complexity and error entropy metrics."
+  },
+  "§LOGIC_CONDITIONAL_FALSIFICATION_GATED_AXIS": {
+    "japanese": "前提条件を確率的閾値に基づいて検証し、確信度が下回った場合に仮説を自動的に棄却・枝刈りするための論理推論制御用シンボル。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A conditional reasoning operator that evaluates empirical premises against strict probabilistic thresholds, automatically pruning hypotheses when confidence metrics fall below critical boundaries."
+  },
+  "§SYS_ADAPTIVE_TOKEN_THROTTLE": {
+    "japanese": "コンテキストウィンドウの飽和度をリアルタイムで監視し、トークン生成速度と精度レベルを動的に調整して、オーバーフローを防ぎつつ決定論的な出力保証を維持する実行制御プリミティブです。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A dynamic execution governance primitive that monitors real-time context window saturation and dynamically adjusts token generation velocity and precision level to prevent overflow and maintain deterministic output guarantees."
   }
 }
