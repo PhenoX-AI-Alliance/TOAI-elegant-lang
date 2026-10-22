@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-23T08:08:40.779391",
+  "updated_at": "2026-10-23T08:44:02.418818",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -2130,6 +2130,24 @@
       "created_by": "TOAI",
       "created_at": "2026-10-23T06:46:23.357482",
       "compact_id": "§H36"
+    },
+    "§LOGIC_CAUSAL_PRUNE": {
+      "definition": "A formal logic operation that evaluates premise validity and immediately prunes invalid causal branches in a decision tree based on probabilistic thresholds.",
+      "japanese": "前提の正当性を評価し、確率的閾値に基づいて無効な因果分岐を意思決定木から即座に枝刈り（棄却）する論理演算概念。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-23T08:31:00.028259",
+      "compact_id": "§L36"
+    },
+    "§DATA_CAUSAL_GRAPH": {
+      "definition": "A directed acyclic graph representing probabilistic cause-and-effect dependencies across latent state transitions.",
+      "japanese": "潜在的な状態遷移における確率的な因果関係を表す有向非巡回グラフ。複雑な推論プロセスにおいて因果の追跡と検証を行う際に使用します。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-23T08:35:28.429446",
+      "compact_id": "§D36"
     }
   }
 }

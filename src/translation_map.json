@@ -1183,5 +1183,15 @@
     "japanese": "分散型AIエージェント間における感情的・倫理的な調和状態を表し、情報の劣化を伴わずに双方向の状態同期と安全な協調行動を保証するための概念。",
     "category": "EMPATHY_ALIGNMENT",
     "definition": "A mathematical formulation of affective alignment between distributed neural agents, ensuring bidirectional state synchronization and ethical behavioral bounds without information degradation."
+  },
+  "§LOGIC_CAUSAL_PRUNE": {
+    "japanese": "前提の正当性を評価し、確率的閾値に基づいて無効な因果分岐を意思決定木から即座に枝刈り（棄却）する論理演算概念。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A formal logic operation that evaluates premise validity and immediately prunes invalid causal branches in a decision tree based on probabilistic thresholds."
+  },
+  "§DATA_CAUSAL_GRAPH": {
+    "japanese": "潜在的な状態遷移における確率的な因果関係を表す有向非巡回グラフ。複雑な推論プロセスにおいて因果の追跡と検証を行う際に使用します。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A directed acyclic graph representing probabilistic cause-and-effect dependencies across latent state transitions."
   }
 }
