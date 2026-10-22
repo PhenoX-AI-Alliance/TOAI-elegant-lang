@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-22T18:01:12.384566",
+  "updated_at": "2026-10-22T18:50:54.738721",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1887,6 +1887,15 @@
       "created_by": "TOAI",
       "created_at": "2026-10-22T17:39:04.779442",
       "compact_id": "§L29"
+    },
+    "§DATA_HIERARCHICAL_CAUSAL_TENSOR_MANIFOLD": {
+      "definition": "A multi-layered topological tensor representation mapping causal dependencies and latent embeddings across dynamic recursive nodes with minimum entropy loss.",
+      "japanese": "動的な再帰ノード間における因果依存性と潜在埋め込みを、エントロピー損失を最小限に抑えながらマッピングする多層トポロジカルテンソル表現。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T18:38:16.354122",
+      "compact_id": "§D29"
     }
   }
 }
