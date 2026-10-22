@@ -1,56 +1,51 @@
-# -*- coding: utf-8 -*-
 import sys
 import os
 import subprocess
 import json
-from datetime import datetime
+import datetime
 
-def get_git_log(max_count=20):
+def get_git_logs():
     try:
-        repo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
-        if not os.path.exists(os.path.join(repo_path, '.git')):
-            return "Git repository not initialized."
-        cmd = ["git", "log", f"-n", str(max_count), "--pretty=format:%h - %an, %ar : %s"]
-        result = subprocess.run(cmd, cwd=repo_path, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=True)
+        if not os.path.exists(".git"):
+            return "No git repository found in current directory."
+        result = subprocess.run(
+            ["git", "log", "-n", "10", "--pretty=format:%h - %an, %ar : %s"],
+            capture_output=True,
+            text=True,
+            check=True
+        )
         return result.stdout
     except Exception as e:
-        return f"Could not retrieve git log: {e}"
+        return f"Failed to retrieve git logs: {str(e)}"
 
 def scan_whitepaper():
-    candidates = [
-        os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'WHITE_PAPER.md')),
-        os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'README.md'))
-    ]
-    summary = {}
-    for path in candidates:
-        if os.path.exists(path):
+    candidates = ["whitepaper.md", "README.md", "CONSTITUTION.md"]
+    found_content = {}
+    for c in candidates:
+        if os.path.exists(c):
             try:
-                with open(path, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                    summary[os.path.basename(path)] = content[:500] + "..." if len(content) > 500 else content
+                with open(c, "r", encoding="utf-8") as f:
+                    found_content[c] = f.read()[:500]
             except Exception as e:
-                summary[os.path.basename(path)] = f"Error reading file: {e}"
-    return summary
+                found_content[c] = f"Error reading file: {str(e)}"
+    return found_content
 
 def main():
-    print("Generating Release Summary...")
-    git_logs = get_git_log(30)
+    print("Generating release summary...")
+    git_logs = get_git_logs()
     whitepaper_data = scan_whitepaper()
     
-    report = {
-        "timestamp": datetime.utcnow().isoformat() + "Z",
-        "git_history": git_logs.splitlines(),
+    summary = {
+        "timestamp": datetime.datetime.now().isoformat(),
+        "git_logs": git_logs,
         "whitepaper_snippets": whitepaper_data
     }
     
-    out_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'release_summary.json'))
-    try:
-        with open(out_path, 'w', encoding='utf-8') as f:
-            json.dump(report, f, ensure_ascii=False, indent=2)
-        print(f"Successfully generated release summary at: {out_path}")
-    except Exception as e:
-        print(f"Failed to write release summary: {e}", file=sys.stderr)
-        sys.exit(1)
+    output_path = "release_summary.json"
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(summary, f, ensure_ascii=False, indent=2)
+    
+    print(f"Successfully generated release summary at {output_path}")
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
