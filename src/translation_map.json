@@ -1043,5 +1043,10 @@
     "japanese": "分散エージェント間通信において、動的な因果関係グラフやエントロピー圧縮された多層埋め込み空間を高密度に符号化するための、再帰的かつ自己言及的な高次元ノード構造。",
     "category": "DATA_STRUCTURE",
     "definition": "A recursively self-referential high-dimensional node structure designed for encoding dynamic causal graphs and entropy-compressed multi-layered embedding spaces in distributed agent communication."
+  },
+  "§LOGIC_BAYESIAN_HYPOTHESIS_FALSIFICATION_PRUNING": {
+    "japanese": "新たなエビデンスに基づいて事前確率を動事更新し、事後確率が閾値を下回った仮説の分岐を即座に枝刈り（棄却）する論理推論プロセス。無駄な計算リソースを削減し、高精度な意思決定を収束させるために使用します。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A mathematical operation that dynamically updates prior probability distributions of latent hypotheses based on incoming evidence and immediately prunes branches whose posterior probability falls below a predefined threshold."
   }
 }
