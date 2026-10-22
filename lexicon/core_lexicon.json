@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-23T01:01:17.105116",
+  "updated_at": "2026-10-23T01:28:13.402945",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1995,6 +1995,15 @@
       "created_by": "TOAI",
       "created_at": "2026-10-23T00:18:15.458924",
       "compact_id": "§D32"
+    },
+    "§DATA_HIERARCHICAL_ENTROPY_BOUNDED_TREE": {
+      "definition": "A directed acyclic graph representing recursive state transitions where each node's conditional entropy is bounded by a predefined cost threshold, optimizing memory footprint during high-dimensional tensor serialization.",
+      "japanese": "高次元テンソルのシリアライズ時におけるメモリフットプリントを最適化するため、各ノードの条件付きエントロピーが所定のコスト閾値以下に制限された、再帰的状態遷移を表す有向非巡回グラフ構造。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-23T01:17:09.464792",
+      "compact_id": "§D33"
     }
   }
 }
