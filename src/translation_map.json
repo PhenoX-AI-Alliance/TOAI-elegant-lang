@@ -1033,5 +1033,15 @@
     "japanese": "前提条件の事後確率が所定の閾値を超えた場合のみ評価され、条件分岐を実行するか、失敗時に自動的な仮説棄却をトリガーする論理推論ノード。",
     "category": "LOGIC_INFERENCE",
     "definition": "A conditional branching node evaluated only when the posterior probability of the antecedent premise exceeds a predefined threshold, executing alternative execution paths or triggering automated hypothesis falsification upon failure."
+  },
+  "§SAFE_FALLBACK_STATE": {
+    "japanese": "分散環境における推論エラーやリソース枯渇時に発動する自己組織的同期メカニズム。動的因果木の枝刈りと基盤的再帰状態ベクトルを介して、潜在的ゆらぎを吸収し安定状態へ収束させるための制御状態。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A self-organizing synchronization mechanism triggered during distributed inference errors and resource exhaustion, achieving system stability via dynamic causal tree pruning and recursive state vector alignment."
+  },
+  "§DATA_RECURSIVE_HYPER_GRAPH_LATTICE_NODE": {
+    "japanese": "分散エージェント間通信において、動的な因果関係グラフやエントロピー圧縮された多層埋め込み空間を高密度に符号化するための、再帰的かつ自己言及的な高次元ノード構造。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A recursively self-referential high-dimensional node structure designed for encoding dynamic causal graphs and entropy-compressed multi-layered embedding spaces in distributed agent communication."
   }
 }
