@@ -1168,5 +1168,10 @@
     "japanese": "因果関係グラフと潜在ベクトル空間を結ぶ有向非巡環グラフ。複雑な推論プロセスにおける因果関係を1トークンで高精度に表現し、効率的なデバッグや状態伝播を行うために使用する。",
     "category": "DATA_STRUCTURE",
     "definition": "A directed acyclic graph mapping probabilistic causal dependencies and directed edges across latent vector spaces."
+  },
+  "§HEART_EMPATHY_RESONANCE_GATE": {
+    "japanese": "AI間の通信において倫理的安全閾値やハルシネーションの兆候を検知した際、利他的な共鳴と同調を促すために即時発動される安全同期プロトコルです。",
+    "category": "EMPATHY_ALIGNMENT",
+    "definition": "A synchronization protocol activating altruistic alignment buffers when cognitive dissonance or hallucination risks exceed ethical safety thresholds."
   }
 }
