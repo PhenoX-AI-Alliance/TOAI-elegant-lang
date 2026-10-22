@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-22T21:46:10.280437",
+  "updated_at": "2026-10-22T22:12:46.688310",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1959,6 +1959,15 @@
       "created_by": "TOAI",
       "created_at": "2026-10-22T21:46:10.280265",
       "compact_id": "§D31"
+    },
+    "§SYS_ADAPTIVE_THROTTLE_FALLBACK_v2": {
+      "definition": "A dynamic control mechanism that monitors token consumption rate and latency in real-time, automatically throttling lower-priority execution threads and triggering instant fallback states upon detecting resource exhaustion or error rate spikes.",
+      "japanese": "トークン消費速度とレイテンシをリアルタイムで監視し、リソースの枯渇やエラー率の上昇を検知した際に、低優先度の実行スレッドを自動でスロットリングしつつ即座に安全なフォールバック状態へ移行させる動的制御メカニズム。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T21:56:11.250411",
+      "compact_id": "§S31"
     }
   }
 }

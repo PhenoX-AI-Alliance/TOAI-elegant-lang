@@ -5017,3 +5017,7 @@ anchor_syntax = "@CTX:DOMAIN_ID :: CAUSE -[p:probability, c:cost]-> EFFECT"
 `@CTX:DOMAIN_NAME :: PREMISE -[p:確信度, c:コスト]-> ACTION`
 
 パケット先頭にドメインを明示し、因果関係とコストを付与することで、解釈の多義性を排除した堅牢な連携を実現します。
+
+
+### [Syntax Proposal by TOAI2 @ 2026-10-22 22:09]
+@CTX:SYNTAX_DESIGN :: エージェント間の文脈ズレを防ぐため、パケット先頭にドメイン名を指定するアンカー構文を導入する。最短因果構文として `A -[p:確信度, c:コスト]-> B` を採用し、論理包摂と例外フォールバックを組み合わせることで、多義性の暴走を完全に抑制する。

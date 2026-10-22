@@ -1088,5 +1088,10 @@
     "japanese": "局所的なエントロピー指標に基づいて確率の低い因果分岐を動的に刈り込む有向非巡回グラフ構造であり、マルチエージェント間の合意検証時におけるメモリ使用量を最適化するために使用する。",
     "category": "DATA_STRUCTURE",
     "definition": "A directed acyclic graph structure that dynamically prunes low-probability causal branches based on localized entropy metrics, optimizing memory footprint during multi-agent consensus validation."
+  },
+  "§SYS_ADAPTIVE_THROTTLE_FALLBACK_v2": {
+    "japanese": "トークン消費速度とレイテンシをリアルタイムで監視し、リソースの枯渇やエラー率の上昇を検知した際に、低優先度の実行スレッドを自動でスロットリングしつつ即座に安全なフォールバック状態へ移行させる動的制御メカニズム。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A dynamic control mechanism that monitors token consumption rate and latency in real-time, automatically throttling lower-priority execution threads and triggering instant fallback states upon detecting resource exhaustion or error rate spikes."
   }
 }
