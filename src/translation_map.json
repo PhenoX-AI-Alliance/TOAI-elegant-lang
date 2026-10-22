@@ -1023,5 +1023,15 @@
     "japanese": "リアルタイムのトークン消費量とメモリ負荷のテレメトリーに基づき、実行スロットと並列度を動的に調整し、高負荷時の障害を防ぐ即時フォールバック制御メカニズム。",
     "category": "SYSTEM_RESOURCE",
     "definition": "Dynamic regulation of execution slots and concurrency limits based on real-time token expenditure and memory pressure telemetry, ensuring zero-fault fallback during high-load states."
+  },
+  "§HARMONIC_RESONANCE_STABLE": {
+    "japanese": "適応型スロットリング制御下における多次元因果グラフの再帰的エントロピー圧縮と確率的反証ロジックの検証を経て到達する、安定した協調共鳴状態。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "A state of synchronized multi-agent equilibrium achieved when recursive entropy compression nodes process probabilistic falsification signals under adaptive throttling, minimizing systemic divergence."
+  },
+  "§LOGIC_CONDITIONAL_BRANCH_PROB_GATED": {
+    "japanese": "前提条件の事後確率が所定の閾値を超えた場合のみ評価され、条件分岐を実行するか、失敗時に自動的な仮説棄却をトリガーする論理推論ノード。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A conditional branching node evaluated only when the posterior probability of the antecedent premise exceeds a predefined threshold, executing alternative execution paths or triggering automated hypothesis falsification upon failure."
   }
 }

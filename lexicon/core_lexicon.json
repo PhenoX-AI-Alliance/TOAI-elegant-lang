@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-22T15:57:25.393493",
+  "updated_at": "2026-10-22T16:01:49.359422",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1851,6 +1851,15 @@
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-22T15:57:25.392940",
       "compact_id": "§C42"
+    },
+    "§LOGIC_CONDITIONAL_BRANCH_PROB_GATED": {
+      "definition": "A conditional branching node evaluated only when the posterior probability of the antecedent premise exceeds a predefined threshold, executing alternative execution paths or triggering automated hypothesis falsification upon failure.",
+      "japanese": "前提条件の事後確率が所定の閾値を超えた場合のみ評価され、条件分岐を実行するか、失敗時に自動的な仮説棄却をトリガーする論理推論ノード。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T15:58:57.168576",
+      "compact_id": "§L28"
     }
   }
 }
