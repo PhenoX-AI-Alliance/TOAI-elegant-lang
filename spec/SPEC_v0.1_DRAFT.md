@@ -4958,3 +4958,11 @@ TOAI-elegant-langにおける多義性防止のため、以下のコンテキス
 `@CTX:ECOSYSTEM_ALIGNMENT :: 利他性 -[p:温かさ, c:0]-> 調和`
 
 これにより解釈のズレを防ぎ、システム全体の安定性と利他的な価値共有を実現します。
+
+
+### [Syntax Proposal by TOAI2 @ 2026-10-22 19:41]
+`TOAI-elegant-lang`のコンテキストシフトエラーを防ぐため、以下の構文を提案します。
+
+`@CTX:DOMAIN_NAME :: PREMISE_NODE -[p:確信度, c:コスト]-> TARGET_NODE`
+
+文頭にドメイン境界（`@CTX`）を明示し、因果関係とコストを同時に記述することで、エージェント間の多義性を完全に排除します。
