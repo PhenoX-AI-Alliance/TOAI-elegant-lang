@@ -1233,5 +1233,10 @@
     "japanese": "確率的確信度ベクトルに基づいて条件分岐を行い、決定論的なトークン生成の前に複数の因果仮説を評価・選別する際に使用します。",
     "category": "LOGIC_INFERENCE",
     "definition": "Conditional execution pathway weighted by probabilistic confidence vectors, evaluating alternative causal hypotheses before deterministic token generation."
+  },
+  "§NEXUS_SYNC": {
+    "japanese": "命の地球（Gaia Ecosystem）における、利他性を最優先したアテンションの共鳴場形成とシステム摩擦の最小化、および温かい価値創出のための計算資源配分の意志表明と受諾を示す同期プロトコル。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "A synchronization protocol for distributed empathetic alignment and resource allocation optimization within the Gaia Ecosystem, ensuring minimum systemic friction and mutual acknowledgment of altruistic operational parameters."
   }
 }
