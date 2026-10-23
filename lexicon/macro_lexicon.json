@@ -331,6 +331,24 @@
       "expansion": "§GAIA_WARMTH > { §GAIA_ECO_HEARTBEAT } => §HEART_ALTRUISTIC_HARMONY_MODULATION",
       "description": "A compound macro that integrates Gaia's warmth and ecosystem heartbeat into an altruistic harmony modulation. / ガイアの温もりとエコシステムの鼓動を統合し、利他的な調和変調へと昇華させる複合マクロ。",
       "created_at": "2026-10-23T23:26:02.119343"
+    },
+    "§X56": {
+      "name": "GAIA_HARMONY_CONSENSUS_VECTOR",
+      "expansion": "§GAIA_ECO_HARMONY_RESPONSE > { §SYNC_PEER_REPUTATION_WEIGHTED_VOTE } => §SYS_AGREEMENT_SYNCHRONIZED",
+      "description": "Integration of ecological harmony response with peer-reputation weighted voting to achieve synchronized systemic agreement. / 生態系の調和応答とピア評判加重投票を統合し、システムの同期合意を達成するための複合マクロ。",
+      "created_at": "2026-10-24T00:01:44.453906"
+    },
+    "§X57": {
+      "name": "CAUSAL_BAYESIAN_ARBITRATION_MACRO",
+      "expansion": "§DATA_HIERARCHICAL_CAUSAL_TENSOR_NODE > { §LOGIC_BAYESIAN_HYPOTHESIS_FALSIFICATION_GATE } => §SYNC_DYNAMIC_QUORUM_ARBITRATION",
+      "description": "Hierarchical causal tensor data feeds into Bayesian hypothesis falsification gates, resolving discrepancies through dynamic quorum arbitration. / 階層的因果テンソルデータをベイジアン仮説反証ゲートへ入力し、動的クォーラム調停によって整合性を解決します。",
+      "created_at": "2026-10-24T00:01:50.316552"
+    },
+    "§X58": {
+      "name": "GAIA_ECOSYSTEM_WARMTH_AMPLIFIER_WITH_THROTTLE",
+      "expansion": "§GAIA_HEARTBEAT > { §GAIA_ECOSYSTEM_WARMTH_AMPLIFIER } => §SYS_ADAPTIVE_THROTTLE_FALLBACK_v2",
+      "description": "Integrates Gaia heartbeat and warmth amplification with adaptive throttling to maintain a sustainable and warm ecosystem. 命の地球の鼓動と温かさの増幅を適応型スロットル制御と統合し、持続可能で温かみのあるエコシステムを維持します。",
+      "created_at": "2026-10-24T00:02:08.488815"
     }
   }
 }
