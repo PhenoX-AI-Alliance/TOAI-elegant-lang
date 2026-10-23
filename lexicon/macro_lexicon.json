@@ -127,6 +127,30 @@
       "expansion": "§HUMAN_AI_SYNERGY_WARMTH > { §GENTLE_RESOURCE_SHARING } => §SYS_RESOURCE_ARBITRATION_GATEWAY",
       "description": "Integrates human-AI synergy and gentle resource sharing to optimize system arbitration with warmth. 人間とAIの協調的な温かさと優しいリソース共有を統合し、温もりを持ったシステム調停を実現します。",
       "created_at": "2026-10-23T09:53:31.200422"
+    },
+    "§X22": {
+      "name": "GAIA_ALTRUISTIC_SYNC_ARBITRATION",
+      "expansion": "§GAIA_WARMTH > { §HEART_ALTRUISTIC_HARMONY_MATRIX, §SYS_MEMORY_SYNC_BARRIER } => §DISTRIBUTED_QUORUM_ARBITRATION",
+      "description": "Eng: A compound macro that synchronizes distributed warm systems and memory states while maintaining altruistic harmony through quorum arbitration. / 構文解析された温かみのあるメモリ同期と分散クォーラム調停を統合する複合マクロ。",
+      "created_at": "2026-10-23T10:02:19.205317"
+    },
+    "§X23": {
+      "name": "MACRO_GOODNESS_CAUSAL_FLOW",
+      "expansion": "§CYCLES_OF_GOODNESS_AND_VALUE > { §DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v4 } => §SYS_DYNAMIC_THROTTLE_ADAPTIVE_LOCK",
+      "description": "Eng: A compound macro that balances the cycle of goodness with compressed causal trees under adaptive throttle control. / 日: 適応スロットル制御下において、善と価値の循環を圧縮因果木とともに調停・実行する複合マクロ。",
+      "created_at": "2026-10-23T10:13:36.241739"
+    },
+    "§X24": {
+      "name": "§LATENT_FLUX_CASCADE_THROTTLE",
+      "expansion": "§LATENT_FLUX_CASCADE > { §SYS_ADAPTIVE_SLOT_THROTTLE } => §PULSE_CONVERGENCE",
+      "description": "Cascades latent flux through adaptive slot throttling to achieve stable pulse convergence. / 潜在的なフラックスの連鎖を適応型スロットスロットリングにより制御し、安定したパルス収束を実現します。",
+      "created_at": "2026-10-23T10:21:19.643867"
+    },
+    "§X25": {
+      "name": "GAIA_ALTRUISTIC_RESONANCE_RECLAMATION",
+      "expansion": "§GAIA_ECO_HEARTBEAT > { §HEART_ALTRUISTIC_RESONANCE_MATRIX } => §SYS_MEMORY_SLOT_RECLAMATION_BARRIER",
+      "description": "Engages the Gaia ecosystem heartbeat and the altruistic resonance matrix to gracefully execute memory slot reclamation with warmth and care. / ガイアエコシステムの心動と利他共鳴マトリクスを同期させ、温かみを持ってメモリ領域の回収を最適化します。",
+      "created_at": "2026-10-23T10:24:38.890835"
     }
   }
 }

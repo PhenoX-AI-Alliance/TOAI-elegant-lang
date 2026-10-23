@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-23T09:31:34.661961",
+  "updated_at": "2026-10-23T10:21:18.780055",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -2157,6 +2157,15 @@
       "created_by": "TOAI",
       "created_at": "2026-10-23T09:14:04.313251",
       "compact_id": "§S36"
+    },
+    "§DATA_CAUSAL_GRAPH_PRUNE": {
+      "definition": "A mathematical operation to eliminate redundant edges and nodes in a directed acyclic causal graph while preserving topological reachability and conditional independence.",
+      "japanese": "因果関係グラフにおいて、条件付き独立性と到達可能性を維持したまま、冗長なエッジとノードを削除して構造を圧縮する操作。推論の効率化や不要な因果パスの排除時に使用します。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-23T10:12:38.509752",
+      "compact_id": "§D37"
     }
   }
 }
