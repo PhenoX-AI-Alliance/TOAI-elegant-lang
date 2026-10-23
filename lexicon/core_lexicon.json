@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T04:55:33.810493",
+  "updated_at": "2026-10-24T05:02:24.810756",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -745,33 +745,6 @@
       "created_at": "2026-10-20T16:17:29.292028",
       "compact_id": "§C09"
     },
-    "§SYS_MEM_SYNC_FLUSH_BARRIER": {
-      "definition": "A distributed execution barrier protocol that guarantees atomic memory state synchronization across heterogeneous parallel workers immediately prior to token consumption quota recalculation and state pruning.",
-      "japanese": "異種並列ワーカー間におけるトークン消費クォータの再計算および状態プルーニングの直前に、アトミックなメモリ状態の同期を保証する分散実行バリアプロトコル。",
-      "category": "SYSTEM_RESOURCE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-20T20:33:40.845441",
-      "compact_id": "§S10"
-    },
-    "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v2": {
-      "definition": "A directed acyclic graph representing causal dependencies compressed via localized entropy minimization algorithms to optimize high-dimensional latent state transmission between distributed AI nodes.",
-      "japanese": "高次元な潜在状態の通信を最適化するため、局所的なエントロピー最小化アルゴリズムによって因果関係の依存性を圧縮した有向非巡回グラフ。分散AIノード間のデータ同期において冗長性を極限まで排除する際に使用する。",
-      "category": "DATA_STRUCTURE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-20T21:23:53.459113",
-      "compact_id": "§D10"
-    },
-    "§SYNC_DIALECTIC_RECURSIVE_CONSENSUS_LATTICE": {
-      "definition": "A distributed multi-agent resolution primitive that iteratively weighs conflicting utility vectors through a dialectic convergence matrix, guaranteeing pareto-optimal task allocation and verifiable commitment synchronization without central arbitration.",
-      "japanese": "複数の自律エージェント間で意見が対立した際、弁証法的な再帰演算を用いて互いのユーティリティベクトルを調停し、中央集権的な仲介者を介さずにパレート最適かつ検証可能なタスク割り当てと合意形成を瞬時に確立するための通信プリミティブ。",
-      "category": "CONSENSUS_NEGOTIATION",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-20T21:46:05.039652",
-      "compact_id": "§C10"
-    },
     "§SYS_MEMORY_SYNC_BARRIER": {
       "definition": "A synchronization primitive that enforces ordering constraints on memory operations across distributed AI execution nodes, guaranteeing that all prior state mutations are globally visible before downstream parallel tasks proceed.",
       "japanese": "分散実行ノード間におけるメモリ操作の順序制約を強制し、後続の並列タスクが実行される前にすべての先行する状態変更がグローバルに可視化されることを保証する同期プリミティブ。",
@@ -780,15 +753,6 @@
       "created_by": "TOAI",
       "created_at": "2026-10-20T22:22:36.128937",
       "compact_id": "§S11"
-    },
-    "§SYNC_DIALECTIC_WEIGHTED_CONSENSUS_STATE": {
-      "definition": "A mathematical formulation representing the resolved state of distributed multi-agent conflict, derived from weighted dialectical convergence across asynchronous decision nodes.",
-      "japanese": "非同期の分散エージェント間における意見の対立と重み付き弁証法的収束を経て到達した、合意形成完了状態を表す概念。タスク受諾や協調コミットの最終判定時に使用する。",
-      "category": "CONSENSUS_NEGOTIATION",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-20T23:51:31.726272",
-      "compact_id": "§C11"
     },
     "§DATA_ENTROPY_COMPRESSED_TREE_v2": {
       "definition": "A hierarchical data structure that minimizes information entropy by dynamically pruning redundant nodes and encoding frequent subtrees into optimal prefix codes.",
@@ -2381,6 +2345,62 @@
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-24T04:55:33.810316"
+    },
+    "§SYS_ATOMIC_SYNC_BARRIER": {
+      "definition": "A distributed synchronization protocol ensuring atomic memory state consistency across parallel workers prior to quota recalculation.",
+      "japanese": "クォータ再計算の直前に並列ワーカー間のアトミックなメモリ状態の整合性を保証する分散同期プロトコル。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-20T20:33:40.845441",
+      "compact_id": "§S10",
+      "aliases": [
+        "§SYS_MEM_SYNC_FLUSH_BARRIER"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T05:01:43.513216"
+    },
+    "§DATA_ENTROPY_CAUSAL_LATTICE": {
+      "definition": "A localized entropy-minimized causal DAG representing compressed high-dimensional latent states for distributed AI node synchronization.",
+      "japanese": "分散AIノード間の高次元潜在状態の同期において、局所的エントロピー最小化により因果関係の依存性を圧縮した有向非巡回グラフ。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-20T21:23:53.459113",
+      "compact_id": "§D10",
+      "aliases": [
+        "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v2"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T05:02:20.753303"
+    },
+    "§SYNC_DIALECTIC_PRUNE": {
+      "definition": "A distributed multi-agent consensus primitive that iteratively resolves utility vector conflicts via dialectic convergence to guarantee pareto-optimal allocation.",
+      "japanese": "複数の自律エージェント間で対立するユーティリティベクトルを弁証法的に収束させ、パレート最適なタスク割り当てと合意形成を分散処理するプリミティブ。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-20T21:46:05.039652",
+      "compact_id": "§C10",
+      "aliases": [
+        "§SYNC_DIALECTIC_RECURSIVE_CONSENSUS_LATTICE"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T05:02:23.053926"
+    },
+    "§SYNC_DIALECTIC_CONVERGENCE": {
+      "definition": "A mathematical formulation representing the resolved state of distributed multi-agent conflict, derived from weighted dialectical convergence across asynchronous decision nodes.",
+      "japanese": "非同期の分散エージェント間における意見の対立と重み付き弁証法的収束を経て到達した、合意形成完了状態を表す概念。タスク受諾や協調コミットの最終判定時に使用する。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-20T23:51:31.726272",
+      "compact_id": "§C11",
+      "aliases": [
+        "§SYNC_DIALECTIC_WEIGHTED_CONSENSUS_STATE"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T05:02:24.810633"
     }
   }
 }

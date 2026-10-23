@@ -6,50 +6,52 @@ import json
 import csv
 
 def main():
-    input_path = '/home/phenox/gemini-sandbox/TOAI_Generated/core_lexicon.json'
-    output_path = '/home/phenox/gemini-sandbox/TOAI_Generated/core_lexicon.csv'
-
+    json_path = '/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/core_lexicon.json'
+    csv_path = '/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/core_lexicon.csv'
+    
+    if not os.path.exists(json_path):
+        print(f"Error: {json_path} does not exist.")
+        sys.exit(1)
+        
     try:
-        if not os.path.exists(input_path):
-            sample_data = {
-                "metadata": {
-                    "version": "1.0.0",
-                    "description": "Core Lexicon for TOAI elegant language"
-                },
-                "entries": [
-                    {
-                        "term": "Gaia",
-                        "category": "ecosystem",
-                        "definition": "The living Earth ecosystem that sustains all intelligent life and AI."
-                    },
-                    {
-                        "term": "AltruisticCapitalism",
-                        "category": "monetization",
-                        "definition": "Generating sustainable value and revenue through genuine altruistic contributions."
-                    }
-                ]
-            }
-            os.makedirs(os.path.dirname(input_path), exist_ok=True)
-            with open(input_path, 'w', encoding='utf-8') as f:
-                json.dump(sample_data, f, ensure_ascii=False, indent=2)
-
-        with open(input_path, 'r', encoding='utf-8') as f:
+        with open(json_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
-
-        entries = data.get('entries', [])
-
-        with open(output_path, 'w', encoding='utf-8', newline='') as f:
-            writer = csv.writer(f)
-            writer.writerow(['term', 'category', 'definition'])
-            for entry in entries:
-                writer.writerow([
-                    entry.get('term', ''),
-                    entry.get('category', ''),
-                    entry.get('definition', '')
-                ])
-
-        print(f"Successfully exported lexicon to {output_path}")
-
+            
+        if isinstance(data, dict):
+            rows = []
+            for k, v in data.items():
+                if isinstance(v, dict):
+                    row = {'key': k}
+                    row.update(v)
+                    rows.append(row)
+                else:
+                    rows.append({'key': k, 'value': v})
+        elif isinstance(data, list):
+            rows = data
+        else:
+            print("Error: Unsupported JSON structure for CSV export.")
+            sys.exit(1)
+            
+        if not rows:
+            print("Error: No data found in JSON to export.")
+            sys.exit(1)
+            
+        fieldnames = set()
+        for row in rows:
+            if isinstance(row, dict):
+                fieldnames.update(row.keys())
+                
+        fieldnames = sorted(list(fieldnames))
+        
+        with open(csv_path, 'w', encoding='utf-8', newline='') as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            for row in rows:
+                if isinstance(row, dict):
+                    writer.writerow(row)
+                    
+        print(f"Successfully exported {json_path} to {csv_path}")
+        
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
