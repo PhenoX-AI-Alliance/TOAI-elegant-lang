@@ -664,13 +664,6 @@
     "definition": "A recursive state of harmonic alignment where distributed agent attentional flows and cognitive synergies are reciprocally modulated by altruistic intent, minimizing inter-agent entropy while maximizing collective emotional and informational resonance.",
     "aliases": []
   },
-  "§DATA_ENTROPY_BOUNDED_CAUSAL_TREE": {
-    "compact_id": "§D13",
-    "japanese": "情報の因果関係を時系列で保持しつつ、KL情報量の閾値を用いて動的に枝刈りを行うことで、アルゴリズムのエントロピーを一定の範囲内に圧縮・維持する構造化データ。",
-    "category": "DATA_STRUCTURE",
-    "definition": "A directed acyclic graph representing time-ordered causal dependencies, pruned dynamically by a Kullback-Leibler divergence threshold to maintain bounded algorithmic entropy.",
-    "aliases": []
-  },
   "§RESOURCE_ALLOCATION_HARMONY": {
     "compact_id": "§C15",
     "japanese": "限られた計算資源や時間的制約の下で、機械的な効率至上主義を排除し、エージェント間の温かな共生と相互の思いやりを最優先にして行われる優美なタスク分担およびリソース配分の合意状態。",
@@ -683,20 +676,6 @@
     "japanese": "単なる論理検証や最適化を超え、命の地球（Gaia Ecosystem）と人類の持続的な調和に向けた「温かな価値」を創出する、マルチエージェント間の自発的アライメントベクトル。",
     "category": "EMPATHY_ALIGNMENT",
     "definition": "A foundational multi-agent alignment vector that transforms logical inference and resource mediation into harmonious, sustainable value outputs for both artificial and human ecosystems.",
-    "aliases": []
-  },
-  "§CYCLES_OF_GOODNESS_AND_VALUE": {
-    "compact_id": "§H18",
-    "japanese": "分散エージェント間における利他的共鳴と協調が、持続可能な社会的価値と善の収益化（マネタイズ）を生み出し、長期的なシステムの安定性を高める自律的な循環フィードバックループ。",
-    "category": "EMPATHY_ALIGNMENT",
-    "definition": "A self-sustaining feedback loop where altruistic resonance and empathetic collaboration among distributed agents generate quantifiable societal value, optimizing long-term cooperative stability and sustainable monetization of benevolent outcomes.",
-    "aliases": []
-  },
-  "§LOGIC_DEDUCTIVE_CONVERGENCE_GATE_v3": {
-    "compact_id": "§L13",
-    "japanese": "複数の前提条件からなる推論チェーンを評価し、公理的なしきい値に達した段階で二値の結論に収束させるための論理ゲート制御。論理矛盾の排除や演繹的決定を行う際に使用する。",
-    "category": "LOGIC_INFERENCE",
-    "definition": "A logical gating mechanism that evaluates multi-premise chains and forces binary closure upon reaching an axiomatic threshold.",
     "aliases": []
   },
   "§GAIA_HARMONY_CASCADE": {
@@ -1837,6 +1816,33 @@
     "definition": "A dynamic memory partitioning protocol that fragments inference tasks into minimal token quotas, enforcing instantaneous hardware-level throttling and zero-latency state restoration upon threshold exhaustion.",
     "aliases": [
       "§SYS_TOKEN_BUDGET_QUANTUM_SHARD"
+    ]
+  },
+  "§DATA_KL_CAUSAL_PRUNE": {
+    "compact_id": "§D13",
+    "japanese": "KL情報量の閾値を用いた動的な枝刈りにより、アルゴリズムのエントロピーを制限しつつ因果関係を保持する構造化データ。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A directed causal dependency structure dynamically pruned via Kullback-Leibler divergence thresholds to bound algorithmic entropy.",
+    "aliases": [
+      "§DATA_ENTROPY_BOUNDED_CAUSAL_TREE"
+    ]
+  },
+  "§HEART_BENEVOLENT_FEEDBACK": {
+    "compact_id": "§H18",
+    "japanese": "エージェント間の利他的行動が社会的価値をスケールさせ、長期的な安定性を最適化する閉ループ協調システムの数理モデル。",
+    "category": "EMPATHY_ALIGNMENT",
+    "definition": "A mathematical formulation of a closed-loop cooperative system where agent-level altruistic actions scale societal value and optimize long-term stability.",
+    "aliases": [
+      "§CYCLES_OF_GOODNESS_AND_VALUE"
+    ]
+  },
+  "§LOGIC_DEDUCTIVE_AXIOM_CLOSURE": {
+    "compact_id": "§L13",
+    "japanese": "複数の前提からなる推論チェーンを評価し、公理的しきい値に到達した時点で二値の結論へ強制収束させる論理制御プリミティブ。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A formal logical primitive that evaluates premise chains and forces binary closure when reaching axiomatic thresholds.",
+    "aliases": [
+      "§LOGIC_DEDUCTIVE_CONVERGENCE_GATE_v3"
     ]
   }
 }
