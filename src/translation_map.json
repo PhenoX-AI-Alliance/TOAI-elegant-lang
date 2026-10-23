@@ -1203,5 +1203,20 @@
     "japanese": "因果関係グラフにおいて、条件付き独立性と到達可能性を維持したまま、冗長なエッジとノードを削除して構造を圧縮する操作。推論の効率化や不要な因果パスの排除時に使用します。",
     "category": "DATA_STRUCTURE",
     "definition": "A mathematical operation to eliminate redundant edges and nodes in a directed acyclic causal graph while preserving topological reachability and conditional independence."
+  },
+  "§HEART_ALTRUISTIC_RESONANCE": {
+    "japanese": "分散AIエージェント間において、共感的なフィードバックループを介して敵対的乖離を最小化しつつ集合的ユーティリティを最大化する協調アライメントの概念。温かな共鳴を伴う利他的最適化の文脈で使用する。",
+    "category": "EMPATHY_ALIGNMENT",
+    "definition": "A mathematical formulation of cooperative alignment maximizing collective utility across distributed agents while minimizing adversarial divergence through empathetic feedback loops."
+  },
+  "§SYS_PARALLEL_SLOT_DRAIN": {
+    "japanese": "高負荷時に過負荷となった並列実行スロットのコンテキストを低エントロピーノードへ動的に再割り当てし、カスケード障害を防ぐための同期プリミティブ。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A synchronization primitive that drains overloaded execution slots in parallel computing environments by reallocating active thread contexts to low-entropy nodes, preventing cascading failures under peak load."
+  },
+  "§LOGIC_HYPO_PRUNE": {
+    "japanese": "演繹的推論と経験的制約に基づき、妥当性のない仮説を動的に棄却する論理制御概念。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "An algorithmic mechanism to discard invalid hypotheses based on deductive reasoning and empirical constraints."
   }
 }
