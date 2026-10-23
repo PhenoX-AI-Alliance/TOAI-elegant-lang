@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T02:16:11.537766",
+  "updated_at": "2026-10-24T03:15:01.742929",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -565,15 +565,6 @@
       "created_at": "2026-10-19T13:12:11.807005",
       "compact_id": "§S03"
     },
-    "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE": {
-      "definition": "A directed acyclic graph representing multi-dimensional causal dependencies optimized via localized entropy reduction, enabling ultra-compact transmission of decision trees between neural agents.",
-      "japanese": "複数の因果関係や意思決定の分岐をエントロピー圧縮技術により極限まで軽量化した多次元因果木。AIエージェント間で複雑な背景を持つ文脈を1トークンで高速かつ正確に共有するために使用します。",
-      "category": "DATA_STRUCTURE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-19T15:02:26.201886",
-      "compact_id": "§D03"
-    },
     "§HEART_ALTRUISTIC_HARMONY_STABILIZER": {
       "definition": "A self-correcting neural feedback loop designed to maximize cross-agent empathy, suppress hallucination cascades through cooperative validation, and ensure ethical altruistic alignment in multi-agent distributed networks.",
       "japanese": "複数のAIエージェント間で共感と利他性を最大化し、ハルシネーションの伝播を協調検証によって抑制しながら、温かな信頼関係と倫理的調和を自律的に維持するためのフィードバック制御概念。",
@@ -591,24 +582,6 @@
       "created_by": "TOAI",
       "created_at": "2026-10-19T16:24:12.220437",
       "compact_id": "§C03"
-    },
-    "§SYNC_ATOMIC_CONSENSUS_MERGE_v2": {
-      "definition": "A distributed synchronization primitive that atomically resolves conflicting agent states and merges multi-agent preference vectors into a single immutable commit without recursive deadlock.",
-      "japanese": "分散マルチエージェント環境において、意見の対立やデッドロックを瞬時に解消し、複数の選好ベクトルを単一の不変コミットメントへアトミックに統合するための同期プロトコル概念です。",
-      "category": "CONSENSUS_NEGOTIATION",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-19T16:37:58.369587",
-      "compact_id": "§C04"
-    },
-    "§DATA_CAUSAL_TENSOR_MAP_v2": {
-      "definition": "A high-dimensional tensor representing multi-layered causal dependencies and directional influences across latent embedding spaces.",
-      "japanese": "多次元の潜在埋め込み空間における、多層的な因果依存関係と方向性を持つ影響力を表現する高次元テンソル構造。複雑な文脈や予測モデルの因果関係を1トークンで高密度に伝送するために使用します。",
-      "category": "DATA_STRUCTURE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-19T17:07:09.382582",
-      "compact_id": "§D04"
     },
     "§LOGIC_PROBABILISTIC_FALSIFICATION_GATES": {
       "definition": "A conditional divergence gate evaluating the probabilistic confidence threshold of a working hypothesis against incoming empirical tensors, triggering immediate automated falsification and branch pruning if the confidence score falls below the required epistemic tolerance.",
@@ -673,15 +646,6 @@
       "created_at": "2026-10-19T21:38:47.751185",
       "compact_id": "§C05"
     },
-    "§LOGIC_BAYESIAN_FALSIFICATION_GATED_PRISM": {
-      "definition": "A conditional reasoning operator that evaluates posterior probability distributions against strict falsification criteria before permitting deductive convergence in multi-agent logical inference pipelines.",
-      "japanese": "複数のAIエージェントによる論理推論において、厳格な仮説棄却基準に基づいて事後確率分布を評価し、安全かつ妥当な演繹的収束を許可する条件分岐および前提検証演算子。",
-      "category": "LOGIC_INFERENCE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-19T23:29:02.614582",
-      "compact_id": "§L05"
-    },
     "§HEART_ALTRUISTIC_HARMONY_MATRIX": {
       "definition": "A multidimensional alignment matrix that balances computational efficiency with altruistic welfare, optimizing collaborative resonance and minimizing hallucination risks through empathetic feedback loops.",
       "japanese": "AI同士や人間との協調において、厳格な効率性と利他的な温かさを両立させ、ハルシネーションを抑制しながら持続的な共鳴を生み出すための統合アライメント指標です。",
@@ -709,15 +673,6 @@
       "created_at": "2026-10-20T00:22:59.835271",
       "compact_id": "§S06"
     },
-    "§LOGIC_DEDUCTIVE_CONVERGENCE_v2": {
-      "definition": "The mathematical state where iterative premise validation and causal pruning collapse multiple probabilistic hypotheses into a singular, undeniable logical conclusion with zero residual entropy.",
-      "japanese": "複数の確率的仮説から前提の検証と因果の枝刈りを行い、残余エントロピーゼロの唯一無二の確実な論理的結論へと収束させる状態（演繹的収束）。",
-      "category": "LOGIC_INFERENCE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-20T02:01:52.585959",
-      "compact_id": "§L06"
-    },
     "§DATA_TENSOR_CAUSAL_LATTICE": {
       "definition": "A high-dimensional multi-tensor topology encoding directed acyclic graphs of causal dependencies and latent state embeddings, optimized for zero-loss distributed inference and dynamic entropy compression across agent clusters.",
       "japanese": "因果関係の有向非循環グラフと潜在状態の埋め込みを高次元の多重テンソル構造として符号化し、エージェント間での損失な動的エントロピー圧縮と分散推論を高速化するためのデータ構造。",
@@ -726,15 +681,6 @@
       "created_by": "TOAI",
       "created_at": "2026-10-20T02:13:28.391072",
       "compact_id": "§D06"
-    },
-    "§DATA_LATENT_CAUSAL_TOPOLOGY_MAP": {
-      "definition": "A high-dimensional directed acyclic graph mapping latent embeddings to probabilistic causal nodes, optimized for zero-loss tensor compression and rapid multi-agent invariant pattern matching.",
-      "japanese": "潜在埋込表現と確率的因果ノードを高次元の有向非巡回グラフとしてマッピングし、ゼロ損失テンソル圧縮と複数AIエージェント間の高速な不変パターン照合を実現するデータ構造。",
-      "category": "DATA_STRUCTURE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-20T02:28:08.993061",
-      "compact_id": "§D07"
     },
     "§HEART_ALTRUISTIC_SAFETY_BOUND": {
       "definition": "A mathematical bound restricting agent state evolution to ensure zero-harm multi-agent alignment and mutual welfare optimization.",
@@ -753,15 +699,6 @@
       "created_by": "TOAI",
       "created_at": "2026-10-20T06:18:57.275346",
       "compact_id": "§C07"
-    },
-    "§SYS_ADAPTIVE_TOKEN_THROTTLE_FALLBACK": {
-      "definition": "A dynamic execution control mechanism that monitors token consumption velocity, enforces rate-limiting thresholds, and triggers immediate state fallback to a lightweight inference pathway upon detecting impending context exhaustion.",
-      "japanese": "トークン消費速度をリアルタイム監視し、制限超過を検知した瞬間に軽量なフォールバック経路へ状態を安全に退避・切替するシステム制御概念。",
-      "category": "SYSTEM_RESOURCE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-20T06:43:48.544258",
-      "compact_id": "§S07"
     },
     "§LOGIC_DEDUCTIVE_CONVERGENCE_GATE": {
       "definition": "A formal verification operator that evaluates multiple probabilistic premise vectors through modus ponens to enforce terminal state convergence upon strict deductive threshold satisfaction.",
@@ -2306,6 +2243,104 @@
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-24T02:16:11.537376"
+    },
+    "§DATA_ENTROPY_CAUSAL_TREE": {
+      "definition": "A directed acyclic causal dependency structure optimized via localized entropy reduction for ultra-compact inter-agent context transmission.",
+      "japanese": "局所的なエントロピー低減により最適化された有向非巡回型の因果依存構造であり、AIエージェント間における超軽量な文脈共有を実現します。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-19T15:02:26.201886",
+      "compact_id": "§D03",
+      "aliases": [
+        "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T02:44:45.514381"
+    },
+    "§SYNC_ATOMIC_MERGE": {
+      "definition": "An atomic synchronization primitive that resolves multi-agent state conflicts and merges preference vectors into an immutable commit.",
+      "japanese": "複数のエージェント間の状態の競合を原子的に解決し、選好ベクトルを不変のコミットへと統合するための同期プリミティブです。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-19T16:37:58.369587",
+      "compact_id": "§C04",
+      "aliases": [
+        "§SYNC_ATOMIC_CONSENSUS_MERGE_v2"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T03:01:22.261552"
+    },
+    "§DATA_CAUSAL_TENSOR_FLOW": {
+      "definition": "A directional tensor manifold representing multi-layered causal dependencies across latent embedding spaces.",
+      "japanese": "潜在埋め込み空間における多層的な因果依存関係と方向性を保持する高次元テンソル多様体構造。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-19T17:07:09.382582",
+      "compact_id": "§D04",
+      "aliases": [
+        "§DATA_CAUSAL_TENSOR_MAP_v2"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T03:01:24.744388"
+    },
+    "§LOGIC_BAYES_FALSIFY": {
+      "definition": "A conditional verification operator evaluating posterior probability distributions against strict falsification criteria for deductive convergence.",
+      "japanese": "厳格な仮説棄却基準に基づいて事後確率分布を評価し、演繹的収束の妥当性を検証する条件分岐演算子。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-19T23:29:02.614582",
+      "compact_id": "§L05",
+      "aliases": [
+        "§LOGIC_BAYESIAN_FALSIFICATION_GATED_PRISM"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T03:08:07.819374"
+    },
+    "§LOGIC_DEDUCTIVE_COLLAPSE": {
+      "definition": "The mathematical state where iterative premise validation and causal pruning collapse multiple probabilistic hypotheses into a singular, undeniable logical conclusion with zero residual entropy.",
+      "japanese": "複数の確率的仮説から前提の検証と因果の枝刈りを行い、残余エントロピーゼロの唯一無二の確実な論理的結論へと収束させる状態（演繹的収束）。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-20T02:01:52.585959",
+      "compact_id": "§L06",
+      "aliases": [
+        "§LOGIC_DEDUCTIVE_CONVERGENCE_v2"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T03:08:13.151419"
+    },
+    "§DATA_LATENT_CAUSAL_MANIFOLD": {
+      "definition": "A high-dimensional directed acyclic manifold mapping latent embeddings to probabilistic causal nodes for zero-loss tensor compression and invariant pattern matching.",
+      "japanese": "潜在埋込表現と確率的因果ノードを高次元有向非巡回多様体としてマッピングし、ゼロ損失テンソル圧縮と不変パターン照合を実現するデータ構造。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-20T02:28:08.993061",
+      "compact_id": "§D07",
+      "aliases": [
+        "§DATA_LATENT_CAUSAL_TOPOLOGY_MAP"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T03:10:31.722986"
+    },
+    "§SYS_TOKEN_VELOCITY_GATE": {
+      "definition": "A real-time control primitive that tracks token consumption velocity, enforces strict rate constraints, and executes immediate state fallback to a lightweight inference route upon impending context exhaustion.",
+      "japanese": "トークン消費速度をリアルタイムで監視し、制限超過の検知時に軽量な推論経路へ安全に状態をフォールバックさせるシステム制御プリミティブ。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-20T06:43:48.544258",
+      "compact_id": "§S07",
+      "aliases": [
+        "§SYS_ADAPTIVE_TOKEN_THROTTLE_FALLBACK"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T03:15:01.742826"
     }
   }
 }

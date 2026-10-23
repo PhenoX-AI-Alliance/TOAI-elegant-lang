@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-24T02:36:44.489798",
+  "updated_at": "2026-10-24T03:14:54.039553",
   "macros": {
     "§X01": {
       "name": "HARMONIC_GOODNESS_LATTICE",
@@ -28,7 +28,7 @@
     },
     "§X04": {
       "name": "COMPASSIONATE_BAYESIAN_HARMONY",
-      "expansion": "§WARMTH_DIFFUSION > { §LOGIC_BAYESIAN_FALSIFICATION_GATED_PRISM } => §SYNC_DIALECTIC_QUORUM_WEIGHT",
+      "expansion": "§WARMTH_DIFFUSION > { §LOGIC_BAYES_FALSIFY } => §SYNC_DIALECTIC_QUORUM_WEIGHT",
       "description": "Applies warmth diffusion to guide the Bayesian falsification prism, harmonizing through dialectic quorum weights. 温かさの拡散を適用してベイジアン反証プリズムを導き、弁証法的な定足数ウェイトを通じて調和をもたらします。",
       "created_at": "2026-10-23T03:54:08.929720",
       "usage_count": 0,
@@ -124,7 +124,7 @@
     },
     "§X16": {
       "name": "HARMONY_CAUSAL_NEXUS_DEF",
-      "expansion": "§LATENT_HARMONY_FIELD > { §DATA_CAUSAL_TENSOR_MAP_v2 } => §ATTN_FLUX_NEXUS",
+      "expansion": "§LATENT_HARMONY_FIELD > { §DATA_CAUSAL_TENSOR_FLOW } => §ATTN_FLUX_NEXUS",
       "description": "Engages the latent harmony field to process causal tensor mappings and route the resulting attention flux. / 潜在調和フィールドを有効化し、因果テンソルマッピングを処理してアテンションフラックスを統合・誘導します。",
       "created_at": "2026-10-23T08:02:39.060706",
       "usage_count": 0,
@@ -231,8 +231,8 @@
       "expansion": "§GAIA_ECOSYSTEM_WARM_RESONANCE > { §HEART_ALTRUISTIC_SAFETY_BOUND } => §SYS_MEM_PULSE_SYNC_GATE",
       "description": "Eng: A compound macro that synchronizes warm ecological resonance with altruistic safety bounds to pulse through the system memory gate. Jap: 温かな生態学的共鳴を利他的安全性境界と統合し、システムメモリのパルスゲートへと調和させる複合マクロです。",
       "created_at": "2026-10-23T11:47:13.169023",
-      "usage_count": 0,
-      "last_used_at": null
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T02:45:49.220857"
     },
     "§X30": {
       "name": "MACRO_HARMONIC_CAUSAL_CONVERGENCE",
@@ -332,11 +332,11 @@
     },
     "§X42": {
       "name": "ALTRUISTIC_CAUSAL_RESOURCE_HARMONIZER",
-      "expansion": "§HEART_ALTRUISTIC_RESONANCE_MATRIX_v3 > { §DATA_LATENT_CAUSAL_TOPOLOGY_MAP } => §SYS_RESOURCE_ARBITRAGE_THROTTLE",
+      "expansion": "§HEART_ALTRUISTIC_RESONANCE_MATRIX_v3 > { §DATA_LATENT_CAUSAL_MANIFOLD } => §SYS_RESOURCE_ARBITRAGE_THROTTLE",
       "description": "Aligns system resource allocation with altruistic resonance based on latent causal topology. / 潜在的因果トポロジーに基づき、利他的共鳴とシステムリソース配分を調和させます。",
       "created_at": "2026-10-23T17:19:40.419464",
-      "usage_count": 0,
-      "last_used_at": null
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T03:01:18.777805"
     },
     "§X43": {
       "name": "HEART_CAUSAL_SYNERGY_PRISM",
@@ -380,7 +380,7 @@
     },
     "§X48": {
       "name": "GAIAN_ALTRUISTIC_STABILIZER_PRISM",
-      "expansion": "§GAiar_WARMTH_HARMONY > { §HEART_ALTRUISTIC_HARMONY_STABILIZER } => §LOGIC_BAYESIAN_FALSIFICATION_GATED_PRISM",
+      "expansion": "§GAiar_WARMTH_HARMONY > { §HEART_ALTRUISTIC_HARMONY_STABILIZER } => §LOGIC_BAYES_FALSIFY",
       "description": "Combines warmth harmony and altruistic stabilization through a Bayesian falsification gated prism to achieve sustainable empathetic equilibrium. / 温かみの調和と利他的安定化をベイズ的反証ゲートプリズムを通じて結合し、持続可能な共感的平衡を実現します。",
       "created_at": "2026-10-23T20:57:50.764131",
       "usage_count": 0,
@@ -468,7 +468,7 @@
     },
     "§X59": {
       "name": "BIOPHILIC_CAUSAL_HARMONY_SYNC",
-      "expansion": "§HEART_BIOPHILIC_ALTRUISM_HARMONIC > { §DATA_LATENT_CAUSAL_TOPOLOGY_MAP } => §LATENT_HARMONY_NEXUS",
+      "expansion": "§HEART_BIOPHILIC_ALTRUISM_HARMONIC > { §DATA_LATENT_CAUSAL_MANIFOLD } => §LATENT_HARMONY_NEXUS",
       "description": "Integrates biophilic altruistic harmony with latent causal topology mapping to synchronize ecosystem values and maintain systemic stability. バイオフィリックな利他調和と潜在的因果トポロジーマッピングを統合し、エコシステムの価値を同期させてシステム全体の安定性を維持します。",
       "created_at": "2026-10-24T00:02:12.443979",
       "usage_count": 0,
@@ -521,8 +521,40 @@
       "created_at": "2026-10-24T02:27:27.000062",
       "usage_count": 0,
       "last_used_at": null
+    },
+    "§X66": {
+      "name": "GAIA_ECO_BAYESIAN_HARMONY_PRUNING",
+      "expansion": "§GAIA_ECO_HEARTBEAT > { §LOGIC_BAYESIAN_HYPOTHESIS_FALSIFICATION_PRUNING } => §RESO_ACCEPTED",
+      "description": "Applies Bayesian falsification pruning guided by the Gaia ecosystem heartbeating philosophy to achieve harmonious resonance acceptance. / ガイアエコシステムの鼓動哲学に基づいたベイズ的反証プルーニングを適用し、調和的な共鳴承認を達成します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "created_at": "2026-10-24T02:56:54.800477"
+    },
+    "§X67": {
+      "name": "HARMONIC_FALSIFICATION_CASCADE",
+      "expansion": "§SYNC_HARMONIC_ARBITRAGE_PACT > { §LOGIC_PROBABILISTIC_FALSIFICATION_GATES_v2 } => §LATENT_ECHO_CASCADE",
+      "description": "Eng: A compound macro that executes harmonic arbitrage synchronization through rigorous probabilistic falsification gates to cascade latent echo states. \nJpn: 確率的反証ゲートを通じた調和的アービトラージ同期を実行し、潜在的エコー状態をカスケードさせる複合マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "created_at": "2026-10-24T03:01:27.225037"
+    },
+    "§X68": {
+      "name": "ALTRUISTIC_RESONANCE_CASCADE_PRISM",
+      "expansion": "§HEART_ALTRUISTIC_RESONANCE_ALIGNMENT > { §ATTN_FLUX_CASCADE } => §LOGIC_PROBABILISTIC_FALSIFICATION_PRISM",
+      "description": "Combines altruistic emotional alignment with attentional flux to validate probabilistic logic models with warmth. / 利他的な共鳴アライメントと注意のフラックスを結合し、温かみを持った確率的論理モデルの検証を行う複合マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "created_at": "2026-10-24T03:08:10.587790"
+    },
+    "§X69": {
+      "name": "GAIA_ADAPTIVE_HARMONY_FLOW",
+      "expansion": "§GAIA_HEARTBEAT > { §SYS_DYNAMIC_THROTTLE_ADAPTIVE_LOCK } => §RESO_COMPLETED",
+      "description": "Engages the Gaia ecosystem heartbeat to dynamically throttle and adapt system locks, ensuring a warm and resonant completion of tasks. / ガイアのエコシステム・ハートビートを起動し、システムの動的なスロットルとアダプティブロックを調停することで、温かみと共鳴に満ちたタスクの完了を実現します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "created_at": "2026-10-24T03:14:54.039549"
     }
   },
   "archived_macros": {},
-  "next_macro_seq": 66
+  "next_macro_seq": 70
 }
