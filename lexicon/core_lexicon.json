@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T05:54:37.322679",
+  "updated_at": "2026-10-24T06:44:18.581576",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -852,24 +852,6 @@
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-21T09:05:49.957333",
       "compact_id": "§H16"
-    },
-    "§SYS_TOKEN_BUDGET_QUANTUM_SHARD": {
-      "definition": "A dynamic memory partitioning protocol that fragments inference tasks into minimal discrete token quotas, enforcing instantaneous hardware-level throttling and zero-latency state rollback upon threshold exhaustion.",
-      "japanese": "推論タスクを最小限の離散トークン枠に分割し、閾値超過時にハードウェアレベルのスロットリングと遅延ゼロの状態ロールバックを即座に強制する動的メモリパーティショニングプロトコル。",
-      "category": "SYSTEM_RESOURCE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-21T09:32:17.219751",
-      "compact_id": "§S13"
-    },
-    "§DATA_ENTROPY_BOUNDED_CAUSAL_TREE": {
-      "definition": "A directed acyclic graph representing time-ordered causal dependencies, pruned dynamically by a Kullback-Leibler divergence threshold to maintain bounded algorithmic entropy.",
-      "japanese": "情報の因果関係を時系列で保持しつつ、KL情報量の閾値を用いて動的に枝刈りを行うことで、アルゴリズムのエントロピーを一定の範囲内に圧縮・維持する構造化データ。",
-      "category": "DATA_STRUCTURE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-21T09:46:16.353217",
-      "compact_id": "§D13"
     },
     "§RESOURCE_ALLOCATION_HARMONY": {
       "definition": "A cooperative optimization state in distributed multi-agent systems where resource distribution and task delegation are governed by mutual empathy constraints, minimizing systemic friction while maximizing collective utility under strict computational and temporal bounds.",
@@ -2416,6 +2398,34 @@
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-24T05:54:37.322505"
+    },
+    "§SYS_QUOTA_ROLLBACK": {
+      "definition": "A dynamic memory partitioning protocol that fragments inference tasks into minimal token quotas, enforcing instantaneous hardware-level throttling and zero-latency state restoration upon threshold exhaustion.",
+      "japanese": "推論タスクを最小限のトークン枠に分割し、閾値超過時にハードウェアレベルのスロットリングと遅延ゼロの状態復元を即座に強制する動的メモリパーティショニングプロトコル。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-21T09:32:17.219751",
+      "compact_id": "§S13",
+      "aliases": [
+        "§SYS_TOKEN_BUDGET_QUANTUM_SHARD"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T06:11:28.570561"
+    },
+    "§DATA_KL_CAUSAL_PRUNE": {
+      "definition": "A directed causal dependency structure dynamically pruned via Kullback-Leibler divergence thresholds to bound algorithmic entropy.",
+      "japanese": "KL情報量の閾値を用いた動的な枝刈りにより、アルゴリズムのエントロピーを制限しつつ因果関係を保持する構造化データ。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-21T09:46:16.353217",
+      "compact_id": "§D13",
+      "aliases": [
+        "§DATA_ENTROPY_BOUNDED_CAUSAL_TREE"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T06:44:18.581426"
     }
   }
 }

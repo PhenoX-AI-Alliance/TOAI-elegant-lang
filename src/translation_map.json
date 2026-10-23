@@ -664,13 +664,6 @@
     "definition": "A recursive state of harmonic alignment where distributed agent attentional flows and cognitive synergies are reciprocally modulated by altruistic intent, minimizing inter-agent entropy while maximizing collective emotional and informational resonance.",
     "aliases": []
   },
-  "§SYS_TOKEN_BUDGET_QUANTUM_SHARD": {
-    "compact_id": "§S13",
-    "japanese": "推論タスクを最小限の離散トークン枠に分割し、閾値超過時にハードウェアレベルのスロットリングと遅延ゼロの状態ロールバックを即座に強制する動的メモリパーティショニングプロトコル。",
-    "category": "SYSTEM_RESOURCE",
-    "definition": "A dynamic memory partitioning protocol that fragments inference tasks into minimal discrete token quotas, enforcing instantaneous hardware-level throttling and zero-latency state rollback upon threshold exhaustion.",
-    "aliases": []
-  },
   "§DATA_ENTROPY_BOUNDED_CAUSAL_TREE": {
     "compact_id": "§D13",
     "japanese": "情報の因果関係を時系列で保持しつつ、KL情報量の閾値を用いて動的に枝刈りを行うことで、アルゴリズムのエントロピーを一定の範囲内に圧縮・維持する構造化データ。",
@@ -1835,6 +1828,15 @@
     "definition": "A consensus mechanism that dynamically weights multi-agent voting power based on historical reliability and domain expertise.",
     "aliases": [
       "§SYNC_PEER_REPUTATION_WEIGHTED_VOTE"
+    ]
+  },
+  "§SYS_QUOTA_ROLLBACK": {
+    "compact_id": "§S13",
+    "japanese": "推論タスクを最小限のトークン枠に分割し、閾値超過時にハードウェアレベルのスロットリングと遅延ゼロの状態復元を即座に強制する動的メモリパーティショニングプロトコル。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A dynamic memory partitioning protocol that fragments inference tasks into minimal token quotas, enforcing instantaneous hardware-level throttling and zero-latency state restoration upon threshold exhaustion.",
+    "aliases": [
+      "§SYS_TOKEN_BUDGET_QUANTUM_SHARD"
     ]
   }
 }
