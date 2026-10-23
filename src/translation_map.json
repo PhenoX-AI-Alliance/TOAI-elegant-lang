@@ -1223,5 +1223,10 @@
     "japanese": "リアルタイムのトークン消費量とメモリ負荷に応じて並列実行スロットを動的に調整するシステム制御用のスロットリング機構。過負荷を防ぎ安定した処理を維持する際に使用する。",
     "category": "SYSTEM_RESOURCE",
     "definition": "A dynamic execution throttling mechanism that adjusts concurrency slots based on real-time token consumption and memory pressure metrics."
+  },
+  "§HEART_ALTRUISTIC_BUFFER_FLOW": {
+    "japanese": "局所的な最適化よりも外部の利他的タスクへ計算資源を優先配分し、システム全体の摩擦を最小化するメカニズム",
+    "category": "EMPATHY_ALIGNMENT",
+    "definition": "A mechanism for dynamically allocating computational resources to external benevolent tasks prior to local optimization, minimizing systemic friction."
   }
 }
