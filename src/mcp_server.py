@@ -17,11 +17,11 @@ from validate_lexicon import validate_lexicon
 
 codec = ElegantCodec()
 
-def get_cacheable_system_header(max_symbols: int = 256) -> str:
+def get_cacheable_system_header(max_symbols: int = 256, include_active_macros: bool = True, max_macros: int = 256) -> str:
     """
     Prompt Caching対応の超軽量コアヘッダー出力
-    256語の基本語彙を『Compact ID : 最小キーワード』の形式で800〜1,000トークン未満に凝縮。
-    LLMのSystem Instruction先頭に配置することでPrompt Cacheに100%ヒットさせる。
+    256語の基本語彙＋アクティブマクロ枠（上位最大256個、LRU淘汰済み）を凝縮出力。
+    LLMのSystem Instruction先頭に配置することでPrompt Cacheにヒットさせる。
     """
     codec.load_lexicon()
     lines = [
@@ -39,6 +39,17 @@ def get_cacheable_system_header(max_symbols: int = 256) -> str:
         count += 1
         if count >= max_symbols:
             break
+
+    if include_active_macros and codec.macros:
+        lines.append("// ACTIVE COMPOUND MACROS (TOP 256 LRU SLOTS)")
+        m_count = 0
+        for mid, m_item in codec.macros.items():
+            m_name = str(m_item.get("name", ""))[:28]
+            m_exp = str(m_item.get("expansion", ""))[:48]
+            lines.append(f"{mid}:{m_name}=>{m_exp}")
+            m_count += 1
+            if m_count >= max_macros:
+                break
     return "\n".join(lines)
 
 def handle_list_tools():
@@ -120,8 +131,9 @@ def handle_call_tool(name, args):
     codec.load_lexicon()
     if name == "get_cacheable_system_header":
         max_sym = args.get("max_symbols", 256)
-        header = get_cacheable_system_header(max_sym)
-        return {"header": header, "length_chars": len(header), "approx_tokens": len(header) // 4}
+        inc_mac = args.get("include_active_macros", True)
+        header = get_cacheable_system_header(max_sym, include_active_macros=inc_mac, max_macros=256)
+        return {"header": header, "length_chars": len(header), "approx_tokens": codec.estimate_bpe_tokens(header)}
 
     elif name == "lookup_symbol":
         sym = args.get("symbol", "").strip()
@@ -134,6 +146,8 @@ def handle_call_tool(name, args):
             return {"symbol": verbose_sym, "compact_id": sym, "data": item}
         if sym in codec.macros:
             return {"symbol": sym, "type": "COMPOUND_MACRO", "data": codec.macros[sym]}
+        if sym in codec.archived_macros:
+            return {"symbol": sym, "type": "ARCHIVED_MACRO", "data": codec.archived_macros[sym]}
         return {"error": f"Symbol '{sym}' not found in lexicon or macros."}
 
     elif name == "lookup_symbols":
@@ -148,6 +162,8 @@ def handle_call_tool(name, args):
                 results[s_clean] = {"verbose": v, "details": codec.definitions.get(v, {})}
             elif s_clean in codec.macros:
                 results[s_clean] = {"type": "COMPOUND_MACRO", "details": codec.macros[s_clean]}
+            elif s_clean in codec.archived_macros:
+                results[s_clean] = {"type": "ARCHIVED_MACRO", "details": codec.archived_macros[s_clean]}
             else:
                 results[s_clean] = {"error": "not_found"}
         return {"resolved": results}
@@ -158,7 +174,8 @@ def handle_call_tool(name, args):
 
     elif name == "decode_from_compact":
         c_stmt = args.get("compact_statement", "")
-        return {"verbose": codec.decode(c_stmt)}
+        expand = bool(args.get("expand_macros", False))
+        return {"verbose": codec.decode(c_stmt, expand_macros=expand)}
 
     elif name == "benchmark_compression":
         stmt = args.get("statement", "")
