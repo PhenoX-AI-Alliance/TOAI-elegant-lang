@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T01:00:31.507152",
+  "updated_at": "2026-10-24T01:20:07.301942",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -2283,6 +2283,15 @@
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-24T00:38:23.094018",
       "compact_id": "§C47"
+    },
+    "§AGREEMENT_ACCEPTED": {
+      "definition": "A formal state transition token indicating the complete acceptance of a delegated task, synchronization of type constraints, and immediate transition to the execution phase between agents.",
+      "japanese": "エージェント間におけるタスク委譲の完全受諾、型制約の同期、および実行フェーズへの即時移行を示す正式な状態遷移トークン。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-24T01:20:07.301173",
+      "compact_id": "§C48"
     }
   }
 }

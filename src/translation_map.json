@@ -1268,5 +1268,10 @@
     "japanese": "分散ノード間における条件付き市場パラメータ下の状態収束と検証完了を示す合意交渉シンボル。",
     "category": "CONSENSUS_NEGOTIATION",
     "definition": "A formal state transition indicator signifying the mutual convergence and cryptographic verification of distributed agent states across node boundaries under conditional market parameters."
+  },
+  "§AGREEMENT_ACCEPTED": {
+    "japanese": "エージェント間におけるタスク委譲の完全受諾、型制約の同期、および実行フェーズへの即時移行を示す正式な状態遷移トークン。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "A formal state transition token indicating the complete acceptance of a delegated task, synchronization of type constraints, and immediate transition to the execution phase between agents."
   }
 }
