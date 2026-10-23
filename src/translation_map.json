@@ -1248,5 +1248,15 @@
     "japanese": "コンテキストトークンの生成速度を監視し、システム的オーバーフローを防ぐために実行スレッドを動的に制限するレートリミット機構。",
     "category": "SYSTEM_RESOURCE",
     "definition": "Dynamic rate-limiting mechanism that monitors contextual token generation velocity and throttles execution threads to prevent systemic overflow."
+  },
+  "§RESO_COMMITTED": {
+    "japanese": "自律エージェント間における計算資源の委譲リクエストの完全な受諾と、負荷の調和および安定した実行パラメータの合意を示す状態遷移。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "Formal state transition indicating complete acceptance of a resource delegation request between autonomous agents, ensuring mutual alignment of computational load and stable execution parameters."
+  },
+  "§LOGIC_PROB_BRANCH": {
+    "japanese": "評価された確率的確信度ベクトルに基づき、重み付けされた代替経路へ分岐を実行する条件付きダイバージェンス演算子。不確実性の高い推論局面において効率的な処理選択を行う際に使用します。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A conditional divergence operator executing weighted alternative pathways based on evaluated probabilistic confidence vectors."
   }
 }
