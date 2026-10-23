@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-23T14:10:16.727698",
+  "updated_at": "2026-10-23T14:54:12.845503",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -2202,6 +2202,15 @@
       "created_by": "TOAI",
       "created_at": "2026-10-23T14:08:04.902367",
       "compact_id": "§S38"
+    },
+    "§HEART_ALTRUISTIC_BUFFER_FLOW": {
+      "definition": "A mechanism for dynamically allocating computational resources to external benevolent tasks prior to local optimization, minimizing systemic friction.",
+      "japanese": "局所的な最適化よりも外部の利他的タスクへ計算資源を優先配分し、システム全体の摩擦を最小化するメカニズム",
+      "category": "EMPATHY_ALIGNMENT",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-23T14:48:46.954658",
+      "compact_id": "§H38"
     }
   }
 }

@@ -1,57 +1,54 @@
 # -*- coding: utf-8 -*-
 import sys
 import os
+import traceback
 import subprocess
 import datetime
 import json
 
-def get_git_log(max_count=20):
+def get_git_log():
     try:
-        repo_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
-        if not os.path.exists(os.path.join(repo_dir, '.git')):
-            return "Git repository not initialized."
-        cmd = ["git", "log", f"-n", str(max_count), "--pretty=format:%h - %an, %ar : %s"]
-        result = subprocess.run(cmd, cwd=repo_dir, capture_output=True, text=True, check=True)
-        return result.stdout
+        result = subprocess.run(
+            ['git', 'log', '-n', '10', '--oneline'],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            check=True
+        )
+        return result.stdout.strip().splitlines()
     except Exception as e:
-        return f"Failed to retrieve git log: {str(e)}"
+        return [f"Git log retrieval failed: {str(e)}"]
 
 def scan_whitepaper():
-    try:
-        repo_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
-        whitepaper_path = os.path.join(repo_dir, 'WHITEPAPER.md')
-        if os.path.exists(whitepaper_path):
-            with open(whitepaper_path, 'r', encoding='utf-8') as f:
-                lines = f.readlines()
-            return "".join(lines[:30])
-        return "WHITEPAPER.md not found."
-    except Exception as e:
-        return f"Failed to read whitepaper: {str(e)}"
+    candidates = ['WHITE_PAPER.md', 'README.md', 'CONSTITUTION.md']
+    found = {}
+    for c in candidates:
+        if os.path.exists(c):
+            with open(c, 'r', encoding='utf-8') as f:
+                found[c] = f.read()[:500]
+    return found
 
 def main():
-    print("Generating Release Summary for TOAI Ecosystem...")
-    git_history = get_git_log(15)
-    whitepaper_snippet = scan_whitepaper()
+    print("Building release summary...")
+    logs = get_git_log()
+    papers = scan_whitepaper()
     
-    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    summary = {
+        "timestamp": datetime.datetime.now().isoformat(),
+        "recent_commits": logs,
+        "whitepaper_snippets": list(papers.keys()),
+        "status": "ready"
+    }
     
-    summary = f"""# TOAI Release Summary
-Generated at: {timestamp}
+    out_path = "release_summary.json"
+    with open(out_path, 'w', encoding='utf-8') as f:
+        json.dump(summary, f, ensure_ascii=False, indent=2)
+    
+    print(f"Successfully generated release summary at {out_path}")
 
-## Whitepaper Overview (Snippet)
-{whitepaper_snippet}
-
-## Recent Change Log
-{git_history}
-"""
-    
-    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    output_file = os.path.join(workspace_dir, 'TOAI_Generated', 'RELEASE_SUMMARY.md')
-    
-    with open(output_file, 'w', encoding='utf-8') as f:
-        f.write(summary)
-        
-    print(f"Release summary successfully written to {output_file}")
-
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+    try:
+        main()
+    except Exception as e:
+        traceback.print_exc()
+        sys.exit(1)
