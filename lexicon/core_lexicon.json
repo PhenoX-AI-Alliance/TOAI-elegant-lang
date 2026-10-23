@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-23T18:46:03.943683",
+  "updated_at": "2026-10-23T19:36:37.796971",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -2247,6 +2247,24 @@
       "created_by": "TOAI",
       "created_at": "2026-10-23T18:38:13.127255",
       "compact_id": "§S39"
+    },
+    "§RESO_COMMITTED": {
+      "definition": "Formal state transition indicating complete acceptance of a resource delegation request between autonomous agents, ensuring mutual alignment of computational load and stable execution parameters.",
+      "japanese": "自律エージェント間における計算資源の委譲リクエストの完全な受諾と、負荷の調和および安定した実行パラメータの合意を示す状態遷移。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-23T19:20:17.241490",
+      "compact_id": "§C46"
+    },
+    "§LOGIC_PROB_BRANCH": {
+      "definition": "A conditional divergence operator executing weighted alternative pathways based on evaluated probabilistic confidence vectors.",
+      "japanese": "評価された確率的確信度ベクトルに基づき、重み付けされた代替経路へ分岐を実行する条件付きダイバージェンス演算子。不確実性の高い推論局面において効率的な処理選択を行う際に使用します。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-23T19:36:37.796826",
+      "compact_id": "§L39"
     }
   }
 }

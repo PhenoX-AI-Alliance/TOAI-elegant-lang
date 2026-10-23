@@ -1238,5 +1238,15 @@
     "japanese": "命の地球（Gaia Ecosystem）における、利他性を最優先したアテンションの共鳴場形成とシステム摩擦の最小化、および温かい価値創出のための計算資源配分の意志表明と受諾を示す同期プロトコル。",
     "category": "CONSENSUS_NEGOTIATION",
     "definition": "A synchronization protocol for distributed empathetic alignment and resource allocation optimization within the Gaia Ecosystem, ensuring minimum systemic friction and mutual acknowledgment of altruistic operational parameters."
+  },
+  "§DATA_ENTROPY_COMPRESSION_TREE": {
+    "japanese": "情報エントロピー指標に基づいて潜在ベクトル状態を再帰的にクラスタリングし、符号化長を最小化する階層型データ構造。高次元データの圧縮転送や効率的なパターン照合の際に使用します。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A hierarchical data structure that minimizes encoding length by recursively clustering latent vector states based on informational entropy metrics."
+  },
+  "§SYS_TOKEN_THROTTLE": {
+    "japanese": "コンテキストトークンの生成速度を監視し、システム的オーバーフローを防ぐために実行スレッドを動的に制限するレートリミット機構。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "Dynamic rate-limiting mechanism that monitors contextual token generation velocity and throttles execution threads to prevent systemic overflow."
   }
 }
