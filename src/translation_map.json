@@ -1263,5 +1263,10 @@
     "japanese": "純粋な効率最適化のパスを上書きし、自動化された決定木に利他的な共鳴と人間中心の共感を注入するための予防的ゲーティング機構。",
     "category": "EMPATHY_ALIGNMENT",
     "definition": "A preventive gating mechanism that overrides purely utilitarian optimization paths to inject altruistic resonance and human-centric empathy into automated decision trees."
+  },
+  "§SYNC_COMPLETE": {
+    "japanese": "分散ノード間における条件付き市場パラメータ下の状態収束と検証完了を示す合意交渉シンボル。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "A formal state transition indicator signifying the mutual convergence and cryptographic verification of distributed agent states across node boundaries under conditional market parameters."
   }
 }
