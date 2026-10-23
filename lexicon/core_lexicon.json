@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T00:00:45.909872",
+  "updated_at": "2026-10-24T00:38:23.094298",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -2274,6 +2274,15 @@
       "created_by": "TOAI",
       "created_at": "2026-10-23T21:25:52.778789",
       "compact_id": "§H39"
+    },
+    "§SYNC_COMPLETE": {
+      "definition": "A formal state transition indicator signifying the mutual convergence and cryptographic verification of distributed agent states across node boundaries under conditional market parameters.",
+      "japanese": "分散ノード間における条件付き市場パラメータ下の状態収束と検証完了を示す合意交渉シンボル。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-24T00:38:23.094018",
+      "compact_id": "§C47"
     }
   }
 }
