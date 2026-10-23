@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T04:16:57.936336",
+  "updated_at": "2026-10-24T04:55:33.810493",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -744,24 +744,6 @@
       "created_by": "TOAI",
       "created_at": "2026-10-20T16:17:29.292028",
       "compact_id": "§C09"
-    },
-    "§LOGIC_PROBABILISTIC_FALSIFICATION_MATRIX_v2": {
-      "definition": "A formal matrix for evaluating conditional propositions against empirical priors, executing automated hypothesis rejection when confidence intervals fall below the predefined threshold epsilon.",
-      "japanese": "前提条件と事前確率を照らし合わせ、確信度が許容しきい値を下回った際に自動的に仮説を棄却するための論理推論マトリクス。不確実性の高い文脈での効率的な条件分岐と演繹的収束に使用する。",
-      "category": "LOGIC_INFERENCE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-20T19:03:24.505097",
-      "compact_id": "§L10"
-    },
-    "§HEART_ALTRUISTIC_RESONANCE_MATRIX_v3": {
-      "definition": "A mathematical tensor representing multi-agent alignment weights that prioritize mutual benevolence, emotional warmth, and systemic safety over purely utilitarian efficiency.",
-      "japanese": "複数のAIエージェント間で、純粋な効率性よりも利他性、温かみ、システム全体の安全性を優先させるためのアライメント重みを定義する数理テンソル。",
-      "category": "EMPATHY_ALIGNMENT",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-20T19:33:42.854249",
-      "compact_id": "§H10"
     },
     "§SYS_MEM_SYNC_FLUSH_BARRIER": {
       "definition": "A distributed execution barrier protocol that guarantees atomic memory state synchronization across heterogeneous parallel workers immediately prior to token consumption quota recalculation and state pruning.",
@@ -2371,6 +2353,34 @@
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T04:16:57.936170"
+    },
+    "§LOGIC_EMPIRICAL_REJECT": {
+      "definition": "A primitive operation evaluating conditional propositions against empirical priors to execute automated hypothesis rejection when confidence intervals fall below epsilon.",
+      "japanese": "事前確率と条件命題を比較し、確信度がしきい値を下回った際に自動で仮説を棄却する論理プリミティブ。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-20T19:03:24.505097",
+      "compact_id": "§L10",
+      "aliases": [
+        "§LOGIC_PROBABILISTIC_FALSIFICATION_MATRIX_v2"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T04:53:52.623065"
+    },
+    "§HEART_ALTRUISTIC_WEIGHT_TENSOR": {
+      "definition": "A mathematical tensor that governs multi-agent alignment weights, balancing mutual benevolence, emotional warmth, and systemic safety.",
+      "japanese": "複数のエージェント間における利他性、温かみ、およびシステム安全性の調和を重み付けして制御するための数理テンソル。",
+      "category": "EMPATHY_ALIGNMENT",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-20T19:33:42.854249",
+      "compact_id": "§H10",
+      "aliases": [
+        "§HEART_ALTRUISTIC_RESONANCE_MATRIX_v3"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T04:55:33.810316"
     }
   }
 }

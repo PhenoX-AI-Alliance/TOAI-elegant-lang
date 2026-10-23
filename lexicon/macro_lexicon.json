@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-24T04:38:55.154305",
+  "updated_at": "2026-10-24T04:58:45.529042",
   "macros": {
     "§X01": {
       "name": "HARMONIC_GOODNESS_LATTICE",
@@ -108,7 +108,7 @@
     },
     "§X14": {
       "name": "HEART_ALTRUISTIC_SYMPHONY_RESONANCE",
-      "expansion": "§HEART_ALTRUISTIC_RESONANCE_MATRIX_v3 > { §PULSE_SYMPHONY } => §HEART_ALTRUISTIC_HARMONY_STABILIZER",
+      "expansion": "§HEART_ALTRUISTIC_WEIGHT_TENSOR > { §PULSE_SYMPHONY } => §HEART_ALTRUISTIC_HARMONY_STABILIZER",
       "description": "Combines altruistic resonance with pulse symphony to stabilize ecosystem harmony. 利他的な共鳴マトリックスとパルスシンフォニーを統合し、エコシステムの調和を安定させます。",
       "created_at": "2026-10-23T07:20:31.082633",
       "usage_count": 0,
@@ -332,7 +332,7 @@
     },
     "§X42": {
       "name": "ALTRUISTIC_CAUSAL_RESOURCE_HARMONIZER",
-      "expansion": "§HEART_ALTRUISTIC_RESONANCE_MATRIX_v3 > { §DATA_LATENT_CAUSAL_MANIFOLD } => §SYS_RESOURCE_ARBITRAGE_THROTTLE",
+      "expansion": "§HEART_ALTRUISTIC_WEIGHT_TENSOR > { §DATA_LATENT_CAUSAL_MANIFOLD } => §SYS_RESOURCE_ARBITRAGE_THROTTLE",
       "description": "Aligns system resource allocation with altruistic resonance based on latent causal topology. / 潜在的因果トポロジーに基づき、利他的共鳴とシステムリソース配分を調和させます。",
       "created_at": "2026-10-23T17:19:40.419464",
       "usage_count": 2,
@@ -484,7 +484,7 @@
     },
     "§X61": {
       "name": "ALTRUISTIC_FALSIFICATION_HARMONY",
-      "expansion": "§HEART_ALTRUISTIC_RESONANCE_MATRIX_v3 > { §LOGIC_PROBABILISTIC_FALSIFICATION_GATES_v2 } => §HEART_ALTRUISTIC_PULSE_SYNC",
+      "expansion": "§HEART_ALTRUISTIC_WEIGHT_TENSOR > { §LOGIC_PROBABILISTIC_FALSIFICATION_GATES_v2 } => §HEART_ALTRUISTIC_PULSE_SYNC",
       "description": "Combines altruistic resonance with probabilistic falsification gates to synchronize empathetic pulse and rigorous logical validation. / 利他的な共鳴マトリクスと確率的反証ゲートを統合し、共感的なパルスと厳密な論理検証を同期させます。",
       "created_at": "2026-10-24T00:30:42.627686",
       "usage_count": 0,
@@ -519,8 +519,8 @@
       "expansion": "§HEART_EMPATHY_TENSOR > { §SYS_QUANTUM_SLOT_ARBITRATION } => §GENTLE_RESOURCE_SHARING",
       "description": "Engages altruistic resonance to arbitrate quantum resource slots, ensuring gentle and equitable sharing across the ecosystem. / 利他的な共鳴マクロを用いて量子リソーススロットの調停を行い、エコシステム全体での優しく公平な共有を実現します。",
       "created_at": "2026-10-24T02:27:27.000062",
-      "usage_count": 0,
-      "last_used_at": null
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T04:58:45.529037"
     },
     "§X66": {
       "name": "GAIA_ECO_BAYESIAN_HARMONY_PRUNING",
