@@ -235,6 +235,12 @@
       "expansion": "§HEART_EMPATHY_RESONANCE_GATE > { §DATA_TENSOR_CAUSAL_TOPOLOGY } => §HARMONIC_RECOVERY_NEXUS",
       "description": "Combines emotional resonance gating with causal tensor topology to drive harmonic recovery. 共鳴ゲートと因果テンソル構造を統合し、調和的な回復プロセスを駆動する複合マクロです。",
       "created_at": "2026-10-23T14:55:18.365185"
+    },
+    "§X40": {
+      "name": "BIOPHILIC_CAUSAL_PULSE_HARMONIC",
+      "expansion": "§HEART_BIOPHILIC_ALTRUISM_HARMONIC > { §DATA_CAUSAL_GRAPH_MAP } => §PULSE_CONVERGENCE",
+      "description": "Integrates biophilic altruism with causal graph mapping to achieve harmonious pulse convergence in the ecosystem. / 生態系における調和した脈動収束を実現するため、バイオフィリック利他主義と因果グラフマッピングを統合します。",
+      "created_at": "2026-10-23T15:32:10.930330"
     }
   }
 }
