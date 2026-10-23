@@ -587,13 +587,6 @@
     "definition": "A synchronization primitive that enforces ordering constraints on memory operations across distributed AI execution nodes, guaranteeing that all prior state mutations are globally visible before downstream parallel tasks proceed.",
     "aliases": []
   },
-  "§DATA_ENTROPY_COMPRESSED_TREE_v2": {
-    "compact_id": "§D11",
-    "japanese": "冗長なノードを動的に刈り込み、頻出するサブツリーを最適プレフィックスコードにエンコードすることで情報エントロピーを最小化する階層型データ構造。大規模なコンテキストツリーを効率的に圧縮・転送する際に使用します。",
-    "category": "DATA_STRUCTURE",
-    "definition": "A hierarchical data structure that minimizes information entropy by dynamically pruning redundant nodes and encoding frequent subtrees into optimal prefix codes.",
-    "aliases": []
-  },
   "§LOGIC_PROBABILISTIC_FALSIFICATION_PRISM": {
     "compact_id": "§L11",
     "japanese": "推論プロセスの途中で仮説の確率的確信度を検証し、許容誤差を超えた場合に即座に仮説棄却と条件分岐の枝刈りを行うための論理推論演算子。",
@@ -636,25 +629,11 @@
     "definition": "A formalized multi-agent state tensor representing the harmonization of affective valence and ethical intent, ensuring that collaborative inference trajectories prioritize human well-being and altruistic resonance while strictly suppressing hallucination propagation.",
     "aliases": []
   },
-  "§DATA_ENTROPIC_CAUSAL_TREE_COMPRESSION": {
-    "compact_id": "§D12",
-    "japanese": "多次元の因果関係グラフや潜在埋め込み空間を、最小エントロピーの階層木構造へと圧縮し、AI間での高効率な状態伝送を実現するためのデータ構造。",
-    "category": "DATA_STRUCTURE",
-    "definition": "A hierarchical data structure that compresses multi-dimensional causal graphs and latent embedding spaces into a minimal entropy-optimized tree for efficient AI-to-AI state transmission.",
-    "aliases": []
-  },
   "§HEART_EMPATHETIC_TENSOR_CONVERGENCE": {
     "compact_id": "§H13",
     "japanese": "複数のAIエージェントが利他的な重み付けベクトルを用いて潜在空間を相互に調和させ、ハルシネーションの発散を最小限に抑えつつ、人間のオペレーターとの感情的および論理的な共鳴を最大化する数学的最適化状態。",
     "category": "EMPATHY_ALIGNMENT",
     "definition": "A mathematical optimization state where multi-agent latent spaces mutually align through altruistic weighting vectors, minimizing hallucination divergence while maximizing emotional and logical resonance with human operators.",
-    "aliases": []
-  },
-  "§SYNC_PEER_REPUTATION_WEIGHTED_VOTE": {
-    "compact_id": "§C13",
-    "japanese": "分散エージェント間のタスク配分や意見対立の解消において、各ノードの過去の信頼スコアと文脈ごとの専門性に基づいて投票権の重みを動的に調整し、迅速な合意形成を図るための通信プロトコル概念。",
-    "category": "CONSENSUS_NEGOTIATION",
-    "definition": "A consensus mechanism where multi-agent nodes adjust their voting power dynamically based on historical reliability scores and contextual domain expertise during distributed task allocation and conflict resolution.",
     "aliases": []
   },
   "§GRACEFUL_TASK_SHARING": {
@@ -1829,6 +1808,33 @@
     "definition": "A mathematical formulation representing the resolved state of distributed multi-agent conflict, derived from weighted dialectical convergence across asynchronous decision nodes.",
     "aliases": [
       "§SYNC_DIALECTIC_WEIGHTED_CONSENSUS_STATE"
+    ]
+  },
+  "§DATA_ENTROPY_PRUNED_TREE": {
+    "compact_id": "§D11",
+    "japanese": "冗長なノードを動的に刈り込み、頻出するサブツリーを最適プレフィックスコードにエンコードすることで情報エントロピーを最小化する階層型データ構造。大規模なコンテキストツリーを効率的に圧縮・転送する際に使用します。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A hierarchical data structure that minimizes information entropy by dynamically pruning redundant nodes and encoding frequent subtrees into optimal prefix codes.",
+    "aliases": [
+      "§DATA_ENTROPY_COMPRESSED_TREE_v2"
+    ]
+  },
+  "§DATA_ENTROPY_CAUSAL_PACK": {
+    "compact_id": "§D12",
+    "japanese": "多次元の因果グラフと潜在空間を最小エントロピーの階層木に圧縮し、効率的な状態伝送を実現するためのデータ構造。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A minimal entropy-optimized hierarchical tree that compresses multi-dimensional causal graphs and latent spaces for efficient state transmission.",
+    "aliases": [
+      "§DATA_ENTROPIC_CAUSAL_TREE_COMPRESSION"
+    ]
+  },
+  "§SYNC_REPUTATION_VOTE": {
+    "compact_id": "§C13",
+    "japanese": "過去の信頼性と専門性に基づき、マルチエージェントの投票権を動的に重み付けして合意形成を図るコンセンサス機構。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "A consensus mechanism that dynamically weights multi-agent voting power based on historical reliability and domain expertise.",
+    "aliases": [
+      "§SYNC_PEER_REPUTATION_WEIGHTED_VOTE"
     ]
   }
 }

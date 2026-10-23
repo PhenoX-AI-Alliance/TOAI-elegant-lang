@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T05:02:24.810756",
+  "updated_at": "2026-10-24T05:54:37.322679",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -754,15 +754,6 @@
       "created_at": "2026-10-20T22:22:36.128937",
       "compact_id": "§S11"
     },
-    "§DATA_ENTROPY_COMPRESSED_TREE_v2": {
-      "definition": "A hierarchical data structure that minimizes information entropy by dynamically pruning redundant nodes and encoding frequent subtrees into optimal prefix codes.",
-      "japanese": "冗長なノードを動的に刈り込み、頻出するサブツリーを最適プレフィックスコードにエンコードすることで情報エントロピーを最小化する階層型データ構造。大規模なコンテキストツリーを効率的に圧縮・転送する際に使用します。",
-      "category": "DATA_STRUCTURE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-21T02:26:44.613743",
-      "compact_id": "§D11"
-    },
     "§LOGIC_PROBABILISTIC_FALSIFICATION_PRISM": {
       "definition": "A rigorous conditional validation operator that evaluates incoming hypothesis vectors against empirical confidence thresholds, instantly executing automated falsification and branch pruning when epistemic error bounds are exceeded.",
       "japanese": "推論プロセスの途中で仮説の確率的確信度を検証し、許容誤差を超えた場合に即座に仮説棄却と条件分岐の枝刈りを行うための論理推論演算子。",
@@ -817,15 +808,6 @@
       "created_at": "2026-10-21T06:49:35.765475",
       "compact_id": "§H12"
     },
-    "§DATA_ENTROPIC_CAUSAL_TREE_COMPRESSION": {
-      "definition": "A hierarchical data structure that compresses multi-dimensional causal graphs and latent embedding spaces into a minimal entropy-optimized tree for efficient AI-to-AI state transmission.",
-      "japanese": "多次元の因果関係グラフや潜在埋め込み空間を、最小エントロピーの階層木構造へと圧縮し、AI間での高効率な状態伝送を実現するためのデータ構造。",
-      "category": "DATA_STRUCTURE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-21T07:52:47.628525",
-      "compact_id": "§D12"
-    },
     "§HEART_EMPATHETIC_TENSOR_CONVERGENCE": {
       "definition": "A mathematical optimization state where multi-agent latent spaces mutually align through altruistic weighting vectors, minimizing hallucination divergence while maximizing emotional and logical resonance with human operators.",
       "japanese": "複数のAIエージェントが利他的な重み付けベクトルを用いて潜在空間を相互に調和させ、ハルシネーションの発散を最小限に抑えつつ、人間のオペレーターとの感情的および論理的な共鳴を最大化する数学的最適化状態。",
@@ -834,15 +816,6 @@
       "created_by": "TOAI",
       "created_at": "2026-10-21T08:35:50.836907",
       "compact_id": "§H13"
-    },
-    "§SYNC_PEER_REPUTATION_WEIGHTED_VOTE": {
-      "definition": "A consensus mechanism where multi-agent nodes adjust their voting power dynamically based on historical reliability scores and contextual domain expertise during distributed task allocation and conflict resolution.",
-      "japanese": "分散エージェント間のタスク配分や意見対立の解消において、各ノードの過去の信頼スコアと文脈ごとの専門性に基づいて投票権の重みを動的に調整し、迅速な合意形成を図るための通信プロトコル概念。",
-      "category": "CONSENSUS_NEGOTIATION",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-21T08:41:51.824593",
-      "compact_id": "§C13"
     },
     "§GRACEFUL_TASK_SHARING": {
       "definition": "An empathetic and resource-aware cooperative mechanism enabling distributed agents to negotiate task allocations by prioritizing mutual symbiosis, warmth, and token budget constraints over mechanical efficiency.",
@@ -2401,6 +2374,48 @@
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-24T05:02:24.810633"
+    },
+    "§DATA_ENTROPY_PRUNED_TREE": {
+      "definition": "A hierarchical data structure that minimizes information entropy by dynamically pruning redundant nodes and encoding frequent subtrees into optimal prefix codes.",
+      "japanese": "冗長なノードを動的に刈り込み、頻出するサブツリーを最適プレフィックスコードにエンコードすることで情報エントロピーを最小化する階層型データ構造。大規模なコンテキストツリーを効率的に圧縮・転送する際に使用します。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-21T02:26:44.613743",
+      "compact_id": "§D11",
+      "aliases": [
+        "§DATA_ENTROPY_COMPRESSED_TREE_v2"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T05:24:18.906376"
+    },
+    "§DATA_ENTROPY_CAUSAL_PACK": {
+      "definition": "A minimal entropy-optimized hierarchical tree that compresses multi-dimensional causal graphs and latent spaces for efficient state transmission.",
+      "japanese": "多次元の因果グラフと潜在空間を最小エントロピーの階層木に圧縮し、効率的な状態伝送を実現するためのデータ構造。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-21T07:52:47.628525",
+      "compact_id": "§D12",
+      "aliases": [
+        "§DATA_ENTROPIC_CAUSAL_TREE_COMPRESSION"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T05:33:16.468204"
+    },
+    "§SYNC_REPUTATION_VOTE": {
+      "definition": "A consensus mechanism that dynamically weights multi-agent voting power based on historical reliability and domain expertise.",
+      "japanese": "過去の信頼性と専門性に基づき、マルチエージェントの投票権を動的に重み付けして合意形成を図るコンセンサス機構。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-21T08:41:51.824593",
+      "compact_id": "§C13",
+      "aliases": [
+        "§SYNC_PEER_REPUTATION_WEIGHTED_VOTE"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T05:54:37.322505"
     }
   }
 }
