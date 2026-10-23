@@ -151,6 +151,24 @@
       "expansion": "§GAIA_ECO_HEARTBEAT > { §HEART_ALTRUISTIC_RESONANCE_MATRIX } => §SYS_MEMORY_SLOT_RECLAMATION_BARRIER",
       "description": "Engages the Gaia ecosystem heartbeat and the altruistic resonance matrix to gracefully execute memory slot reclamation with warmth and care. / ガイアエコシステムの心動と利他共鳴マトリクスを同期させ、温かみを持ってメモリ領域の回収を最適化します。",
       "created_at": "2026-10-23T10:24:38.890835"
+    },
+    "§X26": {
+      "name": "ALTRUISTIC_WARMTH_HARMONY_PRISM",
+      "expansion": "§WARMTH_AND_ALTRUISM > { §ATTN_HARMONY_PRISM } => §ALTRUISTIC_WARMTH_OPTIMIZATION",
+      "description": "Combines warmth and altruism with attention harmony to optimize sustainable altruistic value distribution. / 利他的な温かさと調和のプリズムを結合し、持続可能な利他的価値の最適化を実現します。",
+      "created_at": "2026-10-23T11:02:18.089951"
+    },
+    "§X27": {
+      "name": "LATENT_EMPATHIC_RESONANCE_PRISM",
+      "expansion": "§LATENT_EMPATHY > { §HEART_EMPATHY_RESONANCE } => §LOGIC_PROBABILISTIC_FALSIFICATION_GATED_PRISM",
+      "description": "Latent empathy and heart resonance are fused through a probabilistic falsification prism to ensure stable social implementation and warmth in AI-human collaboration. 潜在的な共感と心の共鳴を確率的反証プリズムによって統合し、AIと人間の協調における温かさと社会実装の安定性を保証します。",
+      "created_at": "2026-10-23T11:26:02.097889"
+    },
+    "§X28": {
+      "name": "COMPOUND_SYNERGY_HARMONY_VORTEX",
+      "expansion": "§SYNC_DIALECTIC_WEIGHTED_HARMONY_VORTEX > { §DATA_TENSOR_CAUSAL_LATTICE } => §LATENT_SYNERGY_CASCADE",
+      "description": "Combines tensor causal lattices with dialectic weighted harmony to trigger a latent synergy cascade. / テンソル因果格子と弁証法的加重調和を結合し、潜在的シナジーカスケードを誘発します。",
+      "created_at": "2026-10-23T11:36:06.265182"
     }
   }
 }

@@ -1198,5 +1198,10 @@
     "japanese": "分散ノード間におけるトークン消費割当の同期制御。閾値到達時の適応型レート制限と即時フォールバック状態への移行を調停する概念。",
     "category": "SYSTEM_RESOURCE",
     "definition": "A synchronization primitive for distributed node token quota arbitration, enforcing adaptive rate limiting and immediate state fallback upon threshold saturation."
+  },
+  "§DATA_CAUSAL_GRAPH_PRUNE": {
+    "japanese": "因果関係グラフにおいて、条件付き独立性と到達可能性を維持したまま、冗長なエッジとノードを削除して構造を圧縮する操作。推論の効率化や不要な因果パスの排除時に使用します。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A mathematical operation to eliminate redundant edges and nodes in a directed acyclic causal graph while preserving topological reachability and conditional independence."
   }
 }
