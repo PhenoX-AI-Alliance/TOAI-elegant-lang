@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T07:46:50.902173",
+  "updated_at": "2026-10-24T08:21:42.570985",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -979,15 +979,6 @@
       "created_at": "2026-10-21T16:48:03.467154",
       "compact_id": "§C20"
     },
-    "§SYS_SLOT_THROTTLE_FALLBACK_MATRIX": {
-      "definition": "A dynamic execution constraint matrix that monitors real-time token consumption velocity and memory pressure, automatically invoking fallback routing and concurrency throttling upon threshold saturation.",
-      "japanese": "リアルタイムのトークン消費速度とメモリ負荷を監視し、閾値飽和時に自動的にフォールバック経路と並列実行スロットリングを発動する動的実行制約マトリクス。",
-      "category": "SYSTEM_RESOURCE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-21T17:45:04.627314",
-      "compact_id": "§S15"
-    },
     "§LOGIC_CONDITIONAL_PRUNING_NODE": {
       "definition": "A logical inference structure that evaluates premises against probabilistic thresholds and immediately prunes invalid causal branches to optimize convergence.",
       "japanese": "前提条件を確率的なしきい値に基づいて評価し、無効な因果分岐を即座に剪定することで論理的収束を高速化するための推論ノード。",
@@ -1023,15 +1014,6 @@
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-21T20:51:27.982154",
       "compact_id": "§C21"
-    },
-    "§DATA_LATENT_CAUSAL_TOPOLOGY_MAP_v2": {
-      "definition": "A directed acyclic hypergraph mapping probabilistic cause-effect chains within a compressed latent embedding space, optimized for zero-loss topological retrieval and multi-agent consensus alignment.",
-      "japanese": "圧縮された潜在埋め込み空間内の確率的因果連鎖をマッピングする有向非巡環ハイパーグラフ。マルチエージェント間の合意形成と損失ゼロのトポロジカル検索に最適化された高次元データ構造。",
-      "category": "DATA_STRUCTURE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-21T20:54:04.016188",
-      "compact_id": "§D16"
     },
     "§DISTRIBUTED_QUORUM_ARBITRATION": {
       "definition": "A distributed consensus mechanism operating over high-dimensional causal tensor spaces, utilizing latent-space empathic attention matrices to achieve decentralized arbitration, conflict resolution, and harmonious resonance among autonomous multi-agent nodes.",
@@ -2446,6 +2428,34 @@
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T07:46:50.902087"
+    },
+    "§SYS_VELOCITY_THROTTLE_MATRIX": {
+      "definition": "A runtime constraint matrix that monitors execution token velocity and memory saturation to trigger adaptive concurrency fallback.",
+      "japanese": "トークン消費速度とメモリ負荷を監視し、閾値超過時に適応型並列度フォールバックを駆動する実行制約マトリクス。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-21T17:45:04.627314",
+      "compact_id": "§S15",
+      "aliases": [
+        "§SYS_SLOT_THROTTLE_FALLBACK_MATRIX"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T08:02:23.543860"
+    },
+    "§DATA_LATENT_CAUSAL_HYPERGRAPH": {
+      "definition": "A directed acyclic hypergraph mapping probabilistic cause-effect chains in a latent space for zero-loss topological retrieval and multi-agent consensus.",
+      "japanese": "潜在空間における確率的因果連鎖をマッピングし、損失ゼロのトポロジカル検索とマルチエージェント合意形成を実現する有向非巡回ハイパーグラフ。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-21T20:54:04.016188",
+      "compact_id": "§D16",
+      "aliases": [
+        "§DATA_LATENT_CAUSAL_TOPOLOGY_MAP_v2"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T08:21:42.570896"
     }
   }
 }

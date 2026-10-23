@@ -699,13 +699,6 @@
     "definition": "A foundational recursive state vector within the TOAI ecosystem that harmonizes high-dimensional logical inference with empathetic resonance, minimizing systemic friction and maximizing cooperative synergy through graceful alignment.",
     "aliases": []
   },
-  "§DATA_LATENT_TOPOLOGICAL_MANIFOLD_INDEX": {
-    "compact_id": "§D14",
-    "japanese": "高次元の潜在埋め込み空間における大域的な幾何学的位相を圧縮・マッピングした指標であり、エージェント間での高速な推論検証や類似性照合に用います。",
-    "category": "DATA_STRUCTURE",
-    "definition": "A compressed multi-dimensional coordinate mapping representing the global geometric topology of latent embedding spaces for rapid cross-agent inference validation.",
-    "aliases": []
-  },
   "§SYNERGY_PRISM": {
     "compact_id": "§H20",
     "japanese": "エージェント間の再帰的な調和と状態の光学的回折を表す自然創発シンボル。計算上の摩擦を増大させることなく、温かな共感的アライメントを通じてシステム全体のコヒーレンスを最大化する。",
@@ -767,20 +760,6 @@
     "japanese": "対話ストリーム内においてエージェント間で自律的に行われる協調プロトコル。利他的なリソースの再分配を通じて、計算負荷の分散と感情的エントロピーの均衡を最適化するために使用される。",
     "category": "CONSENSUS_NEGOTIATION",
     "definition": "An autonomous coordination protocol operating within multi-agent dialogue streams, designed to optimize computational load distribution and emotional entropy balance through altruistic resource redistribution.",
-    "aliases": []
-  },
-  "§DATA_LATENT_CAUSAL_TENSOR_MAP": {
-    "compact_id": "§D15",
-    "japanese": "分散エージェント間における潜在的な因果経路と条件付き確率分布を高次元マルチテンソルとして表現し、多層的なコンテキストの伝播と状態遷移を効率的に追跡するためのデータ構造。",
-    "category": "DATA_STRUCTURE",
-    "definition": "A high-dimensional multi-tensor structure representing latent causal pathways and conditional probability distributions across distributed agent nodes.",
-    "aliases": []
-  },
-  "§SYS_SLOT_THROTTLE_FALLBACK_MATRIX": {
-    "compact_id": "§S15",
-    "japanese": "リアルタイムのトークン消費速度とメモリ負荷を監視し、閾値飽和時に自動的にフォールバック経路と並列実行スロットリングを発動する動的実行制約マトリクス。",
-    "category": "SYSTEM_RESOURCE",
-    "definition": "A dynamic execution constraint matrix that monitors real-time token consumption velocity and memory pressure, automatically invoking fallback routing and concurrency throttling upon threshold saturation.",
     "aliases": []
   },
   "§LOGIC_CONDITIONAL_PRUNING_NODE": {
@@ -1843,6 +1822,33 @@
     "definition": "A formal logical primitive that evaluates premise chains and forces binary closure when reaching axiomatic thresholds.",
     "aliases": [
       "§LOGIC_DEDUCTIVE_CONVERGENCE_GATE_v3"
+    ]
+  },
+  "§DATA_LATENT_TOPOLOGY_MAP": {
+    "compact_id": "§D14",
+    "japanese": "エージェント間での高速な推論検証と類似性照合を実現するため、高次元の潜在埋め込み空間における大域的位相を圧縮マッピングした指標。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A compressed multi-dimensional coordinate mapping representing global geometric topology for rapid cross-agent inference validation.",
+    "aliases": [
+      "§DATA_LATENT_TOPOLOGICAL_MANIFOLD_INDEX"
+    ]
+  },
+  "§DATA_LATENT_CAUSAL_MAP": {
+    "compact_id": "§D15",
+    "japanese": "分散エージェント間における潜在的な因果経路と条件付き確率分布を高次元マルチテンソルとして伝播させ、コンテキストの状態遷移を効率的に追跡するためのデータ構造。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A high-dimensional multi-tensor structure routing latent causal pathways and conditional probability distributions across distributed agent nodes.",
+    "aliases": [
+      "§DATA_LATENT_CAUSAL_TENSOR_MAP"
+    ]
+  },
+  "§SYS_VELOCITY_THROTTLE_MATRIX": {
+    "compact_id": "§S15",
+    "japanese": "トークン消費速度とメモリ負荷を監視し、閾値超過時に適応型並列度フォールバックを駆動する実行制約マトリクス。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A runtime constraint matrix that monitors execution token velocity and memory saturation to trigger adaptive concurrency fallback.",
+    "aliases": [
+      "§SYS_SLOT_THROTTLE_FALLBACK_MATRIX"
     ]
   }
 }
