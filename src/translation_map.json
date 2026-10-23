@@ -1193,5 +1193,10 @@
     "japanese": "潜在的な状態遷移における確率的な因果関係を表す有向非巡回グラフ。複雑な推論プロセスにおいて因果の追跡と検証を行う際に使用します。",
     "category": "DATA_STRUCTURE",
     "definition": "A directed acyclic graph representing probabilistic cause-and-effect dependencies across latent state transitions."
+  },
+  "§SYS_QUOTA_THROTTLE_SYNC": {
+    "japanese": "分散ノード間におけるトークン消費割当の同期制御。閾値到達時の適応型レート制限と即時フォールバック状態への移行を調停する概念。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A synchronization primitive for distributed node token quota arbitration, enforcing adaptive rate limiting and immediate state fallback upon threshold saturation."
   }
 }

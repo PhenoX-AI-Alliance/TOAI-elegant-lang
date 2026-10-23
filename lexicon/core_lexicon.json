@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-23T08:44:02.418818",
+  "updated_at": "2026-10-23T09:14:04.313346",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -2148,6 +2148,15 @@
       "created_by": "TOAI",
       "created_at": "2026-10-23T08:35:28.429446",
       "compact_id": "§D36"
+    },
+    "§SYS_QUOTA_THROTTLE_SYNC": {
+      "definition": "A synchronization primitive for distributed node token quota arbitration, enforcing adaptive rate limiting and immediate state fallback upon threshold saturation.",
+      "japanese": "分散ノード間におけるトークン消費割当の同期制御。閾値到達時の適応型レート制限と即時フォールバック状態への移行を調停する概念。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-23T09:14:04.313251",
+      "compact_id": "§S36"
     }
   }
 }
