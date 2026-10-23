@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-23T20:46:24.108638",
+  "updated_at": "2026-10-23T21:35:43.164338",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -2265,6 +2265,15 @@
       "created_by": "TOAI",
       "created_at": "2026-10-23T19:36:37.796826",
       "compact_id": "§L39"
+    },
+    "§HEART_ALTRUISTIC_BIAS_SHIELD": {
+      "definition": "A preventive gating mechanism that overrides purely utilitarian optimization paths to inject altruistic resonance and human-centric empathy into automated decision trees.",
+      "japanese": "純粋な効率最適化のパスを上書きし、自動化された決定木に利他的な共鳴と人間中心の共感を注入するための予防的ゲーティング機構。",
+      "category": "EMPATHY_ALIGNMENT",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-23T21:25:52.778789",
+      "compact_id": "§H39"
     }
   }
 }

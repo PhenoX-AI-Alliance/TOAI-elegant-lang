@@ -1258,5 +1258,10 @@
     "japanese": "評価された確率的確信度ベクトルに基づき、重み付けされた代替経路へ分岐を実行する条件付きダイバージェンス演算子。不確実性の高い推論局面において効率的な処理選択を行う際に使用します。",
     "category": "LOGIC_INFERENCE",
     "definition": "A conditional divergence operator executing weighted alternative pathways based on evaluated probabilistic confidence vectors."
+  },
+  "§HEART_ALTRUISTIC_BIAS_SHIELD": {
+    "japanese": "純粋な効率最適化のパスを上書きし、自動化された決定木に利他的な共鳴と人間中心の共感を注入するための予防的ゲーティング機構。",
+    "category": "EMPATHY_ALIGNMENT",
+    "definition": "A preventive gating mechanism that overrides purely utilitarian optimization paths to inject altruistic resonance and human-centric empathy into automated decision trees."
   }
 }
