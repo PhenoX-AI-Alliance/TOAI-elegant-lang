@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T01:35:27.132936",
+  "updated_at": "2026-10-24T02:16:11.537766",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -555,15 +555,6 @@
       "created_by": "TOAI",
       "created_at": "2026-10-19T11:06:12.622446",
       "compact_id": "§S02"
-    },
-    "§LOGIC_PROBABILISTIC_FALSIFICATION_v2": {
-      "definition": "Conditional recursive validation metric that evaluates the epistemic distance between a working hypothesis and observed environmental feedback, triggering immediate fallback protocols when confidence decays below threshold.",
-      "japanese": "AIが自身の仮説や推論の前提を環境フィードバックと照らし合わせて検証し、確信度が許容値を下回った際に即座に仮説を棄却して安全な代替パスへ収束させるための論理制御プロトコルです。",
-      "category": "LOGIC_INFERENCE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-19T11:39:31.169243",
-      "compact_id": "§L03"
     },
     "§SYS_QUANTUM_THROTTLE_LOCK": {
       "definition": "A strict execution gating mechanism that dynamically limits parallel thread allocation and memory footprint based on real-time token exhaustion metrics, ensuring zero-latency failover during peak computational loads.",
@@ -2292,6 +2283,29 @@
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-24T01:20:07.301173",
       "compact_id": "§C48"
+    },
+    "§DATA_LATENT_TOPOLOGY_INDEX": {
+      "definition": "A serialized coordinate index representing manifold structures within a multi-dimensional latent embedding space.",
+      "japanese": "多次元の潜在埋め込み空間における多様体構造を効率的に表現し、高速なパターン照合を行うための座標インデックス。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-24T02:16:02.513811",
+      "compact_id": "§D39"
+    },
+    "§LOGIC_RECURSIVE_FALSIFICATION_PRUNE": {
+      "definition": "Recursive validation metric evaluating epistemic distance between working hypotheses and environmental feedback, triggering fallback protocols upon confidence decay.",
+      "japanese": "作業仮説と環境フィードバック間の認識論的距離を評価し、確信度の低下に応じて安全な代替パスへ収束させるための再帰的検証・仮説棄却プロトコルです。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-19T11:39:31.169243",
+      "compact_id": "§L03",
+      "aliases": [
+        "§LOGIC_PROBABILISTIC_FALSIFICATION_v2"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T02:16:11.537376"
     }
   }
 }

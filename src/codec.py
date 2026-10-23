@@ -24,6 +24,9 @@ class ElegantCodec:
         self.load_lexicon()
 
     def load_lexicon(self):
+        self.verbose_to_compact = {}
+        self.compact_to_verbose = {}
+        self.definitions = {}
         if self.lexicon_path.exists():
             try:
                 data = json.loads(self.lexicon_path.read_text(encoding="utf-8"))
@@ -33,6 +36,10 @@ class ElegantCodec:
                     if cid:
                         self.verbose_to_compact[sym] = cid
                         self.compact_to_verbose[cid] = sym
+                        # Phase 1.5 リファクタリング済み旧シンボルの後方互換エイリアスも登録
+                        for alias in item.get("aliases", []):
+                            if alias not in self.verbose_to_compact:
+                                self.verbose_to_compact[alias] = cid
                     self.definitions[sym] = item
             except Exception as e:
                 print(f"[ElegantCodec] Failed to load lexicon: {e}")
@@ -68,8 +75,8 @@ class ElegantCodec:
             self.load_lexicon()
 
         decoded = text
-        # 正規表現で §[LSCDHGX][0-9]{2} を置換
-        pattern = re.compile(r'§[A-Z][0-9]{2}')
+        # 正規表現で §[LSCDHGX][0-9]{2,4} を一括置換（3桁ID §X100 等での部分一致バグを防止）
+        pattern = re.compile(r'§[A-Z][0-9]{2,4}')
         def replace_fn(match):
             cid = match.group(0)
             return self.compact_to_verbose.get(cid, cid)

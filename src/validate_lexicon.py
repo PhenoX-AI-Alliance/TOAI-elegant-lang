@@ -37,7 +37,7 @@ def validate_lexicon(lexicon_path=None):
         # ※ 過去の登録済み既存シンボルは警告にとどめ、新規登録時の完全ブロックを可能にする
         raw_name = sym[1:] # §を除去
         parts = raw_name.split('_')
-        if re.search(r'_v\d+$', sym):
+        if re.search(r'_[vV]\d+$', sym):
             naming_errors.append(f"{sym}: Suffix versioning (_vN) is deprecated/forbidden.")
         if len(parts) > 4:
             naming_errors.append(f"{sym}: Symbol name is too long ({len(parts)} words > 4 max).")
