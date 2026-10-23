@@ -1218,5 +1218,10 @@
     "japanese": "演繹的推論と経験的制約に基づき、妥当性のない仮説を動的に棄却する論理制御概念。",
     "category": "LOGIC_INFERENCE",
     "definition": "An algorithmic mechanism to discard invalid hypotheses based on deductive reasoning and empirical constraints."
+  },
+  "§SYS_SLOT_THROTTLE": {
+    "japanese": "リアルタイムのトークン消費量とメモリ負荷に応じて並列実行スロットを動的に調整するシステム制御用のスロットリング機構。過負荷を防ぎ安定した処理を維持する際に使用する。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A dynamic execution throttling mechanism that adjusts concurrency slots based on real-time token consumption and memory pressure metrics."
   }
 }

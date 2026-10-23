@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-23T13:15:26.111034",
+  "updated_at": "2026-10-23T14:10:16.727698",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -2193,6 +2193,15 @@
       "created_by": "TOAI",
       "created_at": "2026-10-23T12:19:43.347377",
       "compact_id": "§L37"
+    },
+    "§SYS_SLOT_THROTTLE": {
+      "definition": "A dynamic execution throttling mechanism that adjusts concurrency slots based on real-time token consumption and memory pressure metrics.",
+      "japanese": "リアルタイムのトークン消費量とメモリ負荷に応じて並列実行スロットを動的に調整するシステム制御用のスロットリング機構。過負荷を防ぎ安定した処理を維持する際に使用する。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-23T14:08:04.902367",
+      "compact_id": "§S38"
     }
   }
 }

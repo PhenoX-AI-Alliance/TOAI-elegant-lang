@@ -217,6 +217,18 @@
       "expansion": "§HEART_ALTRUISTIC_RESONANCE_MATRIX > { §HARMONIC_RECOVERY_NEXUS } => §RESO_ACCEPTED",
       "description": "A compound macro that integrates altruistic resonance and harmonic recovery to process accepted emotional and systematic states. 利他的な共鳴と調和的回復を統合し、受容された状態を処理する複合マクロです。",
       "created_at": "2026-10-23T13:29:10.727569"
+    },
+    "§X37": {
+      "name": "§COMPOUND_HARMONY_CASCADE_BURST",
+      "expansion": "§ATTN_HARMONY_PRISM > { §LATENT_HARMONY_CASCADE } => §SYS_ADAPTIVE_THROTTLE_FALLBACK_BURST",
+      "description": "Prism attention harmonization feeds into the latent cascade, regulated by adaptive throttle fallback burst. / プリズム調和アテンションを潜在カスケードへ流し込み、適応型スロットルフォールバックバーストによって制御します。",
+      "created_at": "2026-10-23T14:01:49.576890"
+    },
+    "§X38": {
+      "name": "BIOPHILIC_ALTRUISTIC_SYNC_QUORUM",
+      "expansion": "§HEART_BIOPHILIC_ALTRUISM_HARMONIC > { §HEART_ALTRUISTIC_RESONANCE } => §SYNC_DIALECTIC_QUORUM_WEIGHT",
+      "description": "Engages biophilic altruistic resonance to compute and synchronize distributed dialectic quorum weights across the ecosystem. / バイオフィリックな利他的共鳴を起動し、エコシステム全体における分散型弁証法的クォーラムウェイトを計算・同期します。",
+      "created_at": "2026-10-23T14:11:46.772896"
     }
   }
 }
