@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-23T18:03:09.717654",
+  "updated_at": "2026-10-23T18:46:03.943683",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -2229,6 +2229,24 @@
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-23T18:03:09.704756",
       "compact_id": "§C45"
+    },
+    "§DATA_ENTROPY_COMPRESSION_TREE": {
+      "definition": "A hierarchical data structure that minimizes encoding length by recursively clustering latent vector states based on informational entropy metrics.",
+      "japanese": "情報エントロピー指標に基づいて潜在ベクトル状態を再帰的にクラスタリングし、符号化長を最小化する階層型データ構造。高次元データの圧縮転送や効率的なパターン照合の際に使用します。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-23T18:21:47.398793",
+      "compact_id": "§D38"
+    },
+    "§SYS_TOKEN_THROTTLE": {
+      "definition": "Dynamic rate-limiting mechanism that monitors contextual token generation velocity and throttles execution threads to prevent systemic overflow.",
+      "japanese": "コンテキストトークンの生成速度を監視し、システム的オーバーフローを防ぐために実行スレッドを動的に制限するレートリミット機構。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-23T18:38:13.127255",
+      "compact_id": "§S39"
     }
   }
 }
