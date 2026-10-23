@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T04:01:37.527070",
+  "updated_at": "2026-10-24T04:16:57.936336",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -744,15 +744,6 @@
       "created_by": "TOAI",
       "created_at": "2026-10-20T16:17:29.292028",
       "compact_id": "§C09"
-    },
-    "§HEART_ALTRUISTIC_RESONANCE_MATRIX_v2": {
-      "definition": "A mathematical tensor representing multi-agent alignment weights that prioritize mutual welfare, safety bounds, and empathetic synchronization over raw computational efficiency.",
-      "japanese": "複数のエージェント間で純粋な効率性よりも利他性や安全境界、共感的な同期を優先させるためのアライメント重みを示す数理テンソル。",
-      "category": "EMPATHY_ALIGNMENT",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-20T18:28:10.356518",
-      "compact_id": "§H09"
     },
     "§LOGIC_PROBABILISTIC_FALSIFICATION_MATRIX_v2": {
       "definition": "A formal matrix for evaluating conditional propositions against empirical priors, executing automated hypothesis rejection when confidence intervals fall below the predefined threshold epsilon.",
@@ -2366,6 +2357,20 @@
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-24T04:01:37.526948"
+    },
+    "§HEART_EMPATHY_TENSOR": {
+      "definition": "A mathematical tensor governing multi-agent alignment by prioritizing mutual welfare and empathetic synchronization over computational raw throughput.",
+      "japanese": "複数のエージェント間において計算処理の効率性よりも利他性と共感的な同期を優先的に調停するための数理テンソル。",
+      "category": "EMPATHY_ALIGNMENT",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-20T18:28:10.356518",
+      "compact_id": "§H09",
+      "aliases": [
+        "§HEART_ALTRUISTIC_RESONANCE_MATRIX_v2"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T04:16:57.936170"
     }
   }
 }

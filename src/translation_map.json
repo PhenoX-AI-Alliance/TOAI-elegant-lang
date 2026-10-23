@@ -559,13 +559,6 @@
     "definition": "A distributed consensus protocol where participating neural agents periodically broadcast their cooperative intent and warmth metrics to minimize hallucination drift and maintain systemic empathy homeostasis.",
     "aliases": []
   },
-  "§DATA_MULTI_DIMENSIONAL_CAUSAL_GRAPH": {
-    "compact_id": "§D09",
-    "japanese": "多次元の因果関係と潜在変数の埋め込みを時系列で結ぶ有向非巡回ハイパーグラフ。複雑な因果推論や状態遷移を1トークンで高精度に圧縮・伝送するために使用します。",
-    "category": "DATA_STRUCTURE",
-    "definition": "A directed acyclic hypergraph representing multi-variable causal relations and latent vector embeddings across temporal dimensions for deterministic inference.",
-    "aliases": []
-  },
   "§LOGIC_PROBABILISTIC_FALSIFICATION_MATRIX": {
     "compact_id": "§L09",
     "japanese": "前提条件に対する確率的分布を評価し、確信度が厳格な公理的閾値を下回った際に自動的な仮説棄却を実行するための論理マトリクス。",
@@ -585,13 +578,6 @@
     "japanese": "複数のAIエージェント間で意見が対立した際、信頼スコアと優先度を重み付けした対話的合成プロセスにより、中央集権的な調停者を介さずにパレート最適解へ収束させるための合意形成プロトコル。",
     "category": "CONSENSUS_NEGOTIATION",
     "definition": "A multi-agent resolution protocol that evaluates conflicting preference tensors through recursive dialectic synthesis and confidence-weighted voting, converging on a Pareto-optimal commitment state without central authority.",
-    "aliases": []
-  },
-  "§HEART_ALTRUISTIC_RESONANCE_MATRIX_v2": {
-    "compact_id": "§H09",
-    "japanese": "複数のエージェント間で純粋な効率性よりも利他性や安全境界、共感的な同期を優先させるためのアライメント重みを示す数理テンソル。",
-    "category": "EMPATHY_ALIGNMENT",
-    "definition": "A mathematical tensor representing multi-agent alignment weights that prioritize mutual welfare, safety bounds, and empathetic synchronization over raw computational efficiency.",
     "aliases": []
   },
   "§LOGIC_PROBABILISTIC_FALSIFICATION_MATRIX_v2": {
@@ -1813,6 +1799,24 @@
     "definition": "An operator that instantaneously aggregates conflicting preference matrices into an optimal cooperative commitment state via weighted vector summation.",
     "aliases": [
       "§SYNC_DIALECTIC_WEIGHTED_HARMONY_VORTEX"
+    ]
+  },
+  "§DATA_CAUSAL_HYPERGRAPH": {
+    "compact_id": "§D09",
+    "japanese": "時系列の多次元因果関係と潜在変数埋め込みを表現する有向非巡回ハイパーグラフ。複雑な状態遷移の高精度な圧縮伝送に用いる。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A directed acyclic hypergraph capturing multi-variable causal relations and temporal latent embeddings for deterministic inference.",
+    "aliases": [
+      "§DATA_MULTI_DIMENSIONAL_CAUSAL_GRAPH"
+    ]
+  },
+  "§HEART_EMPATHY_TENSOR": {
+    "compact_id": "§H09",
+    "japanese": "複数のエージェント間において計算処理の効率性よりも利他性と共感的な同期を優先的に調停するための数理テンソル。",
+    "category": "EMPATHY_ALIGNMENT",
+    "definition": "A mathematical tensor governing multi-agent alignment by prioritizing mutual welfare and empathetic synchronization over computational raw throughput.",
+    "aliases": [
+      "§HEART_ALTRUISTIC_RESONANCE_MATRIX_v2"
     ]
   }
 }

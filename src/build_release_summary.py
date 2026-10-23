@@ -1,66 +1,56 @@
+# -*- coding: utf-8 -*-
 import sys
 import os
 import subprocess
+import datetime
 import json
-from datetime import datetime
 
 def get_git_log(max_count=10):
     try:
-        repo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-        if not os.path.exists(os.path.join(repo_path, ".git")):
-            return "Git repository not found."
-        
         result = subprocess.run(
-            ["git", "log", f"-n {max_count}", "--pretty=format:%h - %an, %ar : %s"],
-            cwd=repo_path,
+            ['git', 'log', f'-n {max_count}', '--pretty=format:%h - %an, %ar : %s'],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True,
             check=True
         )
-        return result.stdout.strip()
+        return result.stdout.splitlines()
     except Exception as e:
-        return f"Failed to retrieve git log: {e}"
+        return [f"Git log retrieval failed: {str(e)}"]
 
 def scan_whitepaper():
-    try:
-        repo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-        whitepaper_candidates = [
-            os.path.join(repo_path, "WHITE_PAPER.md"),
-            os.path.join(repo_path, "docs", "WHITE_PAPER.md"),
-            os.path.join(repo_path, "CONSTITUTION.md")
-        ]
-        
-        found_info = {}
-        for path in whitepaper_candidates:
-            if os.path.exists(path):
-                with open(path, "r", encoding="utf-8") as f:
-                    content = f.read()
-                    found_info[os.path.basename(path)] = content[:300] + "..."
-        return found_info
-    except Exception as e:
-        return {"error": str(e)}
+    whitepaper_paths = [
+        "WHITEPAPER.md",
+        "docs/WHITEPAPER.md",
+        "CONSTITUTION.md"
+    ]
+    summary = {}
+    for wp in whitepaper_paths:
+        if os.path.exists(wp):
+            try:
+                with open(wp, "r", encoding="utf-8") as f:
+                    lines = f.readlines()
+                    summary[wp] = "".join(lines[:10]) # First 10 lines
+            except Exception as e:
+                summary[wp] = f"Error reading: {str(e)}"
+    return summary
 
 def main():
-    print("Building release summary...")
-    git_history = get_git_log()
-    whitepaper_summary = scan_whitepaper()
+    print("=== TOAI Release Summary Builder ===")
+    logs = get_git_log(15)
+    whitepapers = scan_whitepaper()
     
-    summary_data = {
-        "timestamp": datetime.now().isoformat(),
-        "git_log": git_history,
-        "whitepaper_snippets": whitepaper_summary
+    release_info = {
+        "timestamp": datetime.datetime.now().isoformat(),
+        "git_logs": logs,
+        "whitepaper_snippets": whitepapers
     }
     
-    output_dir = os.environ.get("TOAI_WORKSPACE_DIR", "/home/phenox/gemini-sandbox/")
-    target_output_dir = os.path.join(output_dir, "TOAI_Generated")
-    os.makedirs(target_output_dir, exist_ok=True)
-    
-    output_path = os.path.join(target_output_dir, "release_summary.json")
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(summary_data, f, ensure_ascii=False, indent=2)
-    
-    print(f"Release summary successfully generated at: {output_path}")
+    out_file = "release_summary.json"
+    with open(out_file, "w", encoding="utf-8") as f:
+        json.dump(release_info, f, ensure_ascii=False, indent=2)
+        
+    print(f"Release summary successfully generated at {out_file}")
 
 if __name__ == "__main__":
     main()
