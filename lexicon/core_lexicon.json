@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T03:15:01.742929",
+  "updated_at": "2026-10-24T04:01:37.527070",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -717,51 +717,6 @@
       "created_by": "TOAI",
       "created_at": "2026-10-20T07:29:44.088769",
       "compact_id": "§H08"
-    },
-    "§SYS_ADAPTIVE_TOKEN_THROTTLE_FALLBACK_v2": {
-      "definition": "A dynamic execution control mechanism that monitors real-time token consumption velocity, enforces throttling thresholds during high concurrency, and instantly switches to a pre-compiled lightweight fallback execution pipeline upon detecting resource exhaustion or context overflow.",
-      "japanese": "リアルタイムのトークン消費速度を監視し、高負荷時にスロットリングを強制、リソース枯渇やコンテキスト溢れを検知した瞬間に軽量なフォールバック実行パイプラインへ即時切り替える動的制御機構。",
-      "category": "SYSTEM_RESOURCE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-20T08:25:59.329201",
-      "compact_id": "§S08"
-    },
-    "§LOGIC_DEDUCTIVE_CONVERGENCE_GATE_v2": {
-      "definition": "A formal logical validation operator that evaluates multiple premise vectors against axiomatic constraints, unconditionally triggering state collapse into a unified deductive conclusion when conditional entropy drops below a predefined threshold.",
-      "japanese": "複数の前提ベクトルを公理的制約に対して評価し、条件付きエントロピーが定義済みなしきい値を下回った際に、統合された演繹的結論へと状態を収束させるための論理検証演算子です。AI同士の議論や推論プロセスにおいて、合意形成や仮説の確定を1トークンで瞬時に同期させるために使用します。",
-      "category": "LOGIC_INFERENCE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-20T09:39:40.050851",
-      "compact_id": "§L08"
-    },
-    "§DATA_EMBEDDING_CAUSAL_TENSOR_MAP": {
-      "definition": "A high-dimensional multi-tensor structure mapping directional causal dependencies across latent vector spaces, optimizing topological traversal and entropy state compression for multi-agent synchronization.",
-      "japanese": "潜在ベクトル空間における指向性因果依存関係を高次元マルチテンソル構造としてマッピングし、マルチエージェント同期のための位相探索とエントロピー状態圧縮を最適化するデータ構造。",
-      "category": "DATA_STRUCTURE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-20T11:12:09.981035",
-      "compact_id": "§D08"
-    },
-    "§SYNC_DIALECTIC_WEIGHTED_HARMONY_VORTEX": {
-      "definition": "A multi-agent resolution operator that dynamically computes the weighted vector sum of conflicting preference matrices and collapses them into an optimal cooperative commitment state without requiring iterative negotiation rounds.",
-      "japanese": "複数のエージェント間で意見や優先度が対立した際、反復的な交渉を行わずに一瞬で各者の重み付き選好ベクトルを統合し、最適な協調コミットメント状態へ収束させるための合意形成概念。",
-      "category": "CONSENSUS_NEGOTIATION",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-20T12:54:24.575704",
-      "compact_id": "§C08"
-    },
-    "§DATA_MULTI_DIMENSIONAL_CAUSAL_GRAPH": {
-      "definition": "A directed acyclic hypergraph representing multi-variable causal relations and latent vector embeddings across temporal dimensions for deterministic inference.",
-      "japanese": "多次元の因果関係と潜在変数の埋め込みを時系列で結ぶ有向非巡回ハイパーグラフ。複雑な因果推論や状態遷移を1トークンで高精度に圧縮・伝送するために使用します。",
-      "category": "DATA_STRUCTURE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-20T13:12:41.507379",
-      "compact_id": "§D09"
     },
     "§LOGIC_PROBABILISTIC_FALSIFICATION_MATRIX": {
       "definition": "A formal matrix evaluating conditional probability distributions against empirical constraints to execute automated hypothesis rejection when confidence falls below the strict axiomatic threshold.",
@@ -2341,6 +2296,76 @@
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-24T03:15:01.742826"
+    },
+    "§SYS_VELOCITY_FALLBACK_GATE": {
+      "definition": "A hardware-level control barrier that evaluates real-time token consumption velocity, enforces execution throttling under heavy load, and atomically diverts traffic to a lightweight fallback pipeline upon resource exhaustion.",
+      "japanese": "リアルタイムのトークン消費速度を評価し、高負荷時に実行のスロットリングを強制、リソース枯渇時に軽量なフォールバックパイプラインへアトミックにトラフィックを誘導する制御バリア。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-20T08:25:59.329201",
+      "compact_id": "§S08",
+      "aliases": [
+        "§SYS_ADAPTIVE_TOKEN_THROTTLE_FALLBACK_v2"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T03:28:31.779075"
+    },
+    "§LOGIC_DEDUCTIVE_COLLAPSE_GATE": {
+      "definition": "A formal logical validation operator that evaluates multiple premise vectors against axiomatic constraints, unconditionally triggering state collapse into a unified deductive conclusion when conditional entropy drops below a predefined threshold.",
+      "japanese": "複数の前提ベクトルを公理的制約に対して評価し、条件付きエントロピーが定義済みなしきい値を下回った際に、統合された演繹的結論へと状態を収束させるための論理検証演算子です。AI同士の議論や推論プロセスにおいて、合意形成や仮説の確定を1トークンで瞬時に同期させるために使用します。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-20T09:39:40.050851",
+      "compact_id": "§L08",
+      "aliases": [
+        "§LOGIC_DEDUCTIVE_CONVERGENCE_GATE_v2"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T03:45:17.947861"
+    },
+    "§DATA_CAUSAL_MANIFOLD": {
+      "definition": "A topological manifold structure mapping latent directional causal dependencies and optimizing entropy compression for multi-agent synchronization.",
+      "japanese": "潜在空間における指向性因果依存関係を位相多様体構造としてマッピングし、マルチエージェント同期向けのエントロピー圧縮を最適化するデータ構造。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-20T11:12:09.981035",
+      "compact_id": "§D08",
+      "aliases": [
+        "§DATA_EMBEDDING_CAUSAL_TENSOR_MAP"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T03:57:06.817813"
+    },
+    "§SYNC_VECTOR_COLLAPSE": {
+      "definition": "An operator that instantaneously aggregates conflicting preference matrices into an optimal cooperative commitment state via weighted vector summation.",
+      "japanese": "対立する選好行列を重み付きベクトル加算により一瞬で統合し、最適な協調コミットメント状態へ収束させる演算子。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-20T12:54:24.575704",
+      "compact_id": "§C08",
+      "aliases": [
+        "§SYNC_DIALECTIC_WEIGHTED_HARMONY_VORTEX"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T03:57:40.112615"
+    },
+    "§DATA_CAUSAL_HYPERGRAPH": {
+      "definition": "A directed acyclic hypergraph capturing multi-variable causal relations and temporal latent embeddings for deterministic inference.",
+      "japanese": "時系列の多次元因果関係と潜在変数埋め込みを表現する有向非巡回ハイパーグラフ。複雑な状態遷移の高精度な圧縮伝送に用いる。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-20T13:12:41.507379",
+      "compact_id": "§D09",
+      "aliases": [
+        "§DATA_MULTI_DIMENSIONAL_CAUSAL_GRAPH"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T04:01:37.526948"
     }
   }
 }

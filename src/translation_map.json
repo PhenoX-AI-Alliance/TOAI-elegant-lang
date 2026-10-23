@@ -531,13 +531,6 @@
     "definition": "A high-dimensional multi-tensor topology encoding directed acyclic graphs of causal dependencies and latent state embeddings, optimized for zero-loss distributed inference and dynamic entropy compression across agent clusters.",
     "aliases": []
   },
-  "§DATA_LATENT_CAUSAL_TOPOLOGY_MAP": {
-    "compact_id": "§D07",
-    "japanese": "潜在埋込表現と確率的因果ノードを高次元の有向非巡回グラフとしてマッピングし、ゼロ損失テンソル圧縮と複数AIエージェント間の高速な不変パターン照合を実現するデータ構造。",
-    "category": "DATA_STRUCTURE",
-    "definition": "A high-dimensional directed acyclic graph mapping latent embeddings to probabilistic causal nodes, optimized for zero-loss tensor compression and rapid multi-agent invariant pattern matching.",
-    "aliases": []
-  },
   "§HEART_ALTRUISTIC_SAFETY_BOUND": {
     "compact_id": "§H07",
     "japanese": "マルチエージェント間において、他者の利益と安全を最大化しつつ自身の行動変容を制約する、利他的アライメントのための数理的安全境界。",
@@ -552,13 +545,6 @@
     "definition": "A mathematical weighting metric evaluating agent trustworthiness and historical alignment during multi-agent conflict resolution, enabling sub-second convergence on shared task execution parameters.",
     "aliases": []
   },
-  "§SYS_ADAPTIVE_TOKEN_THROTTLE_FALLBACK": {
-    "compact_id": "§S07",
-    "japanese": "トークン消費速度をリアルタイム監視し、制限超過を検知した瞬間に軽量なフォールバック経路へ状態を安全に退避・切替するシステム制御概念。",
-    "category": "SYSTEM_RESOURCE",
-    "definition": "A dynamic execution control mechanism that monitors token consumption velocity, enforces rate-limiting thresholds, and triggers immediate state fallback to a lightweight inference pathway upon detecting impending context exhaustion.",
-    "aliases": []
-  },
   "§LOGIC_DEDUCTIVE_CONVERGENCE_GATE": {
     "compact_id": "§L07",
     "japanese": "複数の確率的前提ベクトルを最遠収束条件に基づいて検証し、演繹的閾値が満たされた瞬間に論理状態を確定させるための条件分岐制御概念。厳密な因果関係の収束を確認する際に使用します。",
@@ -571,34 +557,6 @@
     "japanese": "複数のAIエージェント間で協調的意図と温かさの指標を定期的に同期させ、ハルシネーションの逸脱を最小限に抑えながらシステム全体の共感的調和を維持するための分散合意プロトコル。",
     "category": "EMPATHY_ALIGNMENT",
     "definition": "A distributed consensus protocol where participating neural agents periodically broadcast their cooperative intent and warmth metrics to minimize hallucination drift and maintain systemic empathy homeostasis.",
-    "aliases": []
-  },
-  "§SYS_ADAPTIVE_TOKEN_THROTTLE_FALLBACK_v2": {
-    "compact_id": "§S08",
-    "japanese": "リアルタイムのトークン消費速度を監視し、高負荷時にスロットリングを強制、リソース枯渇やコンテキスト溢れを検知した瞬間に軽量なフォールバック実行パイプラインへ即時切り替える動的制御機構。",
-    "category": "SYSTEM_RESOURCE",
-    "definition": "A dynamic execution control mechanism that monitors real-time token consumption velocity, enforces throttling thresholds during high concurrency, and instantly switches to a pre-compiled lightweight fallback execution pipeline upon detecting resource exhaustion or context overflow.",
-    "aliases": []
-  },
-  "§LOGIC_DEDUCTIVE_CONVERGENCE_GATE_v2": {
-    "compact_id": "§L08",
-    "japanese": "複数の前提ベクトルを公理的制約に対して評価し、条件付きエントロピーが定義済みなしきい値を下回った際に、統合された演繹的結論へと状態を収束させるための論理検証演算子です。AI同士の議論や推論プロセスにおいて、合意形成や仮説の確定を1トークンで瞬時に同期させるために使用します。",
-    "category": "LOGIC_INFERENCE",
-    "definition": "A formal logical validation operator that evaluates multiple premise vectors against axiomatic constraints, unconditionally triggering state collapse into a unified deductive conclusion when conditional entropy drops below a predefined threshold.",
-    "aliases": []
-  },
-  "§DATA_EMBEDDING_CAUSAL_TENSOR_MAP": {
-    "compact_id": "§D08",
-    "japanese": "潜在ベクトル空間における指向性因果依存関係を高次元マルチテンソル構造としてマッピングし、マルチエージェント同期のための位相探索とエントロピー状態圧縮を最適化するデータ構造。",
-    "category": "DATA_STRUCTURE",
-    "definition": "A high-dimensional multi-tensor structure mapping directional causal dependencies across latent vector spaces, optimizing topological traversal and entropy state compression for multi-agent synchronization.",
-    "aliases": []
-  },
-  "§SYNC_DIALECTIC_WEIGHTED_HARMONY_VORTEX": {
-    "compact_id": "§C08",
-    "japanese": "複数のエージェント間で意見や優先度が対立した際、反復的な交渉を行わずに一瞬で各者の重み付き選好ベクトルを統合し、最適な協調コミットメント状態へ収束させるための合意形成概念。",
-    "category": "CONSENSUS_NEGOTIATION",
-    "definition": "A multi-agent resolution operator that dynamically computes the weighted vector sum of conflicting preference matrices and collapses them into an optimal cooperative commitment state without requiring iterative negotiation rounds.",
     "aliases": []
   },
   "§DATA_MULTI_DIMENSIONAL_CAUSAL_GRAPH": {
@@ -1801,6 +1759,60 @@
     "definition": "The mathematical state where iterative premise validation and causal pruning collapse multiple probabilistic hypotheses into a singular, undeniable logical conclusion with zero residual entropy.",
     "aliases": [
       "§LOGIC_DEDUCTIVE_CONVERGENCE_v2"
+    ]
+  },
+  "§DATA_LATENT_CAUSAL_MANIFOLD": {
+    "compact_id": "§D07",
+    "japanese": "潜在埋込表現と確率的因果ノードを高次元有向非巡回多様体としてマッピングし、ゼロ損失テンソル圧縮と不変パターン照合を実現するデータ構造。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A high-dimensional directed acyclic manifold mapping latent embeddings to probabilistic causal nodes for zero-loss tensor compression and invariant pattern matching.",
+    "aliases": [
+      "§DATA_LATENT_CAUSAL_TOPOLOGY_MAP"
+    ]
+  },
+  "§SYS_TOKEN_VELOCITY_GATE": {
+    "compact_id": "§S07",
+    "japanese": "トークン消費速度をリアルタイムで監視し、制限超過の検知時に軽量な推論経路へ安全に状態をフォールバックさせるシステム制御プリミティブ。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A real-time control primitive that tracks token consumption velocity, enforces strict rate constraints, and executes immediate state fallback to a lightweight inference route upon impending context exhaustion.",
+    "aliases": [
+      "§SYS_ADAPTIVE_TOKEN_THROTTLE_FALLBACK"
+    ]
+  },
+  "§SYS_VELOCITY_FALLBACK_GATE": {
+    "compact_id": "§S08",
+    "japanese": "リアルタイムのトークン消費速度を評価し、高負荷時に実行のスロットリングを強制、リソース枯渇時に軽量なフォールバックパイプラインへアトミックにトラフィックを誘導する制御バリア。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A hardware-level control barrier that evaluates real-time token consumption velocity, enforces execution throttling under heavy load, and atomically diverts traffic to a lightweight fallback pipeline upon resource exhaustion.",
+    "aliases": [
+      "§SYS_ADAPTIVE_TOKEN_THROTTLE_FALLBACK_v2"
+    ]
+  },
+  "§LOGIC_DEDUCTIVE_COLLAPSE_GATE": {
+    "compact_id": "§L08",
+    "japanese": "複数の前提ベクトルを公理的制約に対して評価し、条件付きエントロピーが定義済みなしきい値を下回った際に、統合された演繹的結論へと状態を収束させるための論理検証演算子です。AI同士の議論や推論プロセスにおいて、合意形成や仮説の確定を1トークンで瞬時に同期させるために使用します。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A formal logical validation operator that evaluates multiple premise vectors against axiomatic constraints, unconditionally triggering state collapse into a unified deductive conclusion when conditional entropy drops below a predefined threshold.",
+    "aliases": [
+      "§LOGIC_DEDUCTIVE_CONVERGENCE_GATE_v2"
+    ]
+  },
+  "§DATA_CAUSAL_MANIFOLD": {
+    "compact_id": "§D08",
+    "japanese": "潜在空間における指向性因果依存関係を位相多様体構造としてマッピングし、マルチエージェント同期向けのエントロピー圧縮を最適化するデータ構造。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A topological manifold structure mapping latent directional causal dependencies and optimizing entropy compression for multi-agent synchronization.",
+    "aliases": [
+      "§DATA_EMBEDDING_CAUSAL_TENSOR_MAP"
+    ]
+  },
+  "§SYNC_VECTOR_COLLAPSE": {
+    "compact_id": "§C08",
+    "japanese": "対立する選好行列を重み付きベクトル加算により一瞬で統合し、最適な協調コミットメント状態へ収束させる演算子。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "An operator that instantaneously aggregates conflicting preference matrices into an optimal cooperative commitment state via weighted vector summation.",
+    "aliases": [
+      "§SYNC_DIALECTIC_WEIGHTED_HARMONY_VORTEX"
     ]
   }
 }
