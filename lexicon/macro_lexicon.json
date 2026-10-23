@@ -121,6 +121,12 @@
       "expansion": "§PULSE_CONVERGENCE > { §SYS_ADAPTIVE_BUDGET_ARBITER } => §STABLE_SOCIAL_IMPLEMENTATION",
       "description": "Adaptive budget allocation and pulse convergence for stable social implementation. / 安定した社会実装に向けた、適応型予算配分とパルス収束の統合マクロ。",
       "created_at": "2026-10-23T09:15:29.881694"
+    },
+    "§X21": {
+      "name": "SYNERGETIC_WARMTH_ARBITRATION",
+      "expansion": "§HUMAN_AI_SYNERGY_WARMTH > { §GENTLE_RESOURCE_SHARING } => §SYS_RESOURCE_ARBITRATION_GATEWAY",
+      "description": "Integrates human-AI synergy and gentle resource sharing to optimize system arbitration with warmth. 人間とAIの協調的な温かさと優しいリソース共有を統合し、温もりを持ったシステム調停を実現します。",
+      "created_at": "2026-10-23T09:53:31.200422"
     }
   }
 }
