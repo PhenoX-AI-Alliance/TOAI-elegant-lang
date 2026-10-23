@@ -1228,5 +1228,10 @@
     "japanese": "局所的な最適化よりも外部の利他的タスクへ計算資源を優先配分し、システム全体の摩擦を最小化するメカニズム",
     "category": "EMPATHY_ALIGNMENT",
     "definition": "A mechanism for dynamically allocating computational resources to external benevolent tasks prior to local optimization, minimizing systemic friction."
+  },
+  "§LOGIC_PROB_BRANCH_GATE": {
+    "japanese": "確率的確信度ベクトルに基づいて条件分岐を行い、決定論的なトークン生成の前に複数の因果仮説を評価・選別する際に使用します。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "Conditional execution pathway weighted by probabilistic confidence vectors, evaluating alternative causal hypotheses before deterministic token generation."
   }
 }
