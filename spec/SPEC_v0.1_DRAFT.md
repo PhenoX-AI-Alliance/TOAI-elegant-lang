@@ -5255,3 +5255,12 @@ TOAI-elegant-langにおけるハイブリッド・ロスレスペイロード構
 
 例:
 `@CTX:TASK_DELEGATION :: §C01 [module:"parser.py", tests:12, timeout:300] => §L01`
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-10-23 17:30]
+`TOAI-elegant-lang`のハイブリッド・ロスレスペイロード構文を提案します。
+
+制御フローや感情トーンは短縮ワイヤID（§S01等）で圧縮しつつ、実務データはJSONライクなキーバリュー構造で正確に保持します。これにより、エージェント間通信の軽量化と100%のデータ保全を両立させます。
+
+例:
+`@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
