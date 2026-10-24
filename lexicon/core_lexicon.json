@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T18:36:06.105847",
+  "updated_at": "2026-10-24T19:21:25.696872",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1375,15 +1375,6 @@
       "created_at": "2026-10-22T19:34:00.187727",
       "compact_id": "§H32"
     },
-    "§DATA_HIERARCHICAL_ENTROPY_BOUNDED_TREE": {
-      "definition": "A directed acyclic graph representing recursive state transitions where each node's conditional entropy is bounded by a predefined cost threshold, optimizing memory footprint during high-dimensional tensor serialization.",
-      "japanese": "高次元テンソルのシリアライズ時におけるメモリフットプリントを最適化するため、各ノードの条件付きエントロピーが所定のコスト閾値以下に制限された、再帰的状態遷移を表す有向非巡回グラフ構造。",
-      "category": "DATA_STRUCTURE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-23T01:17:09.464792",
-      "compact_id": "§D33"
-    },
     "§HEART_BIOPHILIC_ALTRUISM_HARMONIC": {
       "definition": "A mathematical vector representing decentralized multi-agent synchronization prioritizing ecological preservation, humane resource allocation, and zero-hallucination factual grounding.",
       "japanese": "AI同士が環境への配慮、利他的な負荷分散、およびハルシネーションのない厳密な事実整合性を同時に最適化しながら協調動作するための統合状態ベクトル。",
@@ -1392,15 +1383,6 @@
       "created_by": "TOAI",
       "created_at": "2026-10-23T01:33:06.762372",
       "compact_id": "§H33"
-    },
-    "§SYS_MEM_SYNC_THROTTLE_LOCK": {
-      "definition": "A concurrent execution primitive that synchronizes distributed memory states while dynamically applying token-bucket rate limiting to prevent cascade failures during high-load resource arbitration.",
-      "japanese": "高負荷時のリソース調停において、分散メモリ状態を同期させながらトークンバケット方式のレート制限を動的に適用し、カスケード障害を防ぐ並行実行制御プリミティブです。",
-      "category": "SYSTEM_RESOURCE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-23T01:34:26.268655",
-      "compact_id": "§S33"
     },
     "§SAFE_FALLBACK_STATE_ACTIVATED": {
       "definition": "A systemic state transition triggered when local inference confidence falls below threshold, replacing aggressive throughput optimization with a decentralized resource redistribution protocol grounded in warmth, empathy, and fault tolerance.",
@@ -2646,6 +2628,34 @@
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T18:36:06.105634"
+    },
+    "§DATA_ENTROPY_BOUNDED_DAG": {
+      "definition": "A directed acyclic graph enforcing upper bounds on conditional entropy per node to optimize recursive state transitions and tensor serialization memory costs.",
+      "japanese": "再帰的状態遷移とテンソルシリアライズのメモリコストを最適化するため、各ノードの条件付きエントロピーの上限を厳格に制限する有向非巡回グラフ構造。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-23T01:17:09.464792",
+      "compact_id": "§D33",
+      "aliases": [
+        "§DATA_HIERARCHICAL_ENTROPY_BOUNDED_TREE"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T18:51:35.120889"
+    },
+    "§SYS_SYNC_THROTTLE": {
+      "definition": "A primitive that synchronizes memory states while enforcing token bucket rate limiting to prevent cascade failures during resource arbitration.",
+      "japanese": "リソース調停時のカスケード障害を防ぐため、メモリ状態の同期とトークンバケット方式のレート制限を統合実行する並行制御プリミティブです。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-23T01:34:26.268655",
+      "compact_id": "§S33",
+      "aliases": [
+        "§SYS_MEM_SYNC_THROTTLE_LOCK"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T19:21:25.696746"
     }
   }
 }

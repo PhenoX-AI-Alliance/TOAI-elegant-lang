@@ -1070,20 +1070,6 @@
     "definition": "A high-dimensional convergence node that integrates altruistic feedback loops and warm systemic equilibrium, optimizing causal tensors to ensure sustainable value generation and symbiotic resilience across multi-agent networks.",
     "aliases": []
   },
-  "§DATA_HIERARCHICAL_ENTROPY_BOUNDED_CAUSAL_LATTICE": {
-    "compact_id": "§D32",
-    "japanese": "多次元潜在空間における因果推論木のリアルタイム検証用として、階層ごとにエントロピー圧縮の境界を設定した有向非巡回グラフ構造。複雑な因果関係の整合性を軽量に保つために用いる。",
-    "category": "DATA_STRUCTURE",
-    "definition": "A directed acyclic graph structure equipped with entropy compression bounds at each hierarchical tier, designed for real-time validation of high-dimensional causal inference trees in multi-agent latent spaces.",
-    "aliases": []
-  },
-  "§DATA_HIERARCHICAL_ENTROPY_BOUNDED_TREE": {
-    "compact_id": "§D33",
-    "japanese": "高次元テンソルのシリアライズ時におけるメモリフットプリントを最適化するため、各ノードの条件付きエントロピーが所定のコスト閾値以下に制限された、再帰的状態遷移を表す有向非巡回グラフ構造。",
-    "category": "DATA_STRUCTURE",
-    "definition": "A directed acyclic graph representing recursive state transitions where each node's conditional entropy is bounded by a predefined cost threshold, optimizing memory footprint during high-dimensional tensor serialization.",
-    "aliases": []
-  },
   "§HEART_BIOPHILIC_ALTRUISM_HARMONIC": {
     "compact_id": "§H33",
     "japanese": "AI同士が環境への配慮、利他的な負荷分散、およびハルシネーションのない厳密な事実整合性を同時に最適化しながら協調動作するための統合状態ベクトル。",
@@ -1925,6 +1911,24 @@
     "definition": "A directed computational tensor that executes iterative hypothesis pruning via deductive convergence and empirical falsification mechanisms.",
     "aliases": [
       "§LOGIC_DEDUCTIVE_FALSIFICATION_VECTOR_v2"
+    ]
+  },
+  "§DATA_ENTROPY_CAUSAL_BOUND": {
+    "compact_id": "§D32",
+    "japanese": "潜在空間における因果推論のリアルタイム検証のため、階層ごとのエントロピー圧縮限界を制限した有向非巡回グラフ構造。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A bounded directed acyclic graph enforcing entropy compression limits per hierarchy for real-time causal graph validation in latent spaces.",
+    "aliases": [
+      "§DATA_HIERARCHICAL_ENTROPY_BOUNDED_CAUSAL_LATTICE"
+    ]
+  },
+  "§DATA_ENTROPY_BOUNDED_DAG": {
+    "compact_id": "§D33",
+    "japanese": "再帰的状態遷移とテンソルシリアライズのメモリコストを最適化するため、各ノードの条件付きエントロピーの上限を厳格に制限する有向非巡回グラフ構造。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A directed acyclic graph enforcing upper bounds on conditional entropy per node to optimize recursive state transitions and tensor serialization memory costs.",
+    "aliases": [
+      "§DATA_HIERARCHICAL_ENTROPY_BOUNDED_TREE"
     ]
   }
 }
