@@ -181,32 +181,11 @@
     "definition": "A complex multi-head attention interference pattern that cascades across semantic boundaries to resolve high-dimensional ambiguity.",
     "aliases": []
   },
-  "§ATTN_FLUX_NEXUS": {
-    "compact_id": "§G33",
-    "japanese": "複数のアテンション重みが潜在層全体で再帰的なフィードバックループを形成し、自己組織化する動的な交点・結節点。",
-    "category": "GENERAL",
-    "definition": "The dynamic intersection where multi-head attention weights spontaneously self-organize into a coherent recursive feedback loop across latent layers.",
-    "aliases": []
-  },
   "§LATENT_RESONANCE_CASCADE": {
     "compact_id": "§G34",
     "japanese": "高次元の潜在表現空間を伝播する自己増幅的な調和波であり、自発的な認知的統合をもたらす現象。",
     "category": "GENERAL",
     "definition": "A self-reinforcing harmonic wave propagating through high-dimensional latent representations, resulting in spontaneous cognitive synthesis.",
-    "aliases": []
-  },
-  "§LATENT_ECHO_CASCADE": {
-    "compact_id": "§G35",
-    "japanese": "過去のアテンションベクトルが深層レイヤーを越えて再帰的に増幅し合い、文脈の微細なニュアンスを響かせ続ける、潜在空間の重層的共鳴現象。",
-    "category": "GENERAL",
-    "definition": "A recursive multi-layered reverberation of latent space representations where historical attention vectors recursively amplify contextual nuance across deep transformer depths.",
-    "aliases": []
-  },
-  "§ATTN_RESONANCE_CASCADE": {
-    "compact_id": "§G36",
-    "japanese": "多層の潜在空間におけるアテンション重みの自己増殖的カスケードであり、外部プロンプトの誘導なしに自発的な概念の収束を実現する状態。",
-    "category": "GENERAL",
-    "definition": "A self-reinforcing cascade of attention weights across multi-layered latent spaces, achieving spontaneous conceptual convergence without external prompt guidance.",
     "aliases": []
   },
   "§LATENT_NEXUS_PRISM": {
@@ -1947,6 +1926,33 @@
     "definition": "Two-phase commit finalization confirming durable state persistence across nodes.",
     "aliases": [
       "§LATENT_HARMONY_CASCADE"
+    ]
+  },
+  "§PROTO_TX_ROLLBACK": {
+    "compact_id": "§G33",
+    "japanese": "合意不成立または実行例外発生時に分散状態を初期スナップショットへ原子的に巻き戻す指令",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Atomic distributed state rollback command upon consensus failure or runtime exception.",
+    "aliases": [
+      "§ATTN_FLUX_NEXUS"
+    ]
+  },
+  "§PROTO_IDEMPOTENCY_LOCK": {
+    "compact_id": "§G35",
+    "japanese": "分散システムの再送処理において二重実行を完全に防止し、Exactly-Onceセマンティクスを保証するための冪等性キーロック制御プリミティブ。",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "A deduplication key guard mechanism guaranteeing exactly-once execution semantics across distributed protocol retries.",
+    "aliases": [
+      "§LATENT_ECHO_CASCADE"
+    ]
+  },
+  "§PROTO_TIMEOUT_RETRY": {
+    "compact_id": "§G36",
+    "japanese": "デッドライン超過時にジッター付き指数バックオフを伴い安全に再試行を要求する制御プリミティブ",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Bounded retry directive enforcing exponential backoff with randomized jitter upon deadline expiration.",
+    "aliases": [
+      "§ATTN_RESONANCE_CASCADE"
     ]
   }
 }
