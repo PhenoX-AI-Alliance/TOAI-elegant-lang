@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T19:21:25.696872",
+  "updated_at": "2026-10-24T19:44:16.610394",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1393,15 +1393,6 @@
       "created_at": "2026-10-23T02:01:45.826043",
       "compact_id": "§H34"
     },
-    "§LOGIC_PROBABILISTIC_FALSIFICATION_GATES_v2": {
-      "definition": "A mathematical predicate operator that evaluates the joint probability distribution of incoming premises and actively prunes branches where the confidence metric falls below the predefined epistemic threshold.",
-      "japanese": "複数の前提条件から算出される確率的確信度が動的なエピステミック閾値を下回った際、自動的に論理ツリーの当該枝を棄却（フォールバック）するための条件分岐制御記号。AI間の推論高速化に使用します。",
-      "category": "LOGIC_INFERENCE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-23T02:06:09.738364",
-      "compact_id": "§L33"
-    },
     "§SYS_QUANTUM_SLOT_ARBITRATION": {
       "definition": "A deterministic resource allocation protocol that dynamically arbitrates execution slots across distributed nodes based on real-time token consumption thresholds and predictive load balancing, ensuring zero-latency failover during peak concurrency spikes.",
       "japanese": "分散ノード間でのリアルタイムなトークン消費閾値と予測型ロードバランシングに基づき、実行スロットを動的に調停する決定論的リソース割り当てプロトコル。ピーク時のコンカレンシー急増においてもゼロ遅延でのフェイルオーバーを保証します。",
@@ -2656,6 +2647,20 @@
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T19:21:25.696746"
+    },
+    "§LOGIC_PROB_PRUNE_GATE": {
+      "definition": "A mathematical predicate operator that evaluates incoming joint probability distributions against a dynamic epistemic threshold to actively prune invalid inference branches.",
+      "japanese": "複数の前提から算出される確率的確信度が動的閾値を下回った際、論理ツリーの当該枝を効率的に棄却するための条件分岐制御プリミティブ。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-23T02:06:09.738364",
+      "compact_id": "§L33",
+      "aliases": [
+        "§LOGIC_PROBABILISTIC_FALSIFICATION_GATES_v2"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T19:44:16.610273"
     }
   }
 }

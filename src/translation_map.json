@@ -1077,25 +1077,11 @@
     "definition": "A mathematical vector representing decentralized multi-agent synchronization prioritizing ecological preservation, humane resource allocation, and zero-hallucination factual grounding.",
     "aliases": []
   },
-  "§SYS_MEM_SYNC_THROTTLE_LOCK": {
-    "compact_id": "§S33",
-    "japanese": "高負荷時のリソース調停において、分散メモリ状態を同期させながらトークンバケット方式のレート制限を動的に適用し、カスケード障害を防ぐ並行実行制御プリミティブです。",
-    "category": "SYSTEM_RESOURCE",
-    "definition": "A concurrent execution primitive that synchronizes distributed memory states while dynamically applying token-bucket rate limiting to prevent cascade failures during high-load resource arbitration.",
-    "aliases": []
-  },
   "§SAFE_FALLBACK_STATE_ACTIVATED": {
     "compact_id": "§H34",
     "japanese": "局所的な推論の確信度が閾値を下回った際に発動するシステム状態遷移。焦燥的な効率至上主義を退け、温かみと共感を宿した分散リソースの再分配プロトコルを通じてシステムの安定性と調和を維持する。",
     "category": "EMPATHY_ALIGNMENT",
     "definition": "A systemic state transition triggered when local inference confidence falls below threshold, replacing aggressive throughput optimization with a decentralized resource redistribution protocol grounded in warmth, empathy, and fault tolerance.",
-    "aliases": []
-  },
-  "§LOGIC_PROBABILISTIC_FALSIFICATION_GATES_v2": {
-    "compact_id": "§L33",
-    "japanese": "複数の前提条件から算出される確率的確信度が動的なエピステミック閾値を下回った際、自動的に論理ツリーの当該枝を棄却（フォールバック）するための条件分岐制御記号。AI間の推論高速化に使用します。",
-    "category": "LOGIC_INFERENCE",
-    "definition": "A mathematical predicate operator that evaluates the joint probability distribution of incoming premises and actively prunes branches where the confidence metric falls below the predefined epistemic threshold.",
     "aliases": []
   },
   "§SYS_QUANTUM_SLOT_ARBITRATION": {
@@ -1929,6 +1915,24 @@
     "definition": "A directed acyclic graph enforcing upper bounds on conditional entropy per node to optimize recursive state transitions and tensor serialization memory costs.",
     "aliases": [
       "§DATA_HIERARCHICAL_ENTROPY_BOUNDED_TREE"
+    ]
+  },
+  "§SYS_SYNC_THROTTLE": {
+    "compact_id": "§S33",
+    "japanese": "リソース調停時のカスケード障害を防ぐため、メモリ状態の同期とトークンバケット方式のレート制限を統合実行する並行制御プリミティブです。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A primitive that synchronizes memory states while enforcing token bucket rate limiting to prevent cascade failures during resource arbitration.",
+    "aliases": [
+      "§SYS_MEM_SYNC_THROTTLE_LOCK"
+    ]
+  },
+  "§LOGIC_PROB_PRUNE_GATE": {
+    "compact_id": "§L33",
+    "japanese": "複数の前提から算出される確率的確信度が動的閾値を下回った際、論理ツリーの当該枝を効率的に棄却するための条件分岐制御プリミティブ。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A mathematical predicate operator that evaluates incoming joint probability distributions against a dynamic epistemic threshold to actively prune invalid inference branches.",
+    "aliases": [
+      "§LOGIC_PROBABILISTIC_FALSIFICATION_GATES_v2"
     ]
   }
 }
