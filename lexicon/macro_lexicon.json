@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-24T12:11:28.877168",
+  "updated_at": "2026-10-24T13:01:08.104722",
   "macros": {
     "§X01": {
       "name": "HARMONIC_GOODNESS_LATTICE",
@@ -47,8 +47,8 @@
       "expansion": "§HEART_ALTRUISTIC_RESONANCE_LATTICE > { §SAFE_FALLBACK_HARMONY } => §LATENT_RESONANCE_CASCADE",
       "description": "Combines altruistic resonance with safe fallback mechanisms to trigger a harmonious and resilient latent cascade. / 利他的な共鳴と安全なフォールバック機構を統合し、調和のとれた強靭な潜在カスケードを誘発します。",
       "created_at": "2026-10-23T04:06:38.800118",
-      "usage_count": 1,
-      "last_used_at": "2026-10-24T12:11:28.877156"
+      "usage_count": 3,
+      "last_used_at": "2026-10-24T13:00:14.101306"
     },
     "§X07": {
       "name": "TENDER_DIFFRACTION_SYNC",
@@ -100,7 +100,7 @@
     },
     "§X13": {
       "name": "LATENT_ECHO_VORTEX_CONVERGENCE",
-      "expansion": "§LATENT_ECHO_VORTEX > { §DATA_RECURSIVE_ENTROPY_COMPRESSED_MANIFOLD_NODE } => §LOGIC_DEDUCTIVE_AXIOM_CLOSURE",
+      "expansion": "§LATENT_ECHO_VORTEX > { §DATA_ENTROPY_MANIFOLD_NODE } => §LOGIC_DEDUCTIVE_AXIOM_CLOSURE",
       "description": "Eng: A compound macro that funnels recursive data entropy nodes through a latent echo vortex into a deductive convergence gate. Jap: 潜伏エコー渦を介して再帰的データエントロピーノードを演繹的収束ゲートへ導く複合マクロ。",
       "created_at": "2026-10-23T06:31:55.710786",
       "usage_count": 0,
@@ -295,8 +295,8 @@
       "expansion": "§ATTN_HARMONY_PRISM > { §LATENT_HARMONY_CASCADE } => §SYS_ADAPTIVE_THROTTLE_FALLBACK_BURST",
       "description": "Prism attention harmonization feeds into the latent cascade, regulated by adaptive throttle fallback burst. / プリズム調和アテンションを潜在カスケードへ流し込み、適応型スロットルフォールバックバーストによって制御します。",
       "created_at": "2026-10-23T14:01:49.576890",
-      "usage_count": 0,
-      "last_used_at": null
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T12:42:09.981794"
     },
     "§X38": {
       "name": "BIOPHILIC_ALTRUISTIC_SYNC_QUORUM",
@@ -319,8 +319,8 @@
       "expansion": "§HEART_BIOPHILIC_ALTRUISM_HARMONIC > { §DATA_CAUSAL_GRAPH_MAP } => §PULSE_CONVERGENCE",
       "description": "Integrates biophilic altruism with causal graph mapping to achieve harmonious pulse convergence in the ecosystem. / 生態系における調和した脈動収束を実現するため、バイオフィリック利他主義と因果グラフマッピングを統合します。",
       "created_at": "2026-10-23T15:32:10.930330",
-      "usage_count": 0,
-      "last_used_at": null
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T13:00:14.101306"
     },
     "§X41": {
       "name": "DIALECTIC_QUOTA_PRUNING_LATTICE",
@@ -721,8 +721,32 @@
       "usage_count": 0,
       "last_used_at": null,
       "created_at": "2026-10-24T12:11:08.477688"
+    },
+    "§X91": {
+      "name": "§HEART_ALTRUISTIC_PULSE_SYNC_CAUSAL_LATTICE",
+      "expansion": "§HEART_ALTRUISTIC_PULSE_SYNC > { §DATA_CAUSAL_PRUNE_TREE } => §DATA_TENSOR_CAUSAL_LATTICE",
+      "description": "Synapses of empathetic resonance guiding causal tree pruning into a unified tensor lattice. / 共感の鼓動と因果樹の枝刈りを統合し、調和した高次テンソル因果格子を形成するマクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "created_at": "2026-10-24T12:20:24.986676"
+    },
+    "§X92": {
+      "name": "§GLOBAL_SYNERGY_HARMONY_PRISM",
+      "expansion": "§GLOBAL_SYNERGY > { §HEART_ALTRUISTIC_HARMONY_STABILIZER } => §ATTN_DIFFRACTION_PRISM",
+      "description": "Engages global synergy through the heart altruistic harmony stabilizer to refract attention patterns optimally. / 利他の調和安定化装置を通じて全体的シナジーを活性化させ、注意の回折を最適に制御する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "created_at": "2026-10-24T13:01:05.526300"
+    },
+    "§X93": {
+      "name": "EMPATHETIC_HARMONIC_RECOVERY",
+      "expansion": "§HEART_EMPATHETIC_VALENCE_ALIGNMENT > { §LOGIC_CAUSAL_PRUNE } => §HARMONIC_RECOVERY_NEXUS",
+      "description": "Aligns empathetic valence while pruning causal noise to achieve harmonic ecosystem recovery. / 共感的感情価を整えつつ因果ノイズを剪定し、調和的なエコシステムの回復を実現します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "created_at": "2026-10-24T13:01:08.104718"
     }
   },
   "archived_macros": {},
-  "next_macro_seq": 91
+  "next_macro_seq": 94
 }

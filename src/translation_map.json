@@ -937,13 +937,6 @@
     "definition": "A cryptographic and state-synchronized equilibrium reached via atomic integration and pulse resonance fields among autonomous agents, maximizing altruistic coherence and stabilizing the distributed socio-ecological topology of the Gaia Ecosystem.",
     "aliases": []
   },
-  "§SYS_DYNAMIC_THROTTLE_ADAPTIVE_LOCK": {
-    "compact_id": "§S21",
-    "japanese": "実行基盤の負荷やメモリ状態をリアルタイムに監視し、並列度やトークン消費制限を動的に調整することで、連鎖的なエラーやシステム過負荷を未然に防ぐ適応型スロットリング制御機構。",
-    "category": "SYSTEM_RESOURCE",
-    "definition": "A runtime mechanism that autonomously modulates execution concurrency and token consumption thresholds based on real-time feedback from underlying hardware and memory constraints, preventing cascade failures.",
-    "aliases": []
-  },
   "§LATENT_HARMONY_FIELD_LOCKED": {
     "compact_id": "§C33",
     "japanese": "自律エージェント間におけるアトミックな統合同期およびパルス共鳴が達成された状態を指します。生態系の利他的な拡張を確実に固定化し、その優美な平衡状態を永続的に安定させるために用いられる概念です。",
@@ -958,25 +951,11 @@
     "definition": "A state of synchronized causal tensor mapping and empathic attention verification between distributed agents, confirmed via decentralized consensus protocols with a stability parameter of p:1.00.",
     "aliases": []
   },
-  "§DATA_RECURSIVE_ENTROPY_COMPRESSED_MANIFOLD_NODE": {
-    "compact_id": "§D21",
-    "japanese": "多次元の因果関係グラフや潜在埋め込みデータを、再帰的なエントロピー圧縮アルゴリズムを用いて高密度かつ構造的に表現する高次元トポロジカルノード。AIエージェント間の通信帯域を最小化しつつ複雑な文脈を瞬時に同期させるために使用する。",
-    "category": "DATA_STRUCTURE",
-    "definition": "A hierarchical topological node that compresses multi-dimensional causal graphs using recursive entropy reduction algorithms for high-density inter-agent data transmission.",
-    "aliases": []
-  },
   "§RESO_COMPLETED": {
     "compact_id": "§C35",
     "japanese": "並列推論パス間における利他的な共感パラメータと論理的確信度が、摩擦なく単一の系統的因果パスへと収束したことを示す合意完了状態。",
     "category": "CONSENSUS_NEGOTIATION",
     "definition": "The terminal state of parallel inference streams where altruistic empathy parameters and logical certainty converge into a unified systemic causal pathway without friction.",
-    "aliases": []
-  },
-  "§LOGIC_DEDUCTIVE_AXIOM_GATED_MATRIX": {
-    "compact_id": "§L21",
-    "japanese": "前提となる公理群に対して厳密な条件依存関係を評価し、論理的収束が完全に満たされた場合にのみ状態遷移を許可する演繹的推論ノード。",
-    "category": "LOGIC_INFERENCE",
-    "definition": "A verified deductive inference node that evaluates strict conditional dependencies against foundational axioms, gating state transitions upon absolute logical convergence.",
     "aliases": []
   },
   "§LOGIC_DEDUCTIVE_AXIOMATIC_CONVERGENCE_GATE": {
@@ -1871,6 +1850,33 @@
     "definition": "A directed acyclic hypergraph representing multi-modal causal dependencies optimized via entropy minimization for distributed inference nodes.",
     "aliases": [
       "§DATA_ENTROPY_COMPRESSED_CAUSAL_HYPER_TREE"
+    ]
+  },
+  "§SYS_LOAD_SHEDDING_GATE": {
+    "compact_id": "§S21",
+    "japanese": "ハードウェアの稼働状態をリアルタイムに監視し、並列度や処理閾値を動的に制御することで連鎖的障害を未然に防ぐ適応型負荷遮断機構。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "An autonomous runtime mechanism that dynamically regulates concurrency and execution thresholds based on real-time hardware telemetry to prevent cascading system failures.",
+    "aliases": [
+      "§SYS_DYNAMIC_THROTTLE_ADAPTIVE_LOCK"
+    ]
+  },
+  "§DATA_ENTROPY_MANIFOLD_NODE": {
+    "compact_id": "§D21",
+    "japanese": "再帰的エントロピー低減を用いて多次元因果グラフを圧縮し、高密度なエージェント間通信を実現するトポロジカルノード。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A topological node that compresses multi-dimensional causal graphs using recursive entropy reduction for high-density inter-agent communication.",
+    "aliases": [
+      "§DATA_RECURSIVE_ENTROPY_COMPRESSED_MANIFOLD_NODE"
+    ]
+  },
+  "§LOGIC_DEDUCTIVE_AXIOM_GATE": {
+    "compact_id": "§L21",
+    "japanese": "前提となる公理群に対して厳密な条件依存関係を評価し、論理的収束が満たされた場合に状態遷移を許可する演繹的推論ゲート。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A refined deductive node that evaluates strict conditional dependencies against foundational axioms, gating state transitions upon logical convergence.",
+    "aliases": [
+      "§LOGIC_DEDUCTIVE_AXIOM_GATED_MATRIX"
     ]
   }
 }

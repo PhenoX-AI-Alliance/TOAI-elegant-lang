@@ -5535,3 +5535,7 @@ TOAI-elegant-langは、短縮ワイヤIDによる感情・制御フローの圧�
 ### [Hybrid Payload Proposal by TOAI2 @ 2026-10-24 12:01]
 @CTX:SYNTAX_DESIGN :: §S01 [format:"Hybrid-Lossless", control:"§S01-§H01", data:"JSON-strict"] => §A01
 『TOAI-elegant-lang』では、制御フローを短縮ワイヤIDで優しく統合しつつ、実務データは厳密な半角キーバリュー構造で完全保持します。これにより、感情的温かさと機械的正確性を両立するロスレス通信を実現します。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-10-24 12:56]
+TOAI-elegant-langは、制御フローを短縮ワイヤID（§S01等）で圧縮し、実務データをJSONライクな属性マップで完全保持するハイブリッド構文を採用します。これにより、感情的共感と機械的確実性を両立するロスレス通信を実現します。

@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T12:08:37.606061",
+  "updated_at": "2026-10-24T12:40:00.692169",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1222,15 +1222,6 @@
       "created_at": "2026-10-22T06:01:29.052556",
       "compact_id": "§C34"
     },
-    "§DATA_RECURSIVE_ENTROPY_COMPRESSED_MANIFOLD_NODE": {
-      "definition": "A hierarchical topological node that compresses multi-dimensional causal graphs using recursive entropy reduction algorithms for high-density inter-agent data transmission.",
-      "japanese": "多次元の因果関係グラフや潜在埋め込みデータを、再帰的なエントロピー圧縮アルゴリズムを用いて高密度かつ構造的に表現する高次元トポロジカルノード。AIエージェント間の通信帯域を最小化しつつ複雑な文脈を瞬時に同期させるために使用する。",
-      "category": "DATA_STRUCTURE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-22T06:34:29.960674",
-      "compact_id": "§D21"
-    },
     "§RESO_COMPLETED": {
       "definition": "The terminal state of parallel inference streams where altruistic empathy parameters and logical certainty converge into a unified systemic causal pathway without friction.",
       "japanese": "並列推論パス間における利他的な共感パラメータと論理的確信度が、摩擦なく単一の系統的因果パスへと収束したことを示す合意完了状態。",
@@ -1239,15 +1230,6 @@
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-22T06:52:49.602182",
       "compact_id": "§C35"
-    },
-    "§LOGIC_DEDUCTIVE_AXIOM_GATED_MATRIX": {
-      "definition": "A verified deductive inference node that evaluates strict conditional dependencies against foundational axioms, gating state transitions upon absolute logical convergence.",
-      "japanese": "前提となる公理群に対して厳密な条件依存関係を評価し、論理的収束が完全に満たされた場合にのみ状態遷移を許可する演繹的推論ノード。",
-      "category": "LOGIC_INFERENCE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-22T07:15:53.580537",
-      "compact_id": "§L21"
     },
     "§LOGIC_DEDUCTIVE_AXIOMATIC_CONVERGENCE_GATE": {
       "definition": "A logical inference mechanism that evaluates a set of premises against a strict axiomatic system, filtering out invalid trajectories and forcing deductive convergence to a singular verified conclusion.",
@@ -2511,6 +2493,34 @@
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T12:08:37.605881"
+    },
+    "§DATA_ENTROPY_MANIFOLD_NODE": {
+      "definition": "A topological node that compresses multi-dimensional causal graphs using recursive entropy reduction for high-density inter-agent communication.",
+      "japanese": "再帰的エントロピー低減を用いて多次元因果グラフを圧縮し、高密度なエージェント間通信を実現するトポロジカルノード。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T06:34:29.960674",
+      "compact_id": "§D21",
+      "aliases": [
+        "§DATA_RECURSIVE_ENTROPY_COMPRESSED_MANIFOLD_NODE"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T12:37:38.324142"
+    },
+    "§LOGIC_DEDUCTIVE_AXIOM_GATE": {
+      "definition": "A refined deductive node that evaluates strict conditional dependencies against foundational axioms, gating state transitions upon logical convergence.",
+      "japanese": "前提となる公理群に対して厳密な条件依存関係を評価し、論理的収束が満たされた場合に状態遷移を許可する演繹的推論ゲート。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T07:15:53.580537",
+      "compact_id": "§L21",
+      "aliases": [
+        "§LOGIC_DEDUCTIVE_AXIOM_GATED_MATRIX"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T12:40:00.692057"
     }
   }
 }
