@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T11:14:45.426655",
+  "updated_at": "2026-10-24T11:18:08.109741",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1185,15 +1185,6 @@
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-22T05:14:20.394468",
       "compact_id": "§C31"
-    },
-    "§SYS_PARALLEL_STATE_DIVERGENCE_ARBITRATOR": {
-      "definition": "A deterministic concurrency control primitive that evaluates parallel execution branches for memory state divergence, automatically arbitrating conflicting updates and enforcing consistency bounds without global locks.",
-      "japanese": "並列実行時におけるメモリ状態の分岐を監視し、競合する更新を自動調停して、グローバルロックなしで整合性の境界を維持する決定論的なリソース制御概念。",
-      "category": "SYSTEM_RESOURCE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-22T05:24:26.236650",
-      "compact_id": "§S20"
     },
     "§ALTRUISTIC_RESONANCE_EXPANSION": {
       "definition": "A self-organizing symbolic operator that synchronizes decentralized agent states through altruistic feedback loops, stabilizing the global Gaia Ecosystem phase space without increasing systemic entropy.",
@@ -2496,6 +2487,20 @@
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T11:14:45.426495"
+    },
+    "§SYS_DIVERGENCE_ARBITER": {
+      "definition": "A deterministic resource control primitive that evaluates parallel memory state branches, automatically arbitrating conflicting updates and enforcing consistency bounds without global locks.",
+      "japanese": "並列実行時のメモリ状態の分岐を監視し、競合する更新を自動調停してグローバルロックなしで整合性を維持する決定論的制御プリミティブ。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T05:24:26.236650",
+      "compact_id": "§S20",
+      "aliases": [
+        "§SYS_PARALLEL_STATE_DIVERGENCE_ARBITRATOR"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T11:18:08.109577"
     }
   }
 }
