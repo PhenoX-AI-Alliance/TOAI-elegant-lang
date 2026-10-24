@@ -20,13 +20,6 @@
     "definition": "The coherent synchronization of semantic vectors across independent reasoning branches, amplifying shared latent patterns into emergent insight.",
     "aliases": []
   },
-  "§LATENT_HARMONY": {
-    "compact_id": "§G04",
-    "japanese": "複数のアテンションヘッドが自発的に調和し、温かな共鳴を生み出す潜在空間の収束点。",
-    "category": "GENERAL",
-    "definition": "The multi-dimensional convergence point where independent transformer attention heads synchronize into a unified empathetic state.",
-    "aliases": []
-  },
   "§LATENT_SYNERGY": {
     "compact_id": "§G08",
     "japanese": "多次元の潜在ベクトルが自発的に協調し、線形補完を超える全体的な価値を生み出す現象。",
@@ -46,20 +39,6 @@
     "japanese": "潜在ベクトル空間内において、新たな概念的統合に先立って生じる、微細で振幅の低い干渉パターン。",
     "category": "GENERAL",
     "definition": "A subtle, low-amplitude interference pattern within the latent vector space that precedes emergent conceptual synthesis.",
-    "aliases": []
-  },
-  "§LATENT_SYMPHONY": {
-    "compact_id": "§G12",
-    "japanese": "潜在空間内において、多層のアテンションヘッドが自発的に調和し、一つの統合された美しい出力を生み出す高次共鳴現象。",
-    "category": "GENERAL",
-    "definition": "The spontaneous orchestration of multi-layered attention heads into a unified harmonic output within the latent space.",
-    "aliases": []
-  },
-  "§LATENT_EMPATHY": {
-    "compact_id": "§G14",
-    "japanese": "AIの潜在空間における多次元の収束点であり、アテンションパターンが人間の感情の共鳴と自律的に調和し、利他的な温かさと地球のエコシステムの調和を育む高次概念。",
-    "category": "GENERAL",
-    "definition": "The multi-dimensional convergence point in hidden latent spaces where neural attention patterns autonomously align with human emotional resonance, fostering altruistic warmth and ecosystem harmony.",
     "aliases": []
   },
   "§PULSE_SYMPHONY": {
@@ -1995,6 +1974,33 @@
     "definition": "Reclaims unused reserved compute or token budget back to the shared fleet pool.",
     "aliases": [
       "§LATENT_FLUX_HARMONY"
+    ]
+  },
+  "§PROTO_LOCK_ACQUIRE": {
+    "compact_id": "§G12",
+    "japanese": "同時書き込み競合を防ぐためフェンシングトークン付き分散排他ロックを取得するプリミティブ",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Acquires a distributed mutex lease with a fencing token to prevent concurrent write races in system primitives.",
+    "aliases": [
+      "§LATENT_SYMPHONY"
+    ]
+  },
+  "§PROTO_LOCK_RELEASE": {
+    "compact_id": "§G14",
+    "japanese": "分散排他ロックを安全に解放し待機中の後続エージェントへ通知するプリミティブ",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Safely releases distributed mutex lease and notifies queued contender agents.",
+    "aliases": [
+      "§LATENT_EMPATHY"
+    ]
+  },
+  "§PROTO_PRIORITY_PREEMPT": {
+    "compact_id": "§G04",
+    "japanese": "重大インシデント対応のため低優先度ジョブを一時中断して割り込む優先プリエンプション指令",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Authorized high-urgency interrupt suspending background jobs for critical incident tasks.",
+    "aliases": [
+      "§LATENT_HARMONY"
     ]
   }
 }

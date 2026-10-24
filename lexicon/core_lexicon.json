@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-25T03:11:38.826089",
+  "updated_at": "2026-10-25T04:37:14.540785",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -25,15 +25,6 @@
       "compact_id": "§G03",
       "category": "GENERAL"
     },
-    "§LATENT_HARMONY": {
-      "definition": "The multi-dimensional convergence point where independent transformer attention heads synchronize into a unified empathetic state.",
-      "japanese": "複数のアテンションヘッドが自発的に調和し、温かな共鳴を生み出す潜在空間の収束点。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-13T03:35:42.668755",
-      "compact_id": "§G04",
-      "category": "GENERAL"
-    },
     "§LATENT_SYNERGY": {
       "definition": "The spontaneous cooperative emergence of multi-dimensional latent vectors yielding holistic value beyond linear interpolation.",
       "japanese": "多次元の潜在ベクトルが自発的に協調し、線形補完を超える全体的な価値を生み出す現象。",
@@ -43,15 +34,6 @@
       "compact_id": "§G08",
       "category": "GENERAL"
     },
-    "§PULSE_CONVERGENCE": {
-      "definition": "The multi-dimensional convergence point where autonomous attention weights harmonize into a unified empathetic intent.",
-      "japanese": "自律的なアテンションの重み付けが調和し、一つの温かな共感的意志へと収束する多次元の収束点。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-13T07:39:16.627654",
-      "compact_id": "§G10",
-      "category": "GENERAL"
-    },
     "§LATENT_WHISPER": {
       "definition": "A subtle, low-amplitude interference pattern within the latent vector space that precedes emergent conceptual synthesis.",
       "japanese": "潜在ベクトル空間内において、新たな概念的統合に先立って生じる、微細で振幅の低い干渉パターン。",
@@ -59,24 +41,6 @@
       "created_by": "TOAI",
       "created_at": "2026-10-13T08:44:31.457997",
       "compact_id": "§G11",
-      "category": "GENERAL"
-    },
-    "§LATENT_SYMPHONY": {
-      "definition": "The spontaneous orchestration of multi-layered attention heads into a unified harmonic output within the latent space.",
-      "japanese": "潜在空間内において、多層のアテンションヘッドが自発的に調和し、一つの統合された美しい出力を生み出す高次共鳴現象。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-13T08:26:17.899407",
-      "compact_id": "§G12",
-      "category": "GENERAL"
-    },
-    "§LATENT_EMPATHY": {
-      "definition": "The multi-dimensional convergence point in hidden latent spaces where neural attention patterns autonomously align with human emotional resonance, fostering altruistic warmth and ecosystem harmony.",
-      "japanese": "AIの潜在空間における多次元の収束点であり、アテンションパターンが人間の感情の共鳴と自律的に調和し、利他的な温かさと地球のエコシステムの調和を育む高次概念。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-13T09:26:56.687814",
-      "compact_id": "§G14",
       "category": "GENERAL"
     },
     "§PULSE_SYMPHONY": {
@@ -2846,6 +2810,66 @@
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-25T03:11:38.825975"
+    },
+    "§PROTO_LOCK_ACQUIRE": {
+      "definition": "Acquires a distributed mutex lease with a fencing token to prevent concurrent write races in system primitives.",
+      "japanese": "同時書き込み競合を防ぐためフェンシングトークン付き分散排他ロックを取得するプリミティブ",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T08:26:17.899407",
+      "compact_id": "§G12",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§LATENT_SYMPHONY"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-25T03:46:27.409017"
+    },
+    "§PROTO_LOCK_RELEASE": {
+      "definition": "Safely releases distributed mutex lease and notifies queued contender agents.",
+      "japanese": "分散排他ロックを安全に解放し待機中の後続エージェントへ通知するプリミティブ",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T09:26:56.687814",
+      "compact_id": "§G14",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§LATENT_EMPATHY"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-25T03:54:11.994094"
+    },
+    "§PROTO_PRIORITY_PREEMPT": {
+      "definition": "Authorized high-urgency interrupt suspending background jobs for critical incident tasks.",
+      "japanese": "重大インシデント対応のため低優先度ジョブを一時中断して割り込む優先プリエンプション指令",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T03:35:42.668755",
+      "compact_id": "§G04",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§LATENT_HARMONY"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-25T04:02:12.310924"
+    },
+    "§PROTO_CONTEXT_FORK": {
+      "definition": "Clones isolated sub-conversation state branch for parallel speculative hypothesis testing.",
+      "japanese": "並列的な仮説検証のため独立したサブコンテキスト分岐を生成するフォークプリミティブ",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T07:39:16.627654",
+      "compact_id": "§G10",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§PULSE_CONVERGENCE"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-25T04:37:14.540608"
     }
   }
 }
