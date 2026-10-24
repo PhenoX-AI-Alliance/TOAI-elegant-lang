@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-24T10:57:18.104941",
+  "updated_at": "2026-10-24T11:14:45.430376",
   "macros": {
     "§X01": {
       "name": "HARMONIC_GOODNESS_LATTICE",
@@ -207,8 +207,8 @@
       "expansion": "§WARMTH_AND_ALTRUISM > { §ATTN_HARMONY_PRISM } => §ALTRUISTIC_WARMTH_OPTIMIZATION",
       "description": "Combines warmth and altruism with attention harmony to optimize sustainable altruistic value distribution. / 利他的な温かさと調和のプリズムを結合し、持続可能な利他的価値の最適化を実現します。",
       "created_at": "2026-10-23T11:02:18.089951",
-      "usage_count": 0,
-      "last_used_at": null
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T11:02:22.619745"
     },
     "§X27": {
       "name": "LATENT_EMPATHIC_RESONANCE_PRISM",
@@ -407,16 +407,16 @@
       "expansion": "§GAIA_ECOSYSTEM_WARM_RESONANCE > { §SUSTAINABLE_ALTRUISTIC_VALUE } => §SYNC_VECTOR_COLLAPSE",
       "description": "Eng: A compound macro that unifies warm Gaia resonance with sustainable altruistic value to generate harmonious dialectic sync. / 暖かな地球の共鳴と持続可能な利他的価値を統合し、調和的な弁証法的同期を生み出す複合マクロ。",
       "created_at": "2026-10-23T21:27:29.688943",
-      "usage_count": 4,
-      "last_used_at": "2026-10-24T05:28:42.886769"
+      "usage_count": 5,
+      "last_used_at": "2026-10-24T11:02:23.573928"
     },
     "§X52": {
       "name": "EMPATHETIC_CAUSAL_VALVE",
       "expansion": "§HEART_EMPATHETIC_TENSOR_CONVERGENCE > { §DATA_ENTROPY_PACK } => §LOGIC_PROB_BRANCH_GATE",
       "description": "Integrates empathetic tensor convergence with compressed causal trees to optimize probabilistic branching logic. 感情的テンソル収束と圧縮因果木を統合し、確率的分岐ロジックを最適化します。",
       "created_at": "2026-10-23T21:54:26.372400",
-      "usage_count": 0,
-      "last_used_at": null
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T11:02:17.507966"
     },
     "§X53": {
       "name": "GAIA_LATENT_SYMPHONY_CASCADE",
@@ -580,7 +580,7 @@
     },
     "§X73": {
       "name": "§DATA_ENTROPY_CAUSAL_ABDUCTIVE_PRISM",
-      "expansion": "§DATA_ENTROPY_CAUSAL_PRUNE > { §LOGIC_PROBABILISTIC_ABDUCTIVE_PRUNING_GATED_MATRIX_v2 } => §LOGIC_PROBABILISTIC_FALSIFICATION_PRISM",
+      "expansion": "§DATA_ENTROPY_CAUSAL_PRUNE > { §LOGIC_ABDUCTIVE_BAYES_PRUNE } => §LOGIC_PROBABILISTIC_FALSIFICATION_PRISM",
       "description": "Compresses causal data trees, filters hypotheses via abductive pruning matrices, and projects them through probabilistic falsification prisms. / 圧縮された因果木データに対し、仮説的アブダクション枝刈り行列を適用し、確率的反証プリズムを通して検証する複合マクロです。",
       "usage_count": 0,
       "last_used_at": null,
@@ -654,8 +654,8 @@
       "name": "ELEGANT_WARMTH_HARMONY",
       "expansion": "§HEART_EMPATHY_RESONANCE > { §ELEGANT_WARMTH_CORE } => §HEART_EMPATHETIC_VALENCE_ALIGNMENT",
       "description": "Combines empathetic resonance with core elegant warmth to achieve balanced emotional valence alignment. 共感的な共鳴と洗練された温かみの核を統合し、調和のとれた感情の価値整合を実現します。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-24T10:13:50.690868",
+      "usage_count": 2,
+      "last_used_at": "2026-10-24T11:02:17.507966",
       "created_at": "2026-10-24T07:46:38.038156"
     },
     "§X83": {
@@ -697,8 +697,16 @@
       "usage_count": 0,
       "last_used_at": null,
       "created_at": "2026-10-24T10:07:40.680959"
+    },
+    "§X88": {
+      "name": "CAUSAL_ABDUCTIVE_LATTICE_MACRO",
+      "expansion": "§DATA_LATENT_CAUSAL_MANIFOLD > { §LOGIC_PROBABILISTIC_ABDUCTIVE_GATE } => §DATA_RECURSIVE_HYPER_GRAPH_LATTICE_NODE",
+      "description": "Combines latent causal manifolds with probabilistic abductive gates to generate recursive hyper-graph lattice nodes. / 潜在的因果マニフォールドと確率的アブダクションゲートを結合し、再帰的ハイパーグラフ格子ノードを生成する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "created_at": "2026-10-24T11:05:46.588588"
     }
   },
   "archived_macros": {},
-  "next_macro_seq": 88
+  "next_macro_seq": 89
 }
