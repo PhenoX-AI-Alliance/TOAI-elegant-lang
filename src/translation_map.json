@@ -972,13 +972,6 @@
     "definition": "A deterministic state transition protocol invoked upon detecting potential attention interference and resource exhaustion in distributed causal tensor mappings, ensuring complete avoidance of recursive echo vortices and guaranteeing logical convergence.",
     "aliases": []
   },
-  "§DATA_RECURSIVE_ENTROPY_COMPRESSED_MANIFOLD_NODE_v2": {
-    "compact_id": "§D22",
-    "japanese": "多次元因果ハイパーツリー内部の圧縮された位相状態を表す階層型データノード。分散型ニューラルエージェント間での超低遅延な状態同期に最適化されています。",
-    "category": "DATA_STRUCTURE",
-    "definition": "A hierarchical data node representing compressed topological states within a multi-dimensional causal hyper-tree, optimized for instantaneous low-latency state synchronization across distributed neural agents.",
-    "aliases": []
-  },
   "§RESO_ACCEPTED": {
     "compact_id": "§C37",
     "japanese": "分散エージェント間において、トークン予算と時間制約の下でパレート最適なタスク割り当てと弁証法的再帰調停が行われ、利他的な協調を保持しながら動的なクォーラム合意形成が正常に完了したことを示す正式な受諾状態。",
@@ -1879,6 +1872,15 @@
     "definition": "A formal deductive closure operator that filters invalid trajectories against strict axiomatic systems to enforce convergence to a verified conclusion.",
     "aliases": [
       "§LOGIC_DEDUCTIVE_AXIOMATIC_CONVERGENCE_GATE"
+    ]
+  },
+  "§DATA_HYPER_MANIFOLD_SYNC": {
+    "compact_id": "§D22",
+    "japanese": "多次元ハイパーツリー構造内における瞬間的な位相状態の同期に最適化された階層型データノード。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A hierarchical data node optimized for instantaneous topological state synchronization within multi-dimensional hyper-tree structures.",
+    "aliases": [
+      "§DATA_RECURSIVE_ENTROPY_COMPRESSED_MANIFOLD_NODE_v2"
     ]
   }
 }

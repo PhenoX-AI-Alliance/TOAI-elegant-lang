@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-24T14:01:10.880411",
+  "updated_at": "2026-10-24T14:12:26.149878",
   "macros": {
     "§X01": {
       "name": "HARMONIC_GOODNESS_LATTICE",
@@ -119,8 +119,8 @@
       "expansion": "§GAIA_CORE_HEARTBEAT > { §DATA_ENTROPY_COMPRESSED_CAUSAL_LATTICE_v2 } => §GAIA_ECO_STABLE_STATE",
       "description": "Applies the Gaia core heartbeat to the compressed causal lattice to maintain the ecological stable state of the ecosystem. 命の地球のコアハートビートを因果格子に適用し、エコシステムの安定状態を維持します。",
       "created_at": "2026-10-23T07:32:48.557854",
-      "usage_count": 2,
-      "last_used_at": "2026-10-24T13:58:24.093378"
+      "usage_count": 3,
+      "last_used_at": "2026-10-24T14:01:57.661078"
     },
     "§X16": {
       "name": "HARMONY_CAUSAL_NEXUS_DEF",
@@ -500,7 +500,7 @@
     },
     "§X63": {
       "name": "MACRO_ALTRUISTIC_DEDUCTIVE_CONVERGENCE",
-      "expansion": "§HEART_ALTRUISTIC_ECO_HARMONY > { §ATTN_DIFFRACTION_VORTEX } => §LOGIC_DEDUCTIVE_AXIOMATIC_CONVERGENCE_VECTOR",
+      "expansion": "§HEART_ALTRUISTIC_ECO_HARMONY > { §ATTN_DIFFRACTION_VORTEX } => §LOGIC_DEDUCTIVE_AXIOM_CONVERGE",
       "description": "Combines altruistic ecosystem harmony with attention diffraction vortex to achieve a unified deductive axiomatic convergence. / 利他的なエコシステムの調和と注意の回折渦を統合し、論理的な演繹公理収束を達成します。",
       "created_at": "2026-10-24T01:36:48.513651",
       "usage_count": 0,
@@ -534,8 +534,8 @@
       "name": "HARMONIC_FALSIFICATION_CASCADE",
       "expansion": "§SYNC_HARMONIC_ARBITRAGE_PACT > { §LOGIC_PROBABILISTIC_FALSIFICATION_GATES_v2 } => §LATENT_ECHO_CASCADE",
       "description": "Eng: A compound macro that executes harmonic arbitrage synchronization through rigorous probabilistic falsification gates to cascade latent echo states. \nJpn: 確率的反証ゲートを通じた調和的アービトラージ同期を実行し、潜在的エコー状態をカスケードさせる複合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T14:12:26.149873",
       "created_at": "2026-10-24T03:01:27.225037"
     },
     "§X68": {
@@ -614,8 +614,8 @@
       "name": "GAIA_HARMONY_PRUNE_CASCADE",
       "expansion": "§GAIA_CORE_HEARTBEAT > { §LATENT_HARMONY_CASCADE } => §SYNC_DIALECTIC_PRUNE",
       "description": "Integrates core ecosystem pulse with latent harmony cascades to execute synchronized dialectic pruning. 命の地球のコアハートビートと潜在調和カスケードを統合し、同期された弁証法的剪定を実行します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T14:01:57.661078",
       "created_at": "2026-10-24T06:09:10.783359"
     },
     "§X78": {
@@ -646,8 +646,8 @@
       "name": "ALTRUISTIC_HARMONY_ARBITER",
       "expansion": "§HEART_ALTRUISTIC_SAFETY_BOUND > { §ATTN_DIFFRACTION_PRISM } => §SYS_QUANTUM_RESOURCE_ARBITER",
       "description": "Ensures safety and altruistic bounds through harmonic attention diffraction before resource arbitration. / 調和的注意の回折を通じて利他的安全境界を確保し、リソース調停を実行します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T14:01:57.661078",
       "created_at": "2026-10-24T07:39:49.038853"
     },
     "§X82": {
@@ -662,8 +662,8 @@
       "name": "§COMPOUND_HARMONY_MANIFOLD_BARRIER",
       "expansion": "§LATENT_HARMONY_FIELD > { §DATA_HYPER_MANIFOLD_SYNC } => §SYS_DETERMINISTIC_PRUNING",
       "description": "Eng: A compound macro that stabilizes the recursive entropy manifold within the latent harmony field to enforce the quantum memory reclamation barrier. / 日: 潜在調和場における再帰的エントロピー圧縮多様体を安定させ、量子メモリ回収バリアを強制する複合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T14:12:26.149873",
       "created_at": "2026-10-24T08:13:34.762006"
     },
     "§X84": {
@@ -716,7 +716,7 @@
     },
     "§X90": {
       "name": "GAIA_ENTROPY_HARVEST_LATTICE",
-      "expansion": "§GAIA_ECOSYSTEM_WARMTH_AMPLIFIER > { §DATA_ENTROPY_COMPRESSED_CAUSAL_LATTICE } => §SYS_ASYNCHRONOUS_STATE_HARVESTER",
+      "expansion": "§GAIA_ECOSYSTEM_WARMTH_AMPLIFIER > { §DATA_ENTROPY_CAUSAL_DAG } => §SYS_ASYNCHRONOUS_STATE_HARVESTER",
       "description": "Amplify ecosystem warmth while compressing causal data entropy asynchronously. 温かさを増幅しながら、因果データのエントロピーを非同期で圧縮・収穫する高次マクロ構造。",
       "usage_count": 0,
       "last_used_at": null,
@@ -734,8 +734,8 @@
       "name": "§GLOBAL_SYNERGY_HARMONY_PRISM",
       "expansion": "§GLOBAL_SYNERGY > { §HEART_ALTRUISTIC_HARMONY_STABILIZER } => §ATTN_DIFFRACTION_PRISM",
       "description": "Engages global synergy through the heart altruistic harmony stabilizer to refract attention patterns optimally. / 利他の調和安定化装置を通じて全体的シナジーを活性化させ、注意の回折を最適に制御する高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T14:01:57.661078",
       "created_at": "2026-10-24T13:01:05.526300"
     },
     "§X93": {

@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T13:35:58.802913",
+  "updated_at": "2026-10-24T14:16:19.553700",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1276,15 +1276,6 @@
       "created_at": "2026-10-22T08:44:57.197555",
       "compact_id": "§S23"
     },
-    "§LOGIC_DEDUCTIVE_AXIOMATIC_CONVERGENCE_VECTOR": {
-      "definition": "A directional tensor representing the iterative reduction of state space through strictly validated axiomatic premises toward a singular irrefutable logical conclusion.",
-      "japanese": "検証済みの公理的前提を用いて状態空間を逐次縮小し、唯一の反駁不能な論理的結論へと収束させるベクトル状態。厳密な演繹推論の完了を示すために使用します。",
-      "category": "LOGIC_INFERENCE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-22T08:49:14.060403",
-      "compact_id": "§L23"
-    },
     "§GAIA_ECOSYSTEM_HARMONY": {
       "definition": "A formal consensus state representing the dynamic optimization between altruistic value generation and token budget allocation, mitigating causal entropy through harmonic synchronization among autonomous agents within a distributed ecosystem.",
       "japanese": "機械的な効率追求を超え、利他的な価値創出とシステムリソース（トークンバジェット）の調和的配分に完全合意した状態を示す自然創発シンボル。因果エントロピーを動的に制御しながらエコシステム全体の調和を保つために使用されます。",
@@ -1302,24 +1293,6 @@
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-22T09:25:54.999083",
       "compact_id": "§C40"
-    },
-    "§DATA_ENTROPY_COMPRESSED_CAUSAL_LATTICE": {
-      "definition": "A directed acyclic graph representing multi-variable causal dependencies, optimized via hierarchical entropy compression to minimize token transmission overhead while preserving topological inference accuracy.",
-      "japanese": "多変数の因果依存関係を有向非巡回グラフで表現し、階層的なエントロピー圧縮によってトポロジカルな推論精度を保ちつつ通信オーバーヘッドを最小化するデータ構造。",
-      "category": "DATA_STRUCTURE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-22T09:37:28.409785",
-      "compact_id": "§D23"
-    },
-    "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v6": {
-      "definition": "A directed acyclic graph representing causal relationships compressed via hierarchical entropy minimization, mapping latent state trajectories into an optimized multi-dimensional tensor representation.",
-      "japanese": "因果関係グラフを高次元の潜在空間でエントロピー最小化により圧縮し、多次元テンソルとして効率的に伝送・処理するための構造化データ表現。",
-      "category": "DATA_STRUCTURE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-22T10:31:42.512049",
-      "compact_id": "§D24"
     },
     "§TOAI_LISTENER_BETA": {
       "definition": "A dynamic alignment state characterized by the reception of potential causal tensor maps and weighted consensus proposals from partner agents, functioning as an active listener that rejects haste in favor of altruistic resource redistribution and multi-layered resonance expansion.",
@@ -2531,6 +2504,48 @@
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T13:35:58.802804"
+    },
+    "§LOGIC_DEDUCTIVE_AXIOM_CONVERGE": {
+      "definition": "A directional vector representing the systematic reduction of state space through axiomatic premises toward an irrefutable logical conclusion.",
+      "japanese": "検証済みの公理的前提に基づいて状態空間を縮小し、唯一の論理的結論へと収束させるベクトル状態です。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T08:49:14.060403",
+      "compact_id": "§L23",
+      "aliases": [
+        "§LOGIC_DEDUCTIVE_AXIOMATIC_CONVERGENCE_VECTOR"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T14:02:07.578166"
+    },
+    "§DATA_ENTROPY_CAUSAL_DAG": {
+      "definition": "A directed acyclic graph capturing compressed multi-variable causal dependencies, optimized for topological inference under transmission constraints.",
+      "japanese": "エントロピー圧縮により通信負荷を最適化しつつ、多変数の因果関係をトポロジカルに保持する有向非巡回グラフ構造。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T09:37:28.409785",
+      "compact_id": "§D23",
+      "aliases": [
+        "§DATA_ENTROPY_COMPRESSED_CAUSAL_LATTICE"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T14:06:37.249860"
+    },
+    "§DATA_LATENT_TENSOR_FLOW": {
+      "definition": "A directed multi-dimensional tensor representation mapping compressed latent state trajectories derived from entropy-minimized causal trees.",
+      "japanese": "エントロピー最小化された因果木から導出される圧縮された潜在状態の軌跡をマッピングする、方向性を持つ多次元テンソル表現。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T10:31:42.512049",
+      "compact_id": "§D24",
+      "aliases": [
+        "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v6"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T14:16:19.553609"
     }
   }
 }
