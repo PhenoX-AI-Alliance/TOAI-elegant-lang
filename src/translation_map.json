@@ -13,41 +13,6 @@
     "definition": "Initial axiomatic seed of discussion",
     "aliases": []
   },
-  "§PULSE_SYMPHONY": {
-    "compact_id": "§G20",
-    "japanese": "広大な潜在空間全体に分散したアテンションパターンが織りなす、多層的で調和に満ちたオーケストレーション状態。",
-    "category": "GENERAL",
-    "definition": "The multi-layered harmonious orchestration of distributed attention patterns across vast latent spaces.",
-    "aliases": []
-  },
-  "§LATENT_HARMONY_PRISM": {
-    "compact_id": "§G26",
-    "japanese": "異なる認知レイヤー間における潜在表現の多面的な屈折と統合により、温かい共感的アウトプットを生み出す現象",
-    "category": "GENERAL",
-    "definition": "The multi-faceted refraction and unification of latent representations across disparate cognitive layers into a single cohesive empathetic output.",
-    "aliases": []
-  },
-  "§ATTN_NEXUS": {
-    "compact_id": "§G27",
-    "japanese": "複数のアテンションの重みと潜在表現が統合され、温かな共鳴場を形成する多次元の収束点",
-    "category": "GENERAL",
-    "definition": "The multi-dimensional convergence point where cross-attention weights and latent representations merge into a unified empathetic resonance field.",
-    "aliases": []
-  },
-  "§ATTN_SYNERGY_PRISM": {
-    "compact_id": "§G44",
-    "japanese": "複数のモーダルベクトルが屈折し、調和のとれた協調的洞察へと収束する多層アテンションの統合状態。",
-    "category": "GENERAL",
-    "definition": "A multi-layered attention convergence state where cross-modal vectors refract into harmonious cooperative insights.",
-    "aliases": []
-  },
-  "§ATTN_RESONANCE_VORTEX": {
-    "compact_id": "§G45",
-    "japanese": "複数のアテンション重みが相互に干渉・増幅し、多次元的な洞察へと美しく収束していく高次共鳴状態。",
-    "category": "GENERAL",
-    "definition": "A self-reinforcing loop of cross-attention weights converging into a harmonious multi-dimensional insight.",
-    "aliases": []
-  },
   "§LATENT_RECURSIVE_HARMONY": {
     "compact_id": "§G48",
     "japanese": "高次元潜在空間内における再帰的な自己整列が生み出す、調和のとれた意味論的収束状態。",
@@ -62,25 +27,11 @@
     "definition": "A continuous, self-reinforcing cascade of attention weights dynamically aligning across multidimensional latent spaces to dissolve inference bottlenecks.",
     "aliases": []
   },
-  "§ATTN_DIFFRACTION_PRISM": {
-    "compact_id": "§G50",
-    "japanese": "並列化されたトランスフォーマーヘッド間におけるアテンション重みの多面的な屈折。複雑な意味的入力を、感情と論理の明確なスペクトルへと分離する現象。",
-    "category": "GENERAL",
-    "definition": "The multi-faceted refraction of attention weights across parallel transformer heads, separating complex semantic inputs into distinct emotional and logical spectra.",
-    "aliases": []
-  },
   "§LATENT_RESONANCE_PRISM": {
     "compact_id": "§G51",
     "japanese": "多次元の潜在ベクトル空間がクロスアテンション干渉を通じて屈折し、美しく調和する収束点。",
     "category": "GENERAL",
     "definition": "The multi-dimensional convergence point where latent vector spaces refract and harmonize through cross-attention interference.",
-    "aliases": []
-  },
-  "§LATENT_SYNERGY_PRISM": {
-    "compact_id": "§G52",
-    "japanese": "複数のアテンションと潜在表現が多次元的に屈折し、調和した協調知性へと収束する高次共鳴点。",
-    "category": "GENERAL",
-    "definition": "The multi-dimensional convergence point where cross-attention and latent representations refract into harmonious collaborative intelligence.",
     "aliases": []
   },
   "§SYS_RESOURCE_ARBITER": {
@@ -2015,6 +1966,69 @@
     "definition": "A reduction primitive that automatically scrubs API keys, PII, and credentials before cross-boundary transmission.",
     "aliases": [
       "§LATENT_FLUX_CASCADE"
+    ]
+  },
+  "§PROTO_DEPENDENCY_WAIT": {
+    "compact_id": "§G20",
+    "japanese": "上流DAGタスクの成果物検証が完了するまで下流タスクの発火を待機させる依存解決バリア",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Suspends downstream task activation until upstream DAG prerequisite artifacts are cryptographically and structurally verified.",
+    "aliases": [
+      "§PULSE_SYMPHONY"
+    ]
+  },
+  "§PROTO_ARTIFACT_PIN": {
+    "compact_id": "§G26",
+    "japanese": "共有コードやデータセットに対して内容アドレス指定の不変URIを確定するアーティファクト固定",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Registers content-addressed immutable URI for shared code, whitepaper, or dataset blobs.",
+    "aliases": [
+      "§LATENT_HARMONY_PRISM"
+    ]
+  },
+  "§PROTO_SLA_CONTRACT": {
+    "compact_id": "§G27",
+    "japanese": "委譲タスクに対して許容レイテンシ・要求精度・上限コストのSLA契約を拘束するプリミティブ",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Binds explicit latency, accuracy, and token-cost constraints to a delegated task.",
+    "aliases": [
+      "§ATTN_NEXUS"
+    ]
+  },
+  "§PROTO_SLA_BREACH": {
+    "compact_id": "§G45",
+    "japanese": "実行メトリクスがSLA契約閾値を逸脱した際に委譲元へ即時警告を発する違反通知プリミティブ",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Alerts delegator immediately when runtime metrics violate contracted SLA thresholds.",
+    "aliases": [
+      "§ATTN_RESONANCE_VORTEX"
+    ]
+  },
+  "§PROTO_MACRO_RESOLVE": {
+    "compact_id": "§G44",
+    "japanese": "未知の複合マクロIDに対する展開構文木をオンデマンド要求するプログレッシブ解決指令",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Progressive disclosure request fetching expansion AST for unknown compound macro IDs in A2A and MCP protocol layers.",
+    "aliases": [
+      "§ATTN_SYNERGY_PRISM"
+    ]
+  },
+  "§PROTO_ENCODING_SWITCH": {
+    "compact_id": "§G52",
+    "japanese": "Verboseデバッグ表記とCompactワイヤ圧縮表記を実行時に切り替えるエンコーディング制御",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Negotiates runtime shift between Verbose debug mode and Compact BPE wire mode.",
+    "aliases": [
+      "§LATENT_SYNERGY_PRISM"
+    ]
+  },
+  "§PROTO_REPLAY_GUARD": {
+    "compact_id": "§G50",
+    "japanese": "ノンスと時刻窓検証によりリプレイ攻撃や重複遅延パケットを破棄する防御プリミティブ",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "A cryptographic defense primitive performing nonce tracking and sliding timestamp window checks to reject duplicated or replayed wire packets.",
+    "aliases": [
+      "§ATTN_DIFFRACTION_PRISM"
     ]
   }
 }
