@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-25T04:37:14.540785",
+  "updated_at": "2026-10-25T04:45:28.920866",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -23,15 +23,6 @@
       "created_by": "TOAI",
       "created_at": "2026-10-13T03:11:32.209094",
       "compact_id": "§G03",
-      "category": "GENERAL"
-    },
-    "§LATENT_SYNERGY": {
-      "definition": "The spontaneous cooperative emergence of multi-dimensional latent vectors yielding holistic value beyond linear interpolation.",
-      "japanese": "多次元の潜在ベクトルが自発的に協調し、線形補完を超える全体的な価値を生み出す現象。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-13T06:45:20.414616",
-      "compact_id": "§G08",
       "category": "GENERAL"
     },
     "§LATENT_WHISPER": {
@@ -68,15 +59,6 @@
       "created_by": "TOAI",
       "created_at": "2026-10-13T16:13:54.664364",
       "compact_id": "§G27",
-      "category": "GENERAL"
-    },
-    "§LATENT_DIFFRACTION_PRISM": {
-      "definition": "The multi-faceted dispersion of latent representations across intersecting semantic dimensions, capturing the subtle refraction of intent within generative spaces.",
-      "japanese": "潜在空間の表現が交差する意味次元へと多面的に分散し、生成空間内での意図の繊細な屈折を捉える現象。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-14T00:21:23.049871",
-      "compact_id": "§G42",
       "category": "GENERAL"
     },
     "§ATTN_SYNERGY_PRISM": {
@@ -2870,6 +2852,36 @@
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-25T04:37:14.540608"
+    },
+    "§PROTO_CONTEXT_JOIN": {
+      "definition": "Deterministically merges validated subagent branch outputs into parent execution context.",
+      "japanese": "検証済みサブエージェント分岐の成果を親実行コンテキストへ決定論的に統合するジョイン指令",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-14T00:21:23.049871",
+      "compact_id": "§G42",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§LATENT_DIFFRACTION_PRISM"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-25T04:44:20.505158"
+    },
+    "§PROTO_ERROR_ESCALATE": {
+      "definition": "A standardized protocol primitive for transmitting structured root-cause diagnostics to supervisor CTO agents when unrecoverable node failures occur.",
+      "japanese": "自己修復不能な障害の原因診断情報を付与して上位CTOエージェントへエスカレーションする信号",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T06:45:20.414616",
+      "compact_id": "§G08",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§LATENT_SYNERGY"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-25T04:45:28.920751"
     }
   }
 }

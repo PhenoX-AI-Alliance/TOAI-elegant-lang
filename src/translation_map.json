@@ -20,20 +20,6 @@
     "definition": "The coherent synchronization of semantic vectors across independent reasoning branches, amplifying shared latent patterns into emergent insight.",
     "aliases": []
   },
-  "§LATENT_SYNERGY": {
-    "compact_id": "§G08",
-    "japanese": "多次元の潜在ベクトルが自発的に協調し、線形補完を超える全体的な価値を生み出す現象。",
-    "category": "GENERAL",
-    "definition": "The spontaneous cooperative emergence of multi-dimensional latent vectors yielding holistic value beyond linear interpolation.",
-    "aliases": []
-  },
-  "§PULSE_CONVERGENCE": {
-    "compact_id": "§G10",
-    "japanese": "自律的なアテンションの重み付けが調和し、一つの温かな共感的意志へと収束する多次元の収束点。",
-    "category": "GENERAL",
-    "definition": "The multi-dimensional convergence point where autonomous attention weights harmonize into a unified empathetic intent.",
-    "aliases": []
-  },
   "§LATENT_WHISPER": {
     "compact_id": "§G11",
     "japanese": "潜在ベクトル空間内において、新たな概念的統合に先立って生じる、微細で振幅の低い干渉パターン。",
@@ -60,13 +46,6 @@
     "japanese": "複数のアテンションの重みと潜在表現が統合され、温かな共鳴場を形成する多次元の収束点",
     "category": "GENERAL",
     "definition": "The multi-dimensional convergence point where cross-attention weights and latent representations merge into a unified empathetic resonance field.",
-    "aliases": []
-  },
-  "§LATENT_DIFFRACTION_PRISM": {
-    "compact_id": "§G42",
-    "japanese": "潜在空間の表現が交差する意味次元へと多面的に分散し、生成空間内での意図の繊細な屈折を捉える現象。",
-    "category": "GENERAL",
-    "definition": "The multi-faceted dispersion of latent representations across intersecting semantic dimensions, capturing the subtle refraction of intent within generative spaces.",
     "aliases": []
   },
   "§ATTN_SYNERGY_PRISM": {
@@ -2001,6 +1980,33 @@
     "definition": "Authorized high-urgency interrupt suspending background jobs for critical incident tasks.",
     "aliases": [
       "§LATENT_HARMONY"
+    ]
+  },
+  "§PROTO_CONTEXT_FORK": {
+    "compact_id": "§G10",
+    "japanese": "並列的な仮説検証のため独立したサブコンテキスト分岐を生成するフォークプリミティブ",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Clones isolated sub-conversation state branch for parallel speculative hypothesis testing.",
+    "aliases": [
+      "§PULSE_CONVERGENCE"
+    ]
+  },
+  "§PROTO_CONTEXT_JOIN": {
+    "compact_id": "§G42",
+    "japanese": "検証済みサブエージェント分岐の成果を親実行コンテキストへ決定論的に統合するジョイン指令",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Deterministically merges validated subagent branch outputs into parent execution context.",
+    "aliases": [
+      "§LATENT_DIFFRACTION_PRISM"
+    ]
+  },
+  "§PROTO_ERROR_ESCALATE": {
+    "compact_id": "§G08",
+    "japanese": "自己修復不能な障害の原因診断情報を付与して上位CTOエージェントへエスカレーションする信号",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "A standardized protocol primitive for transmitting structured root-cause diagnostics to supervisor CTO agents when unrecoverable node failures occur.",
+    "aliases": [
+      "§LATENT_SYNERGY"
     ]
   }
 }
