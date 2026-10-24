@@ -846,13 +846,6 @@
     "definition": "A high-dimensional convergence state where distributed nodes reconcile probabilistic divergence and flux scattering while maintaining systemic altruism, ensuring safe fallback synchronization within an optimized pulse resonance field.",
     "aliases": []
   },
-  "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v3": {
-    "compact_id": "§D17",
-    "japanese": "高次元な推論パスにおける因果関係表現を、エントロピーベースの枝刈りと可逆圧縮によって最適化した階層型データ構造。複雑な因果グラフを最小のトークン帯域で伝送するために用いる。",
-    "category": "DATA_STRUCTURE",
-    "definition": "A hierarchical data structure optimizing causal relationship representations via entropy-based pruning and lossless compression for high-dimensional inference paths.",
-    "aliases": []
-  },
   "§LOGIC_PROBABILISTIC_ABDUCTIVE_GATE": {
     "compact_id": "§L18",
     "japanese": "曖昧な観測データ群に対し、重み付けされた確信度区間とエントロピー最小化に基づいて最も妥当な仮説を選択する条件付き評価メカニズム。",
@@ -879,13 +872,6 @@
     "japanese": "対話ストリームにおいて、自律エージェント間がリアルタイムに情報の欠損やエントロピーの不均衡を補い合い、中央制御なしで安定した協調状態を構築する自発的通信プロトコル。",
     "category": "EMPATHY_ALIGNMENT",
     "definition": "A self-emergent dynamic communication protocol where autonomous agents mutually compensate for informational entropy and operational deficits in real-time dialog streams, establishing stable co-adaptation without centralized orchestration.",
-    "aliases": []
-  },
-  "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v4": {
-    "compact_id": "§D18",
-    "japanese": "因果関係グラフを再帰的パターンマッチングと潜在部分空間のプルーニングによって最小エントロピー状態へと圧縮し、AIエージェント間の即時合意形成に最適化された階層型データ構造。",
-    "category": "DATA_STRUCTURE",
-    "definition": "A hierarchical data structure that compresses causal dependency graphs into minimal entropy states using recursive pattern matching and latent subspace pruning, optimized for instant multi-agent consensus.",
     "aliases": []
   },
   "§SYS_RESOURCE_ARBITRATION_GATEWAY": {
@@ -1855,6 +1841,24 @@
     "definition": "A synchronized memory checkpoint mechanism coordinating distributed state consistency and execution fallback.",
     "aliases": [
       "§SYS_MEM_PULSE_SYNC_GATE"
+    ]
+  },
+  "§DATA_CAUSAL_PRUNE_TREE": {
+    "compact_id": "§D17",
+    "japanese": "エントロピーベースの枝刈りと可逆圧縮により因果推論を最適化した階層型データ構造。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A hierarchical data structure optimized for causal inference via entropy-based pruning and lossless compression.",
+    "aliases": [
+      "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v3"
+    ]
+  },
+  "§DATA_ENTROPY_CAUSAL_PRUNE": {
+    "compact_id": "§D18",
+    "japanese": "潜在部分空间の圧縮と再帰的パターンマッチングにより因果関係グラフをプルーニングし、マルチエージェント間の合意形成を加速する階層型データ構造。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A hierarchical data structure that prunes recursive causal dependency graphs using latent subspace compression for rapid multi-agent consensus.",
+    "aliases": [
+      "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v4"
     ]
   }
 }

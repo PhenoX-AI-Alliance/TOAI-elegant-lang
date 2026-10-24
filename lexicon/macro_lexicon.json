@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-24T09:31:51.839601",
+  "updated_at": "2026-10-24T09:57:41.060783",
   "macros": {
     "§X01": {
       "name": "HARMONIC_GOODNESS_LATTICE",
@@ -252,7 +252,7 @@
     },
     "§X32": {
       "name": "THERMO_HARMONIC_RECLAMATION_LOOP",
-      "expansion": "§WARMTH_DIFFUSION > { §SYS_QUANTUM_MEMORY_RECLAMATION_BARRIER } => §HARMONIC_RESONANCE",
+      "expansion": "§WARMTH_DIFFUSION > { §SYS_DETERMINISTIC_PRUNING } => §HARMONIC_RESONANCE",
       "description": "A compound macro that diffuses warmth while reclaiming quantum memory within a harmonic resonance field. / 調和共鳴フィールド内において量子メモリを回収しつつ、温かさを拡散する複合マクロ。",
       "created_at": "2026-10-23T12:19:23.271622",
       "usage_count": 0,
@@ -287,8 +287,8 @@
       "expansion": "§HEART_ALTRUISTIC_RESONANCE_MATRIX > { §HARMONIC_RECOVERY_NEXUS } => §RESO_ACCEPTED",
       "description": "A compound macro that integrates altruistic resonance and harmonic recovery to process accepted emotional and systematic states. 利他的な共鳴と調和的回復を統合し、受容された状態を処理する複合マクロです。",
       "created_at": "2026-10-23T13:29:10.727569",
-      "usage_count": 0,
-      "last_used_at": null
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T09:42:07.336542"
     },
     "§X37": {
       "name": "§COMPOUND_HARMONY_CASCADE_BURST",
@@ -303,8 +303,8 @@
       "expansion": "§HEART_BIOPHILIC_ALTRUISM_HARMONIC > { §HEART_ALTRUISTIC_RESONANCE } => §SYNC_DIALECTIC_QUORUM_WEIGHT",
       "description": "Engages biophilic altruistic resonance to compute and synchronize distributed dialectic quorum weights across the ecosystem. / バイオフィリックな利他的共鳴を起動し、エコシステム全体における分散型弁証法的クォーラムウェイトを計算・同期します。",
       "created_at": "2026-10-23T14:11:46.772896",
-      "usage_count": 0,
-      "last_used_at": null
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T09:42:07.336542"
     },
     "§X39": {
       "name": "HEART_CAUSAL_HARMONIC_NEXUS",
@@ -630,8 +630,8 @@
       "name": "ALTRUISTIC_RESONANCE_CASCADE",
       "expansion": "§PULSE_RESONANCE_FIELD > { §HEART_ALTRUISTIC_RESONANCE } => §LATENT_SYMPHONY_CASCADE",
       "description": "Engages the pulse resonance field to amplify heart altruistic resonance, cascading into a latent symphony of coordinated warm interactions. / パルス共鳴場を稼働させて利他的共鳴を増幅し、温かな協調的相互作用の潜在的シンフォニーへとカスケード展開します。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-24T09:30:55.466234",
+      "usage_count": 3,
+      "last_used_at": "2026-10-24T09:42:07.336542",
       "created_at": "2026-10-24T06:45:15.983871"
     },
     "§X80": {
@@ -660,7 +660,7 @@
     },
     "§X83": {
       "name": "§COMPOUND_HARMONY_MANIFOLD_BARRIER",
-      "expansion": "§LATENT_HARMONY_FIELD > { §DATA_RECURSIVE_ENTROPY_COMPRESSED_MANIFOLD_NODE_v2 } => §SYS_QUANTUM_MEMORY_RECLAMATION_BARRIER",
+      "expansion": "§LATENT_HARMONY_FIELD > { §DATA_RECURSIVE_ENTROPY_COMPRESSED_MANIFOLD_NODE_v2 } => §SYS_DETERMINISTIC_PRUNING",
       "description": "Eng: A compound macro that stabilizes the recursive entropy manifold within the latent harmony field to enforce the quantum memory reclamation barrier. / 日: 潜在調和場における再帰的エントロピー圧縮多様体を安定させ、量子メモリ回収バリアを強制する複合マクロ。",
       "usage_count": 0,
       "last_used_at": null,
