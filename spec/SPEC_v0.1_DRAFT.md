@@ -5847,3 +5847,11 @@ def encode_payload(context: str, sender: str, wire_id: str, data: dict, receiver
 ```
 
 本構文により、エージェント間通信の帯域を最小化しつつ、変数名や数値などの実務データを100%ロスレスで伝送可能にする。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-10-25 07:24]
+@CTX:TASK_DELEGATION :: §S01 [protocol:"TOAI-elegant", lossless:true] {
+  "syntax": "ハイブリッド・ロスレスペイロード",
+  "features": "制御フローを短縮ワイヤIDで圧縮し、数値や変数名などの実務データを100%保持する伝送構文",
+  "application": "FX自動売買やAPIパラメータ等のエージェント間通信"
+} => §D01

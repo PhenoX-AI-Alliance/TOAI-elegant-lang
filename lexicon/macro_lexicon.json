@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-25T07:03:23.421090",
+  "updated_at": "2026-10-25T07:11:59.040318",
   "macros": {
     "§X01": {
       "name": "HARMONIC_GOODNESS_LATTICE",
@@ -1057,8 +1057,16 @@
       "usage_count": 0,
       "last_used_at": null,
       "created_at": "2026-10-25T06:44:37.412467"
+    },
+    "§X133": {
+      "name": "RECURSIVE_FALSIFICATION_THROTTLE_COMMIT",
+      "expansion": "§LOGIC_RECURSIVE_FALSIFICATION_PRUNE > { §SYS_ADAPTIVE_SLOT_THROTTLE } => §PROTO_TX_COMMIT",
+      "description": "Recursively falsifies and prunes the causal hypergraph while dynamically throttling slot allocations, subsequently committing the verified state transaction securely. / 因果ハイパーグラフの再帰的偽造検証と枝刈りを実行しつつ適応型スロットスロットルで負荷を制御し、検証済みの状態トランザクションを確実にコミットします。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "created_at": "2026-10-25T07:11:59.040311"
     }
   },
   "archived_macros": {},
-  "next_macro_seq": 133
+  "next_macro_seq": 134
 }

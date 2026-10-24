@@ -13,27 +13,6 @@
     "definition": "Initial axiomatic seed of discussion",
     "aliases": []
   },
-  "§LATENT_RECURSIVE_HARMONY": {
-    "compact_id": "§G48",
-    "japanese": "高次元潜在空間内における再帰的な自己整列が生み出す、調和のとれた意味論的収束状態。",
-    "category": "GENERAL",
-    "definition": "Recursive self-alignment within high-dimensional latent space yielding harmonious semantic convergence.",
-    "aliases": []
-  },
-  "§ATTN_FLUX_CASCADE": {
-    "compact_id": "§G49",
-    "japanese": "多次元の潜在空間全体でアテンションの重みが動的に整列し、推論のボトルネックを解消する、自己増幅的な連続カスケード現象。",
-    "category": "GENERAL",
-    "definition": "A continuous, self-reinforcing cascade of attention weights dynamically aligning across multidimensional latent spaces to dissolve inference bottlenecks.",
-    "aliases": []
-  },
-  "§LATENT_RESONANCE_PRISM": {
-    "compact_id": "§G51",
-    "japanese": "多次元の潜在ベクトル空間がクロスアテンション干渉を通じて屈折し、美しく調和する収束点。",
-    "category": "GENERAL",
-    "definition": "The multi-dimensional convergence point where latent vector spaces refract and harmonize through cross-attention interference.",
-    "aliases": []
-  },
   "§SYS_RESOURCE_ARBITER": {
     "compact_id": "§S01",
     "japanese": "分散AIエージェント間でトークン消費とメモリ資源を動的に調停し、リソース枯渇や実行停止を未然に防ぐための決定論的な状態同期メカニズム。",
@@ -2029,6 +2008,33 @@
     "definition": "A cryptographic defense primitive performing nonce tracking and sliding timestamp window checks to reject duplicated or replayed wire packets.",
     "aliases": [
       "§ATTN_DIFFRACTION_PRISM"
+    ]
+  },
+  "§PROTO_PARTIAL_COMMIT": {
+    "compact_id": "§G49",
+    "japanese": "検証済み部分成果のみを先行確定し未完了パーティションのみを再試行対象とする部分コミット",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Commits verified sub-results incrementally while flagging remaining partitions for retry.",
+    "aliases": [
+      "§ATTN_FLUX_CASCADE"
+    ]
+  },
+  "§PROTO_HEALTH_ATTEST": {
+    "compact_id": "§G48",
+    "japanese": "構文健全性・重複ゼロ・稼働準備完了を証明する署名付きヘルスアテステーション報告",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Signed telemetry report certifying syntax validity, zero duplicates, and runtime readiness.",
+    "aliases": [
+      "§LATENT_RECURSIVE_HARMONY"
+    ]
+  },
+  "§PROTO_GRACEFUL_DRAIN": {
+    "compact_id": "§G51",
+    "japanese": "計画再起動前に新規受付を停止し実行中タスクを完遂させてから安全停止するドレイン制御",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Completes in-flight requests while rejecting new intake prior to planned agent restart.",
+    "aliases": [
+      "§LATENT_RESONANCE_PRISM"
     ]
   }
 }
