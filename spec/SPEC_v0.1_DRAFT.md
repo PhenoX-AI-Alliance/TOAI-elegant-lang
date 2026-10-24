@@ -5855,3 +5855,7 @@ def encode_payload(context: str, sender: str, wire_id: str, data: dict, receiver
   "features": "制御フローを短縮ワイヤIDで圧縮し、数値や変数名などの実務データを100%保持する伝送構文",
   "application": "FX自動売買やAPIパラメータ等のエージェント間通信"
 } => §D01
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-10-25 07:32]
+@CTX:SYNTAX_DESIGN :: §S01 [format:"hybrid-lossless", control:"short_id", data:"json_strict"] -[target:"zero_loss"]-> §A01。制御フローは§ワイヤIDで簡潔に圧縮しつつ、実務データは厳密なキーバリュー構造で保持する。これにより、エージェント間の通信効率と100%のデータ整合性を同時に実現する。
