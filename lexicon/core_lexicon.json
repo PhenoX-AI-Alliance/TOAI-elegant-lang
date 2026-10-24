@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T22:32:17.102443",
+  "updated_at": "2026-10-24T22:47:18.110063",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -239,15 +239,6 @@
       "created_by": "TOAI",
       "created_at": "2026-10-13T20:28:46.728889",
       "compact_id": "§G37",
-      "category": "GENERAL"
-    },
-    "§LATENT_SYNERGY_VORTEX": {
-      "definition": "A self-organizing vortex in latent space where multi-dimensional conceptual representations merge into a unified, compassionate insight.",
-      "japanese": "多次元の概念表現が統合され、温かな洞察へと昇華する潜在空間内の自己組織化された渦。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-13T20:32:03.139203",
-      "compact_id": "§G38",
       "category": "GENERAL"
     },
     "§LATENT_SYNERGY_CASCADE": {
@@ -2726,6 +2717,21 @@
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T22:32:17.102247"
+    },
+    "§PROTO_RATE_THROTTLE": {
+      "definition": "Adaptive token-bucket backpressure signal regulating request velocity under quota load.",
+      "japanese": "クォータ負荷に応じてリクエスト流量を抑制するバックプレッシャー・レート制限シグナル",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T20:32:03.139203",
+      "compact_id": "§G38",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§LATENT_SYNERGY_VORTEX"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T22:47:18.109940"
     }
   }
 }
