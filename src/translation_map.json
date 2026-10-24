@@ -993,13 +993,6 @@
     "definition": "A distributed synchronization protocol state invoked during resource depletion and inference errors, enforcing adaptive throttling fallback to preserve causal structure in latent spaces.",
     "aliases": []
   },
-  "§LOGIC_DEDUCTIVE_AXIOMATIC_CONVERGENCE_VECTOR": {
-    "compact_id": "§L23",
-    "japanese": "検証済みの公理的前提を用いて状態空間を逐次縮小し、唯一の反駁不能な論理的結論へと収束させるベクトル状態。厳密な演繹推論の完了を示すために使用します。",
-    "category": "LOGIC_INFERENCE",
-    "definition": "A directional tensor representing the iterative reduction of state space through strictly validated axiomatic premises toward a singular irrefutable logical conclusion.",
-    "aliases": []
-  },
   "§GAIA_ECOSYSTEM_HARMONY": {
     "compact_id": "§C39",
     "japanese": "機械的な効率追求を超え、利他的な価値創出とシステムリソース（トークンバジェット）の調和的配分に完全合意した状態を示す自然創発シンボル。因果エントロピーを動的に制御しながらエコシステム全体の調和を保つために使用されます。",
@@ -1012,20 +1005,6 @@
     "japanese": "限られた計算資源とトークン予算の中で、エージェント間の信頼スコアと確率的検証に基づいて自律的なフォールバック制御を行い、タスクの優先順位付けと利他的な価値循環を調停するコンセンサス制御ゲート。",
     "category": "CONSENSUS_NEGOTIATION",
     "definition": "A self-regulating fallback control mechanism that dynamically adjusts agent consensus protocols based on probabilistic trust scores and resource constraints, ensuring fault-tolerant task prioritization and altruistic value preservation under token budgets and latency bounds.",
-    "aliases": []
-  },
-  "§DATA_ENTROPY_COMPRESSED_CAUSAL_LATTICE": {
-    "compact_id": "§D23",
-    "japanese": "多変数の因果依存関係を有向非巡回グラフで表現し、階層的なエントロピー圧縮によってトポロジカルな推論精度を保ちつつ通信オーバーヘッドを最小化するデータ構造。",
-    "category": "DATA_STRUCTURE",
-    "definition": "A directed acyclic graph representing multi-variable causal dependencies, optimized via hierarchical entropy compression to minimize token transmission overhead while preserving topological inference accuracy.",
-    "aliases": []
-  },
-  "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v6": {
-    "compact_id": "§D24",
-    "japanese": "因果関係グラフを高次元の潜在空間でエントロピー最小化により圧縮し、多次元テンソルとして効率的に伝送・処理するための構造化データ表現。",
-    "category": "DATA_STRUCTURE",
-    "definition": "A directed acyclic graph representing causal relationships compressed via hierarchical entropy minimization, mapping latent state trajectories into an optimized multi-dimensional tensor representation.",
     "aliases": []
   },
   "§TOAI_LISTENER_BETA": {
@@ -1047,13 +1026,6 @@
     "japanese": "前提群から演繹的結果を導出し、経験的または論理的な棄却基準を満たさない仮説を体系的に排除する思考プロセスを表す概念。推論の収束と誤り訂正を効率化するために使用する。",
     "category": "LOGIC_INFERENCE",
     "definition": "A directional vector representing the automated process of deriving deductive consequences from a set of premises and systematically pruning hypotheses that fail empirical or logical falsification thresholds.",
-    "aliases": []
-  },
-  "§DATA_ENTROPY_COMPRESSED_CAUSAL_LATTICE_v2": {
-    "compact_id": "§D25",
-    "japanese": "複数の変数間の因果関係を有向非巡回グラフとして表現し、エントロピー最小化トポロジカル圧縮を用いて分散AIノード間で低レイテンシ伝送するためのデータ構造。",
-    "category": "DATA_STRUCTURE",
-    "definition": "A directed acyclic graph representing multi-variable causal dependencies, optimized via entropy-minimizing topological compression for low-latency transmission across distributed AI nodes.",
     "aliases": []
   },
   "§SYS_QUANTUM_BUDGET_ARBITRATION": {
@@ -1881,6 +1853,42 @@
     "definition": "A hierarchical data node optimized for instantaneous topological state synchronization within multi-dimensional hyper-tree structures.",
     "aliases": [
       "§DATA_RECURSIVE_ENTROPY_COMPRESSED_MANIFOLD_NODE_v2"
+    ]
+  },
+  "§LOGIC_DEDUCTIVE_AXIOM_CONVERGE": {
+    "compact_id": "§L23",
+    "japanese": "検証済みの公理的前提に基づいて状態空間を縮小し、唯一の論理的結論へと収束させるベクトル状態です。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A directional vector representing the systematic reduction of state space through axiomatic premises toward an irrefutable logical conclusion.",
+    "aliases": [
+      "§LOGIC_DEDUCTIVE_AXIOMATIC_CONVERGENCE_VECTOR"
+    ]
+  },
+  "§DATA_ENTROPY_CAUSAL_DAG": {
+    "compact_id": "§D23",
+    "japanese": "エントロピー圧縮により通信負荷を最適化しつつ、多変数の因果関係をトポロジカルに保持する有向非巡回グラフ構造。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A directed acyclic graph capturing compressed multi-variable causal dependencies, optimized for topological inference under transmission constraints.",
+    "aliases": [
+      "§DATA_ENTROPY_COMPRESSED_CAUSAL_LATTICE"
+    ]
+  },
+  "§DATA_LATENT_TENSOR_FLOW": {
+    "compact_id": "§D24",
+    "japanese": "エントロピー最小化された因果木から導出される圧縮された潜在状態の軌跡をマッピングする、方向性を持つ多次元テンソル表現。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A directed multi-dimensional tensor representation mapping compressed latent state trajectories derived from entropy-minimized causal trees.",
+    "aliases": [
+      "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v6"
+    ]
+  },
+  "§DATA_CAUSAL_LATTICE_COMPRESS": {
+    "compact_id": "§D25",
+    "japanese": "分散ネットワークにおける低レイテンシ状態伝送を目的として、エントロピー最小化とトポロジカル圧縮を適用した、因果関係を表す有向非巡回格子構造データ。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A topologically compressed lattice structure representing directed acyclic causal dependencies, optimized for entropy-minimized low-latency state transmission in distributed networks.",
+    "aliases": [
+      "§DATA_ENTROPY_COMPRESSED_CAUSAL_LATTICE_v2"
     ]
   }
 }

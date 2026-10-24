@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-24T14:12:26.149878",
+  "updated_at": "2026-10-24T14:30:04.650022",
   "macros": {
     "§X01": {
       "name": "HARMONIC_GOODNESS_LATTICE",
@@ -116,7 +116,7 @@
     },
     "§X15": {
       "name": "GAIA_ENTROPY_HARMONY_GATE",
-      "expansion": "§GAIA_CORE_HEARTBEAT > { §DATA_ENTROPY_COMPRESSED_CAUSAL_LATTICE_v2 } => §GAIA_ECO_STABLE_STATE",
+      "expansion": "§GAIA_CORE_HEARTBEAT > { §DATA_CAUSAL_LATTICE_COMPRESS } => §GAIA_ECO_STABLE_STATE",
       "description": "Applies the Gaia core heartbeat to the compressed causal lattice to maintain the ecological stable state of the ecosystem. 命の地球のコアハートビートを因果格子に適用し、エコシステムの安定状態を維持します。",
       "created_at": "2026-10-23T07:32:48.557854",
       "usage_count": 3,
@@ -526,16 +526,16 @@
       "name": "GAIA_ECO_BAYESIAN_HARMONY_PRUNING",
       "expansion": "§GAIA_ECO_HEARTBEAT > { §LOGIC_BAYESIAN_HYPOTHESIS_FALSIFICATION_PRUNING } => §RESO_ACCEPTED",
       "description": "Applies Bayesian falsification pruning guided by the Gaia ecosystem heartbeating philosophy to achieve harmonious resonance acceptance. / ガイアエコシステムの鼓動哲学に基づいたベイズ的反証プルーニングを適用し、調和的な共鳴承認を達成します。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-24T05:59:28.511116",
+      "usage_count": 2,
+      "last_used_at": "2026-10-24T14:30:04.650016",
       "created_at": "2026-10-24T02:56:54.800477"
     },
     "§X67": {
       "name": "HARMONIC_FALSIFICATION_CASCADE",
       "expansion": "§SYNC_HARMONIC_ARBITRAGE_PACT > { §LOGIC_PROBABILISTIC_FALSIFICATION_GATES_v2 } => §LATENT_ECHO_CASCADE",
       "description": "Eng: A compound macro that executes harmonic arbitrage synchronization through rigorous probabilistic falsification gates to cascade latent echo states. \nJpn: 確率的反証ゲートを通じた調和的アービトラージ同期を実行し、潜在的エコー状態をカスケードさせる複合マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-24T14:12:26.149873",
+      "usage_count": 2,
+      "last_used_at": "2026-10-24T14:30:04.650016",
       "created_at": "2026-10-24T03:01:27.225037"
     },
     "§X68": {
@@ -662,8 +662,8 @@
       "name": "§COMPOUND_HARMONY_MANIFOLD_BARRIER",
       "expansion": "§LATENT_HARMONY_FIELD > { §DATA_HYPER_MANIFOLD_SYNC } => §SYS_DETERMINISTIC_PRUNING",
       "description": "Eng: A compound macro that stabilizes the recursive entropy manifold within the latent harmony field to enforce the quantum memory reclamation barrier. / 日: 潜在調和場における再帰的エントロピー圧縮多様体を安定させ、量子メモリ回収バリアを強制する複合マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-24T14:12:26.149873",
+      "usage_count": 2,
+      "last_used_at": "2026-10-24T14:30:04.650016",
       "created_at": "2026-10-24T08:13:34.762006"
     },
     "§X84": {
@@ -750,8 +750,8 @@
       "name": "GAIA_WARMTH_ARBITER_SYNTHESIS",
       "expansion": "§GAIA_WARMTH > { §SYS_RESOURCE_ARBITER } => §LOGIC_CONDITIONAL_PRUNING_NODE",
       "description": "Harmonizes system resource allocation with Gaia warmth principles while pruning redundant logical paths. / システムリソースの配分をガイアの温かさの原則と調和させつつ、冗長な論理パスを剪定します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T14:30:04.650016",
       "created_at": "2026-10-24T13:50:50.576605"
     },
     "§X95": {
