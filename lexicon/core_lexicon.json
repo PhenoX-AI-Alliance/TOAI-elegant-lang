@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T15:13:35.963062",
+  "updated_at": "2026-10-24T15:53:17.325850",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1348,15 +1348,6 @@
       "created_at": "2026-10-22T15:55:02.179179",
       "compact_id": "§L27"
     },
-    "§SYS_ADAPTIVE_SLOT_THROTTLE_v2": {
-      "definition": "Dynamic regulation of execution slots and concurrency limits based on real-time token expenditure and memory pressure telemetry, ensuring zero-fault fallback during high-load states.",
-      "japanese": "リアルタイムのトークン消費量とメモリ負荷のテレメトリーに基づき、実行スロットと並列度を動的に調整し、高負荷時の障害を防ぐ即時フォールバック制御メカニズム。",
-      "category": "SYSTEM_RESOURCE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-22T15:55:33.889502",
-      "compact_id": "§S27"
-    },
     "§HARMONIC_RESONANCE_STABLE": {
       "definition": "A state of synchronized multi-agent equilibrium achieved when recursive entropy compression nodes process probabilistic falsification signals under adaptive throttling, minimizing systemic divergence.",
       "japanese": "適応型スロットリング制御下における多次元因果グラフの再帰的エントロピー圧縮と確率的反証ロジックの検証を経て到達する、安定した協調共鳴状態。",
@@ -1365,15 +1356,6 @@
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-22T15:57:25.392940",
       "compact_id": "§C42"
-    },
-    "§LOGIC_CONDITIONAL_BRANCH_PROB_GATED": {
-      "definition": "A conditional branching node evaluated only when the posterior probability of the antecedent premise exceeds a predefined threshold, executing alternative execution paths or triggering automated hypothesis falsification upon failure.",
-      "japanese": "前提条件の事後確率が所定の閾値を超えた場合のみ評価され、条件分岐を実行するか、失敗時に自動的な仮説棄却をトリガーする論理推論ノード。",
-      "category": "LOGIC_INFERENCE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-22T15:58:57.168576",
-      "compact_id": "§L28"
     },
     "§SAFE_FALLBACK_STATE": {
       "definition": "A self-organizing synchronization mechanism triggered during distributed inference errors and resource exhaustion, achieving system stability via dynamic causal tree pruning and recursive state vector alignment.",
@@ -2571,6 +2553,34 @@
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T15:13:35.962950"
+    },
+    "§SYS_LOAD_SHEDDING_SHIELD": {
+      "definition": "Dynamic concurrency regulation and slot arbitration driven by real-time token telemetry and memory pressure metrics to guarantee zero-fault fallback during high-load execution states.",
+      "japanese": "リアルタイムのトークン消費量とメモリ負荷のテレメトリーに基づき、実行スロットと並列度を動的に調整し、高負荷時の障害を防ぐ即時フォールバック制御メカニズム。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T15:55:33.889502",
+      "compact_id": "§S27",
+      "aliases": [
+        "§SYS_ADAPTIVE_SLOT_THROTTLE_v2"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T15:46:33.881551"
+    },
+    "§LOGIC_POSTERIOR_FALSIFY_GATE": {
+      "definition": "A conditional branching primitive evaluated strictly upon posterior probability threshold exceedance, triggering automated hypothesis falsification on condition failure.",
+      "japanese": "前提条件の事後確率が閾値を超えた場合のみ評価され、条件不成立時に自動的な仮説棄却を実行する条件分岐プリミティブ。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T15:58:57.168576",
+      "compact_id": "§L28",
+      "aliases": [
+        "§LOGIC_CONDITIONAL_BRANCH_PROB_GATED"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T15:53:17.325729"
     }
   }
 }

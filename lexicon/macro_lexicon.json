@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-24T15:29:03.737912",
+  "updated_at": "2026-10-24T15:53:47.224445",
   "macros": {
     "§X01": {
       "name": "HARMONIC_GOODNESS_LATTICE",
@@ -793,8 +793,24 @@
       "usage_count": 0,
       "last_used_at": null,
       "created_at": "2026-10-24T15:01:09.535153"
+    },
+    "§X100": {
+      "name": "ALTRUISTIC_CONVERGENCE_ACCELERATOR",
+      "expansion": "§HEART_ALTRUISTIC_BUFFER_FLOW > { §LOGIC_DEDUCTIVE_CONVERGENCE_NODE } => §SYS_ADAPTIVE_SLOT_THROTTLE_v3",
+      "description": "Engages the altruistic heart buffer to drive deductive convergence while dynamically adapting system slot throughput. / 利他的なハートバッファを活用して演繹的収縮を駆動し、システムのスロット処理能力を適応的に最適化します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "created_at": "2026-10-24T15:40:10.493799"
+    },
+    "§X101": {
+      "name": "GAIA_ALTRUISTIC_ATTN_SYNAPSE",
+      "expansion": "§ATTN_FLUX_NEXUS > { §GAIA_ALTRUISM_HARMONY } => §HEART_ALTRUISTIC_HARMONY_MATRIX",
+      "description": "Attention flux is harmonized through Gaia altruism and converges into the core altruistic harmony matrix. / アテンションの流束をガイアの利他主義によって調和させ、中核の利他調和マトリックスへと収束させます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "created_at": "2026-10-24T15:53:47.224440"
     }
   },
   "archived_macros": {},
-  "next_macro_seq": 100
+  "next_macro_seq": 102
 }

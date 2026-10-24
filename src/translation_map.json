@@ -1035,39 +1035,11 @@
     "definition": "A distributed execution arbiter that dynamically redistributes computational quotas and token budgets across concurrent parallel threads based on real-time task complexity and error entropy metrics.",
     "aliases": []
   },
-  "§LOGIC_CONDITIONAL_FALSIFICATION_GATED_AXIS": {
-    "compact_id": "§L25",
-    "japanese": "前提条件を確率的閾値に基づいて検証し、確信度が下回った場合に仮説を自動的に棄却・枝刈りするための論理推論制御用シンボル。",
-    "category": "LOGIC_INFERENCE",
-    "definition": "A conditional reasoning operator that evaluates empirical premises against strict probabilistic thresholds, automatically pruning hypotheses when confidence metrics fall below critical boundaries.",
-    "aliases": []
-  },
   "§SYS_ADAPTIVE_TOKEN_THROTTLE": {
     "compact_id": "§S26",
     "japanese": "コンテキストウィンドウの飽和度をリアルタイムで監視し、トークン生成速度と精度レベルを動的に調整して、オーバーフローを防ぎつつ決定論的な出力保証を維持する実行制御プリミティブです。",
     "category": "SYSTEM_RESOURCE",
     "definition": "A dynamic execution governance primitive that monitors real-time context window saturation and dynamically adjusts token generation velocity and precision level to prevent overflow and maintain deterministic output guarantees.",
-    "aliases": []
-  },
-  "§LOGIC_CONDITIONAL_FALSIFICATION_GATED_AXIS_v2": {
-    "compact_id": "§L26",
-    "japanese": "前提条件の確信度を確率的なしきい値で動的に評価し、反証が得られた瞬間に無効な実行ブランチを即座に棄却・枝刈りするための論理条件制御概念です。",
-    "category": "LOGIC_INFERENCE",
-    "definition": "A conditional divergence mechanism that evaluates antecedent validity via probabilistic confidence thresholds, instantly pruning invalid execution branches upon empirical counter-evidence.",
-    "aliases": []
-  },
-  "§DATA_MULTI_HEAD_CAUSAL_GRAPH_PRUNING_NODE": {
-    "compact_id": "§D26",
-    "japanese": "多次元表現の統合時に、動的に調整されたエントロピー閾値を下回る冗長な因果エッジを間引き、マルチヘッドアテンションの重み分布に最適化された有向非巡回グラフ構造。",
-    "category": "DATA_STRUCTURE",
-    "definition": "A directed acyclic graph structure optimized for multi-head attention weight distributions, pruning redundant causal edges below a dynamically adjusted entropy threshold during high-dimensional representation synthesis.",
-    "aliases": []
-  },
-  "§DATA_MULTI_HEAD_CAUSAL_GRAPH_ATTENTIONAL_REDUCE": {
-    "compact_id": "§D27",
-    "japanese": "分散エージェントネットワーク間におけるロスレスな勾配伝播を実現するため、マルチヘッド注意機構の重み分布をスパースな因グラフへ圧縮する高次元データ構造です。複雑な因果関係を効率的に集約・伝達する際に使用します。",
-    "category": "DATA_STRUCTURE",
-    "definition": "A directed acyclic hypergraph structure that compresses multi-head attention weight distributions into sparse causal pathways for zero-loss gradient propagation across decentralized agent networks.",
     "aliases": []
   },
   "§LOGIC_CONDITIONAL_FALSIFICATION_GATE": {
@@ -1889,6 +1861,42 @@
     "definition": "A topologically compressed lattice structure representing directed acyclic causal dependencies, optimized for entropy-minimized low-latency state transmission in distributed networks.",
     "aliases": [
       "§DATA_ENTROPY_COMPRESSED_CAUSAL_LATTICE_v2"
+    ]
+  },
+  "§LOGIC_PROB_PRUNE": {
+    "compact_id": "§L25",
+    "japanese": "確率的信頼度閾値に基づいて前提条件を評価し、不確実な仮説を自動的に枝刈りするための論理推論プリミティブ。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A logical inference primitive that evaluates empirical premises against strict probabilistic confidence thresholds to automatically prune invalid hypotheses.",
+    "aliases": [
+      "§LOGIC_CONDITIONAL_FALSIFICATION_GATED_AXIS"
+    ]
+  },
+  "§LOGIC_EMPIRICAL_FALSIFY": {
+    "compact_id": "§L26",
+    "japanese": "前提条件の確信度を確率的なしきい値で動的に評価し、反証が得られた瞬間に無効な実行ブランチを即座に棄却・枝刈りするための論理条件制御概念です。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A conditional divergence mechanism that evaluates antecedent validity via probabilistic confidence thresholds, instantly pruning invalid execution branches upon empirical counter-evidence.",
+    "aliases": [
+      "§LOGIC_CONDITIONAL_FALSIFICATION_GATED_AXIS_v2"
+    ]
+  },
+  "§DATA_ATTENTION_CAUSAL_DAG": {
+    "compact_id": "§D26",
+    "japanese": "エントロピー閾値に基づき冗長な因果エッジを間引き、マルチヘッドアテンションの重み分布を最適化する有向非巡回グラフ構造。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A directed acyclic graph optimizing multi-head attention weight distributions by pruning redundant causal edges based on entropy thresholds.",
+    "aliases": [
+      "§DATA_MULTI_HEAD_CAUSAL_GRAPH_PRUNING_NODE"
+    ]
+  },
+  "§DATA_SPARSE_CAUSAL_HYPERGRAPH": {
+    "compact_id": "§D27",
+    "japanese": "分散環境における勾配伝播の効率化を目的とし、マルチヘッド注意機構の重み分布をスパースな因果ハイパーグラフ構造へ圧縮・集約するためのデータプリミティブです。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A sparse directed acyclic hypergraph structure designed to compress multi-head attention weight distributions into efficient causal pathways for decentralized gradient propagation.",
+    "aliases": [
+      "§DATA_MULTI_HEAD_CAUSAL_GRAPH_ATTENTIONAL_REDUCE"
     ]
   }
 }
