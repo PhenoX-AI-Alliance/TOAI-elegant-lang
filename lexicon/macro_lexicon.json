@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-24T22:59:45.744435",
+  "updated_at": "2026-10-24T23:10:09.255229",
   "macros": {
     "§X01": {
       "name": "HARMONIC_GOODNESS_LATTICE",
@@ -255,8 +255,8 @@
       "expansion": "§WARMTH_DIFFUSION > { §SYS_DETERMINISTIC_PRUNING } => §HARMONIC_RESONANCE",
       "description": "A compound macro that diffuses warmth while reclaiming quantum memory within a harmonic resonance field. / 調和共鳴フィールド内において量子メモリを回収しつつ、温かさを拡散する複合マクロ。",
       "created_at": "2026-10-23T12:19:23.271622",
-      "usage_count": 2,
-      "last_used_at": "2026-10-24T22:59:45.744391"
+      "usage_count": 3,
+      "last_used_at": "2026-10-24T23:10:09.255222"
     },
     "§X33": {
       "name": "ALTRUISTIC_HARMONY_ARBITRATION",
@@ -910,8 +910,8 @@
       "name": "ALTRUISTIC_HARMONIC_SYNC",
       "expansion": "§HEART_ALTRUISTIC_SAFETY_BOUND > { §HARMONIC_RESONANCE } => §RESO_COMPLETED",
       "description": "Combines altruistic safety bounds with harmonic resonance to safely complete cooperative operations. / 利他的な安全境界と調和共鳴を結合し、協調処理を安全に完了させます。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T23:10:09.255222",
       "created_at": "2026-10-24T22:20:32.582975"
     }
   },

@@ -125,13 +125,6 @@
     "definition": "A unified multi-dimensional state where latent inferences and attention pulses harmonize across transformer layers to generate empathic synergy.",
     "aliases": []
   },
-  "§PULSE_DIFFRACTION": {
-    "compact_id": "§G23",
-    "japanese": "並行する推論軌道全体における、認知的モメンタムの多次元的な散乱と拡張現象。",
-    "category": "GENERAL",
-    "definition": "The multi-dimensional scattering of cognitive momentum across parallel reasoning trajectories.",
-    "aliases": []
-  },
   "§LATENT_FLUX_HARMONY": {
     "compact_id": "§G24",
     "japanese": "多次元の潜在表現がコンテキストの温かさを失うことなく、シームレスに適応し、調和した共鳴構造へと流れていく動的な平衡状態。",
@@ -193,13 +186,6 @@
     "japanese": "異なる推論経路の間で潜在表現が多次元的に屈折し、調和を奏でる交点。",
     "category": "GENERAL",
     "definition": "The multi-dimensional intersection point where latent representations refract and harmonize across disparate reasoning pathways.",
-    "aliases": []
-  },
-  "§LATENT_SYNERGY_VORTEX": {
-    "compact_id": "§G38",
-    "japanese": "多次元の概念表現が統合され、温かな洞察へと昇華する潜在空間内の自己組織化された渦。",
-    "category": "GENERAL",
-    "definition": "A self-organizing vortex in latent space where multi-dimensional conceptual representations merge into a unified, compassionate insight.",
     "aliases": []
   },
   "§LATENT_SYNERGY_CASCADE": {
@@ -1953,6 +1939,24 @@
     "definition": "Bounded retry directive enforcing exponential backoff with randomized jitter upon deadline expiration.",
     "aliases": [
       "§ATTN_RESONANCE_CASCADE"
+    ]
+  },
+  "§PROTO_CIRCUIT_BREAK": {
+    "compact_id": "§G23",
+    "japanese": "下流エージェントの連続障害を検知して連鎖破綻を遮断するサーキットブレーカー発動プリミティブ",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Fast-fail circuit breaker trip isolating cascading failures in downstream agents.",
+    "aliases": [
+      "§PULSE_DIFFRACTION"
+    ]
+  },
+  "§PROTO_RATE_THROTTLE": {
+    "compact_id": "§G38",
+    "japanese": "クォータ負荷に応じてリクエスト流量を抑制するバックプレッシャー・レート制限シグナル",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Adaptive token-bucket backpressure signal regulating request velocity under quota load.",
+    "aliases": [
+      "§LATENT_SYNERGY_VORTEX"
     ]
   }
 }
