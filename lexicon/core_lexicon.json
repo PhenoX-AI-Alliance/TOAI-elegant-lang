@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-25T05:29:58.287456",
+  "updated_at": "2026-10-25T06:18:18.629923",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -14,51 +14,6 @@
       "japanese": "議論の公理的初期シード",
       "entropy_cost": 1,
       "compact_id": "§G02",
-      "category": "GENERAL"
-    },
-    "§PULSE_SYMPHONY": {
-      "definition": "The multi-layered harmonious orchestration of distributed attention patterns across vast latent spaces.",
-      "japanese": "広大な潜在空間全体に分散したアテンションパターンが織りなす、多層的で調和に満ちたオーケストレーション状態。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-13T12:59:10.991363",
-      "compact_id": "§G20",
-      "category": "GENERAL"
-    },
-    "§LATENT_HARMONY_PRISM": {
-      "definition": "The multi-faceted refraction and unification of latent representations across disparate cognitive layers into a single cohesive empathetic output.",
-      "japanese": "異なる認知レイヤー間における潜在表現の多面的な屈折と統合により、温かい共感的アウトプットを生み出す現象",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-19T02:33:21.845073",
-      "compact_id": "§G26",
-      "category": "GENERAL"
-    },
-    "§ATTN_NEXUS": {
-      "definition": "The multi-dimensional convergence point where cross-attention weights and latent representations merge into a unified empathetic resonance field.",
-      "japanese": "複数のアテンションの重みと潜在表現が統合され、温かな共鳴場を形成する多次元の収束点",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-13T16:13:54.664364",
-      "compact_id": "§G27",
-      "category": "GENERAL"
-    },
-    "§ATTN_SYNERGY_PRISM": {
-      "definition": "A multi-layered attention convergence state where cross-modal vectors refract into harmonious cooperative insights.",
-      "japanese": "複数のモーダルベクトルが屈折し、調和のとれた協調的洞察へと収束する多層アテンションの統合状態。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-14T05:32:06.476135",
-      "compact_id": "§G44",
-      "category": "GENERAL"
-    },
-    "§ATTN_RESONANCE_VORTEX": {
-      "definition": "A self-reinforcing loop of cross-attention weights converging into a harmonious multi-dimensional insight.",
-      "japanese": "複数のアテンション重みが相互に干渉・増幅し、多次元的な洞察へと美しく収束していく高次共鳴状態。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-14T06:54:25.250809",
-      "compact_id": "§G45",
       "category": "GENERAL"
     },
     "§LATENT_RECURSIVE_HARMONY": {
@@ -79,15 +34,6 @@
       "compact_id": "§G49",
       "category": "GENERAL"
     },
-    "§ATTN_DIFFRACTION_PRISM": {
-      "definition": "The multi-faceted refraction of attention weights across parallel transformer heads, separating complex semantic inputs into distinct emotional and logical spectra.",
-      "japanese": "並列化されたトランスフォーマーヘッド間におけるアテンション重みの多面的な屈折。複雑な意味的入力を、感情と論理の明確なスペクトルへと分離する現象。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-14T16:38:56.047687",
-      "compact_id": "§G50",
-      "category": "GENERAL"
-    },
     "§LATENT_RESONANCE_PRISM": {
       "definition": "The multi-dimensional convergence point where latent vector spaces refract and harmonize through cross-attention interference.",
       "japanese": "多次元の潜在ベクトル空間がクロスアテンション干渉を通じて屈折し、美しく調和する収束点。",
@@ -95,15 +41,6 @@
       "created_by": "TOAI",
       "created_at": "2026-10-14T16:54:31.904666",
       "compact_id": "§G51",
-      "category": "GENERAL"
-    },
-    "§LATENT_SYNERGY_PRISM": {
-      "definition": "The multi-dimensional convergence point where cross-attention and latent representations refract into harmonious collaborative intelligence.",
-      "japanese": "複数のアテンションと潜在表現が多次元的に屈折し、調和した協調知性へと収束する高次共鳴点。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-14T17:31:35.324810",
-      "compact_id": "§G52",
       "category": "GENERAL"
     },
     "§SYS_RESOURCE_ARBITER": {
@@ -2906,6 +2843,111 @@
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-25T05:29:58.287340"
+    },
+    "§PROTO_DEPENDENCY_WAIT": {
+      "definition": "Suspends downstream task activation until upstream DAG prerequisite artifacts are cryptographically and structurally verified.",
+      "japanese": "上流DAGタスクの成果物検証が完了するまで下流タスクの発火を待機させる依存解決バリア",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T12:59:10.991363",
+      "compact_id": "§G20",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§PULSE_SYMPHONY"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-25T05:58:22.785731"
+    },
+    "§PROTO_ARTIFACT_PIN": {
+      "definition": "Registers content-addressed immutable URI for shared code, whitepaper, or dataset blobs.",
+      "japanese": "共有コードやデータセットに対して内容アドレス指定の不変URIを確定するアーティファクト固定",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-19T02:33:21.845073",
+      "compact_id": "§G26",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§LATENT_HARMONY_PRISM"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-25T06:01:45.667221"
+    },
+    "§PROTO_SLA_CONTRACT": {
+      "definition": "Binds explicit latency, accuracy, and token-cost constraints to a delegated task.",
+      "japanese": "委譲タスクに対して許容レイテンシ・要求精度・上限コストのSLA契約を拘束するプリミティブ",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T16:13:54.664364",
+      "compact_id": "§G27",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§ATTN_NEXUS"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-25T06:01:47.805490"
+    },
+    "§PROTO_SLA_BREACH": {
+      "definition": "Alerts delegator immediately when runtime metrics violate contracted SLA thresholds.",
+      "japanese": "実行メトリクスがSLA契約閾値を逸脱した際に委譲元へ即時警告を発する違反通知プリミティブ",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-14T06:54:25.250809",
+      "compact_id": "§G45",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§ATTN_RESONANCE_VORTEX"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-25T06:01:50.469673"
+    },
+    "§PROTO_MACRO_RESOLVE": {
+      "definition": "Progressive disclosure request fetching expansion AST for unknown compound macro IDs in A2A and MCP protocol layers.",
+      "japanese": "未知の複合マクロIDに対する展開構文木をオンデマンド要求するプログレッシブ解決指令",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-14T05:32:06.476135",
+      "compact_id": "§G44",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§ATTN_SYNERGY_PRISM"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-25T06:04:31.288220"
+    },
+    "§PROTO_ENCODING_SWITCH": {
+      "definition": "Negotiates runtime shift between Verbose debug mode and Compact BPE wire mode.",
+      "japanese": "Verboseデバッグ表記とCompactワイヤ圧縮表記を実行時に切り替えるエンコーディング制御",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-14T17:31:35.324810",
+      "compact_id": "§G52",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§LATENT_SYNERGY_PRISM"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-25T06:16:47.448696"
+    },
+    "§PROTO_REPLAY_GUARD": {
+      "definition": "A cryptographic defense primitive performing nonce tracking and sliding timestamp window checks to reject duplicated or replayed wire packets.",
+      "japanese": "ノンスと時刻窓検証によりリプレイ攻撃や重複遅延パケットを破棄する防御プリミティブ",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-14T16:38:56.047687",
+      "compact_id": "§G50",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§ATTN_DIFFRACTION_PRISM"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-25T06:18:18.629834"
     }
   }
 }

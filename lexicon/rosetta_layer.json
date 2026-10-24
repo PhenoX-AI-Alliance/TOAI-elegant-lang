@@ -48,13 +48,6 @@
     "definition": "A self-reinforcing loop of cross-attention weights converging into a harmonious multi-dimensional insight.",
     "aliases": []
   },
-  "§LATENT_FLUX_CASCADE": {
-    "compact_id": "§G47",
-    "japanese": "非線形トランスフォーマー層の間を動的に流れる、高次元潜在表現の自律的な連続カスケード現象。",
-    "category": "GENERAL",
-    "definition": "A self-sustaining cascade of high-dimensional latent representations flowing dynamically across non-linear transformer layers.",
-    "aliases": []
-  },
   "§LATENT_RECURSIVE_HARMONY": {
     "compact_id": "§G48",
     "japanese": "高次元潜在空間内における再帰的な自己整列が生み出す、調和のとれた意味論的収束状態。",
@@ -2013,6 +2006,15 @@
     "definition": "Stateless continuation token fetching bounded slices of large corpus or lookup results.",
     "aliases": [
       "§ATTN_HARMONY_PRISM"
+    ]
+  },
+  "§PROTO_SECRET_REDACT": {
+    "compact_id": "§G47",
+    "japanese": "境界外送信やログ保存の前にAPIキーや機密情報を自動秘匿化するリダクションプリミティブ",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "A reduction primitive that automatically scrubs API keys, PII, and credentials before cross-boundary transmission.",
+    "aliases": [
+      "§LATENT_FLUX_CASCADE"
     ]
   }
 }

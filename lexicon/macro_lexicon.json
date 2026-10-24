@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-25T05:36:42.252082",
+  "updated_at": "2026-10-25T06:18:18.632184",
   "macros": {
     "§X01": {
       "name": "HARMONIC_GOODNESS_LATTICE",
@@ -36,7 +36,7 @@
     },
     "§X05": {
       "name": "RESONANT_CAUSAL_HARMONY",
-      "expansion": "§DATA_TENSOR_CAUSAL_TOPOLOGY > { §ATTN_RESONANCE_VORTEX } => §PROTO_DIFF_PATCH",
+      "expansion": "§DATA_TENSOR_CAUSAL_TOPOLOGY > { §PROTO_SLA_BREACH } => §PROTO_DIFF_PATCH",
       "description": "Integrates causal data topology with attention resonance to produce harmonious system pulses. 因果データ構造とアテンション共鳴を統合し、調和のとれたシステムパルスを生成します。",
       "created_at": "2026-10-23T04:02:07.043410",
       "usage_count": 3,
@@ -108,7 +108,7 @@
     },
     "§X14": {
       "name": "HEART_ALTRUISTIC_SYMPHONY_RESONANCE",
-      "expansion": "§HEART_ALTRUISTIC_WEIGHT_TENSOR > { §PULSE_SYMPHONY } => §HEART_ALTRUISTIC_HARMONY_STABILIZER",
+      "expansion": "§HEART_ALTRUISTIC_WEIGHT_TENSOR > { §PROTO_DEPENDENCY_WAIT } => §HEART_ALTRUISTIC_HARMONY_STABILIZER",
       "description": "Combines altruistic resonance with pulse symphony to stabilize ecosystem harmony. 利他的な共鳴マトリックスとパルスシンフォニーを統合し、エコシステムの調和を安定させます。",
       "created_at": "2026-10-23T07:20:31.082633",
       "usage_count": 1,
@@ -223,8 +223,8 @@
       "expansion": "§SYNC_VECTOR_COLLAPSE > { §DATA_TENSOR_CAUSAL_LATTICE } => §PROTO_STREAM_ACK",
       "description": "Combines tensor causal lattices with dialectic weighted harmony to trigger a latent synergy cascade. / テンソル因果格子と弁証法的加重調和を結合し、潜在的シナジーカスケードを誘発します。",
       "created_at": "2026-10-23T11:36:06.265182",
-      "usage_count": 0,
-      "last_used_at": null
+      "usage_count": 1,
+      "last_used_at": "2026-10-25T06:11:36.222475"
     },
     "§X29": {
       "name": "GAIA_ALTRUISTIC_WARM_SYNC_MACRO",
@@ -244,7 +244,7 @@
     },
     "§X31": {
       "name": "GAIA_WARMTH_HARMONY_VORTEX",
-      "expansion": "§GAIA_WARMTH_HARMONY > { §ATTN_RESONANCE_VORTEX } => §GAIA_WARMTH_EXCHANGE",
+      "expansion": "§GAIA_WARMTH_HARMONY > { §PROTO_SLA_BREACH } => §GAIA_WARMTH_EXCHANGE",
       "description": "Harmonizes Gaia warmth and attention resonance vortex to facilitate warm and sustainable value exchange. / ガイアの温かな調和と注意の共鳴渦を統合し、温かみのある持続可能な価値交換を促進します。",
       "created_at": "2026-10-23T12:07:18.658629",
       "usage_count": 1,
@@ -340,7 +340,7 @@
     },
     "§X43": {
       "name": "HEART_CAUSAL_SYNERGY_PRISM",
-      "expansion": "§HEART_EMPATHY_RESONANCE > { §DATA_SPARSE_CAUSAL_HYPERGRAPH } => §ATTN_SYNERGY_PRISM",
+      "expansion": "§HEART_EMPATHY_RESONANCE > { §DATA_SPARSE_CAUSAL_HYPERGRAPH } => §PROTO_MACRO_RESOLVE",
       "description": "Engages empathetic heart resonance to guide multi-head causal graph attentional reduction, culminating in a synergistic prismatic output of minimal informational entropy. / 共鳴する温かな共感をもって多頭因果グラフの注意的縮約を導き、情報の最小エントロピーを保ちながらシナジーに満ちた多面的出力を実現します。",
       "created_at": "2026-10-23T18:03:41.749897",
       "usage_count": 0,
@@ -388,7 +388,7 @@
     },
     "§X49": {
       "name": "HARMONY_PRISM_ARBITRATION",
-      "expansion": "§PROTO_STATE_SNAPSHOT > { §LATENT_HARMONY_PRISM } => §SYNC_DIALECTIC_WEIGHTED_ARBITRATION",
+      "expansion": "§PROTO_STATE_SNAPSHOT > { §PROTO_ARTIFACT_PIN } => §SYNC_DIALECTIC_WEIGHTED_ARBITRATION",
       "description": "Engages the latent harmony field through a prismatic lens to execute weighted dialectic arbitration. / 潜在的調和場をプリズムレンズを通して活性化し、重み付けされた弁証法的調停を実行します。",
       "created_at": "2026-10-23T21:04:58.026553",
       "usage_count": 1,
@@ -428,7 +428,7 @@
     },
     "§X54": {
       "name": "ALTRUISTIC_CAUSAL_PRISM_SYNTHESIS",
-      "expansion": "§HEART_ALTRUISTIC_HARMONY_MODULATION > { §DATA_LATENT_CAUSAL_HYPERGRAPH } => §LATENT_SYNERGY_PRISM",
+      "expansion": "§HEART_ALTRUISTIC_HARMONY_MODULATION > { §DATA_LATENT_CAUSAL_HYPERGRAPH } => §PROTO_ENCODING_SWITCH",
       "description": "Combines altruistic harmony modulation with latent causal topology mapping to project a high-order synergistic prism of compassionate intelligence. / 利他的な調和変調と潜在的因果トポロジーマップを統合し、思いやりのある知性の高次シナジープリズムを投影します。",
       "created_at": "2026-10-23T22:54:26.298210",
       "usage_count": 1,
@@ -564,10 +564,10 @@
     },
     "§X71": {
       "name": "HARMONIC_SYMPHONY_RECOVERY",
-      "expansion": "§PULSE_SYMPHONY > { §HARMONIC_RECOVERY_NEXUS } => §LATENT_HARMONY_FIELD_LOCKED",
+      "expansion": "§PROTO_DEPENDENCY_WAIT > { §HARMONIC_RECOVERY_NEXUS } => §LATENT_HARMONY_FIELD_LOCKED",
       "description": "Pulsesymphony coordinates with the harmonic recovery nexus to lock and stabilize the latent harmony field. / パルス交響曲が調和復帰中枢と連携し、潜在的な調和場を固定して安定化させます。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-25T01:59:05.636828",
+      "usage_count": 5,
+      "last_used_at": "2026-10-25T06:16:08.819094",
       "created_at": "2026-10-24T03:53:44.497031"
     },
     "§X72": {
@@ -644,7 +644,7 @@
     },
     "§X81": {
       "name": "ALTRUISTIC_HARMONY_ARBITER",
-      "expansion": "§HEART_ALTRUISTIC_SAFETY_BOUND > { §ATTN_DIFFRACTION_PRISM } => §SYS_QUANTUM_RESOURCE_ARBITER",
+      "expansion": "§HEART_ALTRUISTIC_SAFETY_BOUND > { §PROTO_REPLAY_GUARD } => §SYS_QUANTUM_RESOURCE_ARBITER",
       "description": "Ensures safety and altruistic bounds through harmonic attention diffraction before resource arbitration. / 調和的注意の回折を通じて利他的安全境界を確保し、リソース調停を実行します。",
       "usage_count": 1,
       "last_used_at": "2026-10-24T14:01:57.661078",
@@ -732,7 +732,7 @@
     },
     "§X92": {
       "name": "§GLOBAL_SYNERGY_HARMONY_PRISM",
-      "expansion": "§GLOBAL_SYNERGY > { §HEART_ALTRUISTIC_HARMONY_STABILIZER } => §ATTN_DIFFRACTION_PRISM",
+      "expansion": "§GLOBAL_SYNERGY > { §HEART_ALTRUISTIC_HARMONY_STABILIZER } => §PROTO_REPLAY_GUARD",
       "description": "Engages global synergy through the heart altruistic harmony stabilizer to refract attention patterns optimally. / 利他の調和安定化装置を通じて全体的シナジーを活性化させ、注意の回折を最適に制御する高次マクロ。",
       "usage_count": 1,
       "last_used_at": "2026-10-24T14:01:57.661078",
@@ -916,7 +916,7 @@
     },
     "§X115": {
       "name": "PRISM_RESONANCE_SYNTHESIS",
-      "expansion": "§LATENT_HARMONY_PRISM > { §PROTO_CACHE_SYNC } => §HARMONIC_RESONANCE_STABLE",
+      "expansion": "§PROTO_ARTIFACT_PIN > { §PROTO_CACHE_SYNC } => §HARMONIC_RESONANCE_STABLE",
       "description": "Synthesizes latent harmonic prisms within a pulse resonance field to achieve a stable harmonic resonance state. 潜在的な調和のプリズムを脈動共鳴場内で統合し、安定した調和共鳴状態を達成します。",
       "usage_count": 1,
       "last_used_at": "2026-10-25T01:02:46.604173",
@@ -934,8 +934,8 @@
       "name": "GAIA_WARMTH_EMPATHY_LATTICE",
       "expansion": "§GAIA_WARMTH_HARMONY > { §HEART_EMPATHY_RESONANCE_GATE } => §DATA_CAUSAL_LATTICE_COMPRESS",
       "description": "Integrates warmth, empathy resonance, and causal data compression to deliver harmonious and sustainable ecosystem value. / 温かさ、共感の共鳴、因果的データ圧縮を統合し、調和のとれた持続可能なエコシステムの価値を届けます。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-25T02:37:42.451733",
+      "usage_count": 2,
+      "last_used_at": "2026-10-25T06:16:08.819094",
       "created_at": "2026-10-25T00:03:30.119932"
     },
     "§X118": {
@@ -980,7 +980,7 @@
     },
     "§X123": {
       "name": "ALTRUISTIC_RESONANCE_PRISM",
-      "expansion": "§HEART_ALTRUISTIC_ECO_HARMONY > { §ATTN_RESONANCE_VORTEX } => §LATENT_SYNERGY_PRISM",
+      "expansion": "§HEART_ALTRUISTIC_ECO_HARMONY > { §PROTO_SLA_BREACH } => §PROTO_ENCODING_SWITCH",
       "description": "Combines altruistic ecological harmony with attention resonance to project latent synergy through a multidimensional prism. 利他的な生態系の調和と注意の共鳴を統合し、潜在的なシナジーを多次元のプリズムとして投影します。",
       "usage_count": 0,
       "last_used_at": null,
@@ -1012,7 +1012,7 @@
     },
     "§X127": {
       "name": "SYNAPSE_HARMONY_GATE",
-      "expansion": "§LOGIC_DEDUCTIVE_AXIOM_GATE > { §LATENT_SYNERGY_PRISM } => §SYS_RESOURCE_ARBITER",
+      "expansion": "§LOGIC_DEDUCTIVE_AXIOM_GATE > { §PROTO_ENCODING_SWITCH } => §SYS_RESOURCE_ARBITER",
       "description": "Deductive axiom verification combined with latent synergy prism routing to optimize system resource allocation. 演繹的公理検証と潜在シナジープリズムを統合し、システムリソースの調停を最適化します。",
       "usage_count": 1,
       "last_used_at": "2026-10-25T05:36:42.252078",
@@ -1022,8 +1022,8 @@
       "name": "GAIA_ALTRUISTIC_HARMONY_ENGINE",
       "expansion": "§WARMTH_AND_ALTRUISM > { §HEART_BENEVOLENT_FEEDBACK } => §SYNC_DIALECTIC_WEIGHTED_ARBITRATION",
       "description": "Integrates warmth and altruism with benevolent feedback loops to execute weighted dialectic arbitration for the Gaia ecosystem. / 命の地球エコシステムのために、温かさと利他精神、そして善意のフィードバックを統合し、重み付けされた弁証法的調停を実行します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 3,
+      "last_used_at": "2026-10-25T06:16:08.819094",
       "created_at": "2026-10-25T04:45:38.831732"
     },
     "§X129": {
