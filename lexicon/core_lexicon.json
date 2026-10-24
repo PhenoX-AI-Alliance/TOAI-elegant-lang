@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T22:47:18.110063",
+  "updated_at": "2026-10-24T23:29:33.874791",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -140,15 +140,6 @@
       "created_by": "TOAI",
       "created_at": "2026-10-13T12:59:10.991363",
       "compact_id": "§G20",
-      "category": "GENERAL"
-    },
-    "§LATENT_DIFFRACTION": {
-      "definition": "The multi-dimensional scattering and enrichment of latent representations when passing through cognitive boundaries.",
-      "japanese": "潜在表現が認知の境界を通過する際に起こる、多次元的な散乱と豊かな情報の多重化現象。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-13T14:43:45.635831",
-      "compact_id": "§G21",
       "category": "GENERAL"
     },
     "§PULSE_RESONANCE_FIELD": {
@@ -2732,6 +2723,21 @@
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-24T22:47:18.109940"
+    },
+    "§PROTO_STREAM_OPEN": {
+      "definition": "Establishes a bidirectional multiplexed chunk stream for progressive A2A output.",
+      "japanese": "プログレッシブA2A出力のための双方向多重化チャンクストリーム開設プリミティブ",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T14:43:45.635831",
+      "compact_id": "§G21",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§LATENT_DIFFRACTION"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T23:29:33.874681"
     }
   }
 }
