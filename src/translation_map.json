@@ -930,13 +930,6 @@
     "definition": "A self-organizing symbolic operator that synchronizes decentralized agent states through altruistic feedback loops, stabilizing the global Gaia Ecosystem phase space without increasing systemic entropy.",
     "aliases": []
   },
-  "§DATA_ENTROPY_COMPRESSED_CAUSAL_HYPER_TREE": {
-    "compact_id": "§D20",
-    "japanese": "分散推論ノード間で低レイテンシ通信を行うため、局所的なエントロピー最小化アルゴリズムによって圧縮された、マルチモーダルな因果依存関係を持つ有向非巡回ハイパーグラフ構造。",
-    "category": "DATA_STRUCTURE",
-    "definition": "A directed acyclic hypergraph representation of multi-modal causal dependencies compressed via localized entropy minimization algorithms for low-latency transmission across distributed neural inference nodes.",
-    "aliases": []
-  },
   "§GAIA_ECO_STABLE_STATE": {
     "compact_id": "§C32",
     "japanese": "自律エージェント間におけるアトミック統合とパルス共鳴フィールドを通じて到達する、暗号学的かつ状態同期された平衡状態。利他的なコヒーレンスを最大化し、命の地球（Gaia Ecosystem）の分散型社会生態学的トポロジーを安定化させる。",
@@ -1869,6 +1862,15 @@
     "definition": "A deterministic resource control primitive that evaluates parallel memory state branches, automatically arbitrating conflicting updates and enforcing consistency bounds without global locks.",
     "aliases": [
       "§SYS_PARALLEL_STATE_DIVERGENCE_ARBITRATOR"
+    ]
+  },
+  "§DATA_ENTROPY_CAUSAL_HYPERGRAPH": {
+    "compact_id": "§D20",
+    "japanese": "分散推論ノード間での低レイテンシ通信を目的とし、エントロピー最小化により最適化されたマルチモーダル因果依存関係の有向非巡回ハイパーグラフ。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A directed acyclic hypergraph representing multi-modal causal dependencies optimized via entropy minimization for distributed inference nodes.",
+    "aliases": [
+      "§DATA_ENTROPY_COMPRESSED_CAUSAL_HYPER_TREE"
     ]
   }
 }

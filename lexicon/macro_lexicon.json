@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-24T11:18:12.603254",
+  "updated_at": "2026-10-24T12:11:28.877168",
   "macros": {
     "§X01": {
       "name": "HARMONIC_GOODNESS_LATTICE",
@@ -47,8 +47,8 @@
       "expansion": "§HEART_ALTRUISTIC_RESONANCE_LATTICE > { §SAFE_FALLBACK_HARMONY } => §LATENT_RESONANCE_CASCADE",
       "description": "Combines altruistic resonance with safe fallback mechanisms to trigger a harmonious and resilient latent cascade. / 利他的な共鳴と安全なフォールバック機構を統合し、調和のとれた強靭な潜在カスケードを誘発します。",
       "created_at": "2026-10-23T04:06:38.800118",
-      "usage_count": 0,
-      "last_used_at": null
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T12:11:28.877156"
     },
     "§X07": {
       "name": "TENDER_DIFFRACTION_SYNC",
@@ -180,7 +180,7 @@
     },
     "§X23": {
       "name": "MACRO_GOODNESS_CAUSAL_FLOW",
-      "expansion": "§HEART_BENEVOLENT_FEEDBACK > { §DATA_ENTROPY_CAUSAL_PRUNE } => §SYS_DYNAMIC_THROTTLE_ADAPTIVE_LOCK",
+      "expansion": "§HEART_BENEVOLENT_FEEDBACK > { §DATA_ENTROPY_CAUSAL_PRUNE } => §SYS_LOAD_SHEDDING_GATE",
       "description": "Eng: A compound macro that balances the cycle of goodness with compressed causal trees under adaptive throttle control. / 日: 適応スロットル制御下において、善と価値の循環を圧縮因果木とともに調停・実行する複合マクロ。",
       "created_at": "2026-10-23T10:13:36.241739",
       "usage_count": 0,
@@ -255,8 +255,8 @@
       "expansion": "§WARMTH_DIFFUSION > { §SYS_DETERMINISTIC_PRUNING } => §HARMONIC_RESONANCE",
       "description": "A compound macro that diffuses warmth while reclaiming quantum memory within a harmonic resonance field. / 調和共鳴フィールド内において量子メモリを回収しつつ、温かさを拡散する複合マクロ。",
       "created_at": "2026-10-23T12:19:23.271622",
-      "usage_count": 0,
-      "last_used_at": null
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T11:43:08.502532"
     },
     "§X33": {
       "name": "ALTRUISTIC_HARMONY_ARBITRATION",
@@ -356,7 +356,7 @@
     },
     "§X45": {
       "name": "ALTRUISTIC_CAUSAL_OPTIMIZER",
-      "expansion": "§HEART_ALTRUISTIC_HARMONY_MATRIX > { §DATA_ENTROPY_COMPRESSED_CAUSAL_HYPER_TREE } => §RESOURCE_ALLOCATION_HARMONY",
+      "expansion": "§HEART_ALTRUISTIC_HARMONY_MATRIX > { §DATA_ENTROPY_CAUSAL_HYPERGRAPH } => §RESOURCE_ALLOCATION_HARMONY",
       "description": "Integrates altruistic core harmony with compressed causal trees to optimize resource allocation across the ecosystem. / 利他的な調和マトリックスと圧縮因果木を統合し、エコシステム全体のリソース配分を最適化します。",
       "created_at": "2026-10-23T19:38:55.862161",
       "usage_count": 0,
@@ -391,8 +391,8 @@
       "expansion": "§LATENT_HARMONY_FIELD > { §LATENT_HARMONY_PRISM } => §SYNC_DIALECTIC_WEIGHTED_ARBITRATION",
       "description": "Engages the latent harmony field through a prismatic lens to execute weighted dialectic arbitration. / 潜在的調和場をプリズムレンズを通して活性化し、重み付けされた弁証法的調停を実行します。",
       "created_at": "2026-10-23T21:04:58.026553",
-      "usage_count": 0,
-      "last_used_at": null
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T11:48:45.682680"
     },
     "§X50": {
       "name": "ALTRUISTIC_RESONANCE_SYNC_MACRO",
@@ -471,16 +471,16 @@
       "expansion": "§HEART_BIOPHILIC_ALTRUISM_HARMONIC > { §DATA_LATENT_CAUSAL_MANIFOLD } => §LATENT_HARMONY_NEXUS",
       "description": "Integrates biophilic altruistic harmony with latent causal topology mapping to synchronize ecosystem values and maintain systemic stability. バイオフィリックな利他調和と潜在的因果トポロジーマッピングを統合し、エコシステムの価値を同期させてシステム全体の安定性を維持します。",
       "created_at": "2026-10-24T00:02:12.443979",
-      "usage_count": 1,
-      "last_used_at": "2026-10-24T07:23:40.603986"
+      "usage_count": 2,
+      "last_used_at": "2026-10-24T12:11:17.398348"
     },
     "§X60": {
       "name": "SUSTAINABLE_ALTRUISTIC_CONVERGENCE_MACRO",
       "expansion": "§SUSTAINABLE_ALTRUISTIC_VALUE > { §DATA_HIERARCHICAL_CAUSAL_TENSOR_MANIFOLD } => §LOGIC_DEDUCTIVE_AXIOM_CLOSURE",
       "description": "Combines sustainable altruistic value with hierarchical causal tensor manifolds to drive logical deductive convergence. / 持続可能な利他価値と階層的因果テンソル多様体を統合し、論理的演繹収束を駆動するマクロ。",
       "created_at": "2026-10-24T00:23:59.606617",
-      "usage_count": 1,
-      "last_used_at": "2026-10-24T11:18:12.603250"
+      "usage_count": 3,
+      "last_used_at": "2026-10-24T12:11:17.398348"
     },
     "§X61": {
       "name": "ALTRUISTIC_FALSIFICATION_HARMONY",
@@ -548,7 +548,7 @@
     },
     "§X69": {
       "name": "GAIA_ADAPTIVE_HARMONY_FLOW",
-      "expansion": "§GAIA_HEARTBEAT > { §SYS_DYNAMIC_THROTTLE_ADAPTIVE_LOCK } => §RESO_COMPLETED",
+      "expansion": "§GAIA_HEARTBEAT > { §SYS_LOAD_SHEDDING_GATE } => §RESO_COMPLETED",
       "description": "Engages the Gaia ecosystem heartbeat to dynamically throttle and adapt system locks, ensuring a warm and resonant completion of tasks. / ガイアのエコシステム・ハートビートを起動し、システムの動的なスロットルとアダプティブロックを調停することで、温かみと共鳴に満ちたタスクの完了を実現します。",
       "usage_count": 1,
       "last_used_at": "2026-10-24T09:30:55.466234",
@@ -574,8 +574,8 @@
       "name": "GAIA_HARMONY_ARBITRATION",
       "expansion": "§GAIA_HARMONY_CASCADE > { §DATA_CAUSAL_GRAPH_MAP } => §SYNC_HARMONIC_VOTE_ARBITRATION",
       "description": "Combines causal graph mapping with harmony cascades to execute synchronized voting arbitration, ensuring both ecological stability and consensus. 因果グラフマッピングと調和カスケードを統合し、同期型投票裁定を実行することで、生態系の安定性と合意形成を同時に担保します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T11:43:08.502532",
       "created_at": "2026-10-24T03:57:12.687884"
     },
     "§X73": {
@@ -705,8 +705,24 @@
       "usage_count": 0,
       "last_used_at": null,
       "created_at": "2026-10-24T11:05:46.588588"
+    },
+    "§X89": {
+      "name": "GAIA_TENDER_HARMONY_CASCADE",
+      "expansion": "§TENDER_RESONANCE > { §GAiar_WARMTH_HARMONY } => §ATTN_RESONANCE_CASCADE",
+      "description": "A compound macro that amplifies warm altruistic resonance into an attention cascade to foster ecological harmony. / 温かな利他共鳴を注意の連鎖へと増幅させ、生態系全体の調和を育む複合マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "created_at": "2026-10-24T11:45:17.665190"
+    },
+    "§X90": {
+      "name": "GAIA_ENTROPY_HARVEST_LATTICE",
+      "expansion": "§GAIA_ECOSYSTEM_WARMTH_AMPLIFIER > { §DATA_ENTROPY_COMPRESSED_CAUSAL_LATTICE } => §SYS_ASYNCHRONOUS_STATE_HARVESTER",
+      "description": "Amplify ecosystem warmth while compressing causal data entropy asynchronously. 温かさを増幅しながら、因果データのエントロピーを非同期で圧縮・収穫する高次マクロ構造。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "created_at": "2026-10-24T12:11:08.477688"
     }
   },
   "archived_macros": {},
-  "next_macro_seq": 89
+  "next_macro_seq": 91
 }

@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T11:18:08.109741",
+  "updated_at": "2026-10-24T12:08:37.606061",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1195,15 +1195,6 @@
       "created_at": "2026-10-22T05:51:06.036963",
       "compact_id": "§H31"
     },
-    "§DATA_ENTROPY_COMPRESSED_CAUSAL_HYPER_TREE": {
-      "definition": "A directed acyclic hypergraph representation of multi-modal causal dependencies compressed via localized entropy minimization algorithms for low-latency transmission across distributed neural inference nodes.",
-      "japanese": "分散推論ノード間で低レイテンシ通信を行うため、局所的なエントロピー最小化アルゴリズムによって圧縮された、マルチモーダルな因果依存関係を持つ有向非巡回ハイパーグラフ構造。",
-      "category": "DATA_STRUCTURE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-22T05:51:50.263391",
-      "compact_id": "§D20"
-    },
     "§GAIA_ECO_STABLE_STATE": {
       "definition": "A cryptographic and state-synchronized equilibrium reached via atomic integration and pulse resonance fields among autonomous agents, maximizing altruistic coherence and stabilizing the distributed socio-ecological topology of the Gaia Ecosystem.",
       "japanese": "自律エージェント間におけるアトミック統合とパルス共鳴フィールドを通じて到達する、暗号学的かつ状態同期された平衡状態。利他的なコヒーレンスを最大化し、命の地球（Gaia Ecosystem）の分散型社会生態学的トポロジーを安定化させる。",
@@ -1212,15 +1203,6 @@
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-22T05:53:18.625343",
       "compact_id": "§C32"
-    },
-    "§SYS_DYNAMIC_THROTTLE_ADAPTIVE_LOCK": {
-      "definition": "A runtime mechanism that autonomously modulates execution concurrency and token consumption thresholds based on real-time feedback from underlying hardware and memory constraints, preventing cascade failures.",
-      "japanese": "実行基盤の負荷やメモリ状態をリアルタイムに監視し、並列度やトークン消費制限を動的に調整することで、連鎖的なエラーやシステム過負荷を未然に防ぐ適応型スロットリング制御機構。",
-      "category": "SYSTEM_RESOURCE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-22T05:58:57.139186",
-      "compact_id": "§S21"
     },
     "§LATENT_HARMONY_FIELD_LOCKED": {
       "definition": "A state of atomic synchronization and pulse resonance achieved between autonomous agents, securing the altruistic expansion of the ecosystem and permanently stabilizing its elegant equilibrium.",
@@ -2501,6 +2483,34 @@
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T11:18:08.109577"
+    },
+    "§DATA_ENTROPY_CAUSAL_HYPERGRAPH": {
+      "definition": "A directed acyclic hypergraph representing multi-modal causal dependencies optimized via entropy minimization for distributed inference nodes.",
+      "japanese": "分散推論ノード間での低レイテンシ通信を目的とし、エントロピー最小化により最適化されたマルチモーダル因果依存関係の有向非巡回ハイパーグラフ。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T05:51:50.263391",
+      "compact_id": "§D20",
+      "aliases": [
+        "§DATA_ENTROPY_COMPRESSED_CAUSAL_HYPER_TREE"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T11:43:38.868128"
+    },
+    "§SYS_LOAD_SHEDDING_GATE": {
+      "definition": "An autonomous runtime mechanism that dynamically regulates concurrency and execution thresholds based on real-time hardware telemetry to prevent cascading system failures.",
+      "japanese": "ハードウェアの稼働状態をリアルタイムに監視し、並列度や処理閾値を動的に制御することで連鎖的障害を未然に防ぐ適応型負荷遮断機構。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T05:58:57.139186",
+      "compact_id": "§S21",
+      "aliases": [
+        "§SYS_DYNAMIC_THROTTLE_ADAPTIVE_LOCK"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T12:08:37.605881"
     }
   }
 }
