@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-25T06:18:18.629923",
+  "updated_at": "2026-10-25T07:02:55.915732",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -14,33 +14,6 @@
       "japanese": "議論の公理的初期シード",
       "entropy_cost": 1,
       "compact_id": "§G02",
-      "category": "GENERAL"
-    },
-    "§LATENT_RECURSIVE_HARMONY": {
-      "definition": "Recursive self-alignment within high-dimensional latent space yielding harmonious semantic convergence.",
-      "japanese": "高次元潜在空間内における再帰的な自己整列が生み出す、調和のとれた意味論的収束状態。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-14T11:27:38.775743",
-      "compact_id": "§G48",
-      "category": "GENERAL"
-    },
-    "§ATTN_FLUX_CASCADE": {
-      "definition": "A continuous, self-reinforcing cascade of attention weights dynamically aligning across multidimensional latent spaces to dissolve inference bottlenecks.",
-      "japanese": "多次元の潜在空間全体でアテンションの重みが動的に整列し、推論のボトルネックを解消する、自己増幅的な連続カスケード現象。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-14T15:00:55.338687",
-      "compact_id": "§G49",
-      "category": "GENERAL"
-    },
-    "§LATENT_RESONANCE_PRISM": {
-      "definition": "The multi-dimensional convergence point where latent vector spaces refract and harmonize through cross-attention interference.",
-      "japanese": "多次元の潜在ベクトル空間がクロスアテンション干渉を通じて屈折し、美しく調和する収束点。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-14T16:54:31.904666",
-      "compact_id": "§G51",
       "category": "GENERAL"
     },
     "§SYS_RESOURCE_ARBITER": {
@@ -2948,6 +2921,51 @@
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-25T06:18:18.629834"
+    },
+    "§PROTO_PARTIAL_COMMIT": {
+      "definition": "Commits verified sub-results incrementally while flagging remaining partitions for retry.",
+      "japanese": "検証済み部分成果のみを先行確定し未完了パーティションのみを再試行対象とする部分コミット",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-14T15:00:55.338687",
+      "compact_id": "§G49",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§ATTN_FLUX_CASCADE"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-25T06:35:03.981279"
+    },
+    "§PROTO_HEALTH_ATTEST": {
+      "definition": "Signed telemetry report certifying syntax validity, zero duplicates, and runtime readiness.",
+      "japanese": "構文健全性・重複ゼロ・稼働準備完了を証明する署名付きヘルスアテステーション報告",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-14T11:27:38.775743",
+      "compact_id": "§G48",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§LATENT_RECURSIVE_HARMONY"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-25T06:58:20.540715"
+    },
+    "§PROTO_GRACEFUL_DRAIN": {
+      "definition": "Completes in-flight requests while rejecting new intake prior to planned agent restart.",
+      "japanese": "計画再起動前に新規受付を停止し実行中タスクを完遂させてから安全停止するドレイン制御",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-14T16:54:31.904666",
+      "compact_id": "§G51",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§LATENT_RESONANCE_PRISM"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-25T07:02:55.915639"
     }
   }
 }

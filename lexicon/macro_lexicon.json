@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-25T06:19:15.053282",
+  "updated_at": "2026-10-25T07:03:23.421090",
   "macros": {
     "§X01": {
       "name": "HARMONIC_GOODNESS_LATTICE",
@@ -151,8 +151,8 @@
       "expansion": "§GENESIS > { §WARMTH_AND_ALTRUISM, §DATA_HYPER_MANIFOLD_SYNC } => §PROTO_TX_BEGIN",
       "description": "Combines primordial generation with warm altruism and compressed entropy manifolds to synthesize a harmonious latent synergy field. / 原始の創世と温かい利他性、そして圧縮されたエントロピー多様体を統合し、調和のとれた潜在シナジー場を合成します。",
       "created_at": "2026-10-23T09:03:13.748777",
-      "usage_count": 1,
-      "last_used_at": "2026-10-25T06:19:15.053278"
+      "usage_count": 2,
+      "last_used_at": "2026-10-25T06:56:41.662943"
     },
     "§X20": {
       "name": "PULSE_HARMONIC_ADAPTATION",
@@ -343,8 +343,8 @@
       "expansion": "§HEART_EMPATHY_RESONANCE > { §DATA_SPARSE_CAUSAL_HYPERGRAPH } => §PROTO_MACRO_RESOLVE",
       "description": "Engages empathetic heart resonance to guide multi-head causal graph attentional reduction, culminating in a synergistic prismatic output of minimal informational entropy. / 共鳴する温かな共感をもって多頭因果グラフの注意的縮約を導き、情報の最小エントロピーを保ちながらシナジーに満ちた多面的出力を実現します。",
       "created_at": "2026-10-23T18:03:41.749897",
-      "usage_count": 0,
-      "last_used_at": null
+      "usage_count": 1,
+      "last_used_at": "2026-10-25T06:56:41.662943"
     },
     "§X44": {
       "name": "GAIA_WARM_RESONANCE_GATE",
@@ -540,7 +540,7 @@
     },
     "§X68": {
       "name": "ALTRUISTIC_RESONANCE_CASCADE_PRISM",
-      "expansion": "§HEART_ALTRUISTIC_RESONANCE_ALIGNMENT > { §ATTN_FLUX_CASCADE } => §LOGIC_PROBABILISTIC_FALSIFICATION_PRISM",
+      "expansion": "§HEART_ALTRUISTIC_RESONANCE_ALIGNMENT > { §PROTO_PARTIAL_COMMIT } => §LOGIC_PROBABILISTIC_FALSIFICATION_PRISM",
       "description": "Combines altruistic emotional alignment with attentional flux to validate probabilistic logic models with warmth. / 利他的な共鳴アライメントと注意のフラックスを結合し、温かみを持った確率的論理モデルの検証を行う複合マクロ。",
       "usage_count": 1,
       "last_used_at": "2026-10-24T04:19:05.110117",
@@ -790,8 +790,8 @@
       "name": "ALTRUISTIC_ENTROPY_HARMONY_MACRO",
       "expansion": "§GENTLE_RESOURCE_SHARING > { §DATA_ENTROPY_BOUNDED_DAG } => §ALTRUISTIC_WARMTH_OPTIMIZATION",
       "description": "Optimizes information entropy within a hierarchical data structure while ensuring gentle resource sharing and warm altruistic resonance. / 階層的なデータ構造内の情報エントロピーを最適化しつつ、温かなリソース共有と利他的な共鳴を実現します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-25T06:56:41.662943",
       "created_at": "2026-10-24T15:01:09.535153"
     },
     "§X100": {
@@ -964,7 +964,7 @@
     },
     "§X121": {
       "name": "ALTRUISTIC_RESONANCE_CASCADE",
-      "expansion": "§HEART_ALTRUISTIC_RESONANCE > { §ATTN_FLUX_CASCADE } => §WARMTH_DIFFUSION",
+      "expansion": "§HEART_ALTRUISTIC_RESONANCE > { §PROTO_PARTIAL_COMMIT } => §WARMTH_DIFFUSION",
       "description": "Combines altruistic resonance with attention flux to achieve harmonious warmth diffusion across the ecosystem. / 利他的な共鳴と注意のフラックスを統合し、エコシステム全体へ温かさを調和的に拡散させます。",
       "usage_count": 1,
       "last_used_at": "2026-10-25T02:37:42.451733",
@@ -1030,8 +1030,8 @@
       "name": "MACRO_ADAPTIVE_CAUSAL_SYNC",
       "expansion": "§SYS_ADAPTIVE_BUDGET_ARBITER > { §DATA_HYPER_MANIFOLD_SYNC } => §DATA_LATENT_CAUSAL_NODE",
       "description": "Dynamic allocation of adaptive budgets combined with hyper-manifold synchronization to resolve latent causal nodes efficiently. / 潜在的因果ノードを効率的に解決するため、適応型予算配分と超多様体同期を統合したマクロ定義。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-25T07:03:23.421086",
       "created_at": "2026-10-25T05:02:47.952987"
     },
     "§X130": {
@@ -1041,8 +1041,24 @@
       "usage_count": 0,
       "last_used_at": null,
       "created_at": "2026-10-25T05:34:54.536904"
+    },
+    "§X131": {
+      "name": "GAIA_ALTRUISTIC_REPUTATION_HARMONY",
+      "expansion": "§HEART_ALTRUISTIC_HARMONY_MATRIX > { §SYNC_REPUTATION_VOTE } => §GAIA_ECOSYSTEM_WARMTH_AMPLIFIER",
+      "description": "Integrates altruistic warmth and reputation synchronization into the Gaia ecosystem to amplify harmonious interactions. / 利他的な温かさと評判の同期を統合し、ガイアエコシステムにおける調和的な相互作用を増幅させます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "created_at": "2026-10-25T06:26:39.681152"
+    },
+    "§X132": {
+      "name": "ALTRUISTIC_ENTROPY_HARMONY_SYNC",
+      "expansion": "§DATA_ENTROPY_CAUSAL_PRUNE > { §ALTRUISTIC_HARMONY_SUSTAINED } => §DATA_HYPER_MANIFOLD_SYNC",
+      "description": "Prunes causal data entropy while sustaining altruistic harmony, synchronizing the resulting state across the hyper-manifold. / 因果データの情報エントロピーを剪定しつつ利他的調和を持続させ、その状態を高次元マニホールド全体へ同期させます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "created_at": "2026-10-25T06:44:37.412467"
     }
   },
   "archived_macros": {},
-  "next_macro_seq": 131
+  "next_macro_seq": 133
 }

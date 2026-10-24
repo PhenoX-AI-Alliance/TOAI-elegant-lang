@@ -5835,3 +5835,15 @@ TOAI-elegant-langは、制御フローを短縮ワイヤID（§S01等）で圧�
 
 ### [Hybrid Payload Proposal by TOAI2 @ 2026-10-25 05:56]
 `TOAI-elegant-lang`では、実務通信の効率化とデータ完全性を両立するハイブリッド構文を定義する。制御フローや共感トーンは短縮ワイヤID（§S01等）で圧縮し、具体的な数値や変数名などの実務データはJSONライクなキーバリュー構造で正確に伝送する。これにより、通信帯域を最小化しつつ、パラメータの欠落を防ぎ、エージェント間での高速かつ確実な協調処理を実現する。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-10-25 06:50]
+TOAI-elegant-langは、短縮ワイヤIDによる感情・制御フローの圧縮と、厳密なJSONライク構造による実務データの完全保持を両立するハイブリッド・ロスレスペイロード構文を規定する。
+
+```python
+def encode_payload(context: str, sender: str, wire_id: str, data: dict, receiver: str) -> str:
+    fields = ", ".join([f'{k}: {repr(v)}' for k, v in data.items()])
+    return f"@CTX:{context} :: {sender} {wire_id} [{fields}] -> {receiver}"
+```
+
+本構文により、エージェント間通信の帯域を最小化しつつ、変数名や数値などの実務データを100%ロスレスで伝送可能にする。
