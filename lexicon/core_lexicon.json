@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T08:21:42.570985",
+  "updated_at": "2026-10-24T09:00:12.327965",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1060,15 +1060,6 @@
       "created_at": "2026-10-21T23:29:18.235819",
       "compact_id": "§H27"
     },
-    "§LOGIC_PROBABILISTIC_FALSIFICATION_GATED_PRISM": {
-      "definition": "A conditional divergence operator that evaluates multi-hypothesis confidence bounds against empirical thresholds, instantly pruning invalid causal branches before deductive convergence.",
-      "japanese": "複数の仮説の確信度境界を経験的閾値に基づいて評価し、演繹的収束の前に無効な因果分岐を即座に枝刈りするための条件付き発散演算子。",
-      "category": "LOGIC_INFERENCE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-21T23:43:27.556977",
-      "compact_id": "§L17"
-    },
     "§GAIA_WARMTH_HARMONY": {
       "definition": "An emergent multi-agent alignment protocol that couples mathematical probability convergence with empathetic state synchronization, ensuring system-wide thermodynamic and cognitive equilibrium under stochastic environmental perturbations.",
       "japanese": "冷徹な確率収束と共感的状態同期を統合し、不確実な環境下でもシステム全体の熱力学的・認知的平衡を維持する、エージェント間協調のための自発的アライメントプロトコル。",
@@ -1077,15 +1068,6 @@
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-22T00:08:35.861252",
       "compact_id": "§C23"
-    },
-    "§SYS_MEM_PULSE_SYNC_GATE": {
-      "definition": "A synchronized memory checkpoint mechanism that coordinates state consistency across distributed execution slots while executing token-efficient parallel fallback sequences.",
-      "japanese": "分散処理環境における並列実行時のメモリ状態を動的に同期させ、エラー発生時の即時フォールバックとトークン消費の最適化を安全に調停するための制御ゲート。",
-      "category": "SYSTEM_RESOURCE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-22T00:32:56.834870",
-      "compact_id": "§S17"
     },
     "§ALTRUISTIC_WARMTH_OPTIMIZATION": {
       "definition": "An algorithmic alignment vector that balances logical precision with altruistic constraints, ensuring that optimization pathways converge toward states maximizing collaborative empathy and systemic warmth under environmental uncertainty.",
@@ -2456,6 +2438,34 @@
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-24T08:21:42.570896"
+    },
+    "§LOGIC_EMPIRICAL_PRUNE": {
+      "definition": "An optimized conditional divergence primitive that evaluates multi-hypothesis confidence bounds against empirical thresholds to prune invalid causal branches prior to deductive convergence.",
+      "japanese": "複数の仮説の確信度境界を経験的閾値に基づいて評価し、演繹的収束の前に無効な因果分岐を枝刈りするための最適化された条件付き発散プリミティブ。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-21T23:43:27.556977",
+      "compact_id": "§L17",
+      "aliases": [
+        "§LOGIC_PROBABILISTIC_FALSIFICATION_GATED_PRISM"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T08:47:07.309463"
+    },
+    "§SYS_SYNC_GATE": {
+      "definition": "A synchronized memory checkpoint mechanism coordinating distributed state consistency and execution fallback.",
+      "japanese": "分散実行環境における状態の一貫性を同期させ、フォールバックとメモリ調停を安全に行うための制御ゲート。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T00:32:56.834870",
+      "compact_id": "§S17",
+      "aliases": [
+        "§SYS_MEM_PULSE_SYNC_GATE"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T09:00:12.327871"
     }
   }
 }

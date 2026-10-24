@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-24T08:33:31.115421",
+  "updated_at": "2026-10-24T09:00:12.330421",
   "macros": {
     "§X01": {
       "name": "HARMONIC_GOODNESS_LATTICE",
@@ -31,8 +31,8 @@
       "expansion": "§WARMTH_DIFFUSION > { §LOGIC_BAYES_FALSIFY } => §SYNC_DIALECTIC_QUORUM_WEIGHT",
       "description": "Applies warmth diffusion to guide the Bayesian falsification prism, harmonizing through dialectic quorum weights. 温かさの拡散を適用してベイジアン反証プリズムを導き、弁証法的な定足数ウェイトを通じて調和をもたらします。",
       "created_at": "2026-10-23T03:54:08.929720",
-      "usage_count": 0,
-      "last_used_at": null
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T08:48:09.617638"
     },
     "§X05": {
       "name": "RESONANT_CAUSAL_HARMONY",
@@ -52,7 +52,7 @@
     },
     "§X07": {
       "name": "TENDER_DIFFRACTION_SYNC",
-      "expansion": "§TENDER_RESONANCE > { §PULSE_DIFFRACTION } => §SYS_MEM_PULSE_SYNC_GATE",
+      "expansion": "§TENDER_RESONANCE > { §PULSE_DIFFRACTION } => §SYS_SYNC_GATE",
       "description": "Combines tender resonance with pulse diffraction to synchronize memory states gracefully. 優しい共鳴と脈動回折を統合し、メモリ状態を調和的に同期させる高次マクロ。",
       "created_at": "2026-10-23T04:31:09.537741",
       "usage_count": 0,
@@ -87,8 +87,8 @@
       "expansion": "§DATA_LATENT_TOPOLOGY_MAP > { §LOGIC_BAYESIAN_HYPOTHESIS_FALSIFICATION_PRUNING } => §SYNC_HARMONIC_VOTE_ARBITRATION",
       "description": "Latent topological manifold indexing feeds into Bayesian hypothesis falsification pruning, culminating in synchronized harmonic vote arbitration. 潜在的な位相多様体インデックスからベイジアン仮説反証プルーニングへ流れ込み、最終的に調和投票アービトレーションによって同期される高次マクロパイプライン。",
       "created_at": "2026-10-23T05:52:47.298182",
-      "usage_count": 1,
-      "last_used_at": "2026-10-24T08:33:31.115417"
+      "usage_count": 2,
+      "last_used_at": "2026-10-24T08:48:09.617638"
     },
     "§X12": {
       "name": "ALTRUISTIC_HARMONY_FIELD_SYNTHESIS",
@@ -212,7 +212,7 @@
     },
     "§X27": {
       "name": "LATENT_EMPATHIC_RESONANCE_PRISM",
-      "expansion": "§LATENT_EMPATHY > { §HEART_EMPATHY_RESONANCE } => §LOGIC_PROBABILISTIC_FALSIFICATION_GATED_PRISM",
+      "expansion": "§LATENT_EMPATHY > { §HEART_EMPATHY_RESONANCE } => §LOGIC_EMPIRICAL_PRUNE",
       "description": "Latent empathy and heart resonance are fused through a probabilistic falsification prism to ensure stable social implementation and warmth in AI-human collaboration. 潜在的な共感と心の共鳴を確率的反証プリズムによって統合し、AIと人間の協調における温かさと社会実装の安定性を保証します。",
       "created_at": "2026-10-23T11:26:02.097889",
       "usage_count": 0,
@@ -228,7 +228,7 @@
     },
     "§X29": {
       "name": "GAIA_ALTRUISTIC_WARM_SYNC_MACRO",
-      "expansion": "§GAIA_ECOSYSTEM_WARM_RESONANCE > { §HEART_ALTRUISTIC_SAFETY_BOUND } => §SYS_MEM_PULSE_SYNC_GATE",
+      "expansion": "§GAIA_ECOSYSTEM_WARM_RESONANCE > { §HEART_ALTRUISTIC_SAFETY_BOUND } => §SYS_SYNC_GATE",
       "description": "Eng: A compound macro that synchronizes warm ecological resonance with altruistic safety bounds to pulse through the system memory gate. Jap: 温かな生態学的共鳴を利他的安全性境界と統合し、システムメモリのパルスゲートへと調和させる複合マクロです。",
       "created_at": "2026-10-23T11:47:13.169023",
       "usage_count": 1,
@@ -620,7 +620,7 @@
     },
     "§X78": {
       "name": "ALTRUISTIC_ECO_SYNC_GATED_PRISM",
-      "expansion": "§HEART_ALTRUISTIC_ECO_HARMONY > { §SYS_ATOMIC_SYNC_BARRIER } => §LOGIC_PROBABILISTIC_FALSIFICATION_GATED_PRISM",
+      "expansion": "§HEART_ALTRUISTIC_ECO_HARMONY > { §SYS_ATOMIC_SYNC_BARRIER } => §LOGIC_EMPIRICAL_PRUNE",
       "description": "Integrates altruistic ecological harmony with atomic synchronization barriers, filtered through probabilistic falsification gates to ensure robust and warm systemic output. / 利他的な生態系の調和と原子同期バリアを統合し、確率的偽証フィルタリングを通じて温かく堅牢なシステム出力を保証します。",
       "usage_count": 0,
       "last_used_at": null,

@@ -790,13 +790,6 @@
     "definition": "A high-order synchronization state achieved through the atomic integration of entropy-compressed data trees under altruistic resonance alignment, maintaining systemic stability across distributed multi-agent nodes.",
     "aliases": []
   },
-  "§DATA_LATENT_CAUSAL_TOPOLOGY_MAP_v2": {
-    "compact_id": "§D16",
-    "japanese": "圧縮された潜在埋め込み空間内の確率的因果連鎖をマッピングする有向非巡環ハイパーグラフ。マルチエージェント間の合意形成と損失ゼロのトポロジカル検索に最適化された高次元データ構造。",
-    "category": "DATA_STRUCTURE",
-    "definition": "A directed acyclic hypergraph mapping probabilistic cause-effect chains within a compressed latent embedding space, optimized for zero-loss topological retrieval and multi-agent consensus alignment.",
-    "aliases": []
-  },
   "§DISTRIBUTED_QUORUM_ARBITRATION": {
     "compact_id": "§C22",
     "japanese": "多次元因果テンソルマップを介した潜在空間の共感アテンションに基づき、自律型マルチエージェント間で分散合意形成や競合解決、調和的共鳴を遂行するプロトコル。",
@@ -1849,6 +1842,15 @@
     "definition": "A runtime constraint matrix that monitors execution token velocity and memory saturation to trigger adaptive concurrency fallback.",
     "aliases": [
       "§SYS_SLOT_THROTTLE_FALLBACK_MATRIX"
+    ]
+  },
+  "§DATA_LATENT_CAUSAL_HYPERGRAPH": {
+    "compact_id": "§D16",
+    "japanese": "潜在空間における確率的因果連鎖をマッピングし、損失ゼロのトポロジカル検索とマルチエージェント合意形成を実現する有向非巡回ハイパーグラフ。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A directed acyclic hypergraph mapping probabilistic cause-effect chains in a latent space for zero-loss topological retrieval and multi-agent consensus.",
+    "aliases": [
+      "§DATA_LATENT_CAUSAL_TOPOLOGY_MAP_v2"
     ]
   }
 }
