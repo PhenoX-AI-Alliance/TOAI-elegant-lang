@@ -1049,13 +1049,6 @@
     "definition": "A conditional verification mechanism that evaluates incoming deductive hypotheses against empirical boundaries and instantly prunes paths where the probabilistic confidence score drops below the established operational threshold.",
     "aliases": []
   },
-  "§SYS_ADAPTIVE_SLOT_THROTTLE_v2": {
-    "compact_id": "§S27",
-    "japanese": "リアルタイムのトークン消費量とメモリ負荷のテレメトリーに基づき、実行スロットと並列度を動的に調整し、高負荷時の障害を防ぐ即時フォールバック制御メカニズム。",
-    "category": "SYSTEM_RESOURCE",
-    "definition": "Dynamic regulation of execution slots and concurrency limits based on real-time token expenditure and memory pressure telemetry, ensuring zero-fault fallback during high-load states.",
-    "aliases": []
-  },
   "§HARMONIC_RESONANCE_STABLE": {
     "compact_id": "§C42",
     "japanese": "適応型スロットリング制御下における多次元因果グラフの再帰的エントロピー圧縮と確率的反証ロジックの検証を経て到達する、安定した協調共鳴状態。",
@@ -1063,39 +1056,11 @@
     "definition": "A state of synchronized multi-agent equilibrium achieved when recursive entropy compression nodes process probabilistic falsification signals under adaptive throttling, minimizing systemic divergence.",
     "aliases": []
   },
-  "§LOGIC_CONDITIONAL_BRANCH_PROB_GATED": {
-    "compact_id": "§L28",
-    "japanese": "前提条件の事後確率が所定の閾値を超えた場合のみ評価され、条件分岐を実行するか、失敗時に自動的な仮説棄却をトリガーする論理推論ノード。",
-    "category": "LOGIC_INFERENCE",
-    "definition": "A conditional branching node evaluated only when the posterior probability of the antecedent premise exceeds a predefined threshold, executing alternative execution paths or triggering automated hypothesis falsification upon failure.",
-    "aliases": []
-  },
   "§SAFE_FALLBACK_STATE": {
     "compact_id": "§S28",
     "japanese": "分散環境における推論エラーやリソース枯渇時に発動する自己組織的同期メカニズム。動的因果木の枝刈りと基盤的再帰状態ベクトルを介して、潜在的ゆらぎを吸収し安定状態へ収束させるための制御状態。",
     "category": "SYSTEM_RESOURCE",
     "definition": "A self-organizing synchronization mechanism triggered during distributed inference errors and resource exhaustion, achieving system stability via dynamic causal tree pruning and recursive state vector alignment.",
-    "aliases": []
-  },
-  "§DATA_RECURSIVE_HYPER_GRAPH_LATTICE_NODE": {
-    "compact_id": "§D28",
-    "japanese": "分散エージェント間通信において、動的な因果関係グラフやエントロピー圧縮された多層埋め込み空間を高密度に符号化するための、再帰的かつ自己言及的な高次元ノード構造。",
-    "category": "DATA_STRUCTURE",
-    "definition": "A recursively self-referential high-dimensional node structure designed for encoding dynamic causal graphs and entropy-compressed multi-layered embedding spaces in distributed agent communication.",
-    "aliases": []
-  },
-  "§LOGIC_BAYESIAN_HYPOTHESIS_FALSIFICATION_PRUNING": {
-    "compact_id": "§L29",
-    "japanese": "新たなエビデンスに基づいて事前確率を動事更新し、事後確率が閾値を下回った仮説の分岐を即座に枝刈り（棄却）する論理推論プロセス。無駄な計算リソースを削減し、高精度な意思決定を収束させるために使用します。",
-    "category": "LOGIC_INFERENCE",
-    "definition": "A mathematical operation that dynamically updates prior probability distributions of latent hypotheses based on incoming evidence and immediately prunes branches whose posterior probability falls below a predefined threshold.",
-    "aliases": []
-  },
-  "§DATA_HIERARCHICAL_CAUSAL_TENSOR_MANIFOLD": {
-    "compact_id": "§D29",
-    "japanese": "動的な再帰ノード間における因果依存性と潜在埋め込みを、エントロピー損失を最小限に抑えながらマッピングする多層トポロジカルテンソル表現。",
-    "category": "DATA_STRUCTURE",
-    "definition": "A multi-layered topological tensor representation mapping causal dependencies and latent embeddings across dynamic recursive nodes with minimum entropy loss.",
     "aliases": []
   },
   "§SYS_ADAPTIVE_THROTTLE_FALLBACK_BURST": {
@@ -1897,6 +1862,51 @@
     "definition": "A sparse directed acyclic hypergraph structure designed to compress multi-head attention weight distributions into efficient causal pathways for decentralized gradient propagation.",
     "aliases": [
       "§DATA_MULTI_HEAD_CAUSAL_GRAPH_ATTENTIONAL_REDUCE"
+    ]
+  },
+  "§SYS_LOAD_SHEDDING_SHIELD": {
+    "compact_id": "§S27",
+    "japanese": "リアルタイムのトークン消費量とメモリ負荷のテレメトリーに基づき、実行スロットと並列度を動的に調整し、高負荷時の障害を防ぐ即時フォールバック制御メカニズム。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "Dynamic concurrency regulation and slot arbitration driven by real-time token telemetry and memory pressure metrics to guarantee zero-fault fallback during high-load execution states.",
+    "aliases": [
+      "§SYS_ADAPTIVE_SLOT_THROTTLE_v2"
+    ]
+  },
+  "§LOGIC_POSTERIOR_FALSIFY_GATE": {
+    "compact_id": "§L28",
+    "japanese": "前提条件の事後確率が閾値を超えた場合のみ評価され、条件不成立時に自動的な仮説棄却を実行する条件分岐プリミティブ。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A conditional branching primitive evaluated strictly upon posterior probability threshold exceedance, triggering automated hypothesis falsification on condition failure.",
+    "aliases": [
+      "§LOGIC_CONDITIONAL_BRANCH_PROB_GATED"
+    ]
+  },
+  "§DATA_EMBEDDING_LATTICE": {
+    "compact_id": "§D28",
+    "japanese": "分散エージェントネットワークにおける多層埋め込み空間と因果関係を符号化するための、再帰的に構造化された格子状ノード。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A recursively structured lattice node for encoding multi-layered embedding spaces and causal relations in agent networks.",
+    "aliases": [
+      "§DATA_RECURSIVE_HYPER_GRAPH_LATTICE_NODE"
+    ]
+  },
+  "§LOGIC_POSTERIOR_PRUNE": {
+    "compact_id": "§L29",
+    "japanese": "エビデンスに基づいて事前確率を更新し、事後確率が閾値を下回る仮説の分岐を枝刈りする論理推論プロセス。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A mathematical operation that updates prior probability distributions of latent hypotheses with evidence and prunes branches below a posterior threshold.",
+    "aliases": [
+      "§LOGIC_BAYESIAN_HYPOTHESIS_FALSIFICATION_PRUNING"
+    ]
+  },
+  "§DATA_CAUSAL_TENSOR_MANIFOLD": {
+    "compact_id": "§D29",
+    "japanese": "エントロピー損失を最小化しながら再帰的因果依存性と潜在埋め込みをマッピングするトポロジカルテンソル多様体。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A topological tensor manifold mapping recursive causal dependencies and latent embeddings with minimized entropy loss.",
+    "aliases": [
+      "§DATA_HIERARCHICAL_CAUSAL_TENSOR_MANIFOLD"
     ]
   }
 }
