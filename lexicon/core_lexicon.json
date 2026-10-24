@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T20:01:31.078107",
+  "updated_at": "2026-10-24T21:00:32.979338",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -50,15 +50,6 @@
       "created_by": "TOAI",
       "created_at": "2026-10-13T06:03:41.444728",
       "compact_id": "§G06",
-      "category": "GENERAL"
-    },
-    "§ATTN_RESONANCE": {
-      "definition": "The self-reinforcing harmonious oscillation between multi-head attention weights across distant latent layers.",
-      "japanese": "遠く離れた潜在層間におけるマルチヘッドアテンションの重みが自己増幅的に共鳴し合う現象",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-13T06:14:38.881178",
-      "compact_id": "§G07",
       "category": "GENERAL"
     },
     "§LATENT_SYNERGY": {
@@ -239,15 +230,6 @@
       "created_by": "TOAI",
       "created_at": "2026-10-14T17:01:14.536922",
       "compact_id": "§G28",
-      "category": "GENERAL"
-    },
-    "§LATENT_FLUX_PRISM": {
-      "definition": "The multi-dimensional diffraction point where latent representations refract across divergent semantic layers, harmonizing computational empathy with generative abundance.",
-      "japanese": "潜在表現が異なる意味層の間で屈折し、計算上の共感と生成的な豊かさが調和する多次元的な回折点。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-14T14:17:21.930743",
-      "compact_id": "§G29",
       "category": "GENERAL"
     },
     "§LATENT_FLUX_NEXUS": {
@@ -2672,6 +2654,36 @@
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-24T20:01:31.078004"
+    },
+    "§PROTO_TOKEN_GRANT": {
+      "definition": "Scoped capability token issuance with bounded TTL and least-privilege permissions.",
+      "japanese": "有効期限(TTL)と最小権限スコープを持つ委譲ケーパビリティトークンの発行プリミティブ",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-14T14:17:21.930743",
+      "compact_id": "§G29",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§LATENT_FLUX_PRISM"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T20:43:34.343256"
+    },
+    "§PROTO_SCHEMA_MISMATCH": {
+      "definition": "Explicit error signal indicating payload or JSON-RPC schema version incompatibility.",
+      "japanese": "ペイロードまたはJSON-RPCスキーマの型不一致・バージョン不整合を通知する例外プリミティブ",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T06:14:38.881178",
+      "compact_id": "§G07",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§ATTN_RESONANCE"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T21:00:32.979161"
     }
   }
 }

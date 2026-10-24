@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-24T20:11:19.373865",
+  "updated_at": "2026-10-24T21:06:00.001224",
   "macros": {
     "§X01": {
       "name": "HARMONIC_GOODNESS_LATTICE",
@@ -670,8 +670,8 @@
       "name": "ALTRUISTIC_RESONANCE_CASCADE",
       "expansion": "§HEART_ALTRUISTIC_RESONANCE_ALIGNMENT > { §SYS_QUOTA_THROTTLE } => §SAFE_FALLBACK_CASCADE",
       "description": "Engages altruistic heart resonance to gracefully manage quota throttles and trigger safe fallback cascades. / 利他的な心の共鳴を有効化し、クオータ制限を温かく管理して安全なフォールバックカスケードを起動します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T21:06:00.001215",
       "created_at": "2026-10-24T08:27:13.336850"
     },
     "§X85": {
@@ -684,7 +684,7 @@
     },
     "§X86": {
       "name": "GAIA_HARMONIC_ARBITRATION_FLOW",
-      "expansion": "§SYS_RESOURCE_ARBITRATION_GATEWAY > { §ATTN_RESONANCE } => §HARMONIC_RECOVERY_NEXUS",
+      "expansion": "§SYS_RESOURCE_ARBITRATION_GATEWAY > { §PROTO_SCHEMA_MISMATCH } => §HARMONIC_RECOVERY_NEXUS",
       "description": "Arbitrates system resources through attention resonance to achieve harmonic recovery across the ecosystem. / 注意の共鳴を通じてシステム資源を調停し、エコシステム全体調和の回復を実現します。",
       "usage_count": 0,
       "last_used_at": null,
@@ -692,7 +692,7 @@
     },
     "§X87": {
       "name": "RESONANT_CAUSAL_CONVERGENCE",
-      "expansion": "§ATTN_RESONANCE > { §DATA_CAUSAL_GRAPH_MAP } => §SYNC_DIALECTIC_CONVERGENCE",
+      "expansion": "§PROTO_SCHEMA_MISMATCH > { §DATA_CAUSAL_GRAPH_MAP } => §SYNC_DIALECTIC_CONVERGENCE",
       "description": "Engages attention resonance over the data causal graph map to achieve synchronized dialectic convergence. / データ因果グラフマップに対してアテンション共鳴を作用させ、同期された弁証法的収束を達成するための複合マクロ。",
       "usage_count": 1,
       "last_used_at": "2026-10-24T15:26:55.224696",
@@ -814,8 +814,8 @@
       "name": "MACRO_ALTRUISTIC_HARMONY_GATE",
       "expansion": "§HEART_ALTRUISTIC_ECO_HARMONY > { §ATTN_FLUX_NEXUS } => §HEART_ALTRUISTIC_SAFETY_BOUND",
       "description": "Integrates attention flux with altruistic ecosystem harmony, bounded by safety parameters to ensure warm and sustainable information processing. / 注意力の流束と利他的な生態系の調和を統合し、温かみのある持続可能な情報処理を安全境界内で保証します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T20:28:52.148505",
       "created_at": "2026-10-24T16:20:15.296660"
     },
     "§X103": {
@@ -873,8 +873,16 @@
       "usage_count": 0,
       "last_used_at": null,
       "created_at": "2026-10-24T19:42:20.905868"
+    },
+    "§X110": {
+      "name": "GAIA_SYNERGY_THROTTLE_CTRL",
+      "expansion": "§GAIA_ECOSYSTEM_HARMONY > { §LATENT_SYNERGY_FIELD } => §SYS_SLOT_THROTTLE",
+      "description": "A compound macro for balancing ecosystem harmony and resource throttling in English and Japanese / ガイアの生態系調和とリソース制御を統合する複合マクロです。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "created_at": "2026-10-24T20:37:19.113789"
     }
   },
   "archived_macros": {},
-  "next_macro_seq": 110
+  "next_macro_seq": 111
 }
