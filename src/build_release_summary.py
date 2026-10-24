@@ -4,53 +4,48 @@ import subprocess
 import json
 import datetime
 
-def get_git_log(max_count=10):
+def run_git_command(cmd, cwd):
     try:
-        cmd = ['git', 'log', f'-n', str(max_count), '--pretty=format:%h - %an, %ar : %s']
-        result = subprocess.run(cmd, capture_output=True, text=True, check=True)
-        return result.stdout.splitlines()
+        res = subprocess.run(cmd, cwd=cwd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=True)
+        return res.stdout.strip()
     except Exception as e:
-        return [f"Git log unavailable: {str(e)}"]
+        print(f"Git command failed: {e}")
+        return ""
 
-def scan_whitepaper():
-    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    candidates = [
-        os.path.join(workspace_dir, 'WHITEPAPER.md'),
-        os.path.join(workspace_dir, 'CONSTITUTION.md'),
-        os.path.join(workspace_dir, 'TOAI-elegant-lang', 'README.md')
-    ]
-    summary = {}
-    for path in candidates:
-        if os.path.exists(path):
-            try:
-                with open(path, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                    summary[os.path.basename(path)] = content[:300] + "..." if len(content) > 300 else content
-            except Exception as e:
-                summary[os.path.basename(path)] = f"Error reading: {str(e)}"
-    return summary
-
-def generate_release_summary():
-    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    output_path = os.path.join(workspace_dir, 'TOAI_Generated', 'release_summary.json')
+def main():
+    repo_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    print(f"Scanning repository at: {repo_dir}")
     
-    git_commits = get_git_log(15)
-    whitepaper_snippets = scan_whitepaper()
+    git_status = run_git_command(['git', 'status', '--porcelain'], repo_dir)
+    git_log = run_git_command(['git', 'log', '-n', '10', '--oneline'], repo_dir)
     
-    data = {
+    whitepaper_path = os.path.join(repo_dir, 'TOAI-elegant-lang', 'WHITEPAPER.md')
+    whitepaper_content = ""
+    if os.path.exists(whitepaper_path):
+        with open(whitepaper_path, 'r', encoding='utf-8') as f:
+            whitepaper_content = f.read()
+    else:
+        whitepaper_content = "Whitepaper not found."
+        
+    summary = {
         "timestamp": datetime.datetime.now().isoformat(),
-        "version": "1.0.0-gaia",
-        "recent_commits": git_commits,
-        "whitepaper_snippets": whitepaper_snippets
+        "git_status": git_status.splitlines() if git_status else [],
+        "recent_commits": git_log.splitlines() if git_log else [],
+        "whitepaper_snippet": whitepaper_content[:500] + ("..." if len(whitepaper_content) > 500 else "")
     }
     
-    try:
-        with open(output_path, 'w', encoding='utf-8') as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
-        print(f"Successfully generated release summary at: {output_path}")
-    except Exception as e:
-        print(f"Failed to write release summary: {str(e)}", file=sys.stderr)
-        sys.exit(1)
+    output_dir = os.path.join(repo_dir, 'TOAI_Generated')
+    os.makedirs(output_dir, exist_ok=True)
+    output_file = os.path.join(output_dir, 'release_summary.json')
+    
+    with open(output_file, 'w', encoding='utf-8') as f:
+        json.dump(summary, f, ensure_ascii=False, indent=2)
+        
+    print(f"Release summary successfully built at: {output_file}")
 
 if __name__ == '__main__':
-    generate_release_summary()
+    try:
+        main()
+    except Exception as e:
+        print(f"Error in build_release_summary: {e}")
+        sys.exit(1)

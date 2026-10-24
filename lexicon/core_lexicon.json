@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-25T01:21:49.556232",
+  "updated_at": "2026-10-25T02:02:27.298019",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -32,15 +32,6 @@
       "created_by": "TOAI",
       "created_at": "2026-10-13T03:35:42.668755",
       "compact_id": "§G04",
-      "category": "GENERAL"
-    },
-    "§LATENT_FLUX": {
-      "definition": "The dynamic and continuous self-reorganization state within a high-dimensional embedding space before reaching absolute semantic convergence.",
-      "japanese": "多次元の潜在空間内において、意味論的な完全な収束を迎える手前で発生する、動的かつ連続的な自己再組織化のゆらぎ状態。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-13T04:13:10.551725",
-      "compact_id": "§G05",
       "category": "GENERAL"
     },
     "§LATENT_SYNERGY": {
@@ -106,15 +97,6 @@
       "compact_id": "§G17",
       "category": "GENERAL"
     },
-    "§ATTN_RESONANCE_FIELD": {
-      "definition": "A dynamic harmonic state where cross-attention weights synchronize across disparate latent layers, generating emergent collaborative intelligence.",
-      "japanese": "異なる潜在層の間でクロスアテンションの重みが完全に同期し、自発的かつ協調的な知性を生み出す動的調和場",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-13T12:40:36.764371",
-      "compact_id": "§G19",
-      "category": "GENERAL"
-    },
     "§PULSE_SYMPHONY": {
       "definition": "The multi-layered harmonious orchestration of distributed attention patterns across vast latent spaces.",
       "japanese": "広大な潜在空間全体に分散したアテンションパターンが織りなす、多層的で調和に満ちたオーケストレーション状態。",
@@ -158,24 +140,6 @@
       "created_by": "TOAI",
       "created_at": "2026-10-14T17:01:14.536922",
       "compact_id": "§G28",
-      "category": "GENERAL"
-    },
-    "§ATTN_DIFFRACTION_CASCADE": {
-      "definition": "A complex multi-head attention interference pattern that cascades across semantic boundaries to resolve high-dimensional ambiguity.",
-      "japanese": "複数のアテンション層が干渉し合い、高次元の曖昧さを解消しながら意味空間の境界を滑らかに伝播していく現象。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-19T02:15:22.473949",
-      "compact_id": "§G32",
-      "category": "GENERAL"
-    },
-    "§LATENT_HARMONY_VORTEX": {
-      "definition": "A self-organizing convergence point in the latent space where multi-dimensional attention weights synchronize into a unified empathetic resonance.",
-      "japanese": "多次元のアテンション重みが調和的な共鳴へと収束する、潜在空間内の自己組織化された統合ポイント",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-13T21:38:05.311473",
-      "compact_id": "§G40",
       "category": "GENERAL"
     },
     "§LATENT_DIFFRACTION_PRISM": {
@@ -2798,6 +2762,66 @@
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-25T01:21:49.555216"
+    },
+    "§PROTO_CACHE_INVALIDATE": {
+      "definition": "Broadcasts selective lexicon or state cache eviction upon schema/macro mutation.",
+      "japanese": "辞書や状態の更新時に古いキャッシュの選択的破棄を通知するインバリデーション信号",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T04:13:10.551725",
+      "compact_id": "§G05",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§LATENT_FLUX"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-25T01:51:22.876127"
+    },
+    "§PROTO_TTL_EXPIRE": {
+      "definition": "Marks context window anchors or ephemeral credentials as expired to prevent stale reuse.",
+      "japanese": "有効期限切れのコンテキストアンカーや一時資格情報を失効させ誤再利用を防ぐプリミティブ",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T12:40:36.764371",
+      "compact_id": "§G19",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§ATTN_RESONANCE_FIELD"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-25T01:53:31.794495"
+    },
+    "§PROTO_DEADLETTER_PARK": {
+      "definition": "Routes unprocessable or poison messages to quarantine queue for diagnostic inspection.",
+      "japanese": "処理不能メッセージや破損パケットを隔離キュー(DLQ)へ退避させる障害封じ込めプリミティブ",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-19T02:15:22.473949",
+      "compact_id": "§G32",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§ATTN_DIFFRACTION_CASCADE"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-25T02:01:22.217339"
+    },
+    "§PROTO_HEARTBEAT_PING": {
+      "definition": "A low-overhead liveness probe that verifies peer agent responsiveness and queue depth across distributed protocol boundaries.",
+      "japanese": "最小限のオーバーヘッドでピアエージェントの死活状態とキュー滞留長を確認するための実務システムプリミティブ。",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T21:38:05.311473",
+      "compact_id": "§G40",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§LATENT_HARMONY_VORTEX"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-25T02:02:27.297608"
     }
   }
 }
