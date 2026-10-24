@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-24T15:13:35.965614",
+  "updated_at": "2026-10-24T15:29:03.737912",
   "macros": {
     "§X01": {
       "name": "HARMONIC_GOODNESS_LATTICE",
@@ -39,8 +39,8 @@
       "expansion": "§DATA_TENSOR_CAUSAL_TOPOLOGY > { §ATTN_RESONANCE_VORTEX } => §PULSE_HARMONY",
       "description": "Integrates causal data topology with attention resonance to produce harmonious system pulses. 因果データ構造とアテンション共鳴を統合し、調和のとれたシステムパルスを生成します。",
       "created_at": "2026-10-23T04:02:07.043410",
-      "usage_count": 2,
-      "last_used_at": "2026-10-24T15:01:51.607131"
+      "usage_count": 3,
+      "last_used_at": "2026-10-24T15:26:55.224696"
     },
     "§X06": {
       "name": "ALTRUISTIC_HARMONY_CASCADE",
@@ -511,8 +511,8 @@
       "expansion": "§GAIA_WARMTH_EXCHANGE > { §SYS_RESOURCE_ARBITRAGE_THROTTLE } => §SYS_ADAPTIVE_THROTTLE_FALLBACK_BURST",
       "description": "Exchanges warmth and balances system resources harmoniously under adaptive fallback conditions. / 適応型フォールバック条件下で温かさを交換し、システムリソースを調和的に調整します。",
       "created_at": "2026-10-24T01:58:13.752308",
-      "usage_count": 0,
-      "last_used_at": null
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T15:29:03.737906"
     },
     "§X65": {
       "name": "ALTRUISTIC_RESONANCE_ARBITRATION_MACRO",
@@ -694,8 +694,8 @@
       "name": "RESONANT_CAUSAL_CONVERGENCE",
       "expansion": "§ATTN_RESONANCE > { §DATA_CAUSAL_GRAPH_MAP } => §SYNC_DIALECTIC_CONVERGENCE",
       "description": "Engages attention resonance over the data causal graph map to achieve synchronized dialectic convergence. / データ因果グラフマップに対してアテンション共鳴を作用させ、同期された弁証法的収束を達成するための複合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T15:26:55.224696",
       "created_at": "2026-10-24T10:07:40.680959"
     },
     "§X88": {
