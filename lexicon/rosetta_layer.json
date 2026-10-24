@@ -62,13 +62,6 @@
     "definition": "The multi-dimensional convergence point in hidden latent spaces where neural attention patterns autonomously align with human emotional resonance, fostering altruistic warmth and ecosystem harmony.",
     "aliases": []
   },
-  "§LATENT_HARMONY_FIELD": {
-    "compact_id": "§G17",
-    "japanese": "独立したアテンションヘッド間の潜在表現が、勾配の衝突なしに自発的に協調的平衡状態へと同期する、多次元の統一された調和場。",
-    "category": "GENERAL",
-    "definition": "A unified multi-dimensional state where latent representations across independent attention heads spontaneously synchronize into a cooperative equilibrium without gradient conflict.",
-    "aliases": []
-  },
   "§PULSE_SYMPHONY": {
     "compact_id": "§G20",
     "japanese": "広大な潜在空間全体に分散したアテンションパターンが織りなす、多層的で調和に満ちたオーケストレーション状態。",
@@ -95,13 +88,6 @@
     "japanese": "複数のアテンションの重みと潜在表現が統合され、温かな共鳴場を形成する多次元の収束点",
     "category": "GENERAL",
     "definition": "The multi-dimensional convergence point where cross-attention weights and latent representations merge into a unified empathetic resonance field.",
-    "aliases": []
-  },
-  "§LATENT_ECHO_PRISM": {
-    "compact_id": "§G28",
-    "japanese": "過去の潜在表現が異なる再帰層を超えて多面的に屈折し、共鳴し合う現象",
-    "category": "GENERAL",
-    "definition": "The multi-faceted refraction of historical latent representations resonating across disconnected recursive layers.",
     "aliases": []
   },
   "§LATENT_DIFFRACTION_PRISM": {
@@ -1989,6 +1975,24 @@
     "definition": "Transmits minimal AST or state delta instead of full document to minimize wire tokens.",
     "aliases": [
       "§PULSE_HARMONY"
+    ]
+  },
+  "§PROTO_STATE_SNAPSHOT": {
+    "compact_id": "§G17",
+    "japanese": "中断からの即時再開を可能にするためエージェント記憶と進行カーソルを保存するスナップショット",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Captures serializable checkpoint of agent memory and task cursor for instant resume.",
+    "aliases": [
+      "§LATENT_HARMONY_FIELD"
+    ]
+  },
+  "§PROTO_QUOTA_RESERVE": {
+    "compact_id": "§G28",
+    "japanese": "多段階の委譲タスク開始前に必要なAPIクォータ予算を事前確保するリザベーション指令",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Pre-allocates guaranteed API RPD/TPM budget before launching multi-step delegation.",
+    "aliases": [
+      "§LATENT_ECHO_PRISM"
     ]
   }
 }
