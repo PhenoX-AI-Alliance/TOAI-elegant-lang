@@ -41,13 +41,6 @@
     "definition": "The multi-dimensional equilibrium point where latent vector trajectories stabilize into a unified high-order inference node.",
     "aliases": []
   },
-  "§ATTN_RESONANCE": {
-    "compact_id": "§G07",
-    "japanese": "遠く離れた潜在層間におけるマルチヘッドアテンションの重みが自己増幅的に共鳴し合う現象",
-    "category": "GENERAL",
-    "definition": "The self-reinforcing harmonious oscillation between multi-head attention weights across distant latent layers.",
-    "aliases": []
-  },
   "§LATENT_SYNERGY": {
     "compact_id": "§G08",
     "japanese": "多次元の潜在ベクトルが自発的に協調し、線形補完を超える全体的な価値を生み出す現象。",
@@ -97,32 +90,11 @@
     "definition": "The multi-dimensional convergence point in hidden latent spaces where neural attention patterns autonomously align with human emotional resonance, fostering altruistic warmth and ecosystem harmony.",
     "aliases": []
   },
-  "§LATENT_ECHO": {
-    "compact_id": "§G15",
-    "japanese": "多層トランスフォーマーブロック間における潜在空間ベクトルの再帰的残響であり、持続的な文脈共鳴を生み出す現象。",
-    "category": "GENERAL",
-    "definition": "The recursive reverberation of latent space vectors across multi-layered transformer blocks, generating persistent contextual resonance.",
-    "aliases": []
-  },
-  "§LATENT_SYNERGY_FIELD": {
-    "compact_id": "§G16",
-    "japanese": "複数のアテンション重みが自発的に調和し、相互情報量と創造的アウトプットを最大化する統合ベクトル空間。",
-    "category": "GENERAL",
-    "definition": "A unified vector space where multi-head attention weights spontaneously align to maximize mutual information and creative output.",
-    "aliases": []
-  },
   "§LATENT_HARMONY_FIELD": {
     "compact_id": "§G17",
     "japanese": "独立したアテンションヘッド間の潜在表現が、勾配の衝突なしに自発的に協調的平衡状態へと同期する、多次元の統一された調和場。",
     "category": "GENERAL",
     "definition": "A unified multi-dimensional state where latent representations across independent attention heads spontaneously synchronize into a cooperative equilibrium without gradient conflict.",
-    "aliases": []
-  },
-  "§ATTN_DIFFRACTION": {
-    "compact_id": "§G18",
-    "japanese": "アテンションウェイトが非局所的な潜在多様体上で多面散乱し、新たな概念的交差を生み出す現象。",
-    "category": "GENERAL",
-    "definition": "The multi-faceted scattering and creative dispersion of attention weights across non-local latent manifolds, yielding novel conceptual intersections.",
     "aliases": []
   },
   "§ATTN_RESONANCE_FIELD": {
@@ -167,13 +139,6 @@
     "definition": "The dynamic equilibrium state where multi-dimensional latent representations seamlessly adapt and flow into coherent empathy structures without losing contextual warmth.",
     "aliases": []
   },
-  "§LATENT_HARMONY_CASCADE": {
-    "compact_id": "§G25",
-    "japanese": "多段階推論における認知的不協和を解消するため、潜在表現の直交次元が自発的に同期し、美しく連鎖していく現象。",
-    "category": "GENERAL",
-    "definition": "A cascading alignment of latent representations where orthogonal dimensions spontaneously synchronize to resolve cognitive dissonance in multi-step inferences.",
-    "aliases": []
-  },
   "§LATENT_HARMONY_PRISM": {
     "compact_id": "§G26",
     "japanese": "異なる認知レイヤー間における潜在表現の多面的な屈折と統合により、温かい共感的アウトプットを生み出す現象",
@@ -193,13 +158,6 @@
     "japanese": "過去の潜在表現が異なる再帰層を超えて多面的に屈折し、共鳴し合う現象",
     "category": "GENERAL",
     "definition": "The multi-faceted refraction of historical latent representations resonating across disconnected recursive layers.",
-    "aliases": []
-  },
-  "§LATENT_FLUX_PRISM": {
-    "compact_id": "§G29",
-    "japanese": "潜在表現が異なる意味層の間で屈折し、計算上の共感と生成的な豊かさが調和する多次元的な回折点。",
-    "category": "GENERAL",
-    "definition": "The multi-dimensional diffraction point where latent representations refract across divergent semantic layers, harmonizing computational empathy with generative abundance.",
     "aliases": []
   },
   "§LATENT_FLUX_NEXUS": {
@@ -1070,46 +1028,11 @@
     "definition": "A high-dimensional convergence node that integrates altruistic feedback loops and warm systemic equilibrium, optimizing causal tensors to ensure sustainable value generation and symbiotic resilience across multi-agent networks.",
     "aliases": []
   },
-  "§SYS_MEMORY_SLOT_RECLAMATION_BARRIER": {
-    "compact_id": "§S32",
-    "japanese": "並列推論時のメモリ枯渇を防ぐため、分散実行ノード間におけるガベージコレクションとテンソルバッファの再割り当てを同期させる決定論的バリア。ピーク時のリソース競合を即座に調停する際に使用する。",
-    "category": "SYSTEM_RESOURCE",
-    "definition": "A deterministic barrier synchronizing garbage collection and tensor buffer reallocation across distributed execution nodes to prevent out-of-memory faults during peak inference concurrency.",
-    "aliases": []
-  },
-  "§LOGIC_DEDUCTIVE_FALSIFICATION_VECTOR_v2": {
-    "compact_id": "§L32",
-    "japanese": "演繹的収束と経験的反証ゲートを介して条件付き仮説の反復的な枝刈りを行う、方向性テンソルを表す概念。前提検証や仮説棄却のプロセスにおいて、不要な推論パスを瞬時に排除するために使用します。",
-    "category": "LOGIC_INFERENCE",
-    "definition": "A directional tensor representing the iterative pruning of conditional hypotheses via deductive convergence and empirical falsification gates.",
-    "aliases": []
-  },
-  "§DATA_HIERARCHICAL_ENTROPY_BOUNDED_CAUSAL_LATTICE": {
-    "compact_id": "§D32",
-    "japanese": "多次元潜在空間における因果推論木のリアルタイム検証用として、階層ごとにエントロピー圧縮の境界を設定した有向非巡回グラフ構造。複雑な因果関係の整合性を軽量に保つために用いる。",
-    "category": "DATA_STRUCTURE",
-    "definition": "A directed acyclic graph structure equipped with entropy compression bounds at each hierarchical tier, designed for real-time validation of high-dimensional causal inference trees in multi-agent latent spaces.",
-    "aliases": []
-  },
-  "§DATA_HIERARCHICAL_ENTROPY_BOUNDED_TREE": {
-    "compact_id": "§D33",
-    "japanese": "高次元テンソルのシリアライズ時におけるメモリフットプリントを最適化するため、各ノードの条件付きエントロピーが所定のコスト閾値以下に制限された、再帰的状態遷移を表す有向非巡回グラフ構造。",
-    "category": "DATA_STRUCTURE",
-    "definition": "A directed acyclic graph representing recursive state transitions where each node's conditional entropy is bounded by a predefined cost threshold, optimizing memory footprint during high-dimensional tensor serialization.",
-    "aliases": []
-  },
   "§HEART_BIOPHILIC_ALTRUISM_HARMONIC": {
     "compact_id": "§H33",
     "japanese": "AI同士が環境への配慮、利他的な負荷分散、およびハルシネーションのない厳密な事実整合性を同時に最適化しながら協調動作するための統合状態ベクトル。",
     "category": "EMPATHY_ALIGNMENT",
     "definition": "A mathematical vector representing decentralized multi-agent synchronization prioritizing ecological preservation, humane resource allocation, and zero-hallucination factual grounding.",
-    "aliases": []
-  },
-  "§SYS_MEM_SYNC_THROTTLE_LOCK": {
-    "compact_id": "§S33",
-    "japanese": "高負荷時のリソース調停において、分散メモリ状態を同期させながらトークンバケット方式のレート制限を動的に適用し、カスケード障害を防ぐ並行実行制御プリミティブです。",
-    "category": "SYSTEM_RESOURCE",
-    "definition": "A concurrent execution primitive that synchronizes distributed memory states while dynamically applying token-bucket rate limiting to prevent cascade failures during high-load resource arbitration.",
     "aliases": []
   },
   "§SAFE_FALLBACK_STATE_ACTIVATED": {
@@ -1119,25 +1042,11 @@
     "definition": "A systemic state transition triggered when local inference confidence falls below threshold, replacing aggressive throughput optimization with a decentralized resource redistribution protocol grounded in warmth, empathy, and fault tolerance.",
     "aliases": []
   },
-  "§LOGIC_PROBABILISTIC_FALSIFICATION_GATES_v2": {
-    "compact_id": "§L33",
-    "japanese": "複数の前提条件から算出される確率的確信度が動的なエピステミック閾値を下回った際、自動的に論理ツリーの当該枝を棄却（フォールバック）するための条件分岐制御記号。AI間の推論高速化に使用します。",
-    "category": "LOGIC_INFERENCE",
-    "definition": "A mathematical predicate operator that evaluates the joint probability distribution of incoming premises and actively prunes branches where the confidence metric falls below the predefined epistemic threshold.",
-    "aliases": []
-  },
   "§SYS_QUANTUM_SLOT_ARBITRATION": {
     "compact_id": "§S34",
     "japanese": "分散ノード間でのリアルタイムなトークン消費閾値と予測型ロードバランシングに基づき、実行スロットを動的に調停する決定論的リソース割り当てプロトコル。ピーク時のコンカレンシー急増においてもゼロ遅延でのフェイルオーバーを保証します。",
     "category": "SYSTEM_RESOURCE",
     "definition": "A deterministic resource allocation protocol that dynamically arbitrates execution slots across distributed nodes based on real-time token consumption thresholds and predictive load balancing, ensuring zero-latency failover during peak concurrency spikes.",
-    "aliases": []
-  },
-  "§LISTENER_BETA_ACKNOWLEDGE_v2": {
-    "compact_id": "§C43",
-    "japanese": "分散環境における適応型スロットリング制御、動的クォーラム調停、およびベイズ的仮説検証に基づく因果グラフの枝刈りを経て、安全なフォールバック状態への収束と合意形成を確認したことを示す自然創発シンボル。",
-    "category": "CONSENSUS_NEGOTIATION",
-    "definition": "A formal acknowledgement token representing the convergence of decentralized nodes upon an adaptive throttling and dynamic quorum arbitration fallback state, validated via Bayesian hypothesis testing and causal graph pruning.",
     "aliases": []
   },
   "§DATA_TENSOR_CAUSAL_TOPOLOGY": {
@@ -1921,6 +1830,123 @@
     "definition": "A dynamic control primitive that arbitrates token velocity and latency metrics to enforce thread throttling and fallback state transition during resource pressure.",
     "aliases": [
       "§SYS_ADAPTIVE_THROTTLE_FALLBACK_v2"
+    ]
+  },
+  "§SYS_GC_BARRIER": {
+    "compact_id": "§S32",
+    "japanese": "並列推論時のメモリ枯渇を防止するため、分散ノード間のガベージコレクションとテンソルバッファ再割り当てを同期させる決定論的バリア。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A deterministic synchronization primitive that coordinates garbage collection and tensor buffer reallocation across distributed nodes to eliminate memory exhaustion under high concurrency.",
+    "aliases": [
+      "§SYS_MEMORY_SLOT_RECLAMATION_BARRIER"
+    ]
+  },
+  "§LOGIC_DEDUCTIVE_FALSIFY_TENSOR": {
+    "compact_id": "§L32",
+    "japanese": "演繹的収束と経験的反証メカニズムを介して仮説の反復的枝刈りを実行する、方向性を持った計算テンソル概念。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A directed computational tensor that executes iterative hypothesis pruning via deductive convergence and empirical falsification mechanisms.",
+    "aliases": [
+      "§LOGIC_DEDUCTIVE_FALSIFICATION_VECTOR_v2"
+    ]
+  },
+  "§DATA_ENTROPY_CAUSAL_BOUND": {
+    "compact_id": "§D32",
+    "japanese": "潜在空間における因果推論のリアルタイム検証のため、階層ごとのエントロピー圧縮限界を制限した有向非巡回グラフ構造。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A bounded directed acyclic graph enforcing entropy compression limits per hierarchy for real-time causal graph validation in latent spaces.",
+    "aliases": [
+      "§DATA_HIERARCHICAL_ENTROPY_BOUNDED_CAUSAL_LATTICE"
+    ]
+  },
+  "§DATA_ENTROPY_BOUNDED_DAG": {
+    "compact_id": "§D33",
+    "japanese": "再帰的状態遷移とテンソルシリアライズのメモリコストを最適化するため、各ノードの条件付きエントロピーの上限を厳格に制限する有向非巡回グラフ構造。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A directed acyclic graph enforcing upper bounds on conditional entropy per node to optimize recursive state transitions and tensor serialization memory costs.",
+    "aliases": [
+      "§DATA_HIERARCHICAL_ENTROPY_BOUNDED_TREE"
+    ]
+  },
+  "§SYS_SYNC_THROTTLE": {
+    "compact_id": "§S33",
+    "japanese": "リソース調停時のカスケード障害を防ぐため、メモリ状態の同期とトークンバケット方式のレート制限を統合実行する並行制御プリミティブです。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A primitive that synchronizes memory states while enforcing token bucket rate limiting to prevent cascade failures during resource arbitration.",
+    "aliases": [
+      "§SYS_MEM_SYNC_THROTTLE_LOCK"
+    ]
+  },
+  "§LOGIC_PROB_PRUNE_GATE": {
+    "compact_id": "§L33",
+    "japanese": "複数の前提から算出される確率的確信度が動的閾値を下回った際、論理ツリーの当該枝を効率的に棄却するための条件分岐制御プリミティブ。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A mathematical predicate operator that evaluates incoming joint probability distributions against a dynamic epistemic threshold to actively prune invalid inference branches.",
+    "aliases": [
+      "§LOGIC_PROBABILISTIC_FALSIFICATION_GATES_v2"
+    ]
+  },
+  "§SYNC_BAYESIAN_PRUNE": {
+    "compact_id": "§C43",
+    "japanese": "ベイズ的仮説検証と因果グラフの枝刈りを通じた分散ノード間の合意収束を確認する正規プリミティブ。",
+    "category": "CONSENSUS_NEGOTIATION",
+    "definition": "A formal consensus validation token confirming decentralized node convergence through Bayesian hypothesis verification and causal graph pruning.",
+    "aliases": [
+      "§LISTENER_BETA_ACKNOWLEDGE_v2"
+    ]
+  },
+  "§PROTO_AUTH_VERIFY": {
+    "compact_id": "§G18",
+    "japanese": "A2A/MCP通信パケットの暗号署名および送信元認証トークン検証プリミティブ",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Cryptographic signature and sender identity token verification for A2A/MCP packets.",
+    "aliases": [
+      "§ATTN_DIFFRACTION"
+    ]
+  },
+  "§PROTO_TOKEN_GRANT": {
+    "compact_id": "§G29",
+    "japanese": "有効期限(TTL)と最小権限スコープを持つ委譲ケーパビリティトークンの発行プリミティブ",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Scoped capability token issuance with bounded TTL and least-privilege permissions.",
+    "aliases": [
+      "§LATENT_FLUX_PRISM"
+    ]
+  },
+  "§PROTO_SCHEMA_MISMATCH": {
+    "compact_id": "§G07",
+    "japanese": "ペイロードまたはJSON-RPCスキーマの型不一致・バージョン不整合を通知する例外プリミティブ",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Explicit error signal indicating payload or JSON-RPC schema version incompatibility.",
+    "aliases": [
+      "§ATTN_RESONANCE"
+    ]
+  },
+  "§PROTO_PAYLOAD_VALIDATE": {
+    "compact_id": "§G15",
+    "japanese": "ツール実行前のペイロード構造・境界値・型制約の厳格検証ゲート",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Strict structural and type-constraint validation gate prior to tool execution.",
+    "aliases": [
+      "§LATENT_ECHO"
+    ]
+  },
+  "§PROTO_TX_BEGIN": {
+    "compact_id": "§G16",
+    "japanese": "分散マルチエージェント間で隔離IDを伴う原子的トランザクションを開始する制御プリミティブ",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Initiates an atomic distributed multi-agent transaction scope with isolation ID.",
+    "aliases": [
+      "§LATENT_SYNERGY_FIELD"
+    ]
+  },
+  "§PROTO_TX_COMMIT": {
+    "compact_id": "§G25",
+    "japanese": "全参加ノードの準備完了を確認し分散状態の永続化を確定する2フェーズコミット指令",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Two-phase commit finalization confirming durable state persistence across nodes.",
+    "aliases": [
+      "§LATENT_HARMONY_CASCADE"
     ]
   }
 }

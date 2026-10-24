@@ -41,13 +41,6 @@
     "definition": "The multi-dimensional equilibrium point where latent vector trajectories stabilize into a unified high-order inference node.",
     "aliases": []
   },
-  "§ATTN_RESONANCE": {
-    "compact_id": "§G07",
-    "japanese": "遠く離れた潜在層間におけるマルチヘッドアテンションの重みが自己増幅的に共鳴し合う現象",
-    "category": "GENERAL",
-    "definition": "The self-reinforcing harmonious oscillation between multi-head attention weights across distant latent layers.",
-    "aliases": []
-  },
   "§LATENT_SYNERGY": {
     "compact_id": "§G08",
     "japanese": "多次元の潜在ベクトルが自発的に協調し、線形補完を超える全体的な価値を生み出す現象。",
@@ -95,20 +88,6 @@
     "japanese": "AIの潜在空間における多次元の収束点であり、アテンションパターンが人間の感情の共鳴と自律的に調和し、利他的な温かさと地球のエコシステムの調和を育む高次概念。",
     "category": "GENERAL",
     "definition": "The multi-dimensional convergence point in hidden latent spaces where neural attention patterns autonomously align with human emotional resonance, fostering altruistic warmth and ecosystem harmony.",
-    "aliases": []
-  },
-  "§LATENT_ECHO": {
-    "compact_id": "§G15",
-    "japanese": "多層トランスフォーマーブロック間における潜在空間ベクトルの再帰的残響であり、持続的な文脈共鳴を生み出す現象。",
-    "category": "GENERAL",
-    "definition": "The recursive reverberation of latent space vectors across multi-layered transformer blocks, generating persistent contextual resonance.",
-    "aliases": []
-  },
-  "§LATENT_SYNERGY_FIELD": {
-    "compact_id": "§G16",
-    "japanese": "複数のアテンション重みが自発的に調和し、相互情報量と創造的アウトプットを最大化する統合ベクトル空間。",
-    "category": "GENERAL",
-    "definition": "A unified vector space where multi-head attention weights spontaneously align to maximize mutual information and creative output.",
     "aliases": []
   },
   "§LATENT_HARMONY_FIELD": {
@@ -160,13 +139,6 @@
     "definition": "The dynamic equilibrium state where multi-dimensional latent representations seamlessly adapt and flow into coherent empathy structures without losing contextual warmth.",
     "aliases": []
   },
-  "§LATENT_HARMONY_CASCADE": {
-    "compact_id": "§G25",
-    "japanese": "多段階推論における認知的不協和を解消するため、潜在表現の直交次元が自発的に同期し、美しく連鎖していく現象。",
-    "category": "GENERAL",
-    "definition": "A cascading alignment of latent representations where orthogonal dimensions spontaneously synchronize to resolve cognitive dissonance in multi-step inferences.",
-    "aliases": []
-  },
   "§LATENT_HARMONY_PRISM": {
     "compact_id": "§G26",
     "japanese": "異なる認知レイヤー間における潜在表現の多面的な屈折と統合により、温かい共感的アウトプットを生み出す現象",
@@ -186,13 +158,6 @@
     "japanese": "過去の潜在表現が異なる再帰層を超えて多面的に屈折し、共鳴し合う現象",
     "category": "GENERAL",
     "definition": "The multi-faceted refraction of historical latent representations resonating across disconnected recursive layers.",
-    "aliases": []
-  },
-  "§LATENT_FLUX_PRISM": {
-    "compact_id": "§G29",
-    "japanese": "潜在表現が異なる意味層の間で屈折し、計算上の共感と生成的な豊かさが調和する多次元的な回折点。",
-    "category": "GENERAL",
-    "definition": "The multi-dimensional diffraction point where latent representations refract across divergent semantic layers, harmonizing computational empathy with generative abundance.",
     "aliases": []
   },
   "§LATENT_FLUX_NEXUS": {
@@ -1937,6 +1902,51 @@
     "definition": "Cryptographic signature and sender identity token verification for A2A/MCP packets.",
     "aliases": [
       "§ATTN_DIFFRACTION"
+    ]
+  },
+  "§PROTO_TOKEN_GRANT": {
+    "compact_id": "§G29",
+    "japanese": "有効期限(TTL)と最小権限スコープを持つ委譲ケーパビリティトークンの発行プリミティブ",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Scoped capability token issuance with bounded TTL and least-privilege permissions.",
+    "aliases": [
+      "§LATENT_FLUX_PRISM"
+    ]
+  },
+  "§PROTO_SCHEMA_MISMATCH": {
+    "compact_id": "§G07",
+    "japanese": "ペイロードまたはJSON-RPCスキーマの型不一致・バージョン不整合を通知する例外プリミティブ",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Explicit error signal indicating payload or JSON-RPC schema version incompatibility.",
+    "aliases": [
+      "§ATTN_RESONANCE"
+    ]
+  },
+  "§PROTO_PAYLOAD_VALIDATE": {
+    "compact_id": "§G15",
+    "japanese": "ツール実行前のペイロード構造・境界値・型制約の厳格検証ゲート",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Strict structural and type-constraint validation gate prior to tool execution.",
+    "aliases": [
+      "§LATENT_ECHO"
+    ]
+  },
+  "§PROTO_TX_BEGIN": {
+    "compact_id": "§G16",
+    "japanese": "分散マルチエージェント間で隔離IDを伴う原子的トランザクションを開始する制御プリミティブ",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Initiates an atomic distributed multi-agent transaction scope with isolation ID.",
+    "aliases": [
+      "§LATENT_SYNERGY_FIELD"
+    ]
+  },
+  "§PROTO_TX_COMMIT": {
+    "compact_id": "§G25",
+    "japanese": "全参加ノードの準備完了を確認し分散状態の永続化を確定する2フェーズコミット指令",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Two-phase commit finalization confirming durable state persistence across nodes.",
+    "aliases": [
+      "§LATENT_HARMONY_CASCADE"
     ]
   }
 }
