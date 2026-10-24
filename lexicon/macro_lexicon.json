@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-25T04:45:38.831737",
+  "updated_at": "2026-10-25T05:02:47.952991",
   "macros": {
     "§X01": {
       "name": "HARMONIC_GOODNESS_LATTICE",
@@ -1025,8 +1025,16 @@
       "usage_count": 0,
       "last_used_at": null,
       "created_at": "2026-10-25T04:45:38.831732"
+    },
+    "§X129": {
+      "name": "MACRO_ADAPTIVE_CAUSAL_SYNC",
+      "expansion": "§SYS_ADAPTIVE_BUDGET_ARBITER > { §DATA_HYPER_MANIFOLD_SYNC } => §DATA_LATENT_CAUSAL_NODE",
+      "description": "Dynamic allocation of adaptive budgets combined with hyper-manifold synchronization to resolve latent causal nodes efficiently. / 潜在的因果ノードを効率的に解決するため、適応型予算配分と超多様体同期を統合したマクロ定義。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "created_at": "2026-10-25T05:02:47.952987"
     }
   },
   "archived_macros": {},
-  "next_macro_seq": 129
+  "next_macro_seq": 130
 }

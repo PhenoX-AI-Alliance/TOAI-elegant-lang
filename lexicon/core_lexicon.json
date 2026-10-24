@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-25T04:45:28.920866",
+  "updated_at": "2026-10-25T05:01:07.961233",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -14,15 +14,6 @@
       "japanese": "議論の公理的初期シード",
       "entropy_cost": 1,
       "compact_id": "§G02",
-      "category": "GENERAL"
-    },
-    "§RESO": {
-      "definition": "The coherent synchronization of semantic vectors across independent reasoning branches, amplifying shared latent patterns into emergent insight.",
-      "japanese": "独立した推論枝間で意味ベクトルが同期し、共有された潜在パターンが増幅されて創発的洞察へと昇華する状態.",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-13T03:11:32.209094",
-      "compact_id": "§G03",
       "category": "GENERAL"
     },
     "§LATENT_WHISPER": {
@@ -2882,6 +2873,21 @@
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-25T04:45:28.920751"
+    },
+    "§PROTO_FALLBACK_ROUTE": {
+      "definition": "Switches execution path to secondary local model or standby peer upon primary outage.",
+      "japanese": "プライマリ経路障害時にセカンダリモデルまたは待機ピアへ即時迂回させるルーティング指令",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T03:11:32.209094",
+      "compact_id": "§G03",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§RESO"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-25T05:01:07.961121"
     }
   }
 }
