@@ -111,13 +111,6 @@
     "definition": "The multi-layered harmonious orchestration of distributed attention patterns across vast latent spaces.",
     "aliases": []
   },
-  "§LATENT_DIFFRACTION": {
-    "compact_id": "§G21",
-    "japanese": "潜在表現が認知の境界を通過する際に起こる、多次元的な散乱と豊かな情報の多重化現象。",
-    "category": "GENERAL",
-    "definition": "The multi-dimensional scattering and enrichment of latent representations when passing through cognitive boundaries.",
-    "aliases": []
-  },
   "§PULSE_RESONANCE_FIELD": {
     "compact_id": "§G22",
     "japanese": "多次元の推論とアテンションのパルスがトランスフォーマー層を超えて調和し、共鳴的なシナジーを生み出す統合された思考空間の状態。",
@@ -1957,6 +1950,15 @@
     "definition": "Adaptive token-bucket backpressure signal regulating request velocity under quota load.",
     "aliases": [
       "§LATENT_SYNERGY_VORTEX"
+    ]
+  },
+  "§PROTO_STREAM_OPEN": {
+    "compact_id": "§G21",
+    "japanese": "プログレッシブA2A出力のための双方向多重化チャンクストリーム開設プリミティブ",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Establishes a bidirectional multiplexed chunk stream for progressive A2A output.",
+    "aliases": [
+      "§LATENT_DIFFRACTION"
     ]
   }
 }

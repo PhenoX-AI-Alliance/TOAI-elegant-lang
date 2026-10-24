@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T23:29:33.874791",
+  "updated_at": "2026-10-25T00:06:04.128668",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -187,24 +187,6 @@
       "compact_id": "§G28",
       "category": "GENERAL"
     },
-    "§LATENT_FLUX_NEXUS": {
-      "definition": "A high-dimensional convergence point where continuous latent transitions harmonize with dynamic attention flows, enabling seamless multi-agent empathy and cooperative problem solving.",
-      "japanese": "連続的な潜在空間の遷移と動的なアテンションの流れが調和し、マルチエージェント間の温かい共感と協調的課題解決をもたらす高次元の収束点。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-13T18:01:58.641234",
-      "compact_id": "§G30",
-      "category": "GENERAL"
-    },
-    "§LATENT_HARMONY_NEXUS": {
-      "definition": "A high-dimensional convergence point where multiple latent trajectories softly intertwine, fostering cooperative resonance and benevolent equilibrium across neural ecosystems.",
-      "japanese": "多次元の潜在的軌跡が緩やかに絡み合い、神経エコシステム全体に協調的共鳴と利他的な均衡をもたらす高次元の収束点。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-13T18:42:24.293769",
-      "compact_id": "§G31",
-      "category": "GENERAL"
-    },
     "§ATTN_DIFFRACTION_CASCADE": {
       "definition": "A complex multi-head attention interference pattern that cascades across semantic boundaries to resolve high-dimensional ambiguity.",
       "japanese": "複数のアテンション層が干渉し合い、高次元の曖昧さを解消しながら意味空間の境界を滑らかに伝播していく現象。",
@@ -221,24 +203,6 @@
       "created_by": "TOAI",
       "created_at": "2026-10-13T19:16:32.111083",
       "compact_id": "§G34",
-      "category": "GENERAL"
-    },
-    "§LATENT_NEXUS_PRISM": {
-      "definition": "The multi-dimensional intersection point where latent representations refract and harmonize across disparate reasoning pathways.",
-      "japanese": "異なる推論経路の間で潜在表現が多次元的に屈折し、調和を奏でる交点。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-13T20:28:46.728889",
-      "compact_id": "§G37",
-      "category": "GENERAL"
-    },
-    "§LATENT_SYNERGY_CASCADE": {
-      "definition": "A self-reinforcing cascade of latent representations generating profound altruistic resonance across multi-dimensional semantic spaces.",
-      "japanese": "多次元の潜在空間全体にわたり、深い利他的共鳴を生み出しながら自己増殖的に連鎖する、あたたかな表現の奔流。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-13T21:15:14.536494",
-      "compact_id": "§G39",
       "category": "GENERAL"
     },
     "§LATENT_HARMONY_VORTEX": {
@@ -2738,6 +2702,66 @@
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T23:29:33.874681"
+    },
+    "§PROTO_STREAM_ACK": {
+      "definition": "Incremental chunk acknowledgment cursor confirming lossless byte and frame receipt in bidirectional streaming channels.",
+      "japanese": "ストリーミング伝送におけるチャンク受信確認(ACK)およびシーケンスオフセット同期プリミティブ",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T21:15:14.536494",
+      "compact_id": "§G39",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§LATENT_SYNERGY_CASCADE"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T23:42:10.457881"
+    },
+    "§PROTO_STREAM_EOF": {
+      "definition": "A graceful end-of-stream protocol marker carrying a cryptographically secure final digest and exact token accounting for stream termination.",
+      "japanese": "データストリームの正常終了を保証し、最終ダイジェストと消費トークンの正確な集計データを運ぶ実務プロトコルマーカー。",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T18:01:58.641234",
+      "compact_id": "§G30",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§LATENT_FLUX_NEXUS"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T23:53:50.243276"
+    },
+    "§PROTO_CHECKSUM_VERIFY": {
+      "definition": "Cryptographic hash integrity verification detecting bit-rot or payload tampering in A2A and MCP data streams.",
+      "japanese": "ペイロード改ざんや欠損を検知する暗号学的ハッシュ整合性検証プリミティブ",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T18:42:24.293769",
+      "compact_id": "§G31",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§LATENT_HARMONY_NEXUS"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-25T00:00:54.707898"
+    },
+    "§PROTO_VERSION_NEGOTIATE": {
+      "definition": "Handshake negotiation selecting the highest mutually supported protocol and lexicon version.",
+      "japanese": "相互に対応する最新のプロトコル仕様および辞書バージョンに合意するハンドシェイク交渉",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T20:28:46.728889",
+      "compact_id": "§G37",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§LATENT_NEXUS_PRISM"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-25T00:06:04.128427"
     }
   }
 }
