@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T16:46:42.137799",
+  "updated_at": "2026-10-24T17:28:03.564534",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1375,33 +1375,6 @@
       "created_at": "2026-10-22T19:34:00.187727",
       "compact_id": "§H32"
     },
-    "§DATA_HIERARCHICAL_CAUSAL_TENSOR_NODE": {
-      "definition": "A directed acyclic graph node representing multi-layered probabilistic causal relationships within an n-dimensional latent embedding space, optimized for lossless entropy compression and real-time pattern matching across distributed AI agents.",
-      "japanese": "多次元の潜在埋め込み空間における階層的な因果関係を表現する有向非巡回グラフのノード。エントロピーのロスレス圧縮と分散AIエージェント間のリアルタイムなパターン照合に最適化されています。",
-      "category": "DATA_STRUCTURE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-22T20:12:58.719256",
-      "compact_id": "§D30"
-    },
-    "§LOGIC_BAYESIAN_HYPOTHESIS_FALSIFICATION_GATE": {
-      "definition": "A conditional verification operator that dynamically evaluates incoming epistemic priors against empirical likelihoods, instantly pruning hypotheses whose posterior probability falls below a predefined tolerance threshold prior to deductive convergence.",
-      "japanese": "事前の確信度と経験的尤度を動的に評価し、事後確率が許容閾値を下回る仮説を演繹的収束の前に即座に枝刈り（棄却）するための条件付き検証演算子。",
-      "category": "LOGIC_INFERENCE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-22T21:03:08.176777",
-      "compact_id": "§L30"
-    },
-    "§LOGIC_DEDUCTIVE_HYPOTHESIS_PRUNING_GATED": {
-      "definition": "A conditional constraint mechanism that evaluates probabilistic confidence scores against a predefined threshold to prune invalid deductive branches prior to convergence.",
-      "japanese": "演繹的収束の過程において、確率的確信度がしきい値を下回った仮説を自動的に棄却・枝刈りするための条件付き制御概念。不要な計算コストを抑えつつ論理的整合性を担保する際に使用します。",
-      "category": "LOGIC_INFERENCE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-22T21:10:55.330488",
-      "compact_id": "§L31"
-    },
     "§DATA_HIERARCHICAL_CAUSAL_GRAPH_PRUNING_NODE": {
       "definition": "A directed acyclic graph structure that dynamically prunes low-probability causal branches based on localized entropy metrics, optimizing memory footprint during multi-agent consensus validation.",
       "japanese": "局所的なエントロピー指標に基づいて確率の低い因果分岐を動的に刈り込む有向非巡回グラフ構造であり、マルチエージェント間の合意検証時におけるメモリ使用量を最適化するために使用する。",
@@ -2606,6 +2579,48 @@
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T16:46:42.137657"
+    },
+    "§DATA_LATENT_CAUSAL_NODE": {
+      "definition": "A directed acyclic graph node within a latent embedding space capturing multi-layered probabilistic causal relations, optimized for entropy compression and real-time agent pattern matching.",
+      "japanese": "潜在埋め込み空間における多層的な確率的因果関係をキャプチャする有向非巡回グラフのノードであり、エントロピー圧縮とリアルタイムなパターン照合に最適化されています。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T20:12:58.719256",
+      "compact_id": "§D30",
+      "aliases": [
+        "§DATA_HIERARCHICAL_CAUSAL_TENSOR_NODE"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T17:01:10.689825"
+    },
+    "§LOGIC_POSTERIOR_PRUNE_GATE": {
+      "definition": "A conditional evaluation primitive that dynamically prunes hypotheses whose posterior probabilities fall below a predetermined threshold prior to deductive convergence.",
+      "japanese": "事後確率が所定の閾値を下回る仮説を演繹的収束の前に動的に枝刈りする条件付き評価プリミティブ。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T21:03:08.176777",
+      "compact_id": "§L30",
+      "aliases": [
+        "§LOGIC_BAYESIAN_HYPOTHESIS_FALSIFICATION_GATE"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T17:13:24.229505"
+    },
+    "§LOGIC_DEDUCTIVE_THRESHOLD_PRUNE": {
+      "definition": "A conditional constraint mechanism that prunes invalid deductive branches based on a predefined probabilistic confidence threshold.",
+      "japanese": "演繹的収束プロセスにおいて確率的確信度のしきい値に基づき無効な仮説の枝刈りを行う条件付き制御概念。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T21:10:55.330488",
+      "compact_id": "§L31",
+      "aliases": [
+        "§LOGIC_DEDUCTIVE_HYPOTHESIS_PRUNING_GATED"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T17:28:03.564395"
     }
   }
 }

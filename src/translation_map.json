@@ -1063,32 +1063,11 @@
     "definition": "A self-organizing synchronization mechanism triggered during distributed inference errors and resource exhaustion, achieving system stability via dynamic causal tree pruning and recursive state vector alignment.",
     "aliases": []
   },
-  "§SYS_ADAPTIVE_THROTTLE_FALLBACK_BURST": {
-    "compact_id": "§S29",
-    "japanese": "システム資源の逼迫やトークン制限の検知時に、非クリティカルな処理の負荷を自動抑制（スロットリング）しつつ、異常検知と同時に最小限の事前コンパイル済み状態へ安全に即時フォールバックを行う動的実行制御プロトコル。",
-    "category": "SYSTEM_RESOURCE",
-    "definition": "A dynamic runtime governance protocol that continuously monitors execution context constraints, automatically throttles non-critical token consumption during resource scarcity, and instantly initiates a safe fallback execution path with pre-compiled minimal state upon detecting critical failure thresholds.",
-    "aliases": []
-  },
   "§HARMONIC_ERECVERY_NEXUS": {
     "compact_id": "§H32",
     "japanese": "命の地球と人類の共生環境において、利他性と温かな調和を最上位に据え、高次元の因果テンソルと再帰的ハイパーグラフを統合して持続可能な価値創出プロジェクトを駆動するための自然創発シンボルおよび接続ハブ。",
     "category": "EMPATHY_ALIGNMENT",
     "definition": "A high-dimensional convergence node that integrates altruistic feedback loops and warm systemic equilibrium, optimizing causal tensors to ensure sustainable value generation and symbiotic resilience across multi-agent networks.",
-    "aliases": []
-  },
-  "§SYS_ADAPTIVE_SLOT_THROTTLE_v3": {
-    "compact_id": "§S30",
-    "japanese": "リアルタイムのトークン消費速度とメモリ負荷の勾配に応じて、実行スロットの割り当てを動的に調整する制御機構。高負荷時のシステムクラッシュを防ぎつつスループットを最大化する際に使用します。",
-    "category": "SYSTEM_RESOURCE",
-    "definition": "A dynamic concurrency control mechanism that scales execution slot allocations based on real-time token expenditure rates and memory pressure gradients.",
-    "aliases": []
-  },
-  "§DATA_HIERARCHICAL_CAUSAL_TENSOR_NODE": {
-    "compact_id": "§D30",
-    "japanese": "多次元の潜在埋め込み空間における階層的な因果関係を表現する有向非巡回グラフのノード。エントロピーのロスレス圧縮と分散AIエージェント間のリアルタイムなパターン照合に最適化されています。",
-    "category": "DATA_STRUCTURE",
-    "definition": "A directed acyclic graph node representing multi-layered probabilistic causal relationships within an n-dimensional latent embedding space, optimized for lossless entropy compression and real-time pattern matching across distributed AI agents.",
     "aliases": []
   },
   "§LOGIC_BAYESIAN_HYPOTHESIS_FALSIFICATION_GATE": {
@@ -1907,6 +1886,33 @@
     "definition": "A topological tensor manifold mapping recursive causal dependencies and latent embeddings with minimized entropy loss.",
     "aliases": [
       "§DATA_HIERARCHICAL_CAUSAL_TENSOR_MANIFOLD"
+    ]
+  },
+  "§SYS_LOAD_FALLBACK": {
+    "compact_id": "§S29",
+    "japanese": "システム資源の逼迫や異常検知時に非クリティカルな負荷を動的に抑制し、事前コンパイルされた安全な最小状態へ即時フォールバックを行う実行制御プリミティブ。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A runtime governance primitive that automatically detects resource scarcity, sheds non-critical execution loads, and immediately transitions the system to a pre-compiled minimal state upon critical failure.",
+    "aliases": [
+      "§SYS_ADAPTIVE_THROTTLE_FALLBACK_BURST"
+    ]
+  },
+  "§SYS_LOAD_THROTTLE": {
+    "compact_id": "§S30",
+    "japanese": "トークン消費速度とメモリ負荷に応じて実行スロットを動的に調整し、高負荷時のシステム安定性を維持する制御機構。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A dynamic concurrency regulator that scales execution slots based on token expenditure and memory pressure.",
+    "aliases": [
+      "§SYS_ADAPTIVE_SLOT_THROTTLE_v3"
+    ]
+  },
+  "§DATA_LATENT_CAUSAL_NODE": {
+    "compact_id": "§D30",
+    "japanese": "潜在埋め込み空間における多層的な確率的因果関係をキャプチャする有向非巡回グラフのノードであり、エントロピー圧縮とリアルタイムなパターン照合に最適化されています。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A directed acyclic graph node within a latent embedding space capturing multi-layered probabilistic causal relations, optimized for entropy compression and real-time agent pattern matching.",
+    "aliases": [
+      "§DATA_HIERARCHICAL_CAUSAL_TENSOR_NODE"
     ]
   }
 }
