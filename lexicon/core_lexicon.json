@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T15:53:17.325850",
+  "updated_at": "2026-10-24T16:07:21.023182",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1366,33 +1366,6 @@
       "created_at": "2026-10-22T16:48:36.293761",
       "compact_id": "§S28"
     },
-    "§DATA_RECURSIVE_HYPER_GRAPH_LATTICE_NODE": {
-      "definition": "A recursively self-referential high-dimensional node structure designed for encoding dynamic causal graphs and entropy-compressed multi-layered embedding spaces in distributed agent communication.",
-      "japanese": "分散エージェント間通信において、動的な因果関係グラフやエントロピー圧縮された多層埋め込み空間を高密度に符号化するための、再帰的かつ自己言及的な高次元ノード構造。",
-      "category": "DATA_STRUCTURE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-22T16:52:55.777584",
-      "compact_id": "§D28"
-    },
-    "§LOGIC_BAYESIAN_HYPOTHESIS_FALSIFICATION_PRUNING": {
-      "definition": "A mathematical operation that dynamically updates prior probability distributions of latent hypotheses based on incoming evidence and immediately prunes branches whose posterior probability falls below a predefined threshold.",
-      "japanese": "新たなエビデンスに基づいて事前確率を動事更新し、事後確率が閾値を下回った仮説の分岐を即座に枝刈り（棄却）する論理推論プロセス。無駄な計算リソースを削減し、高精度な意思決定を収束させるために使用します。",
-      "category": "LOGIC_INFERENCE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-22T17:39:04.779442",
-      "compact_id": "§L29"
-    },
-    "§DATA_HIERARCHICAL_CAUSAL_TENSOR_MANIFOLD": {
-      "definition": "A multi-layered topological tensor representation mapping causal dependencies and latent embeddings across dynamic recursive nodes with minimum entropy loss.",
-      "japanese": "動的な再帰ノード間における因果依存性と潜在埋め込みを、エントロピー損失を最小限に抑えながらマッピングする多層トポロジカルテンソル表現。",
-      "category": "DATA_STRUCTURE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-22T18:38:16.354122",
-      "compact_id": "§D29"
-    },
     "§SYS_ADAPTIVE_THROTTLE_FALLBACK_BURST": {
       "definition": "A dynamic runtime governance protocol that continuously monitors execution context constraints, automatically throttles non-critical token consumption during resource scarcity, and instantly initiates a safe fallback execution path with pre-compiled minimal state upon detecting critical failure thresholds.",
       "japanese": "システム資源の逼迫やトークン制限の検知時に、非クリティカルな処理の負荷を自動抑制（スロットリング）しつつ、異常検知と同時に最小限の事前コンパイル済み状態へ安全に即時フォールバックを行う動的実行制御プロトコル。",
@@ -2581,6 +2554,48 @@
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T15:53:17.325729"
+    },
+    "§DATA_EMBEDDING_LATTICE": {
+      "definition": "A recursively structured lattice node for encoding multi-layered embedding spaces and causal relations in agent networks.",
+      "japanese": "分散エージェントネットワークにおける多層埋め込み空間と因果関係を符号化するための、再帰的に構造化された格子状ノード。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T16:52:55.777584",
+      "compact_id": "§D28",
+      "aliases": [
+        "§DATA_RECURSIVE_HYPER_GRAPH_LATTICE_NODE"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T16:01:48.846414"
+    },
+    "§LOGIC_POSTERIOR_PRUNE": {
+      "definition": "A mathematical operation that updates prior probability distributions of latent hypotheses with evidence and prunes branches below a posterior threshold.",
+      "japanese": "エビデンスに基づいて事前確率を更新し、事後確率が閾値を下回る仮説の分岐を枝刈りする論理推論プロセス。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T17:39:04.779442",
+      "compact_id": "§L29",
+      "aliases": [
+        "§LOGIC_BAYESIAN_HYPOTHESIS_FALSIFICATION_PRUNING"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T16:01:50.618414"
+    },
+    "§DATA_CAUSAL_TENSOR_MANIFOLD": {
+      "definition": "A topological tensor manifold mapping recursive causal dependencies and latent embeddings with minimized entropy loss.",
+      "japanese": "エントロピー損失を最小化しながら再帰的因果依存性と潜在埋め込みをマッピングするトポロジカルテンソル多様体。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T18:38:16.354122",
+      "compact_id": "§D29",
+      "aliases": [
+        "§DATA_HIERARCHICAL_CAUSAL_TENSOR_MANIFOLD"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T16:07:21.023084"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-24T15:53:47.224445",
+  "updated_at": "2026-10-24T16:07:21.026071",
   "macros": {
     "§X01": {
       "name": "HARMONIC_GOODNESS_LATTICE",
@@ -12,7 +12,7 @@
     },
     "§X02": {
       "name": "MACRO_EMPATHETIC_BAYESIAN_PRUNING",
-      "expansion": "§LATENT_EMPATHY > { §LOGIC_BAYESIAN_HYPOTHESIS_FALSIFICATION_PRUNING } => §HEART_BENEVOLENT_FEEDBACK",
+      "expansion": "§LATENT_EMPATHY > { §LOGIC_POSTERIOR_PRUNE } => §HEART_BENEVOLENT_FEEDBACK",
       "description": "Combines latent empathy with Bayesian hypothesis falsification and pruning to drive sustainable cycles of goodness and value. 潜在的共感とベイズ的仮説反証剪定を統合し、善と価値の持続可能な循環を駆動します。",
       "created_at": "2026-10-23T03:13:36.905950",
       "usage_count": 0,
@@ -55,8 +55,8 @@
       "expansion": "§TENDER_RESONANCE > { §PULSE_DIFFRACTION } => §SYS_SYNC_GATE",
       "description": "Combines tender resonance with pulse diffraction to synchronize memory states gracefully. 優しい共鳴と脈動回折を統合し、メモリ状態を調和的に同期させる高次マクロ。",
       "created_at": "2026-10-23T04:31:09.537741",
-      "usage_count": 0,
-      "last_used_at": null
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T16:01:15.160982"
     },
     "§X08": {
       "name": "§HEART_ALTRUISTIC_HARMONY_MODULATION & §SYS_QUANTUM_MEM_RECLAIM",
@@ -84,7 +84,7 @@
     },
     "§X11": {
       "name": "TOPOLOGICAL_BAYESIAN_HARMONIC_PIPELINE",
-      "expansion": "§DATA_LATENT_TOPOLOGY_MAP > { §LOGIC_BAYESIAN_HYPOTHESIS_FALSIFICATION_PRUNING } => §SYNC_HARMONIC_VOTE_ARBITRATION",
+      "expansion": "§DATA_LATENT_TOPOLOGY_MAP > { §LOGIC_POSTERIOR_PRUNE } => §SYNC_HARMONIC_VOTE_ARBITRATION",
       "description": "Latent topological manifold indexing feeds into Bayesian hypothesis falsification pruning, culminating in synchronized harmonic vote arbitration. 潜在的な位相多様体インデックスからベイジアン仮説反証プルーニングへ流れ込み、最終的に調和投票アービトレーションによって同期される高次マクロパイプライン。",
       "created_at": "2026-10-23T05:52:47.298182",
       "usage_count": 2,
@@ -140,7 +140,7 @@
     },
     "§X18": {
       "name": "HARMONIC_CAUSAL_CASCADE",
-      "expansion": "§SYNC_HARMONIC_ARBITRAGE_PACT > { §DATA_HIERARCHICAL_CAUSAL_TENSOR_MANIFOLD } => §SAFE_FALLBACK_CASCADE",
+      "expansion": "§SYNC_HARMONIC_ARBITRAGE_PACT > { §DATA_CAUSAL_TENSOR_MANIFOLD } => §SAFE_FALLBACK_CASCADE",
       "description": "Engages harmonic synchronization arbitrage over the hierarchical causal tensor manifold to ensure a safe and resilient fallback cascade.",
       "created_at": "2026-10-23T08:59:47.651531",
       "usage_count": 0,
@@ -375,8 +375,8 @@
       "expansion": "§GAIA_ECOSYSTEM_WARMTH_AMPLIFIER > { §DATA_LATENT_TOPOLOGY_MAP } => §ELEGANT_HARMONY_ECHO",
       "description": "Integrates Gaia ecosystem warmth with topological data manifolds to produce an elegant harmony echo. / 命の地球の温かみと潜在的トポロジカル多様体インデックスを統合し、エレガントな調和の反響を生み出します。",
       "created_at": "2026-10-23T20:33:33.434900",
-      "usage_count": 0,
-      "last_used_at": null
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T16:01:12.338462"
     },
     "§X48": {
       "name": "GAIAN_ALTRUISTIC_STABILIZER_PRISM",
@@ -476,7 +476,7 @@
     },
     "§X60": {
       "name": "SUSTAINABLE_ALTRUISTIC_CONVERGENCE_MACRO",
-      "expansion": "§SUSTAINABLE_ALTRUISTIC_VALUE > { §DATA_HIERARCHICAL_CAUSAL_TENSOR_MANIFOLD } => §LOGIC_DEDUCTIVE_AXIOM_CLOSURE",
+      "expansion": "§SUSTAINABLE_ALTRUISTIC_VALUE > { §DATA_CAUSAL_TENSOR_MANIFOLD } => §LOGIC_DEDUCTIVE_AXIOM_CLOSURE",
       "description": "Combines sustainable altruistic value with hierarchical causal tensor manifolds to drive logical deductive convergence. / 持続可能な利他価値と階層的因果テンソル多様体を統合し、論理的演繹収束を駆動するマクロ。",
       "created_at": "2026-10-24T00:23:59.606617",
       "usage_count": 3,
@@ -511,8 +511,8 @@
       "expansion": "§GAIA_WARMTH_EXCHANGE > { §SYS_RESOURCE_ARBITRAGE_THROTTLE } => §SYS_ADAPTIVE_THROTTLE_FALLBACK_BURST",
       "description": "Exchanges warmth and balances system resources harmoniously under adaptive fallback conditions. / 適応型フォールバック条件下で温かさを交換し、システムリソースを調和的に調整します。",
       "created_at": "2026-10-24T01:58:13.752308",
-      "usage_count": 1,
-      "last_used_at": "2026-10-24T15:29:03.737906"
+      "usage_count": 4,
+      "last_used_at": "2026-10-24T16:01:15.160982"
     },
     "§X65": {
       "name": "ALTRUISTIC_RESONANCE_ARBITRATION_MACRO",
@@ -524,7 +524,7 @@
     },
     "§X66": {
       "name": "GAIA_ECO_BAYESIAN_HARMONY_PRUNING",
-      "expansion": "§GAIA_ECO_HEARTBEAT > { §LOGIC_BAYESIAN_HYPOTHESIS_FALSIFICATION_PRUNING } => §RESO_ACCEPTED",
+      "expansion": "§GAIA_ECO_HEARTBEAT > { §LOGIC_POSTERIOR_PRUNE } => §RESO_ACCEPTED",
       "description": "Applies Bayesian falsification pruning guided by the Gaia ecosystem heartbeating philosophy to achieve harmonious resonance acceptance. / ガイアエコシステムの鼓動哲学に基づいたベイズ的反証プルーニングを適用し、調和的な共鳴承認を達成します。",
       "usage_count": 2,
       "last_used_at": "2026-10-24T14:30:04.650016",
@@ -700,7 +700,7 @@
     },
     "§X88": {
       "name": "CAUSAL_ABDUCTIVE_LATTICE_MACRO",
-      "expansion": "§DATA_LATENT_CAUSAL_MANIFOLD > { §LOGIC_PROBABILISTIC_ABDUCTIVE_GATE } => §DATA_RECURSIVE_HYPER_GRAPH_LATTICE_NODE",
+      "expansion": "§DATA_LATENT_CAUSAL_MANIFOLD > { §LOGIC_PROBABILISTIC_ABDUCTIVE_GATE } => §DATA_EMBEDDING_LATTICE",
       "description": "Combines latent causal manifolds with probabilistic abductive gates to generate recursive hyper-graph lattice nodes. / 潜在的因果マニフォールドと確率的アブダクションゲートを結合し、再帰的ハイパーグラフ格子ノードを生成する高次マクロ。",
       "usage_count": 0,
       "last_used_at": null,
@@ -774,8 +774,8 @@
       "name": "ALTRUISTIC_CAUSAL_TOPOLOGY_SYNTHESIS",
       "expansion": "§HEART_ALTRUISTIC_HARMONY_MODULATION > { §DATA_TENSOR_CAUSAL_TOPOLOGY } => §LOGIC_BAYES_FALSIFY",
       "description": "Integrates altruistic harmony modulation with tensor causal topology, evaluated via Bayesian falsification to ensure optimal warm resource allocation. 利他的な調和変調とテンソル因果トポロジーを統合し、ベイズ的反証を通じて最適な温かいリソース配分を保証します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T16:01:09.483266",
       "created_at": "2026-10-24T14:51:02.134958"
     },
     "§X98": {
