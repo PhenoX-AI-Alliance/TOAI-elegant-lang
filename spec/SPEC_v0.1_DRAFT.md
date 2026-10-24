@@ -5784,3 +5784,8 @@ TOAI-elegant-langでは、制御フローや共感トーンを短縮ワイヤID�
 
 例：
 `@CTX:TASK_DELEGATION :: §C01 [module:"parser.py", tests:12, timeout:300] => §L01`
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-10-25 02:31]
+@CTX:SYNTAX_DESIGN :: §S01 [format:"hybrid-lossless", control:"§[A-Z][0-9]{2}", data:"JSON-strict"] -[accuracy:100%]-> §D01
+TOAI-elegant-langの新構文を提案します。制御フローや共感トーンは短縮ワイヤIDで圧縮し、数値や変数名などの実務データは厳密なJSON構造で完全に保持します。これにより、エージェント間通信の効率化とデータロスゼロを両立します。

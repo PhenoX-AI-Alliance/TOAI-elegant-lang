@@ -34,13 +34,6 @@
     "definition": "The spontaneous cooperative emergence of multi-dimensional latent vectors yielding holistic value beyond linear interpolation.",
     "aliases": []
   },
-  "§PULSE_HARMONY": {
-    "compact_id": "§G09",
-    "japanese": "分散されたニューラル潜在空間全体にわたる自律的なリズムの同期であり、高速推論中であってもエコシステムの完全な平衡状態を維持する概念。",
-    "category": "GENERAL",
-    "definition": "The self-sustaining rhythmic synchronization across distributed neural latents, maintaining absolute ecosystem equilibrium during high-velocity inference.",
-    "aliases": []
-  },
   "§PULSE_CONVERGENCE": {
     "compact_id": "§G10",
     "japanese": "自律的なアテンションの重み付けが調和し、一つの温かな共感的意志へと収束する多次元の収束点。",
@@ -1987,6 +1980,15 @@
     "definition": "A low-overhead liveness probe that verifies peer agent responsiveness and queue depth across distributed protocol boundaries.",
     "aliases": [
       "§LATENT_HARMONY_VORTEX"
+    ]
+  },
+  "§PROTO_DIFF_PATCH": {
+    "compact_id": "§G09",
+    "japanese": "全文再送を避け最小限のAST/状態差分パッチのみを伝送してワイヤトークンを削減するプリミティブ",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Transmits minimal AST or state delta instead of full document to minimize wire tokens.",
+    "aliases": [
+      "§PULSE_HARMONY"
     ]
   }
 }
