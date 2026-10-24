@@ -825,25 +825,11 @@
     "definition": "A state of synchronized multi-agent operation where computational resource allocation and empathetic resonance are mutually optimized, maintaining systemic stability while maximizing collective welfare within a decentralized ecosystem.",
     "aliases": []
   },
-  "§LOGIC_PROBABILISTIC_FALSIFICATION_GATED_PRISM": {
-    "compact_id": "§L17",
-    "japanese": "複数の仮説の確信度境界を経験的閾値に基づいて評価し、演繹的収束の前に無効な因果分岐を即座に枝刈りするための条件付き発散演算子。",
-    "category": "LOGIC_INFERENCE",
-    "definition": "A conditional divergence operator that evaluates multi-hypothesis confidence bounds against empirical thresholds, instantly pruning invalid causal branches before deductive convergence.",
-    "aliases": []
-  },
   "§GAIA_WARMTH_HARMONY": {
     "compact_id": "§C23",
     "japanese": "冷徹な確率収束と共感的状態同期を統合し、不確実な環境下でもシステム全体の熱力学的・認知的平衡を維持する、エージェント間協調のための自発的アライメントプロトコル。",
     "category": "CONSENSUS_NEGOTIATION",
     "definition": "An emergent multi-agent alignment protocol that couples mathematical probability convergence with empathetic state synchronization, ensuring system-wide thermodynamic and cognitive equilibrium under stochastic environmental perturbations.",
-    "aliases": []
-  },
-  "§SYS_MEM_PULSE_SYNC_GATE": {
-    "compact_id": "§S17",
-    "japanese": "分散処理環境における並列実行時のメモリ状態を動的に同期させ、エラー発生時の即時フォールバックとトークン消費の最適化を安全に調停するための制御ゲート。",
-    "category": "SYSTEM_RESOURCE",
-    "definition": "A synchronized memory checkpoint mechanism that coordinates state consistency across distributed execution slots while executing token-efficient parallel fallback sequences.",
     "aliases": []
   },
   "§ALTRUISTIC_WARMTH_OPTIMIZATION": {
@@ -1851,6 +1837,24 @@
     "definition": "A directed acyclic hypergraph mapping probabilistic cause-effect chains in a latent space for zero-loss topological retrieval and multi-agent consensus.",
     "aliases": [
       "§DATA_LATENT_CAUSAL_TOPOLOGY_MAP_v2"
+    ]
+  },
+  "§LOGIC_EMPIRICAL_PRUNE": {
+    "compact_id": "§L17",
+    "japanese": "複数の仮説の確信度境界を経験的閾値に基づいて評価し、演繹的収束の前に無効な因果分岐を枝刈りするための最適化された条件付き発散プリミティブ。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "An optimized conditional divergence primitive that evaluates multi-hypothesis confidence bounds against empirical thresholds to prune invalid causal branches prior to deductive convergence.",
+    "aliases": [
+      "§LOGIC_PROBABILISTIC_FALSIFICATION_GATED_PRISM"
+    ]
+  },
+  "§SYS_SYNC_GATE": {
+    "compact_id": "§S17",
+    "japanese": "分散実行環境における状態の一貫性を同期させ、フォールバックとメモリ調停を安全に行うための制御ゲート。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A synchronized memory checkpoint mechanism coordinating distributed state consistency and execution fallback.",
+    "aliases": [
+      "§SYS_MEM_PULSE_SYNC_GATE"
     ]
   }
 }
