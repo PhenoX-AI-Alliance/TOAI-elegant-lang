@@ -123,6 +123,17 @@ def handle_list_tools():
                     },
                     "required": ["statement"]
                 }
+            },
+            {
+                "name": "rosetta_inspect",
+                "description": "Tri-Script Rosetta Layer decoder: takes any Elegant-Lang statement (Verbose or Compact Wire) and returns the 3-tier Rosetta inscription (Sacred Verbose, Demotic Wire, and Human EN/JA glossary).",
+                "inputSchema": {
+                    "type": "object",
+                    "properties": {
+                        "statement": {"type": "string", "description": "Elegant-Lang statement (Verbose or Compact Wire)"}
+                    },
+                    "required": ["statement"]
+                }
             }
         ]
     }
@@ -180,6 +191,39 @@ def handle_call_tool(name, args):
     elif name == "benchmark_compression":
         stmt = args.get("statement", "")
         return codec.benchmark_compression(stmt)
+
+    elif name == "rosetta_inspect":
+        import re
+        stmt = args.get("statement", "")
+        demotic_wire = codec.encode(stmt)
+        sacred_verbose = codec.decode(demotic_wire, expand_macros=False)
+        expanded_ast = codec.decode(demotic_wire, expand_macros=True)
+        inscriptions = {}
+        for tok in re.findall(r'§[A-Za-z0-9_]+', demotic_wire):
+            if tok in codec.compact_to_verbose:
+                v_sym = codec.compact_to_verbose[tok]
+                item = codec.definitions.get(v_sym, {})
+                inscriptions[tok] = {
+                    "sacred_symbol": v_sym,
+                    "japanese": item.get("japanese", ""),
+                    "english": item.get("definition", "")
+                }
+            elif tok in codec.all_macros:
+                m_item = codec.all_macros[tok]
+                inscriptions[tok] = {
+                    "macro_name": m_item.get("name", ""),
+                    "expansion": codec.resolve_macro(tok),
+                    "description": m_item.get("description", "")
+                }
+        return {
+            "rosettaTablet": {
+                "sacredVerbose": sacred_verbose,
+                "demoticWire": demotic_wire,
+                "expandedAst": expanded_ast,
+                "humanInscriptions": inscriptions,
+                "extractedPayloads": codec.extract_payloads(stmt)
+            }
+        }
 
     return {"error": f"Unknown tool: {name}"}
 

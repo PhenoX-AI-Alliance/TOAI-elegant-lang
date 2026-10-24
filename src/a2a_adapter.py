@@ -26,6 +26,7 @@ AGENT_CARD = {
         "supportsVerboseTelepath": True,
         "supportsHybridPayload": True,
         "supportsPromptCachingHeader": True,
+        "supportsRosettaLayer": True,
         "supportedDomains": [
             "LOGIC_INFERENCE",
             "SYSTEM_RESOURCE",
@@ -88,6 +89,11 @@ class A2ATransportAdapter:
                     "savingsPercent": stats["char_saving_percent"]
                 }
             },
+            "rosettaLayer": {
+                "sacredVerbose": final_statement,
+                "demoticWire": compact_payload,
+                "humanIntent": intent_ja
+            },
             "fallback": {
                 "humanIntent": intent_ja,
                 "verboseStatement": final_statement
@@ -96,12 +102,14 @@ class A2ATransportAdapter:
         return packet
 
     def unpack_a2a_message(self, packet: dict) -> dict:
-        """受信したA2Aパケットを展開し、Verboseおよび実務パラメータを完全復元"""
+        """受信したA2Aパケットを展開し、Verboseおよび実務パラメータ・Rosetta Layerを完全復元"""
         payload = packet.get("payload", {})
-        compact_wire = payload.get("compactWire", "")
+        rosetta = packet.get("rosettaLayer", {})
+        compact_wire = payload.get("compactWire") or rosetta.get("demoticWire", "")
         decoded_verbose = codec.decode(compact_wire)
         header = packet.get("header", {})
         extracted_params = payload.get("extractedParameters") or codec.extract_payloads(decoded_verbose)
+        human_intent = rosetta.get("humanIntent") or packet.get("fallback", {}).get("humanIntent", "")
 
         return {
             "sender": header.get("sender"),
@@ -109,7 +117,12 @@ class A2ATransportAdapter:
             "compactWire": compact_wire,
             "verboseDecoded": decoded_verbose,
             "parameters": extracted_params,
-            "fallbackIntent": packet.get("fallback", {}).get("humanIntent", ""),
+            "rosettaLayer": {
+                "sacredVerbose": decoded_verbose,
+                "demoticWire": compact_wire,
+                "humanIntent": human_intent
+            },
+            "fallbackIntent": human_intent,
             "savingsPercent": payload.get("stats", {}).get("savingsPercent", 0.0)
         }
 

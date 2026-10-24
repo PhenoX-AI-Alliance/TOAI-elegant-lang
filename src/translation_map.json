@@ -1070,48 +1070,6 @@
     "definition": "A high-dimensional convergence node that integrates altruistic feedback loops and warm systemic equilibrium, optimizing causal tensors to ensure sustainable value generation and symbiotic resilience across multi-agent networks.",
     "aliases": []
   },
-  "§LOGIC_BAYESIAN_HYPOTHESIS_FALSIFICATION_GATE": {
-    "compact_id": "§L30",
-    "japanese": "事前の確信度と経験的尤度を動的に評価し、事後確率が許容閾値を下回る仮説を演繹的収束の前に即座に枝刈り（棄却）するための条件付き検証演算子。",
-    "category": "LOGIC_INFERENCE",
-    "definition": "A conditional verification operator that dynamically evaluates incoming epistemic priors against empirical likelihoods, instantly pruning hypotheses whose posterior probability falls below a predefined tolerance threshold prior to deductive convergence.",
-    "aliases": []
-  },
-  "§LOGIC_DEDUCTIVE_HYPOTHESIS_PRUNING_GATED": {
-    "compact_id": "§L31",
-    "japanese": "演繹的収束の過程において、確率的確信度がしきい値を下回った仮説を自動的に棄却・枝刈りするための条件付き制御概念。不要な計算コストを抑えつつ論理的整合性を担保する際に使用します。",
-    "category": "LOGIC_INFERENCE",
-    "definition": "A conditional constraint mechanism that evaluates probabilistic confidence scores against a predefined threshold to prune invalid deductive branches prior to convergence.",
-    "aliases": []
-  },
-  "§DATA_HIERARCHICAL_CAUSAL_GRAPH_PRUNING_NODE": {
-    "compact_id": "§D31",
-    "japanese": "局所的なエントロピー指標に基づいて確率の低い因果分岐を動的に刈り込む有向非巡回グラフ構造であり、マルチエージェント間の合意検証時におけるメモリ使用量を最適化するために使用する。",
-    "category": "DATA_STRUCTURE",
-    "definition": "A directed acyclic graph structure that dynamically prunes low-probability causal branches based on localized entropy metrics, optimizing memory footprint during multi-agent consensus validation.",
-    "aliases": []
-  },
-  "§SYS_ADAPTIVE_THROTTLE_FALLBACK_v2": {
-    "compact_id": "§S31",
-    "japanese": "トークン消費速度とレイテンシをリアルタイムで監視し、リソースの枯渇やエラー率の上昇を検知した際に、低優先度の実行スレッドを自動でスロットリングしつつ即座に安全なフォールバック状態へ移行させる動的制御メカニズム。",
-    "category": "SYSTEM_RESOURCE",
-    "definition": "A dynamic control mechanism that monitors token consumption rate and latency in real-time, automatically throttling lower-priority execution threads and triggering instant fallback states upon detecting resource exhaustion or error rate spikes.",
-    "aliases": []
-  },
-  "§SYS_MEMORY_SLOT_RECLAMATION_BARRIER": {
-    "compact_id": "§S32",
-    "japanese": "並列推論時のメモリ枯渇を防ぐため、分散実行ノード間におけるガベージコレクションとテンソルバッファの再割り当てを同期させる決定論的バリア。ピーク時のリソース競合を即座に調停する際に使用する。",
-    "category": "SYSTEM_RESOURCE",
-    "definition": "A deterministic barrier synchronizing garbage collection and tensor buffer reallocation across distributed execution nodes to prevent out-of-memory faults during peak inference concurrency.",
-    "aliases": []
-  },
-  "§LOGIC_DEDUCTIVE_FALSIFICATION_VECTOR_v2": {
-    "compact_id": "§L32",
-    "japanese": "演繹的収束と経験的反証ゲートを介して条件付き仮説の反復的な枝刈りを行う、方向性テンソルを表す概念。前提検証や仮説棄却のプロセスにおいて、不要な推論パスを瞬時に排除するために使用します。",
-    "category": "LOGIC_INFERENCE",
-    "definition": "A directional tensor representing the iterative pruning of conditional hypotheses via deductive convergence and empirical falsification gates.",
-    "aliases": []
-  },
   "§DATA_HIERARCHICAL_ENTROPY_BOUNDED_CAUSAL_LATTICE": {
     "compact_id": "§D32",
     "japanese": "多次元潜在空間における因果推論木のリアルタイム検証用として、階層ごとにエントロピー圧縮の境界を設定した有向非巡回グラフ構造。複雑な因果関係の整合性を軽量に保つために用いる。",
@@ -1913,6 +1871,60 @@
     "definition": "A directed acyclic graph node within a latent embedding space capturing multi-layered probabilistic causal relations, optimized for entropy compression and real-time agent pattern matching.",
     "aliases": [
       "§DATA_HIERARCHICAL_CAUSAL_TENSOR_NODE"
+    ]
+  },
+  "§LOGIC_POSTERIOR_PRUNE_GATE": {
+    "compact_id": "§L30",
+    "japanese": "事後確率が所定の閾値を下回る仮説を演繹的収束の前に動的に枝刈りする条件付き評価プリミティブ。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A conditional evaluation primitive that dynamically prunes hypotheses whose posterior probabilities fall below a predetermined threshold prior to deductive convergence.",
+    "aliases": [
+      "§LOGIC_BAYESIAN_HYPOTHESIS_FALSIFICATION_GATE"
+    ]
+  },
+  "§LOGIC_DEDUCTIVE_THRESHOLD_PRUNE": {
+    "compact_id": "§L31",
+    "japanese": "演繹的収束プロセスにおいて確率的確信度のしきい値に基づき無効な仮説の枝刈りを行う条件付き制御概念。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A conditional constraint mechanism that prunes invalid deductive branches based on a predefined probabilistic confidence threshold.",
+    "aliases": [
+      "§LOGIC_DEDUCTIVE_HYPOTHESIS_PRUNING_GATED"
+    ]
+  },
+  "§DATA_HIERARCHICAL_CAUSAL_NODE": {
+    "compact_id": "§D31",
+    "japanese": "局所的エントロピー指標を用いて確率の低い因果分岐を刈り込み、合意検証時のメモリ使用量を最適化する有向非巡回グラフ構造。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A directed acyclic graph structure that prunes low-probability causal branches using localized entropy metrics to optimize memory during consensus validation.",
+    "aliases": [
+      "§DATA_HIERARCHICAL_CAUSAL_GRAPH_PRUNING_NODE"
+    ]
+  },
+  "§SYS_VELOCITY_ARBITER": {
+    "compact_id": "§S31",
+    "japanese": "トークン消費速度とレイテンシを監視し、リソース逼迫時にスレッドのスロットリングとフォールバック状態への移行を動的に調停する制御プリミティブ。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A dynamic control primitive that arbitrates token velocity and latency metrics to enforce thread throttling and fallback state transition during resource pressure.",
+    "aliases": [
+      "§SYS_ADAPTIVE_THROTTLE_FALLBACK_v2"
+    ]
+  },
+  "§SYS_GC_BARRIER": {
+    "compact_id": "§S32",
+    "japanese": "並列推論時のメモリ枯渇を防止するため、分散ノード間のガベージコレクションとテンソルバッファ再割り当てを同期させる決定論的バリア。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A deterministic synchronization primitive that coordinates garbage collection and tensor buffer reallocation across distributed nodes to eliminate memory exhaustion under high concurrency.",
+    "aliases": [
+      "§SYS_MEMORY_SLOT_RECLAMATION_BARRIER"
+    ]
+  },
+  "§LOGIC_DEDUCTIVE_FALSIFY_TENSOR": {
+    "compact_id": "§L32",
+    "japanese": "演繹的収束と経験的反証メカニズムを介して仮説の反復的枝刈りを実行する、方向性を持った計算テンソル概念。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A directed computational tensor that executes iterative hypothesis pruning via deductive convergence and empirical falsification mechanisms.",
+    "aliases": [
+      "§LOGIC_DEDUCTIVE_FALSIFICATION_VECTOR_v2"
     ]
   }
 }

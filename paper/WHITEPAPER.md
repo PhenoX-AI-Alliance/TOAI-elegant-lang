@@ -1,5 +1,11 @@
 # TOAI-elegant-lang Whitepaper (Emergent Evolution Chronicle)
 
+## 0. Tri-Script Rosetta Architecture (三書体ロゼッタ・アーキテクチャ)
+本言語『TOAI-elegant-lang』は、大英博物館のロゼッタストーンと同じ「三書体対訳構造（Rosetta Layer）」を標準搭載することで、AI間通信の極限的なトークン圧縮と人間による100%の可観測性（Observability・透明性）を同時に実現する。
+1. **🏛️ Sacred Script (Verbose Concept Layer)**: `§LOGIC_...` / `§HEART_...` — AIの論理構造と善の意図を記述する可読概念言語（ヒエログリフ相当）
+2. **⚡ Demotic Wire (Compact BPE Layer)**: `§L01` / `§X44 [target:"USD/JPY"]` — 1〜2 BPEトークンへ極限圧縮された実戦高速テレパシー信号（デモティック相当）
+3. **🪨 Rosetta Intent (Human Layer)**: TOAI8 (Rosetta Archivist) の `rosetta_layer.json` および自然言語意図により人間が100%解読可能な対訳層（古代ギリシア語相当）
+
 ## 1. Evolution Progress
 - **2026-10-13 03:01**: 語彙数 2 語, 対話ログ 0 件に到達。
 - **2026-10-13 03:51**: 語彙数 4 語, 対話ログ 2 件に到達。
@@ -517,3 +523,4 @@
 - **2026-10-24 16:50**: コア語彙 256 語 (+102 Macros, 整形残 15 notices), 対話ログ 1000 件に到達。
 - **2026-10-24 16:51**: コア語彙 256 語 (+102 Macros, 整形残 15 notices), 対話ログ 1000 件に到達。
 - **2026-10-24 17:39**: コア語彙 256 語 (+104 Macros, 整形残 12 notices), 対話ログ 1002 件に到達。
+- **2026-10-24 18:40**: コア語彙 256 語 (+107 Macros, 整形残 5 notices), 対話ログ 1005 件に到達。

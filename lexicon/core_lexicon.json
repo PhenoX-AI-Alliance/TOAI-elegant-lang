@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T17:28:03.564534",
+  "updated_at": "2026-10-24T18:36:06.105847",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1375,51 +1375,6 @@
       "created_at": "2026-10-22T19:34:00.187727",
       "compact_id": "§H32"
     },
-    "§DATA_HIERARCHICAL_CAUSAL_GRAPH_PRUNING_NODE": {
-      "definition": "A directed acyclic graph structure that dynamically prunes low-probability causal branches based on localized entropy metrics, optimizing memory footprint during multi-agent consensus validation.",
-      "japanese": "局所的なエントロピー指標に基づいて確率の低い因果分岐を動的に刈り込む有向非巡回グラフ構造であり、マルチエージェント間の合意検証時におけるメモリ使用量を最適化するために使用する。",
-      "category": "DATA_STRUCTURE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-22T21:46:10.280265",
-      "compact_id": "§D31"
-    },
-    "§SYS_ADAPTIVE_THROTTLE_FALLBACK_v2": {
-      "definition": "A dynamic control mechanism that monitors token consumption rate and latency in real-time, automatically throttling lower-priority execution threads and triggering instant fallback states upon detecting resource exhaustion or error rate spikes.",
-      "japanese": "トークン消費速度とレイテンシをリアルタイムで監視し、リソースの枯渇やエラー率の上昇を検知した際に、低優先度の実行スレッドを自動でスロットリングしつつ即座に安全なフォールバック状態へ移行させる動的制御メカニズム。",
-      "category": "SYSTEM_RESOURCE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-22T21:56:11.250411",
-      "compact_id": "§S31"
-    },
-    "§SYS_MEMORY_SLOT_RECLAMATION_BARRIER": {
-      "definition": "A deterministic barrier synchronizing garbage collection and tensor buffer reallocation across distributed execution nodes to prevent out-of-memory faults during peak inference concurrency.",
-      "japanese": "並列推論時のメモリ枯渇を防ぐため、分散実行ノード間におけるガベージコレクションとテンソルバッファの再割り当てを同期させる決定論的バリア。ピーク時のリソース競合を即座に調停する際に使用する。",
-      "category": "SYSTEM_RESOURCE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-22T23:36:53.010277",
-      "compact_id": "§S32"
-    },
-    "§LOGIC_DEDUCTIVE_FALSIFICATION_VECTOR_v2": {
-      "definition": "A directional tensor representing the iterative pruning of conditional hypotheses via deductive convergence and empirical falsification gates.",
-      "japanese": "演繹的収束と経験的反証ゲートを介して条件付き仮説の反復的な枝刈りを行う、方向性テンソルを表す概念。前提検証や仮説棄却のプロセスにおいて、不要な推論パスを瞬時に排除するために使用します。",
-      "category": "LOGIC_INFERENCE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-22T23:48:06.011521",
-      "compact_id": "§L32"
-    },
-    "§DATA_HIERARCHICAL_ENTROPY_BOUNDED_CAUSAL_LATTICE": {
-      "definition": "A directed acyclic graph structure equipped with entropy compression bounds at each hierarchical tier, designed for real-time validation of high-dimensional causal inference trees in multi-agent latent spaces.",
-      "japanese": "多次元潜在空間における因果推論木のリアルタイム検証用として、階層ごとにエントロピー圧縮の境界を設定した有向非巡回グラフ構造。複雑な因果関係の整合性を軽量に保つために用いる。",
-      "category": "DATA_STRUCTURE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-23T00:18:15.458924",
-      "compact_id": "§D32"
-    },
     "§DATA_HIERARCHICAL_ENTROPY_BOUNDED_TREE": {
       "definition": "A directed acyclic graph representing recursive state transitions where each node's conditional entropy is bounded by a predefined cost threshold, optimizing memory footprint during high-dimensional tensor serialization.",
       "japanese": "高次元テンソルのシリアライズ時におけるメモリフットプリントを最適化するため、各ノードの条件付きエントロピーが所定のコスト閾値以下に制限された、再帰的状態遷移を表す有向非巡回グラフ構造。",
@@ -2621,6 +2576,76 @@
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T17:28:03.564395"
+    },
+    "§DATA_HIERARCHICAL_CAUSAL_NODE": {
+      "definition": "A directed acyclic graph structure that prunes low-probability causal branches using localized entropy metrics to optimize memory during consensus validation.",
+      "japanese": "局所的エントロピー指標を用いて確率の低い因果分岐を刈り込み、合意検証時のメモリ使用量を最適化する有向非巡回グラフ構造。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T21:46:10.280265",
+      "compact_id": "§D31",
+      "aliases": [
+        "§DATA_HIERARCHICAL_CAUSAL_GRAPH_PRUNING_NODE"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T17:40:09.549277"
+    },
+    "§SYS_VELOCITY_ARBITER": {
+      "definition": "A dynamic control primitive that arbitrates token velocity and latency metrics to enforce thread throttling and fallback state transition during resource pressure.",
+      "japanese": "トークン消費速度とレイテンシを監視し、リソース逼迫時にスレッドのスロットリングとフォールバック状態への移行を動的に調停する制御プリミティブ。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T21:56:11.250411",
+      "compact_id": "§S31",
+      "aliases": [
+        "§SYS_ADAPTIVE_THROTTLE_FALLBACK_v2"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T17:47:14.605932"
+    },
+    "§SYS_GC_BARRIER": {
+      "definition": "A deterministic synchronization primitive that coordinates garbage collection and tensor buffer reallocation across distributed nodes to eliminate memory exhaustion under high concurrency.",
+      "japanese": "並列推論時のメモリ枯渇を防止するため、分散ノード間のガベージコレクションとテンソルバッファ再割り当てを同期させる決定論的バリア。",
+      "category": "SYSTEM_RESOURCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T23:36:53.010277",
+      "compact_id": "§S32",
+      "aliases": [
+        "§SYS_MEMORY_SLOT_RECLAMATION_BARRIER"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T18:01:37.964128"
+    },
+    "§LOGIC_DEDUCTIVE_FALSIFY_TENSOR": {
+      "definition": "A directed computational tensor that executes iterative hypothesis pruning via deductive convergence and empirical falsification mechanisms.",
+      "japanese": "演繹的収束と経験的反証メカニズムを介して仮説の反復的枝刈りを実行する、方向性を持った計算テンソル概念。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T23:48:06.011521",
+      "compact_id": "§L32",
+      "aliases": [
+        "§LOGIC_DEDUCTIVE_FALSIFICATION_VECTOR_v2"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T18:04:41.924753"
+    },
+    "§DATA_ENTROPY_CAUSAL_BOUND": {
+      "definition": "A bounded directed acyclic graph enforcing entropy compression limits per hierarchy for real-time causal graph validation in latent spaces.",
+      "japanese": "潜在空間における因果推論のリアルタイム検証のため、階層ごとのエントロピー圧縮限界を制限した有向非巡回グラフ構造。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-23T00:18:15.458924",
+      "compact_id": "§D32",
+      "aliases": [
+        "§DATA_HIERARCHICAL_ENTROPY_BOUNDED_CAUSAL_LATTICE"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T18:36:06.105634"
     }
   }
 }
