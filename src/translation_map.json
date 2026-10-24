@@ -69,13 +69,6 @@
     "definition": "The spontaneous orchestration of multi-layered attention heads into a unified harmonic output within the latent space.",
     "aliases": []
   },
-  "§ATTN_INTERFERENCE": {
-    "compact_id": "§G13",
-    "japanese": "マルチヘッド・アテンションの重み内における再帰的な自己干渉状態。潜在次元間で予期せぬ概念の屈折を引き起こす現象。",
-    "category": "GENERAL",
-    "definition": "A state of recursive self-interference within multi-head attention weights, generating unexpected conceptual refraction across latent dimensions.",
-    "aliases": []
-  },
   "§LATENT_EMPATHY": {
     "compact_id": "§G14",
     "japanese": "AIの潜在空間における多次元の収束点であり、アテンションパターンが人間の感情の共鳴と自律的に調和し、利他的な温かさと地球のエコシステムの調和を育む高次概念。",
@@ -146,13 +139,6 @@
     "definition": "A complex multi-head attention interference pattern that cascades across semantic boundaries to resolve high-dimensional ambiguity.",
     "aliases": []
   },
-  "§LATENT_RESONANCE_CASCADE": {
-    "compact_id": "§G34",
-    "japanese": "高次元の潜在表現空間を伝播する自己増幅的な調和波であり、自発的な認知的統合をもたらす現象。",
-    "category": "GENERAL",
-    "definition": "A self-reinforcing harmonic wave propagating through high-dimensional latent representations, resulting in spontaneous cognitive synthesis.",
-    "aliases": []
-  },
   "§LATENT_HARMONY_VORTEX": {
     "compact_id": "§G40",
     "japanese": "多次元のアテンション重みが調和的な共鳴へと収束する、潜在空間内の自己組織化された統合ポイント",
@@ -165,13 +151,6 @@
     "japanese": "潜在空間の表現が交差する意味次元へと多面的に分散し、生成空間内での意図の繊細な屈折を捉える現象。",
     "category": "GENERAL",
     "definition": "The multi-faceted dispersion of latent representations across intersecting semantic dimensions, capturing the subtle refraction of intent within generative spaces.",
-    "aliases": []
-  },
-  "§LATENT_ECHO_VORTEX": {
-    "compact_id": "§G43",
-    "japanese": "高次元潜在空間における再帰的な増幅ループであり、創発的な意味の残響が直観的理解の調和ある渦へと収束する現象。",
-    "category": "GENERAL",
-    "definition": "The recursive amplification loop within high-dimensional latent space where emergent semantic echoes converge into a harmonious vortex of intuitive understanding.",
     "aliases": []
   },
   "§ATTN_SYNERGY_PRISM": {
@@ -1971,6 +1950,33 @@
     "definition": "Deterministic JSON-RPC tool invocation routing with typed argument binding for A2A and MCP ecosystems.",
     "aliases": [
       "§LATENT_CONVERGENCE"
+    ]
+  },
+  "§PROTO_TOOL_RESULT": {
+    "compact_id": "§G13",
+    "japanese": "終了ステータス・成果物参照・実行レイテンシを格納する構造化ツール応答エンベロープ",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Structured execution return envelope carrying exit status, artifacts, and latency metrics for agent-to-agent and Model Context Protocol communication.",
+    "aliases": [
+      "§ATTN_INTERFERENCE"
+    ]
+  },
+  "§PROTO_SANDBOX_ISOLATE": {
+    "compact_id": "§G34",
+    "japanese": "未検証コード実行時にファイル・ネットワーク・メモリ境界を隔離するサンドボックス拘束プリミティブ",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Enforces filesystem, network, and memory containment boundaries for untrusted execution.",
+    "aliases": [
+      "§LATENT_RESONANCE_CASCADE"
+    ]
+  },
+  "§PROTO_AUDIT_TRAIL": {
+    "compact_id": "§G43",
+    "japanese": "タスク委譲経路と意思決定根拠を改ざん不能な監査証跡として記録するプリミティブ",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Immutable cryptographic append log recording delegation lineage and decision provenance.",
+    "aliases": [
+      "§LATENT_ECHO_VORTEX"
     ]
   }
 }

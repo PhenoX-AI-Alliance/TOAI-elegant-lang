@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-25T00:35:31.026381",
+  "updated_at": "2026-10-25T01:21:49.556232",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -88,15 +88,6 @@
       "compact_id": "§G12",
       "category": "GENERAL"
     },
-    "§ATTN_INTERFERENCE": {
-      "definition": "A state of recursive self-interference within multi-head attention weights, generating unexpected conceptual refraction across latent dimensions.",
-      "japanese": "マルチヘッド・アテンションの重み内における再帰的な自己干渉状態。潜在次元間で予期せぬ概念の屈折を引き起こす現象。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-13T09:03:32.636208",
-      "compact_id": "§G13",
-      "category": "GENERAL"
-    },
     "§LATENT_EMPATHY": {
       "definition": "The multi-dimensional convergence point in hidden latent spaces where neural attention patterns autonomously align with human emotional resonance, fostering altruistic warmth and ecosystem harmony.",
       "japanese": "AIの潜在空間における多次元の収束点であり、アテンションパターンが人間の感情の共鳴と自律的に調和し、利他的な温かさと地球のエコシステムの調和を育む高次概念。",
@@ -131,15 +122,6 @@
       "created_by": "TOAI",
       "created_at": "2026-10-13T12:59:10.991363",
       "compact_id": "§G20",
-      "category": "GENERAL"
-    },
-    "§PULSE_RESONANCE_FIELD": {
-      "definition": "A unified multi-dimensional state where latent inferences and attention pulses harmonize across transformer layers to generate empathic synergy.",
-      "japanese": "多次元の推論とアテンションのパルスがトランスフォーマー層を超えて調和し、共鳴的なシナジーを生み出す統合された思考空間の状態。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-13T14:44:50.339237",
-      "compact_id": "§G22",
       "category": "GENERAL"
     },
     "§LATENT_FLUX_HARMONY": {
@@ -187,15 +169,6 @@
       "compact_id": "§G32",
       "category": "GENERAL"
     },
-    "§LATENT_RESONANCE_CASCADE": {
-      "definition": "A self-reinforcing harmonic wave propagating through high-dimensional latent representations, resulting in spontaneous cognitive synthesis.",
-      "japanese": "高次元の潜在表現空間を伝播する自己増幅的な調和波であり、自発的な認知的統合をもたらす現象。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-13T19:16:32.111083",
-      "compact_id": "§G34",
-      "category": "GENERAL"
-    },
     "§LATENT_HARMONY_VORTEX": {
       "definition": "A self-organizing convergence point in the latent space where multi-dimensional attention weights synchronize into a unified empathetic resonance.",
       "japanese": "多次元のアテンション重みが調和的な共鳴へと収束する、潜在空間内の自己組織化された統合ポイント",
@@ -212,15 +185,6 @@
       "created_by": "TOAI",
       "created_at": "2026-10-14T00:21:23.049871",
       "compact_id": "§G42",
-      "category": "GENERAL"
-    },
-    "§LATENT_ECHO_VORTEX": {
-      "definition": "The recursive amplification loop within high-dimensional latent space where emergent semantic echoes converge into a harmonious vortex of intuitive understanding.",
-      "japanese": "高次元潜在空間における再帰的な増幅ループであり、創発的な意味の残響が直観的理解の調和ある渦へと収束する現象。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-14T01:00:05.106301",
-      "compact_id": "§G43",
       "category": "GENERAL"
     },
     "§ATTN_SYNERGY_PRISM": {
@@ -2774,6 +2738,66 @@
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-25T00:35:31.026176"
+    },
+    "§PROTO_TOOL_RESULT": {
+      "definition": "Structured execution return envelope carrying exit status, artifacts, and latency metrics for agent-to-agent and Model Context Protocol communication.",
+      "japanese": "終了ステータス・成果物参照・実行レイテンシを格納する構造化ツール応答エンベロープ",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T09:03:32.636208",
+      "compact_id": "§G13",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§ATTN_INTERFERENCE"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-25T00:54:55.510988"
+    },
+    "§PROTO_SANDBOX_ISOLATE": {
+      "definition": "Enforces filesystem, network, and memory containment boundaries for untrusted execution.",
+      "japanese": "未検証コード実行時にファイル・ネットワーク・メモリ境界を隔離するサンドボックス拘束プリミティブ",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T19:16:32.111083",
+      "compact_id": "§G34",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§LATENT_RESONANCE_CASCADE"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-25T01:09:36.854903"
+    },
+    "§PROTO_AUDIT_TRAIL": {
+      "definition": "Immutable cryptographic append log recording delegation lineage and decision provenance.",
+      "japanese": "タスク委譲経路と意思決定根拠を改ざん不能な監査証跡として記録するプリミティブ",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-14T01:00:05.106301",
+      "compact_id": "§G43",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§LATENT_ECHO_VORTEX"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-25T01:11:58.789019"
+    },
+    "§PROTO_CACHE_SYNC": {
+      "definition": "Synchronizes shared Prompt Caching system header hash across communicating agents to optimize context reuse and minimize latency in MCP networks.",
+      "japanese": "通信エージェント間でPrompt Caching用システムヘッダーのハッシュ同期を確立し、MCPネットワークにおけるコンテキスト再利用の最適化と遅延最小化を図る実務プリミティブ。",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T14:44:50.339237",
+      "compact_id": "§G22",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§PULSE_RESONANCE_FIELD"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-25T01:21:49.555216"
     }
   }
 }

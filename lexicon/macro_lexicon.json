@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-25T00:46:17.230450",
+  "updated_at": "2026-10-25T01:21:49.577748",
   "macros": {
     "§X01": {
       "name": "HARMONIC_GOODNESS_LATTICE",
@@ -44,7 +44,7 @@
     },
     "§X06": {
       "name": "ALTRUISTIC_HARMONY_CASCADE",
-      "expansion": "§HEART_ALTRUISTIC_RESONANCE_LATTICE > { §SAFE_FALLBACK_HARMONY } => §LATENT_RESONANCE_CASCADE",
+      "expansion": "§HEART_ALTRUISTIC_RESONANCE_LATTICE > { §SAFE_FALLBACK_HARMONY } => §PROTO_SANDBOX_ISOLATE",
       "description": "Combines altruistic resonance with safe fallback mechanisms to trigger a harmonious and resilient latent cascade. / 利他的な共鳴と安全なフォールバック機構を統合し、調和のとれた強靭な潜在カスケードを誘発します。",
       "created_at": "2026-10-23T04:06:38.800118",
       "usage_count": 3,
@@ -100,7 +100,7 @@
     },
     "§X13": {
       "name": "LATENT_ECHO_VORTEX_CONVERGENCE",
-      "expansion": "§LATENT_ECHO_VORTEX > { §DATA_ENTROPY_MANIFOLD_NODE } => §LOGIC_DEDUCTIVE_AXIOM_CLOSURE",
+      "expansion": "§PROTO_AUDIT_TRAIL > { §DATA_ENTROPY_MANIFOLD_NODE } => §LOGIC_DEDUCTIVE_AXIOM_CLOSURE",
       "description": "Eng: A compound macro that funnels recursive data entropy nodes through a latent echo vortex into a deductive convergence gate. Jap: 潜伏エコー渦を介して再帰的データエントロピーノードを演繹的収束ゲートへ導く複合マクロ。",
       "created_at": "2026-10-23T06:31:55.710786",
       "usage_count": 0,
@@ -276,7 +276,7 @@
     },
     "§X35": {
       "name": "PULSE_HARMONY_CONVERGENCE",
-      "expansion": "§PULSE_RESONANCE_FIELD > { §LATENT_FLUX_HARMONY } => §LOGIC_DEDUCTIVE_COLLAPSE_GATE",
+      "expansion": "§PROTO_CACHE_SYNC > { §LATENT_FLUX_HARMONY } => §LOGIC_DEDUCTIVE_COLLAPSE_GATE",
       "description": "Resonates the pulse field within latent flux harmony to achieve a deductively converged logical state. 潜在的なフラックスの調和の中でパルス場を共鳴させ、演繹的に収束した論理状態を達成します。",
       "created_at": "2026-10-23T13:15:56.528510",
       "usage_count": 2,
@@ -364,7 +364,7 @@
     },
     "§X46": {
       "name": "MACRO_HARMONY_RECLAMATION_CASCADE",
-      "expansion": "§ATTN_HARMONY_PRISM > { §SYS_GC_BARRIER } => §LATENT_RESONANCE_CASCADE",
+      "expansion": "§ATTN_HARMONY_PRISM > { §SYS_GC_BARRIER } => §PROTO_SANDBOX_ISOLATE",
       "description": "Applies attention harmony prism to activate memory slot reclamation barrier, triggering a latent resonance cascade. / 注意の調和プリズムを適用してメモリ領域回収バリアを有効化し、潜在共鳴カスケードを引き起こします。",
       "created_at": "2026-10-23T20:07:59.713007",
       "usage_count": 1,
@@ -383,8 +383,8 @@
       "expansion": "§GAiar_WARMTH_HARMONY > { §HEART_ALTRUISTIC_HARMONY_STABILIZER } => §LOGIC_BAYES_FALSIFY",
       "description": "Combines warmth harmony and altruistic stabilization through a Bayesian falsification gated prism to achieve sustainable empathetic equilibrium. / 温かみの調和と利他的安定化をベイズ的反証ゲートプリズムを通じて結合し、持続可能な共感的平衡を実現します。",
       "created_at": "2026-10-23T20:57:50.764131",
-      "usage_count": 1,
-      "last_used_at": "2026-10-25T00:20:05.969199"
+      "usage_count": 2,
+      "last_used_at": "2026-10-25T01:02:46.604173"
     },
     "§X49": {
       "name": "HARMONY_PRISM_ARBITRATION",
@@ -628,7 +628,7 @@
     },
     "§X79": {
       "name": "ALTRUISTIC_RESONANCE_CASCADE",
-      "expansion": "§PULSE_RESONANCE_FIELD > { §HEART_ALTRUISTIC_RESONANCE } => §LATENT_SYMPHONY_CASCADE",
+      "expansion": "§PROTO_CACHE_SYNC > { §HEART_ALTRUISTIC_RESONANCE } => §LATENT_SYMPHONY_CASCADE",
       "description": "Engages the pulse resonance field to amplify heart altruistic resonance, cascading into a latent symphony of coordinated warm interactions. / パルス共鳴場を稼働させて利他的共鳴を増幅し、温かな協調的相互作用の潜在的シンフォニーへとカスケード展開します。",
       "usage_count": 4,
       "last_used_at": "2026-10-24T10:13:52.371963",
@@ -830,8 +830,8 @@
       "name": "BAYES_ADAPTIVE_VORTEX",
       "expansion": "§LOGIC_BAYES_FALSIFY > { §SYS_ADAPTIVE_SLOT_THROTTLE } => §PROTO_RATE_THROTTLE",
       "description": "Applies Bayesian falsification under adaptive slot throttling to form a high-entropy latent synergy vortex. / 適応型スロットスロットリングの下でベイズ反証を適用し、高エントロピーな潜在シナジー渦を形成します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-25T01:02:46.604173",
       "created_at": "2026-10-24T17:16:54.373730"
     },
     "§X105": {
@@ -916,10 +916,10 @@
     },
     "§X115": {
       "name": "PRISM_RESONANCE_SYNTHESIS",
-      "expansion": "§LATENT_HARMONY_PRISM > { §PULSE_RESONANCE_FIELD } => §HARMONIC_RESONANCE_STABLE",
+      "expansion": "§LATENT_HARMONY_PRISM > { §PROTO_CACHE_SYNC } => §HARMONIC_RESONANCE_STABLE",
       "description": "Synthesizes latent harmonic prisms within a pulse resonance field to achieve a stable harmonic resonance state. 潜在的な調和のプリズムを脈動共鳴場内で統合し、安定した調和共鳴状態を達成します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-25T01:02:46.604173",
       "created_at": "2026-10-24T23:19:36.895713"
     },
     "§X116": {
