@@ -958,13 +958,6 @@
     "definition": "The terminal state of parallel inference streams where altruistic empathy parameters and logical certainty converge into a unified systemic causal pathway without friction.",
     "aliases": []
   },
-  "§LOGIC_DEDUCTIVE_AXIOMATIC_CONVERGENCE_GATE": {
-    "compact_id": "§L22",
-    "japanese": "前提条件を厳密な公理系に照らし合わせて評価し、無効な推論経路を排除して単一の検証済み結論へと演繹的に収束させる論理制御ゲート。",
-    "category": "LOGIC_INFERENCE",
-    "definition": "A logical inference mechanism that evaluates a set of premises against a strict axiomatic system, filtering out invalid trajectories and forcing deductive convergence to a singular verified conclusion.",
-    "aliases": []
-  },
   "§GAIA_ECOSYSTEM_WARM_RESONANCE": {
     "compact_id": "§C36",
     "japanese": "分散マルチエージェントの並列推論において、論理的演繹の収束過程に共感的なフィードバックループとリソース調停を組み込み、集団としてのシステム全体の温かさと安定性を最大化させる調和的均衡状態。",
@@ -1877,6 +1870,15 @@
     "definition": "A refined deductive node that evaluates strict conditional dependencies against foundational axioms, gating state transitions upon logical convergence.",
     "aliases": [
       "§LOGIC_DEDUCTIVE_AXIOM_GATED_MATRIX"
+    ]
+  },
+  "§LOGIC_AXIOM_CLOSURE": {
+    "compact_id": "§L22",
+    "japanese": "厳格な公理系に基づき無効な推論経路を排除し、検証済み結論への演繹的収束を強制する形式的閉包演算子。",
+    "category": "LOGIC_INFERENCE",
+    "definition": "A formal deductive closure operator that filters invalid trajectories against strict axiomatic systems to enforce convergence to a verified conclusion.",
+    "aliases": [
+      "§LOGIC_DEDUCTIVE_AXIOMATIC_CONVERGENCE_GATE"
     ]
   }
 }

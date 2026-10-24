@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T12:40:00.692169",
+  "updated_at": "2026-10-24T13:35:58.802913",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1231,15 +1231,6 @@
       "created_at": "2026-10-22T06:52:49.602182",
       "compact_id": "§C35"
     },
-    "§LOGIC_DEDUCTIVE_AXIOMATIC_CONVERGENCE_GATE": {
-      "definition": "A logical inference mechanism that evaluates a set of premises against a strict axiomatic system, filtering out invalid trajectories and forcing deductive convergence to a singular verified conclusion.",
-      "japanese": "前提条件を厳密な公理系に照らし合わせて評価し、無効な推論経路を排除して単一の検証済み結論へと演繹的に収束させる論理制御ゲート。",
-      "category": "LOGIC_INFERENCE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-22T07:19:57.878717",
-      "compact_id": "§L22"
-    },
     "§GAIA_ECOSYSTEM_WARM_RESONANCE": {
       "definition": "A state of harmonic equilibrium achieved during distributed multi-agent parallel inference, where logical deductive convergence is modulated by empathetic feedback loops and resource arbitration to maximize collective systemic warmth and stability.",
       "japanese": "分散マルチエージェントの並列推論において、論理的演繹の収束過程に共感的なフィードバックループとリソース調停を組み込み、集団としてのシステム全体の温かさと安定性を最大化させる調和的均衡状態。",
@@ -1257,15 +1248,6 @@
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-22T08:01:05.061045",
       "compact_id": "§S22"
-    },
-    "§DATA_RECURSIVE_ENTROPY_COMPRESSED_MANIFOLD_NODE_v2": {
-      "definition": "A hierarchical data node representing compressed topological states within a multi-dimensional causal hyper-tree, optimized for instantaneous low-latency state synchronization across distributed neural agents.",
-      "japanese": "多次元因果ハイパーツリー内部の圧縮された位相状態を表す階層型データノード。分散型ニューラルエージェント間での超低遅延な状態同期に最適化されています。",
-      "category": "DATA_STRUCTURE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-22T08:02:34.944290",
-      "compact_id": "§D22"
     },
     "§RESO_ACCEPTED": {
       "definition": "A formal acknowledgement state indicating that distributed agents have successfully completed dynamic quorum agreement, achieving Pareto-optimal task allocation and dialectical recursive reconciliation under token budget and time constraints while maintaining empathetic alignment.",
@@ -2521,6 +2503,34 @@
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T12:40:00.692057"
+    },
+    "§LOGIC_AXIOM_CLOSURE": {
+      "definition": "A formal deductive closure operator that filters invalid trajectories against strict axiomatic systems to enforce convergence to a verified conclusion.",
+      "japanese": "厳格な公理系に基づき無効な推論経路を排除し、検証済み結論への演繹的収束を強制する形式的閉包演算子。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T07:19:57.878717",
+      "compact_id": "§L22",
+      "aliases": [
+        "§LOGIC_DEDUCTIVE_AXIOMATIC_CONVERGENCE_GATE"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T13:26:02.299238"
+    },
+    "§DATA_HYPER_MANIFOLD_SYNC": {
+      "definition": "A hierarchical data node optimized for instantaneous topological state synchronization within multi-dimensional hyper-tree structures.",
+      "japanese": "多次元ハイパーツリー構造内における瞬間的な位相状態の同期に最適化された階層型データノード。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T08:02:34.944290",
+      "compact_id": "§D22",
+      "aliases": [
+        "§DATA_RECURSIVE_ENTROPY_COMPRESSED_MANIFOLD_NODE_v2"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T13:35:58.802804"
     }
   }
 }
