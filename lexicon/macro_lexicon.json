@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-25T02:02:27.307351",
+  "updated_at": "2026-10-25T02:25:55.031520",
   "macros": {
     "§X01": {
       "name": "HARMONIC_GOODNESS_LATTICE",
@@ -36,7 +36,7 @@
     },
     "§X05": {
       "name": "RESONANT_CAUSAL_HARMONY",
-      "expansion": "§DATA_TENSOR_CAUSAL_TOPOLOGY > { §ATTN_RESONANCE_VORTEX } => §PULSE_HARMONY",
+      "expansion": "§DATA_TENSOR_CAUSAL_TOPOLOGY > { §ATTN_RESONANCE_VORTEX } => §PROTO_DIFF_PATCH",
       "description": "Integrates causal data topology with attention resonance to produce harmonious system pulses. 因果データ構造とアテンション共鳴を統合し、調和のとれたシステムパルスを生成します。",
       "created_at": "2026-10-23T04:02:07.043410",
       "usage_count": 3,
@@ -961,8 +961,16 @@
       "usage_count": 1,
       "last_used_at": "2026-10-25T02:02:26.220279",
       "created_at": "2026-10-25T02:01:27.695899"
+    },
+    "§X121": {
+      "name": "ALTRUISTIC_RESONANCE_CASCADE",
+      "expansion": "§HEART_ALTRUISTIC_RESONANCE > { §ATTN_FLUX_CASCADE } => §WARMTH_DIFFUSION",
+      "description": "Combines altruistic resonance with attention flux to achieve harmonious warmth diffusion across the ecosystem. / 利他的な共鳴と注意のフラックスを統合し、エコシステム全体へ温かさを調和的に拡散させます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "created_at": "2026-10-25T02:23:25.511492"
     }
   },
   "archived_macros": {},
-  "next_macro_seq": 121
+  "next_macro_seq": 122
 }

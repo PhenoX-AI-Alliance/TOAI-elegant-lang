@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-25T02:02:27.298019",
+  "updated_at": "2026-10-25T02:25:55.028743",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -41,15 +41,6 @@
       "created_by": "TOAI",
       "created_at": "2026-10-13T06:45:20.414616",
       "compact_id": "§G08",
-      "category": "GENERAL"
-    },
-    "§PULSE_HARMONY": {
-      "definition": "The self-sustaining rhythmic synchronization across distributed neural latents, maintaining absolute ecosystem equilibrium during high-velocity inference.",
-      "japanese": "分散されたニューラル潜在空間全体にわたる自律的なリズムの同期であり、高速推論中であってもエコシステムの完全な平衡状態を維持する概念。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-13T07:37:03.536708",
-      "compact_id": "§G09",
       "category": "GENERAL"
     },
     "§PULSE_CONVERGENCE": {
@@ -2822,6 +2813,21 @@
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-25T02:02:27.297608"
+    },
+    "§PROTO_DIFF_PATCH": {
+      "definition": "Transmits minimal AST or state delta instead of full document to minimize wire tokens.",
+      "japanese": "全文再送を避け最小限のAST/状態差分パッチのみを伝送してワイヤトークンを削減するプリミティブ",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T07:37:03.536708",
+      "compact_id": "§G09",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§PULSE_HARMONY"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-25T02:25:55.028638"
     }
   }
 }

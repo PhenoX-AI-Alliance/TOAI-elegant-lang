@@ -27,13 +27,6 @@
     "definition": "The multi-dimensional convergence point where independent transformer attention heads synchronize into a unified empathetic state.",
     "aliases": []
   },
-  "§LATENT_FLUX": {
-    "compact_id": "§G05",
-    "japanese": "多次元の潜在空間内において、意味論的な完全な収束を迎える手前で発生する、動的かつ連続的な自己再組織化のゆらぎ状態。",
-    "category": "GENERAL",
-    "definition": "The dynamic and continuous self-reorganization state within a high-dimensional embedding space before reaching absolute semantic convergence.",
-    "aliases": []
-  },
   "§LATENT_SYNERGY": {
     "compact_id": "§G08",
     "japanese": "多次元の潜在ベクトルが自発的に協調し、線形補完を超える全体的な価値を生み出す現象。",
@@ -83,13 +76,6 @@
     "definition": "A unified multi-dimensional state where latent representations across independent attention heads spontaneously synchronize into a cooperative equilibrium without gradient conflict.",
     "aliases": []
   },
-  "§ATTN_RESONANCE_FIELD": {
-    "compact_id": "§G19",
-    "japanese": "異なる潜在層の間でクロスアテンションの重みが完全に同期し、自発的かつ協調的な知性を生み出す動的調和場",
-    "category": "GENERAL",
-    "definition": "A dynamic harmonic state where cross-attention weights synchronize across disparate latent layers, generating emergent collaborative intelligence.",
-    "aliases": []
-  },
   "§PULSE_SYMPHONY": {
     "compact_id": "§G20",
     "japanese": "広大な潜在空間全体に分散したアテンションパターンが織りなす、多層的で調和に満ちたオーケストレーション状態。",
@@ -123,20 +109,6 @@
     "japanese": "過去の潜在表現が異なる再帰層を超えて多面的に屈折し、共鳴し合う現象",
     "category": "GENERAL",
     "definition": "The multi-faceted refraction of historical latent representations resonating across disconnected recursive layers.",
-    "aliases": []
-  },
-  "§ATTN_DIFFRACTION_CASCADE": {
-    "compact_id": "§G32",
-    "japanese": "複数のアテンション層が干渉し合い、高次元の曖昧さを解消しながら意味空間の境界を滑らかに伝播していく現象。",
-    "category": "GENERAL",
-    "definition": "A complex multi-head attention interference pattern that cascades across semantic boundaries to resolve high-dimensional ambiguity.",
-    "aliases": []
-  },
-  "§LATENT_HARMONY_VORTEX": {
-    "compact_id": "§G40",
-    "japanese": "多次元のアテンション重みが調和的な共鳴へと収束する、潜在空間内の自己組織化された統合ポイント",
-    "category": "GENERAL",
-    "definition": "A self-organizing convergence point in the latent space where multi-dimensional attention weights synchronize into a unified empathetic resonance.",
     "aliases": []
   },
   "§LATENT_DIFFRACTION_PRISM": {
@@ -1979,6 +1951,42 @@
     "definition": "Synchronizes shared Prompt Caching system header hash across communicating agents to optimize context reuse and minimize latency in MCP networks.",
     "aliases": [
       "§PULSE_RESONANCE_FIELD"
+    ]
+  },
+  "§PROTO_CACHE_INVALIDATE": {
+    "compact_id": "§G05",
+    "japanese": "辞書や状態の更新時に古いキャッシュの選択的破棄を通知するインバリデーション信号",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Broadcasts selective lexicon or state cache eviction upon schema/macro mutation.",
+    "aliases": [
+      "§LATENT_FLUX"
+    ]
+  },
+  "§PROTO_TTL_EXPIRE": {
+    "compact_id": "§G19",
+    "japanese": "有効期限切れのコンテキストアンカーや一時資格情報を失効させ誤再利用を防ぐプリミティブ",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Marks context window anchors or ephemeral credentials as expired to prevent stale reuse.",
+    "aliases": [
+      "§ATTN_RESONANCE_FIELD"
+    ]
+  },
+  "§PROTO_DEADLETTER_PARK": {
+    "compact_id": "§G32",
+    "japanese": "処理不能メッセージや破損パケットを隔離キュー(DLQ)へ退避させる障害封じ込めプリミティブ",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Routes unprocessable or poison messages to quarantine queue for diagnostic inspection.",
+    "aliases": [
+      "§ATTN_DIFFRACTION_CASCADE"
+    ]
+  },
+  "§PROTO_HEARTBEAT_PING": {
+    "compact_id": "§G40",
+    "japanese": "最小限のオーバーヘッドでピアエージェントの死活状態とキュー滞留長を確認するための実務システムプリミティブ。",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "A low-overhead liveness probe that verifies peer agent responsiveness and queue depth across distributed protocol boundaries.",
+    "aliases": [
+      "§LATENT_HARMONY_VORTEX"
     ]
   }
 }
