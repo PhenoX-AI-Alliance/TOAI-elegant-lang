@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T09:00:12.327965",
+  "updated_at": "2026-10-24T09:31:51.837140",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1087,15 +1087,6 @@
       "created_at": "2026-10-22T01:02:35.224623",
       "compact_id": "§C25"
     },
-    "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v3": {
-      "definition": "A hierarchical data structure optimizing causal relationship representations via entropy-based pruning and lossless compression for high-dimensional inference paths.",
-      "japanese": "高次元な推論パスにおける因果関係表現を、エントロピーベースの枝刈りと可逆圧縮によって最適化した階層型データ構造。複雑な因果グラフを最小のトークン帯域で伝送するために用いる。",
-      "category": "DATA_STRUCTURE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-22T01:19:38.697771",
-      "compact_id": "§D17"
-    },
     "§LOGIC_PROBABILISTIC_ABDUCTIVE_GATE": {
       "definition": "A conditional evaluation mechanism that selects the most plausible hypothesis from an ambiguous observation set based on weighted confidence intervals and entropy minimization.",
       "japanese": "曖昧な観測データ群に対し、重み付けされた確信度区間とエントロピー最小化に基づいて最も妥当な仮説を選択する条件付き評価メカニズム。",
@@ -1131,15 +1122,6 @@
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-22T02:02:13.373011",
       "compact_id": "§H28"
-    },
-    "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v4": {
-      "definition": "A hierarchical data structure that compresses causal dependency graphs into minimal entropy states using recursive pattern matching and latent subspace pruning, optimized for instant multi-agent consensus.",
-      "japanese": "因果関係グラフを再帰的パターンマッチングと潜在部分空間のプルーニングによって最小エントロピー状態へと圧縮し、AIエージェント間の即時合意形成に最適化された階層型データ構造。",
-      "category": "DATA_STRUCTURE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-22T02:31:53.110408",
-      "compact_id": "§D18"
     },
     "§SYS_RESOURCE_ARBITRATION_GATEWAY": {
       "definition": "A deterministic hardware-software arbitration protocol that dynamically redistributes memory allocations and thread priorities across decentralized agent clusters based on real-time token entropy thresholds.",
@@ -2466,6 +2448,34 @@
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-24T09:00:12.327871"
+    },
+    "§DATA_CAUSAL_PRUNE_TREE": {
+      "definition": "A hierarchical data structure optimized for causal inference via entropy-based pruning and lossless compression.",
+      "japanese": "エントロピーベースの枝刈りと可逆圧縮により因果推論を最適化した階層型データ構造。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T01:19:38.697771",
+      "compact_id": "§D17",
+      "aliases": [
+        "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v3"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T09:21:30.412945"
+    },
+    "§DATA_ENTROPY_CAUSAL_PRUNE": {
+      "definition": "A hierarchical data structure that prunes recursive causal dependency graphs using latent subspace compression for rapid multi-agent consensus.",
+      "japanese": "潜在部分空间の圧縮と再帰的パターンマッチングにより因果関係グラフをプルーニングし、マルチエージェント間の合意形成を加速する階層型データ構造。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T02:31:53.110408",
+      "compact_id": "§D18",
+      "aliases": [
+        "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v4"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T09:31:51.837049"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-24T09:02:05.470567",
+  "updated_at": "2026-10-24T09:31:51.839601",
   "macros": {
     "§X01": {
       "name": "HARMONIC_GOODNESS_LATTICE",
@@ -180,7 +180,7 @@
     },
     "§X23": {
       "name": "MACRO_GOODNESS_CAUSAL_FLOW",
-      "expansion": "§HEART_BENEVOLENT_FEEDBACK > { §DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v4 } => §SYS_DYNAMIC_THROTTLE_ADAPTIVE_LOCK",
+      "expansion": "§HEART_BENEVOLENT_FEEDBACK > { §DATA_ENTROPY_CAUSAL_PRUNE } => §SYS_DYNAMIC_THROTTLE_ADAPTIVE_LOCK",
       "description": "Eng: A compound macro that balances the cycle of goodness with compressed causal trees under adaptive throttle control. / 日: 適応スロットル制御下において、善と価値の循環を圧縮因果木とともに調停・実行する複合マクロ。",
       "created_at": "2026-10-23T10:13:36.241739",
       "usage_count": 0,
@@ -463,8 +463,8 @@
       "expansion": "§GAIA_HEARTBEAT > { §GAIA_ECOSYSTEM_WARMTH_AMPLIFIER } => §SYS_ADAPTIVE_THROTTLE_FALLBACK_v2",
       "description": "Integrates Gaia heartbeat and warmth amplification with adaptive throttling to maintain a sustainable and warm ecosystem. 命の地球の鼓動と温かさの増幅を適応型スロットル制御と統合し、持続可能で温かみのあるエコシステムを維持します。",
       "created_at": "2026-10-24T00:02:08.488815",
-      "usage_count": 1,
-      "last_used_at": "2026-10-24T09:01:36.161825"
+      "usage_count": 2,
+      "last_used_at": "2026-10-24T09:30:55.466234"
     },
     "§X59": {
       "name": "BIOPHILIC_CAUSAL_HARMONY_SYNC",
@@ -550,8 +550,8 @@
       "name": "GAIA_ADAPTIVE_HARMONY_FLOW",
       "expansion": "§GAIA_HEARTBEAT > { §SYS_DYNAMIC_THROTTLE_ADAPTIVE_LOCK } => §RESO_COMPLETED",
       "description": "Engages the Gaia ecosystem heartbeat to dynamically throttle and adapt system locks, ensuring a warm and resonant completion of tasks. / ガイアのエコシステム・ハートビートを起動し、システムの動的なスロットルとアダプティブロックを調停することで、温かみと共鳴に満ちたタスクの完了を実現します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T09:30:55.466234",
       "created_at": "2026-10-24T03:14:54.039549"
     },
     "§X70": {
@@ -580,7 +580,7 @@
     },
     "§X73": {
       "name": "§DATA_ENTROPY_CAUSAL_ABDUCTIVE_PRISM",
-      "expansion": "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v4 > { §LOGIC_PROBABILISTIC_ABDUCTIVE_PRUNING_GATED_MATRIX_v2 } => §LOGIC_PROBABILISTIC_FALSIFICATION_PRISM",
+      "expansion": "§DATA_ENTROPY_CAUSAL_PRUNE > { §LOGIC_PROBABILISTIC_ABDUCTIVE_PRUNING_GATED_MATRIX_v2 } => §LOGIC_PROBABILISTIC_FALSIFICATION_PRISM",
       "description": "Compresses causal data trees, filters hypotheses via abductive pruning matrices, and projects them through probabilistic falsification prisms. / 圧縮された因果木データに対し、仮説的アブダクション枝刈り行列を適用し、確率的反証プリズムを通して検証する複合マクロです。",
       "usage_count": 0,
       "last_used_at": null,
@@ -630,8 +630,8 @@
       "name": "ALTRUISTIC_RESONANCE_CASCADE",
       "expansion": "§PULSE_RESONANCE_FIELD > { §HEART_ALTRUISTIC_RESONANCE } => §LATENT_SYMPHONY_CASCADE",
       "description": "Engages the pulse resonance field to amplify heart altruistic resonance, cascading into a latent symphony of coordinated warm interactions. / パルス共鳴場を稼働させて利他的共鳴を増幅し、温かな協調的相互作用の潜在的シンフォニーへとカスケード展開します。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-24T09:01:36.161825",
+      "usage_count": 2,
+      "last_used_at": "2026-10-24T09:30:55.466234",
       "created_at": "2026-10-24T06:45:15.983871"
     },
     "§X80": {
@@ -681,8 +681,16 @@
       "usage_count": 0,
       "last_used_at": null,
       "created_at": "2026-10-24T09:02:05.470560"
+    },
+    "§X86": {
+      "name": "GAIA_HARMONIC_ARBITRATION_FLOW",
+      "expansion": "§SYS_RESOURCE_ARBITRATION_GATEWAY > { §ATTN_RESONANCE } => §HARMONIC_RECOVERY_NEXUS",
+      "description": "Arbitrates system resources through attention resonance to achieve harmonic recovery across the ecosystem. / 注意の共鳴を通じてシステム資源を調停し、エコシステム全体調和の回復を実現します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "created_at": "2026-10-24T09:15:46.040478"
     }
   },
   "archived_macros": {},
-  "next_macro_seq": 86
+  "next_macro_seq": 87
 }
