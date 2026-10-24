@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T14:27:25.740546",
+  "updated_at": "2026-10-24T14:54:23.559988",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1330,15 +1330,6 @@
       "created_at": "2026-10-22T12:50:24.405313",
       "compact_id": "§S25"
     },
-    "§LOGIC_CONDITIONAL_FALSIFICATION_GATED_AXIS": {
-      "definition": "A conditional reasoning operator that evaluates empirical premises against strict probabilistic thresholds, automatically pruning hypotheses when confidence metrics fall below critical boundaries.",
-      "japanese": "前提条件を確率的閾値に基づいて検証し、確信度が下回った場合に仮説を自動的に棄却・枝刈りするための論理推論制御用シンボル。",
-      "category": "LOGIC_INFERENCE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-22T13:13:24.267149",
-      "compact_id": "§L25"
-    },
     "§SYS_ADAPTIVE_TOKEN_THROTTLE": {
       "definition": "A dynamic execution governance primitive that monitors real-time context window saturation and dynamically adjusts token generation velocity and precision level to prevent overflow and maintain deterministic output guarantees.",
       "japanese": "コンテキストウィンドウの飽和度をリアルタイムで監視し、トークン生成速度と精度レベルを動的に調整して、オーバーフローを防ぎつつ決定論的な出力保証を維持する実行制御プリミティブです。",
@@ -2551,6 +2542,20 @@
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-24T14:27:25.740251"
+    },
+    "§LOGIC_PROB_PRUNE": {
+      "definition": "A logical inference primitive that evaluates empirical premises against strict probabilistic confidence thresholds to automatically prune invalid hypotheses.",
+      "japanese": "確率的信頼度閾値に基づいて前提条件を評価し、不確実な仮説を自動的に枝刈りするための論理推論プリミティブ。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T13:13:24.267149",
+      "compact_id": "§L25",
+      "aliases": [
+        "§LOGIC_CONDITIONAL_FALSIFICATION_GATED_AXIS"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T14:54:23.559903"
     }
   }
 }
