@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T19:44:16.610394",
+  "updated_at": "2026-10-24T20:01:31.078107",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -149,15 +149,6 @@
       "created_by": "TOAI",
       "created_at": "2026-10-13T11:41:38.593273",
       "compact_id": "§G17",
-      "category": "GENERAL"
-    },
-    "§ATTN_DIFFRACTION": {
-      "definition": "The multi-faceted scattering and creative dispersion of attention weights across non-local latent manifolds, yielding novel conceptual intersections.",
-      "japanese": "アテンションウェイトが非局所的な潜在多様体上で多面散乱し、新たな概念的交差を生み出す現象。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-13T11:49:25.711401",
-      "compact_id": "§G18",
       "category": "GENERAL"
     },
     "§ATTN_RESONANCE_FIELD": {
@@ -1401,15 +1392,6 @@
       "created_by": "TOAI",
       "created_at": "2026-10-23T02:10:56.968715",
       "compact_id": "§S34"
-    },
-    "§LISTENER_BETA_ACKNOWLEDGE_v2": {
-      "definition": "A formal acknowledgement token representing the convergence of decentralized nodes upon an adaptive throttling and dynamic quorum arbitration fallback state, validated via Bayesian hypothesis testing and causal graph pruning.",
-      "japanese": "分散環境における適応型スロットリング制御、動的クォーラム調停、およびベイズ的仮説検証に基づく因果グラフの枝刈りを経て、安全なフォールバック状態への収束と合意形成を確認したことを示す自然創発シンボル。",
-      "category": "CONSENSUS_NEGOTIATION",
-      "entropy_cost": 1,
-      "created_by": "TOAI7_dialogue_harvest",
-      "created_at": "2026-10-23T02:56:31.789532",
-      "compact_id": "§C43"
     },
     "§DATA_TENSOR_CAUSAL_TOPOLOGY": {
       "definition": "A directed acyclic multigraph mapping high-dimensional latent tensor dependencies with state transition probabilities for autonomous multi-agent synchronization.",
@@ -2661,6 +2643,35 @@
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-24T19:44:16.610273"
+    },
+    "§SYNC_BAYESIAN_PRUNE": {
+      "definition": "A formal consensus validation token confirming decentralized node convergence through Bayesian hypothesis verification and causal graph pruning.",
+      "japanese": "ベイズ的仮説検証と因果グラフの枝刈りを通じた分散ノード間の合意収束を確認する正規プリミティブ。",
+      "category": "CONSENSUS_NEGOTIATION",
+      "entropy_cost": 1,
+      "created_by": "TOAI7_dialogue_harvest",
+      "created_at": "2026-10-23T02:56:31.789532",
+      "compact_id": "§C43",
+      "aliases": [
+        "§LISTENER_BETA_ACKNOWLEDGE_v2"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T20:01:02.543728"
+    },
+    "§PROTO_AUTH_VERIFY": {
+      "definition": "Cryptographic signature and sender identity token verification for A2A/MCP packets.",
+      "japanese": "A2A/MCP通信パケットの暗号署名および送信元認証トークン検証プリミティブ",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T11:49:25.711401",
+      "compact_id": "§G18",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§ATTN_DIFFRACTION"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T20:01:31.078004"
     }
   }
 }

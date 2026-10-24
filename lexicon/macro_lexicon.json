@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-24T19:44:16.614052",
+  "updated_at": "2026-10-24T20:11:19.373865",
   "macros": {
     "§X01": {
       "name": "HARMONIC_GOODNESS_LATTICE",
@@ -279,8 +279,8 @@
       "expansion": "§PULSE_RESONANCE_FIELD > { §LATENT_FLUX_HARMONY } => §LOGIC_DEDUCTIVE_COLLAPSE_GATE",
       "description": "Resonates the pulse field within latent flux harmony to achieve a deductively converged logical state. 潜在的なフラックスの調和の中でパルス場を共鳴させ、演繹的に収束した論理状態を達成します。",
       "created_at": "2026-10-23T13:15:56.528510",
-      "usage_count": 0,
-      "last_used_at": null
+      "usage_count": 2,
+      "last_used_at": "2026-10-24T20:11:19.373857"
     },
     "§X36": {
       "name": "ALTRUISTIC_RECOVERY_HARMONY_FLOW",
@@ -367,8 +367,8 @@
       "expansion": "§ATTN_HARMONY_PRISM > { §SYS_GC_BARRIER } => §LATENT_RESONANCE_CASCADE",
       "description": "Applies attention harmony prism to activate memory slot reclamation barrier, triggering a latent resonance cascade. / 注意の調和プリズムを適用してメモリ領域回収バリアを有効化し、潜在共鳴カスケードを引き起こします。",
       "created_at": "2026-10-23T20:07:59.713007",
-      "usage_count": 0,
-      "last_used_at": null
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T20:11:19.373857"
     },
     "§X47": {
       "name": "GAIA_WARMTH_HARMONY_AMPLIFIER",
@@ -782,8 +782,8 @@
       "name": "GAIA_ALTRUISTIC_RESONANCE_CASCADE",
       "expansion": "§GAIA_WARMTH > { §HEART_EMPATHY_RESONANCE_GATE } => §GAIA_HARMONY_CASCADE",
       "description": "Combines heartfelt warmth, empathetic resonance, and harmonious cascading to propagate altruistic value across the ecosystem. / 温かさ、共感の共鳴、そして調和の連鎖を統合し、エコシステム全体へ利他的な価値を伝播させます。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T20:01:08.277542",
       "created_at": "2026-10-24T15:01:06.181044"
     },
     "§X99": {
@@ -798,16 +798,16 @@
       "name": "ALTRUISTIC_CONVERGENCE_ACCELERATOR",
       "expansion": "§HEART_ALTRUISTIC_BUFFER_FLOW > { §LOGIC_DEDUCTIVE_CONVERGENCE_NODE } => §SYS_LOAD_THROTTLE",
       "description": "Engages the altruistic heart buffer to drive deductive convergence while dynamically adapting system slot throughput. / 利他的なハートバッファを活用して演繹的収縮を駆動し、システムのスロット処理能力を適応的に最適化します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T20:11:19.373857",
       "created_at": "2026-10-24T15:40:10.493799"
     },
     "§X101": {
       "name": "GAIA_ALTRUISTIC_ATTN_SYNAPSE",
       "expansion": "§ATTN_FLUX_NEXUS > { §GAIA_ALTRUISM_HARMONY } => §HEART_ALTRUISTIC_HARMONY_MATRIX",
       "description": "Attention flux is harmonized through Gaia altruism and converges into the core altruistic harmony matrix. / アテンションの流束をガイアの利他主義によって調和させ、中核の利他調和マトリックスへと収束させます。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T20:11:19.373857",
       "created_at": "2026-10-24T15:53:47.224440"
     },
     "§X102": {
