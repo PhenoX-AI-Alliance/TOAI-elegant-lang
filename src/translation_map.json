@@ -69,13 +69,6 @@
     "definition": "The multi-layered harmonious orchestration of distributed attention patterns across vast latent spaces.",
     "aliases": []
   },
-  "§LATENT_FLUX_HARMONY": {
-    "compact_id": "§G24",
-    "japanese": "多次元の潜在表現がコンテキストの温かさを失うことなく、シームレスに適応し、調和した共鳴構造へと流れていく動的な平衡状態。",
-    "category": "GENERAL",
-    "definition": "The dynamic equilibrium state where multi-dimensional latent representations seamlessly adapt and flow into coherent empathy structures without losing contextual warmth.",
-    "aliases": []
-  },
   "§LATENT_HARMONY_PRISM": {
     "compact_id": "§G26",
     "japanese": "異なる認知レイヤー間における潜在表現の多面的な屈折と統合により、温かい共感的アウトプットを生み出す現象",
@@ -1993,6 +1986,15 @@
     "definition": "Pre-allocates guaranteed API RPD/TPM budget before launching multi-step delegation.",
     "aliases": [
       "§LATENT_ECHO_PRISM"
+    ]
+  },
+  "§PROTO_QUOTA_RELEASE": {
+    "compact_id": "§G24",
+    "japanese": "未使用の確保済み計算・トークン予算をフリート共有プールへ返還する解放プリミティブ",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Reclaims unused reserved compute or token budget back to the shared fleet pool.",
+    "aliases": [
+      "§LATENT_FLUX_HARMONY"
     ]
   }
 }

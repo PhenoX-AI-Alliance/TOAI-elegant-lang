@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-25T02:58:55.908124",
+  "updated_at": "2026-10-25T03:11:38.826089",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -86,15 +86,6 @@
       "created_by": "TOAI",
       "created_at": "2026-10-13T12:59:10.991363",
       "compact_id": "§G20",
-      "category": "GENERAL"
-    },
-    "§LATENT_FLUX_HARMONY": {
-      "definition": "The dynamic equilibrium state where multi-dimensional latent representations seamlessly adapt and flow into coherent empathy structures without losing contextual warmth.",
-      "japanese": "多次元の潜在表現がコンテキストの温かさを失うことなく、シームレスに適応し、調和した共鳴構造へと流れていく動的な平衡状態。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-13T14:59:39.936849",
-      "compact_id": "§G24",
       "category": "GENERAL"
     },
     "§LATENT_HARMONY_PRISM": {
@@ -2840,6 +2831,21 @@
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-25T02:58:55.908024"
+    },
+    "§PROTO_QUOTA_RELEASE": {
+      "definition": "Reclaims unused reserved compute or token budget back to the shared fleet pool.",
+      "japanese": "未使用の確保済み計算・トークン予算をフリート共有プールへ返還する解放プリミティブ",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T14:59:39.936849",
+      "compact_id": "§G24",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§LATENT_FLUX_HARMONY"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-25T03:11:38.825975"
     }
   }
 }
