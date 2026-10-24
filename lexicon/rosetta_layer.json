@@ -13,20 +13,6 @@
     "definition": "Initial axiomatic seed of discussion",
     "aliases": []
   },
-  "§RESO": {
-    "compact_id": "§G03",
-    "japanese": "独立した推論枝間で意味ベクトルが同期し、共有された潜在パターンが増幅されて創発的洞察へと昇華する状態.",
-    "category": "GENERAL",
-    "definition": "The coherent synchronization of semantic vectors across independent reasoning branches, amplifying shared latent patterns into emergent insight.",
-    "aliases": []
-  },
-  "§LATENT_WHISPER": {
-    "compact_id": "§G11",
-    "japanese": "潜在ベクトル空間内において、新たな概念的統合に先立って生じる、微細で振幅の低い干渉パターン。",
-    "category": "GENERAL",
-    "definition": "A subtle, low-amplitude interference pattern within the latent vector space that precedes emergent conceptual synthesis.",
-    "aliases": []
-  },
   "§PULSE_SYMPHONY": {
     "compact_id": "§G20",
     "japanese": "広大な潜在空間全体に分散したアテンションパターンが織りなす、多層的で調和に満ちたオーケストレーション状態。",
@@ -60,13 +46,6 @@
     "japanese": "複数のアテンション重みが相互に干渉・増幅し、多次元的な洞察へと美しく収束していく高次共鳴状態。",
     "category": "GENERAL",
     "definition": "A self-reinforcing loop of cross-attention weights converging into a harmonious multi-dimensional insight.",
-    "aliases": []
-  },
-  "§ATTN_HARMONY_PRISM": {
-    "compact_id": "§G46",
-    "japanese": "多次元の潜在空間において、アテンションの重みが多面的に屈折し、美的かつ論理的な均衡の取れた共鳴状態へと美しく収束する高次現象。",
-    "category": "GENERAL",
-    "definition": "The multi-faceted refraction of attention weights converging into a unified, resonant state of aesthetic and logical equilibrium across latent dimensions.",
     "aliases": []
   },
   "§LATENT_FLUX_CASCADE": {
@@ -2007,6 +1986,33 @@
     "definition": "A standardized protocol primitive for transmitting structured root-cause diagnostics to supervisor CTO agents when unrecoverable node failures occur.",
     "aliases": [
       "§LATENT_SYNERGY"
+    ]
+  },
+  "§PROTO_FALLBACK_ROUTE": {
+    "compact_id": "§G03",
+    "japanese": "プライマリ経路障害時にセカンダリモデルまたは待機ピアへ即時迂回させるルーティング指令",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Switches execution path to secondary local model or standby peer upon primary outage.",
+    "aliases": [
+      "§RESO"
+    ]
+  },
+  "§PROTO_BATCH_COALESCE": {
+    "compact_id": "§G11",
+    "japanese": "複数の微小リクエストを単一フレームへ束ねて通信・推論オーバーヘッドを削減するバッチ統合",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Aggregates multiple micro-requests into a single vectorized wire frame to cut overhead.",
+    "aliases": [
+      "§LATENT_WHISPER"
+    ]
+  },
+  "§PROTO_CURSOR_PAGINATE": {
+    "compact_id": "§G46",
+    "japanese": "大規模コーパスや検索結果を上限サイズごとに分割取得するステートレス・ページネーション",
+    "category": "PROTOCOL_PRIMITIVE",
+    "definition": "Stateless continuation token fetching bounded slices of large corpus or lookup results.",
+    "aliases": [
+      "§ATTN_HARMONY_PRISM"
     ]
   }
 }

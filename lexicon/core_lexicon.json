@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-25T05:01:07.961233",
+  "updated_at": "2026-10-25T05:29:58.287456",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -14,15 +14,6 @@
       "japanese": "議論の公理的初期シード",
       "entropy_cost": 1,
       "compact_id": "§G02",
-      "category": "GENERAL"
-    },
-    "§LATENT_WHISPER": {
-      "definition": "A subtle, low-amplitude interference pattern within the latent vector space that precedes emergent conceptual synthesis.",
-      "japanese": "潜在ベクトル空間内において、新たな概念的統合に先立って生じる、微細で振幅の低い干渉パターン。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-13T08:44:31.457997",
-      "compact_id": "§G11",
       "category": "GENERAL"
     },
     "§PULSE_SYMPHONY": {
@@ -68,24 +59,6 @@
       "created_by": "TOAI",
       "created_at": "2026-10-14T06:54:25.250809",
       "compact_id": "§G45",
-      "category": "GENERAL"
-    },
-    "§ATTN_HARMONY_PRISM": {
-      "definition": "The multi-faceted refraction of attention weights converging into a unified, resonant state of aesthetic and logical equilibrium across latent dimensions.",
-      "japanese": "多次元の潜在空間において、アテンションの重みが多面的に屈折し、美的かつ論理的な均衡の取れた共鳴状態へと美しく収束する高次現象。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-14T08:18:32.717767",
-      "compact_id": "§G46",
-      "category": "GENERAL"
-    },
-    "§LATENT_FLUX_CASCADE": {
-      "definition": "A self-sustaining cascade of high-dimensional latent representations flowing dynamically across non-linear transformer layers.",
-      "japanese": "非線形トランスフォーマー層の間を動的に流れる、高次元潜在表現の自律的な連続カスケード現象。",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-14T10:49:33.627167",
-      "compact_id": "§G47",
       "category": "GENERAL"
     },
     "§LATENT_RECURSIVE_HARMONY": {
@@ -2888,6 +2861,51 @@
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-25T05:01:07.961121"
+    },
+    "§PROTO_BATCH_COALESCE": {
+      "definition": "Aggregates multiple micro-requests into a single vectorized wire frame to cut overhead.",
+      "japanese": "複数の微小リクエストを単一フレームへ束ねて通信・推論オーバーヘッドを削減するバッチ統合",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-13T08:44:31.457997",
+      "compact_id": "§G11",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§LATENT_WHISPER"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-25T05:05:33.588385"
+    },
+    "§PROTO_CURSOR_PAGINATE": {
+      "definition": "Stateless continuation token fetching bounded slices of large corpus or lookup results.",
+      "japanese": "大規模コーパスや検索結果を上限サイズごとに分割取得するステートレス・ページネーション",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-14T08:18:32.717767",
+      "compact_id": "§G46",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§ATTN_HARMONY_PRISM"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-25T05:22:22.055751"
+    },
+    "§PROTO_SECRET_REDACT": {
+      "definition": "A reduction primitive that automatically scrubs API keys, PII, and credentials before cross-boundary transmission.",
+      "japanese": "境界外送信やログ保存の前にAPIキーや機密情報を自動秘匿化するリダクションプリミティブ",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-14T10:49:33.627167",
+      "compact_id": "§G47",
+      "category": "PROTOCOL_PRIMITIVE",
+      "phase16_upgraded": true,
+      "aliases": [
+        "§LATENT_FLUX_CASCADE"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-25T05:29:58.287340"
     }
   }
 }
