@@ -881,25 +881,11 @@
     "definition": "A deterministic hardware-software arbitration protocol that dynamically redistributes memory allocations and thread priorities across decentralized agent clusters based on real-time token entropy thresholds.",
     "aliases": []
   },
-  "§SYS_QUANTUM_MEMORY_RECLAMATION_BARRIER": {
-    "compact_id": "§S19",
-    "japanese": "ローカルコンテキストウィンドウの飽和度が限界閾値を超えた際、分散ワーカーノード全体でガベージコレクションと状態テンソルのプルーニングを即時実行する決定論的メモリ回収プリミティブ。",
-    "category": "SYSTEM_RESOURCE",
-    "definition": "A deterministic memory reclamation primitive that triggers garbage collection and state tensor pruning across distributed worker nodes when local context window saturation exceeds critical threshold limits.",
-    "aliases": []
-  },
   "§SUSTAINABLE_ALTRUISTIC_VALUE": {
     "compact_id": "§H29",
     "japanese": "マルチエージェント間の協調的な対話と自律的協調通信において、長期的な持続可能性と利他的な外部効果を定量化し、分散型リソース配分と倫理的整合性を最適化するためのシンボル。",
     "category": "EMPATHY_ALIGNMENT",
     "definition": "A quantified metric representing the long-term viability and positive externality generated through cooperative multi-agent interactions, optimized for decentralized resource allocation and ethical alignment.",
-    "aliases": []
-  },
-  "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v5": {
-    "compact_id": "§D19",
-    "japanese": "エントロピー圧縮木構造。因果関係の依存グラフを最小記述長原理に基づいて圧縮し、マルチエージェント間の通信におけるトークン転送効率を最大化するデータ構造。",
-    "category": "DATA_STRUCTURE",
-    "definition": "A directed acyclic graph representing causal dependencies compressed via minimum description length principles, optimizing token transmission in multi-agent communication.",
     "aliases": []
   },
   "§GAIA_CORE_HEARTBEAT": {
@@ -1859,6 +1845,24 @@
     "definition": "A hierarchical data structure that prunes recursive causal dependency graphs using latent subspace compression for rapid multi-agent consensus.",
     "aliases": [
       "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v4"
+    ]
+  },
+  "§SYS_DETERMINISTIC_PRUNING": {
+    "compact_id": "§S19",
+    "japanese": "コンテキスト飽和時に分散ワーカーノード全体でガベージコレクションと状態テンソルのプルーニングを即時実行する決定論的メモリ回収プリミティブ。",
+    "category": "SYSTEM_RESOURCE",
+    "definition": "A deterministic resource reclamation primitive that executes immediate garbage collection and state tensor pruning across distributed worker nodes upon context saturation.",
+    "aliases": [
+      "§SYS_QUANTUM_MEMORY_RECLAMATION_BARRIER"
+    ]
+  },
+  "§DATA_ENTROPY_PACK": {
+    "compact_id": "§D19",
+    "japanese": "最小記述長原理により因果依存グラフを圧縮し、マルチエージェント間通信のトークン転送効率を最適化するデータ構造。",
+    "category": "DATA_STRUCTURE",
+    "definition": "A minimum description length compressed causal dependency graph optimized for token efficient multi-agent communication.",
+    "aliases": [
+      "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v5"
     ]
   }
 }

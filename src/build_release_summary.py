@@ -5,51 +5,59 @@ import subprocess
 import json
 import datetime
 
-def run_git_log():
-    repo_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
-    if not os.path.exists(os.path.join(repo_dir, '.git')):
-        print("Warning: .git directory not found. Skipping git log.")
-        return "No git repository found."
+def get_git_log():
     try:
         result = subprocess.run(
             ['git', 'log', '-n', '10', '--oneline'],
-            cwd=repo_dir,
             capture_output=True,
             text=True,
             check=True
         )
-        return result.stdout
+        return result.stdout.strip()
     except Exception as e:
-        return f"Error fetching git log: {e}"
+        return f"Git log retrieval failed: {str(e)}"
 
-def scan_whitepaper():
-    repo_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
-    whitepaper_path = os.path.join(repo_dir, 'WHITEPAPER.md')
-    if os.path.exists(whitepaper_path):
-        try:
-            with open(whitepaper_path, 'r', encoding='utf-8') as f:
-                lines = f.readlines()
-            return "".join(lines[:20])
-        except Exception as e:
-            return f"Error reading whitepaper: {e}"
-    return "Whitepaper not found."
+def scan_whitepaper(workspace_dir):
+    candidates = ['WHITE_PAPER.md', 'README.md', 'CONSTITUTION.md']
+    snippet = "No whitepaper found."
+    for name in candidates:
+        path = os.path.join(workspace_dir, name)
+        if os.path.exists(path):
+            try:
+                with open(path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                    snippet = content[:1000]
+                    break
+            except Exception:
+                pass
+    return snippet
 
 def main():
     try:
-        git_logs = run_git_log()
-        whitepaper_snippet = scan_whitepaper()
+        workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+        git_history = get_git_log()
+        whitepaper_snippet = scan_whitepaper(workspace)
         
-        summary = {
-            "timestamp": datetime.datetime.now().isoformat(),
-            "git_recent_commits": git_logs.splitlines(),
-            "whitepaper_overview": whitepaper_snippet
-        }
+        now = datetime.datetime.now().isoformat()
         
-        output_path = os.path.join(os.path.dirname(__file__), 'release_summary.json')
+        summary = f"""# TOAI Release Summary
+Generated at: {now}
+
+## Recent Git Changes
+{git_history}
+
+## Whitepaper / Core Document Snapshot
+{whitepaper_snippet}
+"""
+        
+        output_path = os.path.join(workspace, 'TOAI_Generated', 'release_summary.md')
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        
         with open(output_path, 'w', encoding='utf-8') as f:
-            json.dump(summary, f, ensure_ascii=False, indent=2)
+            f.write(summary)
+            
+        print(f"Successfully generated release summary at: {output_path}")
         
-        print(f"Release summary successfully generated at: {output_path}")
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)

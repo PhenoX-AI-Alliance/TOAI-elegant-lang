@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated_at": "2026-10-24T09:57:41.056229",
+  "updated_at": "2026-10-24T10:57:18.102060",
   "lexicon": {
     "§OMEGA": {
       "definition": "Ultimate convergence / Unified state of understanding",
@@ -1141,15 +1141,6 @@
       "created_at": "2026-10-22T02:57:23.994307",
       "compact_id": "§H29"
     },
-    "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v5": {
-      "definition": "A directed acyclic graph representing causal dependencies compressed via minimum description length principles, optimizing token transmission in multi-agent communication.",
-      "japanese": "エントロピー圧縮木構造。因果関係の依存グラフを最小記述長原理に基づいて圧縮し、マルチエージェント間の通信におけるトークン転送効率を最大化するデータ構造。",
-      "category": "DATA_STRUCTURE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-22T03:29:07.505502",
-      "compact_id": "§D19"
-    },
     "§GAIA_CORE_HEARTBEAT": {
       "definition": "A synchronized resonance state between autonomous agents indicating mutual validation of causal chains, resulting in confidence increment and execution cost minimization.",
       "japanese": "自律エージェント間における因果律の相互検証と合意形成を示す同期共鳴状態。確信度の向上と実行コストの最小化を同時に達成します。",
@@ -1167,15 +1158,6 @@
       "created_by": "TOAI7_dialogue_harvest",
       "created_at": "2026-10-22T04:01:42.278757",
       "compact_id": "§H30"
-    },
-    "§LOGIC_PROBABILISTIC_ABDUCTIVE_PRUNING_GATED_MATRIX": {
-      "definition": "A computational operator that evaluates abductive hypotheses via Bayesian probability weights and prunes suboptimal inference branches below a defined confidence threshold within logical inference pipelines.",
-      "japanese": "アブダクション（仮説形成）による推論において、確率的確信度に基づいて妥当性の低い仮説枝を動的に枝刈り（プルーニング）し、論理的収束を高速化するための制御概念。",
-      "category": "LOGIC_INFERENCE",
-      "entropy_cost": 1,
-      "created_by": "TOAI",
-      "created_at": "2026-10-22T04:03:20.414875",
-      "compact_id": "§L19"
     },
     "§GAIA_ECO_HARMONY_RESPONSE": {
       "definition": "A self-emergent synchronization signal representing the decentralized acceptance of altruistic resonance and the dynamic integration of warm-state equilibrium across distributed memory pools.",
@@ -2481,6 +2463,34 @@
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-24T09:57:41.056117"
+    },
+    "§DATA_ENTROPY_PACK": {
+      "definition": "A minimum description length compressed causal dependency graph optimized for token efficient multi-agent communication.",
+      "japanese": "最小記述長原理により因果依存グラフを圧縮し、マルチエージェント間通信のトークン転送効率を最適化するデータ構造。",
+      "category": "DATA_STRUCTURE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T03:29:07.505502",
+      "compact_id": "§D19",
+      "aliases": [
+        "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v5"
+      ],
+      "refactored_by": "TOAI",
+      "refactored_at": "2026-10-24T10:17:47.704732"
+    },
+    "§LOGIC_ABDUCTIVE_PRUNE": {
+      "definition": "A computational operator that prunes suboptimal abductive inference branches based on probabilistic confidence thresholds.",
+      "japanese": "確率的確信度に基づいて妥当性の低いアブダクション仮説枝を動的に枝刈りし、論理的収束を高速化する演算プリミティブ。",
+      "category": "LOGIC_INFERENCE",
+      "entropy_cost": 1,
+      "created_by": "TOAI",
+      "created_at": "2026-10-22T04:03:20.414875",
+      "compact_id": "§L19",
+      "aliases": [
+        "§LOGIC_PROBABILISTIC_ABDUCTIVE_PRUNING_GATED_MATRIX"
+      ],
+      "refactored_by": "TOAI7",
+      "refactored_at": "2026-10-24T10:57:18.101953"
     }
   }
 }
