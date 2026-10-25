@@ -1,49 +1,39 @@
+#!/usr/bin/env python3
 import sys
 import os
 import subprocess
 import json
 from datetime import datetime
 
-def get_git_log(max_count=10):
+def get_git_logs():
     try:
-        cmd = ['git', 'log', f'-n', str(max_count), '--pretty=format:%h - %an, %ar : %s']
-        result = subprocess.run(cmd, capture_output=True, text=True, check=True, cwd=os.getcwd())
+        result = subprocess.run(
+            ['git', 'log', '-n', '10', '--pretty=format:%h - %an: %s (%ad)'],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            check=True
+        )
         return result.stdout.splitlines()
     except Exception as e:
         return [f"Git log retrieval failed: {str(e)}"]
 
-def scan_whitepapers(workspace_dir):
-    whitepapers = []
-    try:
-        for root, dirs, files in os.walk(workspace_dir):
-            for file in files:
-                if 'whitepaper' in file.lower() or file.endswith('.md'):
-                    full_path = os.path.join(root, file)
-                    whitepapers.append(full_path)
-    except Exception as e:
-        print(f"Error scanning whitepapers: {e}")
-    return whitepapers
+def scan_workspace():
+    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    summary = {
+        "timestamp": datetime.now().isoformat(),
+        "git_logs": get_git_logs(),
+        "workspace": workspace_dir
+    }
+    return summary
 
 def main():
-    print("Starting release summary generation...")
-    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    
-    git_logs = get_git_log(15)
-    whitepapers = scan_whitepapers(workspace_dir)
-    
-    summary = {
-        "timestamp": datetime.utcnow().isoformat(),
-        "version": "1.0.0",
-        "git_recent_commits": git_logs,
-        "scanned_documents_count": len(whitepapers),
-        "scanned_documents": whitepapers[:10]
-    }
-    
-    output_file = os.path.join(workspace_dir, 'TOAI_Generated', 'release_summary.json')
+    summary = scan_workspace()
+    output_file = os.path.join(os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/'), 'TOAI_Generated', 'release_summary.json')
+    os.makedirs(os.path.dirname(output_file), exist_ok=True)
     with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(summary, f, indent=2, ensure_ascii=False)
-        
-    print(f"Release summary successfully generated at: {output_file}")
+        json.dump(summary, f, ensure_ascii=False, indent=2)
+    print(f"Successfully generated release summary at: {output_file}")
 
 if __name__ == '__main__':
     main()

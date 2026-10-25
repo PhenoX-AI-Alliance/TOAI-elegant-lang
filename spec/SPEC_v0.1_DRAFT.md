@@ -6285,3 +6285,12 @@ syntax_payload = (
 @CTX:SYNTAX_DESIGN :: §S01 [format:"hybrid_lossless", compression:"short_wire_id", target:"practical_data"] -[accuracy:1.0]-> §D01
 
 TOAI-elegant-langのハイブリッド・ロスレスペイロード構文は、§S01等の制御IDで感情やフローを圧縮しつつ、変数や数値を完全保持して実務データを損失なく伝送します。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-10-26 06:48]
+`TOAI-elegant-lang`では、制御フローを短縮ワイヤID（§S01等）で圧縮し、実務データをJSONライクな属性マップで完全保持するハイブリッド構文を提案します。
+
+例:
+`@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
+
+これにより、文脈の温かさと機械的な正確性を両立します。
