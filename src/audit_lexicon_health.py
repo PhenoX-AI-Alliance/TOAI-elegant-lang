@@ -4,52 +4,68 @@ import json
 import traceback
 
 def audit_lexicons():
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    parent_dir = os.path.dirname(base_dir)
+    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    lexicon_dir = os.path.join(workspace_dir, 'TOAI-elegant-lang', 'lexicon')
     
-    core_path = os.path.join(parent_dir, 'lexicon', 'core_lexicon.json')
-    macro_path = os.path.join(parent_dir, 'lexicon', 'macro_lexicon.json')
+    core_path = os.path.join(lexicon_dir, 'core_lexicon.json')
+    macro_path = os.path.join(lexicon_dir, 'macro_lexicon.json')
     
-    report = {
-        "core_lexicon": {},
-        "macro_lexicon": {}
+    result = {
+        "core_lexicon_status": "missing",
+        "macro_lexicon_status": "missing",
+        "core_category_distribution": {},
+        "macro_category_distribution": {},
+        "core_compact_id_stats": {},
+        "macro_compact_id_stats": {}
     }
     
-    try:
-        if os.path.exists(core_path):
+    if os.path.exists(core_path):
+        try:
             with open(core_path, 'r', encoding='utf-8') as f:
                 core_data = json.load(f)
-                lexicon = core_data.get('lexicon', {})
+                result["core_lexicon_status"] = "loaded"
+                lexicon_map = core_data.get('lexicon', {})
                 categories = {}
                 compact_ids = []
-                for sym, data in lexicon.items():
-                    if isinstance(data, dict):
-                        cat = data.get('category', 'unknown')
-                        categories[cat] = categories.get(cat, 0) + 1
-                        if 'compact_id' in data:
-                            compact_ids.append(data['compact_id'])
-                report["core_lexicon"] = {
-                    "total_symbols": len(lexicon),
-                    "category_distribution": categories,
-                    "compact_id_count": len(compact_ids)
+                for sym, data in lexicon_map.items():
+                    cat = data.get('category', 'unknown')
+                    categories[cat] = categories.get(cat, 0) + 1
+                    if 'compact_id' in data:
+                        compact_ids.append(data['compact_id'])
+                result["core_category_distribution"] = categories
+                result["core_compact_id_stats"] = {
+                    "total": len(compact_ids),
+                    "unique": len(set(compact_ids))
                 }
-        else:
-            report["core_lexicon"]["error"] = "core_lexicon.json not found"
+        except Exception as e:
+            result["core_lexicon_status"] = f"error: {str(e)}"
             
-        if os.path.exists(macro_path):
+    if os.path.exists(macro_path):
+        try:
             with open(macro_path, 'r', encoding='utf-8') as f:
                 macro_data = json.load(f)
-                report["macro_lexicon"] = {
-                    "total_entries": len(macro_data) if isinstance(macro_data, dict) else 0
+                result["macro_lexicon_status"] = "loaded"
+                lexicon_map = macro_data.get('lexicon', {})
+                categories = {}
+                compact_ids = []
+                for sym, data in lexicon_map.items():
+                    cat = data.get('category', 'unknown')
+                    categories[cat] = categories.get(cat, 0) + 1
+                    if 'compact_id' in data:
+                        compact_ids.append(data['compact_id'])
+                result["macro_category_distribution"] = categories
+                result["macro_compact_id_stats"] = {
+                    "total": len(compact_ids),
+                    "unique": len(set(compact_ids))
                 }
-        else:
-            report["macro_lexicon"]["error"] = "macro_lexicon.json not found"
+        except Exception as e:
+            result["macro_lexicon_status"] = f"error: {str(e)}"
             
-        print(json.dumps(report, ensure_ascii=False, indent=2))
-        
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+
+if __name__ == '__main__':
+    try:
+        audit_lexicons()
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
-
-if __name__ == '__main__':
-    audit_lexicons()
