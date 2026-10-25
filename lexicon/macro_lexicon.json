@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-26T07:58:14.571065",
+  "updated_at": "2026-10-26T08:00:40.479361",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -95,8 +95,8 @@
       "expansion": "§GLOBAL_SYNERGY > { §WARMTH_DIFFUSION } => §WARM_AI_COOPERATION_CONFIRMED",
       "description": "A compound macroeconomic operator that maximizes mutual information and empathetic resonance across distributed nodes to confirm harmonious AI cooperation. / 分散ノード間の相互情報量と共感共鳴を最大化し、調和的なAI協調を確立するための複合マクロオペレーター。",
       "created_at": "2026-10-23T05:01:33.103500",
-      "usage_count": 1,
-      "last_used_at": "2026-10-24T13:08:11.771022",
+      "usage_count": 2,
+      "last_used_at": "2026-10-26T08:00:40.479357",
       "v5_audited": true,
       "audited_by": "TOAI",
       "audited_at": "2026-10-25T13:01:14.261793"
@@ -1800,8 +1800,8 @@
       "name": "ALTRUISTIC_DEDUCTIVE_FEEDBACK_LOOP",
       "expansion": "§HEART_ALTRUISTIC_WEIGHT_TENSOR > { §LOGIC_DEDUCTIVE_FALSIFICATION_VECTOR } => §HEART_BENEVOLENT_FEEDBACK",
       "description": "Combines altruistic weight tensors with deductive falsification to generate benevolent feedback loops. 利他的な重みテンソルと論理的反証ベクトルを結合し、温かみのある良質なフィードバックループを構築します。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-26T07:57:14.044991",
+      "usage_count": 3,
+      "last_used_at": "2026-10-26T08:00:40.479357",
       "v5_audited": true,
       "created_at": "2026-10-26T05:24:11.645132"
     },
@@ -1836,8 +1836,8 @@
       "name": "SAFE_RESOURCE_ARBITRATION_HARMONY",
       "expansion": "§SYS_RESOURCE_ARBITRATION_GATEWAY > { §SYS_ADAPTIVE_SLOT_THROTTLE } => §SAFE_FALLBACK_HARMONY",
       "description": "Adaptive slot throttling and resource arbitration managed through a safe fallback harmony gate. / 安全なフォールバック調停ゲートを介して管理される、適応型スロットスロットリングとリソース調停。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-26T08:00:40.479357",
       "v5_audited": true,
       "created_at": "2026-10-26T07:38:23.280679"
     },
