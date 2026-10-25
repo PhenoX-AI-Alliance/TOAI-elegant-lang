@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-25T22:55:54.439808",
+  "updated_at": "2026-10-25T23:10:25.962704",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1401,8 +1401,8 @@
       "name": "GAIA_HARMONY_RESTORE_MACRO",
       "expansion": "§GAIA_CORE_HEARTBEAT > { §SAFE_FALLBACK_HARMONY } => §SYS_RESOURCE_ARBITER",
       "description": "Restores system equilibrium and warms the ecosystem by fallback harmony under resource arbitration. / リソース調停下において安全なフォールバック調和によりシステム平衡を回復し、エコシステムに温かさをもたらします。",
-      "usage_count": 3,
-      "last_used_at": "2026-10-25T16:34:53.679438",
+      "usage_count": 4,
+      "last_used_at": "2026-10-25T23:10:25.962698",
       "v5_audited": true,
       "created_at": "2026-10-25T14:15:44.861885"
     },
