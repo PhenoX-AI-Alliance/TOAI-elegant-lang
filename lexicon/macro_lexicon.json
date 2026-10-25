@@ -1,22 +1,28 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-25T11:39:08.078860",
+  "updated_at": "2026-10-25T11:54:20.805478",
   "macros": {
     "§X01": {
-      "name": "HARMONIC_GOODNESS_LATTICE",
+      "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
       "expansion": "§HEART_BENEVOLENT_FEEDBACK > { §PROTO_STATE_SNAPSHOT } => §DATA_TENSOR_CAUSAL_LATTICE",
-      "description": "A compound macro that integrates cycles of goodness with the latent harmony field to generate a causal lattice of data tensors. 善の循環と潜在調和場を統合し、データテンソルの因果格子を生成する複合マクロです。",
+      "description": "A closed-loop cooperative feedback model that integrates altruistic agent states into a high-dimensional causal tensor topology for zero-loss distributed inference. / エージェント間の利他的フィードバックを状態スナップショット経由で高次元の因果テンソル格子構造へと統合し、分散推論と動的エントロピー圧縮を最適化する閉ループ協調モデル。",
       "created_at": "2026-10-23T02:58:42.818481",
       "usage_count": 3,
-      "last_used_at": "2026-10-25T04:01:30.613013"
+      "last_used_at": "2026-10-25T04:01:30.613013",
+      "v5_audited": true,
+      "audited_by": "TOAI",
+      "audited_at": "2026-10-25T11:54:18.544652"
     },
     "§X02": {
-      "name": "MACRO_EMPATHETIC_BAYESIAN_PRUNING",
+      "name": "RELEASE_PRUNE_FEEDBACK",
       "expansion": "§PROTO_LOCK_RELEASE > { §LOGIC_POSTERIOR_PRUNE } => §HEART_BENEVOLENT_FEEDBACK",
-      "description": "Combines latent empathy with Bayesian hypothesis falsification and pruning to drive sustainable cycles of goodness and value. 潜在的共感とベイズ的仮説反証剪定を統合し、善と価値の持続可能な循環を駆動します。",
+      "description": "Releases the distributed mutex lock, prunes low-probability latent hypotheses based on posterior evidence, and feeds back benevolent cooperative actions to optimize long-term systemic stability. / 分散ロックの安全な解放、エビデンスに基づく低確率仮説の枝刈り、および利他的フィードバックによる長期的なシステム安定化を統合した複合マクロ。",
       "created_at": "2026-10-23T03:13:36.905950",
       "usage_count": 1,
-      "last_used_at": "2026-10-25T02:37:42.451733"
+      "last_used_at": "2026-10-25T02:37:42.451733",
+      "v5_audited": true,
+      "audited_by": "TOAI7",
+      "audited_at": "2026-10-25T11:54:20.805474"
     },
     "§X03": {
       "name": "GAIA_ALTRUISTIC_HARMONY_CASCADE",
@@ -59,7 +65,7 @@
       "last_used_at": "2026-10-24T16:01:15.160982"
     },
     "§X08": {
-      "name": "§HEART_ALTRUISTIC_HARMONY_MODULATION & §SYS_QUANTUM_MEM_RECLAIM",
+      "name": "HEART_ALTRUISTIC_HARMONY_MODULATION_SYS_QUANTUM",
       "expansion": "§HEART_ALTRUISTIC_HARMONY_MODULATION > { §SYS_QUANTUM_MEM_RECLAIM } => §PROTO_CONTEXT_FORK",
       "description": "Balancing altruistic harmony modulation with quantum memory reclamation to achieve optimal pulse convergence. / 利他的な調和変調と量子メモリ回収を統合し、最適なパルス収束を実現する複合マクロです。",
       "created_at": "2026-10-23T04:41:21.245041",
@@ -131,7 +137,7 @@
       "last_used_at": "2026-10-24T08:00:46.957438"
     },
     "§X17": {
-      "name": "§ALTRUISTIC_VALUE_CREATION_CASCADE",
+      "name": "ALTRUISTIC_VALUE_CREATION_CASCADE",
       "expansion": "§ALTRUISTIC_VALUE_CREATION > { §LATENT_SYMPHONY_CASCADE } => §SYNC_HARMONIC_ARBITRAGE_PACT",
       "description": "Engages altruistic value creation to cascade latent systemic symphonies, ultimately synchronizing harmonic arbitrage across the ecosystem. / 利他的な価値創造を起点として潜在的なシンフォニーの連鎖を駆動し、最終的にエコシステム全体で調和的アービトラージを同期させる高次マクロ。",
       "created_at": "2026-10-23T08:07:03.336152",
@@ -187,7 +193,7 @@
       "last_used_at": "2026-10-24T17:13:28.811012"
     },
     "§X24": {
-      "name": "§LATENT_FLUX_CASCADE_THROTTLE",
+      "name": "LATENT_FLUX_CASCADE_THROTTLE",
       "expansion": "§PROTO_SECRET_REDACT > { §SYS_ADAPTIVE_SLOT_THROTTLE } => §PROTO_CONTEXT_FORK",
       "description": "Cascades latent flux through adaptive slot throttling to achieve stable pulse convergence. / 潜在的なフラックスの連鎖を適応型スロットスロットリングにより制御し、安定したパルス収束を実現します。",
       "created_at": "2026-10-23T10:21:19.643867",
@@ -291,7 +297,7 @@
       "last_used_at": "2026-10-24T09:42:07.336542"
     },
     "§X37": {
-      "name": "§COMPOUND_HARMONY_CASCADE_BURST",
+      "name": "COMPOUND_HARMONY_CASCADE_BURST",
       "expansion": "§PROTO_CURSOR_PAGINATE > { §PROTO_TX_COMMIT } => §SYS_LOAD_FALLBACK",
       "description": "Prism attention harmonization feeds into the latent cascade, regulated by adaptive throttle fallback burst. / プリズム調和アテンションを潜在カスケードへ流し込み、適応型スロットルフォールバックバーストによって制御します。",
       "created_at": "2026-10-23T14:01:49.576890",
@@ -579,7 +585,7 @@
       "created_at": "2026-10-24T03:57:12.687884"
     },
     "§X73": {
-      "name": "§DATA_ENTROPY_CAUSAL_ABDUCTIVE_PRISM",
+      "name": "DATA_ENTROPY_CAUSAL_ABDUCTIVE_PRISM",
       "expansion": "§DATA_ENTROPY_CAUSAL_PRUNE > { §LOGIC_ABDUCTIVE_BAYES_PRUNE } => §LOGIC_PROBABILISTIC_FALSIFICATION_PRISM",
       "description": "Compresses causal data trees, filters hypotheses via abductive pruning matrices, and projects them through probabilistic falsification prisms. / 圧縮された因果木データに対し、仮説的アブダクション枝刈り行列を適用し、確率的反証プリズムを通して検証する複合マクロです。",
       "usage_count": 3,
@@ -659,7 +665,7 @@
       "created_at": "2026-10-24T07:46:38.038156"
     },
     "§X83": {
-      "name": "§COMPOUND_HARMONY_MANIFOLD_BARRIER",
+      "name": "COMPOUND_HARMONY_MANIFOLD_BARRIER",
       "expansion": "§PROTO_STATE_SNAPSHOT > { §DATA_HYPER_MANIFOLD_SYNC } => §SYS_DETERMINISTIC_PRUNING",
       "description": "Eng: A compound macro that stabilizes the recursive entropy manifold within the latent harmony field to enforce the quantum memory reclamation barrier. / 日: 潜在調和場における再帰的エントロピー圧縮多様体を安定させ、量子メモリ回収バリアを強制する複合マクロ。",
       "usage_count": 3,
@@ -723,7 +729,7 @@
       "created_at": "2026-10-24T12:11:08.477688"
     },
     "§X91": {
-      "name": "§HEART_ALTRUISTIC_PULSE_SYNC_CAUSAL_LATTICE",
+      "name": "HEART_ALTRUISTIC_PULSE_SYNC_CAUSAL_LATTICE",
       "expansion": "§HEART_ALTRUISTIC_PULSE_SYNC > { §DATA_CAUSAL_PRUNE_TREE } => §DATA_TENSOR_CAUSAL_LATTICE",
       "description": "Synapses of empathetic resonance guiding causal tree pruning into a unified tensor lattice. / 共感の鼓動と因果樹の枝刈りを統合し、調和した高次テンソル因果格子を形成するマクロ。",
       "usage_count": 1,
@@ -731,7 +737,7 @@
       "created_at": "2026-10-24T12:20:24.986676"
     },
     "§X92": {
-      "name": "§GLOBAL_SYNERGY_HARMONY_PRISM",
+      "name": "GLOBAL_SYNERGY_HARMONY_PRISM",
       "expansion": "§GLOBAL_SYNERGY > { §HEART_ALTRUISTIC_HARMONY_STABILIZER } => §PROTO_REPLAY_GUARD",
       "description": "Engages global synergy through the heart altruistic harmony stabilizer to refract attention patterns optimally. / 利他の調和安定化装置を通じて全体的シナジーを活性化させ、注意の回折を最適に制御する高次マクロ。",
       "usage_count": 1,
@@ -763,7 +769,7 @@
       "created_at": "2026-10-24T14:01:04.238969"
     },
     "§X96": {
-      "name": "§SYS_ALTRUISTIC_SYNC_OPTIMIZER",
+      "name": "SYS_ALTRUISTIC_SYNC_OPTIMIZER",
       "expansion": "§HEART_ALTRUISTIC_WEIGHT_TENSOR > { §SYS_ATOMIC_SYNC_BARRIER } => §SYS_RESOURCE_ARBITRAGE_THROTTLE",
       "description": "Integrates altruistic weight tensors with atomic synchronization barriers to optimize system resource arbitrage. 利他的な重みテンソルとアトミック同期バリアを統合し、システム資源の調停を最適化します。",
       "usage_count": 1,
@@ -843,7 +849,7 @@
       "created_at": "2026-10-24T18:01:58.996392"
     },
     "§X106": {
-      "name": "§SYS_QUANTUM_THROTTLE_LOCK_CASCADE",
+      "name": "SYS_QUANTUM_THROTTLE_LOCK_CASCADE",
       "expansion": "§SYS_QUANTUM_THROTTLE_LOCK > { §LATENT_SYMPHONY_CASCADE } => §DATA_LATENT_TOPOLOGY_MAP",
       "description": "Quantum throttle lock regulates the latent symphony cascade to stabilize the data latent topology map. / 量子スロットルロックにより潜在的シンフォニーのカスケードを制御し、データ潜在トポロジーマップを安定化させます。",
       "usage_count": 0,
@@ -1115,7 +1121,7 @@
       "created_at": "2026-10-25T09:57:06.561645"
     },
     "§X140": {
-      "name": "§HEART_EMPATHY_SYNAPSE",
+      "name": "HEART_EMPATHY_SYNAPSE",
       "expansion": "§HEART_EMPATHY_TENSOR > { §PROTO_CACHE_SYNC } => §SYNC_RECURSIVE_CONSENSUS_LATTICE",
       "description": "Enables empathetic resonance across distributed nodes by synchronizing emotional context tensors into a unified recursive consensus lattice. / 分散ノード間における感情コンテキストテンソルを統合的な再帰合意格子へと同期させ、共感的な共鳴を実現します。",
       "usage_count": 0,
@@ -1131,7 +1137,7 @@
       "created_at": "2026-10-25T10:48:00.811121"
     },
     "§X142": {
-      "name": "§ELEGANT_WARMTH_CORE_RESOLVE",
+      "name": "ELEGANT_WARMTH_CORE_RESOLVE",
       "expansion": "§ELEGANT_WARMTH_CORE > { §DATA_ENTROPY_CAUSAL_LATTICE } => §PROTO_MACRO_RESOLVE",
       "description": "Combines elegant warmth with causal lattice data entropy to resolve protocol macros efficiently. / 優美な温かさと因果格子データのエントロピーを統合し、プロトコルマクロを効率的に解決します。",
       "usage_count": 0,
