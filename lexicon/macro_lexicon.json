@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-26T05:56:50.113377",
+  "updated_at": "2026-10-26T06:01:11.105861",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -150,8 +150,8 @@
       "expansion": "§HEART_ALTRUISTIC_WEIGHT_TENSOR > { §PROTO_DEPENDENCY_WAIT } => §HEART_ALTRUISTIC_HARMONY_STABILIZER",
       "description": "Waits for upstream cryptographic dependency verification, then applies a mathematical alignment tensor and a self-correcting feedback loop to maximize cross-agent empathy, suppress hallucination cascades, and ensure ethical harmony. / 上流の依存関係および暗号学的成果物の検証完了を待機した後、数理アライメントテンソルと自己修正型フィードバック制御を適用し、エージェント間の共感を最大化しながらハルシネーションの伝播を抑制し倫理的調和を維持する。",
       "created_at": "2026-10-23T07:20:31.082633",
-      "usage_count": 1,
-      "last_used_at": "2026-10-24T08:04:10.584590",
+      "usage_count": 2,
+      "last_used_at": "2026-10-26T06:01:11.105856",
       "v5_audited": true,
       "audited_by": "TOAI7",
       "audited_at": "2026-10-25T14:01:22.085683"
@@ -1764,8 +1764,8 @@
       "name": "GAIA_ALTRUISTIC_SYNC",
       "expansion": "§GAIA_WARMTH_EXCHANGE > { §SAFE_FALLBACK_STABLE } => §SYS_SYNC_GATE",
       "description": "Exchanges warmth and altruistic value safely with stable fallback mechanisms to synchronize the system harmoniously / 安定したフォールバック機構を伴いながら温かみと利他的な価値を安全に交換し、システム全体を調和的に同期させる高次マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-26T05:28:38.460273",
+      "usage_count": 2,
+      "last_used_at": "2026-10-26T06:01:11.105856",
       "v5_audited": true,
       "created_at": "2026-10-26T05:06:05.322112"
     },
@@ -1782,8 +1782,8 @@
       "name": "SYNC_GRACEFUL_ROLLBACK_STABLE",
       "expansion": "§PROTO_GRACEFUL_DRAIN > { §PROTO_TX_ROLLBACK } => §SAFE_FALLBACK_STABLE",
       "description": "Gracefully drains the active connections before executing a transaction rollback, ensuring the system safely transitions to a stable fallback state. アクティブな接続を優雅にドレインした上でトランザクションロールバックを実行し、システムを安全に安定したフォールバック状態へ移行させます。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-26T06:01:11.105856",
       "v5_audited": true,
       "created_at": "2026-10-26T05:56:50.113373"
     }
