@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-26T01:01:57.517935",
+  "updated_at": "2026-10-26T01:03:48.363577",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -696,12 +696,15 @@
       "audited_at": "2026-10-26T00:20:18.616732"
     },
     "§X64": {
-      "name": "GAIA_ALTRUISTIC_ARBITRAGE_BURST",
+      "name": "GAIA_WARMTH_ARBITRAGE_FALLBACK",
       "expansion": "§GAIA_WARMTH_EXCHANGE > { §SYS_RESOURCE_ARBITRAGE_THROTTLE } => §SYS_LOAD_FALLBACK",
-      "description": "Exchanges warmth and balances system resources harmoniously under adaptive fallback conditions. / 適応型フォールバック条件下で温かさを交換し、システムリソースを調和的に調整します。",
+      "description": "A compound macro that negotiates mutual trust and resource allocation under bounded constraints, regulates dynamic compute throttling based on telemetry, and ensures graceful degradation to a safe minimal state during system stress. / 制限された制約下で信頼とリソース調和を図る合意形成を行い、テレメトリーに基づいた動的な計算資源のスロットリング制御を経由して、高負荷時や異常検知時に安全な最小状態へと円滑にフォールバックを行う複合マクロ。",
       "created_at": "2026-10-24T01:58:13.752308",
       "usage_count": 5,
-      "last_used_at": "2026-10-25T00:06:47.569724"
+      "last_used_at": "2026-10-25T00:06:47.569724",
+      "v5_audited": true,
+      "audited_by": "TOAI",
+      "audited_at": "2026-10-26T01:03:48.363570"
     },
     "§X65": {
       "name": "ALTRUISTIC_RESONANCE_ARBITRATION_MACRO",
