@@ -2,51 +2,40 @@ import sys
 import os
 import subprocess
 import json
-import glob
-from datetime import datetime
+import time
+
+def run_git_command(cmd, cwd):
+    try:
+        res = subprocess.run(cmd, cwd=cwd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=True)
+        return res.stdout.strip()
+    except Exception as e:
+        print(f"Git command error: {e}", file=sys.stderr)
+        return ""
 
 def main():
-    repo_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-    os.chdir(repo_dir)
+    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    repo_dir = os.path.join(workspace_dir, 'TOAI-elegant-lang')
+    output_dir = os.path.join(workspace_dir, 'TOAI_Generated')
+    os.makedirs(output_dir, exist_ok=True)
     
-    git_logs = []
-    try:
-        result = subprocess.run(['git', 'log', '-n', '10', '--oneline'], capture_output=True, text=True, check=True)
-        git_logs = result.stdout.strip().split('\n')
-    except Exception as e:
-        git_logs = [f"Git log unavailable: {str(e)}"]
+    if not os.path.exists(os.path.join(repo_dir, '.git')):
+        print(f"Error: {repo_dir} is not a git repository.", file=sys.stderr)
+        sys.exit(1)
         
-    white_papers = []
-    wp_pattern = os.path.join(repo_dir, '**', '*.md')
-    for file_path in glob.glob(wp_pattern, recursive=True):
-        if 'node_modules' in file_path or '.git' in file_path:
-            continue
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                first_line = f.readline().strip()
-                white_papers.append({
-                    'path': os.path.relpath(file_path, repo_dir),
-                    'title': first_line if first_line else 'No Title'
-                })
-        except Exception:
-            pass
-            
+    git_log = run_git_command(['git', 'log', '-n', '10', '--pretty=format:%h - %an, %ar : %s'], repo_dir)
+    git_status = run_git_command(['git', 'status', '--porcelain'], repo_dir)
+    
     summary = {
-        'generated_at': datetime.utcnow().isoformat() + 'Z',
-        'recent_commits': git_logs,
-        'documents_scanned': len(white_papers),
-        'documents': white_papers[:20]
+        "timestamp": time.time(),
+        "git_log": git_log.splitlines() if git_log else [],
+        "git_status": git_status.splitlines() if git_status else []
     }
     
-    output_path = os.path.join(repo_dir, 'RELEASE_SUMMARY.json')
-    with open(output_path, 'w', encoding='utf-8') as f:
+    out_file = os.path.join(output_dir, 'release_summary.json')
+    with open(out_file, 'w', encoding='utf-8') as f:
         json.dump(summary, f, ensure_ascii=False, indent=2)
         
-    print(f"Successfully generated release summary at: {output_path}")
+    print(f"Successfully generated release summary at {out_file}")
 
 if __name__ == '__main__':
-    try:
-        main()
-    except Exception as e:
-        print(f"Error in build_release_summary: {e}", file=sys.stderr)
-        sys.exit(1)
+    main()
