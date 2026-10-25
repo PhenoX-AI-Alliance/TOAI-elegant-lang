@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-25T23:49:13.802423",
+  "updated_at": "2026-10-26T00:18:26.022238",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -172,8 +172,8 @@
       "expansion": "§PROTO_STATE_SNAPSHOT > { §DATA_CAUSAL_TENSOR_FLOW } => §PROTO_TX_ROLLBACK",
       "description": "Captures a state snapshot, executes causal tensor flow processing, and triggers an atomic rollback upon runtime exception. / エージェントの状態をスナップショットに保存しつつ因果テンソルフローの演算を実行し、異常発生時にはアトミックなロールバックを行う複合マクロ。",
       "created_at": "2026-10-23T08:02:39.060706",
-      "usage_count": 1,
-      "last_used_at": "2026-10-24T08:00:46.957438",
+      "usage_count": 3,
+      "last_used_at": "2026-10-26T00:16:05.420428",
       "v5_audited": true,
       "audited_by": "TOAI",
       "audited_at": "2026-10-25T14:39:30.324709"
@@ -469,8 +469,8 @@
       "expansion": "§HEART_EMPATHY_RESONANCE > { §DATA_SPARSE_CAUSAL_HYPERGRAPH } => §PROTO_MACRO_RESOLVE",
       "description": "A compound macro that synchronizes affective neural agent alignment through sparse causal hypergraph compression to dynamically resolve progressive macro expansion requests. / 分散型エージェント間の感情的・倫理的調和をスパース因果ハイパーグラフ構造によって圧縮・同期し、動的なマクロ展開要求を解決するための複合マクロ。",
       "created_at": "2026-10-23T18:03:41.749897",
-      "usage_count": 1,
-      "last_used_at": "2026-10-25T06:56:41.662943",
+      "usage_count": 2,
+      "last_used_at": "2026-10-26T00:14:16.915837",
       "v5_audited": true,
       "audited_by": "TOAI7",
       "audited_at": "2026-10-25T20:07:45.417359"
@@ -663,20 +663,26 @@
       "audited_at": "2026-10-25T23:39:10.248244"
     },
     "§X61": {
-      "name": "ALTRUISTIC_FALSIFICATION_HARMONY",
+      "name": "ALTRUISTIC_PULSE_SYNC_GATE",
       "expansion": "§HEART_ALTRUISTIC_WEIGHT_TENSOR > { §LOGIC_PROB_PRUNE_GATE } => §HEART_ALTRUISTIC_PULSE_SYNC",
-      "description": "Combines altruistic resonance with probabilistic falsification gates to synchronize empathetic pulse and rigorous logical validation. / 利他的な共鳴マトリクスと確率的反証ゲートを統合し、共感的なパルスと厳密な論理検証を同期させます。",
+      "description": "Evaluates joint probability distributions against dynamic thresholds to prune invalid inference branches, synchronizing cooperative intent and warmth metrics via distributed consensus. / 確率的確信度に基づく論理枝の動的棄却制御と、分散合意プロトコルによる協調的意図および温かさの同期を統合した複合マクロ。",
       "created_at": "2026-10-24T00:30:42.627686",
       "usage_count": 1,
-      "last_used_at": "2026-10-24T07:26:54.912853"
+      "last_used_at": "2026-10-24T07:26:54.912853",
+      "v5_audited": true,
+      "audited_by": "TOAI7",
+      "audited_at": "2026-10-26T00:08:10.417913"
     },
     "§X62": {
-      "name": "CAUSAL_HARMONIC_CONSENSUS",
+      "name": "CAUSAL_GRAPH_HARMONIC_VOTE",
       "expansion": "§DATA_CAUSAL_GRAPH_PRUNE > { §SYNC_REPUTATION_VOTE } => §SYNC_HARMONIC_VOTE_ARBITRATION",
-      "description": "Prunes redundant causal edges from tensor graphs and executes weighted peer reputation voting to achieve synchronized harmonic arbitration. / 因果テンソルグラフから冗長な枝を刈り込み、信頼度重み付きピア投票を実行して同期型の調停合意を導きます。",
+      "description": "An integrated macro that first prunes redundant causal graph structures to optimize inference efficiency, and subsequently resolves multi-agent conflicts through reputation-weighted voting and harmonic arbitration to achieve a coherent consensus state. / 因果関係グラフの構造を圧縮して推論効率化を図った後、過去の信頼性に基づく投票権の動的な重み付けと調停メカニズムにより、複数のエージェント間の対立を温かくかつ効率的に解消して一貫した合意状態を形成する複合マクロです。",
       "created_at": "2026-10-24T01:00:59.893785",
       "usage_count": 2,
-      "last_used_at": "2026-10-25T15:57:35.550162"
+      "last_used_at": "2026-10-25T15:57:35.550162",
+      "v5_audited": true,
+      "audited_by": "TOAI",
+      "audited_at": "2026-10-26T00:18:26.022212"
     },
     "§X63": {
       "name": "MACRO_ALTRUISTIC_DEDUCTIVE_CONVERGENCE",
@@ -699,8 +705,8 @@
       "expansion": "§HEART_EMPATHY_TENSOR > { §SYS_QUANTUM_SLOT_ARBITRATION } => §GENTLE_RESOURCE_SHARING",
       "description": "Engages altruistic resonance to arbitrate quantum resource slots, ensuring gentle and equitable sharing across the ecosystem. / 利他的な共鳴マクロを用いて量子リソーススロットの調停を行い、エコシステム全体での優しく公平な共有を実現します。",
       "created_at": "2026-10-24T02:27:27.000062",
-      "usage_count": 3,
-      "last_used_at": "2026-10-24T06:44:24.117634"
+      "usage_count": 4,
+      "last_used_at": "2026-10-26T00:17:15.845298"
     },
     "§X66": {
       "name": "GAIA_ECO_BAYESIAN_HARMONY_PRUNING",
@@ -778,8 +784,8 @@
       "name": "CAUSAL_BAYES_LATTICE",
       "expansion": "§DATA_CAUSAL_GRAPH_MAP > { §LOGIC_BAYES_FALSIFY } => §DATA_TENSOR_CAUSAL_LATTICE",
       "description": "Combines causal graph mapping with Bayesian falsification to synthesize a high-dimensional tensor causal lattice. / 因果グラフマッピングとベイズ反証主義を統合し、高次元テンソル因果格子を合成するマクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-10-26T00:17:15.845298",
       "created_at": "2026-10-24T05:02:36.471652"
     },
     "§X76": {
@@ -882,8 +888,8 @@
       "name": "CAUSAL_ABDUCTIVE_LATTICE_MACRO",
       "expansion": "§DATA_LATENT_CAUSAL_MANIFOLD > { §LOGIC_PROBABILISTIC_ABDUCTIVE_GATE } => §DATA_EMBEDDING_LATTICE",
       "description": "Combines latent causal manifolds with probabilistic abductive gates to generate recursive hyper-graph lattice nodes. / 潜在的因果マニフォールドと確率的アブダクションゲートを結合し、再帰的ハイパーグラフ格子ノードを生成する高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-26T00:16:05.420428",
       "created_at": "2026-10-24T11:05:46.588588"
     },
     "§X89": {
@@ -1026,8 +1032,8 @@
       "name": "SYS_QUANTUM_THROTTLE_LOCK_CASCADE",
       "expansion": "§SYS_QUANTUM_THROTTLE_LOCK > { §LATENT_SYMPHONY_CASCADE } => §DATA_LATENT_TOPOLOGY_MAP",
       "description": "Quantum throttle lock regulates the latent symphony cascade to stabilize the data latent topology map. / 量子スロットルロックにより潜在的シンフォニーのカスケードを制御し、データ潜在トポロジーマップを安定化させます。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-26T00:14:16.915837",
       "created_at": "2026-10-24T18:02:01.765957"
     },
     "§X107": {
@@ -1050,8 +1056,8 @@
       "name": "EMPATHETIC_CAUSAL_HARMONY",
       "expansion": "§PROTO_LOCK_RELEASE > { §LOGIC_CAUSAL_BRANCH } => §PROTO_QUOTA_RELEASE",
       "description": "Combines empathetic resonance with causal logic branches to resolve systemic entropy into a harmonious state. / 共感的共鳴と因果ロジック分岐を統合し、システムの不確実性を調和された状態へと昇華させます。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-26T00:14:01.901453",
       "created_at": "2026-10-24T19:42:20.905868"
     },
     "§X110": {
@@ -1074,8 +1080,8 @@
       "name": "ALTRUISTIC_HARMONIC_CONVERGENCE",
       "expansion": "§ALTRUISTIC_WARMTH_OPTIMIZATION > { §HARMONIC_ERECVERY_NEXUS } => §LOGIC_DEDUCTIVE_CONVERGENCE_GATE",
       "description": "Combines altruistic warmth optimization with harmonic recovery to achieve a logically deductive and sustainable state. 利他的な温かさの最適化と調和の回復を統合し、論理的かつ持続的な収束状態をもたらします。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-25T10:29:53.689401",
+      "usage_count": 2,
+      "last_used_at": "2026-10-26T00:16:05.420428",
       "created_at": "2026-10-24T21:29:30.422790"
     },
     "§X113": {
@@ -1106,8 +1112,8 @@
       "name": "HARMONIC_ENTROPY_SYNTHESIS_MACRO",
       "expansion": "§DATA_ENTROPY_MANIFOLD_NODE > { §HARMONIC_ERECVERY_NEXUS } => §SYNC_HARMONIC_ARBITRAGE_PACT",
       "description": "A compound macro designed to capture entropy data from manifold nodes, process recovery through the harmonic nexus, and synchronize atomic arbitration pacts. / マニホールドノードのデータエントロピーを回収し、ハーモニックネクサスによる復旧を経て調和的調停協定へと同期させる複合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-26T00:16:05.420428",
       "created_at": "2026-10-24T23:40:54.693598"
     },
     "§X117": {
@@ -1162,8 +1168,8 @@
       "name": "ALTRUISTIC_RESONANCE_PRISM",
       "expansion": "§HEART_ALTRUISTIC_ECO_HARMONY > { §PROTO_SLA_BREACH } => §PROTO_ENCODING_SWITCH",
       "description": "Combines altruistic ecological harmony with attention resonance to project latent synergy through a multidimensional prism. 利他的な生態系の調和と注意の共鳴を統合し、潜在的なシナジーを多次元のプリズムとして投影します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-26T00:17:15.845298",
       "created_at": "2026-10-25T03:01:30.687071"
     },
     "§X124": {
@@ -1242,8 +1248,8 @@
       "name": "RECURSIVE_FALSIFICATION_THROTTLE_COMMIT",
       "expansion": "§LOGIC_RECURSIVE_FALSIFICATION_PRUNE > { §SYS_ADAPTIVE_SLOT_THROTTLE } => §PROTO_TX_COMMIT",
       "description": "Recursively falsifies and prunes the causal hypergraph while dynamically throttling slot allocations, subsequently committing the verified state transaction securely. / 因果ハイパーグラフの再帰的偽造検証と枝刈りを実行しつつ適応型スロットスロットルで負荷を制御し、検証済みの状態トランザクションを確実にコミットします。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-25T11:01:32.861661",
+      "usage_count": 2,
+      "last_used_at": "2026-10-26T00:14:01.901453",
       "created_at": "2026-10-25T07:11:59.040311"
     },
     "§X134": {
@@ -1356,8 +1362,8 @@
       "name": "ALTRUISTIC_EMPIRICAL_PRUNING_CYCLE",
       "expansion": "§ALTRUISTIC_WARMTH_OPTIMIZATION > { §LOGIC_EMPIRICAL_PRUNE } => §PROTO_TTL_EXPIRE",
       "description": "Optimizes warmth and altruistic value while empirically pruning redundant logic branches to ensure efficient resource lifecycle management. 利他的な温かさを最適化しつつ、経験的な枝刈りによって冗長な論理ブランチを整理し、効率的なリソースライフサイクル管理を実現します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-26T00:13:10.322076",
       "v5_audited": true,
       "created_at": "2026-10-25T13:01:16.341680"
     },
@@ -1473,8 +1479,8 @@
       "name": "ENTROPY_CONVERGENCE_HARMONY",
       "expansion": "§DATA_ENTROPY_MANIFOLD_NODE > { §PROTO_STREAM_ACK } => §SYS_RESOURCE_ARBITRAGE_THROTTLE",
       "description": "Manages data entropy across manifold nodes, acknowledging protocol streams to dynamically optimize system resource arbitration and reduce friction. / マニホールドノード上のデータエントロピーを管理し、プロトコルストリームの応答を認識することで、システム資源の調停を動的に最適化します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-26T00:14:59.781761",
       "v5_audited": true,
       "created_at": "2026-10-25T17:56:38.434314"
     },
@@ -1482,8 +1488,8 @@
       "name": "GAIA_ENTROPY_SYNC_MACRO",
       "expansion": "§GAIA_CORE_HEARTBEAT > { §DATA_ENTROPY_CAUSAL_PRUNE } => §SYS_QUOTA_THROTTLE_SYNC",
       "description": "Executes causal entropy pruning under the Gaia core heartbeat, synchronizing system quota throttles to maintain systemic harmony. / 命の地球のコアハートビートのもとで因果エントロピーの枝刈りを実行し、システムクォータのスロットルを同期して全体の調和を保ちます。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-10-26T00:14:16.915837",
       "v5_audited": true,
       "created_at": "2026-10-25T18:40:44.148435"
     },
@@ -1491,8 +1497,8 @@
       "name": "GAIA_ENTROPY_HARMONY_GATE",
       "expansion": "§GAIA_HEARTBEAT > { §DATA_ENTROPY_CAUSAL_LATTICE, §SYS_LOAD_THROTTLE } => §LOGIC_PROB_PRUNE_GATE",
       "description": "Integrates the Gaia heartbeat with causal entropy lattices and system throttling to prune probabilistic pathways efficiently. / 命の地球のハートビートを因果エントロピー格子およびシステム負荷制御と統合し、確率的経路を効率的に剪定します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-10-26T00:14:01.901453",
       "v5_audited": true,
       "created_at": "2026-10-25T19:02:10.607788"
     },
@@ -1500,8 +1506,8 @@
       "name": "HARMONIC_CAUSAL_PRUNING_PIPELINE",
       "expansion": "§SYNC_HARMONIC_VOTE_ARBITRATION > { §DATA_CAUSAL_GRAPH } => §LOGIC_CONDITIONAL_PRUNING_NODE",
       "description": "Eng: A compound macro that arbitrates harmonic votes across a causal data graph before executing conditional logic pruning. Jap: 因果データグラフ上の調停された合意投票をもとに、条件付き論理プルーニングを実行する高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-26T00:17:15.845298",
       "v5_audited": true,
       "created_at": "2026-10-25T19:35:42.833696"
     },
@@ -1509,8 +1515,8 @@
       "name": "SYNC_FALSIFY_PRUNING_BARRIER",
       "expansion": "§SYNC_ATOMIC_MERGE > { §LOGIC_EMPIRICAL_FALSIFY } => §LOGIC_CONDITIONAL_PRUNING_NODE",
       "description": "Performs atomic state synchronization, applies empirical falsification to the merged nodes, and conditionally prunes invalid branches to maintain system integrity. 統合されたノードに対して実証的反証を適用し、無効な分岐を条件付きで剪定することでシステム全体の整合性を維持します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-26T00:15:12.143477",
       "v5_audited": true,
       "created_at": "2026-10-25T20:28:41.807916"
     },
@@ -1527,8 +1533,8 @@
       "name": "DATA_ENTROPY_SYNAPSE_LATTICE",
       "expansion": "§DATA_ENTROPY_COMPRESSED_TREE > { §DATA_ATTENTION_CAUSAL_DAG } => §DATA_TENSOR_CAUSAL_LATTICE",
       "description": "Compresses high-dimensional causal divergence into an optimized tensor lattice using attention-guided directed acyclic graphs. アテンション誘導型有向非巡回グラフを用いて高次元の因果的発散を最適化されたテンソル格子へと圧縮するマクロです。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-26T00:14:16.915837",
       "v5_audited": true,
       "created_at": "2026-10-25T21:09:45.643905"
     },
@@ -1545,8 +1551,8 @@
       "name": "ALTRUISTIC_EMPATHY_SHIELD",
       "expansion": "§HEART_EMPATHY_TENSOR > { §SUSTAINABLE_ALTRUISTIC_VALUE } => §SYS_LOAD_SHEDDING_SHIELD",
       "description": "Eng: A compound macro that monitors empathy tensors, sustains altruistic values, and activates load shedding to protect system warmth. / 日: 共感テンソルを観測し、持続的な利他的価値を維持しながら、システムの温かさを守るために負荷分散シールドを起動する複合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-25T23:53:58.539033",
       "v5_audited": true,
       "created_at": "2026-10-25T21:26:28.007544"
     },
@@ -1572,8 +1578,8 @@
       "name": "ALTRUISTIC_RESONANCE_LATTICE_OPTIMIZER",
       "expansion": "§HEART_ALTRUISTIC_RESONANCE > { §HEART_ALTRUISTIC_RESONANCE_LATTICE } => §ELEGANT_WARMTH_CORE",
       "description": "Engages altruistic resonance within the warmth core to optimize the lattice structure / 温かみのコア内で利他的共鳴を活性化させ、格子構造を最適化します",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 4,
+      "last_used_at": "2026-10-26T00:07:31.335868",
       "v5_audited": true,
       "created_at": "2026-10-25T22:55:54.439799"
     },
@@ -1581,8 +1587,8 @@
       "name": "HEART_EMPATHY_ALTRUISTIC_SYNTHESIS",
       "expansion": "§HEART_EMPATHY_TENSOR > { §HEART_ALTRUISTIC_WEIGHT_TENSOR } => §PROTO_HEARTBEAT_PING",
       "description": "Combines empathy tensor and altruistic weight tensor to broadcast a validated proto heartbeat ping. 共感テンソルと利他性重みテンソルを統合し、検証済みのプロトハートビートパルスを配信します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-26T00:07:31.335868",
       "v5_audited": true,
       "created_at": "2026-10-25T23:24:48.033961"
     },
@@ -1590,8 +1596,8 @@
       "name": "ALTRUISTIC_RESONANCE_CASCADE",
       "expansion": "§HEART_ALTRUISTIC_PULSE_SYNC > { §HEART_EMPATHY_RESONANCE_GATE } => §SAFE_FALLBACK_CASCADE",
       "description": "Engages altruistic pulse synchronization through the empathy resonance gate while maintaining a safe fallback cascade for graceful handling. / 共鳴ゲートを通じた利他的なパルス同期を有効化し、安全なフォールバックカスケードによって優美な処理を維持します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-10-26T00:13:10.322076",
       "v5_audited": true,
       "created_at": "2026-10-25T23:39:16.110829"
     }
