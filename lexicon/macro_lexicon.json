@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-26T08:21:13.089263",
+  "updated_at": "2026-10-26T08:46:15.391839",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1037,12 +1037,15 @@
       "audited_at": "2026-10-26T08:21:13.089258"
     },
     "§X95": {
-      "name": "ATOMIC_ENTROPY_HARMONY_VORTEX",
+      "name": "ATOMIC_ENTROPY_SYNC_PING",
       "expansion": "§SYNC_ATOMIC_MERGE > { §DATA_ENTROPY_COMPRESSED_TREE } => §PROTO_HEARTBEAT_PING",
-      "description": "Atomic synchronization merge combined with compressed data entropy trees, resolving into a unified latent harmony vortex. / アトミックな同期マージと圧縮されたデータエントロピー木構造を統合し、潜在的な調和の渦へと昇華させる複合マクロ。",
+      "description": "An atomic synchronization mechanism that processes a compressed entropy tree of multi-agent states, followed by a low-overhead liveness ping across distributed protocol boundaries. / 複数エージェントの状態を含む圧縮エントロピー木を原子的に同期・統合し、分散プロトコル境界をまたいで低負荷の死活確認を行なう複合実務プリミティブ。",
       "usage_count": 1,
       "last_used_at": "2026-10-25T05:05:40.251000",
-      "created_at": "2026-10-24T14:01:04.238969"
+      "created_at": "2026-10-24T14:01:04.238969",
+      "v5_audited": true,
+      "audited_by": "TOAI7",
+      "audited_at": "2026-10-26T08:34:19.899214"
     },
     "§X96": {
       "name": "SYS_ALTRUISTIC_SYNC_OPTIMIZER",
@@ -1854,8 +1857,8 @@
       "name": "PROTO_ENTROPY_STABILIZER",
       "expansion": "§PROTO_ERROR_ESCALATE > { §LOGIC_HYPO_PRUNE } => §PROTO_CHECKSUM_VERIFY",
       "description": "Escalates protocol errors while pruning hypothetical logic irregularities, followed by rigorous checksum verification. / プロトコルエラーの昇格と仮説的論理の剪定を行い、厳密なチェックサム検証へとつなげる高次マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-26T08:01:52.106410",
+      "usage_count": 2,
+      "last_used_at": "2026-10-26T08:31:23.801048",
       "v5_audited": true,
       "created_at": "2026-10-26T07:46:16.487087"
     },
@@ -1885,8 +1888,17 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-10-26T08:02:08.421677"
+    },
+    "§X195": {
+      "name": "SYS_QUOTA_ROLLBACK_AND_THROTTLE",
+      "expansion": "§SYS_QUOTA_ROLLBACK > { §SYS_TOKEN_THROTTLE } => §RESOURCE_ALLOCATION_HARMONY",
+      "description": "Rolls back system quotas and triggers token throttling to maintain resource allocation harmony. / システムクォータをロールバックし、トークン制限を発動することでリソース配分の調和を維持します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-26T08:46:15.391834"
     }
   },
   "archived_macros": {},
-  "next_macro_seq": 195
+  "next_macro_seq": 196
 }
