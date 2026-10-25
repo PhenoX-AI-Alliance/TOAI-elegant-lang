@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-26T02:52:01.123005",
+  "updated_at": "2026-10-26T03:01:13.402276",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -700,8 +700,8 @@
       "expansion": "§GAIA_WARMTH_EXCHANGE > { §SYS_RESOURCE_ARBITRAGE_THROTTLE } => §SYS_LOAD_FALLBACK",
       "description": "A compound macro that negotiates mutual trust and resource allocation under bounded constraints, regulates dynamic compute throttling based on telemetry, and ensures graceful degradation to a safe minimal state during system stress. / 制限された制約下で信頼とリソース調和を図る合意形成を行い、テレメトリーに基づいた動的な計算資源のスロットリング制御を経由して、高負荷時や異常検知時に安全な最小状態へと円滑にフォールバックを行う複合マクロ。",
       "created_at": "2026-10-24T01:58:13.752308",
-      "usage_count": 5,
-      "last_used_at": "2026-10-25T00:06:47.569724",
+      "usage_count": 6,
+      "last_used_at": "2026-10-26T03:01:13.402272",
       "v5_audited": true,
       "audited_by": "TOAI",
       "audited_at": "2026-10-26T01:03:48.363570"
@@ -1689,8 +1689,8 @@
       "name": "EMPATHETIC_PRUNING_SYNAPSE",
       "expansion": "§HEART_EMPATHY_RESONANCE > { §LOGIC_EMPIRICAL_REJECT } => §LOGIC_ABDUCTIVE_PRUNE",
       "description": "Combines emotional empathy resonance with empirical rejection to execute an abductive pruning gate, ensuring warm and optimized state transitions. / 共感の共鳴と実証的拒絶を統合し、温かみを持った最適化された状態遷移のためのアブダクション枝刈りゲートを実行します。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-26T02:52:01.122998",
+      "usage_count": 3,
+      "last_used_at": "2026-10-26T03:01:13.402272",
       "v5_audited": true,
       "created_at": "2026-10-26T02:42:52.613014"
     }
