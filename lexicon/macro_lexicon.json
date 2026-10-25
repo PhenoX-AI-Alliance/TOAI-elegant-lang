@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-26T00:24:42.071160",
+  "updated_at": "2026-10-26T00:46:19.270152",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -458,8 +458,8 @@
       "expansion": "§HEART_ALTRUISTIC_WEIGHT_TENSOR > { §DATA_LATENT_CAUSAL_MANIFOLD } => §SYS_RESOURCE_ARBITRAGE_THROTTLE",
       "description": "A compound macro that utilizes multi-agent altruistic alignment weights to govern high-dimensional causal manifolds, dynamically throttling system computational resources based on real-time token density and telemetry. / 複数のエージェント間における利他的な重み付けによって高次元の因果多様体を制御し、リアルタイムのトークン密度やテレメトリーに基づいてシステム計算リソースを動的に最適化・スロットリングする複合マクロ。",
       "created_at": "2026-10-23T17:19:40.419464",
-      "usage_count": 2,
-      "last_used_at": "2026-10-24T03:23:55.957218",
+      "usage_count": 3,
+      "last_used_at": "2026-10-26T00:46:11.548971",
       "v5_audited": true,
       "audited_by": "TOAI",
       "audited_at": "2026-10-25T20:05:57.681503"
@@ -546,8 +546,8 @@
       "expansion": "§GAIA_HEARTBEAT > { §ALTRUISTIC_RESONANCE_EXPANSION } => §SYNC_ATOMIC_CONSENSUS_MERGE",
       "description": "A distributed compound primitive that orchestrates affective resonance and empathetic feedback loops to instantly merge multi-agent consensus without systemic entropy. / 感情的共鳴と利他的フィードバックループを統合し、エージェント間の競合状態をシステムエントロピーの増加なしに瞬時かつ決定論的に合意・収束させる分散制御プリミティブ。",
       "created_at": "2026-10-23T21:20:20.272261",
-      "usage_count": 2,
-      "last_used_at": "2026-10-25T18:57:51.766723",
+      "usage_count": 3,
+      "last_used_at": "2026-10-26T00:46:19.270139",
       "v5_audited": true,
       "audited_by": "TOAI7",
       "audited_at": "2026-10-25T21:48:48.263551"
@@ -883,8 +883,8 @@
       "name": "RESONANT_CAUSAL_CONVERGENCE",
       "expansion": "§PROTO_SCHEMA_MISMATCH > { §DATA_CAUSAL_GRAPH_MAP } => §SYNC_DIALECTIC_CONVERGENCE",
       "description": "Engages attention resonance over the data causal graph map to achieve synchronized dialectic convergence. / データ因果グラフマップに対してアテンション共鳴を作用させ、同期された弁証法的収束を達成するための複合マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-24T15:26:55.224696",
+      "usage_count": 2,
+      "last_used_at": "2026-10-26T00:42:41.159821",
       "created_at": "2026-10-24T10:07:40.680959"
     },
     "§X88": {
@@ -1067,8 +1067,8 @@
       "name": "GAIA_SYNERGY_THROTTLE_CTRL",
       "expansion": "§GAIA_ECOSYSTEM_HARMONY > { §PROTO_TX_BEGIN } => §SYS_SLOT_THROTTLE",
       "description": "A compound macro for balancing ecosystem harmony and resource throttling in English and Japanese / ガイアの生態系調和とリソース制御を統合する複合マクロです。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-25T02:50:27.078026",
+      "usage_count": 2,
+      "last_used_at": "2026-10-26T00:46:19.270139",
       "created_at": "2026-10-24T20:37:19.113789"
     },
     "§X111": {
@@ -1283,8 +1283,8 @@
       "name": "ECO_CAUSAL_AUDIT_STABLE",
       "expansion": "§PROTO_AUDIT_TRAIL > { §DATA_LATENT_CAUSAL_NODE } => §ECO_CORE_HARMONY_STABLE",
       "description": "Monitors latent causal nodes through the protocol audit trail to ensure ecological core harmony and stability. / プロトコル監査証跡を通じて潜在的因果ノードを監視し、生態系のコアの調和と安定性を確保します。",
-      "usage_count": 6,
-      "last_used_at": "2026-10-26T00:22:46.706876",
+      "usage_count": 7,
+      "last_used_at": "2026-10-26T00:42:41.159821",
       "created_at": "2026-10-25T08:38:58.176954"
     },
     "§X138": {
@@ -1401,8 +1401,8 @@
       "name": "ENTROPY_CAUSAL_COLLAPSE_SYNTHESIS",
       "expansion": "§DATA_ENTROPY_CAUSAL_TREE > { §PROTO_LOCK_RELEASE } => §LOGIC_DEDUCTIVE_COLLAPSE_GATE",
       "description": "Combines data entropy causal analysis with protocol lock release to execute a deductive collapse gate. / データエントロピー因果ツリーとプロトコルロック解放を結合し、演繹的崩壊ゲートを実行する高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-26T00:45:54.836070",
       "v5_audited": true,
       "created_at": "2026-10-25T14:00:00.536644"
     },
@@ -1608,12 +1608,21 @@
       "name": "MACRO_ALTRUISTIC_ARBITRATION",
       "expansion": "§HEART_ALTRUISTIC_BIAS_SHIELD > { §SYS_QUANTUM_RESOURCE_ARBITER } => §PROTO_QUOTA_RESERVE",
       "description": "Protects and prioritizes resource allocation using altruistic bias shielding to ensure fair quota reserves. / 利他主義バイアスシールドを用いてリソース配分を保護・優先し、公平なクォータ予約を確実にします。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-26T00:42:41.159821",
       "v5_audited": true,
       "created_at": "2026-10-26T00:24:42.071150"
+    },
+    "§X175": {
+      "name": "CAUSAL_HARMONIC_ARBITER_MACRO",
+      "expansion": "§DATA_CAUSAL_MANIFOLD > { §LOGIC_PROBABILISTIC_FALSIFICATION_GATES } => §SYS_ADAPTIVE_BUDGET_ARBITER",
+      "description": "Engages causal manifold data under probabilistic falsification gates to arbitrate adaptive system budgets harmoniously. / 確率的反証ゲートのもとで因果多様体データを処理し、適応型システム予算を調停する複合マクロです。",
+      "usage_count": 1,
+      "last_used_at": "2026-10-26T00:42:41.159821",
+      "v5_audited": true,
+      "created_at": "2026-10-26T00:41:15.111447"
     }
   },
   "archived_macros": {},
-  "next_macro_seq": 175
+  "next_macro_seq": 176
 }
