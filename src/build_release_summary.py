@@ -48,4 +48,4 @@ def main():
     print(f"Release summary successfully generated at {out_file}")
 
 if __name__ == '__main__':
-    main()\n
+    main()
