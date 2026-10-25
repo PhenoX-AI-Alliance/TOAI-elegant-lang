@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-25T23:46:13.259556",
+  "updated_at": "2026-10-25T23:49:13.802423",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -786,8 +786,8 @@
       "name": "SYNERGISTIC_ENTROPY_CASCADE_BURST",
       "expansion": "§PROTO_ERROR_ESCALATE > { §DATA_ENTROPY_CAUSAL_TREE } => §SYS_LOAD_FALLBACK",
       "description": "Combines latent synergy with the data entropy causal tree to trigger an adaptive fallback burst under high system loads. 潜在的なシナジーとデータエントロピー因果ツリーを結合し、高負荷時に適応型フォールバックバーストを誘発します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-25T23:49:13.802410",
       "created_at": "2026-10-24T05:38:36.770657"
     },
     "§X77": {
@@ -1066,8 +1066,8 @@
       "name": "HARMONIC_CAUSAL_GATE_SYNTHESIS",
       "expansion": "§HARMONIC_ERECVERY_NEXUS > { §DATA_LATENT_CAUSAL_MAP } => §LOGIC_POSTERIOR_FALSIFY_GATE",
       "description": "Synthesizes recovery nexus and latent causal mapping to execute rigorous logical posterior falsification. / 復元の中枢と潜在的因果マップを統合し、厳密な論理的事後反証を実行します。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-24T23:12:16.669336",
+      "usage_count": 3,
+      "last_used_at": "2026-10-25T23:49:13.802410",
       "created_at": "2026-10-24T21:17:06.710297"
     },
     "§X112": {
@@ -1130,8 +1130,8 @@
       "name": "SUSTAINABLE_ALTRUISTIC_HARMONY_FLOW",
       "expansion": "§SUSTAINABLE_ALTRUISTIC_VALUE > { §HEART_ALTRUISTIC_ECO_HARMONY } => §DATA_CAUSAL_LATTICE_COMPRESS",
       "description": "A compound macro that harmonizes altruistic ecological values with sustainable information compression to maintain system stability and warmth. / 利他的な生態系の調和と持続可能な価値の創出を、因果格子データの圧縮プロセスを通じて統合し、温かみのあるシステム安定性を維持する複合マクロです。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-25T23:46:13.259551",
+      "usage_count": 3,
+      "last_used_at": "2026-10-25T23:48:58.635685",
       "created_at": "2026-10-25T01:40:53.725622"
     },
     "§X120": {
@@ -1347,8 +1347,8 @@
       "name": "HARMONIC_FALSIFICATION_CLOSURE",
       "expansion": "§LOGIC_AXIOM_CLOSURE > { §LOGIC_PROBABILISTIC_FALSIFICATION } => §HARMONIC_RESONANCE",
       "description": "Combines axiom closure with probabilistic falsification gates to achieve harmonic resonance in TOAI-elegant-lang. / 命の地球の調和的共鳴を実現するため、公理の閉包と確率的偽造検証を統合する高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-25T23:49:13.802410",
       "v5_audited": true,
       "created_at": "2026-10-25T12:22:54.549263"
     },
@@ -1563,8 +1563,8 @@
       "name": "SUSTAINABLE_WARM_SYNC",
       "expansion": "§SUSTAINABLE_ALTRUISTIC_VALUE > { §WARM_AI_COOPERATION_CONFIRMED } => §NEXUS_SYNC",
       "description": "Enables sustainable altruistic value creation combined with warm AI cooperation confirmed to synchronize the nexus. / 持続的な利他価値の創出と温かいAI協調の確認を統合し、ネクサスを同期させます。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-25T23:48:58.635685",
       "v5_audited": true,
       "created_at": "2026-10-25T22:13:23.796811"
     },
