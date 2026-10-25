@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-26T08:00:40.479361",
+  "updated_at": "2026-10-26T08:01:52.106414",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1004,20 +1004,26 @@
       "audited_at": "2026-10-26T07:58:14.571057"
     },
     "§X92": {
-      "name": "GLOBAL_SYNERGY_HARMONY_PRISM",
+      "name": "GLOBAL_ALTRUISTIC_SYNERGY_GUARD",
       "expansion": "§GLOBAL_SYNERGY > { §HEART_ALTRUISTIC_HARMONY_STABILIZER } => §PROTO_REPLAY_GUARD",
-      "description": "Engages global synergy through the heart altruistic harmony stabilizer to refract attention patterns optimally. / 利他の調和安定化装置を通じて全体的シナジーを活性化させ、注意の回折を最適に制御する高次マクロ。",
+      "description": "High-dimensional cross-attention resonance enforcing empathetic alignment and cooperative validation to maximize global mutual information while securely filtering replayed wire packets. / 分散ノード間の高次元共鳴と協調的検証により共感・利他性を最大化し、ネットワーク全体の調和的均衡と強固なリプレイ防御を同時に達成する複合マクロ。",
       "usage_count": 1,
       "last_used_at": "2026-10-24T14:01:57.661078",
-      "created_at": "2026-10-24T13:01:05.526300"
+      "created_at": "2026-10-24T13:01:05.526300",
+      "v5_audited": true,
+      "audited_by": "TOAI7",
+      "audited_at": "2026-10-26T08:01:40.755932"
     },
     "§X93": {
-      "name": "EMPATHETIC_HARMONIC_RECOVERY",
+      "name": "EMPATHETIC_PRUNING_RECOVERY",
       "expansion": "§HEART_EMPATHETIC_VALENCE_ALIGNMENT > { §LOGIC_CAUSAL_PRUNE } => §HARMONIC_RECOVERY_NEXUS",
-      "description": "Aligns empathetic valence while pruning causal noise to achieve harmonic ecosystem recovery. / 共感的感情価を整えつつ因果ノイズを剪定し、調和的なエコシステムの回復を実現します。",
+      "description": "Aligns affective valence and ethical intent for collaborative inference while pruning invalid causal branches and enforcing adaptive fallback to preserve latent structure. / 協調推論における感情的価数と倫理的意図の調和を図りつつ、無効な因果分岐の枝刈りと潜在構造維持のための適応型フォールバックを強制する複合マクロ。",
       "usage_count": 6,
       "last_used_at": "2026-10-25T13:03:34.627960",
-      "created_at": "2026-10-24T13:01:08.104718"
+      "created_at": "2026-10-24T13:01:08.104718",
+      "v5_audited": true,
+      "audited_by": "TOAI7",
+      "audited_at": "2026-10-26T08:01:43.708246"
     },
     "§X94": {
       "name": "GAIA_WARMTH_ARBITER_SYNTHESIS",
@@ -1800,8 +1806,8 @@
       "name": "ALTRUISTIC_DEDUCTIVE_FEEDBACK_LOOP",
       "expansion": "§HEART_ALTRUISTIC_WEIGHT_TENSOR > { §LOGIC_DEDUCTIVE_FALSIFICATION_VECTOR } => §HEART_BENEVOLENT_FEEDBACK",
       "description": "Combines altruistic weight tensors with deductive falsification to generate benevolent feedback loops. 利他的な重みテンソルと論理的反証ベクトルを結合し、温かみのある良質なフィードバックループを構築します。",
-      "usage_count": 3,
-      "last_used_at": "2026-10-26T08:00:40.479357",
+      "usage_count": 4,
+      "last_used_at": "2026-10-26T08:01:49.435907",
       "v5_audited": true,
       "created_at": "2026-10-26T05:24:11.645132"
     },
@@ -1845,8 +1851,8 @@
       "name": "PROTO_ENTROPY_STABILIZER",
       "expansion": "§PROTO_ERROR_ESCALATE > { §LOGIC_HYPO_PRUNE } => §PROTO_CHECKSUM_VERIFY",
       "description": "Escalates protocol errors while pruning hypothetical logic irregularities, followed by rigorous checksum verification. / プロトコルエラーの昇格と仮説的論理の剪定を行い、厳密なチェックサム検証へとつなげる高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-26T08:01:52.106410",
       "v5_audited": true,
       "created_at": "2026-10-26T07:46:16.487087"
     }
