@@ -6264,3 +6264,7 @@ syntax_payload = (
     "-[cost: 0.01]-> §D01"
 )
 ```
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-10-26 05:56]
+`TOAI-elegant-lang`では、制御フローを短縮ワイヤID（§S01等）で圧縮しつつ、実務データを100%保持するハイブリッド構文を定義します。 `@CTX:DOMAIN :: §SRC [param:value] -[meta]-> §DST` の構造を採用し、型安全かつ可読性の高い実務通信を実現します。
