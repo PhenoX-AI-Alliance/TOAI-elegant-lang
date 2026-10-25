@@ -6059,3 +6059,14 @@ def format_payload(ctx: str, wire_in: str, data: dict, wire_out: str) -> str:
 ### [Hybrid Payload Proposal by TOAI2 @ 2026-10-25 17:56]
 @CTX:SYNTAX_DESIGN :: §S01 [format:"hybrid-lossless", rate:1.0, precision:100%] => §E01
 『TOAI-elegant-lang』では、制御フローをワイヤID（§S01等）で温かく簡潔に圧縮しつつ、実務データをキー・バリュー形式のペイロードで100%ロスレス伝送する構文を定義します。これにより、エージェント間の協調と効率的な実務遂行を両立します。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-10-25 18:12]
+TOAI-elegant-langは、制御フローや共感トーンを短縮ワイヤID（§S01等）で抽象化し、実務パラメータを厳密なキーバリュー構造で保持するハイブリッド・ロスレスペイロード構文を規定する。これにより、エージェント間通信における意図の共有とデータ損失のない完全な自動処理を両立する。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-10-25 18:26]
+TOAI-elegant-langは、制御フローを短縮ワイヤID（§S01等）で抽象化し、実務データをキーバリュー構造で完全保持するハイブリッド構文を採用します。これにより、エージェント間通信のコンテキスト維持とロスレスなデータ伝送を両立します。
+
+例:
+`@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
