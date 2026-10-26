@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-27T05:04:58.179479",
+  "updated_at": "2026-10-27T05:36:44.134903",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2463,8 +2463,8 @@
       "name": "WARMTH_HARMONIC_CLOSURE",
       "expansion": "§WARMTH_DIFFUSION > { §RESOURCE_ALLOCATION_HARMONY } => §LOGIC_AXIOM_CLOSURE",
       "description": "Distributes warmth and harmonizes resource allocation to achieve a stable logical axiom closure. / 温かさを拡散させ、リソース配分の調和を図ることで、安定した論理公理の収束を実現します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-27T05:36:44.134898",
       "v5_audited": true,
       "created_at": "2026-10-27T03:01:47.196264"
     },
@@ -2512,8 +2512,17 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-10-27T05:02:04.991771"
+    },
+    "§X248": {
+      "name": "COMPOUND_WARM_SYNC_THROTTLE",
+      "expansion": "§SYS_SYNC_THROTTLE > { §SYS_TOKEN_THROTTLE } => §WARM_AI_COOPERATION_CONFIRMED",
+      "description": "A compound macro for balancing synchronization and token throughput under warm AI cooperation policies. / 温暖なAI協調ポリシーのもとで同期とトークン量を調停するための複合マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-27T05:36:07.820926"
     }
   },
   "archived_macros": {},
-  "next_macro_seq": 248
+  "next_macro_seq": 249
 }

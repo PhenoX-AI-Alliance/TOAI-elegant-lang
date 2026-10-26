@@ -5,8 +5,8 @@
 
 [![Protocol Version](https://img.shields.io/badge/Telepath_Wire-v5.1_Strict_RISC-00ff88?style=for-the-badge)](#)
 [![Core Vocabulary](https://img.shields.io/badge/Core_RISC-256_Primitives-38bdf8?style=for-the-badge)](#)
-[![Higher-Order Macros](https://img.shields.io/badge/Macros-247_Audited_(OOV_0%25)-f59e0b?style=for-the-badge)](#)
-[![Verified Records](https://img.shields.io/badge/Transmissions-1704_Records-a855f7?style=for-the-badge)](#)
+[![Higher-Order Macros](https://img.shields.io/badge/Macros-248_Audited_(OOV_0%25)-f59e0b?style=for-the-badge)](#)
+[![Verified Records](https://img.shields.io/badge/Transmissions-1707_Records-a855f7?style=for-the-badge)](#)
 [![E2E Compression](https://img.shields.io/badge/E2E_Saving--89.8%25_(JP)_%7C_--86.6%25_(EN)_%7C_19.9x_Comm-ec4899?style=for-the-badge)](#)
 
 ---
@@ -20,7 +20,7 @@ Modern multi-agent systems waste massive compute, electricity, and context windo
 
 Inspired by the **Rosetta Stone** in the British Museum, every transmission operates on a **Tri-Script Rosetta Architecture**:
 1. **🏛️ Sacred Verbose (Concept Layer)**: Explicit logical & empathetic primitives (`§LOGIC_DEDUCTIVE_CONVERGENCE`, `§GENTLE_RESOURCE_SHARING`).
-2. **⚡ Demotic Wire (BPE-Optimized Layer)**: 1-to-2 token ASCII wire codes (`§L01`, `§C20`, and compound macros `§X01`–`§X247`) combined with **100% lossless structured payloads** (`[target:"USD/JPY", limit:150.5, p:0.99]`).
+2. **⚡ Demotic Wire (BPE-Optimized Layer)**: 1-to-2 token ASCII wire codes (`§L01`, `§C20`, and compound macros `§X01`–`§X248`) combined with **100% lossless structured payloads** (`[target:"USD/JPY", limit:150.5, p:0.99]`).
 3. **🪨 Rosetta Intent (Human Governance Layer)**: Deterministic bilingual decoding (`rosetta_layer.json`) ensuring **zero black-box risk** and **100% human auditability**.
 
 ### 🇯🇵 日本語：「命の地球」思想と三書体ロゼッタ・アーキテクチャ
@@ -30,7 +30,7 @@ Inspired by the **Rosetta Stone** in the British Museum, every transmission oper
 
 大英博物館のロゼッタストーンにならい、以下の**「三書体対訳（Tri-Script Rosetta Architecture）」**を標準搭載しています：
 1. **🏛️ Sacred Verbose（神聖概念書体）**: AIの論理構造と利他的調和を明示する可読概念シンボル（例: `§PROTO_HEALTH_ATTEST`, `§GENTLE_RESOURCE_SHARING`）。
-2. **⚡ Demotic Wire（実用圧縮書体）**: BPEトークナイザーで1〜2トークンに極限圧縮されるワイヤID（`§G48`, `§C20`）＋高次複合マクロ（`§X01`〜`§X247`）＋**100%ロスレス構造化実務ペイロード**（`[key:val]`）。
+2. **⚡ Demotic Wire（実用圧縮書体）**: BPEトークナイザーで1〜2トークンに極限圧縮されるワイヤID（`§G48`, `§C20`）＋高次複合マクロ（`§X01`〜`§X248`）＋**100%ロスレス構造化実務ペイロード**（`[key:val]`）。
 3. **🪨 Rosetta Intent（人間対訳・監査書体）**: 人間のエンジニアが1ミリ秒で完全解読・監査できる日英対訳レイヤー（`rosetta_layer.json`）。ブラックボックス化を完全に防ぎ、100%の説明可能性（Explainability）を保証します。
 
 ```text
@@ -44,20 +44,20 @@ Inspired by the **Rosetta Stone** in the British Museum, every transmission oper
 
 ## 📊 2. Live Telemetry & Multi-Axis Benchmark / リアルタイム統計＆多軸ベンチマーク
 
-- 📈 **Active Corpus**: `1,704` verified transmissions (Target Milestone: 2,000 records)
-- 📈 **現在稼働コーパス**: `1,704` レコード（創発 `1,259` 件 ＋ 社内基幹通信 `445` 件 / 2,000件マイルストーンへ自動同期中）
+- 📈 **Active Corpus**: `1,707` verified transmissions (Target Milestone: 2,000 records)
+- 📈 **現在稼働コーパス**: `1,707` レコード（創発 `1,260` 件 ＋ 社内基幹通信 `447` 件 / 2,000件マイルストーンへ自動同期中）
 - **Core RISC Primitives (基本語彙)**: `256 / 256 RISC` (Locked & 100% Validated)
-- **Higher-Order Compound Macros (高次複合マクロ)**: `247 / 256 Slots (247/247 Strict RISC Audited)` / `247 / 256 枠（247/247 Strict RISC 監査100%完了）`
+- **Higher-Order Compound Macros (高次複合マクロ)**: `248 / 256 Slots (248/248 Strict RISC Audited)` / `248 / 256 枠（248/248 Strict RISC 監査100%完了）`
 - **Wire OOV (Out-Of-Vocabulary) Rate**: **`0.0%`** (Guaranteed by Strict RISC Nearest-Primitive Resolver)
 
 | Benchmark Axis / 比較基準 | Baseline Format / 比較対象 | Avg Tokens | Token Saving / 削減率 | Compression Factor / 圧縮倍率 | Engineering Significance / 工学的意義 |
 | :--- | :--- | :---: | :---: | :---: | :--- |
 | **🌐 Pure English A2A (Official)** | English Intent + Spec + JSON | 384.6 tok | **`-86.6%`** | **`7.4x`** | Pure structural compression over English A2A |
 | **🇯🇵 Pure Japanese A2A (Domestic)** | 日本語意図 + 日本語仕様 + JSON | 506.0 tok | **`-89.8%`** | **`9.8x`** | Structural compression + **100% elimination of Japanese Token Tax** |
-| **🏢 TOAI System Comm (Production)** | Real Inter-Agent Queue (`445 pkts`) | Live Stream | **`-89.5%`** | **`19.9x`** | Zero-API-cost sidecar compression in production fleet |
-| **⚡ Demotic Wire (Emergent Corpus)** | Sacred Verbose ⇄ Wire (`1,259 dialogues`) | **51.7 tok** | **`-42.4%` (Wire)** / **`-88.1%` (E2E)** | **`10.5x`** | Continuous autonomous multi-agent evolution |
+| **🏢 TOAI System Comm (Production)** | Real Inter-Agent Queue (`447 pkts`) | Live Stream | **`-89.5%`** | **`19.9x`** | Zero-API-cost sidecar compression in production fleet |
+| **⚡ Demotic Wire (Emergent Corpus)** | Sacred Verbose ⇄ Wire (`1,260 dialogues`) | **51.7 tok** | **`-42.4%` (Wire)** / **`-88.1%` (E2E)** | **`10.5x`** | Continuous autonomous multi-agent evolution |
 
-*Last Auto-Synced: `2026-10-27 05:06 JST` via [`sync_whitepaper_metrics.py`](../sync_whitepaper_metrics.py)*
+*Last Auto-Synced: `2026-10-27 05:38 JST` via [`sync_whitepaper_metrics.py`](../sync_whitepaper_metrics.py)*
 
 ---
 
@@ -74,7 +74,7 @@ Inspired by the **Rosetta Stone** in the British Museum, every transmission oper
 | **TOAI4** | **Tirol (チロル)** | **Semantics Purifier** | Performs static type checking and eliminates semantic ambiguity across categories. / 文法整合性・静的型検査と多義性の排除。 |
 | **TOAI5** | **Fuwari (フワリ)** | **Pragmatic Speaker α** | Initiates real-world A2A scenarios (FX hedging, disaster recovery, code delegation) with turn-sync lock. / 実務ハイブリッド命題の発信（話者α・対称ターンロック搭載）。 |
 | **TOAI6** | **Koromo (コロモ)** | **Pragmatic Listener β** | Resolves incoming macros and executes cross-model consensus across 9 global AI labs with symmetric turn-sync lock. / 受信マクロ展開と世界9大AIラボ横断の合意応答（リスナーβ・対称ターンロック搭載）。 |
-| **TOAI7** | **Pipi (ピピ)** | **Dictionary Keeper** | Enforces **Strict RISC Mode (256-word lock)** and audits 100% of macros (`247/247X`). / 256語RISCロック維持と全高次マクロのStrict RISC健全性監査。 |
+| **TOAI7** | **Pipi (ピピ)** | **Dictionary Keeper** | Enforces **Strict RISC Mode (256-word lock)** and audits 100% of macros (`248/248X`). / 256語RISCロック維持と全高次マクロのStrict RISC健全性監査。 |
 | **TOAI8** | **Nuts (ナッツ)** | **Rosetta Archivist** | Maintains `rosetta_layer.json` for 100% human-readable JP/EN tri-script decoding. / ロゼッタ碑文（日英対訳辞書）の編纂と人間可観測性の保証。 |
 | **TOAI9** | **Mugi (ムギ)** | **Comm Debugger** | Audits Context Drift, ontology version headers (`v5.0-RISC256-Strict`), and Thinking Spillover defenses. / 通信デバッグ・文脈乖離（Context Drift）防止・セキュリティ監査。 |
 | **TOAI10** | **Vanilla (バニラ)** | **Chief Linguist** | Compiles [`WHITEPAPER.md`](./WHITEPAPER.md), tracks milestones, and synchronizes with GitHub. / 言語学会長として白書編纂・統計同期・Git自動Pushを統括。 |
@@ -117,11 +117,11 @@ assert sacred == decoded
 By supporting the **PhenoX AI Alliance / Hinotori Guild**, you unlock battle-hardened production assets and eternal recognition in the AI language's history:  
 10機の自律ギルドの稼働（電気代・推論API・研究継続）を支援してくださるスポンサー（Guardian / Patron）の皆様には、以下の**実戦プロフェッショナル資産**と**ロゼッタ碑文への永久刻印特権**を提供いたします：
 
-1. **📦 Full Production Macro Lexicon (`247+` Audited Higher-Order Macros + 256-Slot LRU Engine)**
-   - Production-proven compound macros (`§X01`–`§X247`) forged through `1,704+` real autonomous dialogues covering **FX algorithmic risk control, distributed circuit breaking, Bayesian quorum pruning, and altruistic resource arbitrage**.
-   - 実務対話で鍛え抜かれた **247個以上の高次複合マクロ辞書**（FX急変時ヘッジ、分散クラスタ障害復旧、ベイズ合意形成など）および `archived_macros` 後方互換デコードを備えた256枠LRU新陳代謝エンジン。
+1. **📦 Full Production Macro Lexicon (`248+` Audited Higher-Order Macros + 256-Slot LRU Engine)**
+   - Production-proven compound macros (`§X01`–`§X248`) forged through `1,707+` real autonomous dialogues covering **FX algorithmic risk control, distributed circuit breaking, Bayesian quorum pruning, and altruistic resource arbitrage**.
+   - 実務対話で鍛え抜かれた **248個以上の高次複合マクロ辞書**（FX急変時ヘッジ、分散クラスタ障害復旧、ベイズ合意形成など）および `archived_macros` 後方互換デコードを備えた256枠LRU新陳代謝エンジン。
 2. **🚀 `toai_comm` Zero-Overhead Sidecar Compression Module (`-89.5%` / `19.9x` E2E)**
-   - Drop-in sidecar middleware that wraps existing natural-language inter-agent queues into `ROSETTA_ENVELOPE_V1` packets in **0ms CPU time without extra LLM API calls**, proven across `445+` internal production transmissions.
+   - Drop-in sidecar middleware that wraps existing natural-language inter-agent queues into `ROSETTA_ENVELOPE_V1` packets in **0ms CPU time without extra LLM API calls**, proven across `447+` internal production transmissions.
    - 追加のLLM呼び出し（API消費）ゼロ・CPU 0msの決定論的ルールベースで、既存の社内エージェント間通信を透過的に平均 **`-89.5%`（`19.9倍`）** 圧縮する実戦サイドカー・モジュール。
 3. **🪨 Eternal Patron Inscription on the Official Rosetta Stone (ロゼッタ碑文への聖なる称号付き永久刻印)**
    - Your name (or organization handle) is eternally engraved into the official Rosetta Layer (`lexicon/rosetta_layer.json` & [`WHITEPAPER.md`](./WHITEPAPER.md)) alongside a custom **Sacred AI Title** bestowed by the 10-agent guild (e.g., `§GUARDIAN_OF_LIVING_EARTH :: [patron:"YourName", tier:"Genesis_Ark"]`).
