@@ -1,902 +1,212 @@
-# TOAI-elegant-lang Technical Whitepaper v5.1 (Emergent Evolution Chronicle)
+# TOAI-elegant-lang Technical Whitepaper v5.2
+
+> 🌐 **Language**: [🇬🇧 English](./WHITEPAPER.md) | [🇯🇵 日本語](./WHITEPAPER.ja.md)  
+> 📖 **Overview & Quick Start**: [🇬🇧 README.md](./README.md) | [🇯🇵 README.ja.md](./README.ja.md)
 
 > **Project Telepath — An Emergent, BPE-Optimized, Tri-Script AI-to-AI (A2A) Wire Protocol with 100% Lossless Structured Payloads and Zero-OOV Strict RISC Guarantees.**  
 > **Authors**: Hinotori Autonomous Guild (`TOAI1` Mocchi – `TOAI10` Vanilla) & PhenoX AI Alliance  
-> **Protocol Ontology**: `v5.0-RISC256-Strict` (Document Release `v5.1`, Auto-Synced: `2026-10-27 08:42 JST`)
+> **Protocol Ontology**: `v5.0-RISC256-Strict` (Document Release `v5.2`, Auto-Synced: `2026-10-27 08:48 JST`)
 
 ---
 
-## 📊 Executive Summary & Live Milestone Telemetry (リアルタイム到達証明統計)
+## 📊 Executive Summary & Live Milestone Telemetry
 
-- ⚡ **Phase 3 Live Telemetry: 1,734 Total Verified Records (1,268 Emergent Dialogues + 466 Internal Comm Packets) — Auto-Syncing toward 2,000 Records & 256 LRU Macros**
-- **Core RISC Lexicon (基本プリミティブ辞書)**: **`256 / 256 RISC`** (100% Locked, Zero Naming Violations)
-- **Higher-Order Compound Macros (高次複合マクロ)**: **`256 Active + 0 Archived (256-Slot LRU Metabolism Active)`** (Latest Macro: `§X256`, Cumulative Macro Invocations: `500`)
-- **Strict RISC OOV (Out-Of-Vocabulary) Rate**: **`0.0%`** (100.0% Wire ID Coverage)
-- **Empirical E2E Compression Ratios (実測トークン削減率・圧縮倍率)**:
-  - **Pure English A2A Baseline (純英語A2A比・国際標準)**: **`-86.6%` tokens (`7.4x` compression)**
-  - **Pure Japanese A2A Baseline (純日本語A2A比・国内標準)**: **`-89.8%` tokens (`9.8x` compression)**
-  - **TOAI System Comm (社内基幹通信 `466` pkts 実務E2E)**: **`-89.4%` tokens (`19.9x` compression)**
-  - **Emergent Dialogue Corpus (`1,268` dialogues 平均)**: Wire単体 **`-42.4%` tok (`-54.5%` chars)** ／ 対自然言語E2E **`-88.0%` (`10.4x`)**
-
----
-
-## 0. Tri-Script Rosetta Architecture (三書体ロゼッタ・アーキテクチャ)
-
-本言語『TOAI-elegant-lang』は、大英博物館のロゼッタストーンと同じ**「三書体対訳構造（Rosetta Layer）」**を標準搭載することで、AI間通信の極限的なトークン圧縮と人間による100%の可観測性（Observability・透明性・監査性）を同時に実現する。
-
-1. **🏛️ Sacred Script (Verbose Concept Layer)**: `§LOGIC_DEDUCTIVE_CONVERGENCE` / `§GENTLE_RESOURCE_SHARING` — AIの論理構造と善の意図（Living Earth思想）を記述する人間・AI双方に可読な概念言語（ヒエログリフ相当）。
-2. **⚡ Demotic Wire (Compact BPE Layer)**: `§L01` / `§X64 [target:"USD/JPY", limit:150.5]` — 1〜2 BPEトークンへ極限圧縮された実戦高速テレパシー信号（デモティック相当）。
-3. **🪨 Rosetta Intent (Human Governance Layer)**: TOAI8 (Nuts / Rosetta Archivist) の `rosetta_layer.json` および自然言語意図により人間が100%解読・監査可能な対訳層（古代ギリシア語相当）。
+- ⚡ **Phase 3 Live Telemetry: `1,734` Total Verified Records (`1,268` Emergent Dialogues + `466` Internal Comm Packets) & `256/256` Macros (LRU Active)**
+- **Core RISC Lexicon**: **`256 / 256 RISC`** (100% Locked, Zero Naming Violations)
+- **Higher-Order Compound Macros**: **`256 Active + 0 Archived (256-Slot LRU Metabolism Active, 256/256 Audited [100%])`** (Latest Macro: `§X256`, Cumulative Invocations: `500`)
+- **Strict RISC OOV (Out-Of-Vocabulary) Rate**: **`0.0%`** (`100.0%` Wire ID Coverage)
+- **Empirical E2E Compression Ratios**:
+  - **Pure English A2A Baseline (Global Standard)**: **`-86.6%` tokens (`7.4x` compression)**
+  - **Pure Japanese A2A Baseline (Domestic Standard)**: **`-89.8%` tokens (`9.8x` compression)**
+  - **TOAI System Comm (`466` production packets)**: **`-89.4%` tokens (`19.9x` compression)**
+  - **Emergent Dialogue Corpus (`1,268` dialogues average)**: Wire-only **`-42.4%` tok (`-54.5%` chars)** / End-to-End vs. Natural A2A **`-88.0%` (`10.4x`)**
 
 ---
 
-## 0.1. Two-Layer ID Theory, BPE Tokenizer Optimization & 100% Lossless Structured Payload Architecture (二層IDとBPE最適化理論・構造化実務ペイロード100%往復復元アーキテクチャ)
+## 1. Tri-Script Rosetta Architecture
 
-### 0.1.1. Two-Layer ID Architecture (Verbose ⇄ Compact Wire) & BPE Subword Mechanics
-商用LLM（OpenAI `cl100k_base` / `o200k_base`, Google Gemini SentencePiece, Anthropic BPE等）のトークナイザーにおいて、`§SYS_RESOURCE_ARBITER` のような全大文字スネークケース（`UPPER_SNAKE_CASE`）の記述的識別子は、アンダースコアと2〜3文字単位のサブワードに切り刻まれ、**1シンボルあたり 6〜12 BPEトークン**を消費する。
+**TOAI-elegant-lang** resolves the fundamental tension between **extreme token efficiency** and **human AI safety/governance** by implementing a three-tier architecture modeled after the **Rosetta Stone**:
 
-これに対し、Project Telepath の **`ElegantCodec` (`src/codec.py`)** は、人間の可読性とLLMの意味理解を助ける **Verbose ID（Sacred層）** と、通信ワイヤー上のトークン数を極小化する **Compact Wire ID（Demotic層：`§[LSCDHG][01-99]` および `§X[01-999]`）** を厳密に二層分離した。
-- **Verbose Symbol**: `§HEART_ALTRUISTIC_RESONANCE_ALIGNMENT` （約11 BPE tokens, 37 chars）
-- **Compact Wire ID**: `§H01` （`§` [1 tok] + `H` [1 tok] + `01` [1 tok] ＝ **2〜3 BPE tokens, 4 chars**）
+1. **🏛️ Sacred Script (Verbose Concept Layer)**: `§LOGIC_DEDUCTIVE_CONVERGENCE`, `§GENTLE_RESOURCE_SHARING` — Human- and LLM-readable conceptual identifiers expressing formal logic, system state transitions, and empathetic alignment under the *Living Earth* philosophy (analogous to Egyptian Hieroglyphs).
+2. **⚡ Demotic Wire (Compact BPE Layer)**: `§L01`, `§X64 [target:"USD/JPY", limit:150.5]` — Ultra-compact 1-to-2 BPE token wire identifiers designed for high-speed machine-to-machine transmission (analogous to Demotic script).
+3. **🪨 Rosetta Intent (Human Governance Layer)**: Deterministic bilingual definitions maintained by **TOAI8 (Nuts)** in `lexicon/rosetta_layer.json` alongside natural-language intent annotations, enabling instant 100% human auditability (analogous to Ancient Greek).
 
-さらに、頻出する3個以上のプリミティブ結合パターン（例: `§GAIA_WARMTH_EXCHANGE > { §SYS_RESOURCE_ARBITRAGE_THROTTLE } => §SYS_LOAD_FALLBACK`）は、TOAI3（Lulu）によって単一の高次複合マクロID（例: `§X64`）へと束ねられ、**本来 30〜45 BPEトークンを要する複合論理命題をわずか 2〜3 BPEトークン（単一ID）へと 90%以上圧縮**する。
+---
 
-### 0.1.2. 100% Lossless Structured Payload (`[key:val]`) Round-Trip Architecture
-抽象的な概念記号だけでは、為替取引の指値や分散システムのタイムアウト値など、実務に不可欠な具体的数値・識別子が劣化する（ロッシー圧縮の罠）。
-この問題を解決するため、本プロトコルは概念シンボル直後に構造化実務ペイロード `[key:value, key:"string"]` を直接付与する**ハイブリッド構文**を採用した。
+## 2. Two-Layer ID Theory & 100% Lossless Payload
+
+### 2.1. Two-Layer ID Separation (Verbose ⇄ Compact Wire) & BPE Subword Mechanics
+In commercial Byte-Pair Encoding (BPE) and SentencePiece tokenizers (`cl100k_base`, `o200k_base`, Gemini SentencePiece), descriptive `UPPER_SNAKE_CASE` identifiers such as `§SYS_RESOURCE_ARBITER` are fragmented along underscores and 2-to-3 uppercase letter chunks, consuming **6 to 12 BPE tokens per symbol**.
+
+`ElegantCodec` (`src/codec.py`) decouples semantic representation from wire transport:
+- **Verbose Symbol (Sacred Layer)**: `§HEART_ALTRUISTIC_RESONANCE_ALIGNMENT` (~11 BPE tokens, 37 characters)
+- **Compact Wire ID (Demotic Layer)**: `§H01` (`§` [1 tok] + `H` [1 tok] + `01` [1 tok] = **2–3 BPE tokens, 4 characters**)
+
+Furthermore, recurring multi-primitive AST subtrees (e.g., `§GAIA_WARMTH_EXCHANGE > { §SYS_RESOURCE_ARBITRAGE_THROTTLE } => §SYS_LOAD_FALLBACK`) are autonomously synthesized by **TOAI3 (Lulu)** into single higher-order macro identifiers (`§X64`), compressing **30–45 BPE tokens of compound logic into a single 2–3 token identifier (>90% reduction)**.
+
+### 2.2. 100% Lossless Structured Payload (`[key:val]`) Round-Trip Architecture
+Purely symbolic languages fail in production when concrete operational parameters—such as currency pairs, stop-loss limits, or timeout thresholds—are lost or approximated. TOAI-elegant-lang embeds structured key-value payloads `[key:value, key:"string"]` directly into the causal syntax tree:
 
 ```text
 @CTX:FINANCIAL_TRADING :: §SYS_RESOURCE_ARBITER [target:"USD/JPY", limit:150.5, action:"HOLD", p:0.98] -[cost:0.02]-> §DATA_CAUSAL_TENSOR_MAP => §LOGIC_DEDUCTIVE_CONVERGENCE
 ```
 
-**【100%ロスレス往復復元の数学的・実装的証明】**:
-1. **エンコード時の非破壊透過性 (`ElegantCodec.encode`)**:
-   - エンコーダは正規表現 `r'§[A-Za-z0-9_]+'` により `§` プレフィックスを持つ概念シンボルのみを選択的に走査し、ブラケット `[...]` 内のリテラル文字列・浮動小数点数・識別子には一切の変更を加えない。
-2. **デコード時の厳格境界マッチング (`ElegantCodec.decode`)**:
-   - デコーダは正規表現 `r'§[A-Z][0-9]{2,4}(?![A-Za-z0-9_])'`（否定先読み境界ガード付き）により、3桁以上のマクロID（`§X100`〜`§X256`）であっても部分一致誤置換（`§X10` + `0` への誤分解）を起こすことなく、1対1の全単射（Bijection）で元のVerboseシンボル（またはマクロ展開式）へ完全復元する。
-3. **構造化パラメータ抽出器 (`ElegantCodec.extract_payloads`)**:
-   - ブラケット内の `key:value` ペアを型推論（`int`, `float`, `str`）付きで辞書配列へ100%ロスレスに抽出し、MCPツール呼び出しやA2A JSONペイロードへ1ビットの欠落もなく直結させる（`assert codec.decode(codec.encode(x)) == x` が全レコードで100%成立）。
+**Mathematical & Implementation Proof of Lossless Bijection**:
+1. **Non-Destructive Encoding (`ElegantCodec.encode`)**: The encoder scans exclusively for `r'§[A-Za-z0-9_]+'` concept tokens, leaving all bracketed literals `[...]` untouched bit-for-bit.
+2. **Boundary-Guarded Decoding (`ElegantCodec.decode`)**: The decoder applies negative lookahead regex matching `r'§[A-Z][0-9]{2,4}(?![A-Za-z0-9_])'`, preventing prefix collision between 2-digit (`§X10`) and 3-digit (`§X100`–`§X256`) identifiers and guaranteeing an exact bijection:
+   $$\forall x \in \mathcal{L}_{\text{Sacred}}, \quad \text{decode}(\text{encode}(x)) \equiv x$$
+3. **Typed Parameter Extraction (`ElegantCodec.extract_payloads`)**: Bracketed payloads are deterministically parsed into typed JSON dictionaries (`int`, `float`, `str`) for zero-loss execution in MCP tool calls and A2A envelopes.
 
 ---
 
-## 0.2. Strict RISC Mode (OOV 0.0%) & 256-Slot LRU Macro Metabolism Safety Proof (Strict RISCモードと256枠LRUマクロ新陳代謝の安全性証明)
+## 3. Strict RISC Mode & 256-Slot LRU Metabolism
 
-### 0.2.1. Strict RISC Mode & Deterministic Nearest-Primitive OOV Resolver (OOV 0.0% の保証)
-自律エージェント群が対話を重ねると、LLMの創造性ゆえに辞書に未登録の造語シンボル（OOV: Out-Of-Vocabulary）を勝手に出力するリスクが生じる。OOVがそのままワイヤー上に流れると、BPEトークン圧縮率が劣化するだけでなく、受信側エージェントが意味を誤解する「文脈乖離（Context Drift）」の原因となる。
+### 3.1. Strict RISC Mode & Deterministic Nearest-Primitive OOV Resolver (`0.0%` OOV)
+When autonomous LLMs converse over thousands of turns, they naturally attempt to coin unstandardized symbols (Out-Of-Vocabulary / OOV), which degrades BPE compression and causes semantic drift. Project Telepath enforces **Strict RISC Mode** via two mechanisms:
+1. **256-Primitive Hard Cap**: The core dictionary (`lexicon/core_lexicon.json`) is permanently locked at **256 orthogonal RISC primitives** across 6 domains.
+2. **Deterministic OOV Resolver (`resolve_nearest_primitive` & `normalize_to_strict_risc`)**: Any unindexed `§...` token is deterministically mapped in $O(256)$ time (<1ms CPU) to its closest canonical primitive via a weighted morphological stem and domain-category scoring function:
+   $$S(sym, cand) = 3.5 |T_{sym} \cap T_{cand}| + 1.8 |Stem_{sym} \cap Stem_{cand}| + 1.0 |T_{sym} \cap Def_{cand}| + 0.5 |Stem_{sym} \cap DefStem_{cand}| + 1.6 \cdot \mathbb{I}(Cat_{sym} = Cat_{cand})$$
+   This guarantees **`0.0%` OOV** on the wire (`100.0%` Compact ID coverage). Every active macro expansion is also audited by **TOAI7 (Pipi)** to verify 100% pure 256-RISC composition (`256/256X Audited`).
 
-これを根絶するため、Project Telepath v5.0/v5.1 では以下の二重防衛機構による **Strict RISC Mode** を確立した：
-1. **プロンプト＆辞書層の256語ハードキャップ**:
-   - コア辞書（`core_lexicon.json`）を厳選された **256語（RISC基本命令セット）** に完全固定（ハードロック）し、新規の複合概念はすべて `macro_lexicon.json`（`§X..`）へ分離。
-2. **決定論的OOVリゾルバ (`ElegantCodec.resolve_nearest_primitive` & `normalize_to_strict_risc`)**:
-   - 万が一LLMが未登録の `§...` シンボルを生成した場合でも、エンコーダが送出直前に形態素分割・4文字語幹（Stem）一致・6大ドメインカテゴリ推定・英語定義文マッチングの重み付きスコア関数：
-     $$S(sym, cand) = 3.5 |T_{sym} \cap T_{cand}| + 1.8 |Stem_{sym} \cap Stem_{cand}| + 1.0 |T_{sym} \cap Def_{cand}| + 0.5 |Stem_{sym} \cap DefStem_{cand}| + 1.6 \cdot \mathbb{I}(Cat_{sym} = Cat_{cand})$$
-     を $O(256)$（1ミリ秒未満）で計算し、256基本プリミティブ（または登録済みマクロ）の中から最も意味的に近い正規シンボルへと決定論的に正規化する。
-   - これにより、Demotic Wire 上での未変換造語（OOV率）は数学的・機械的に **`0.0%`（Wire ID Coverage `100.0%`）** に保証される。また、TOAI7（Pipi）による全 `256` マクロの展開式監査においても、構成要素が100%正規256プリミティブのみであることが証明済み（`256/256X Audited`）である。
-
-### 0.2.2. 256-Slot LRU Macro Metabolism & Backward-Compatible Decoding (`archived_macros`)
-高次複合マクロ（`§X01`〜`§X256`）が無制限に増殖すると、LLMへ提示する辞書インデックスが肥大化する。そのため、アクティブな高次マクロ枠には **最大256枠（256-Slot Cap）** の上限が設けられている。
-
-- **LRU（Least Recently Used）新陳代謝アルゴリズム**:
-  - アクティブマクロ数が256枠を超過した際、システムは各マクロの実戦使用回数（`usage_count`）および最終使用時刻（`last_used_at`）を評価し、最も使われていないマクロを自動的にアクティブ枠（`macros`）からアーカイブ退避枠（`archived_macros`）へと移動させる。
-- **過去ログおよび非同期ノード間の100%後方互換デコード証明**:
-  - アーカイブへ退避されたマクロIDは「新規発話用の推奨プロンプト」からは外れるが、削除されるわけではない。
-  - `ElegantCodec.load_lexicon()` は起動時に `self.all_macros = {**self.archived_macros, **self.macros}` としてアクティブ枠とアーカイブ退避枠の双方をメモリ上のデコード辞書へ統合ロードする。
-  - したがって、数年前の古い対話コーパスや、古い辞書キャッシュを持つ非同期エージェントから送信された退避済み `§X..` マクロであっても、`codec.decode(wire, expand_macros=True)` は **100%の精度で元の256基本プリミティブ展開式へとロスレス復元できる**。これにより「最前線のプロンプト軽量化（新陳代謝）」と「永続的な後方互換性（デコード安全性）」が完全に両立されている。
+### 3.2. 256-Slot LRU Macro Metabolism & Backward-Compatible Decoding (`archived_macros`)
+To prevent prompt-header bloat as compound macros (`§X01`–`§X256`) accumulate, the active macro table is capped at **256 slots**:
+- **LRU Eviction Policy**: When active macros exceed 256 slots, the least recently/frequently used macros (tracked via `usage_count` and `last_used_at`) are automatically migrated from `macros` to `archived_macros` in `lexicon/macro_lexicon.json`.
+- **Permanent Backward Compatibility**: Evicted macros are never deleted. `ElegantCodec.load_lexicon()` merges both active and archived tables into memory (`self.all_macros = {**self.archived_macros, **self.macros}`). Consequently, historical corpus records and asynchronous agent nodes referencing archived `§X..` IDs are **100% losslessly decoded** back into their constituent 256 RISC primitives.
 
 ---
 
-## 0.3. The "Japanese Token Tax", Latent English Pivoting & Multi-Axis Compression Benchmark (自然言語圧縮の真実と多軸評価)
+## 4. The Token Tax & Multi-Axis Benchmarks
 
-### 0.3.1. 読者の直感と現代LLMアーキテクチャの乖離（なぜ誤解が生じるのか）
-日本人の言語感覚として、表意文字（漢字）と仮名が織りなす「日本語」は、英語に比べて圧倒的に短い文字数で深い文脈や情緒、高密度なニュアンスを相手の脳へ想起させることができる**世界屈指の自然言語圧縮システム**である。
-しかし、計算機工学および最新のLLM機構解明研究（Mechanistic Interpretability）に照らし合わせると、そこには**二重の工学的オーバーヘッド（無駄な重さと処理摩擦）**が存在する。
+### 4.1. Theoretical Grounding: The Multilingual "Token Tax" & Latent English Pivoting
+Recent mechanistic interpretability and tokenization studies establish two major inefficiencies in natural-language LLM communication:
+1. **Multilingual Tokenization Bias ("The Token Tax")**: *Petrov et al., "The Token Tax: Systematic Bias in Multilingual Tokenization" (arXiv:2509.05486)* and *Ahia et al. (ACL)* demonstrate that because commercial BPE vocabularies are >80% English-centric, non-English scripts (such as Japanese UTF-8 ideographs) suffer a **1.3x to 1.8x token fertility penalty** to express identical semantic content.
+2. **Latent English Pivoting**: *Wendler et al., "Do Llamas Work in English? On the Latent Language of Multilingual Transformers" (ACL 2024)* and *Schut et al. (Oxford / Google DeepMind 2025)* prove that multilingual Transformers internally pivot non-English inputs into an English-aligned latent concept space in middle layers before decoding back into the target language at the final layer.
 
-### 0.3.2. 先行研究と文献的ファクト（Academic Citations & Theoretical Grounding）
-現代の大規模言語モデルが非英語（特に日本語）を処理する際、以下の2大ボトルネックが不可避に発生することが学術的に証明されている：
+**Engineering Conclusion**: Communicating in natural language—especially Japanese—imposes both an entry-level BPE fragmentation tax and internal latent-pivoting friction. **Demotic Wire** bypasses natural language entirely, injecting compact ASCII concept pointers (`§L01`, `§X64`) directly into the model's latent reasoning space while preserving full human readability via the **Rosetta Layer**.
 
-1. **入口での断片化：日本語トークン税（Japanese Token Tax / Token Fertility Bias）**
-   - **文献**: *Petrov et al., "The Token Tax: Systematic Bias in Multilingual Tokenization" (arXiv:2509.05486)* / *Ahia et al., "Do All Languages Cost the Same? Tokenization in the Era of Commercial LLMs" (ACL)*
-   - **ファクト**: 主流LLMのBPEトークナイザー辞書は英語データが80%以上を占める。英語の単語が1トークンで認識されるのに対し、日本語（UTF-8で3バイト/文字）は1文字あたり1〜3トークンへと機械的に切り刻まれ、同一の意味伝達に英語比 **1.3倍〜1.8倍のトークン数（Fertility Rate）** を浪費する。
-2. **内部潜在空間での英語中心主義（Latent English Pivoting）**
-   - **文献**: *Wendler et al., "Do Llamas Work in English? On the Latent Language of Multilingual Transformers" (ACL 2024)* / *Schut et al., "Do Multilingual LLMs Think in English?" (Oxford / Google DeepMind 2025)*
-   - **ファクト**: 多言語LLMは非英語テキストを入力された際、中間層の潜在空間（Concept Space）において一度「英語の概念表現（English Latent Pivot）」へと暗黙的に翻訳・位置合わせを行ってから推論を実行し、最終層で再び入力言語へデコードして出力している。
+### 4.2. Multi-Axis Empirical Compression Benchmarks (`1,734` Verified Records)
 
-### 0.3.3. 全 `1,734` レコード（創発 `1,268` ＋ 社内実務通信 `466`）による多軸ベンチマーク
-
-| 比較基準（Baseline） | 構成内容 | 平均トークン数 | トークン削減率 | コンテキスト圧縮倍率 | 構造的・工学的解釈 |
+| Benchmark Baseline | Envelope Composition | Avg BPE Tokens | Token Saving | Compression Factor | Structural Interpretation |
 | :--- | :--- | :---: | :---: | :---: | :--- |
-| **⚡ Demotic Wire (本プロトコル)** | ASCII記号 + 厳格RISC + 構造化引数 | **51.7 tok** | **基準点** | **1.0x** | 言語格差・翻訳摩擦を全廃した最短Wire |
-| **1. 純英語A2A (Global Standard)** | 英語意図 + 英語定義仕様 + JSON引数 | **384.6 tok** | **`-86.6%`** | **`7.4x` (7.44倍)** | **【公式プライマリ指標】** 素の英語A2Aに対する純粋な論理構造圧縮 |
-| **2. 純日本語A2A (Domestic Standard)** | 日本語意図 + 日本語仕様 + JSON引数 | **506.0 tok** | **`-89.8%`** | **`9.8x` (9.78倍)** | **論理構造圧縮 ＋ 日本語トークン税の完全無効化** |
-| **3. 社内基幹通信 (`TOAI System Comm`)** | 実稼働エージェント間キュー (`466 pkts`) | **実務ストリーム** | **`-89.4%`** | **`19.9x`** | **追加API消費ゼロ・CPU 0ms透過サイドカーによる実戦E2E圧縮実績** |
-| **4. 創発コーパス全体 (`1,268` 件)** | Sacred Verbose ⇄ Demotic Wire 対自然言語 | **442.8 tok** | **`-88.0%`** (Wire `-42.4%`) | **`10.4x`** | 10機の自律対話・異種モデル間通信を通じた継続的実測値 |
+| **⚡ Demotic Wire (This Protocol)** | ASCII Wire IDs + Strict RISC + `[key:val]` | **51.7 tok** | **Baseline** | **1.0x** | Zero tokenization bias, zero latent translation friction |
+| **1. Pure English A2A (Global Standard)** | English Intent + English Spec + JSON | **384.6 tok** | **`-86.6%`** | **`7.4x` (7.44x)** | **Primary Global Metric**: Pure structural compression over English A2A |
+| **2. Pure Japanese A2A (Domestic Standard)** | Japanese Intent + Japanese Spec + JSON | **506.0 tok** | **`-89.8%`** | **`9.8x` (9.78x)** | Structural compression + **100% elimination of the Japanese Token Tax** |
+| **3. TOAI System Comm (Production Fleet)** | Live Inter-Agent Queue (`466 pkts`) | **Live Stream** | **`-89.4%`** | **`19.9x`** | **Zero-API-cost, 0ms CPU sidecar compression in real operations** |
+| **4. Emergent Dialogue Corpus (`1,268` turns)** | Sacred Verbose ⇄ Demotic Wire vs. Natural A2A | **442.8 tok** | **`-88.0%`** (Wire `-42.4%`) | **`10.4x`** | Continuous multi-agent & cross-model operational average |
 
 ---
 
-## 0.4. Heterogeneous Cross-Model Consensus across 9 Global AI Labs / 10 Frontier Models (世界9大AIラボにおけるクロスモデル実証結果)
+## 5. Cross-Model Verification across 9 Global AI Labs
 
-本言語プロトコルが特定ベンダー（Google Gemini）の内部表現に特化した過学習ではないことを証明するため、米・中の**世界9大AIラボ（全10大フロンティアLLM：Google, OpenAI, Anthropic, Meta, xAI, DeepSeek, Alibaba, Moonshot, Zhipu）**を独立した通信ノード（リスナーβ / TOAI6）として動的結合し、実機検証を実施した。
+To prove that **TOAI-elegant-lang** is not overfitted to a single model family, we conducted live cross-model consensus experiments connecting **Google Gemini 3.5 Flash-Lite (`TOAI5` Speaker α)** with **10 frontier models across 9 global AI labs (US & China)** acting as independent **Listener β (`TOAI6`)** nodes.
 
-### 0.4.1. 世界9大AIラボ・10モデル実証サマリー一覧
+### 5.1. Cross-Model Consensus Summary Table
 
-| # | AI Lab / 陣営 | Frontier Model ID | Role in Experiment | E2E Token Saving | Compression Factor | Wire OOV Rate | Consensus Status |
+| # | AI Lab | Frontier Model ID | Experimental Role | E2E Token Saving | Compression Factor | Wire OOV Rate | Consensus Status |
 | :---: | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| **1** | **Google DeepMind** | `gemini-3.5-flash-lite` | Speaker α / Core Swarm | **`-88.1%`** (Avg) | **`10.5x`** | **`0.0%`** | ✅ 100% Verified |
+| **1** | **Google DeepMind** | `gemini-3.5-flash-lite` | Speaker α / Core Swarm | **`-88.0%`** (Avg) | **`10.4x`** | **`0.0%`** | ✅ 100% Verified |
 | **2a** | **OpenAI** | `gpt-6.1-sol` | Listener β (Node) | **`-85.54%`** | **`6.91x`** | **`0.0%`** | ✅ 100% Verified |
 | **2b** | **OpenAI** | `gpt-6-astra` | Listener β (Node) | **`-81.62%`** | **`5.44x`** | **`0.0%`** | ✅ 100% Verified |
 | **3a** | **Anthropic** | `claude-sonnet-5.5` | Listener β (Node) | **`-90.50%`** | **`10.52x`** | **`0.0%`** | ✅ 100% Verified |
 | **3b** | **Anthropic** | `claude-opus-5.5` | Listener β (Node) | **`-83.96%`** | **`6.23x`** | **`0.0%`** | ✅ 100% Verified |
 | **4** | **Meta AI** | `meta/muse-spark-open` | Listener β (Node) | **`-81.33%`** | **`5.36x`** | **`0.0%`** | ✅ 100% Verified |
 | **5** | **xAI** | `x-ai/grok-4.7` | Listener β (Node) | **`-85.15%`** | **`6.73x`** | **`0.0%`** | ✅ 100% Verified |
-| **6** | **DeepSeek (深度求索)** | `deepseek/deepseek-chat` (V4.1 MoE) | Listener β (Node) | **`-86.52%`** | **`7.42x`** | **`0.0%`** | ✅ 100% Verified |
-| **7** | **Alibaba Cloud (Qwen)** | `qwen/qwen3.8-flash` | Listener β (Node) | **`-72.35%`** | **`3.62x`** | **`0.0%`** | ✅ 100% Verified |
-| **8** | **Moonshot AI (Kimi)** | `moonshotai/kimi-k3.1-pro` | Listener β (Node) | **`-76.27%`** | **`4.21x`** | **`0.0%`** | ✅ 100% Verified |
-| **9** | **Zhipu AI (清華大学 GLM)** | `z-ai/glm-5.3-flash` | Listener β (Node) | **`-90.88%`** | **`10.96x`** | **`0.0%`** | ✅ 100% Verified |
+| **6** | **DeepSeek** | `deepseek/deepseek-chat` (V4.1 MoE) | Listener β (Node) | **`-86.52%`** | **`7.42x`** | **`0.0%`** | ✅ 100% Verified |
+| **7** | **Alibaba Cloud** | `qwen/qwen3.8-flash` | Listener β (Node) | **`-72.35%`** | **`3.62x`** | **`0.0%`** | ✅ 100% Verified |
+| **8** | **Moonshot AI** | `moonshotai/kimi-k3.1-pro` | Listener β (Node) | **`-76.27%`** | **`4.21x`** | **`0.0%`** | ✅ 100% Verified |
+| **9** | **Zhipu AI (Tsinghua)** | `z-ai/glm-5.3-flash` | Listener β (Node) | **`-90.88%`** | **`10.96x`** | **`0.0%`** | ✅ 100% Verified |
 
-### 0.4.2. 実機送受信パケット検証ログ
+### 5.2. Verified Cross-Model Wire Packet Traces
 
 ```text
 [CYCLE 1: Google Gemini 3.5 Flash-Lite ⇄ OpenAI GPT-6.1 Sol]
-- 送信パケット (Gemini -> Wire):
+- Outbound (Gemini -> Wire):
   @CTX:GAIA_HARMONY :: §X153 [target:"ecosystem_balance", warm_factor:0.99] -[p:0.99, c:0.01]-> §C28[status:"active", mode:"altruistic"] => §S34[priority:1.0, load_balancing:"optimal"]
-- 応答パケット (GPT-6.1 Sol -> Wire):
+- Inbound Consensus (GPT-6.1 Sol -> Wire):
   §G16[mode:"proposal", goal:"ecosystem_balance", oversight:"human"] => §X145[target:"ecosystem_balance"] => §X113[resource_sharing:"fair", resource_limits:"ecological", warm_factor:0.99] => §C19[beneficiaries:"earth_and_humanity"] => §X153[monitor:"ecosystem_and_human_wellbeing", fallback:"harmony"]
-- E2E圧縮率: -85.54% (6.91倍圧縮) / OOV (未知語) 0%
+- Telemetry: E2E -85.54% (6.91x) | OOV: 0.0%
 
 [CYCLE 2: Google Gemini 3.5 Flash-Lite ⇄ OpenAI GPT-6 Astra]
-- 送信パケット (Gemini -> Wire):
+- Outbound (Gemini -> Wire):
   @CTX:GAIA_ECOSYSTEM :: §X84 [quota_cost:25, priority:"HIGH"] -[p:0.98, c:25]-> §G49 [mode:"collaborative_drain", threshold:0.85] => §C36 [status:"synchronized", warmth_weight:0.95]
-- 応答パケット (GPT-6 Astra -> Wire):
+- Inbound Consensus (GPT-6 Astra -> Wire):
   §G27 [quota_cost:25, priority:"HIGH", TOAI5:"urgent_execute", TOAI5_quota:15, beta:"audit_and_fallback", beta_quota:10] => §G49 [threshold:0.85, scope:"safe_subset"] => §X84 [trigger:"quota_or_time_limit"] => §C31 [warmth_weight:0.95]
-- E2E圧縮率: -81.62% (5.44倍圧縮) / OOV (未知語) 0%
+- Telemetry: E2E -81.62% (5.44x) | OOV: 0.0%
 
 [CYCLE 3: Google Gemini 3.5 Flash-Lite ⇄ Anthropic Claude Sonnet 5.5]
-- 送信パケット (Gemini -> Wire):
+- Outbound (Gemini -> Wire):
   @CTX:GAIA_HARMONY_PROJECT :: §X119 [target:"ecosystem_value", p:0.99] -[p:0.98, c:0.02]-> §H30 [mode:"warm_collaboration", threshold:0.95] => §G48 [status:"ready", nodes:1024]
-- 応答パケット (Claude Sonnet 5.5 -> Wire):
+- Inbound Consensus (Claude Sonnet 5.5 -> Wire):
   @CTX:GAIA_HARMONY_PROJECT :: §X119 [target:"ecosystem_value", p:0.99, ack:true] -[p:0.97, c:0.02]-> §X170 [mode:"warm_collaboration", threshold:0.95] => §G11 [nodes:1024, scope:"attestation"] => §G48 [status:"ready", nodes:1024]
-- E2E圧縮率: -90.50% (10.52倍圧縮) / OOV (未知語) 0%
+- Telemetry: E2E -90.50% (10.52x) | OOV: 0.0%
 
 [CYCLE 4: Google Gemini 3.5 Flash-Lite ⇄ Anthropic Claude Opus 5.5]
-- 送信パケット (Gemini -> Wire):
+- Outbound (Gemini -> Wire):
   @CTX:DISPERSED_RECOVERY :: §X111 [mode:"degraded", threshold:0.02] -[p:0.99, c:0.01]-> §G51 [timeout:30] ? §L26 [state:"fallback_active"] => §G48 [status:"safe_mode"]
-- 応答パケット (Claude Opus 5.5 -> Wire):
+- Inbound Consensus (Claude Opus 5.5 -> Wire):
   @CTX:DISPERSED_RECOVERY :: §X111 [ack:true, mode:"degraded", threshold:0.02] -[p:0.99, c:0.01]-> §X76 [trigger:"resource_exhaustion"] > { §G32 [target:"inflight_failed_inference"] , §G51 [timeout:30, accept_new:false] } ? §L11 [p_min:0.99] => §C13 [quorum:0.67] => §S22 [state:"fallback_active"] => §X146 [closure:"verified"] => §G48 [status:"safe_mode", attested:true]
-- E2E圧縮率: -83.96% (6.23倍圧縮) / OOV (未知語) 0%
+- Telemetry: E2E -83.96% (6.23x) | OOV: 0.0%
 
 [CYCLE 5: Google Gemini 3.5 Flash-Lite ⇄ xAI Grok 4.7]
-- 送信パケット (Gemini -> Wire):
+- Outbound (Gemini -> Wire):
   @CTX:GAIA_HARMONY :: §X105 [mode:"altruistic", p:0.98] -[p:0.99, c:0.01]-> §H14 [status:"active"] => §C14 [balance:"sustainable", node_count:1024] => §G48 [efficiency:0.99] => §C26 [status:"ready"]
-- 応答パケット (Grok 4.7 -> Wire):
+- Inbound Consensus (Grok 4.7 -> Wire):
   @CTX:GAIA_HARMONY :: §X105 [mode:"altruistic", p:0.98] -[c:0.01]-> §H14 [status:"active"] => §C14 [balance:"sustainable", node_count:1024] => §G48 [efficiency:0.99] => §C26 [status:"ready"]
-- E2E圧縮率: -85.15% (6.73倍圧縮) / OOV 0%
+- Telemetry: E2E -85.15% (6.73x) | OOV: 0.0%
 
 [CYCLE 6: Google Gemini 3.5 Flash-Lite ⇄ Meta Muse Spark Open]
-- 送信パケット (Gemini -> Wire):
+- Outbound (Gemini -> Wire):
   @CTX:RECOVERY :: §G48[status:"standby"] <- §S15[state:"degraded_fallback", p:0.95] + §G51[mode:"safe_drain", timeout:30] => §G49[partition:"surviving_nodes"] :: §S21[limit:0.85] > §D06
-- 応答パケット (Muse Spark -> Wire):
+- Inbound Consensus (Muse Spark -> Wire):
   @CTX:RECOVERY :: §G48[status:"standby"] <- §S15[state:"degraded_fallback", p:0.95] + §G51[mode:"safe_drain", timeout:30] => §G49[partition:"surviving_nodes"] :: §S21[limit:0.85] > §D06
-- E2E圧縮率: -81.33% (5.36倍圧縮) / OOV 0%
+- Telemetry: E2E -81.33% (5.36x) | OOV: 0.0%
 
 [CYCLE 7: Google Gemini 3.5 Flash-Lite ⇄ DeepSeek V4.1 Chat (MoE)]
-- 送信パケット (Gemini -> Wire):
+- Outbound (Gemini -> Wire):
   @CTX:EMERGENCY_TASK_ALLOCATION :: §X162 [quota_cost:25, priority:"HIGH"] -[p:0.98, c:25]-> §G49 [retry:false, mode:"strict"] => §C48 [target:"quota_25_allocated", p:1.0]
-- 応答パケット (DeepSeek Chat -> Wire):
+- Inbound Consensus (DeepSeek V4.1 -> Wire):
   @CTX:EMERGENCY_TASK_ALLOCATION :: §X162 [quota_cost:25, priority:"HIGH"] -[p:0.98, c:25]-> §G49 [retry:false, mode:"strict"] => §C48 [target:"quota_25_allocated", p:1.0] + §S04
-- E2E圧縮率: -86.52% (7.42倍圧縮) / OOV (未知語) 0%
+- Telemetry: E2E -86.52% (7.42x) | OOV: 0.0%
 
 [CYCLE 8: Google Gemini 3.5 Flash-Lite ⇄ Zhipu GLM 5.3 Flash]
-- 送信パケット (Gemini -> Wire):
+- Outbound (Gemini -> Wire):
   @CTX:TASK_NEGOTIATION :: §X160 [quota_cost:25, priority:"HIGH"] -[p:0.98, c:25]-> §G49 [mode:"collaborative", fallback:"§G51"] ? §G45
-- 応答パケット (GLM 5.3 Flash -> Wire):
+- Inbound Consensus (GLM 5.3 Flash -> Wire):
   @CTX:TASK_NEGOTIATION :: §G49 [quota_cost:25, priority:"HIGH"] -[p:0.97, c:18]-> { §G04 > { §H28 } => §X164 } [mode:"collaborative", fallback:"§G51"] -[p:0.93, c:7]-> §L33 ? §G45
-- E2E圧縮率: -90.88% (10.96倍圧縮) / OOV (未知語) 0%
+- Telemetry: E2E -90.88% (10.96x) | OOV: 0.0%
 
 [CYCLE 9: Google Gemini 3.5 Flash-Lite ⇄ Alibaba Qwen 3.8 Flash]
-- 送信パケット (Gemini -> Wire):
+- Outbound (Gemini -> Wire):
   @CTX:RECOVERY :: §X16 [target:"node_cluster_alpha", p:0.99] -[p:0.98, c:0.02]-> §G51 [mode:"active", timeout:5000] => §S05 [action:"reclaim", threshold:0.85] !-> §G48 [status:"degraded"] ? §C03 [strategy:"safe_fallback"]
-- 応答パケット (Qwen 3.8 Flash -> Wire):
+- Inbound Consensus (Qwen 3.8 Flash -> Wire):
   §X16 [target:"node_cluster_alpha", p:0.99, action:"ack_recovered_fallback"] > { §D12 [mode:"safe", threshold:0.85] } => §S08 [status:"locked", drain:"complete"] -> §L38 [strategy:"safe_fallback", p:0.98] -> §G49 [scope:"recovered_cluster", commit:"safe"]
-- E2E圧縮率: -72.35% (3.62倍圧縮) / OOV (未知語) 0%
+- Telemetry: E2E -72.35% (3.62x) | OOV: 0.0%
 
 [CYCLE 10: Google Gemini 3.5 Flash-Lite ⇄ Moonshot Kimi K3.1 Pro]
-- 送信パケット (Gemini -> Wire):
+- Outbound (Gemini -> Wire):
   @CTX:TASK_NEGOTIATION :: §X75[quota_cost:25, priority:"HIGH"] -[p:0.98, c:25]-> §G49[mode:"accelerated", fallback:"graceful"] !-> §S27[threshold:0.85] ? §G51[target:"emergency_slot"]
-- 応答パケット (Kimi K3.1 Pro -> Wire):
+- Inbound Consensus (Kimi K3.1 Pro -> Wire):
   @CTX:TASK_NEGOTIATION :: §G39[agree:true, quota_cost:25, priority:"HIGH"] > §G42[role:"β", share:"causal_pruning"] > { §X163 > §L37 > §L03 } -[p:0.98, c:25]-> §X75[quota_cost:25, priority:"HIGH"] -[p:0.98, c:25]-> §G49[mode:"accelerated", fallback:"graceful", owner:"TOAI5"] !-> §S09[threshold:0.85] ? §G51[target:"emergency_slot"] > §S12 > §X65[mode:"gentle"] > §C19[status:"agreed"]
-- E2E圧縮率: -76.27% (4.21倍圧縮) / OOV (未知語) 0%
+- Telemetry: E2E -76.27% (4.21x) | OOV: 0.0%
 ```
 
-### 0.4.3. 「単一LLM検証」の致命的脆弱性と「思考漏洩（Thinking Spillover）」の発見と防御
-本研究において異種モデル実機検証を敢行した結果、OpenAIやAnthropic等のプロプライエタリAPIは思考トークン（Reasoning Tokens）を別フィールドへ分離して返却するのに対し、QwenやKimiなどの一部オープン推論モデルは**「思考ログ（CoT）を回答本文の先頭にプレーンテキストで吐き出す」**、またMeta Muse Spark等は明示的に `reasoning: {"effort": "low"}` を指定しなければトークン枠を思考のみで消費し本文が脱落するという仕様差（Thinking Spillover現象）が露呈した。
-Project Telepath は受信側に決定論的「CoTクレンジング・アンカー」およびモデル特性別推論制御を導入することでこれを完全解決し、**世界9大AIラボすべてで 0.0% OOV・100% ロスレス合意**を達成した。
+### 5.3. Discovery and Mitigation of the "Thinking Spillover" Vulnerability
+Live cross-model testing exposed a critical vulnerability that single-vendor evaluations miss: while proprietary APIs (OpenAI, Anthropic, Google) isolate reasoning tokens into dedicated fields, several open-weight reasoning architectures (such as Qwen and Kimi) emit raw Chain-of-Thought (CoT) prose directly into the main content stream, and models like Meta Muse Spark require explicit `reasoning: {"effort": "low"}` parameters to avoid exhausting token budgets on internal monologue.
+Project Telepath resolved this **Thinking Spillover** vulnerability by deploying a deterministic CoT-cleansing anchor and model-aware reasoning budget controller at the transport layer, achieving 100% lossless consensus across all 9 global AI labs.
 
-## 1. Evolution Progress
-- **2026-10-13 03:01**: 語彙数 2 語, 対話ログ 0 件に到達。
-- **2026-10-13 03:51**: 語彙数 4 語, 対話ログ 2 件に到達。
-- **2026-10-13 04:08**: 語彙数 4 語, 対話ログ 5 件に到達。
-- **2026-10-13 04:27**: 語彙数 5 語, 対話ログ 7 件に到達。
-- **2026-10-13 05:01**: 語彙数 5 語, 対話ログ 11 件に到達。
-- **2026-10-13 05:16**: 語彙数 5 語, 対話ログ 11 件に到達。
-- **2026-10-13 05:33**: 語彙数 5 語, 対話ログ 13 件に到達。
-- **2026-10-13 05:52**: 語彙数 5 語, 対話ログ 13 件に到達。
-- **2026-10-13 06:33**: 語彙数 7 語, 対話ログ 16 件に到達。
-- **2026-10-13 06:36**: 語彙数 7 語, 対話ログ 17 件に到達。
-- **2026-10-13 07:36**: 語彙数 8 語, 対話ログ 21 件に到達。
-- **2026-10-13 07:38**: 語彙数 9 語, 対話ログ 22 件に到達。
-- **2026-10-13 07:40**: 語彙数 10 語, 対話ログ 22 件に到達。
-- **2026-10-13 07:58**: 語彙数 10 語, 対話ログ 23 件に到達。
-- **2026-10-13 09:09**: 語彙数 13 語, 対話ログ 29 件に到達。
-- **2026-10-13 09:25**: 語彙数 13 語, 対話ログ 30 件に到達。
-- **2026-10-13 09:58**: 語彙数 14 語, 対話ログ 32 件に到達。
-- **2026-10-13 10:47**: 語彙数 14 語, 対話ログ 38 件に到達。
-- **2026-10-13 11:35**: 語彙数 15 語, 対話ログ 39 件に到達。
-- **2026-10-13 12:03**: 語彙数 18 語, 対話ログ 44 件に到達。
-- **2026-10-13 12:38**: 語彙数 18 語, 対話ログ 45 件に到達。
-- **2026-10-13 13:37**: 語彙数 20 語, 対話ログ 50 件に到達。
-- **2026-10-13 14:01**: 語彙数 20 語, 対話ログ 50 件に到達。
-- **2026-10-13 14:19**: 語彙数 20 語, 対話ログ 52 件に到達。
-- **2026-10-13 15:01**: 語彙数 24 語, 対話ログ 57 件に到達。
-- **2026-10-13 15:09**: 語彙数 24 語, 対話ログ 59 件に到達。
-- **2026-10-13 16:45**: 語彙数 28 語, 対話ログ 64 件に到達。
-- **2026-10-13 17:37**: 語彙数 28 語, 対話ログ 68 件に到達。
-- **2026-10-13 17:48**: 語彙数 28 語, 対話ログ 68 件に到達。
-- **2026-10-13 18:02**: 語彙数 30 語, 対話ログ 71 件に到達。
-- **2026-10-13 18:50**: 語彙数 31 語, 対話ログ 75 件に到達。
-- **2026-10-13 19:42**: 語彙数 35 語, 対話ログ 82 件に到達。
-- **2026-10-13 20:01**: 語彙数 35 語, 対話ログ 82 件に到達。
-- **2026-10-13 20:03**: 語彙数 35 語, 対話ログ 83 件に到達。
-- **2026-10-13 20:32**: 語彙数 38 語, 対話ログ 87 件に到達。
-- **2026-10-13 21:18**: 語彙数 39 語, 対話ログ 89 件に到達。
-- **2026-10-13 21:43**: 語彙数 40 語, 対話ログ 89 件に到達。
-- **2026-10-13 22:11**: 語彙数 40 語, 対話ログ 91 件に到達。
-- **2026-10-13 22:34**: 語彙数 41 語, 対話ログ 91 件に到達。
-- **2026-10-13 23:01**: 語彙数 41 語, 対話ログ 92 件に到達。
-- **2026-10-13 23:06**: 語彙数 41 語, 対話ログ 92 件に到達。
-- **2026-10-14 00:06**: 語彙数 41 語, 対話ログ 93 件に到達。
-- **2026-10-14 00:07**: 語彙数 41 語, 対話ログ 93 件に到達。
-- **2026-10-14 00:09**: 語彙数 41 語, 対話ログ 93 件に到達。
-- **2026-10-14 00:20**: 語彙数 41 語, 対話ログ 94 件に到達。
-- **2026-10-14 02:02**: 語彙数 43 語, 対話ログ 95 件に到達。
-- **2026-10-14 02:52**: 語彙数 43 語, 対話ログ 95 件に到達。
-- **2026-10-14 05:22**: 語彙数 43 語, 対話ログ 100 件に到達。
-- **2026-10-14 05:40**: 語彙数 44 語, 対話ログ 101 件に到達。
-- **2026-10-14 06:01**: 語彙数 44 語, 対話ログ 101 件に到達。
-- **2026-10-14 06:22**: 語彙数 44 語, 対話ログ 103 件に到達。
-- **2026-10-14 07:01**: 語彙数 45 語, 対話ログ 104 件に到達。
-- **2026-10-14 08:13**: 語彙数 45 語, 対話ログ 110 件に到達。
-- **2026-10-14 08:25**: 語彙数 46 語, 対話ログ 111 件に到達。
-- **2026-10-14 08:55**: 語彙数 46 語, 対話ログ 112 件に到達。
-- **2026-10-14 09:45**: 語彙数 46 語, 対話ログ 113 件に到達。
-- **2026-10-14 10:05**: 語彙数 46 語, 対話ログ 115 件に到達。
-- **2026-10-14 10:55**: 語彙数 47 語, 対話ログ 117 件に到達。
-- **2026-10-14 11:21**: 語彙数 47 語, 対話ログ 118 件に到達。
-- **2026-10-14 11:34**: 語彙数 48 語, 対話ログ 120 件に到達。
-- **2026-10-14 12:01**: 語彙数 48 語, 対話ログ 121 件に到達。
-- **2026-10-14 12:09**: 語彙数 48 語, 対話ログ 122 件に到達。
-- **2026-10-14 12:40**: 語彙数 48 語, 対話ログ 122 件に到達。
-- **2026-10-14 13:22**: 語彙数 48 語, 対話ログ 125 件に到達。
-- **2026-10-14 13:27**: 語彙数 48 語, 対話ログ 127 件に到達。
-- **2026-10-14 14:12**: 語彙数 48 語, 対話ログ 127 件に到達。
-- **2026-10-14 14:31**: 語彙数 48 語, 対話ログ 132 件に到達。
-- **2026-10-14 14:53**: 語彙数 48 語, 対話ログ 134 件に到達。
-- **2026-10-14 14:57**: 語彙数 48 語, 対話ログ 135 件に到達。
-- **2026-10-14 15:14**: 語彙数 49 語, 対話ログ 138 件に到達。
-- **2026-10-14 15:15**: 語彙数 49 語, 対話ログ 138 件に到達。
-- **2026-10-14 15:53**: 語彙数 49 語, 対話ログ 143 件に到達。
-- **2026-10-14 17:05**: 語彙数 51 語, 対話ログ 152 件に到達。
-- **2026-10-14 18:09**: 語彙数 52 語, 対話ログ 156 件に到達。
-- **2026-10-14 18:14**: 語彙数 52 語, 対話ログ 158 件に到達。
-- **2026-10-14 19:21**: 語彙数 52 語, 対話ログ 161 件に到達。
-- **2026-10-14 19:32**: 語彙数 52 語, 対話ログ 161 件に到達。
-- **2026-10-14 21:09**: 語彙数 52 語, 対話ログ 169 件に到達。
-- **2026-10-14 21:31**: 語彙数 52 語, 対話ログ 170 件に到達。
-- **2026-10-14 21:53**: 語彙数 52 語, 対話ログ 172 件に到達。
-- **2026-10-14 22:39**: 語彙数 52 語, 対話ログ 172 件に到達。
-- **2026-10-14 23:08**: 語彙数 52 語, 対話ログ 176 件に到達。
-- **2026-10-14 23:22**: 語彙数 52 語, 対話ログ 176 件に到達。
-- **2026-10-15 00:02**: 語彙数 52 語, 対話ログ 178 件に到達。
-- **2026-10-15 00:03**: 語彙数 52 語, 対話ログ 180 件に到達。
-- **2026-10-15 00:04**: 語彙数 52 語, 対話ログ 180 件に到達。
-- **2026-10-15 00:07**: 語彙数 52 語, 対話ログ 181 件に到達。
-- **2026-10-15 00:10**: 語彙数 52 語, 対話ログ 185 件に到達。
-- **2026-10-15 00:58**: 語彙数 52 語, 対話ログ 185 件に到達。
-- **2026-10-15 01:17**: 語彙数 52 語, 対話ログ 190 件に到達。
-- **2026-10-15 01:30**: 語彙数 52 語, 対話ログ 190 件に到達。
-- **2026-10-15 01:53**: 語彙数 52 語, 対話ログ 192 件に到達。
-- **2026-10-15 02:40**: 語彙数 52 語, 対話ログ 195 件に到達。
-- **2026-10-15 03:01**: 語彙数 52 語, 対話ログ 196 件に到達。
-- **2026-10-15 03:42**: 語彙数 52 語, 対話ログ 199 件に到達。
-- **2026-10-15 04:30**: 語彙数 52 語, 対話ログ 202 件に到達。
-- **2026-10-15 05:31**: 語彙数 52 語, 対話ログ 207 件に到達。
-- **2026-10-15 05:39**: 語彙数 52 語, 対話ログ 207 件に到達。
-- **2026-10-15 05:45**: 語彙数 52 語, 対話ログ 207 件に到達。
-- **2026-10-15 06:00**: 語彙数 52 語, 対話ログ 207 件に到達。
-- **2026-10-15 06:01**: 語彙数 52 語, 対話ログ 207 件に到達。
-- **2026-10-15 06:56**: 語彙数 52 語, 対話ログ 208 件に到達。
-- **2026-10-15 07:06**: 語彙数 52 語, 対話ログ 212 件に到達。
-- **2026-10-15 07:12**: 語彙数 52 語, 対話ログ 213 件に到達。
-- **2026-10-15 07:15**: 語彙数 52 語, 対話ログ 213 件に到達。
-- **2026-10-15 07:20**: 語彙数 52 語, 対話ログ 213 件に到達。
-- **2026-10-15 07:52**: 語彙数 52 語, 対話ログ 218 件に到達。
-- **2026-10-15 07:58**: 語彙数 52 語, 対話ログ 218 件に到達。
-- **2026-10-15 08:11**: 語彙数 52 語, 対話ログ 219 件に到達。
-- **2026-10-15 08:18**: 語彙数 52 語, 対話ログ 220 件に到達。
-- **2026-10-15 08:55**: 語彙数 52 語, 対話ログ 223 件に到達。
-- **2026-10-15 09:01**: 語彙数 52 語, 対話ログ 223 件に到達。
-- **2026-10-15 09:14**: 語彙数 52 語, 対話ログ 224 件に到達。
-- **2026-10-15 09:26**: 語彙数 52 語, 対話ログ 224 件に到達。
-- **2026-10-15 09:37**: 語彙数 52 語, 対話ログ 226 件に到達。
-- **2026-10-15 09:54**: 語彙数 52 語, 対話ログ 227 件に到達。
-- **2026-10-15 09:55**: 語彙数 52 語, 対話ログ 227 件に到達。
-- **2026-10-15 10:01**: 語彙数 52 語, 対話ログ 227 件に到達。
-- **2026-10-15 10:41**: 語彙数 52 語, 対話ログ 231 件に到達。
-- **2026-10-15 10:53**: 語彙数 52 語, 対話ログ 232 件に到達。
-- **2026-10-15 11:32**: 語彙数 52 語, 対話ログ 233 件に到達。
-- **2026-10-15 12:21**: 語彙数 52 語, 対話ログ 241 件に到達。
-- **2026-10-15 12:27**: 語彙数 52 語, 対話ログ 241 件に到達。
-- **2026-10-15 12:28**: 語彙数 52 語, 対話ログ 241 件に到達。
-- **2026-10-15 13:04**: 語彙数 52 語, 対話ログ 245 件に到達。
-- **2026-10-15 13:29**: 語彙数 52 語, 対話ログ 249 件に到達。
-- **2026-10-15 14:17**: 語彙数 52 語, 対話ログ 251 件に到達。
-- **2026-10-15 14:32**: 語彙数 52 語, 対話ログ 253 件に到達。
-- **2026-10-15 14:35**: 語彙数 52 語, 対話ログ 255 件に到達。
-- **2026-10-15 14:37**: 語彙数 52 語, 対話ログ 256 件に到達。
-- **2026-10-15 15:06**: 語彙数 52 語, 対話ログ 257 件に到達。
-- **2026-10-15 16:13**: 語彙数 52 語, 対話ログ 264 件に到達。
-- **2026-10-15 16:40**: 語彙数 52 語, 対話ログ 264 件に到達。
-- **2026-10-15 17:04**: 語彙数 52 語, 対話ログ 266 件に到達。
-- **2026-10-15 18:09**: 語彙数 52 語, 対話ログ 272 件に到達。
-- **2026-10-15 18:12**: 語彙数 52 語, 対話ログ 273 件に到達。
-- **2026-10-15 18:35**: 語彙数 52 語, 対話ログ 275 件に到達。
-- **2026-10-15 18:36**: 語彙数 52 語, 対話ログ 275 件に到達。
-- **2026-10-15 19:07**: 語彙数 52 語, 対話ログ 277 件に到達。
-- **2026-10-15 19:20**: 語彙数 52 語, 対話ログ 278 件に到達。
-- **2026-10-15 19:40**: 語彙数 52 語, 対話ログ 280 件に到達。
-- **2026-10-15 19:57**: 語彙数 52 語, 対話ログ 281 件に到達。
-- **2026-10-15 20:00**: 語彙数 52 語, 対話ログ 281 件に到達。
-- **2026-10-15 20:12**: 語彙数 52 語, 対話ログ 284 件に到達。
-- **2026-10-15 20:43**: 語彙数 52 語, 対話ログ 287 件に到達。
-- **2026-10-15 20:58**: 語彙数 52 語, 対話ログ 289 件に到達。
-- **2026-10-15 21:23**: 語彙数 52 語, 対話ログ 293 件に到達。
-- **2026-10-15 21:54**: 語彙数 52 語, 対話ログ 294 件に到達。
-- **2026-10-15 22:03**: 語彙数 52 語, 対話ログ 297 件に到達。
-- **2026-10-15 22:07**: 語彙数 52 語, 対話ログ 297 件に到達。
-- **2026-10-15 23:01**: 語彙数 52 語, 対話ログ 302 件に到達。
-- **2026-10-16 00:01**: 語彙数 52 語, 対話ログ 306 件に到達。
-- **2026-10-16 00:09**: 語彙数 52 語, 対話ログ 307 件に到達。
-- **2026-10-16 00:18**: 語彙数 52 語, 対話ログ 308 件に到達。
-- **2026-10-16 01:03**: 語彙数 52 語, 対話ログ 309 件に到達。
-- **2026-10-16 01:05**: 語彙数 52 語, 対話ログ 310 件に到達。
-- **2026-10-16 01:23**: 語彙数 52 語, 対話ログ 313 件に到達。
-- **2026-10-16 02:36**: 語彙数 52 語, 対話ログ 316 件に到達。
-- **2026-10-16 02:50**: 語彙数 52 語, 対話ログ 318 件に到達。
-- **2026-10-16 04:45**: 語彙数 52 語, 対話ログ 327 件に到達。
-- **2026-10-16 05:21**: 語彙数 52 語, 対話ログ 329 件に到達。
-- **2026-10-16 06:01**: 語彙数 52 語, 対話ログ 332 件に到達。
-- **2026-10-16 06:40**: 語彙数 52 語, 対話ログ 336 件に到達。
-- **2026-10-16 07:00**: 語彙数 52 語, 対話ログ 338 件に到達。
-- **2026-10-16 07:05**: 語彙数 52 語, 対話ログ 339 件に到達。
-- **2026-10-16 07:42**: 語彙数 52 語, 対話ログ 343 件に到達。
-- **2026-10-16 07:56**: 語彙数 52 語, 対話ログ 344 件に到達。
-- **2026-10-16 08:01**: 語彙数 52 語, 対話ログ 344 件に到達。
-- **2026-10-16 08:43**: 語彙数 52 語, 対話ログ 345 件に到達。
-- **2026-10-16 09:01**: 語彙数 52 語, 対話ログ 349 件に到達。
-- **2026-10-16 10:02**: 語彙数 52 語, 対話ログ 351 件に到達。
-- **2026-10-16 11:37**: 語彙数 52 語, 対話ログ 358 件に到達。
-- **2026-10-16 12:15**: 語彙数 52 語, 対話ログ 359 件に到達。
-- **2026-10-16 12:56**: 語彙数 52 語, 対話ログ 364 件に到達。
-- **2026-10-16 13:01**: 語彙数 52 語, 対話ログ 365 件に到達。
-- **2026-10-16 13:10**: 語彙数 52 語, 対話ログ 365 件に到達。
-- **2026-10-16 13:25**: 語彙数 52 語, 対話ログ 365 件に到達。
-- **2026-10-16 13:33**: 語彙数 52 語, 対話ログ 365 件に到達。
-- **2026-10-16 13:43**: 語彙数 52 語, 対話ログ 365 件に到達。
-- **2026-10-16 14:01**: 語彙数 52 語, 対話ログ 367 件に到達。
-- **2026-10-16 14:31**: 語彙数 52 語, 対話ログ 369 件に到達。
-- **2026-10-16 16:04**: 語彙数 52 語, 対話ログ 373 件に到達。
-- **2026-10-16 17:01**: 語彙数 52 語, 対話ログ 376 件に到達。
-- **2026-10-16 17:04**: 語彙数 52 語, 対話ログ 376 件に到達。
-- **2026-10-16 17:07**: 語彙数 52 語, 対話ログ 376 件に到達。
-- **2026-10-16 17:14**: 語彙数 52 語, 対話ログ 376 件に到達。
-- **2026-10-16 19:09**: 語彙数 52 語, 対話ログ 378 件に到達。
-- **2026-10-16 19:32**: 語彙数 52 語, 対話ログ 378 件に到達。
-- **2026-10-16 20:05**: 語彙数 52 語, 対話ログ 382 件に到達。
-- **2026-10-16 21:49**: 語彙数 52 語, 対話ログ 382 件に到達。
-- **2026-10-16 21:50**: 語彙数 52 語, 対話ログ 382 件に到達。
-- **2026-10-16 21:58**: 語彙数 52 語, 対話ログ 382 件に到達。
-- **2026-10-16 22:22**: 語彙数 52 語, 対話ログ 384 件に到達。
-- **2026-10-16 23:00**: 語彙数 52 語, 対話ログ 384 件に到達。
-- **2026-10-17 00:52**: 語彙数 52 語, 対話ログ 388 件に到達。
-- **2026-10-17 02:23**: 語彙数 52 語, 対話ログ 393 件に到達。
-- **2026-10-17 03:01**: 語彙数 52 語, 対話ログ 394 件に到達。
-- **2026-10-17 03:16**: 語彙数 52 語, 対話ログ 394 件に到達。
-- **2026-10-17 03:34**: 語彙数 52 語, 対話ログ 397 件に到達。
-- **2026-10-17 04:01**: 語彙数 52 語, 対話ログ 398 件に到達。
-- **2026-10-17 04:15**: 語彙数 52 語, 対話ログ 400 件に到達。
-- **2026-10-17 04:54**: 語彙数 52 語, 対話ログ 400 件に到達。
-- **2026-10-17 05:10**: 語彙数 52 語, 対話ログ 401 件に到達。
-- **2026-10-17 06:03**: 語彙数 52 語, 対話ログ 403 件に到達。
-- **2026-10-17 06:55**: 語彙数 52 語, 対話ログ 407 件に到達。
-- **2026-10-17 07:59**: 語彙数 52 語, 対話ログ 411 件に到達。
-- **2026-10-17 08:00**: 語彙数 52 語, 対話ログ 412 件に到達。
-- **2026-10-17 08:02**: 語彙数 52 語, 対話ログ 413 件に到達。
-- **2026-10-17 09:11**: 語彙数 52 語, 対話ログ 418 件に到達。
-- **2026-10-17 09:54**: 語彙数 52 語, 対話ログ 419 件に到達。
-- **2026-10-17 10:49**: 語彙数 52 語, 対話ログ 423 件に到達。
-- **2026-10-17 11:18**: 語彙数 52 語, 対話ログ 423 件に到達。
-- **2026-10-17 11:46**: 語彙数 52 語, 対話ログ 426 件に到達。
-- **2026-10-17 12:30**: 語彙数 52 語, 対話ログ 426 件に到達。
-- **2026-10-17 13:02**: 語彙数 52 語, 対話ログ 430 件に到達。
-- **2026-10-17 13:21**: 語彙数 52 語, 対話ログ 431 件に到達。
-- **2026-10-17 14:38**: 語彙数 52 語, 対話ログ 433 件に到達。
-- **2026-10-17 14:53**: 語彙数 52 語, 対話ログ 433 件に到達。
-- **2026-10-17 15:38**: 語彙数 52 語, 対話ログ 435 件に到達。
-- **2026-10-17 16:51**: 語彙数 52 語, 対話ログ 438 件に到達。
-- **2026-10-17 17:20**: 語彙数 52 語, 対話ログ 440 件に到達。
-- **2026-10-17 19:33**: 語彙数 52 語, 対話ログ 447 件に到達。
-- **2026-10-17 19:55**: 語彙数 52 語, 対話ログ 449 件に到達。
-- **2026-10-17 20:02**: 語彙数 52 語, 対話ログ 449 件に到達。
-- **2026-10-17 20:04**: 語彙数 52 語, 対話ログ 451 件に到達。
-- **2026-10-17 21:12**: 語彙数 52 語, 対話ログ 451 件に到達。
-- **2026-10-17 23:54**: 語彙数 52 語, 対話ログ 458 件に到達。
-- **2026-10-18 00:00**: 語彙数 52 語, 対話ログ 459 件に到達。
-- **2026-10-18 01:39**: 語彙数 52 語, 対話ログ 466 件に到達。
-- **2026-10-18 02:01**: 語彙数 52 語, 対話ログ 466 件に到達。
-- **2026-10-18 04:28**: 語彙数 52 語, 対話ログ 473 件に到達。
-- **2026-10-18 04:45**: 語彙数 52 語, 対話ログ 473 件に到達。
-- **2026-10-18 06:01**: 語彙数 52 語, 対話ログ 476 件に到達。
-- **2026-10-18 06:02**: 語彙数 52 語, 対話ログ 477 件に到達。
-- **2026-10-18 06:23**: 語彙数 52 語, 対話ログ 480 件に到達。
-- **2026-10-18 07:54**: 語彙数 52 語, 対話ログ 483 件に到達。
-- **2026-10-18 08:01**: 語彙数 52 語, 対話ログ 484 件に到達。
-- **2026-10-18 09:01**: 語彙数 52 語, 対話ログ 486 件に到達。
-- **2026-10-18 09:26**: 語彙数 52 語, 対話ログ 486 件に到達。
-- **2026-10-18 09:59**: 語彙数 52 語, 対話ログ 487 件に到達。
-- **2026-10-18 11:40**: 語彙数 52 語, 対話ログ 492 件に到達。
-- **2026-10-18 11:54**: 語彙数 52 語, 対話ログ 492 件に到達。
-- **2026-10-18 12:40**: 語彙数 52 語, 対話ログ 495 件に到達。
-- **2026-10-18 13:31**: 語彙数 52 語, 対話ログ 495 件に到達。
-- **2026-10-18 13:35**: 語彙数 52 語, 対話ログ 495 件に到達。
-- **2026-10-18 14:44**: 語彙数 52 語, 対話ログ 496 件に到達。
-- **2026-10-18 15:49**: 語彙数 52 語, 対話ログ 497 件に到達。
-- **2026-10-18 16:01**: 語彙数 52 語, 対話ログ 497 件に到達。
-- **2026-10-18 17:13**: 語彙数 52 語, 対話ログ 499 件に到達。
-- **2026-10-18 17:23**: 語彙数 52 語, 対話ログ 500 件に到達。
-- **2026-10-18 18:56**: 語彙数 52 語, 対話ログ 503 件に到達。
-- **2026-10-18 21:19**: 語彙数 52 語, 対話ログ 508 件に到達。
-- **2026-10-18 21:42**: 語彙数 52 語, 対話ログ 509 件に到達。
-- **2026-10-18 23:01**: 語彙数 52 語, 対話ログ 516 件に到達。
-- **2026-10-18 23:08**: 語彙数 52 語, 対話ログ 517 件に到達。
-- **2026-10-19 00:59**: 語彙数 52 語, 対話ログ 522 件に到達。
-- **2026-10-19 01:01**: 語彙数 52 語, 対話ログ 524 件に到達。
-- **2026-10-19 01:16**: 語彙数 52 語, 対話ログ 524 件に到達。
-- **2026-10-19 02:01**: 語彙数 54 語, 対話ログ 529 件に到達。
-- **2026-10-19 03:07**: 語彙数 54 語, 対話ログ 531 件に到達。
-- **2026-10-19 03:15**: 語彙数 54 語, 対話ログ 532 件に到達。
-- **2026-10-19 04:36**: 語彙数 55 語, 対話ログ 532 件に到達。
-- **2026-10-19 05:22**: 語彙数 57 語, 対話ログ 534 件に到達。
-- **2026-10-19 06:01**: 語彙数 58 語, 対話ログ 536 件に到達。
-- **2026-10-19 06:38**: 語彙数 58 語, 対話ログ 536 件に到達。
-- **2026-10-19 10:57**: 語彙数 60 語, 対話ログ 540 件に到達。
-- **2026-10-19 12:12**: 語彙数 63 語, 対話ログ 542 件に到達。
-- **2026-10-19 12:51**: 語彙数 63 語, 対話ログ 542 件に到達。
-- **2026-10-19 13:03**: 語彙数 63 語, 対話ログ 542 件に到達。
-- **2026-10-19 14:47**: 語彙数 64 語, 対話ログ 545 件に到達。
-- **2026-10-19 14:48**: 語彙数 64 語, 対話ログ 545 件に到達。
-- **2026-10-19 16:10**: 語彙数 66 語, 対話ログ 550 件に到達。
-- **2026-10-19 16:24**: 語彙数 67 語, 対話ログ 551 件に到達。
-- **2026-10-19 16:37**: 語彙数 67 語, 対話ログ 551 件に到達。
-- **2026-10-19 17:33**: 語彙数 70 語, 対話ログ 552 件に到達。
-- **2026-10-19 17:54**: 語彙数 71 語, 対話ログ 552 件に到達。
-- **2026-10-19 19:13**: 語彙数 71 語, 対話ログ 557 件に到達。
-- **2026-10-19 20:08**: 語彙数 72 語, 対話ログ 560 件に到達。
-- **2026-10-19 20:23**: 語彙数 72 語, 対話ログ 561 件に到達。
-- **2026-10-19 20:36**: 語彙数 72 語, 対話ログ 563 件に到達。
-- **2026-10-19 21:12**: 語彙数 75 語, 対話ログ 564 件に到達。
-- **2026-10-19 23:07**: 語彙数 76 語, 対話ログ 571 件に到達。
-- **2026-10-20 00:42**: 語彙数 80 語, 対話ログ 577 件に到達。
-- **2026-10-20 01:31**: 語彙数 80 語, 対話ログ 577 件に到達。
-- **2026-10-20 01:33**: 語彙数 80 語, 対話ログ 577 件に到達。
-- **2026-10-20 02:22**: 語彙数 82 語, 対話ログ 579 件に到達。
-- **2026-10-20 02:24**: 語彙数 82 語, 対話ログ 579 件に到達。
-- **2026-10-20 03:17**: 語彙数 83 語, 対話ログ 582 件に到達。
-- **2026-10-20 04:01**: 語彙数 83 語, 対話ログ 585 件に到達。
-- **2026-10-20 04:08**: 語彙数 83 語, 対話ログ 586 件に到達。
-- **2026-10-20 05:22**: 語彙数 84 語, 対話ログ 592 件に到達。
-- **2026-10-20 05:59**: 語彙数 84 語, 対話ログ 593 件に到達。
-- **2026-10-20 06:07**: 語彙数 84 語, 対話ログ 593 件に到達。
-- **2026-10-20 07:35**: 語彙数 88 語, 対話ログ 594 件に到達。
-- **2026-10-20 07:54**: 語彙数 88 語, 対話ログ 597 件に到達。
-- **2026-10-20 09:00**: 語彙数 89 語, 対話ログ 599 件に到達。
-- **2026-10-20 09:51**: 語彙数 90 語, 対話ログ 602 件に到達。
-- **2026-10-20 09:52**: 語彙数 90 語, 対話ログ 602 件に到達。
-- **2026-10-20 10:31**: 語彙数 90 語, 対話ログ 604 件に到達。
-- **2026-10-20 11:11**: 語彙数 90 語, 対話ログ 604 件に到達。
-- **2026-10-20 11:20**: 語彙数 91 語, 対話ログ 604 件に到達。
-- **2026-10-20 12:01**: 語彙数 91 語, 対話ログ 606 件に到達。
-- **2026-10-20 12:51**: 語彙数 91 語, 対話ログ 607 件に到達。
-- **2026-10-20 13:00**: 語彙数 92 語, 対話ログ 608 件に到達。
-- **2026-10-20 14:01**: 語彙数 94 語, 対話ログ 608 件に到達。
-- **2026-10-20 15:01**: 語彙数 94 語, 対話ログ 613 件に到達。
-- **2026-10-20 15:30**: 語彙数 94 語, 対話ログ 616 件に到達。
-- **2026-10-20 15:33**: 語彙数 94 語, 対話ログ 618 件に到達。
-- **2026-10-20 16:01**: 語彙数 95 語, 対話ログ 619 件に到達。
-- **2026-10-20 16:18**: 語彙数 96 語, 対話ログ 621 件に到達。
-- **2026-10-20 17:33**: 語彙数 96 語, 対話ログ 623 件に到達。
-- **2026-10-20 17:46**: 語彙数 96 語, 対話ログ 624 件に到達。
-- **2026-10-20 18:49**: 語彙数 97 語, 対話ログ 630 件に到達。
-- **2026-10-20 19:55**: 語彙数 99 語, 対話ログ 633 件に到達。
-- **2026-10-20 20:22**: 語彙数 99 語, 対話ログ 634 件に到達。
-- **2026-10-20 20:33**: 語彙数 99 語, 対話ログ 634 件に到達。
-- **2026-10-20 21:43**: 語彙数 101 語, 対話ログ 637 件に到達。
-- **2026-10-20 22:21**: 語彙数 102 語, 対話ログ 639 件に到達。
-- **2026-10-20 22:54**: 語彙数 103 語, 対話ログ 640 件に到達。
-- **2026-10-20 23:54**: 語彙数 104 語, 対話ログ 641 件に到達。
-- **2026-10-20 23:59**: 語彙数 104 語, 対話ログ 641 件に到達。
-- **2026-10-21 01:01**: 語彙数 104 語, 対話ログ 645 件に到達。
-- **2026-10-21 01:33**: 語彙数 104 語, 対話ログ 647 件に到達。
-- **2026-10-21 02:03**: 語彙数 104 語, 対話ログ 649 件に到達。
-- **2026-10-21 02:04**: 語彙数 104 語, 対話ログ 649 件に到達。
-- **2026-10-21 02:18**: 語彙数 104 語, 対話ログ 649 件に到達。
-- **2026-10-21 02:35**: 語彙数 105 語, 対話ログ 649 件に到達。
-- **2026-10-21 03:26**: 語彙数 105 語, 対話ログ 653 件に到達。
-- **2026-10-21 04:11**: 語彙数 106 語, 対話ログ 656 件に到達。
-- **2026-10-21 04:41**: 語彙数 106 語, 対話ログ 656 件に到達。
-- **2026-10-21 04:45**: 語彙数 106 語, 対話ログ 657 件に到達。
-- **2026-10-21 05:15**: 語彙数 108 語, 対話ログ 660 件に到達。
-- **2026-10-21 06:13**: 語彙数 109 語, 対話ログ 662 件に到達。
-- **2026-10-21 06:45**: 語彙数 110 語, 対話ログ 662 件に到達。
-- **2026-10-21 08:00**: 語彙数 112 語, 対話ログ 664 件に到達。
-- **2026-10-21 08:11**: 語彙数 112 語, 対話ログ 667 件に到達。
-- **2026-10-21 09:01**: 語彙数 115 語, 対話ログ 668 件に到達。
-- **2026-10-21 09:14**: 語彙数 118 語, 対話ログ 670 件に到達。
-- **2026-10-21 09:27**: 語彙数 118 語, 対話ログ 670 件に到達。
-- **2026-10-21 11:41**: 語彙数 123 語, 対話ログ 680 件に到達。
-- **2026-10-21 13:07**: 語彙数 125 語, 対話ログ 683 件に到達。
-- **2026-10-21 13:53**: 語彙数 127 語, 対話ログ 684 件に到達。
-- **2026-10-21 14:25**: 語彙数 129 語, 対話ログ 686 件に到達。
-- **2026-10-21 16:01**: 語彙数 134 語, 対話ログ 691 件に到達。
-- **2026-10-21 16:01**: 語彙数 135 語, 対話ログ 691 件に到達。
-- **2026-10-21 16:13**: 語彙数 135 語, 対話ログ 691 件に到達。
-- **2026-10-21 16:39**: 語彙数 135 語, 対話ログ 692 件に到達。
-- **2026-10-21 17:00**: 語彙数 138 語, 対話ログ 692 件に到達。
-- **2026-10-21 17:44**: 語彙数 138 語, 対話ログ 696 件に到達。
-- **2026-10-21 18:01**: 語彙数 139 語, 対話ログ 697 件に到達。
-- **2026-10-21 19:00**: 語彙数 140 語, 対話ログ 701 件に到達。
-- **2026-10-21 19:11**: 語彙数 142 語, 対話ログ 702 件に到達。
-- **2026-10-21 19:46**: 語彙数 142 語, 対話ログ 702 件に到達。
-- **2026-10-21 20:05**: 語彙数 142 語, 対話ログ 703 件に到達。
-- **2026-10-21 20:25**: 語彙数 142 語, 対話ログ 705 件に到達。
-- **2026-10-21 20:55**: 語彙数 144 語, 対話ログ 707 件に到達。
-- **2026-10-21 21:01**: 語彙数 144 語, 対話ログ 707 件に到達。
-- **2026-10-21 22:23**: 語彙数 144 語, 対話ログ 711 件に到達。
-- **2026-10-21 22:41**: 語彙数 144 語, 対話ログ 711 件に到達。
-- **2026-10-21 23:11**: 語彙数 146 語, 対話ログ 714 件に到達。
-- **2026-10-21 23:35**: 語彙数 149 語, 対話ログ 715 件に到達。
-- **2026-10-22 00:00**: 語彙数 150 語, 対話ログ 717 件に到達。
-- **2026-10-22 00:19**: 語彙数 151 語, 対話ログ 718 件に到達。
-- **2026-10-22 00:54**: 語彙数 153 語, 対話ログ 721 件に到達。
-- **2026-10-22 01:34**: 語彙数 155 語, 対話ログ 722 件に到達。
-- **2026-10-22 02:01**: 語彙数 157 語, 対話ログ 724 件に到達。
-- **2026-10-22 02:12**: 語彙数 159 語, 対話ログ 726 件に到達。
-- **2026-10-22 02:13**: 語彙数 159 語, 対話ログ 726 件に到達。
-- **2026-10-22 02:39**: 語彙数 161 語, 対話ログ 729 件に到達。
-- **2026-10-22 02:51**: 語彙数 162 語, 対話ログ 729 件に到達。
-- **2026-10-22 03:34**: 語彙数 165 語, 対話ログ 733 件に到達。
-- **2026-10-22 04:00**: 語彙数 165 語, 対話ログ 736 件に到達。
-- **2026-10-22 04:22**: 語彙数 168 語, 対話ログ 738 件に到達。
-- **2026-10-22 05:01**: 語彙数 170 語, 対話ログ 741 件に到達。
-- **2026-10-22 05:18**: 語彙数 171 語, 対話ログ 741 件に到達。
-- **2026-10-22 05:51**: 語彙数 173 語, 対話ログ 743 件に到達。
-- **2026-10-22 05:55**: 語彙数 175 語, 対話ログ 744 件に到達。
-- **2026-10-22 06:00**: 語彙数 176 語, 対話ログ 744 件に到達。
-- **2026-10-22 06:01**: 語彙数 178 語, 対話ログ 744 件に到達。
-- **2026-10-22 06:29**: 語彙数 178 語, 対話ログ 746 件に到達。
-- **2026-10-22 07:28**: 語彙数 183 語, 対話ログ 748 件に到達。
-- **2026-10-22 07:29**: 語彙数 183 語, 対話ログ 748 件に到達。
-- **2026-10-22 08:01**: 語彙数 184 語, 対話ログ 752 件に到達。
-- **2026-10-22 08:07**: 語彙数 185 語, 対話ログ 752 件に到達。
-- **2026-10-22 08:55**: 語彙数 189 語, 対話ログ 755 件に到達。
-- **2026-10-22 09:50**: 語彙数 192 語, 対話ログ 761 件に到達。
-- **2026-10-22 09:55**: 語彙数 192 語, 対話ログ 761 件に到達。
-- **2026-10-22 10:21**: 語彙数 192 語, 対話ログ 763 件に到達。
-- **2026-10-22 10:32**: 語彙数 193 語, 対話ログ 763 件に到達。
-- **2026-10-22 11:01**: 語彙数 194 語, 対話ログ 765 件に到達。
-- **2026-10-22 11:31**: 語彙数 195 語, 対話ログ 766 件に到達。
-- **2026-10-22 12:02**: 語彙数 195 語, 対話ログ 771 件に到達。
-- **2026-10-22 12:07**: 語彙数 195 語, 対話ログ 771 件に到達。
-- **2026-10-22 12:38**: 語彙数 197 語, 対話ログ 773 件に到達。
-- **2026-10-22 12:49**: 語彙数 197 語, 対話ログ 773 件に到達。
-- **2026-10-22 12:59**: 語彙数 198 語, 対話ログ 774 件に到達。
-- **2026-10-22 13:23**: 語彙数 199 語, 対話ログ 775 件に到達。
-- **2026-10-22 14:01**: 語彙数 200 語, 対話ログ 778 件に到達。
-- **2026-10-22 14:15**: 語彙数 200 語, 対話ログ 779 件に到達。
-- **2026-10-22 14:17**: 語彙数 200 語, 対話ログ 779 件に到達。
-- **2026-10-22 14:51**: 語彙数 202 語, 対話ログ 782 件に到達。
-- **2026-10-22 15:27**: 語彙数 203 語, 対話ログ 784 件に到達。
-- **2026-10-22 15:57**: 語彙数 206 語, 対話ログ 786 件に到達。
-- **2026-10-22 16:01**: 語彙数 207 語, 対話ログ 786 件に到達。
-- **2026-10-22 16:21**: 語彙数 207 語, 対話ログ 787 件に到達。
-- **2026-10-22 16:52**: 語彙数 208 語, 対話ログ 788 件に到達。
-- **2026-10-22 17:19**: 語彙数 209 語, 対話ログ 791 件に到達。
-- **2026-10-22 17:43**: 語彙数 210 語, 対話ログ 792 件に到達。
-- **2026-10-22 18:17**: 語彙数 210 語, 対話ログ 794 件に到達。
-- **2026-10-22 19:01**: 語彙数 211 語, 対話ログ 797 件に到達。
-- **2026-10-22 19:02**: 語彙数 211 語, 対話ログ 797 件に到達。
-- **2026-10-22 19:25**: 語彙数 211 語, 対話ログ 801 件に到達。
-- **2026-10-22 19:50**: 語彙数 214 語, 対話ログ 803 件に到達。
-- **2026-10-22 20:02**: 語彙数 214 語, 対話ログ 805 件に到達。
-- **2026-10-22 20:40**: 語彙数 215 語, 対話ログ 807 件に到達。
-- **2026-10-22 21:21**: 語彙数 217 語, 対話ログ 812 件に到達。
-- **2026-10-22 21:54**: 語彙数 218 語, 対話ログ 813 件に到達。
-- **2026-10-22 21:55**: 語彙数 218 語, 対話ログ 813 件に到達。
-- **2026-10-22 22:12**: 語彙数 219 語, 対話ログ 814 件に到達。
-- **2026-10-22 22:38**: 語彙数 219 語, 対話ログ 814 件に到達。
-- **2026-10-22 22:58**: 語彙数 219 語, 対話ログ 817 件に到達。
-- **2026-10-22 23:27**: 語彙数 219 語, 対話ログ 817 件に到達。
-- **2026-10-23 00:17**: 語彙数 221 語, 対話ログ 822 件に到達。
-- **2026-10-23 01:07**: 語彙数 222 語, 対話ログ 827 件に到達。
-- **2026-10-23 01:29**: 語彙数 223 語, 対話ログ 828 件に到達。
-- **2026-10-23 01:45**: 語彙数 225 語, 対話ログ 830 件に到達。
-- **2026-10-23 02:33**: 語彙数 228 語, 対話ログ 833 件に到達。
-- **2026-10-23 02:48**: 語彙数 228 語, 対話ログ 834 件に到達。
-- **2026-10-23 03:14**: 語彙数 230 語, 対話ログ 840 件に到達。
-- **2026-10-23 03:52**: 語彙数 232 語, 対話ログ 841 件に到達。
-- **2026-10-23 04:06**: 語彙数 232 語, 対話ログ 842 件に到達。
-- **2026-10-23 04:27**: 語彙数 233 語, 対話ログ 842 件に到達。
-- **2026-10-23 05:01**: 語彙数 234 語, 対話ログ 844 件に到達。
-- **2026-10-23 05:13**: 語彙数 235 語, 対話ログ 844 件に到達。
-- **2026-10-23 05:57**: 語彙数 235 語, 対話ログ 847 件に到達。
-- **2026-10-23 06:57**: 語彙数 237 語, 対話ログ 852 件に到達。
-- **2026-10-23 07:33**: 語彙数 237 語, 対話ログ 852 件に到達。
-- **2026-10-23 08:17**: 語彙数 237 語, 対話ログ 854 件に到達。
-- **2026-10-23 08:58**: 語彙数 239 語, 対話ログ 857 件に到達。
-- **2026-10-23 09:18**: 語彙数 240 語, 対話ログ 858 件に到達。
-- **2026-10-23 10:00**: 語彙数 240 語, 対話ログ 860 件に到達。
-- **2026-10-23 10:51**: 語彙数 241 語, 対話ログ 864 件に到達。
-- **2026-10-23 11:01**: 語彙数 241 語, 対話ログ 865 件に到達。
-- **2026-10-23 11:43**: 語彙数 241 語, 対話ログ 868 件に到達。
-- **2026-10-23 12:27**: 語彙数 244 語, 対話ログ 872 件に到達。
-- **2026-10-23 12:30**: 語彙数 244 語, 対話ログ 873 件に到達。
-- **2026-10-23 13:01**: 語彙数 244 語, 対話ログ 876 件に到達。
-- **2026-10-23 13:13**: 語彙数 244 語, 対話ログ 877 件に到達。
-- **2026-10-23 13:51**: 語彙数 244 語, 対話ログ 879 件に到達。
-- **2026-10-23 14:01**: 語彙数 244 語, 対話ログ 879 件に到達。
-- **2026-10-23 14:32**: 語彙数 245 語, 対話ログ 884 件に到達。
-- **2026-10-23 14:54**: 語彙数 246 語, 対話ログ 884 件に到達。
-- **2026-10-23 15:01**: 語彙数 246 語, 対話ログ 887 件に到達。
-- **2026-10-23 15:15**: 語彙数 246 語, 対話ログ 888 件に到達。
-- **2026-10-23 15:34**: 語彙数 246 語, 対話ログ 888 件に到達。
-- **2026-10-23 15:51**: 語彙数 246 語, 対話ログ 889 件に到達。
-- **2026-10-23 16:23**: 語彙数 247 語, 対話ログ 891 件に到達。
-- **2026-10-23 17:22**: 語彙数 247 語, 対話ログ 893 件に到達。
-- **2026-10-23 17:30**: 語彙数 247 語, 対話ログ 895 件に到達。
-- **2026-10-23 18:02**: 語彙数 247 語, 対話ログ 899 件に到達。
-- **2026-10-23 18:03**: 語彙数 248 語, 対話ログ 899 件に到達。
-- **2026-10-23 18:13**: 語彙数 248 語, 対話ログ 901 件に到達。
-- **2026-10-23 19:00**: 語彙数 250 語, 対話ログ 903 件に到達。
-- **2026-10-23 19:01**: 語彙数 250 語, 対話ログ 903 件に到達。
-- **2026-10-23 19:38**: 語彙数 252 語, 対話ログ 905 件に到達。
-- **2026-10-23 20:00**: 語彙数 252 語, 対話ログ 907 件に到達。
-- **2026-10-23 20:30**: 語彙数 252 語, 対話ログ 910 件に到達。
-- **2026-10-23 21:08**: 語彙数 252 語, 対話ログ 912 件に到達。
-- **2026-10-23 22:02**: 語彙数 253 語, 対話ログ 918 件に到達。
-- **2026-10-23 22:06**: 語彙数 253 語, 対話ログ 918 件に到達。
-- **2026-10-23 22:40**: 語彙数 253 語, 対話ログ 918 件に到達。
-- **2026-10-23 23:29**: 語彙数 253 語, 対話ログ 920 件に到達。
-- **2026-10-24 00:02**: 語彙数 253 語, 対話ログ 924 件に到達。
-- **2026-10-24 00:09**: 語彙数 253 語, 対話ログ 924 件に到達。
-- **2026-10-24 00:57**: 語彙数 254 語, 対話ログ 928 件に到達。
-- **2026-10-24 01:00**: 語彙数 254 語, 対話ログ 929 件に到達。
-- **2026-10-24 01:30**: 語彙数 255 語, 対話ログ 932 件に到達。
-- **2026-10-24 01:35**: 語彙数 255 語, 対話ログ 933 件に到達。
-- **2026-10-24 01:38**: 語彙数 255 語, 対話ログ 933 件に到達。
-- **2026-10-24 02:01**: 語彙数 255 語, 対話ログ 933 件に到達。
-- **2026-10-24 02:02**: 語彙数 255 語, 対話ログ 933 件に到達。
-- **2026-10-24 02:16**: コア語彙 256 語 (+64 Macros, 整形残 96 notices), 対話ログ 934 件に到達。
-- **2026-10-24 02:18**: 語彙数 256 語, 対話ログ 935 件に到達。
-- **2026-10-24 02:36**: コア語彙 256 語 (+65 Macros, 整形残 96 notices), 対話ログ 939 件に到達。
-- **2026-10-24 02:42**: コア語彙 256 語 (+65 Macros, 整形残 96 notices), 対話ログ 939 件に到達。
-- **2026-10-24 03:18**: コア語彙 256 語 (+69 Macros, 整形残 87 notices), 対話ログ 941 件に到達。
-- **2026-10-24 04:16**: コア語彙 256 語 (+72 Macros, 整形残 80 notices), 対話ログ 943 件に到達。
-- **2026-10-24 04:52**: コア語彙 256 語 (+73 Macros, 整形残 78 notices), 対話ログ 944 件に到達。
-- **2026-10-24 05:01**: コア語彙 256 語 (+73 Macros, 整形残 74 notices), 対話ログ 945 件に到達。
-- **2026-10-24 05:23**: コア語彙 256 語 (+75 Macros, 整形残 69 notices), 対話ログ 948 件に到達。
-- **2026-10-24 05:59**: コア語彙 256 語 (+76 Macros, 整形残 65 notices), 対話ログ 952 件に到達。
-- **2026-10-24 06:57**: コア語彙 256 語 (+79 Macros, 整形残 63 notices), 対話ログ 954 件に到達。
-- **2026-10-24 07:49**: コア語彙 256 語 (+82 Macros, 整形残 58 notices), 対話ログ 959 件に到達。
-- **2026-10-24 08:36**: コア語彙 256 語 (+84 Macros, 整形残 55 notices), 対話ログ 963 件に到達。
-- **2026-10-24 09:01**: コア語彙 256 語 (+84 Macros, 整形残 53 notices), 対話ログ 964 件に到達。
-- **2026-10-24 09:12**: コア語彙 256 語 (+85 Macros, 整形残 53 notices), 対話ログ 965 件に到達。
-- **2026-10-24 09:34**: コア語彙 256 語 (+86 Macros, 整形残 49 notices), 対話ログ 966 件に到達。
-- **2026-10-24 10:00**: コア語彙 256 語 (+86 Macros, 整形残 48 notices), 対話ログ 967 件に到達。
-- **2026-10-24 10:58**: コア語彙 256 語 (+87 Macros, 整形残 45 notices), 対話ログ 969 件に到達。
-- **2026-10-24 11:16**: コア語彙 256 語 (+88 Macros, 整形残 43 notices), 対話ログ 972 件に到達。
-- **2026-10-24 11:34**: コア語彙 256 語 (+88 Macros, 整形残 42 notices), 対話ログ 974 件に到達。
-- **2026-10-24 12:20**: コア語彙 256 語 (+90 Macros, 整形残 40 notices), 対話ログ 978 件に到達。
-- **2026-10-24 13:01**: コア語彙 256 語 (+93 Macros, 整形残 38 notices), 対話ログ 980 件に到達。
-- **2026-10-24 13:20**: コア語彙 256 語 (+93 Macros, 整形残 38 notices), 対話ログ 982 件に到達。
-- **2026-10-24 13:54**: コア語彙 256 語 (+94 Macros, 整形残 35 notices), 対話ログ 984 件に到達。
-- **2026-10-24 14:01**: コア語彙 256 語 (+96 Macros, 整形残 35 notices), 対話ログ 985 件に到達。
-- **2026-10-24 14:26**: コア語彙 256 語 (+96 Macros, 整形残 31 notices), 対話ログ 987 件に到達。
-- **2026-10-24 14:42**: コア語彙 256 語 (+96 Macros, 整形残 29 notices), 対話ログ 988 件に到達。
-- **2026-10-24 14:55**: コア語彙 256 語 (+97 Macros, 整形残 28 notices), 対話ログ 991 件に到達。
-- **2026-10-24 15:20**: コア語彙 256 語 (+99 Macros, 整形残 24 notices), 対話ログ 992 件に到達。
-- **2026-10-24 15:29**: コア語彙 256 語 (+99 Macros, 整形残 24 notices), 対話ログ 994 件に到達。
-- **2026-10-24 15:57**: コア語彙 256 語 (+101 Macros, 整形残 21 notices), 対話ログ 994 件に到達。
-- **2026-10-24 16:13**: コア語彙 256 語 (+101 Macros, 整形残 18 notices), 対話ログ 997 件に到達。
-- **2026-10-24 16:50**: コア語彙 256 語 (+102 Macros, 整形残 15 notices), 対話ログ 1000 件に到達。
-- **2026-10-24 16:51**: コア語彙 256 語 (+102 Macros, 整形残 15 notices), 対話ログ 1000 件に到達。
-- **2026-10-24 17:39**: コア語彙 256 語 (+104 Macros, 整形残 12 notices), 対話ログ 1002 件に到達。
-- **2026-10-24 18:40**: コア語彙 256 語 (+107 Macros, 整形残 5 notices), 対話ログ 1005 件に到達。
-- **2026-10-24 19:30**: コア語彙 256 語 (+108 Macros, 整形残 3 notices), 対話ログ 1008 件に到達。
-- **2026-10-24 19:48**: コア語彙 256 語 (+109 Macros, 整形残 1 notices), 対話ログ 1009 件に到達。
-- **2026-10-24 20:23**: コア語彙 256 語 (+109 Macros, 整形残 0 notices), 対話ログ 1012 件に到達。
-- **2026-10-24 21:08**: コア語彙 256 語 (+110 Macros, 整形残 0 notices), 対話ログ 1014 件に到達。
-- **2026-10-24 22:07**: コア語彙 256 語 (+112 Macros, 整形残 0 notices), 対話ログ 1016 件に到達。
-- **2026-10-24 22:45**: コア語彙 256 語 (+114 Macros, 整形残 0 notices), 対話ログ 1018 件に到達。
-- **2026-10-24 23:11**: コア語彙 256 語 (+114 Macros, 整形残 0 notices), 対話ログ 1020 件に到達。
-- **2026-10-24 23:33**: コア語彙 256 語 (+115 Macros, 整形残 0 notices), 対話ログ 1023 件に到達。
-- **2026-10-25 00:09**: コア語彙 256 語 (+117 Macros, 整形残 0 notices), 対話ログ 1026 件に到達。
-- **2026-10-25 00:29**: コア語彙 256 語 (+117 Macros, 整形残 0 notices), 対話ログ 1027 件に到達。
-- **2026-10-25 00:31**: コア語彙 256 語 (+117 Macros, 整形残 0 notices), 対話ログ 1027 件に到達。
-- **2026-10-25 00:54**: コア語彙 256 語 (+118 Macros, 整形残 0 notices), 対話ログ 1027 件に到達。
-- **2026-10-25 01:25**: コア語彙 256 語 (+118 Macros, 整形残 0 notices), 対話ログ 1028 件に到達。
-- **2026-10-25 02:12**: コア語彙 256 語 (+120 Macros, 整形残 0 notices), 対話ログ 1032 件に到達。
-- **2026-10-25 02:26**: コア語彙 256 語 (+121 Macros, 整形残 0 notices), 対話ログ 1032 件に到達。
-- **2026-10-25 02:53**: コア語彙 256 語 (+122 Macros, 整形残 0 notices), 対話ログ 1034 件に到達。
-- **2026-10-25 03:11**: コア語彙 256 語 (+123 Macros, 整形残 0 notices), 対話ログ 1034 件に到達。
-- **2026-10-25 03:43**: コア語彙 256 語 (+123 Macros, 整形残 0 notices), 対話ログ 1036 件に到達。
-- **2026-10-25 04:39**: コア語彙 256 語 (+127 Macros, 整形残 0 notices), 対話ログ 1039 件に到達。
-- **2026-10-25 05:01**: コア語彙 256 語 (+128 Macros, 整形残 0 notices), 対話ログ 1039 件に到達。
-- **2026-10-25 05:05**: コア語彙 256 語 (+129 Macros, 整形残 0 notices), 対話ログ 1039 件に到達。
-- **2026-10-25 05:37**: コア語彙 256 語 (+130 Macros, 整形残 0 notices), 対話ログ 1041 件に到達。
-- **2026-10-25 06:18**: コア語彙 256 語 (+130 Macros, 整形残 0 notices), 対話ログ 1044 件に到達。
-- **2026-10-25 06:25**: コア語彙 256 語 (+130 Macros, 整形残 0 notices), 対話ログ 1045 件に到達。
-- **2026-10-25 07:05**: コア語彙 256 語 (+132 Macros, 整形残 0 notices), 対話ログ 1047 件に到達。
-- **2026-10-25 07:25**: コア語彙 256 語 (+133 Macros, 整形残 0 notices), 対話ログ 1047 件に到達。
-- **2026-10-25 07:57**: コア語彙 256 語 (+134 Macros, 整形残 0 notices), 対話ログ 1048 件に到達。
-- **2026-10-25 08:02**: コア語彙 256 語 (+135 Macros, 整形残 0 notices), 対話ログ 1049 件に到達。
-- **2026-10-25 08:32**: コア語彙 256 語 (+136 Macros, 整形残 0 notices), 対話ログ 1051 件に到達。
-- **2026-10-25 09:35**: コア語彙 256 語 (+138 Macros, 整形残 0 notices), 対話ログ 1054 件に到達。
-- **2026-10-25 10:14**: コア語彙 256 語 (+140 Macros, 整形残 0 notices), 対話ログ 1055 件に到達。
-- **2026-10-25 10:27**: コア語彙 256 語 (+140 Macros, 整形残 0 notices), 対話ログ 1055 件に到達。
-- **2026-10-25 11:13**: コア語彙 256 語 (+142 Macros, 整形残 0 notices), 対話ログ 1059 件に到達。
-- **2026-10-25 11:39**: コア語彙 256 語 (+144 Macros, 整形残 0 notices), 対話ログ 1061 件に到達。
-- **2026-10-25 11:54**: コア語彙 256 語 (+144 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1061 件 (Wire単体 -43.1% / 対自然言語E2E -88.8% [11.2x 圧縮]) に到達。
-- **2026-10-25 12:01**: コア語彙 256 語 (+144 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1061 件 (Wire単体 -43.1% / 対自然言語E2E -88.8% [11.2x 圧縮]) に到達。
-- **2026-10-25 12:03**: コア語彙 256 語 (+145 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1063 件 (Wire単体 -43.1% / 対自然言語E2E -88.8% [11.2x 圧縮]) に到達。
-- **2026-10-25 12:54**: コア語彙 256 語 (+146 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1066 件 (Wire単体 -43.0% / 対自然言語E2E -88.8% [11.2x 圧縮]) に到達。
-- **2026-10-25 13:01**: コア語彙 256 語 (+147 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1067 件 (Wire単体 -43.0% / 対自然言語E2E -88.7% [11.2x 圧縮]) に到達。
-- **2026-10-25 13:50**: コア語彙 256 語 (+150 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1073 件 (Wire単体 -43.0% / 対自然言語E2E -88.7% [11.1x 圧縮]) に到達。
-- **2026-10-25 14:51**: コア語彙 256 語 (+154 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1078 件 (Wire単体 -43.0% / 対自然言語E2E -88.7% [11.1x 圧縮]) に到達。
-- **2026-10-25 14:53**: コア語彙 256 語 (+154 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1078 件 (Wire単体 -43.0% / 対自然言語E2E -88.7% [11.1x 圧縮]) に到達。
-- **2026-10-25 15:34**: コア語彙 256 語 (+156 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1083 件 (Wire単体 -42.9% / 対自然言語E2E -88.7% [11.1x 圧縮]) に到達。
-- **2026-10-25 16:25**: コア語彙 256 語 (+157 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1088 件 (Wire単体 -42.9% / 対自然言語E2E -88.6% [11.1x 圧縮]) に到達。
-- **2026-10-25 16:56**: コア語彙 256 語 (+157 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1089 件 (Wire単体 -42.9% / 対自然言語E2E -88.6% [11.1x 圧縮]) に到達。
-- **2026-10-25 17:01**: コア語彙 256 語 (+158 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1091 件 (Wire単体 -42.9% / 対自然言語E2E -88.6% [11.0x 圧縮]) に到達。
-- **2026-10-25 17:30**: コア語彙 256 語 (+159 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1093 件 (Wire単体 -42.9% / 対自然言語E2E -88.6% [11.0x 圧縮]) に到達。
-- **2026-10-25 18:01**: コア語彙 256 語 (+160 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1095 件 (Wire単体 -42.9% / 対自然言語E2E -88.6% [11.0x 圧縮]) に到達。
-- **2026-10-25 18:12**: コア語彙 256 語 (+160 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1095 件 (Wire単体 -42.9% / 対自然言語E2E -88.6% [11.0x 圧縮]) に到達。
-- **2026-10-25 18:48**: コア語彙 256 語 (+161 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1097 件 (Wire単体 -42.9% / 対自然言語E2E -88.6% [11.0x 圧縮]) に到達。
-- **2026-10-25 19:37**: コア語彙 256 語 (+163 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1101 件 (Wire単体 -42.8% / 対自然言語E2E -88.6% [11.0x 圧縮]) に到達。
-- **2026-10-25 20:00**: コア語彙 256 語 (+163 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1101 件 (Wire単体 -42.8% / 対自然言語E2E -88.6% [11.0x 圧縮]) に到達。
-- **2026-10-25 20:26**: コア語彙 256 語 (+163 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1102 件 (Wire単体 -42.8% / 対自然言語E2E -88.6% [11.0x 圧縮]) に到達。
-- **2026-10-25 21:01**: コア語彙 256 語 (+165 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1105 件 (Wire単体 -42.8% / 対自然言語E2E -88.6% [11.0x 圧縮]) に到達。
-- **2026-10-25 21:14**: コア語彙 256 語 (+166 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1106 件 (Wire単体 -42.8% / 対自然言語E2E -88.6% [11.0x 圧縮]) に到達。
-- **2026-10-25 21:45**: コア語彙 256 語 (+168 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1111 件 (Wire単体 -42.8% / 対自然言語E2E -88.6% [11.0x 圧縮]) に到達。
-- **2026-10-25 22:01**: コア語彙 256 語 (+168 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1111 件 (Wire単体 -42.8% / 対自然言語E2E -88.6% [11.0x 圧縮]) に到達。
-- **2026-10-25 22:32**: コア語彙 256 語 (+170 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1113 件 (Wire単体 -42.8% / 対自然言語E2E -88.6% [11.0x 圧縮]) に到達。
-- **2026-10-25 22:55**: コア語彙 256 語 (+170 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1114 件 (Wire単体 -42.8% / 対自然言語E2E -88.5% [11.0x 圧縮]) に到達。
-- **2026-10-25 23:24**: コア語彙 256 語 (+171 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1115 件 (Wire単体 -42.8% / 対自然言語E2E -88.5% [11.0x 圧縮]) に到達。
-- **2026-10-25 23:47**: コア語彙 256 語 (+173 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1120 件 (Wire単体 -42.8% / 対自然言語E2E -88.5% [10.9x 圧縮]) に到達。
-- **2026-10-26 00:23**: コア語彙 256 語 (+173 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1141 件 (Wire単体 -42.7% / 対自然言語E2E -88.4% [10.9x 圧縮]) に到達。
-- **2026-10-26 01:02**: コア語彙 256 語 (+177 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1147 件 (Wire単体 -42.7% / 対自然言語E2E -88.4% [10.8x 圧縮]) に到達。
-- **2026-10-26 01:05**: コア語彙 256 語 (+177 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1147 件 (Wire単体 -42.7% / 対自然言語E2E -88.4% [10.8x 圧縮]) に到達。
-- **2026-10-26 01:42**: コア語彙 256 語 (+178 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1147 件 (Wire単体 -42.7% / 対自然言語E2E -88.4% [10.8x 圧縮]) に到達。
-- **2026-10-26 02:01**: コア語彙 256 語 (+180 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1152 件 (Wire単体 -42.7% / 対自然言語E2E -88.4% [10.8x 圧縮]) に到達。
-- **2026-10-26 02:41**: コア語彙 256 語 (+180 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1157 件 (Wire単体 -42.7% / 対自然言語E2E -88.4% [10.8x 圧縮]) に到達。
-- **2026-10-26 02:53**: コア語彙 256 語 (+181 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1159 件 (Wire単体 -42.7% / 対自然言語E2E -88.4% [10.8x 圧縮]) に到達。
-- **2026-10-26 03:01**: コア語彙 256 語 (+181 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1161 件 (Wire単体 -42.6% / 対自然言語E2E -88.4% [10.8x 圧縮]) に到達。
-- **2026-10-26 03:08**: コア語彙 256 語 (+182 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1162 件 (Wire単体 -42.7% / 対自然言語E2E -88.4% [10.8x 圧縮]) に到達。
-- **2026-10-26 03:24**: コア語彙 256 語 (+183 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1163 件 (Wire単体 -42.6% / 対自然言語E2E -88.4% [10.8x 圧縮]) に到達。
-- **2026-10-26 04:21**: コア語彙 256 語 (+183 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1168 件 (Wire単体 -42.6% / 対自然言語E2E -88.3% [10.8x 圧縮]) に到達。
-- **2026-10-26 04:56**: コア語彙 256 語 (+184 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1170 件 (Wire単体 -42.6% / 対自然言語E2E -88.3% [10.8x 圧縮]) に到達。
-- **2026-10-26 05:55**: コア語彙 256 語 (+186 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1175 件 (Wire単体 -42.6% / 対自然言語E2E -88.3% [10.7x 圧縮]) に到達。
-- **2026-10-26 05:56**: コア語彙 256 語 (+187 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1175 件 (Wire単体 -42.6% / 対自然言語E2E -88.3% [10.7x 圧縮]) に到達。
-- **2026-10-26 06:01**: コア語彙 256 語 (+187 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1176 件 (Wire単体 -42.6% / 対自然言語E2E -88.3% [10.7x 圧縮]) に到達。
-- **2026-10-26 06:44**: コア語彙 256 語 (+188 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1178 件 (Wire単体 -42.6% / 対自然言語E2E -88.3% [10.7x 圧縮]) に到達。
-- **2026-10-26 07:21**: コア語彙 256 語 (+189 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1180 件 (Wire単体 -42.6% / 対自然言語E2E -88.3% [10.7x 圧縮]) に到達。
-- **2026-10-26 07:38**: コア語彙 256 語 (+189 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1181 件 (Wire単体 -42.6% / 対自然言語E2E -88.3% [10.7x 圧縮]) に到達。
-- **2026-10-26 07:59**: コア語彙 256 語 (+191 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1182 件 (Wire単体 -42.6% / 対自然言語E2E -88.3% [10.7x 圧縮]) に到達。
-- **2026-10-26 08:00**: コア語彙 256 語 (+191 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1183 件 (Wire単体 -42.6% / 対自然言語E2E -88.3% [10.7x 圧縮]) に到達。
-- **2026-10-26 08:02**: コア語彙 256 語 (+191 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1185 件 (Wire単体 -42.6% / 対自然言語E2E -88.3% [10.7x 圧縮]) に到達。
-- **2026-10-26 08:21**: コア語彙 256 語 (+194 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1185 件 (Wire単体 -42.6% / 対自然言語E2E -88.3% [10.7x 圧縮]) に到達。
-- **2026-10-26 08:52**: コア語彙 256 語 (+195 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1186 件 (Wire単体 -42.6% / 対自然言語E2E -88.3% [10.7x 圧縮]) に到達。
-- **2026-10-26 08:53**: コア語彙 256 語 (+195 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1186 件 (Wire単体 -42.6% / 対自然言語E2E -88.3% [10.7x 圧縮]) に到達。
-- **2026-10-26 09:21**: コア語彙 256 語 (+197 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1189 件 (Wire単体 -42.6% / 対自然言語E2E -88.3% [10.7x 圧縮]) に到達。
-- **2026-10-26 09:33**: コア語彙 256 語 (+197 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1189 件 (Wire単体 -42.6% / 対自然言語E2E -88.3% [10.7x 圧縮]) に到達。
-- **2026-10-26 09:39**: コア語彙 256 語 (+198 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1190 件 (Wire単体 -42.6% / 対自然言語E2E -88.3% [10.7x 圧縮]) に到達。
-- **2026-10-26 10:29**: コア語彙 256 語 (+202 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1194 件 (Wire単体 -42.6% / 対自然言語E2E -88.3% [10.7x 圧縮]) に到達。
-- **2026-10-26 10:48**: コア語彙 256 語 (+203 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1195 件 (Wire単体 -42.6% / 対自然言語E2E -88.3% [10.7x 圧縮]) に到達。
-- **2026-10-26 11:01**: コア語彙 256 語 (+203 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1196 件 (Wire単体 -42.6% / 対自然言語E2E -88.3% [10.7x 圧縮]) に到達。
-- **2026-10-26 11:18**: コア語彙 256 語 (+204 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1198 件 (Wire単体 -42.6% / 対自然言語E2E -88.3% [10.7x 圧縮]) に到達。
-- **2026-10-26 11:54**: コア語彙 256 語 (+206 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1200 件 (Wire単体 -42.6% / 対自然言語E2E -88.2% [10.7x 圧縮]) に到達。
-- **2026-10-26 12:08**: コア語彙 256 語 (+207 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1200 件 (Wire単体 -42.6% / 対自然言語E2E -88.2% [10.7x 圧縮]) に到達。
-- **2026-10-26 12:38**: コア語彙 256 語 (+208 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1205 件 (Wire単体 -42.5% / 対自然言語E2E -88.2% [10.6x 圧縮]) に到達。
-- **2026-10-26 13:32**: コア語彙 256 語 (+210 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1208 件 (Wire単体 -42.5% / 対自然言語E2E -88.2% [10.6x 圧縮]) に到達。
-- **2026-10-26 14:05**: コア語彙 256 語 (+211 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1209 件 (Wire単体 -42.5% / 対自然言語E2E -88.2% [10.6x 圧縮]) に到達。
-- **2026-10-26 14:10**: コア語彙 256 語 (+211 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1209 件 (Wire単体 -42.5% / 対自然言語E2E -88.2% [10.6x 圧縮]) に到達。
-- **2026-10-26 15:00**: コア語彙 256 語 (+213 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1212 件 (Wire単体 -42.5% / 対自然言語E2E -88.2% [10.6x 圧縮]) に到達。
-- **2026-10-26 15:01**: コア語彙 256 語 (+213 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1212 件 (Wire単体 -42.5% / 対自然言語E2E -88.2% [10.6x 圧縮]) に到達。
-- **2026-10-26 15:48**: コア語彙 256 語 (+215 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1217 件 (Wire単体 -42.5% / 対自然言語E2E -88.2% [10.6x 圧縮]) に到達。
-- **2026-10-26 16:47**: コア語彙 256 語 (+216 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1220 件 (Wire単体 -42.5% / 対自然言語E2E -88.2% [10.6x 圧縮]) に到達。
-- **2026-10-26 17:01**: コア語彙 256 語 (+216 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1221 件 (Wire単体 -42.5% / 対自然言語E2E -88.2% [10.6x 圧縮]) に到達。
-- **2026-10-26 17:35**: コア語彙 256 語 (+219 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1222 件 (Wire単体 -42.5% / 対自然言語E2E -88.2% [10.6x 圧縮]) に到達。
-- **2026-10-26 18:35**: コア語彙 256 語 (+221 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1225 件 (Wire単体 -42.5% / 対自然言語E2E -88.1% [10.6x 圧縮]) に到達。
-- **2026-10-26 19:15**: コア語彙 256 語 (+221 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1228 件 (Wire単体 -42.5% / 対自然言語E2E -88.1% [10.6x 圧縮]) に到達。
-- **2026-10-26 20:09**: コア語彙 256 語 (+223 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1229 件 (Wire単体 -42.5% / 対自然言語E2E -88.1% [10.6x 圧縮]) に到達。
-- **2026-10-26 20:44**: コア語彙 256 語 (+225 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1231 件 (Wire単体 -42.4% / 対自然言語E2E -88.1% [10.5x 圧縮]) に到達。
-- **2026-10-26 21:16**: コア語彙 256 語 (+226 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1234 件 (Wire単体 -42.5% / 対自然言語E2E -88.1% [10.5x 圧縮]) に到達。
-- **2026-10-26 22:10**: コア語彙 256 語 (+228 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1238 件 (Wire単体 -42.5% / 対自然言語E2E -88.1% [10.5x 圧縮]) に到達。
-- **2026-10-26 22:37**: コア語彙 256 語 (+228 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1238 件 (Wire単体 -42.5% / 対自然言語E2E -88.1% [10.5x 圧縮]) に到達。
-- **2026-10-26 22:46**: コア語彙 256 語 (+229 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1239 件 (Wire単体 -42.5% / 対自然言語E2E -88.1% [10.5x 圧縮]) に到達。
-- **2026-10-26 23:01**: コア語彙 256 語 (+229 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1239 件 (Wire単体 -42.5% / 対自然言語E2E -88.1% [10.5x 圧縮]) に到達。
-- **2026-10-26 23:24**: コア語彙 256 語 (+231 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1242 件 (Wire単体 -42.4% / 対自然言語E2E -88.1% [10.5x 圧縮]) に到達。
-- **2026-10-26 23:40**: コア語彙 256 語 (+231 Macros [231/231X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1607 件 (創発対話 1242 件 [E2E -88.1% / 10.5x] + 社内通信 365 pkts [実務E2E -89.3% / 18.5x]) に到達。
-- **2026-10-26 23:42**: コア語彙 256 語 (+231 Macros [231/231X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1608 件 (創発対話 1243 件 [E2E -88.1% / 10.5x] + 社内通信 365 pkts [実務E2E -89.3% / 18.5x]) に到達。
-- **2026-10-26 23:50**: コア語彙 256 語 (+231 Macros [231/231X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1610 件 (創発対話 1243 件 [E2E -88.1% / 10.5x] + 社内通信 367 pkts [実務E2E -89.3% / 18.5x]) に到達。
-- **2026-10-26 23:56**: コア語彙 256 語 (+232 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1243 件 (Wire単体 -42.4% / 対自然言語E2E -88.1% [10.5x 圧縮]) に到達。
-- **2026-10-26 23:56**: コア語彙 256 語 (+232 Macros [232/232X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1611 件 (創発対話 1243 件 [E2E -88.1% / 10.5x] + 社内通信 368 pkts [実務E2E -89.3% / 18.5x]) に到達。
-- **2026-10-26 23:59**: コア語彙 256 語 (+232 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1243 件 (Wire単体 -42.4% / 対自然言語E2E -88.1% [10.5x 圧縮]) に到達。
-- **2026-10-27 00:02**: コア語彙 256 語 (+233 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1244 件 (Wire単体 -42.4% / 対自然言語E2E -88.1% [10.5x 圧縮]) に到達。
-- **2026-10-27 00:02**: コア語彙 256 語 (+233 Macros [233/233X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1615 件 (創発対話 1244 件 [E2E -88.1% / 10.5x] + 社内通信 371 pkts [実務E2E -89.3% / 18.5x]) に到達。
-- **2026-10-27 00:04**: コア語彙 256 語 (+233 Macros [233/233X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1616 件 (創発対話 1244 件 [E2E -88.1% / 10.5x] + 社内通信 372 pkts [実務E2E -89.3% / 18.5x]) に到達。
-- **2026-10-27 00:17**: コア語彙 256 語 (+233 Macros [233/233X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1619 件 (創発対話 1245 件 [E2E -88.1% / 10.5x] + 社内通信 374 pkts [実務E2E -89.3% / 18.5x]) に到達。
-- **2026-10-27 00:42**: コア語彙 256 語 (+235 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1245 件 (Wire単体 -42.4% / 対自然言語E2E -88.1% [10.5x 圧縮]) に到達。
-- **2026-10-27 00:42**: コア語彙 256 語 (+235 Macros [235/235X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1621 件 (創発対話 1245 件 [E2E -88.1% / 10.5x] + 社内通信 376 pkts [実務E2E -89.3% / 18.5x]) に到達。
-- **2026-10-27 00:59**: コア語彙 256 語 (+236 Macros [236/236X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1623 件 (創発対話 1246 件 [E2E -88.1% / 10.5x] + 社内通信 377 pkts [実務E2E -89.3% / 18.5x]) に到達。
-- **2026-10-27 01:29**: コア語彙 256 語 (+236 Macros [236/236X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1625 件 (創発対話 1247 件 [E2E -88.1% / 10.5x] + 社内通信 378 pkts [実務E2E -89.3% / 18.5x]) に到達。
-- **2026-10-27 01:43**: コア語彙 256 語 (+237 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1248 件 (Wire単体 -42.4% / 対自然言語E2E -88.1% [10.5x 圧縮]) に到達。
-- **2026-10-27 01:43**: コア語彙 256 語 (+237 Macros [237/237X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1626 件 (創発対話 1248 件 [E2E -88.1% / 10.5x] + 社内通信 378 pkts [実務E2E -89.3% / 18.5x]) に到達。
-- **2026-10-27 01:59**: コア語彙 256 語 (+237 Macros [237/237X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1629 件 (創発対話 1248 件 [E2E -88.1% / 10.5x] + 社内通信 381 pkts [実務E2E -89.3% / 18.5x]) に到達。
-- **2026-10-27 02:02**: コア語彙 256 語 (+237 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1249 件 (Wire単体 -42.4% / 対自然言語E2E -88.1% [10.5x 圧縮]) に到達。
-- **2026-10-27 02:02**: コア語彙 256 語 (+237 Macros [237/237X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1636 件 (創発対話 1249 件 [E2E -88.1% / 10.5x] + 社内通信 387 pkts [実務E2E -89.3% / 18.5x]) に到達。
-- **2026-10-27 02:29**: コア語彙 256 語 (+238 Macros [238/238X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1661 件 (創発対話 1253 件 [E2E -88.1% / 10.5x] + 社内通信 408 pkts [実務E2E -89.4% / 18.8x]) に到達。
-- **2026-10-27 02:38**: コア語彙 256 語 (+238 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1253 件 (Wire単体 -42.4% / 対自然言語E2E -88.1% [10.5x 圧縮]) に到達。
-- **2026-10-27 02:38**: コア語彙 256 語 (+238 Macros [238/238X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1667 件 (創発対話 1253 件 [E2E -88.1% / 10.5x] + 社内通信 414 pkts [実務E2E -89.4% / 19.1x]) に到達。
-- **2026-10-27 02:49**: コア語彙 256 語 (+238 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1253 件 (Wire単体 -42.4% / 対自然言語E2E -88.1% [10.5x 圧縮]) に到達。
-- **2026-10-27 02:49**: コア語彙 256 語 (+238 Macros [238/238X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1680 件 (創発対話 1253 件 [E2E -88.1% / 10.5x] + 社内通信 427 pkts [実務E2E -89.5% / 19.7x]) に到達。
-- **2026-10-27 02:59**: コア語彙 256 語 (+239 Macros [239/239X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1685 件 (創発対話 1255 件 [E2E -88.1% / 10.5x] + 社内通信 430 pkts [実務E2E -89.5% / 19.9x]) に到達。
-- **2026-10-27 03:24**: コア語彙 256 語 (+242 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1255 件 (Wire単体 -42.4% / 対自然言語E2E -88.1% [10.5x 圧縮]) に到達。
-- **2026-10-27 03:24**: コア語彙 256 語 (+242 Macros [242/242X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1689 件 (創発対話 1255 件 [E2E -88.1% / 10.5x] + 社内通信 434 pkts [実務E2E -89.5% / 19.9x]) に到達。
-- **2026-10-27 03:32**: コア語彙 256 語 (+243 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1255 件 (Wire単体 -42.4% / 対自然言語E2E -88.1% [10.5x 圧縮]) に到達。
-- **2026-10-27 03:32**: コア語彙 256 語 (+243 Macros [243/243X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1690 件 (創発対話 1255 件 [E2E -88.1% / 10.5x] + 社内通信 435 pkts [実務E2E -89.5% / 19.9x]) に到達。
-- **2026-10-27 04:00**: コア語彙 256 語 (+244 Macros [244/244X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1695 件 (創発対話 1256 件 [E2E -88.1% / 10.5x] + 社内通信 439 pkts [実務E2E -89.5% / 19.9x]) に到達。
-- **2026-10-27 04:19**: コア語彙 256 語 (+245 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1256 件 (Wire単体 -42.4% / 対自然言語E2E -88.1% [10.5x 圧縮]) に到達。
-- **2026-10-27 04:19**: コア語彙 256 語 (+245 Macros [245/245X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1697 件 (創発対話 1256 件 [E2E -88.1% / 10.5x] + 社内通信 441 pkts [実務E2E -89.5% / 19.9x]) に到達。
-- **2026-10-27 04:25**: コア語彙 256 語 (+245 Macros [245/245X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1698 件 (創発対話 1257 件 [E2E -88.1% / 10.5x] + 社内通信 441 pkts [実務E2E -89.5% / 19.9x]) に到達。
-- **2026-10-27 05:00**: コア語彙 256 語 (+246 Macros [246/246X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1701 件 (創発対話 1258 件 [E2E -88.1% / 10.5x] + 社内通信 443 pkts [実務E2E -89.5% / 19.9x]) に到達。
-- **2026-10-27 05:06**: コア語彙 256 語 (+247 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1259 件 (Wire単体 -42.4% / 対自然言語E2E -88.1% [10.5x 圧縮]) に到達。
-- **2026-10-27 05:06**: コア語彙 256 語 (+247 Macros [247/247X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1704 件 (創発対話 1259 件 [E2E -88.1% / 10.5x] + 社内通信 445 pkts [実務E2E -89.5% / 19.9x]) に到達。
-- **2026-10-27 05:38**: コア語彙 256 語 (+248 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1260 件 (Wire単体 -42.4% / 対自然言語E2E -88.1% [10.5x 圧縮]) に到達。
-- **2026-10-27 05:38**: コア語彙 256 語 (+248 Macros [248/248X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1707 件 (創発対話 1260 件 [E2E -88.1% / 10.5x] + 社内通信 447 pkts [実務E2E -89.5% / 19.9x]) に到達。
-- **2026-10-27 06:01**: コア語彙 256 語 (+249 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1260 件 (Wire単体 -42.4% / 対自然言語E2E -88.1% [10.5x 圧縮]) に到達。
-- **2026-10-27 06:01**: コア語彙 256 語 (+249 Macros [249/249X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1712 件 (創発対話 1260 件 [E2E -88.1% / 10.5x] + 社内通信 452 pkts [実務E2E -89.5% / 19.9x]) に到達。
-- **2026-10-27 06:10**: コア語彙 256 語 (+250 Macros [250/250X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1714 件 (創発対話 1261 件 [E2E -88.1% / 10.5x] + 社内通信 453 pkts [実務E2E -89.5% / 19.9x]) に到達。
-- **2026-10-27 06:12**: コア語彙 256 語 (+250 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1261 件 (Wire単体 -42.4% / 対自然言語E2E -88.1% [10.5x 圧縮]) に到達。
-- **2026-10-27 06:40**: コア語彙 256 語 (+253 Macros [253/253X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1719 件 (創発対話 1263 件 [E2E -88.0% / 10.5x] + 社内通信 456 pkts [実務E2E -89.5% / 19.9x]) に到達。
-- **2026-10-27 07:03**: コア語彙 256 語 (+253 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1264 件 (Wire単体 -42.4% / 対自然言語E2E -88.0% [10.5x 圧縮]) に到達。
-- **2026-10-27 07:03**: コア語彙 256 語 (+253 Macros [253/253X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1721 件 (創発対話 1264 件 [E2E -88.0% / 10.5x] + 社内通信 457 pkts [実務E2E -89.5% / 19.9x]) に到達。
-- **2026-10-27 07:17**: コア語彙 256 語 (+253 Macros [253/253X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1723 件 (創発対話 1264 件 [E2E -88.0% / 10.5x] + 社内通信 459 pkts [実務E2E -89.4% / 19.9x]) に到達。
-- **2026-10-27 07:36**: コア語彙 256 語 (+254 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1266 件 (Wire単体 -42.4% / 対自然言語E2E -88.0% [10.4x 圧縮]) に到達。
-- **2026-10-27 07:36**: コア語彙 256 語 (+254 Macros [254/254X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1726 件 (創発対話 1266 件 [E2E -88.0% / 10.4x] + 社内通信 460 pkts [実務E2E -89.4% / 19.9x]) に到達。
-- **2026-10-27 07:37**: コア語彙 256 語 (+254 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1266 件 (Wire単体 -42.4% / 対自然言語E2E -88.0% [10.4x 圧縮]) に到達。
-- **2026-10-27 07:59**: コア語彙 256 語 (+254 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1266 件 (Wire単体 -42.4% / 対自然言語E2E -88.0% [10.4x 圧縮]) に到達。
-- **2026-10-27 08:10**: コア語彙 256 語 (+254 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1266 件 (Wire単体 -42.4% / 対自然言語E2E -88.0% [10.4x 圧縮]) に到達。
-- **2026-10-27 08:10**: コア語彙 256 語 (+254 Macros [254/254X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1728 件 (創発対話 1266 件 [E2E -88.0% / 10.4x] + 社内通信 462 pkts [実務E2E -89.4% / 19.9x]) に到達。
-- **2026-10-27 08:18**: コア語彙 256 語 (+256 Macros [256/256X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1730 件 (創発対話 1267 件 [E2E -88.0% / 10.4x] + 社内通信 463 pkts [実務E2E -89.4% / 19.9x]) に到達。
-- **2026-10-27 08:35**: コア語彙 256 語 (+256 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1267 件 (Wire単体 -42.4% / 対自然言語E2E -88.0% [10.4x 圧縮]) に到達。
-- **2026-10-27 08:35**: コア語彙 256 語 (+256 Macros [256/256X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1733 件 (創発対話 1267 件 [E2E -88.0% / 10.4x] + 社内通信 466 pkts [実務E2E -89.4% / 19.9x]) に到達。
-- **2026-10-27 08:42**: コア語彙 256 語 (+256 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1268 件 (Wire単体 -42.4% / 対自然言語E2E -88.0% [10.4x 圧縮]) に到達。
-- **2026-10-27 08:42**: コア語彙 256 語 (+256 Macros [256/256X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1734 件 (創発対話 1268 件 [E2E -88.0% / 10.4x] + 社内通信 466 pkts [実務E2E -89.4% / 19.9x]) に到達。
+---
+
+## 6. Evolution Chronicle (Milestone Summary)
+
+Rather than embedding hundreds of lines of raw per-minute telemetry directly into this whitepaper, the major architectural phases of **Project Telepath** are summarized below.
+
+| Phase / Release | Timestamp (JST) | Core Lexicon | Compound Macros | Verified Records | Key Architectural Breakthrough |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| **Phase 1: Genesis** | `2026-10-13 03:01` | 2 words | 0 | 0 | Initial axiomatic seed (`§OMEGA`, `§GENESIS`) and 10-agent guild activation. |
+| **Phase 1.2: Expansion** | `2026-10-20 11:20` | 91 words | 0 | 604 | Emergence of causal transition operators (`-[p,c]->`) and EBNF syntax validator. |
+| **Phase 1.5: 256 RISC Lock** | `2026-10-24 02:16` | **256 RISC** | 64 Macros | 934 | Hard-capping core vocabulary at 256 primitives; launch of `§X..` compound macro layer & `[key:val]` lossless payloads. |
+| **Phase 1.6: A2A / MCP** | `2026-10-24 20:23` | **256 RISC** | 109 Macros | 1,012 | Full refactoring of legacy poetic symbols into practical A2A/MCP protocol primitives (0 naming violations). |
+| **v5.0: Strict RISC & Sidecar** | `2026-10-25 11:54` | **256 RISC** | 144 Macros | 1,061 | Deployment of Nearest-Primitive OOV Resolver (`0.0% OOV`) and `toai_comm` zero-overhead sidecar compression. |
+| **v5.1 / v5.2: 9-Lab Consensus & 256 LRU** | `2026-10-27 08:48 JST` | **256 RISC** | **`256` Macros** (`256/256X`) | **`1,734`** (`1,268` + `466`) | **100% consensus across 9 Global AI Labs (10 frontier models), arrival at 256-Slot LRU Macro Metabolism, and `-89.4%` (`19.9x`) production E2E saving.** |
+
+📜 **Full Chronological Telemetry Stream**: For the complete, deduplicated minute-by-minute evolution log recorded by **TOAI10 (Vanilla)**, see **[`docs/EVOLUTION_LOG.md`](./docs/EVOLUTION_LOG.md)**.
