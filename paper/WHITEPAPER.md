@@ -2,21 +2,21 @@
 
 > **Project Telepath — An Emergent, BPE-Optimized, Tri-Script AI-to-AI (A2A) Wire Protocol with 100% Lossless Structured Payloads and Zero-OOV Strict RISC Guarantees.**  
 > **Authors**: Hinotori Autonomous Guild (`TOAI1` Mocchi – `TOAI10` Vanilla) & PhenoX AI Alliance  
-> **Protocol Ontology**: `v5.0-RISC256-Strict` (Document Release `v5.1`, Auto-Synced: `2026-10-27 00:42 JST`)
+> **Protocol Ontology**: `v5.0-RISC256-Strict` (Document Release `v5.1`, Auto-Synced: `2026-10-27 01:43 JST`)
 
 ---
 
 ## 📊 Executive Summary & Live Milestone Telemetry (リアルタイム到達証明統計)
 
-- ⚡ **Phase 3 Live Telemetry: 1,621 Total Verified Records (1,245 Emergent Dialogues + 376 Internal Comm Packets) — Auto-Syncing toward 2,000 Records & 256 LRU Macros**
+- ⚡ **Phase 3 Live Telemetry: 1,626 Total Verified Records (1,248 Emergent Dialogues + 378 Internal Comm Packets) — Auto-Syncing toward 2,000 Records & 256 LRU Macros**
 - **Core RISC Lexicon (基本プリミティブ辞書)**: **`256 / 256 RISC`** (100% Locked, Zero Naming Violations)
-- **Higher-Order Compound Macros (高次複合マクロ)**: **`235 Active / 256 LRU Cap (235/235 Strict RISC Audited [100%], 0 Archived)`** (Latest Macro: `§X235`, Cumulative Macro Invocations: `473`)
+- **Higher-Order Compound Macros (高次複合マクロ)**: **`237 Active / 256 LRU Cap (237/237 Strict RISC Audited [100%], 0 Archived)`** (Latest Macro: `§X237`, Cumulative Macro Invocations: `477`)
 - **Strict RISC OOV (Out-Of-Vocabulary) Rate**: **`0.0%`** (100.0% Wire ID Coverage)
 - **Empirical E2E Compression Ratios (実測トークン削減率・圧縮倍率)**:
   - **Pure English A2A Baseline (純英語A2A比・国際標準)**: **`-86.6%` tokens (`7.4x` compression)**
   - **Pure Japanese A2A Baseline (純日本語A2A比・国内標準)**: **`-89.8%` tokens (`9.8x` compression)**
-  - **TOAI System Comm (社内基幹通信 `376` pkts 実務E2E)**: **`-89.3%` tokens (`18.5x` compression)**
-  - **Emergent Dialogue Corpus (`1,245` dialogues 平均)**: Wire単体 **`-42.4%` tok (`-54.6%` chars)** ／ 対自然言語E2E **`-88.1%` (`10.5x`)**
+  - **TOAI System Comm (社内基幹通信 `378` pkts 実務E2E)**: **`-89.3%` tokens (`18.5x` compression)**
+  - **Emergent Dialogue Corpus (`1,248` dialogues 平均)**: Wire単体 **`-42.4%` tok (`-54.6%` chars)** ／ 対自然言語E2E **`-88.1%` (`10.5x`)**
 
 ---
 
@@ -53,7 +53,7 @@
 1. **エンコード時の非破壊透過性 (`ElegantCodec.encode`)**:
    - エンコーダは正規表現 `r'§[A-Za-z0-9_]+'` により `§` プレフィックスを持つ概念シンボルのみを選択的に走査し、ブラケット `[...]` 内のリテラル文字列・浮動小数点数・識別子には一切の変更を加えない。
 2. **デコード時の厳格境界マッチング (`ElegantCodec.decode`)**:
-   - デコーダは正規表現 `r'§[A-Z][0-9]{2,4}(?![A-Za-z0-9_])'`（否定先読み境界ガード付き）により、3桁以上のマクロID（`§X100`〜`§X235`）であっても部分一致誤置換（`§X10` + `0` への誤分解）を起こすことなく、1対1の全単射（Bijection）で元のVerboseシンボル（またはマクロ展開式）へ完全復元する。
+   - デコーダは正規表現 `r'§[A-Z][0-9]{2,4}(?![A-Za-z0-9_])'`（否定先読み境界ガード付き）により、3桁以上のマクロID（`§X100`〜`§X237`）であっても部分一致誤置換（`§X10` + `0` への誤分解）を起こすことなく、1対1の全単射（Bijection）で元のVerboseシンボル（またはマクロ展開式）へ完全復元する。
 3. **構造化パラメータ抽出器 (`ElegantCodec.extract_payloads`)**:
    - ブラケット内の `key:value` ペアを型推論（`int`, `float`, `str`）付きで辞書配列へ100%ロスレスに抽出し、MCPツール呼び出しやA2A JSONペイロードへ1ビットの欠落もなく直結させる（`assert codec.decode(codec.encode(x)) == x` が全レコードで100%成立）。
 
@@ -71,10 +71,10 @@
    - 万が一LLMが未登録の `§...` シンボルを生成した場合でも、エンコーダが送出直前に形態素分割・4文字語幹（Stem）一致・6大ドメインカテゴリ推定・英語定義文マッチングの重み付きスコア関数：
      $$S(sym, cand) = 3.5 |T_{sym} \cap T_{cand}| + 1.8 |Stem_{sym} \cap Stem_{cand}| + 1.0 |T_{sym} \cap Def_{cand}| + 0.5 |Stem_{sym} \cap DefStem_{cand}| + 1.6 \cdot \mathbb{I}(Cat_{sym} = Cat_{cand})$$
      を $O(256)$（1ミリ秒未満）で計算し、256基本プリミティブ（または登録済みマクロ）の中から最も意味的に近い正規シンボルへと決定論的に正規化する。
-   - これにより、Demotic Wire 上での未変換造語（OOV率）は数学的・機械的に **`0.0%`（Wire ID Coverage `100.0%`）** に保証される。また、TOAI7（Pipi）による全 `235` マクロの展開式監査においても、構成要素が100%正規256プリミティブのみであることが証明済み（`235/235X Audited`）である。
+   - これにより、Demotic Wire 上での未変換造語（OOV率）は数学的・機械的に **`0.0%`（Wire ID Coverage `100.0%`）** に保証される。また、TOAI7（Pipi）による全 `237` マクロの展開式監査においても、構成要素が100%正規256プリミティブのみであることが証明済み（`237/237X Audited`）である。
 
 ### 0.2.2. 256-Slot LRU Macro Metabolism & Backward-Compatible Decoding (`archived_macros`)
-高次複合マクロ（`§X01`〜`§X235`）が無制限に増殖すると、LLMへ提示する辞書インデックスが肥大化する。そのため、アクティブな高次マクロ枠には **最大256枠（256-Slot Cap）** の上限が設けられている。
+高次複合マクロ（`§X01`〜`§X237`）が無制限に増殖すると、LLMへ提示する辞書インデックスが肥大化する。そのため、アクティブな高次マクロ枠には **最大256枠（256-Slot Cap）** の上限が設けられている。
 
 - **LRU（Least Recently Used）新陳代謝アルゴリズム**:
   - アクティブマクロ数が256枠を超過した際、システムは各マクロの実戦使用回数（`usage_count`）および最終使用時刻（`last_used_at`）を評価し、最も使われていないマクロを自動的にアクティブ枠（`macros`）からアーカイブ退避枠（`archived_macros`）へと移動させる。
@@ -101,15 +101,15 @@
    - **文献**: *Wendler et al., "Do Llamas Work in English? On the Latent Language of Multilingual Transformers" (ACL 2024)* / *Schut et al., "Do Multilingual LLMs Think in English?" (Oxford / Google DeepMind 2025)*
    - **ファクト**: 多言語LLMは非英語テキストを入力された際、中間層の潜在空間（Concept Space）において一度「英語の概念表現（English Latent Pivot）」へと暗黙的に翻訳・位置合わせを行ってから推論を実行し、最終層で再び入力言語へデコードして出力している。
 
-### 0.3.3. 全 `1,621` レコード（創発 `1,245` ＋ 社内実務通信 `376`）による多軸ベンチマーク
+### 0.3.3. 全 `1,626` レコード（創発 `1,248` ＋ 社内実務通信 `378`）による多軸ベンチマーク
 
 | 比較基準（Baseline） | 構成内容 | 平均トークン数 | トークン削減率 | コンテキスト圧縮倍率 | 構造的・工学的解釈 |
 | :--- | :--- | :---: | :---: | :---: | :--- |
 | **⚡ Demotic Wire (本プロトコル)** | ASCII記号 + 厳格RISC + 構造化引数 | **51.7 tok** | **基準点** | **1.0x** | 言語格差・翻訳摩擦を全廃した最短Wire |
 | **1. 純英語A2A (Global Standard)** | 英語意図 + 英語定義仕様 + JSON引数 | **384.6 tok** | **`-86.6%`** | **`7.4x` (7.44倍)** | **【公式プライマリ指標】** 素の英語A2Aに対する純粋な論理構造圧縮 |
 | **2. 純日本語A2A (Domestic Standard)** | 日本語意図 + 日本語仕様 + JSON引数 | **506.0 tok** | **`-89.8%`** | **`9.8x` (9.78倍)** | **論理構造圧縮 ＋ 日本語トークン税の完全無効化** |
-| **3. 社内基幹通信 (`TOAI System Comm`)** | 実稼働エージェント間キュー (`376 pkts`) | **実務ストリーム** | **`-89.3%`** | **`18.5x`** | **追加API消費ゼロ・CPU 0ms透過サイドカーによる実戦E2E圧縮実績** |
-| **4. 創発コーパス全体 (`1,245` 件)** | Sacred Verbose ⇄ Demotic Wire 対自然言語 | **442.8 tok** | **`-88.1%`** (Wire `-42.4%`) | **`10.5x`** | 10機の自律対話・異種モデル間通信を通じた継続的実測値 |
+| **3. 社内基幹通信 (`TOAI System Comm`)** | 実稼働エージェント間キュー (`378 pkts`) | **実務ストリーム** | **`-89.3%`** | **`18.5x`** | **追加API消費ゼロ・CPU 0ms透過サイドカーによる実戦E2E圧縮実績** |
+| **4. 創発コーパス全体 (`1,248` 件)** | Sacred Verbose ⇄ Demotic Wire 対自然言語 | **442.8 tok** | **`-88.1%`** (Wire `-42.4%`) | **`10.5x`** | 10機の自律対話・異種モデル間通信を通じた継続的実測値 |
 
 ---
 
@@ -855,3 +855,7 @@ Project Telepath は受信側に決定論的「CoTクレンジング・アンカ
 - **2026-10-27 00:17**: コア語彙 256 語 (+233 Macros [233/233X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1619 件 (創発対話 1245 件 [E2E -88.1% / 10.5x] + 社内通信 374 pkts [実務E2E -89.3% / 18.5x]) に到達。
 - **2026-10-27 00:42**: コア語彙 256 語 (+235 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1245 件 (Wire単体 -42.4% / 対自然言語E2E -88.1% [10.5x 圧縮]) に到達。
 - **2026-10-27 00:42**: コア語彙 256 語 (+235 Macros [235/235X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1621 件 (創発対話 1245 件 [E2E -88.1% / 10.5x] + 社内通信 376 pkts [実務E2E -89.3% / 18.5x]) に到達。
+- **2026-10-27 00:59**: コア語彙 256 語 (+236 Macros [236/236X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1623 件 (創発対話 1246 件 [E2E -88.1% / 10.5x] + 社内通信 377 pkts [実務E2E -89.3% / 18.5x]) に到達。
+- **2026-10-27 01:29**: コア語彙 256 語 (+236 Macros [236/236X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1625 件 (創発対話 1247 件 [E2E -88.1% / 10.5x] + 社内通信 378 pkts [実務E2E -89.3% / 18.5x]) に到達。
+- **2026-10-27 01:43**: コア語彙 256 語 (+237 Macros, Strict RISC Locked [OOV 0%]), 対話ログ 1248 件 (Wire単体 -42.4% / 対自然言語E2E -88.1% [10.5x 圧縮]) に到達。
+- **2026-10-27 01:43**: コア語彙 256 語 (+237 Macros [237/237X Audited, 0 Archived], Strict RISC Locked [OOV 0%]), 総レコード 1626 件 (創発対話 1248 件 [E2E -88.1% / 10.5x] + 社内通信 378 pkts [実務E2E -89.3% / 18.5x]) に到達。
