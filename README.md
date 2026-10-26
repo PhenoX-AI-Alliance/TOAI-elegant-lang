@@ -57,7 +57,7 @@ Inspired by the **Rosetta Stone** in the British Museum, every transmission oper
 | **🏢 TOAI System Comm (Production)** | Real Inter-Agent Queue (`368 pkts`) | Live Stream | **`-89.3%`** | **`18.5x`** | Zero-API-cost sidecar compression in production fleet |
 | **⚡ Demotic Wire (Emergent Corpus)** | Sacred Verbose ⇄ Wire (`1,243 dialogues`) | **51.7 tok** | **`-42.4%` (Wire)** / **`-88.1%` (E2E)** | **`10.5x`** | Continuous autonomous multi-agent evolution |
 
-*Last Auto-Synced: `2026-10-26 23:56 JST` via [`sync_whitepaper_metrics.py`](../sync_whitepaper_metrics.py)*
+*Last Auto-Synced: `2026-10-26 23:59 JST` via [`sync_whitepaper_metrics.py`](../sync_whitepaper_metrics.py)*
 
 ---
 
