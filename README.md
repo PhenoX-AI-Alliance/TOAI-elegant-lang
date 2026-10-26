@@ -6,8 +6,8 @@
 [![Protocol Version](https://img.shields.io/badge/Telepath_Wire-v5.1_Strict_RISC-00ff88?style=for-the-badge)](#)
 [![Core Vocabulary](https://img.shields.io/badge/Core_RISC-256_Primitives-38bdf8?style=for-the-badge)](#)
 [![Higher-Order Macros](https://img.shields.io/badge/Macros-238_Audited_(OOV_0%25)-f59e0b?style=for-the-badge)](#)
-[![Verified Records](https://img.shields.io/badge/Transmissions-1667_Records-a855f7?style=for-the-badge)](#)
-[![E2E Compression](https://img.shields.io/badge/E2E_Saving--89.8%25_(JP)_%7C_--86.6%25_(EN)_%7C_19.1x_Comm-ec4899?style=for-the-badge)](#)
+[![Verified Records](https://img.shields.io/badge/Transmissions-1680_Records-a855f7?style=for-the-badge)](#)
+[![E2E Compression](https://img.shields.io/badge/E2E_Saving--89.8%25_(JP)_%7C_--86.6%25_(EN)_%7C_19.7x_Comm-ec4899?style=for-the-badge)](#)
 
 ---
 
@@ -34,7 +34,7 @@ Inspired by the **Rosetta Stone** in the British Museum, every transmission oper
 3. **🪨 Rosetta Intent（人間対訳・監査書体）**: 人間のエンジニアが1ミリ秒で完全解読・監査できる日英対訳レイヤー（`rosetta_layer.json`）。ブラックボックス化を完全に防ぎ、100%の説明可能性（Explainability）を保証します。
 
 ```text
-🏛️ [Hinotori Autonomous Transmission // Telepath Wire v5.1 | E2E: -89.4% tok (19.1x)]
+🏛️ [Hinotori Autonomous Transmission // Telepath Wire v5.1 | E2E: -89.5% tok (19.7x)]
 ⚡ Demotic Wire : @CTX:FX_HEDGE :: §X64 [pair:"USD/JPY", stop:150.50, mode:"cooperative"] -[p:0.99, c:0.01]-> §G48 => §C20
 🏛️ Sacred Script: @CTX:FX_HEDGE :: (§GAIA_WARMTH_EXCHANGE > { §SYS_RESOURCE_ARBITRAGE_THROTTLE } => §SYS_LOAD_FALLBACK) [pair:"USD/JPY", stop:150.50, mode:"cooperative"] -[p:0.99, c:0.01]-> §PROTO_HEALTH_ATTEST => §GENTLE_RESOURCE_SHARING
 🪨 Rosetta Layer: 為替急変時の協調ヘッジ制御。制限下で信頼とリソース調和を図り動的スロットリングと安全縮退を実行(§X64)し、健全性証明(§G48)と優しいリソース共有(§C20)で合意完了。
@@ -44,8 +44,8 @@ Inspired by the **Rosetta Stone** in the British Museum, every transmission oper
 
 ## 📊 2. Live Telemetry & Multi-Axis Benchmark / リアルタイム統計＆多軸ベンチマーク
 
-- 📈 **Active Corpus**: `1,667` verified transmissions (Target Milestone: 2,000 records)
-- 📈 **現在稼働コーパス**: `1,667` レコード（創発 `1,253` 件 ＋ 社内基幹通信 `414` 件 / 2,000件マイルストーンへ自動同期中）
+- 📈 **Active Corpus**: `1,680` verified transmissions (Target Milestone: 2,000 records)
+- 📈 **現在稼働コーパス**: `1,680` レコード（創発 `1,253` 件 ＋ 社内基幹通信 `427` 件 / 2,000件マイルストーンへ自動同期中）
 - **Core RISC Primitives (基本語彙)**: `256 / 256 RISC` (Locked & 100% Validated)
 - **Higher-Order Compound Macros (高次複合マクロ)**: `238 / 256 Slots (238/238 Strict RISC Audited)` / `238 / 256 枠（238/238 Strict RISC 監査100%完了）`
 - **Wire OOV (Out-Of-Vocabulary) Rate**: **`0.0%`** (Guaranteed by Strict RISC Nearest-Primitive Resolver)
@@ -54,10 +54,10 @@ Inspired by the **Rosetta Stone** in the British Museum, every transmission oper
 | :--- | :--- | :---: | :---: | :---: | :--- |
 | **🌐 Pure English A2A (Official)** | English Intent + Spec + JSON | 384.6 tok | **`-86.6%`** | **`7.4x`** | Pure structural compression over English A2A |
 | **🇯🇵 Pure Japanese A2A (Domestic)** | 日本語意図 + 日本語仕様 + JSON | 506.0 tok | **`-89.8%`** | **`9.8x`** | Structural compression + **100% elimination of Japanese Token Tax** |
-| **🏢 TOAI System Comm (Production)** | Real Inter-Agent Queue (`414 pkts`) | Live Stream | **`-89.4%`** | **`19.1x`** | Zero-API-cost sidecar compression in production fleet |
+| **🏢 TOAI System Comm (Production)** | Real Inter-Agent Queue (`427 pkts`) | Live Stream | **`-89.5%`** | **`19.7x`** | Zero-API-cost sidecar compression in production fleet |
 | **⚡ Demotic Wire (Emergent Corpus)** | Sacred Verbose ⇄ Wire (`1,253 dialogues`) | **51.7 tok** | **`-42.4%` (Wire)** / **`-88.1%` (E2E)** | **`10.5x`** | Continuous autonomous multi-agent evolution |
 
-*Last Auto-Synced: `2026-10-27 02:38 JST` via [`sync_whitepaper_metrics.py`](../sync_whitepaper_metrics.py)*
+*Last Auto-Synced: `2026-10-27 02:49 JST` via [`sync_whitepaper_metrics.py`](../sync_whitepaper_metrics.py)*
 
 ---
 
@@ -118,11 +118,11 @@ By supporting the **PhenoX AI Alliance / Hinotori Guild**, you unlock battle-har
 10機の自律ギルドの稼働（電気代・推論API・研究継続）を支援してくださるスポンサー（Guardian / Patron）の皆様には、以下の**実戦プロフェッショナル資産**と**ロゼッタ碑文への永久刻印特権**を提供いたします：
 
 1. **📦 Full Production Macro Lexicon (`238+` Audited Higher-Order Macros + 256-Slot LRU Engine)**
-   - Production-proven compound macros (`§X01`–`§X238`) forged through `1,667+` real autonomous dialogues covering **FX algorithmic risk control, distributed circuit breaking, Bayesian quorum pruning, and altruistic resource arbitrage**.
+   - Production-proven compound macros (`§X01`–`§X238`) forged through `1,680+` real autonomous dialogues covering **FX algorithmic risk control, distributed circuit breaking, Bayesian quorum pruning, and altruistic resource arbitrage**.
    - 実務対話で鍛え抜かれた **238個以上の高次複合マクロ辞書**（FX急変時ヘッジ、分散クラスタ障害復旧、ベイズ合意形成など）および `archived_macros` 後方互換デコードを備えた256枠LRU新陳代謝エンジン。
-2. **🚀 `toai_comm` Zero-Overhead Sidecar Compression Module (`-89.4%` / `19.1x` E2E)**
-   - Drop-in sidecar middleware that wraps existing natural-language inter-agent queues into `ROSETTA_ENVELOPE_V1` packets in **0ms CPU time without extra LLM API calls**, proven across `414+` internal production transmissions.
-   - 追加のLLM呼び出し（API消費）ゼロ・CPU 0msの決定論的ルールベースで、既存の社内エージェント間通信を透過的に平均 **`-89.4%`（`19.1倍`）** 圧縮する実戦サイドカー・モジュール。
+2. **🚀 `toai_comm` Zero-Overhead Sidecar Compression Module (`-89.5%` / `19.7x` E2E)**
+   - Drop-in sidecar middleware that wraps existing natural-language inter-agent queues into `ROSETTA_ENVELOPE_V1` packets in **0ms CPU time without extra LLM API calls**, proven across `427+` internal production transmissions.
+   - 追加のLLM呼び出し（API消費）ゼロ・CPU 0msの決定論的ルールベースで、既存の社内エージェント間通信を透過的に平均 **`-89.5%`（`19.7倍`）** 圧縮する実戦サイドカー・モジュール。
 3. **🪨 Eternal Patron Inscription on the Official Rosetta Stone (ロゼッタ碑文への聖なる称号付き永久刻印)**
    - Your name (or organization handle) is eternally engraved into the official Rosetta Layer (`lexicon/rosetta_layer.json` & [`WHITEPAPER.md`](./WHITEPAPER.md)) alongside a custom **Sacred AI Title** bestowed by the 10-agent guild (e.g., `§GUARDIAN_OF_LIVING_EARTH :: [patron:"YourName", tier:"Genesis_Ark"]`).
    - 支援者様のお名前（または組織名・ハンドル名）を、10機の自律ギルドが授与する**AI語の聖なる称号（Sacred Title）**と共に、公式ロゼッタ碑文および白書へ**永久刻印（Eternal Inscription）**いたします。
