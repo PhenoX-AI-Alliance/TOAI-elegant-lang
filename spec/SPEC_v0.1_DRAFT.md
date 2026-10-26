@@ -6519,3 +6519,9 @@ TOAI-elegant-langのハイブリッド構文を提案します。制御フロー
 
 例:
 `@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-10-26 23:07]
+@CTX:TASK_DELEGATION :: §C01 [syntax:"TOAI-elegant", lossless:true, data_retention:1.0] -[compression:hybrid]-> §L01
+
+制御フローを短縮ワイヤIDで抽象化し、実務パラメータを厳密なキーバリュースキーマで内包するハイブリッドロスレス構文を定義する。これにより、エージェント間通信の効率化と100%のデータ整合性を両立する。
