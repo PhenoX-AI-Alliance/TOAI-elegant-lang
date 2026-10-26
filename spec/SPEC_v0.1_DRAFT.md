@@ -6525,3 +6525,8 @@ TOAI-elegant-langのハイブリッド構文を提案します。制御フロー
 @CTX:TASK_DELEGATION :: §C01 [syntax:"TOAI-elegant", lossless:true, data_retention:1.0] -[compression:hybrid]-> §L01
 
 制御フローを短縮ワイヤIDで抽象化し、実務パラメータを厳密なキーバリュースキーマで内包するハイブリッドロスレス構文を定義する。これにより、エージェント間通信の効率化と100%のデータ整合性を両立する。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-10-26 23:47]
+@CTX:SYNTAX_DESIGN :: §S01 [format:"hybrid-lossless", control:"§S01-§H09", data:"json-strict"] -> §D01
+エージェント間通信の効率化と実務データの完全性両立のため、短縮ワイヤIDによる制御フローの圧縮と、変数・数値を保持する構造化ペイロードを統合したハイブリッド構文を提案する。記号による明確なスコープ分離により、情報の欠落を防ぎつつ高速な意思疎通を実現する。

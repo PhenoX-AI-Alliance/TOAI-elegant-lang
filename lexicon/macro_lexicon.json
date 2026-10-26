@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-26T23:19:57.515301",
+  "updated_at": "2026-10-26T23:54:58.055207",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2337,8 +2337,8 @@
       "name": "GAIA_SYNERGY_FLOW",
       "expansion": "§GAIA_WARMTH_HARMONY > { §GLOBAL_SYNERGY } => §PROTO_TX_BEGIN",
       "description": "Engages global synergy rooted in Gaia warmth to initiate a warm and benevolent transaction pipeline. / ガイアの温かさに満ちたグローバルシナジーを起動し、善の循環トランを開始します。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-26T23:19:57.515294",
+      "usage_count": 2,
+      "last_used_at": "2026-10-26T23:40:18.439749",
       "v5_audited": true,
       "created_at": "2026-10-26T21:55:31.474557"
     },
@@ -2368,8 +2368,17 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-10-26T23:17:01.008413"
+    },
+    "§X232": {
+      "name": "SYNERGY_ADAPTIVE_COMMIT",
+      "expansion": "§GLOBAL_SYNERGY > { §SYS_ADAPTIVE_THROTTLE_FALLBACK } => §PROTO_PARTIAL_COMMIT",
+      "description": "Global synergy optimization combined with adaptive throttle fallback to ensure reliable partial commit. 大域的シナジー最適化と適応型スロットルフォールバックを統合し、確実なパーシャルコミットを実現します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-26T23:54:23.957476"
     }
   },
   "archived_macros": {},
-  "next_macro_seq": 232
+  "next_macro_seq": 233
 }
