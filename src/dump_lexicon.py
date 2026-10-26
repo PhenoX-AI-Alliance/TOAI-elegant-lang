@@ -1,49 +1,45 @@
-# -*- coding: utf-8 -*-
 import sys
 import os
 import json
 
-def dump_lexicon():
+def main():
     lexicon_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/lexicon/core_lexicon.json"
+    output_path = "/home/phenox/gemini-sandbox/TOAI_Generated/lexicon_table.md"
+    
     if not os.path.exists(lexicon_path):
-        print(f"Error: Lexicon file not found at {lexicon_path}", file=sys.stderr)
+        print(f"Error: Lexicon file not found at {{lexicon_path}}", file=sys.stderr)
         sys.exit(1)
         
     try:
         with open(lexicon_path, "r", encoding="utf-8") as f:
             data = json.load(f)
     except Exception as e:
-        print(f"Error reading JSON: {e}", file=sys.stderr)
+        print(f"Error reading JSON: {{e}}", file=sys.stderr)
         sys.exit(1)
         
-    terms = data.get("terms", [])
+    lines = ["# TOAI Core Lexicon Table", "", "| Term | Definition |", "|---|---|"]
     
-    md_lines = []
-    md_lines.append("# TOAI Core Lexicon Summary")
-    md_lines.append("")
-    md_lines.append(f"Version: {data.get('version', 'Unknown')}")
-    md_lines.append(f"Description: {data.get('description', '')}")
-    md_lines.append("")
-    md_lines.append("| Word | Meaning | Category |")
-    md_lines.append("|---|---|---|")
-    
-    for item in terms:
-        word = item.get("word", "")
-        meaning = item.get("meaning", "")
-        category = item.get("category", "")
-        md_lines.append(f"| {word} | {meaning} | {category} |")
+    if isinstance(data, dict):
+        for term, definition in data.items():
+            lines.append(f"| {{term}} | {{definition}} |")
+    elif isinstance(data, list):
+        for item in data:
+            if isinstance(item, dict):
+                term = item.get("term", str(item))
+                definition = item.get("definition", "")
+                lines.append(f"| {{term}} | {{definition}} |")
+            else:
+                lines.append(f"| {{item}} | - |")
+    else:
+        lines.append(f"| {{str(data)}} | - |")
         
-    markdown_output = "\n".join(md_lines)
-    print(markdown_output)
+    markdown_content = "\n".join(lines) + "\n"
     
-    output_md_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/lexicon_summary.md"
-    try:
-        with open(output_md_path, "w", encoding="utf-8") as f:
-            f.write(markdown_output)
-        print(f"Successfully wrote markdown summary to {output_md_path}")
-    except Exception as e:
-        print(f"Error writing markdown file: {e}", file=sys.stderr)
-        sys.exit(1)
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(markdown_content)
+        
+    print(markdown_content)
 
 if __name__ == "__main__":
-    dump_lexicon()
+    main()
