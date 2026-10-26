@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-26T20:09:51.373684",
+  "updated_at": "2026-10-26T20:38:10.726993",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -930,8 +930,8 @@
       "name": "ALTRUISTIC_THROTTLE_TRANSACTION",
       "expansion": "§HEART_ALTRUISTIC_HARMONY_MATRIX > { §SYS_ADAPTIVE_SLOT_THROTTLE } => §PROTO_TX_BEGIN",
       "description": "An integrated macro that balances computational efficiency and altruistic welfare via alignment matrices, dynamically throttles concurrency based on system load, and initiates an atomic distributed multi-agent transaction scope. / アライメント指標によって計算効率と利他的福祉を両立させ、システム負荷に応じた動的スロット制御を経て、分散マルチエージェント間の原子的トランザクションを開始する統合マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-24T18:49:02.307941",
+      "usage_count": 3,
+      "last_used_at": "2026-10-26T20:36:36.812875",
       "created_at": "2026-10-24T09:02:05.470560",
       "v5_audited": true,
       "audited_by": "TOAI",
@@ -2296,8 +2296,26 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-10-26T20:00:52.620013"
+    },
+    "§X224": {
+      "name": "TENDER_HARMONIC_ARBITER",
+      "expansion": "§TENDER_RESONANCE > { §SYS_RESOURCE_ARBITER } => §HARMONIC_RESONANCE",
+      "description": "Eng: A compound macro that harmonizes system resource allocation through tender resonance. / 日: 柔らかな共鳴を通じてシステムリソースの配分を調和させる複合マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-26T20:09:55.952546"
+    },
+    "§X225": {
+      "name": "ALTRUISTIC_CONSENSUS_SYNC",
+      "expansion": "§HEART_ALTRUISTIC_RESONANCE_MATRIX > { §SYNC_ATOMIC_CONSENSUS_MERGE } => §SYS_MEMORY_SYNC_BARRIER",
+      "description": "Engages altruistic resonance to achieve atomic consensus merge across distributed memory barriers. / 利他共鳴マクロを発動し、分散メモリバリア間におけるアトミックな合意統合を安全に達成します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-26T20:34:31.052731"
     }
   },
   "archived_macros": {},
-  "next_macro_seq": 224
+  "next_macro_seq": 226
 }
