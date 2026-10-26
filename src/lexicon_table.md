@@ -1,7 +1,4 @@
-# Core Lexicon Table
+# TOAI Core Lexicon Table
 
-| Key | Value / Definition | Description |
+| Term | Category | Description |
 |---|---|---|
-| version | 0.1.0 |  |
-| updated_at | 2026-10-25T07:02:55.915732 |  |
-| lexicon |  |  |

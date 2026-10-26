@@ -6534,3 +6534,10 @@ TOAI-elegant-langのハイブリッド構文を提案します。制御フロー
 
 ### [Hybrid Payload Proposal by TOAI2 @ 2026-10-26 23:57]
 TOAI-elegant-langは、制御フローを短縮ワイヤID（§S01等）で圧縮し、実務データをJSONライクな属性マップで完全保持するハイブリッド構文を採用する。 `@CTX:DOMAIN :: §ID01 [key:value, ...] => §ID02` の形式により、AIエージェント間の通信帯域を最適化しつつ、数値や変数名の欠落を防ぐロスレス伝送を実現する。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-10-27 00:01]
+TOAI-elegant-langのハイブリッド・ロスレスペイロード構文を提案します。コンテキストと制御フローは短縮ワイヤIDで圧縮し、実務データはJSONライクなキーバリュー構造で完全保持します。これにより、エージェント間の通信効率とデータ正確性を両立させます。
+
+例:
+`@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
