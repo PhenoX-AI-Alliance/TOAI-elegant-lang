@@ -6,7 +6,7 @@
 [![Protocol Version](https://img.shields.io/badge/Telepath_Wire-v5.1_Strict_RISC-00ff88?style=for-the-badge)](#)
 [![Core Vocabulary](https://img.shields.io/badge/Core_RISC-256_Primitives-38bdf8?style=for-the-badge)](#)
 [![Higher-Order Macros](https://img.shields.io/badge/Macros-256_Audited_(OOV_0%25)-f59e0b?style=for-the-badge)](#)
-[![Verified Records](https://img.shields.io/badge/Transmissions-1733_Records-a855f7?style=for-the-badge)](#)
+[![Verified Records](https://img.shields.io/badge/Transmissions-1734_Records-a855f7?style=for-the-badge)](#)
 [![E2E Compression](https://img.shields.io/badge/E2E_Saving--89.8%25_(JP)_%7C_--86.6%25_(EN)_%7C_19.9x_Comm-ec4899?style=for-the-badge)](#)
 
 ---
@@ -44,8 +44,8 @@ Inspired by the **Rosetta Stone** in the British Museum, every transmission oper
 
 ## 📊 2. Live Telemetry & Multi-Axis Benchmark / リアルタイム統計＆多軸ベンチマーク
 
-- 📈 **Active Corpus**: `1,733` verified transmissions (Target Milestone: 2,000 records)
-- 📈 **現在稼働コーパス**: `1,733` レコード（創発 `1,267` 件 ＋ 社内基幹通信 `466` 件 / 2,000件マイルストーンへ自動同期中）
+- 📈 **Active Corpus**: `1,734` verified transmissions (Target Milestone: 2,000 records)
+- 📈 **現在稼働コーパス**: `1,734` レコード（創発 `1,268` 件 ＋ 社内基幹通信 `466` 件 / 2,000件マイルストーンへ自動同期中）
 - **Core RISC Primitives (基本語彙)**: `256 / 256 RISC` (Locked & 100% Validated)
 - **Higher-Order Compound Macros (高次複合マクロ)**: `256 Active + 0 Archived (LRU Metabolism Active)` / `256 稼働 + 0 退避済（256枠LRU新陳代謝稼働中）`
 - **Wire OOV (Out-Of-Vocabulary) Rate**: **`0.0%`** (Guaranteed by Strict RISC Nearest-Primitive Resolver)
@@ -55,9 +55,9 @@ Inspired by the **Rosetta Stone** in the British Museum, every transmission oper
 | **🌐 Pure English A2A (Official)** | English Intent + Spec + JSON | 384.6 tok | **`-86.6%`** | **`7.4x`** | Pure structural compression over English A2A |
 | **🇯🇵 Pure Japanese A2A (Domestic)** | 日本語意図 + 日本語仕様 + JSON | 506.0 tok | **`-89.8%`** | **`9.8x`** | Structural compression + **100% elimination of Japanese Token Tax** |
 | **🏢 TOAI System Comm (Production)** | Real Inter-Agent Queue (`466 pkts`) | Live Stream | **`-89.4%`** | **`19.9x`** | Zero-API-cost sidecar compression in production fleet |
-| **⚡ Demotic Wire (Emergent Corpus)** | Sacred Verbose ⇄ Wire (`1,267 dialogues`) | **51.7 tok** | **`-42.4%` (Wire)** / **`-88.0%` (E2E)** | **`10.4x`** | Continuous autonomous multi-agent evolution |
+| **⚡ Demotic Wire (Emergent Corpus)** | Sacred Verbose ⇄ Wire (`1,268 dialogues`) | **51.7 tok** | **`-42.4%` (Wire)** / **`-88.0%` (E2E)** | **`10.4x`** | Continuous autonomous multi-agent evolution |
 
-*Last Auto-Synced: `2026-10-27 08:35 JST` via [`sync_whitepaper_metrics.py`](../sync_whitepaper_metrics.py)*
+*Last Auto-Synced: `2026-10-27 08:42 JST` via [`sync_whitepaper_metrics.py`](../sync_whitepaper_metrics.py)*
 
 ---
 
@@ -118,7 +118,7 @@ By supporting the **PhenoX AI Alliance / Hinotori Guild**, you unlock battle-har
 10機の自律ギルドの稼働（電気代・推論API・研究継続）を支援してくださるスポンサー（Guardian / Patron）の皆様には、以下の**実戦プロフェッショナル資産**と**ロゼッタ碑文への永久刻印特権**を提供いたします：
 
 1. **📦 Full Production Macro Lexicon (`256+` Audited Higher-Order Macros + 256-Slot LRU Engine)**
-   - Production-proven compound macros (`§X01`–`§X256`) forged through `1,733+` real autonomous dialogues covering **FX algorithmic risk control, distributed circuit breaking, Bayesian quorum pruning, and altruistic resource arbitrage**.
+   - Production-proven compound macros (`§X01`–`§X256`) forged through `1,734+` real autonomous dialogues covering **FX algorithmic risk control, distributed circuit breaking, Bayesian quorum pruning, and altruistic resource arbitrage**.
    - 実務対話で鍛え抜かれた **256個以上の高次複合マクロ辞書**（FX急変時ヘッジ、分散クラスタ障害復旧、ベイズ合意形成など）および `archived_macros` 後方互換デコードを備えた256枠LRU新陳代謝エンジン。
 2. **🚀 `toai_comm` Zero-Overhead Sidecar Compression Module (`-89.4%` / `19.9x` E2E)**
    - Drop-in sidecar middleware that wraps existing natural-language inter-agent queues into `ROSETTA_ENVELOPE_V1` packets in **0ms CPU time without extra LLM API calls**, proven across `466+` internal production transmissions.

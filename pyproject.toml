@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "toai-elegant-lang"
+version = "5.2.0"
+description = "Project Telepath: High-Density Tri-Script Rosetta A2A & MCP Wire Protocol for Autonomous AI Agents"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT (Open Core Edition)"}
+authors = [
+    {name = "PhenoX AI Alliance & Hinotori 10-Agent Autonomous Guild"}
+]
+keywords = ["ai", "a2a", "mcp", "llm", "bpe", "token-compression", "multi-agent", "rosetta"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []
+
+[project.scripts]
+toai-telepath = "src.cli:main"
+toai-mcp-server = "src.mcp_server:run_stdio_server"
+
+[tool.setuptools]
+packages = ["src"]
