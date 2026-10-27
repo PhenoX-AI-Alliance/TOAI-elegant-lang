@@ -1,48 +1,59 @@
 import sys
 import os
+import traceback
 import subprocess
 import json
 import datetime
-
-def get_git_log():
-    try:
-        res = subprocess.run(
-            ['git', 'log', '-n', '10', '--oneline'],
-            capture_output=True,
-            text=True,
-            check=True
-        )
-        return res.stdout.strip().split('\n')
-    except Exception as e:
-        return [f"Git log unavailable: {e}"]
-
-def scan_whitepaper(workspace_dir):
-    whitepaper_path = os.path.join(workspace_dir, 'WHITE_PAPER.md')
-    if os.path.exists(whitepaper_path):
-        try:
-            with open(whitepaper_path, 'r', encoding='utf-8') as f:
-                lines = f.readlines()
-            return "".join(lines[:20])
-        except Exception as e:
-            return f"Error reading whitepaper: {e}"
-    return "Whitepaper not found."
+import glob
 
 def main():
     workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    logs = get_git_log()
-    wp_summary = scan_whitepaper(workspace_dir)
+    repo_path = os.path.join(workspace_dir, 'TOAI-elegant-lang')
     
-    release_data = {
+    git_log = []
+    try:
+        if os.path.exists(os.path.join(repo_path, '.git')):
+            result = subprocess.run(
+                ['git', '-C', repo_path, 'log', '-n', '10', '--oneline'],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True,
+                check=True
+            )
+            git_log = result.stdout.strip().split('\n')
+        else:
+            git_log = ["No git repository initialized or found at " + repo_path]
+    except Exception as e:
+        git_log = [f"Error fetching git log: {str(e)}"]
+
+    whitepaper_docs = []
+    try:
+        search_pattern = os.path.join(workspace_dir, '**', '*.md')
+        for file_path in glob.glob(search_pattern, recursive=True):
+            if 'whitepaper' in file_path.lower() or 'constitution' in file_path.lower() or 'readme' in file_path.lower():
+                whitepaper_docs.append(file_path)
+    except Exception as e:
+        whitepaper_docs = [f"Error scanning documents: {str(e)}"]
+
+    summary_data = {
         "timestamp": datetime.datetime.now().isoformat(),
-        "git_recent_commits": logs,
-        "whitepaper_excerpt": wp_summary
+        "version": "1.0.0",
+        "git_recent_commits": git_log,
+        "related_whitepapers": whitepaper_docs,
+        "ecosystem": "Gaia Ecosystem - Earth of Life"
     }
+
+    output_file = os.path.join(workspace_dir, 'TOAI-elegant-lang', 'release_summary.json')
+    os.makedirs(os.path.dirname(output_file), exist_ok=True)
     
-    output_path = os.path.join(workspace_dir, 'TOAI_Generated', 'release_summary.json')
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(release_data, f, ensure_ascii=False, indent=2)
-    
-    print(f"Release summary successfully generated at {output_path}")
+    with open(output_file, 'w', encoding='utf-8') as f:
+        json.dump(summary_data, f, ensure_ascii=False, indent=2)
+        
+    print(f"Release summary successfully generated at: {output_file}")
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except Exception as e:
+        traceback.print_exc()
+        sys.exit(1)
