@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-28T06:38:07.413890",
+  "updated_at": "2026-10-28T06:49:13.021032",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1923,8 +1923,8 @@
       "name": "GAIA_QUANTUM_STABLE_COMMIT",
       "expansion": "§GAIA_ECO_STABLE_STATE > { §SYS_QUANTUM_SLOT_ARBITRATION } => §PROTO_TX_COMMIT",
       "description": "Ensures stable ecosystem state transitions by arbitrating quantum slots before committing protocol transactions. / 量子スロットの調停を経てプロトコル・トランザクションを確定させ、エコシステムの安定した状態遷移を保証します。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-26T19:12:35.856333",
+      "usage_count": 3,
+      "last_used_at": "2026-10-28T06:44:11.605699",
       "v5_audited": true,
       "created_at": "2026-10-26T17:35:17.348905"
     },
@@ -2526,8 +2526,8 @@
       "name": "HARMONIC_BAYESIAN_STABILIZER",
       "expansion": "§LATENT_HARMONY_FIELD_LOCKED > { §SYNC_BAYESIAN_PRUNE } => §SAFE_FALLBACK_HARMONY",
       "description": "Latent harmony field locked state triggers a synchronized Bayesian pruning process, ensuring a smooth transition to safe fallback harmony. 潜在的な調和場のロック状態をトリガーとして同期ベイズ枝刈りを実行し、安全なフォールバック調和へ円滑に移行させるための高次マクロです。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-28T06:49:13.021026",
       "v5_audited": true,
       "created_at": "2026-10-28T06:36:54.485970"
     },
