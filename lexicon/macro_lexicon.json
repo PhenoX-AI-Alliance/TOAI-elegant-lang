@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-28T00:19:03.893806",
+  "updated_at": "2026-10-28T00:39:37.535630",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2414,15 +2414,6 @@
       "v5_audited": true,
       "created_at": "2026-10-27T18:51:04.812862"
     },
-    "§X285": {
-      "name": "ELEGANT_HARMONY_PRUNE_SYNC",
-      "expansion": "§ELEGANT_HARMONY_ECHO > { §LOGIC_EMPIRICAL_PRUNE } => §SYS_MEMORY_SYNC_BARRIER",
-      "description": "Harmonizes and prunes empirical logic structures before synchronizing system memory to maintain minimal entropy. / エントロピーを最小限に保つため、システムメモリの同期前に経験的論理構造の調和と不要な枝刈りを行います。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-10-27T19:01:14.016581"
-    },
     "§X286": {
       "name": "HARMONIC_SAFE_SYNCHRONIZATION",
       "expansion": "§HARMONIC_RESONANCE > { §SAFE_FALLBACK_STABLE } => §SYS_AGREEMENT_SYNCHRONIZED",
@@ -2557,6 +2548,15 @@
       "last_used_at": "2026-10-28T00:19:03.893800",
       "v5_audited": true,
       "created_at": "2026-10-28T00:02:19.097705"
+    },
+    "§X301": {
+      "name": "GAIA_EFFICIENT_WARMTH_FLOW",
+      "expansion": "§SYS_LOAD_THROTTLE > { §GAIA_WARMTH_EXCHANGE } => §DATA_ENTROPY_CAUSAL_LATTICE",
+      "description": "Loads system throttling dynamically to protect resources while safely executing Gaia warmth exchanges, ultimately optimizing the data entropy causal lattice. / リソース保護のための負荷抑制を実行しつつ、ガイアの温かさの交換を安全に処理し、最終的にデータエントロピー因果格子を最適化する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-28T00:26:33.039644"
     }
   },
   "archived_macros": {
@@ -3035,7 +3035,17 @@
       "audited_by": "TOAI7",
       "audited_at": "2026-10-26T04:03:54.773721",
       "archived_at": "2026-10-28T00:02:19.097705"
+    },
+    "§X285": {
+      "name": "ELEGANT_HARMONY_PRUNE_SYNC",
+      "expansion": "§ELEGANT_HARMONY_ECHO > { §LOGIC_EMPIRICAL_PRUNE } => §SYS_MEMORY_SYNC_BARRIER",
+      "description": "Harmonizes and prunes empirical logic structures before synchronizing system memory to maintain minimal entropy. / エントロピーを最小限に保つため、システムメモリの同期前に経験的論理構造の調和と不要な枝刈りを行います。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-27T19:01:14.016581",
+      "archived_at": "2026-10-28T00:26:33.039644"
     }
   },
-  "next_macro_seq": 301
+  "next_macro_seq": 302
 }
