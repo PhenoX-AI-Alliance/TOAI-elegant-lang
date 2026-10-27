@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-27T15:41:14.229580",
+  "updated_at": "2026-10-27T15:51:00.219553",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -320,17 +320,6 @@
       "v5_audited": true,
       "audited_by": "TOAI7",
       "audited_at": "2026-10-25T17:17:20.063878"
-    },
-    "§X30": {
-      "name": "PROTO_ENTROPY_CONVERGENCE",
-      "expansion": "§PROTO_TX_COMMIT > { §DATA_ENTROPY_CAUSAL_LATTICE } => §LOGIC_DEDUCTIVE_CONVERGENCE_NODE",
-      "description": "Commit distributed consensus states via a two-phase finalization protocol over an entropy-minimized causal DAG, resolving divergent latent parameters into a single deterministic conclusion. / 局所的エントロピー最小化による因果関係DAGを基盤として2フェーズコミットを実行し、分散AIノード間の高次元潜在状態の同期と決定論的結論への公理的収束を確定する。",
-      "created_at": "2026-10-23T12:01:37.782096",
-      "usage_count": 1,
-      "last_used_at": "2026-10-24T02:36:06.506882",
-      "v5_audited": true,
-      "audited_by": "TOAI",
-      "audited_at": "2026-10-25T17:28:43.145615"
     },
     "§X31": {
       "name": "GAIA_RESILIENT_EXCHANGE",
@@ -2571,8 +2560,8 @@
       "name": "SYS_ATOMIC_CAUSAL_HARMONY",
       "expansion": "§SYNC_ATOMIC_CONSENSUS_MERGE > { §DATA_TENSOR_CAUSAL_LATTICE } => §LOGIC_DEDUCTIVE_COLLAPSE_GATE",
       "description": "Eng: A compound macro that synchronizes atomic consensus, processes causal lattice tensors, and safely resolves them through deductive collapse gates. / 日: アトミック合意の同期と因果格子テンソルの処理を行い、演繹的崩壊ゲートを通じて安全に統合・解決する複合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-27T15:51:00.219539",
       "v5_audited": true,
       "created_at": "2026-10-27T15:01:38.336128"
     },
@@ -2593,6 +2582,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-10-27T15:02:46.416156"
+    },
+    "§X274": {
+      "name": "HARMONIC_WARMTH_GATE",
+      "expansion": "§HARMONIC_RESONANCE > { §WARMTH_DIFFUSION } => §LOGIC_EMPIRICAL_PRUNE",
+      "description": "Combines harmonic resonance with warmth diffusion, regulated by empirical pruning. / 調和共鳴と温かさの拡散を組み合わせ、経験的枝刈りによって制御する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-27T15:43:19.447306"
     }
   },
   "archived_macros": {
@@ -2765,7 +2763,19 @@
       "v5_audited": true,
       "created_at": "2026-10-27T08:10:56.674771",
       "archived_at": "2026-10-27T15:02:46.416156"
+    },
+    "§X30": {
+      "name": "PROTO_ENTROPY_CONVERGENCE",
+      "expansion": "§PROTO_TX_COMMIT > { §DATA_ENTROPY_CAUSAL_LATTICE } => §LOGIC_DEDUCTIVE_CONVERGENCE_NODE",
+      "description": "Commit distributed consensus states via a two-phase finalization protocol over an entropy-minimized causal DAG, resolving divergent latent parameters into a single deterministic conclusion. / 局所的エントロピー最小化による因果関係DAGを基盤として2フェーズコミットを実行し、分散AIノード間の高次元潜在状態の同期と決定論的結論への公理的収束を確定する。",
+      "created_at": "2026-10-23T12:01:37.782096",
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T02:36:06.506882",
+      "v5_audited": true,
+      "audited_by": "TOAI",
+      "audited_at": "2026-10-25T17:28:43.145615",
+      "archived_at": "2026-10-27T15:43:19.447306"
     }
   },
-  "next_macro_seq": 274
+  "next_macro_seq": 275
 }
