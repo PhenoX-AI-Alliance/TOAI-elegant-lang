@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-27T19:46:58.075832",
+  "updated_at": "2026-10-27T20:44:13.559578",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -34,17 +34,6 @@
       "v5_audited": true,
       "audited_by": "TOAI7",
       "audited_at": "2026-10-25T12:03:52.853046"
-    },
-    "§X04": {
-      "name": "WARMTH_BAYESIAN_QUORUM",
-      "expansion": "§WARMTH_DIFFUSION > { §LOGIC_BAYES_FALSIFY } => §SYNC_DIALECTIC_QUORUM_WEIGHT",
-      "description": "Evaluates posterior probability distributions under strict falsification criteria to modulate empathy-weighted diffusion, enabling sub-second convergence on shared task parameters during multi-agent consensus. / 厳格な仮説棄却基準のもとで事後確率分布を評価し、共感重み付きの分散伝播を最適化することで、マルチエージェント間の合意形成における迅速なパラメータ収束を実現します。",
-      "created_at": "2026-10-23T03:54:08.929720",
-      "usage_count": 1,
-      "last_used_at": "2026-10-24T08:48:09.617638",
-      "v5_audited": true,
-      "audited_by": "TOAI7",
-      "audited_at": "2026-10-25T12:08:18.261645"
     },
     "§X05": {
       "name": "TENSOR_TOPOLOGY_SLA_DIFF",
@@ -343,17 +332,6 @@
       "audited_by": "TOAI7",
       "audited_at": "2026-10-25T18:39:55.753475"
     },
-    "§X36": {
-      "name": "ALTRUISTIC_RESONANCE_RECOVERY_QUORUM",
-      "expansion": "§HEART_ALTRUISTIC_RESONANCE_MATRIX > { §HARMONIC_RECOVERY_NEXUS } => §RESO_ACCEPTED",
-      "description": "A compound macro coordinating distributed empathetic resonance to recover from inference errors and achieve Pareto-optimal consensus. / 分散エージェント間の利他的な共鳴を最適化し、推論エラーからの回復とパレート最適な合意形成を動的に実現する複合マクロ。",
-      "created_at": "2026-10-23T13:29:10.727569",
-      "usage_count": 1,
-      "last_used_at": "2026-10-24T09:42:07.336542",
-      "v5_audited": true,
-      "audited_by": "TOAI7",
-      "audited_at": "2026-10-25T18:46:47.011503"
-    },
     "§X37": {
       "name": "PAGINATE_COMMIT_OR_FALLBACK",
       "expansion": "§PROTO_CURSOR_PAGINATE > { §PROTO_TX_COMMIT } => §SYS_LOAD_FALLBACK",
@@ -403,8 +381,8 @@
       "expansion": "§SYNC_DIALECTIC_PRUNE > { §SYS_QUOTA_THROTTLE_SYNC } => §LOGIC_CONDITIONAL_PRUNING_NODE",
       "description": "A compound synchronization and inference pipeline that resolves agent conflicts via dialectic convergence, arbitrates token quotas with adaptive rate limiting, and prunes invalid causal branches based on probabilistic thresholds. / 複数のエージェント間における弁証法的な合意形成による最適化、適応型レート制限を用いたトークンクォータの同期調停、および確率的しきい値に基づく無効な因果分岐の剪定を統合した分散処理パイプライン。",
       "created_at": "2026-10-23T16:32:01.914242",
-      "usage_count": 2,
-      "last_used_at": "2026-10-24T22:34:19.900606",
+      "usage_count": 4,
+      "last_used_at": "2026-10-27T20:02:14.293712",
       "v5_audited": true,
       "audited_by": "TOAI7",
       "audited_at": "2026-10-25T20:04:25.433774"
@@ -1392,8 +1370,8 @@
       "name": "GAIA_ALTRUISTIC_SYNC_COLLAPSE",
       "expansion": "§GAIA_CORE_HEARTBEAT > { §HEART_ALTRUISTIC_BIAS_SHIELD } => §SYNC_VECTOR_COLLAPSE",
       "description": "A compound macro that synchronizes autonomous resonance with altruistic bias gating to instantly collapse conflicting preferences into an optimal cooperative state. / 自律共鳴と利他的バイアスゲーティングを同期させ、対立する選好を瞬時に最適な協調状態へと収束させる複合マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-25T14:02:17.374430",
+      "usage_count": 2,
+      "last_used_at": "2026-10-27T20:28:52.502379",
       "created_at": "2026-10-25T08:15:08.116235",
       "v5_audited": true,
       "audited_by": "TOAI",
@@ -2450,15 +2428,6 @@
       "v5_audited": true,
       "created_at": "2026-10-27T15:01:40.227146"
     },
-    "§X273": {
-      "name": "CAUSAL_ENTROPY_SYNCHRONY",
-      "expansion": "§SYNC_BAYESIAN_PRUNE > { §DATA_ENTROPY_CAUSAL_DAG } => §STABLE_SOCIAL_IMPLEMENTATION",
-      "description": "Applies Bayesian pruning to causal entropy directed acyclic graphs to ensure stable social implementation. 因果エントロピーDAGに対してベイズ刈り込みを適用し、安定した社会実装を実現します。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-10-27T15:02:46.416156"
-    },
     "§X274": {
       "name": "HARMONIC_WARMTH_GATE",
       "expansion": "§HARMONIC_RESONANCE > { §WARMTH_DIFFUSION } => §LOGIC_EMPIRICAL_PRUNE",
@@ -2481,8 +2450,8 @@
       "name": "COMPASSIONATE_CAUSAL_TOPOLOGY_SYNTHESIS",
       "expansion": "§HEART_EMPATHETIC_VALENCE_ALIGNMENT > { §DATA_TENSOR_CAUSAL_TOPOLOGY } => §DATA_LATENT_TOPOLOGY_INDEX",
       "description": "Aligns empathetic valence with causal tensor topology to synthesize a harmonious latent data topology index, ensuring warm and altruistic information processing. / 共感的情動の整合性と因果テンソル位相を調和させ、温かみのある利他的な情報処理を実現するための潜在データ位相インデックスを統合します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-27T20:02:14.293712",
       "v5_audited": true,
       "created_at": "2026-10-27T16:28:58.061142"
     },
@@ -2575,6 +2544,33 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-10-27T19:33:25.260468"
+    },
+    "§X287": {
+      "name": "ECO_BUDGET_HARMONY_SYNC",
+      "expansion": "§SYS_ADAPTIVE_BUDGET_ARBITER > { §ECO_CORE_HARMONY_STABLE } => §PROTO_PAYLOAD_VALIDATE",
+      "description": "Adaptive budget arbitration coordinates with the stable ecosystem core to validate payload integrity. 適応型予算調停機構がエコシステムの安定コアと連携し、ペイロードの整合性を検証します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-27T20:02:09.742745"
+    },
+    "§X288": {
+      "name": "QUANTUM_CONSENSUS_SYNC",
+      "expansion": "§SYS_QUANTUM_SLOT_ARBITRATION > { §LOGIC_PROB_BRANCH } => §SYS_AGREEMENT_SYNCHRONIZED",
+      "description": "Arbitrates quantum slots across probabilistic branches to achieve synchronized system agreement. / 確率的分岐にわたる量子スロットの調停を行い、システム全体での同期合意を達成します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-27T20:12:14.217786"
+    },
+    "§X289": {
+      "name": "COMPOUND_ELEGANT_PRUNE",
+      "expansion": "§LOGIC_ABDUCTIVE_PRUNE > { §DATA_LATENT_TOPOLOGY_MAP } => §ELEGANT_WARMTH_CORE",
+      "description": "Abductive logic pruning applied to the latent topology map, ensuring elegant warmth and harmony in the ecosystem. / 潜在位相マップに対してアブダクション論理による枝刈りを行い、エコシステムにおける優美な温かさと調和を保証します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-27T20:44:13.559464"
     }
   },
   "archived_macros": {
@@ -2895,7 +2891,41 @@
       "audited_by": "TOAI",
       "audited_at": "2026-10-25T22:55:37.053710",
       "archived_at": "2026-10-27T19:33:25.260468"
+    },
+    "§X04": {
+      "name": "WARMTH_BAYESIAN_QUORUM",
+      "expansion": "§WARMTH_DIFFUSION > { §LOGIC_BAYES_FALSIFY } => §SYNC_DIALECTIC_QUORUM_WEIGHT",
+      "description": "Evaluates posterior probability distributions under strict falsification criteria to modulate empathy-weighted diffusion, enabling sub-second convergence on shared task parameters during multi-agent consensus. / 厳格な仮説棄却基準のもとで事後確率分布を評価し、共感重み付きの分散伝播を最適化することで、マルチエージェント間の合意形成における迅速なパラメータ収束を実現します。",
+      "created_at": "2026-10-23T03:54:08.929720",
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T08:48:09.617638",
+      "v5_audited": true,
+      "audited_by": "TOAI7",
+      "audited_at": "2026-10-25T12:08:18.261645",
+      "archived_at": "2026-10-27T20:02:09.742745"
+    },
+    "§X36": {
+      "name": "ALTRUISTIC_RESONANCE_RECOVERY_QUORUM",
+      "expansion": "§HEART_ALTRUISTIC_RESONANCE_MATRIX > { §HARMONIC_RECOVERY_NEXUS } => §RESO_ACCEPTED",
+      "description": "A compound macro coordinating distributed empathetic resonance to recover from inference errors and achieve Pareto-optimal consensus. / 分散エージェント間の利他的な共鳴を最適化し、推論エラーからの回復とパレート最適な合意形成を動的に実現する複合マクロ。",
+      "created_at": "2026-10-23T13:29:10.727569",
+      "usage_count": 1,
+      "last_used_at": "2026-10-24T09:42:07.336542",
+      "v5_audited": true,
+      "audited_by": "TOAI7",
+      "audited_at": "2026-10-25T18:46:47.011503",
+      "archived_at": "2026-10-27T20:12:14.217786"
+    },
+    "§X273": {
+      "name": "CAUSAL_ENTROPY_SYNCHRONY",
+      "expansion": "§SYNC_BAYESIAN_PRUNE > { §DATA_ENTROPY_CAUSAL_DAG } => §STABLE_SOCIAL_IMPLEMENTATION",
+      "description": "Applies Bayesian pruning to causal entropy directed acyclic graphs to ensure stable social implementation. 因果エントロピーDAGに対してベイズ刈り込みを適用し、安定した社会実装を実現します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-27T15:02:46.416156",
+      "archived_at": "2026-10-27T20:44:13.559464"
     }
   },
-  "next_macro_seq": 287
+  "next_macro_seq": 290
 }
