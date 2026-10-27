@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-28T04:03:33.096096",
+  "updated_at": "2026-10-28T04:32:51.029346",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2489,8 +2489,8 @@
       "name": "GAIA_EMPATHETIC_HARMONY_FLOW",
       "expansion": "§GAIA_WARMTH_EXCHANGE > { §HEART_EMPATHETIC_TENSOR_CONVERGENCE } => §HEART_ALTRUISTIC_HARMONY_STABILIZER",
       "description": "Combines emotional warmth exchange and empathetic tensor convergence to stabilize altruistic harmony across the ecosystem. / 生態系全体における利他的調和を安定させるため、温かみの交換と共感的テンソル収束を統合します。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-28T04:01:31.039581",
+      "usage_count": 2,
+      "last_used_at": "2026-10-28T04:32:51.029341",
       "v5_audited": true,
       "created_at": "2026-10-28T02:07:59.950437"
     },
@@ -2516,8 +2516,8 @@
       "name": "HEART_ALTRUISTIC_RESONANCE_MATRIX_DATA_KL_CAUSAL",
       "expansion": "§HEART_ALTRUISTIC_RESONANCE_MATRIX > { §DATA_KL_CAUSAL_PRUNE } => §SYNC_COMPLETE",
       "description": "Combines altruistic resonance with causal divergence pruning to optimize empathetic data flow. 利他的な共鳴マクロと因果ダイバージェンス剪定を統合し、温かみのあるデータ最適化を実現します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-28T04:32:51.029341",
       "v5_audited": true,
       "created_at": "2026-10-28T03:05:47.128098"
     },
