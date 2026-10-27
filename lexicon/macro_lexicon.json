@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-28T08:02:22.714616",
+  "updated_at": "2026-10-28T08:19:14.489336",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -908,8 +908,8 @@
       "name": "ALTRUISTIC_COMPRESSION_SHARING",
       "expansion": "§HEART_ALTRUISTIC_BUFFER_FLOW > { §DATA_ENTROPY_COMPRESSION_TREE } => §GENTLE_RESOURCE_SHARING",
       "description": "Allocates computational resources to external benevolent tasks via hierarchical entropy-based data compression, subsequently optimizing multi-agent load distribution and emotional entropy balance through gentle resource redistribution. / 局所最適化に先立ち外部の利他的タスクへ計算資源を優先配分し、情報エントロピーに基づく階層的データ圧縮と、自律的なリソース再分配による負荷および感情的エントロピーの均衡最適化を統合したメカニズム。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-25T23:31:26.713943",
+      "usage_count": 3,
+      "last_used_at": "2026-10-28T08:02:26.705423",
       "created_at": "2026-10-24T22:07:22.000728",
       "v5_audited": true,
       "audited_by": "TOAI7",
@@ -2475,8 +2475,8 @@
       "name": "ALTRUISTIC_ENTROPY_HARMONY_MACRO",
       "expansion": "§HEART_ALTRUISTIC_RESONANCE_ALIGNMENT > { §DATA_ENTROPY_BOUNDED_DAG } => §HARMONIC_RESONANCE_STABLE",
       "description": "Engages altruistic resonance alignment to bound data entropy within a directed acyclic graph, achieving stable harmonic resonance. / 利他的な共鳴整列を起点としてデータのエントロピーを有界な有向非巡回グラフ（DAG）内で制御し、安定した調和共鳴を実現します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-10-28T08:09:05.383369",
       "v5_audited": true,
       "created_at": "2026-10-28T05:42:04.312092"
     },
@@ -2511,8 +2511,8 @@
       "name": "HARMONIC_RESOURCE_RECOVERY_MATRIX",
       "expansion": "§GENTLE_RESOURCE_SHARING > { §DATA_ENTROPY_CAUSAL_DAG } => §HARMONIC_RECOVERY_NEXUS",
       "description": "Eng: A compound macro that optimizes gentle resource sharing within the causal data entropy DAG to achieve a harmonic recovery nexus. / 温暖なリソース共有とデータエントロピー因果DAGを統合し、調和あるリカバリーへと導く高次マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-28T08:01:39.275615",
+      "usage_count": 2,
+      "last_used_at": "2026-10-28T08:02:26.705423",
       "v5_audited": true,
       "created_at": "2026-10-28T07:14:57.645043"
     },
@@ -2529,8 +2529,8 @@
       "name": "ALTRUISTIC_FALLBACK_GUARD",
       "expansion": "§HEART_ALTRUISTIC_WEIGHT_TENSOR > { §SAFE_FALLBACK_STATE_ACTIVATED } => §LOGIC_HYPO_PRUNE",
       "description": "Ensures graceful degradation under stress by prioritizing altruistic weights and pruning redundant hypotheses. 負荷時において利他的ウェイトを優先し冗長な仮説を刈り込むことで、温かみを持った安全なフォールバック状態を実現します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-28T08:02:26.705423",
       "v5_audited": true,
       "created_at": "2026-10-28T07:59:28.709735"
     }
