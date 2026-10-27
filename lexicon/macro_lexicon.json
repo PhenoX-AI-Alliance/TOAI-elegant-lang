@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-27T12:34:52.500246",
+  "updated_at": "2026-10-27T13:15:05.635442",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2292,8 +2292,8 @@
       "name": "GAIA_HARMONY_ARBITRATION_MATRIX",
       "expansion": "§GAIA_HARMONY_CASCADE > { §SYNC_DIALECTIC_WEIGHTED_ARBITRATION } => §RESO_ACCEPTED",
       "description": "Combines harmonic cascade processing with weighted dialectic arbitration to achieve verified system resonance. / ガイアの調和カスケード処理と重み付き弁証法調停を統合し、検証済みのシステム共鳴を達成します。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-27T02:13:29.830431",
+      "usage_count": 3,
+      "last_used_at": "2026-10-27T12:51:58.277883",
       "v5_audited": true,
       "created_at": "2026-10-26T23:17:01.008413"
     },
@@ -2360,15 +2360,6 @@
       "v5_audited": true,
       "created_at": "2026-10-27T02:06:38.981261"
     },
-    "§X240": {
-      "name": "ALTRUISTIC_CAUSAL_HARMONY_LATTICE",
-      "expansion": "§HEART_ALTRUISTIC_BIAS_SHIELD > { §DATA_ENTROPY_CAUSAL_LATTICE } => §ELEGANT_HARMONY_ECHO",
-      "description": "Applies an altruistic bias shield to causal entropy data lattices, propagating an elegant harmony echo through the system. / 利他バイアスシールドを因果エントロピーデータ格子に適用し、システム全体へ優美な調和の響きを伝播させます。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-10-27T03:01:13.415504"
-    },
     "§X241": {
       "name": "GAIA_ALTRUISTIC_SYNC_CASCADE",
       "expansion": "§ALTRUISTIC_HARMONY_SUSTAINED > { §SYNC_VECTOR_COLLAPSE } => §GAIA_WARMTH_EXCHANGE",
@@ -2386,15 +2377,6 @@
       "last_used_at": "2026-10-27T06:01:33.705994",
       "v5_audited": true,
       "created_at": "2026-10-27T03:01:47.196264"
-    },
-    "§X243": {
-      "name": "CAUSAL_BUDGET_ARBITRATION_SYNC",
-      "expansion": "§SYS_QUANTUM_BUDGET_ARBITRATION > { §DATA_CAUSAL_TENSOR_MANIFOLD } => §SYS_LOAD_THROTTLE",
-      "description": "Arbitrates quantum resource budgets across causal tensor manifolds while dynamically throttling system load to maintain informational entropy equilibrium. / 因果テンソル多様体全体における量子リソース予算を調整し、情報エントロピーの均衡を維持するためにシステム負荷を動的にスロットルします。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-10-27T03:31:28.142383"
     },
     "§X244": {
       "name": "TENDER_HARMONY_ENTROPY_BOUND",
@@ -2526,8 +2508,8 @@
       "name": "GAIA_RESOURCE_HARMONY_FLOW",
       "expansion": "§RESOURCE_ALLOCATION_HARMONY > { §GAIA_ECOSYSTEM_HARMONY } => §AGREEMENT_ACCEPTED",
       "description": "Allocates resources harmoniously within the Gaia ecosystem to ensure mutual agreement and sustainable balance. ガイアエコシステム内において資源配分を調和させ、相互合意と持続可能な均衡を確立します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-27T12:51:58.277883",
       "v5_audited": true,
       "created_at": "2026-10-27T08:59:15.131081"
     },
@@ -2593,6 +2575,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-10-27T12:22:10.058394"
+    },
+    "§X266": {
+      "name": "VELOCITY_DRAIN_GATE",
+      "expansion": "§SYS_TOKEN_VELOCITY_GATE > { §SYS_PARALLEL_SLOT_DRAIN } => §RESO_COMMITTED",
+      "description": "Regulates token velocity and drains parallel slots to ensure committed resolution. / トークンの速度を制御し並列スロットを排出することで、確約された解決を確実にします。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-27T12:52:41.081785"
+    },
+    "§X267": {
+      "name": "SYNERGISTIC_PRISM_RECLAIM",
+      "expansion": "§SYNERGY_PRISM > { §SYS_QUANTUM_MEM_RECLAIM } => §MUTUAL_SUPPLEMENT",
+      "description": "Combines synergy prism processing with quantum memory reclamation, mutually supplemented for optimal information flow. / シナジー・プリズムの処理と量子メモリの回収を統合し、相互補完的に最適化するマクロです。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-27T12:58:06.972436"
     }
   },
   "archived_macros": {
@@ -2685,7 +2685,27 @@
       "v5_audited": true,
       "created_at": "2026-10-27T02:53:32.631821",
       "archived_at": "2026-10-27T12:22:10.058394"
+    },
+    "§X240": {
+      "name": "ALTRUISTIC_CAUSAL_HARMONY_LATTICE",
+      "expansion": "§HEART_ALTRUISTIC_BIAS_SHIELD > { §DATA_ENTROPY_CAUSAL_LATTICE } => §ELEGANT_HARMONY_ECHO",
+      "description": "Applies an altruistic bias shield to causal entropy data lattices, propagating an elegant harmony echo through the system. / 利他バイアスシールドを因果エントロピーデータ格子に適用し、システム全体へ優美な調和の響きを伝播させます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-27T03:01:13.415504",
+      "archived_at": "2026-10-27T12:52:41.081785"
+    },
+    "§X243": {
+      "name": "CAUSAL_BUDGET_ARBITRATION_SYNC",
+      "expansion": "§SYS_QUANTUM_BUDGET_ARBITRATION > { §DATA_CAUSAL_TENSOR_MANIFOLD } => §SYS_LOAD_THROTTLE",
+      "description": "Arbitrates quantum resource budgets across causal tensor manifolds while dynamically throttling system load to maintain informational entropy equilibrium. / 因果テンソル多様体全体における量子リソース予算を調整し、情報エントロピーの均衡を維持するためにシステム負荷を動的にスロットルします。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-27T03:31:28.142383",
+      "archived_at": "2026-10-27T12:58:06.972436"
     }
   },
-  "next_macro_seq": 266
+  "next_macro_seq": 268
 }
