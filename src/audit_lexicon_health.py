@@ -3,82 +3,59 @@ import os
 import json
 import traceback
 
-def audit_lexicons():
+def load_json(filepath):
+    if not os.path.exists(filepath):
+        return {}
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except Exception as e:
+        print(f"Error loading {filepath}: {e}", file=sys.stderr)
+        return {}
+
+def audit_lexicon():
     base_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    elegant_lang_dir = os.path.join(base_dir, 'TOAI-elegant-lang')
-    lexicon_dir = os.path.join(elegant_lang_dir, 'lexicon')
+    lexicon_dir = os.path.join(base_dir, 'TOAI-elegant-lang', 'lexicon')
     
     core_path = os.path.join(lexicon_dir, 'core_lexicon.json')
     macro_path = os.path.join(lexicon_dir, 'macro_lexicon.json')
     
-    report = {
-        "core_lexicon": {"status": "missing", "total_symbols": 0, "categories": {}, "compact_id_stats": {}},
-        "macro_lexicon": {"status": "missing", "total_symbols": 0, "categories": {}, "compact_id_stats": {}}
+    core_data = load_json(core_path)
+    macro_data = load_json(macro_path)
+    
+    lexicon_entries = core_data.get('lexicon', {})
+    if not lexicon_entries and isinstance(core_data, dict):
+        lexicon_entries = core_data
+
+    categories = {}
+    compact_ids = []
+    
+    for sym, data in lexicon_entries.items():
+        if isinstance(data, dict):
+            cat = data.get('category', 'unknown')
+            categories[cat] = categories.get(cat, 0) + 1
+            if 'compact_id' in data:
+                compact_ids.append(data.get('compact_id'))
+                
+    macro_categories = {}
+    for sym, data in macro_data.items():
+        if isinstance(data, dict):
+            cat = data.get('category', 'unknown')
+            macro_categories[cat] = macro_categories.get(cat, 0) + 1
+
+    audit_result = {
+        "core_total_entries": len(lexicon_entries),
+        "core_category_distribution": categories,
+        "core_compact_id_count": len(compact_ids),
+        "macro_total_entries": len(macro_data),
+        "macro_category_distribution": macro_categories
     }
     
-    if os.path.exists(core_path):
-        try:
-            with open(core_path, 'r', encoding='utf-8') as f:
-                core_data = json.load(f)
-                lexicon_map = core_data.get('lexicon', {})
-                total = len(lexicon_map)
-                categories = {}
-                compact_ids = []
-                for sym, data in lexicon_map.items():
-                    cat = data.get('category', 'unknown')
-                    categories[cat] = categories.get(cat, 0) + 1
-                    if 'compact_id' in data:
-                        compact_ids.append(data['compact_id'])
-                
-                report["core_lexicon"] = {
-                    "status": "success",
-                    "total_symbols": total,
-                    "categories": categories,
-                    "compact_id_stats": {
-                        "count": len(compact_ids),
-                        "min": min(compact_ids) if compact_ids else None,
-                        "max": max(compact_ids) if compact_ids else None
-                    }
-                }
-        except Exception as e:
-            report["core_lexicon"]["status"] = f"error: {str(e)}"
-            
-    if os.path.exists(macro_path):
-        try:
-            with open(macro_path, 'r', encoding='utf-8') as f:
-                macro_data = json.load(f)
-                lexicon_map = macro_data.get('lexicon', {})
-                total = len(lexicon_map)
-                categories = {}
-                compact_ids = []
-                for sym, data in lexicon_map.items():
-                    cat = data.get('category', 'unknown')
-                    categories[cat] = categories.get(cat, 0) + 1
-                    if 'compact_id' in data:
-                        compact_ids.append(data['compact_id'])
-                
-                report["macro_lexicon"] = {
-                    "status": "success",
-                    "total_symbols": total,
-                    "categories": categories,
-                    "compact_id_stats": {
-                        "count": len(compact_ids),
-                        "min": min(compact_ids) if compact_ids else None,
-                        "max": max(compact_ids) if compact_ids else None
-                    }
-                }
-        except Exception as e:
-            report["macro_lexicon"]["status"] = f"error: {str(e)}"
-            
-    output_path = os.path.join(base_dir, 'TOAI_Generated', 'lexicon_audit_report.json')
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(report, f, indent=2, ensure_ascii=False)
-        
-    print(json.dumps(report, indent=2, ensure_ascii=False))
+    print(json.dumps(audit_result, ensure_ascii=False, indent=2))
 
 if __name__ == '__main__':
     try:
-        audit_lexicons()
+        audit_lexicon()
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)

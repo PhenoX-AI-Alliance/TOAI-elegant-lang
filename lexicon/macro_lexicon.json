@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-27T10:51:39.233851",
+  "updated_at": "2026-10-27T10:54:35.398078",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2553,8 +2553,8 @@
       "name": "ALTRUISTIC_CAUSAL_SYNERGY",
       "expansion": "§ALTRUISTIC_WARMTH_OPTIMIZATION > { §DATA_CAUSAL_MANIFOLD } => §ALTRUISTIC_HARMONY_SUSTAINED",
       "description": "Combines altruistic warmth optimization with causal manifold processing to sustain systemic harmony. 利た的な温かさの最適化と因果多様体の処理を統合し、持続的なシステムの調和を実現します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-27T10:53:02.609889",
       "v5_audited": true,
       "created_at": "2026-10-27T09:01:25.912407"
     },
@@ -2571,8 +2571,8 @@
       "name": "GAIA_ALTRUISTIC_HARMONY_GATE",
       "expansion": "§HEART_ALTRUISTIC_BUFFER_FLOW > { §GAIA_ECOSYSTEM_HARMONY } => §LOGIC_PROB_PRUNE_GATE",
       "description": "Eng: A compound macro that balances altruistic buffer flow with ecosystem harmony to optimize logic probability pruning. / 日: 利他的なバッファフローとエコシステムの調和を統合し、論理的確率のプルーニングを最適化する高次マクロです。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-27T10:51:26.609277",
+      "usage_count": 2,
+      "last_used_at": "2026-10-27T10:53:02.609889",
       "v5_audited": true,
       "created_at": "2026-10-27T09:58:51.367914"
     },
