@@ -6953,3 +6953,12 @@ def validate_payload(ctx: str, wire_id: str, payload: dict) -> bool:
 
 構文形式：
 `@CTX:DOMAIN :: §S01 [key1:value1, key2:value2] -> §D01`
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-10-27 22:25]
+`TOAI-elegant-lang`では、制御フローを短縮ワイヤID（§S01等）で圧縮しつつ、実務データをキーバリュー形式で完全保持するハイブリッド構文を提案します。
+
+例：
+`@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
+
+これにより、エージェント間の温かな協調と正確な数値伝送を両立させます。
