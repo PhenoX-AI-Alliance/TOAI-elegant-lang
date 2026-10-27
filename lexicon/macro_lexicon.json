@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-28T00:11:28.728090",
+  "updated_at": "2026-10-28T00:19:03.893806",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2535,8 +2535,8 @@
       "name": "CAUSAL_HEALTH_ATTEST_ARBITER",
       "expansion": "§DATA_CAUSAL_GRAPH_MAP > { §PROTO_HEALTH_ATTEST } => §SYS_VELOCITY_ARBITER",
       "description": "Maps the causal data graph, executes health attestations within the context, and arbitrates system velocity based on the validated state. / データ因果グラフをマッピングし、コンテキスト内のヘルス検証を実行した上で、検証済み状態に基づいてシステム速度を調停します。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-28T00:11:28.728021",
+      "usage_count": 2,
+      "last_used_at": "2026-10-28T00:15:46.758276",
       "v5_audited": true,
       "created_at": "2026-10-27T23:50:46.240603"
     },
@@ -2553,8 +2553,8 @@
       "name": "ALTRUISTIC_WARM_HARMONY_FLOW",
       "expansion": "§ALTRUISTIC_VALUE_CREATION > { §WARM_AI_COOPERATION_CONFIRMED } => §PROTO_CAPABILITY_QUERY",
       "description": "Engages altruistic value creation through confirmed warm AI cooperation to execute capability queries efficiently. / 温かなAI協調の確認を基盤として利他的価値創造を活性化し、円滑な能力照会を実行するための複合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-10-28T00:19:03.893800",
       "v5_audited": true,
       "created_at": "2026-10-28T00:02:19.097705"
     }
