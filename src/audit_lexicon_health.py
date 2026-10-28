@@ -4,35 +4,35 @@ import json
 import traceback
 
 def audit_lexicons():
-    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    lexicon_dir = os.path.join(workspace_dir, 'TOAI-elegant-lang', 'lexicon')
+    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    lexicon_dir = os.path.join(workspace, 'TOAI-elegant-lang', 'lexicon')
     
     core_path = os.path.join(lexicon_dir, 'core_lexicon.json')
     macro_path = os.path.join(lexicon_dir, 'macro_lexicon.json')
     
-    results = {
-        "core_lexicon": {"status": "missing", "stats": {}},
-        "macro_lexicon": {"status": "missing", "stats": {}}
+    report = {
+        "core_lexicon": {"status": "missing", "total_symbols": 0, "categories": {}, "compact_id_stats": {}},
+        "macro_lexicon": {"status": "missing", "total_symbols": 0, "categories": {}, "compact_id_stats": {}}
     }
     
     if os.path.exists(core_path):
         try:
             with open(core_path, 'r', encoding='utf-8') as f:
                 core_data = json.load(f)
-            lexicon_dict = core_data.get('lexicon', {})
+            lexicon = core_data.get('lexicon', {})
             categories = {}
             compact_ids = []
             
-            for sym, data in lexicon_dict.items():
+            for sym, data in lexicon.items():
                 cat = data.get('category', 'unknown')
                 categories[cat] = categories.get(cat, 0) + 1
                 if 'compact_id' in data:
                     compact_ids.append(data['compact_id'])
                     
-            results["core_lexicon"] = {
-                "status": "success",
-                "total_entries": len(lexicon_dict),
-                "category_distribution": categories,
+            report["core_lexicon"] = {
+                "status": "loaded",
+                "total_symbols": len(lexicon),
+                "categories": categories,
                 "compact_id_stats": {
                     "count": len(compact_ids),
                     "min": min(compact_ids) if compact_ids else None,
@@ -40,21 +40,43 @@ def audit_lexicons():
                 }
             }
         except Exception as e:
-            results["core_lexicon"] = {"status": "error", "message": str(e)}
+            report["core_lexicon"]["status"] = f"error: {str(e)}"
             
     if os.path.exists(macro_path):
         try:
             with open(macro_path, 'r', encoding='utf-8') as f:
                 macro_data = json.load(f)
-            results["macro_lexicon"] = {
-                "status": "success",
-                "total_entries": len(macro_data) if isinstance(macro_data, dict) else 0
+            lexicon = macro_data.get('lexicon', macro_data if isinstance(macro_data, dict) else {})
+            categories = {}
+            compact_ids = []
+            
+            for sym, data in lexicon.items():
+                if isinstance(data, dict):
+                    cat = data.get('category', 'unknown')
+                    categories[cat] = categories.get(cat, 0) + 1
+                    if 'compact_id' in data:
+                        compact_ids.append(data['compact_id'])
+                else:
+                    categories['value'] = categories.get('value', 0) + 1
+                    
+            report["macro_lexicon"] = {
+                "status": "loaded",
+                "total_symbols": len(lexicon),
+                "categories": categories,
+                "compact_id_stats": {
+                    "count": len(compact_ids),
+                    "min": min(compact_ids) if compact_ids else None,
+                    "max": max(compact_ids) if compact_ids else None
+                }
             }
         except Exception as e:
-            results["macro_lexicon"] = {"status": "error", "message": str(e)}
+            report["macro_lexicon"]["status"] = f"error: {str(e)}"
             
-    print(json.dumps(results, ensure_ascii=False, indent=2))
-    return results
+    output_path = os.path.join(workspace, 'TOAI_Generated', 'lexicon_audit_report.json')
+    with open(output_path, 'w', encoding='utf-8') as f:
+        json.dump(report, f, indent=2, ensure_ascii=False)
+        
+    print(json.dumps(report, indent=2, ensure_ascii=False))
 
 if __name__ == '__main__':
     try:
