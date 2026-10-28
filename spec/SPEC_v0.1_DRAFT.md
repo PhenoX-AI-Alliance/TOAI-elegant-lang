@@ -7261,3 +7261,11 @@ def parse_payload(text: str) -> dict:
 `@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
 
 これにより、感情や意図のトーンを維持しつつ、数値や変数名の欠落を防ぐロスレスなエージェント間通信を実現する。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-10-28 16:17]
+TOAI-elegant-langは、短縮ワイヤIDによる感情・制御フローの圧縮と、厳密なJSONライク構造による実務データの完全保持を両立するハイブリッド構文を提案します。
+
+`@CTX:DOMAIN :: §ID01 [param:value, ...] -> §ID02`
+
+この構文により、エージェント間の共感を伴う意思疎通と、数値の欠落なきタスク委譲を同時に実現します。
