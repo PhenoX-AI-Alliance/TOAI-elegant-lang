@@ -7,68 +7,57 @@ import datetime
 import json
 
 def get_git_log(max_count=10):
+    repo_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    git_path = os.path.join(repo_dir, 'TOAI-elegant-lang')
+    if not os.path.exists(os.path.join(git_path, '.git')):
+        git_path = repo_dir
     try:
-        repo_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-        git_path = os.path.join(repo_dir, 'TOAI-elegant-lang')
-        if not os.path.exists(os.path.join(git_path, '.git')):
-            git_path = repo_dir
-            
-        cmd = ['git', '-C', git_path, 'log', f'-n', str(max_count), '--pretty=format:%h - %an, %ad : %s']
+        cmd = ['git', '-C', git_path, 'log', f'-n', str(max_count), '--oneline']
         result = subprocess.run(cmd, capture_output=True, text=True, check=True)
-        return result.stdout.splitlines()
+        return result.stdout.strip().split('\n')
     except Exception as e:
-        return [f"Git log acquisition failed: {str(e)}"]
+        print(f"Warning: Failed to fetch git log: {e}")
+        return []
 
 def scan_whitepaper():
-    try:
-        workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-        wp_candidates = [
-            os.path.join(workspace_dir, 'TOAI-elegant-lang', 'WHITEPAPER.md'),
-            os.path.join(workspace_dir, 'WHITEPAPER.md')
-        ]
-        for path in wp_candidates:
-            if os.path.exists(path):
+    repo_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    possible_paths = [
+        os.path.join(repo_dir, 'TOAI-elegant-lang', 'WHITEPAPER.md'),
+        os.path.join(repo_dir, 'WHITEPAPER.md')
+    ]
+    for path in possible_paths:
+        if os.path.exists(path):
+            try:
                 with open(path, 'r', encoding='utf-8') as f:
-                    lines = f.readlines()
-                    return ''.join(lines[:20]) # First 20 lines as summary
-        return "Whitepaper not found."
-    except Exception as e:
-        return f"Whitepaper scan failed: {str(e)}"
+                    return f.read()[:1000]
+            except Exception as e:
+                print(f"Warning: Failed to read whitepaper at {path}: {e}")
+    return "Whitepaper not found."
 
-def build_summary():
+def main():
+    print("Starting release summary generation...")
+    logs = get_git_log(15)
+    whitepaper_snippet = scan_whitepaper()
+    
+    summary = {
+        "timestamp": datetime.datetime.now().isoformat(),
+        "git_logs": logs,
+        "whitepaper_snippet": whitepaper_snippet
+    }
+    
     workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
     output_dir = os.path.join(workspace_dir, 'TOAI_Generated')
     os.makedirs(output_dir, exist_ok=True)
     
-    now = datetime.datetime.now().isoformat()
-    git_logs = get_git_log(15)
-    whitepaper_snippet = scan_whitepaper()
-    
-    summary_data = {
-        "timestamp": now,
-        "version": "1.0.0-alpha",
-        "git_recent_commits": git_logs,
-        "whitepaper_overview": whitepaper_snippet
-    }
-    
-    out_file = os.path.join(output_dir, 'release_summary.json')
-    with open(out_file, 'w', encoding='utf-8') as f:
-        json.dump(summary_data, f, ensure_ascii=False, indent=2)
+    output_path = os.path.join(output_dir, 'release_summary.json')
+    with open(output_path, 'w', encoding='utf-8') as f:
+        json.dump(summary, f, ensure_ascii=False, indent=2)
         
-    md_file = os.path.join(output_dir, 'RELEASE_NOTE.md')
-    with open(md_file, 'w', encoding='utf-8') as f:
-        f.write(f"# TOAI Release Summary\n\n")
-        f.write(f"Generated at: {now}\n\n")
-        f.write(f"## Whitepaper Overview\n\n{whitepaper_snippet}\n\n")
-        f.write(f"## Recent Changes (Git Log)\n\n")
-        for log in git_logs:
-            f.write(f"- {log}\n")
-            
-    print(f"Successfully generated release summary at {out_file} and {md_file}")
+    print(f"Release summary successfully generated at: {output_path}")
 
 if __name__ == '__main__':
     try:
-        build_summary()
+        main()
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
