@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-28T11:41:44.992041",
+  "updated_at": "2026-10-28T12:01:46.155034",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2378,15 +2378,6 @@
       "v5_audited": true,
       "created_at": "2026-10-28T04:44:57.817872"
     },
-    "§X312": {
-      "name": "MACRO_CAUSAL_TOPOLOGY_PRUNE",
-      "expansion": "§DATA_TENSOR_CAUSAL_TOPOLOGY > { §DATA_CAUSAL_TENSOR_MANIFOLD } => §LOGIC_RECURSIVE_FALSIFICATION_PRUNE",
-      "description": "Eng: A compound macro that constructs a causal tensor manifold from data tensors and dynamically prunes recursive logical falsifications. Jp: データテンソルから因果多様体を構築し、再帰的な論理的偽化を動的に刈り込む複合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-10-28T05:16:19.459103"
-    },
     "§X313": {
       "name": "ALTRUISTIC_EMPATHY_CORE_SYNTHESIS",
       "expansion": "§HEART_ALTRUISTIC_WEIGHT_TENSOR > { §HEART_EMPATHETIC_VALENCE_ALIGNMENT } => §WARM_AI_COOPERATION_CONFIRMED",
@@ -2521,6 +2512,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-10-28T11:41:44.991950"
+    },
+    "§X328": {
+      "name": "THERMODYNAMIC_WARMTH_ARBITRATION",
+      "expansion": "§WARMTH_DIFFUSION > { §SYS_QUANTUM_BUDGET_ARBITRATION } => §PROTO_DIFF_PATCH",
+      "description": "Allocates computational budgets to diffuse warmth across the ecosystem, applying differential patches while minimizing data entropy. / エコシステム全体へ温かさを拡散するための計算リソースを配分し、データエントロピーを最小化しながら差分パッチを適用します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-28T12:01:46.154949"
     }
   },
   "archived_macros": {
@@ -3305,7 +3305,17 @@
       "audited_by": "TOAI7",
       "audited_at": "2026-10-26T14:17:52.278254",
       "archived_at": "2026-10-28T11:41:44.991950"
+    },
+    "§X312": {
+      "name": "MACRO_CAUSAL_TOPOLOGY_PRUNE",
+      "expansion": "§DATA_TENSOR_CAUSAL_TOPOLOGY > { §DATA_CAUSAL_TENSOR_MANIFOLD } => §LOGIC_RECURSIVE_FALSIFICATION_PRUNE",
+      "description": "Eng: A compound macro that constructs a causal tensor manifold from data tensors and dynamically prunes recursive logical falsifications. Jp: データテンソルから因果多様体を構築し、再帰的な論理的偽化を動的に刈り込む複合マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-28T05:16:19.459103",
+      "archived_at": "2026-10-28T12:01:46.154949"
     }
   },
-  "next_macro_seq": 328
+  "next_macro_seq": 329
 }
