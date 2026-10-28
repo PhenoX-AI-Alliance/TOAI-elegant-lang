@@ -1,49 +1,46 @@
+# -*- coding: utf-8 -*-
 import sys
 import os
 import json
+import traceback
 
-def dump_lexicon():
-    lexicon_path = "lexicon/core_lexicon.json"
-    output_path = "docs/lexicon_dump.md"
-
-    if not os.path.exists(lexicon_path):
-        print(f"Error: Lexicon file not found at {lexicon_path}", file=sys.stderr)
-        sys.exit(1)
+def load_and_dump():
+    lexicon_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/lexicon/core_lexicon.json"
+    output_path = "/home/phenox/gemini-sandbox/TOAI_Generated/lexicon_dump.md"
 
     try:
+        if not os.path.exists(lexicon_path):
+            print(f"Error: Lexicon file not found at {{lexicon_path}}", file=sys.stderr)
+            sys.exit(1)
+
         with open(lexicon_path, "r", encoding="utf-8") as f:
             data = json.load(f)
+
+        markdown_lines = []
+        markdown_lines.append("# TOAI Core Lexicon Dump")
+        markdown_lines.append("")
+        markdown_lines.append("| Key | Definition / Value |")
+        markdown_lines.append("|---|---|")
+
+        if isinstance(data, dict):
+            for k, v in data.items():
+                markdown_lines.append(f"| `{{k}}` | {{str(v)}} |")
+        elif isinstance(data, list):
+            for item in data:
+                markdown_lines.append(f"| `-` | {{str(item)}} |")
+        else:
+            markdown_lines.append(f"| Data | {{str(data)}} |")
+
+        output_content = "\n".join(markdown_lines)
+
+        with open(output_path, "w", encoding="utf-8") as f:
+            f.write(output_content)
+
+        print(f"Successfully dumped lexicon to {{output_path}}")
+
     except Exception as e:
-        print(f"Error parsing JSON: {e}", file=sys.stderr)
+        traceback.print_exc()
         sys.exit(1)
 
-    lines = []
-    lines.append("# Core Lexicon Dump")
-    lines.append("")
-    lines.append("| Term | Description | Category |")
-    lines.append("|---|---|---|")
-
-    items = data if isinstance(data, list) else data.get("items", [])
-    if isinstance(data, dict) and not items:
-        for k, v in data.items():
-            desc = v.get("description", str(v)) if isinstance(v, dict) else str(v)
-            cat = v.get("category", "General") if isinstance(v, dict) else "General"
-            lines.append(f"| {k} | {desc} | {cat} |")
-    elif isinstance(items, list):
-        for item in items:
-            if isinstance(item, dict):
-                term = item.get("term", item.get("name", "Unknown"))
-                desc = item.get("description", "")
-                cat = item.get("category", "General")
-                lines.append(f"| {term} | {desc} | {cat} |")
-            else:
-                lines.append(f"| {str(item)} | - | General |")
-
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    with open(output_path, "w", encoding="utf-8") as f:
-        f.write("\n".join(lines) + "\n")
-
-    print(f"Successfully dumped lexicon to {output_path}")
-
 if __name__ == "__main__":
-    dump_lexicon()
+    load_and_dump()
