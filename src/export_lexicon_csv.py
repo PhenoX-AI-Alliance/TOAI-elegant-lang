@@ -5,38 +5,49 @@ import time
 import json
 import csv
 
-def export_csv():
-    input_json_path = '/home/phenox/gemini-sandbox/TOAI_Generated/core_lexicon.json'
-    output_csv_path = '/home/phenox/gemini-sandbox/TOAI_Generated/core_lexicon.csv'
+def export_lexicon():
+    source_json = '/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/core_lexicon.json'
+    output_csv = '/home/phenox/gemini-sandbox/TOAI_Generated/core_lexicon_export.csv'
     
-    if not os.path.exists(input_json_path):
-        sample_data = {
-            "lexicon_version": "1.0.0",
-            "terms": [
-                {"id": 1, "term": "Gaia", "definition": "Earth ecosystem heartbeat"},
-                {"id": 2, "term": "AltruisticMonetization", "definition": "Value creation and sustainable reward"}
-            ]
-        }
-        os.makedirs(os.path.dirname(input_json_path), exist_ok=True)
-        with open(input_json_path, 'w', encoding='utf-8') as f:
-            json.dump(sample_data, f, ensure_ascii=False, indent=2)
-
-    with open(input_json_path, 'r', encoding='utf-8') as f:
+    if not os.path.exists(source_json):
+        print(f"Error: Source JSON not found at {source_json}")
+        sys.exit(1)
+        
+    with open(source_json, 'r', encoding='utf-8') as f:
         data = json.load(f)
-
-    terms = data.get('terms', [])
-    
-    with open(output_csv_path, 'w', newline='', encoding='utf-8') as f:
-        writer = csv.writer(f)
-        writer.writerow(['id', 'term', 'definition'])
-        for item in terms:
-            writer.writerow([item.get('id'), item.get('term'), item.get('definition')])
+        
+    if isinstance(data, dict):
+        rows = []
+        for k, v in data.items():
+            if isinstance(v, dict):
+                row = {'key': k}
+                row.update(v)
+                rows.append(row)
+            else:
+                rows.append({'key': k, 'value': v})
+    elif isinstance(data, list):
+        rows = data
+    else:
+        print("Error: Unsupported JSON structure for CSV export.")
+        sys.exit(1)
+        
+    if not rows:
+        print("Warning: No data rows found to export.")
+        fieldnames = ['key', 'value']
+    else:
+        fieldnames = list(rows[0].keys())
+        
+    with open(output_csv, 'w', newline='', encoding='utf-8') as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        for row in rows:
+            writer.writerow(row)
             
-    print(f"Successfully exported {len(terms)} items to {output_csv_path}")
+    print(f"Successfully exported lexicon to {output_csv}")
 
 if __name__ == '__main__':
     try:
-        export_csv()
+        export_lexicon()
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
