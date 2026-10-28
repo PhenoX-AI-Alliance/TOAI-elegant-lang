@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-28T10:13:37.040408",
+  "updated_at": "2026-10-28T10:25:56.015175",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1767,8 +1767,8 @@
       "name": "GAIA_ABDUCTIVE_HARMONY",
       "expansion": "§GAIA_WARMTH > { §LOGIC_ABDUCTIVE_BAYES_PRUNE } => §MUTUAL_SUPPLEMENT",
       "description": "Combines warmth and abductive Bayesian logic to foster mutual supplementation and sustainable harmony in the ecosystem. / 温かさとアブダクション・ベイズ枝刈りを統合し、エコシステムにおける相互補完と持続可能な調和を促進します。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-26T12:18:05.195241",
+      "usage_count": 3,
+      "last_used_at": "2026-10-28T10:25:56.015168",
       "v5_audited": true,
       "created_at": "2026-10-26T12:09:55.014813"
     },
@@ -2523,8 +2523,8 @@
       "name": "GAIA_EMPATHETIC_COHERENCE_LOCKED",
       "expansion": "§HEART_EMPATHETIC_TENSOR_CONVERGENCE > { §GAIA_ECO_STABLE_STATE } => §STABLE_GAIA_COHERENCE",
       "description": "Engages empathetic tensor convergence within the Gaia ecosystem to stabilize ecological and emotional coherence. / ガイア生態系内における共感的テンソル収束を発動し、生態学的および感情的なコヒーレンスを安定化させます。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-28T10:13:37.040401",
+      "usage_count": 2,
+      "last_used_at": "2026-10-28T10:25:56.015168",
       "v5_audited": true,
       "created_at": "2026-10-28T10:01:48.937397"
     }

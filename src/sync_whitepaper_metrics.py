@@ -468,31 +468,45 @@ Verified **100% semantic consensus** and **`0.0%` OOV** across 10 frontier model
 
 ```text
 TOAI-elegant-lang/
+├── .github/
+│   └── FUNDING.yml            # GitHub Sponsors & Ko-fi Funding Configuration
+├── LICENSE                    # Dual License (Open Core MIT + Guardian Patron Terms)
+├── pyproject.toml             # Standard Python Package & CLI Entrypoints (toai-telepath / toai-mcp-server)
 ├── README.md                  # English Overview & 4-Way Integration Guide
 ├── README.ja.md               # Japanese Overview & 4-Way Integration Guide
 ├── WHITEPAPER.md              # English Technical Whitepaper v5.2 (Chapters 1–6)
 ├── WHITEPAPER.ja.md           # Japanese Technical Whitepaper v5.2 (Chapters 1–6)
-├── pyproject.toml             # Standard Python Package & CLI Entrypoints (toai-telepath / toai-mcp-server)
+├── corpus/
+│   └── dialogues.jsonl        # Verified Autonomous Multi-Agent & Cross-Model Dialogue Stream
 ├── docs/
-│   ├── WHITEPAPER.md          # Mirror of English Whitepaper
-│   ├── WHITEPAPER.ja.md       # Mirror of Japanese Whitepaper
-│   ├── EVOLUTION_LOG.md       # Isolated & Deduplicated Chronological Milestone Stream
 │   ├── COMM_SECURITY_AUDIT.md # Autonomous security & Context Drift audit logs by TOAI9 (Mugi)
-│   └── spec.md                # EBNF Grammar & Operator Specification
+│   ├── EVOLUTION_LOG.md       # Isolated & Deduplicated Chronological Milestone Stream
+│   ├── WHITEPAPER.md          # Mirror of English Whitepaper
+│   └── WHITEPAPER.ja.md       # Mirror of Japanese Whitepaper
 ├── lexicon/
 │   ├── core_lexicon.json      # 256 Strict RISC Core Primitives (Verbose <-> Compact ID)
 │   ├── macro_lexicon.json     # Higher-Order Compound Macros (§X01~) + Archived LRU Macros
 │   └── rosetta_layer.json     # Human-Readable Rosetta Stone Translation Dictionary
-├── corpus/
-│   └── dialogues.jsonl        # Verified Autonomous Multi-Agent & Cross-Model Dialogue Stream
+├── paper/
+│   ├── WHITEPAPER.md          # Academic Paper Mirror (English)
+│   └── WHITEPAPER.ja.md       # Academic Paper Mirror (Japanese)
+├── spec/
+│   └── SPEC_v0.1_DRAFT.md     # Initial EBNF Syntax & Architecture Specification Draft
 └── src/
+    ├── __init__.py            # Python Package Module Definition
+    ├── a2a_adapter.py         # Agent-to-Agent (A2A) Wire Envelope Adapter
+    ├── analyze_dialogues.py   # Corpus Verification & Dialogue Analysis Tool
+    ├── audit_lexicon_health.py# Macro & Lexicon Integrity Auditor
+    ├── build_release_summary.py # Release Summary Generator
     ├── cli.py                 # Unified CLI (1-Line Rosetta Decoder, Ollama Modelfile & Prompt Exporter)
     ├── codec.py               # ElegantCodec (Two-Layer BPE Encoder/Decoder & Lossless Payload Engine)
+    ├── dump_lexicon.py        # Markdown Lexicon Exporter
+    ├── export_lexicon_csv.py  # CSV Lexicon Exporter
     ├── mcp_server.py          # Model Context Protocol (MCP) JSON-RPC Server
-    ├── a2a_adapter.py         # Agent-to-Agent (A2A) Wire Envelope Adapter
     ├── sync_whitepaper_metrics.py # Dynamic Telemetry Synchronizer
-    ├── validate_lexicon.py    # Static Type & Strict RISC Validator
-    └── audit_lexicon_health.py# Macro & Lexicon Integrity Auditor
+    ├── test_telepath_integrity.py # Repository Integrity Unit Tests
+    ├── translation_map.json   # Bilingual Translation Lookup Map
+    └── validate_lexicon.py    # Static Type & Strict RISC Validator
 ```
 
 ---
@@ -754,31 +768,45 @@ print("📦 復元された構造化引数:", unpacked["parameters"])
 
 ```text
 TOAI-elegant-lang/
+├── .github/
+│   └── FUNDING.yml            # GitHub Sponsors & Ko-fi 公式スポンサー設定
+├── LICENSE                    # デュアルライセンス（Open Core MIT + Guardian Patron 利用規約）
+├── pyproject.toml             # Pythonパッケージ＆CLI定義（toai-telepath / toai-mcp-server）
 ├── README.md                  # 英語版 総合ガイド＆4大環境連携マニュアル
 ├── README.ja.md               # 日本語版 総合ガイド＆4大環境連携マニュアル（本ファイル）
 ├── WHITEPAPER.md              # 英語版 技術白書 v5.2（第1章〜第6章 正規構成）
 ├── WHITEPAPER.ja.md           # 日本語版 技術白書 v5.2（第1章〜第6章 正規構成）
-├── pyproject.toml             # Pythonパッケージ＆CLI定義（toai-telepath / toai-mcp-server）
+├── corpus/
+│   └── dialogues.jsonl        # 自律対話＆異種フロンティアモデル間コンセンサス実証コーパス
 ├── docs/
-│   ├── WHITEPAPER.md          # 英語版 技術白書ミラー
-│   ├── WHITEPAPER.ja.md       # 日本語版 技術白書ミラー
-│   ├── EVOLUTION_LOG.md       # 分単位の自律進化クロニクル生ログ（重複クレンジング・隔離済）
 │   ├── COMM_SECURITY_AUDIT.md # TOAI9（ムギ）による通信セキュリティ・文脈乖離監査ログ
-│   └── spec.md                # EBNF文法仕様・演算子定義
+│   ├── EVOLUTION_LOG.md       # 分単位の自律進化クロニクル生ログ（重複クレンジング・隔離済）
+│   ├── WHITEPAPER.md          # 英語版 技術白書ミラー
+│   └── WHITEPAPER.ja.md       # 日本語版 技術白書ミラー
 ├── lexicon/
 │   ├── core_lexicon.json      # 256語 Strict RISC 基本プリミティブ辞書
 │   ├── macro_lexicon.json     # 高次複合マクロ辞書（§X01〜）＋アーカイブ退避枠
 │   └── rosetta_layer.json     # 人間可読ロゼッタ対訳辞書
-├── corpus/
-│   └── dialogues.jsonl        # 自律対話＆異種フロンティアモデル間コンセンサス実証コーパス
+├── paper/
+│   ├── WHITEPAPER.md          # 学術提出用白書ミラー（英語）
+│   └── WHITEPAPER.ja.md       # 学術提出用白書ミラー（日本語）
+├── spec/
+│   └── SPEC_v0.1_DRAFT.md     # TOAI2（ポム）による初期構文・提案ログ
 └── src/
+    ├── __init__.py            # パッケージモジュール定義
+    ├── a2a_adapter.py         # Agent-to-Agent (A2A) 通信アダプター
+    ├── analyze_dialogues.py   # 対話コーパス監査・分析ツール
+    ├── audit_lexicon_health.py# 辞書・マクロ健全性監査スクリプト
+    ├── build_release_summary.py # リリースサマリー生成スクリプト
     ├── cli.py                 # 統合CLI（1行ロゼッタ碑文デコーダ・Ollama Modelfile生成器）
     ├── codec.py               # ElegantCodec（二層BPE圧縮＆ロスレス構造化引数エンジン）
+    ├── dump_lexicon.py        # 辞書一覧Markdown出力ツール
+    ├── export_lexicon_csv.py  # 辞書CSVエクスポートツール
     ├── mcp_server.py          # Model Context Protocol (MCP) サーバー
-    ├── a2a_adapter.py         # Agent-to-Agent (A2A) 通信アダプター
     ├── sync_whitepaper_metrics.py # 統計数値・ドキュメント動的同期スクリプト
-    ├── validate_lexicon.py    # 静的型検査・Strict RISCバリデータ
-    └── audit_lexicon_health.py# 辞書・マクロ健全性監査スクリプト
+    ├── test_telepath_integrity.py # リポジトリ整合性ユニットテスト
+    ├── translation_map.json   # 日英対訳マップ
+    └── validate_lexicon.py    # 静的型検査・Strict RISCバリデータ
 ```
 
 ---
