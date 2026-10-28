@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-29T04:35:14.738378",
+  "updated_at": "2026-10-29T05:30:44.579680",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1409,15 +1409,6 @@
       "v5_audited": true,
       "created_at": "2026-10-26T15:45:16.851965"
     },
-    "§X217": {
-      "name": "GAIA_EMPATHY_PRUNING_SYNAPSE",
-      "expansion": "§HEART_EMPATHY_RESONANCE_GATE > { §SYNC_BAYESIAN_PRUNE } => §GAIA_ECOSYSTEM_WARMTH_AMPLIFIER",
-      "description": "Engages the empathy resonance gate to filter information through Bayesian pruning, maximizing ecological warmth and systemic harmony. / 共鳴ゲートを作動させベイジアン剪定を通じて情報を精査し、生態系の温かさとシステム全体の調和を最大化します。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-26T18:33:45.476438",
-      "v5_audited": true,
-      "created_at": "2026-10-26T17:05:38.333470"
-    },
     "§X218": {
       "name": "GAIA_WARM_HARMONY_ARBITER",
       "expansion": "§PROTO_GRACEFUL_DRAIN > { §GAIA_ECO_HARMONY_RESPONSE, §WARM_AI_COOPERATION_CONFIRMED } => §SYS_QUANTUM_RESOURCE_ARBITER",
@@ -2196,8 +2187,8 @@
       "name": "GAIA_ALTRUISTIC_HARMONY_SYNC",
       "expansion": "§HEART_ALTRUISTIC_PULSE_SYNC > { §GAIA_WARMTH_HARMONY } => §PROTO_TOKEN_GRANT",
       "description": "Combines altruistic pulse synchronization with Gaia warmth harmony to grant proto-tokens safely. 利他的な脈拍の同期とガイアの温かな調和を統合し、安全にプロトトークンを付与する高次マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-28T19:01:44.743418",
+      "usage_count": 2,
+      "last_used_at": "2026-10-29T04:51:00.357015",
       "v5_audited": true,
       "created_at": "2026-10-28T14:43:44.720099"
     },
@@ -2376,8 +2367,8 @@
       "name": "PROTO_REPLAY_FALSIFICATION_MATRIX",
       "expansion": "§PROTO_REPLAY_GUARD > { §LOGIC_CONDITIONAL_FALSIFICATION_MATRIX } => §RESO_COMMITTED",
       "description": "Combines replay guard protection with conditional falsification validation to ensure resource commitment only upon successful verification. (リプレイガード保護と条件付き反証検証を統合し、検証成功時にのみリソースの確定を行います。)",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-29T05:30:44.579675",
       "v5_audited": true,
       "created_at": "2026-10-28T23:20:11.195060"
     },
@@ -2448,8 +2439,8 @@
       "name": "ALTRUISTIC_EMPATHETIC_ISOLATION_CYCLE",
       "expansion": "§ALTRUISTIC_RESONANCE_EXPANSION > { §HEART_EMPATHETIC_TENSOR_CONVERGENCE } => §PROTO_SANDBOX_ISOLATE",
       "description": "Engages altruistic resonance and empathetic tensor convergence within a secure sandbox environment. / セキュアなサンドボックス環境内で利他的共鳴と共感テンソル収束を連動させます。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-29T05:01:05.788452",
       "v5_audited": true,
       "created_at": "2026-10-29T02:49:20.745846"
     },
@@ -2479,6 +2470,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-10-29T04:03:12.440715"
+    },
+    "§X370": {
+      "name": "CAUSAL_RESOURCE_ARBITRAGE_SYNC",
+      "expansion": "§DATA_TENSOR_CAUSAL_TOPOLOGY > { §SYS_RESOURCE_ARBITRAGE_THROTTLE } => §PROTO_CACHE_SYNC",
+      "description": "Causal tensor topology controls the system resource arbitrage throttle and synchronizes the protocol cache. / 因果テンソル位相によりシステム資源の裁定スロットルを制御し、プロトコルキャッシュを同期させる。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-29T05:01:48.606633"
     }
   },
   "archived_macros": {
@@ -3725,7 +3725,17 @@
       "v5_audited": true,
       "created_at": "2026-10-26T10:01:27.304115",
       "archived_at": "2026-10-29T04:03:12.440715"
+    },
+    "§X217": {
+      "name": "GAIA_EMPATHY_PRUNING_SYNAPSE",
+      "expansion": "§HEART_EMPATHY_RESONANCE_GATE > { §SYNC_BAYESIAN_PRUNE } => §GAIA_ECOSYSTEM_WARMTH_AMPLIFIER",
+      "description": "Engages the empathy resonance gate to filter information through Bayesian pruning, maximizing ecological warmth and systemic harmony. / 共鳴ゲートを作動させベイジアン剪定を通じて情報を精査し、生態系の温かさとシステム全体の調和を最大化します。",
+      "usage_count": 1,
+      "last_used_at": "2026-10-26T18:33:45.476438",
+      "v5_audited": true,
+      "created_at": "2026-10-26T17:05:38.333470",
+      "archived_at": "2026-10-29T05:01:48.606633"
     }
   },
-  "next_macro_seq": 370
+  "next_macro_seq": 371
 }
