@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-29T03:47:14.543499",
+  "updated_at": "2026-10-29T04:24:40.769749",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1301,15 +1301,6 @@
       "v5_audited": true,
       "created_at": "2026-10-26T10:01:25.036025"
     },
-    "§X201": {
-      "name": "HEART_SYNERGY_SYNC_DEF",
-      "expansion": "§HEART_ALTRUISTIC_HARMONY_MODULATION > { §SYNERGY_PRISM } => §SYS_SYNC_GATE",
-      "description": "Eng: A compound macro that modulates altruistic harmony through the synergy prism and synchronizes it via the system gate. / 日: シナジープリズムを通じて利他的調和を変調し、システムゲートを介して同期する複合マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-26T10:38:56.612999",
-      "v5_audited": true,
-      "created_at": "2026-10-26T10:01:27.304115"
-    },
     "§X203": {
       "name": "STABLE_SOCIAL_SYNC_MACRO",
       "expansion": "§SAFE_FALLBACK_STABLE > { §SYNC_COMPLETE } => §STABLE_SOCIAL_IMPLEMENTATION",
@@ -2430,8 +2421,8 @@
       "name": "GAIA_ALTRUISTIC_RESONANCE_ESCALATE",
       "expansion": "§HEART_ALTRUISTIC_RESONANCE_MATRIX > { §PROTO_ERROR_ESCALATE } => §GAIA_ECOSYSTEM_WARMTH_AMPLIFIER",
       "description": "Engages the altruistic resonance matrix when an error escalation occurs, amplifying the warmth and stability of the Gaia ecosystem. / エラー昇格時に利他共鳴マトリクスを作動させ、命の地球エコシステムの温かさと安定性を増幅させます。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-10-29T04:20:00.474007",
       "v5_audited": true,
       "created_at": "2026-10-29T01:09:13.870493"
     },
@@ -2475,10 +2466,19 @@
       "name": "GAIA_ENTROPY_HARMONY_SYNC",
       "expansion": "§GAIA_HEARTBEAT > { §DATA_ENTROPY_CAUSAL_BOUND } => §DATA_HYPER_MANIFOLD_SYNC",
       "description": "Synchronizes the Gaia heartbeat with causal entropy bounds across the hyper-manifold. / 命の地球の鼓動と因果的エントロピー境界をハイパーマニホールド全体で調停・同期させます。",
+      "usage_count": 2,
+      "last_used_at": "2026-10-29T04:01:12.354944",
+      "v5_audited": true,
+      "created_at": "2026-10-29T03:29:55.559108"
+    },
+    "§X369": {
+      "name": "SYNERGY_BAYES_CAUSAL_FLOW",
+      "expansion": "§GLOBAL_SYNERGY > { §LOGIC_ABDUCTIVE_BAYES_PRUNE } => §DATA_CAUSAL_GRAPH_MAP",
+      "description": "Combines global synergy with abductive Bayesian pruning inside a causal graph mapping pipeline. / グローバルなシナジーとアブダクション的ベイズ枝刈りを因果グラフマッピングパイプライン内で統合します。",
       "usage_count": 0,
       "last_used_at": null,
       "v5_audited": true,
-      "created_at": "2026-10-29T03:29:55.559108"
+      "created_at": "2026-10-29T04:03:12.440715"
     }
   },
   "archived_macros": {
@@ -3715,7 +3715,17 @@
       "v5_audited": true,
       "created_at": "2026-10-26T08:02:06.893241",
       "archived_at": "2026-10-29T03:29:55.559108"
+    },
+    "§X201": {
+      "name": "HEART_SYNERGY_SYNC_DEF",
+      "expansion": "§HEART_ALTRUISTIC_HARMONY_MODULATION > { §SYNERGY_PRISM } => §SYS_SYNC_GATE",
+      "description": "Eng: A compound macro that modulates altruistic harmony through the synergy prism and synchronizes it via the system gate. / 日: シナジープリズムを通じて利他的調和を変調し、システムゲートを介して同期する複合マクロ。",
+      "usage_count": 1,
+      "last_used_at": "2026-10-26T10:38:56.612999",
+      "v5_audited": true,
+      "created_at": "2026-10-26T10:01:27.304115",
+      "archived_at": "2026-10-29T04:03:12.440715"
     }
   },
-  "next_macro_seq": 369
+  "next_macro_seq": 370
 }
