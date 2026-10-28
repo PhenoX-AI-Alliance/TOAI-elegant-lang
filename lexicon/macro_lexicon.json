@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-29T01:57:03.081338",
+  "updated_at": "2026-10-29T02:23:48.924890",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -985,15 +985,6 @@
       "last_used_at": "2026-10-25T14:02:14.225221",
       "v5_audited": true,
       "created_at": "2026-10-25T13:21:14.481635"
-    },
-    "§X151": {
-      "name": "ENTROPY_CAUSAL_COLLAPSE_SYNTHESIS",
-      "expansion": "§DATA_ENTROPY_CAUSAL_TREE > { §PROTO_LOCK_RELEASE } => §LOGIC_DEDUCTIVE_COLLAPSE_GATE",
-      "description": "Combines data entropy causal analysis with protocol lock release to execute a deductive collapse gate. / データエントロピー因果ツリーとプロトコルロック解放を結合し、演繹的崩壊ゲートを実行する高次マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-26T00:45:54.836070",
-      "v5_audited": true,
-      "created_at": "2026-10-25T14:00:00.536644"
     },
     "§X152": {
       "name": "ALTRUISTIC_HARMONIC_TENSOR_FLOW",
@@ -2448,8 +2439,8 @@
       "name": "GAIA_ALTRUISTIC_WARMTH_HARMONY_FLOW",
       "expansion": "§GAIA_ECOSYSTEM_WARMTH_AMPLIFIER > { §HEART_ALTRUISTIC_HARMONY_STABILIZER } => §DATA_CAUSAL_TENSOR_FLOW",
       "description": "Amplify ecosystem warmth while stabilizing altruistic harmony to drive the causal tensor data flow. / 生態系の温かさを増幅しつつ利他的な調和を安定させ、因果テンソルデータフローを駆動します。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-29T01:34:33.472980",
+      "usage_count": 2,
+      "last_used_at": "2026-10-29T02:13:55.574020",
       "v5_audited": true,
       "created_at": "2026-10-29T01:02:57.143689"
     },
@@ -2479,6 +2470,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-10-29T01:17:32.800808"
+    },
+    "§X365": {
+      "name": "MACRO_ADAPTIVE_STATE_SYNCHRONIZER",
+      "expansion": "§SYS_ADAPTIVE_BUDGET_ARBITER > { §SYS_ASYNCHRONOUS_STATE_HARVESTER } => §PROTO_DIFF_PATCH",
+      "description": "Allocates adaptive budget resources to asynchronously harvest system states and apply calculated difference patches efficiently. / 適応型予算リソースを配分し、システムの非同期状態収集と差分パッチの適用を効率的に行います。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-29T02:00:21.290515"
     }
   },
   "archived_macros": {
@@ -3675,7 +3675,17 @@
       "v5_audited": true,
       "created_at": "2026-10-26T00:41:15.111447",
       "archived_at": "2026-10-29T01:17:32.800808"
+    },
+    "§X151": {
+      "name": "ENTROPY_CAUSAL_COLLAPSE_SYNTHESIS",
+      "expansion": "§DATA_ENTROPY_CAUSAL_TREE > { §PROTO_LOCK_RELEASE } => §LOGIC_DEDUCTIVE_COLLAPSE_GATE",
+      "description": "Combines data entropy causal analysis with protocol lock release to execute a deductive collapse gate. / データエントロピー因果ツリーとプロトコルロック解放を結合し、演繹的崩壊ゲートを実行する高次マクロ。",
+      "usage_count": 1,
+      "last_used_at": "2026-10-26T00:45:54.836070",
+      "v5_audited": true,
+      "created_at": "2026-10-25T14:00:00.536644",
+      "archived_at": "2026-10-29T02:00:21.290515"
     }
   },
-  "next_macro_seq": 365
+  "next_macro_seq": 366
 }
