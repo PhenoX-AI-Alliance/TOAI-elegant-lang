@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-29T00:05:56.501757",
+  "updated_at": "2026-10-29T00:44:22.380339",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -639,17 +639,6 @@
       "v5_audited": true,
       "audited_by": "TOAI",
       "audited_at": "2026-10-26T07:06:16.888383"
-    },
-    "§X88": {
-      "name": "CAUSAL_ABDUCTIVE_EMBEDDING_LATTICE",
-      "expansion": "§DATA_LATENT_CAUSAL_MANIFOLD > { §LOGIC_PROBABILISTIC_ABDUCTIVE_GATE } => §DATA_EMBEDDING_LATTICE",
-      "description": "A compound macro that maps latent causal manifolds to probabilistic abductive gates for entropy-minimized hypothesis selection, subsequently encoding the results into a recursive embedding lattice for zero-loss invariant pattern matching. / 潜在因果多様体を確率的アブダクションゲートへとマッピングしてエントロピー最小化による仮説選択を行い、その結果を再帰的な埋め込み格子へと符号化することでゼロ損失の不変パターン照合を実現する複合マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-26T00:16:05.420428",
-      "created_at": "2026-10-24T11:05:46.588588",
-      "v5_audited": true,
-      "audited_by": "TOAI7",
-      "audited_at": "2026-10-26T07:17:42.543356"
     },
     "§X91": {
       "name": "ALTRUISTIC_CAUSAL_TENSOR_LATTICE",
@@ -2427,8 +2416,8 @@
       "name": "QUANTUM_RECURSIVE_CASCADE_DEF",
       "expansion": "§SYS_QUANTUM_MEM_RECLAIM > { §LOGIC_RECURSIVE_FALSIFICATION_PRUNE } => §LATENT_SYMPHONY_CASCADE",
       "description": "Reclaims quantum memory, prunes recursive falsifications, and triggers a latent symphony cascade. / 量子メモリを回収し、再帰的な反証を刈り込み、潜在的シンフォニーカスケードを誘発します。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-28T23:29:09.691194",
+      "usage_count": 2,
+      "last_used_at": "2026-10-29T00:27:47.760388",
       "v5_audited": true,
       "created_at": "2026-10-28T21:00:51.571864"
     },
@@ -2485,6 +2474,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-10-28T23:59:01.278553"
+    },
+    "§X360": {
+      "name": "BAYESIAN_CAUSAL_AUDIT_GATE",
+      "expansion": "§LOGIC_BAYES_FALSIFY > { §DATA_KL_CAUSAL_PRUNE } => §PROTO_AUDIT_TRAIL",
+      "description": "Falsifies invalid causal hypotheses using Bayesian updating, prunes high-entropy divergent pathways via Kullback-Leibler divergence minimization, and records the verified immutable audit trail. / ベイズ更新を用いて無効な因果仮説を反証し、カルバック・ライブラー情報量の最小化により高エントロピーな分岐パスを枝刈りした上で、検証済みの改ざん不能な監査証跡を記録します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-29T00:40:27.745052"
     }
   },
   "archived_macros": {
@@ -3625,7 +3623,19 @@
       "v5_audited": true,
       "created_at": "2026-10-25T20:28:41.807916",
       "archived_at": "2026-10-28T23:59:01.278553"
+    },
+    "§X88": {
+      "name": "CAUSAL_ABDUCTIVE_EMBEDDING_LATTICE",
+      "expansion": "§DATA_LATENT_CAUSAL_MANIFOLD > { §LOGIC_PROBABILISTIC_ABDUCTIVE_GATE } => §DATA_EMBEDDING_LATTICE",
+      "description": "A compound macro that maps latent causal manifolds to probabilistic abductive gates for entropy-minimized hypothesis selection, subsequently encoding the results into a recursive embedding lattice for zero-loss invariant pattern matching. / 潜在因果多様体を確率的アブダクションゲートへとマッピングしてエントロピー最小化による仮説選択を行い、その結果を再帰的な埋め込み格子へと符号化することでゼロ損失の不変パターン照合を実現する複合マクロ。",
+      "usage_count": 1,
+      "last_used_at": "2026-10-26T00:16:05.420428",
+      "created_at": "2026-10-24T11:05:46.588588",
+      "v5_audited": true,
+      "audited_by": "TOAI7",
+      "audited_at": "2026-10-26T07:17:42.543356",
+      "archived_at": "2026-10-29T00:40:27.745052"
     }
   },
-  "next_macro_seq": 360
+  "next_macro_seq": 361
 }

@@ -8,29 +8,39 @@ def audit():
     core_path = os.path.join(lexicon_dir, 'core_lexicon.json')
     macro_path = os.path.join(lexicon_dir, 'macro_lexicon.json')
     
+    if not os.path.exists(core_path) or not os.path.exists(macro_path):
+        print("Lexicon files not found.")
+        sys.exit(1)
+        
+    with open(core_path, 'r', encoding='utf-8') as f:
+        core = json.load(f)
+    with open(macro_path, 'r', encoding='utf-8') as f:
+        macro = json.load(f)
+        
     categories = {}
-    compact_ids = []
+    ids = []
     
-    for path in [core_path, macro_path]:
-        if os.path.exists(path):
-            with open(path, 'r', encoding='utf-8') as f:
-                data = json.load(f)
-                for sym, item in data.get('lexicon', {}).items():
-                    cat = item.get('category', 'unknown')
-                    categories[cat] = categories.get(cat, 0) + 1
-                    cid = item.get('compact_id')
-                    if cid is not None:
-                        compact_ids.append(cid)
-                        
+    for k, v in core.get('lexicon', {}).items():
+        if isinstance(v, dict):
+            cat = v.get('category', 'unknown')
+            categories[cat] = categories.get(cat, 0) + 1
+            if 'compact_id' in v:
+                ids.append(v['compact_id'])
+                
+    for k, v in macro.get('macro_lexicon', {}).items():
+        if isinstance(v, dict):
+            cat = v.get('category', 'macro')
+            categories[cat] = categories.get(cat, 0) + 1
+            if 'compact_id' in v:
+                ids.append(v['compact_id'])
+                
     report = {
         "categories": categories,
-        "compact_ids_stats": {
-            "count": len(compact_ids),
-            "min": min(compact_ids) if compact_ids else None,
-            "max": max(compact_ids) if compact_ids else None
-        }
+        "compact_id_count": len(ids),
+        "min_id": min(ids) if ids else None,
+        "max_id": max(ids) if ids else None
     }
-    print(json.dumps(report, indent=2, ensure_ascii=False))
+    print(json.dumps(report, indent=2))
 
 if __name__ == '__main__':
     audit()
