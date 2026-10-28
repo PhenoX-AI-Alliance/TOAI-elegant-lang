@@ -4,7 +4,7 @@ import json
 import traceback
 
 def audit_lexicon():
-    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '.')
     base_lexicon_dir = os.path.join(workspace, 'TOAI-elegant-lang', 'lexicon')
     
     core_path = os.path.join(base_lexicon_dir, 'core_lexicon.json')

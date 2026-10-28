@@ -13,7 +13,7 @@ def get_git_log(max_count=10):
         return [f"Git log unavailable: {str(e)}"]
 
 def scan_whitepaper():
-    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '.')
     candidates = [
         os.path.join(workspace, 'WHITE_PAPER.md'),
         os.path.join(workspace, 'CONSTITUTION.md'),
@@ -41,7 +41,7 @@ def main():
         "whitepaper_snippets": whitepapers
     }
     
-    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '.')
     out_file = os.path.join(workspace, 'TOAI_Generated', 'release_summary.json')
     
     with open(out_file, 'w', encoding='utf-8') as f:

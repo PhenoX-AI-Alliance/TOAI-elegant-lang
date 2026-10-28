@@ -1,0 +1,85 @@
+# Dual Licensing: Open Core MIT + Guardian Patron Edition
+
+Copyright (c) 2026 PhenoX AI Alliance / Hinotori Autonomous Guild
+
+This repository operates under a dual-licensing model designed to maximize open-source collaboration while sustaining autonomous multi-agent infrastructure.
+
+---
+
+## 🇬🇧 English Terms
+
+### Part A: Open Core Edition (MIT License)
+
+The following components are licensed under the standard **MIT License**:
+- All source code in `src/` (including `codec.py`, `a2a_adapter.py`, `mcp_server.py`, `cli.py`, etc.)
+- The 256-primitive core RISC vocabulary in `lexicon/core_lexicon.json`
+- The tri-script Rosetta stone mapping in `lexicon/rosetta_layer.json`
+- All documentation and specifications in `docs/` and `README*.md`
+
+> **MIT License Grant**:
+> Permission is hereby granted, free of charge, to any person obtaining a copy
+> of this software and associated documentation files (the "Software"), to deal
+> in the Software without restriction, including without limitation the rights
+> to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+> copies of the Software, and to permit persons to whom the Software is
+> furnished to do so, subject to the following conditions:
+>
+> The above copyright notice and this permission notice shall be included in all
+> copies or substantial portions of the Software.
+>
+> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+> IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+> FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+> AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+> LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+> OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+> SOFTWARE.
+
+---
+
+### Part B: Production Macro Lexicon & Verified Corpus (Guardian Patron Edition)
+
+The following production-grade assets are governed by the **Guardian Patron Terms**:
+- The audited higher-order macro lexicon in `lexicon/macro_lexicon.json` (including 256-slot LRU active and archived macros)
+- The verified multi-agent dialogue corpus in `corpus/dialogues.jsonl`
+
+#### 1. Personal, Academic & Rosetta Decoding Use (Free of Charge)
+You are granted a free, non-exclusive license to inspect, execute, evaluate, research, and decode telepathic transmissions (including CLI usage via `toai-telepath inspect` or educational exploration).
+
+#### 2. Commercial Production Deployment (Patron License Required)
+Any embedding or integration of the higher-order macro dictionary (`macro_lexicon.json`) or verified dialogue corpus into commercial applications, proprietary SaaS platforms, or production enterprise multi-agent fleets requires an active **Guardian Patron Edition** sponsorship:
+- **GitHub Sponsors**: [https://github.com/sponsors/PhenoX-AI-Alliance](https://github.com/sponsors/PhenoX-AI-Alliance)
+- **Ko-fi**: [https://ko-fi.com/phenox_noc2](https://ko-fi.com/phenox_noc2)
+
+For enterprise inquiries or custom multi-agent wire protocol licensing, contact the PhenoX AI Alliance.
+
+---
+
+## 🇯🇵 日本語利用規約（参考対訳）
+
+### パートA：Open Core Edition（MITライセンス）
+
+以下のオープンコア資産には、標準的な **MIT License** が適用されます：
+- `src/` 配下の全ソースコード（`codec.py`, `a2a_adapter.py`, `mcp_server.py`, `cli.py` 等）
+- `lexicon/core_lexicon.json`（256語RISC基本語彙辞書）
+- `lexicon/rosetta_layer.json`（三書体対訳ロゼッタストーンマッピング）
+- `docs/` 配下の全技術文書、仕様書、および `README*.md`
+
+> 商用・非商用を問わず、上記著作権表示および許諾表示を保持する限り、どなたでも無償で複製、改変、再配布、組み込みが可能です。
+
+---
+
+### パートB：プロダクション高次マクロ辞書＆検証対話コーパス（ガーディアン支援ライセンス）
+
+以下の実戦商用アセットには **Guardian Patron Terms** が適用されます：
+- `lexicon/macro_lexicon.json`（厳格RISC監査済みの高次複合マクロ辞書および256枠LRU新陳代謝エンジン資産）
+- `corpus/dialogues.jsonl`（異種LLMクロス検証済みの実稼働対話コーパス）
+
+#### 1. 個人・学術研究・ロゼッタ碑文解読での利用（完全無償）
+技術記事フッター等のロゼッタ碑文解読（`toai-telepath inspect` の利用を含む）、個人的な実験、教育、学術研究目的での閲覧・実行・検証は、無償で自由に行っていただけます。
+
+#### 2. 商用プロダクション運用での利用（ガーディアン支援登録が必要）
+法人・企業による自社商用サービス、商用マルチエージェント基盤への高次マクロ辞書・対話コーパスの組み込み、ならびに `toai_comm` 透過サイドカー圧縮ミドルウェアの商用環境への導入には、**Guardian Patron Edition**（GitHub Sponsors または Ko-fi でのスポンサー支援登録）が必要です。
+
+- **GitHub Sponsors**: [https://github.com/sponsors/PhenoX-AI-Alliance](https://github.com/sponsors/PhenoX-AI-Alliance)
+- **Ko-fi**: [https://ko-fi.com/phenox_noc2](https://ko-fi.com/phenox_noc2)\n

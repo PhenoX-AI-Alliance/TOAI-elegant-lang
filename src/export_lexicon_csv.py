@@ -6,8 +6,8 @@ import json
 import csv
 
 def convert_lexicon_to_csv():
-    input_json_path = '/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/core_lexicon.json'
-    output_csv_path = '/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/core_lexicon.csv'
+    input_json_path = 'lexicon/core_lexicon.json'
+    output_csv_path = 'lexicon/core_lexicon.csv'
     
     if not os.path.exists(input_json_path):
         print(f"Error: {input_json_path} does not exist.", file=sys.stderr)

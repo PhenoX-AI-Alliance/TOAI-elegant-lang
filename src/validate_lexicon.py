@@ -6,7 +6,7 @@ from pathlib import Path
 
 def validate_lexicon(lexicon_path=None):
     if lexicon_path is None:
-        workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+        workspace = os.environ.get('TOAI_WORKSPACE_DIR', '.')
         lexicon_path = os.path.join(workspace, 'TOAI-elegant-lang', 'lexicon', 'core_lexicon.json')
     
     if not os.path.exists(lexicon_path):

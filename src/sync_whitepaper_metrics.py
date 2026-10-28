@@ -16,7 +16,7 @@ from pathlib import Path
 from typing import Dict, Any, List
 
 _THIS_DIR = Path(__file__).parent.resolve()
-SANDBOX_DIR = Path("/home/phenox/gemini-sandbox") if Path("/home/phenox/gemini-sandbox").exists() else _THIS_DIR
+SANDBOX_DIR = _THIS_DIR.parent if (_THIS_DIR.parent / "toai_telepath_core.py").exists() else _THIS_DIR
 REPO_DIR = SANDBOX_DIR / "TOAI-elegant-lang"
 LEXICON_FILE = REPO_DIR / "lexicon" / "core_lexicon.json"
 MACRO_FILE = REPO_DIR / "lexicon" / "macro_lexicon.json"

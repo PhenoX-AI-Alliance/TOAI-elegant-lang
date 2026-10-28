@@ -4,7 +4,7 @@ import json
 
 class TestTelepathIntegrity(unittest.TestCase):
     def setUp(self):
-        self.base_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang"
+        self.base_dir = str(Path(__file__).resolve().parent.parent)
         self.src_dir = os.path.join(self.base_dir, "src")
 
     def test_directories_exist(self):

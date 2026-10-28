@@ -3,8 +3,8 @@ import os
 import json
 
 def dump_lexicon():
-    lexicon_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/lexicon/core_lexicon.json"
-    output_path = "/home/phenox/gemini-sandbox/TOAI_Generated/lexicon_dump.md"
+    lexicon_path = "lexicon/core_lexicon.json"
+    output_path = "docs/lexicon_dump.md"
 
     if not os.path.exists(lexicon_path):
         print(f"Error: Lexicon file not found at {lexicon_path}", file=sys.stderr)

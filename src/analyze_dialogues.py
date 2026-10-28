@@ -5,10 +5,10 @@ import time
 import json
 
 def analyze_corpus():
-    corpus_path = "/home/phenox/gemini-sandbox/TOAI_Generated/corpus/dialogues.jsonl"
+    corpus_path = "corpus/dialogues.jsonl"
     if not os.path.exists(corpus_path):
         # Fallback or check alternative path
-        alt_path = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
+        alt_path = "corpus/dialogues.jsonl"
         if os.path.exists(alt_path):
             corpus_path = alt_path
         else:
@@ -44,7 +44,7 @@ def analyze_corpus():
         "errors": errors
     }
     
-    report_path = "/home/phenox/gemini-sandbox/TOAI_Generated/dialogue_audit_report.json"
+    report_path = "docs/dialogue_audit_report.json"
     os.makedirs(os.path.dirname(report_path), exist_ok=True)
     with open(report_path, "w", encoding="utf-8") as rf:
         json.dump(report, rf, indent=2, ensure_ascii=False)
