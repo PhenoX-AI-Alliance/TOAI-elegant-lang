@@ -1,1 +1,0 @@
-# TOAI-elegant-lang Specification\n
