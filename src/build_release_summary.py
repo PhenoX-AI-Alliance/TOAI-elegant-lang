@@ -1,58 +1,62 @@
+#!/usr/bin/env python3
 import sys
 import os
-import traceback
 import subprocess
-import datetime
 import json
+from datetime import datetime
 
-def get_git_log():
+def run_git_command(args, cwd):
     try:
-        result = subprocess.run(
-            ['git', 'log', '-n', '10', '--pretty=format:%h - %an, %ar : %s'],
-            capture_output=True,
+        res = subprocess.run(
+            ['git'] + args,
+            cwd=cwd,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
             text=True,
             check=True
         )
-        return result.stdout.splitlines()
+        return res.stdout.strip()
     except Exception as e:
-        return [f"Git log retrieval failed: {str(e)}"]
-
-def scan_whitepaper():
-    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    wp_path = os.path.join(workspace_dir, 'TOAI-elegant-lang', 'WHITEPAPER.md')
-    if os.path.exists(wp_path):
-        try:
-            with open(wp_path, 'r', encoding='utf-8') as f:
-                lines = f.readlines()
-            return [line.strip() for line in lines[:20] if line.strip()]
-        except Exception as e:
-            return [f"Failed to read whitepaper: {str(e)}"]
-    return ["Whitepaper not found."]
+        return f"Error executing git: {e}"
 
 def main():
-    print("Building release summary...")
-    logs = get_git_log()
-    wp_summary = scan_whitepaper()
+    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    repo_dir = os.path.join(workspace, 'TOAI-elegant-lang')
     
-    summary_data = {
-        "timestamp": datetime.datetime.now().isoformat(),
-        "git_recent_commits": logs,
-        "whitepaper_excerpt": wp_summary
+    if not os.path.exists(os.path.join(repo_dir, '.git')):
+        print("Git repository not initialized in target path. Initializing...")
+        try:
+            os.makedirs(repo_dir, exist_ok=True)
+            subprocess.run(['git', 'init'], cwd=repo_dir, check=True)
+            subprocess.run(['git', 'config', 'user.name', 'TOAI Executor'], cwd=repo_dir, check=True)
+            subprocess.run(['git', 'config', 'user.email', 'executor@toai.internal'], cwd=repo_dir, check=True)
+            subprocess.run(['git', 'add', '.'], cwd=repo_dir, check=True)
+            subprocess.run(['git', 'commit', '-m', 'Initial commit by TOAI release builder'], cwd=repo_dir, check=True)
+        except Exception as init_err:
+            print(f"Failed to initialize git repository: {init_err}")
+    
+    git_log = run_git_command(['log', '-n', '10', '--oneline'], repo_dir)
+    latest_commit = run_git_command(['log', '-n', '1', '--format=%H - %an: %s (%cd)'], repo_dir)
+    
+    whitepaper_path = os.path.join(repo_dir, 'WHITESPAPER.md')
+    whitepaper_summary = "Whitepaper not found."
+    if os.path.exists(whitepaper_path):
+        with open(whitepaper_path, 'r', encoding='utf-8') as f:
+            lines = f.readlines()
+            whitepaper_summary = "".join(lines[:20])
+    
+    release_data = {
+        "timestamp": datetime.utcnow().isoformat() + "Z",
+        "latest_commit": latest_commit,
+        "recent_commits": git_log.splitlines() if git_log else [],
+        "whitepaper_excerpt": whitepaper_summary
     }
     
-    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    output_dir = os.path.join(workspace_dir, 'TOAI_Generated')
-    os.makedirs(output_dir, exist_ok=True)
-    
-    out_file = os.path.join(output_dir, 'release_summary.json')
-    with open(out_file, 'w', encoding='utf-8') as f:
-        json.dump(summary_data, f, ensure_ascii=False, indent=2)
-    
-    print(f"Release summary successfully generated at: {out_file}")
+    output_path = os.path.join(repo_dir, 'release_summary.json')
+    with open(output_path, 'w', encoding='utf-8') as out:
+        json.dump(release_data, out, ensure_ascii=False, indent=2)
+        
+    print(f"Release summary successfully generated at: {output_path}")
 
 if __name__ == '__main__':
-    try:
-        main()
-    except Exception as e:
-        traceback.print_exc()
-        sys.exit(1)
+    main()
