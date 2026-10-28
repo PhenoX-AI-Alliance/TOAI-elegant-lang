@@ -1,64 +1,60 @@
+# -*- coding: utf-8 -*-
 import sys
 import os
-import traceback
-import time
-import json
 import subprocess
-import datetime
+import json
+from datetime import datetime
 
-def get_git_log(max_count=10):
+def run_git_log():
+    repo_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    git_path = os.path.join(repo_dir, 'TOAI-elegant-lang')
+    if not os.path.exists(os.path.join(git_path, '.git')):
+        return "Git repository not initialized or not found."
     try:
-        cmd = ['git', 'log', f'-n {max_count}', '--pretty=format:%h - %an, %ar : %s']
-        result = subprocess.run(cmd, capture_output=True, text=True, check=True, cwd=os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/'))
-        return result.stdout.splitlines()
+        result = subprocess.run(
+            ['git', '-C', git_path, 'log', '-n', '10', '--pretty=format:%h - %an, %ar : %s'],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            check=True
+        )
+        return result.stdout
     except Exception as e:
-        print(f"Warning: Could not fetch git log: {e}")
-        return []
+        return f"Error fetching git log: {str(e)}"
 
 def scan_whitepaper():
-    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    possible_paths = [
-        os.path.join(workspace, 'WHITE_PAPER.md'),
-        os.path.join(workspace, 'TOAI-elegant-lang', 'WHITE_PAPER.md'),
-        os.path.join(workspace, 'docs', 'WHITE_PAPER.md')
-    ]
-    for path in possible_paths:
-        if os.path.exists(path):
-            try:
-                with open(path, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                    lines = content.splitlines()
-                    for line in lines:
-                        if 'version' in line.lower() or 'release' in line.lower():
-                            return line.strip()
-            except Exception as e:
-                print(f"Warning: Could not read whitepaper at {path}: {e}")
-    return "Version info not found in whitepaper."
+    repo_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    wp_path = os.path.join(repo_dir, 'TOAI-elegant-lang', 'WHITEPAPER.md')
+    if os.path.exists(wp_path):
+        try:
+            with open(wp_path, 'r', encoding='utf-8') as f:
+                lines = f.readlines()
+            return "".join(lines[:30])
+        except Exception as e:
+            return f"Error reading whitepaper: {str(e)}"
+    return "Whitepaper not found."
 
 def main():
+    print("Generating release summary...")
+    git_logs = run_git_log()
+    whitepaper_snippet = scan_whitepaper()
+    
+    summary = {
+        "timestamp": datetime.now().isoformat(),
+        "version": "1.0.0",
+        "git_logs": git_logs,
+        "whitepaper_snippet": whitepaper_snippet
+    }
+    
     workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
     output_dir = os.path.join(workspace, 'TOAI_Generated')
     os.makedirs(output_dir, exist_ok=True)
+    output_path = os.path.join(output_dir, 'release_summary.json')
     
-    print("Scanning repository and whitepaper for release summary...")
-    git_commits = get_git_log(15)
-    whitepaper_info = scan_whitepaper()
-    
-    summary = {
-        "timestamp": datetime.datetime.now().isoformat(),
-        "whitepaper_summary": whitepaper_info,
-        "recent_commits": git_commits
-    }
-    
-    output_file = os.path.join(output_dir, 'release_summary.json')
-    with open(output_file, 'w', encoding='utf-8') as f:
+    with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(summary, f, ensure_ascii=False, indent=2)
     
-    print(f"Release summary successfully built and saved to {output_file}")
+    print(f"Release summary successfully written to {output_path}")
 
 if __name__ == '__main__':
-    try:
-        main()
-    except Exception as e:
-        traceback.print_exc()
-        sys.exit(1)
+    main()
