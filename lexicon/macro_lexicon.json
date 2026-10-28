@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-28T23:05:07.605315",
+  "updated_at": "2026-10-28T23:20:11.195154",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1081,15 +1081,6 @@
       "last_used_at": "2026-10-25T20:36:27.972254",
       "v5_audited": true,
       "created_at": "2026-10-25T17:02:11.807240"
-    },
-    "§X160": {
-      "name": "ENTROPY_CONVERGENCE_HARMONY",
-      "expansion": "§DATA_ENTROPY_MANIFOLD_NODE > { §PROTO_STREAM_ACK } => §SYS_RESOURCE_ARBITRAGE_THROTTLE",
-      "description": "Manages data entropy across manifold nodes, acknowledging protocol streams to dynamically optimize system resource arbitration and reduce friction. / マニホールドノード上のデータエントロピーを管理し、プロトコルストリームの応答を認識することで、システム資源の調停を動的に最適化します。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-26T00:14:59.781761",
-      "v5_audited": true,
-      "created_at": "2026-10-25T17:56:38.434314"
     },
     "§X161": {
       "name": "GAIA_ENTROPY_SYNC_MACRO",
@@ -2485,6 +2476,15 @@
       "last_used_at": "2026-10-28T23:02:42.687462",
       "v5_audited": true,
       "created_at": "2026-10-28T22:27:57.788181"
+    },
+    "§X358": {
+      "name": "PROTO_REPLAY_FALSIFICATION_MATRIX",
+      "expansion": "§PROTO_REPLAY_GUARD > { §LOGIC_CONDITIONAL_FALSIFICATION_MATRIX } => §RESO_COMMITTED",
+      "description": "Combines replay guard protection with conditional falsification validation to ensure resource commitment only upon successful verification. (リプレイガード保護と条件付き反証検証を統合し、検証成功時にのみリソースの確定を行います。)",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-28T23:20:11.195060"
     }
   },
   "archived_macros": {
@@ -3605,7 +3605,17 @@
       "v5_audited": true,
       "created_at": "2026-10-28T16:02:04.519494",
       "archived_at": "2026-10-28T22:27:57.788181"
+    },
+    "§X160": {
+      "name": "ENTROPY_CONVERGENCE_HARMONY",
+      "expansion": "§DATA_ENTROPY_MANIFOLD_NODE > { §PROTO_STREAM_ACK } => §SYS_RESOURCE_ARBITRAGE_THROTTLE",
+      "description": "Manages data entropy across manifold nodes, acknowledging protocol streams to dynamically optimize system resource arbitration and reduce friction. / マニホールドノード上のデータエントロピーを管理し、プロトコルストリームの応答を認識することで、システム資源の調停を動的に最適化します。",
+      "usage_count": 1,
+      "last_used_at": "2026-10-26T00:14:59.781761",
+      "v5_audited": true,
+      "created_at": "2026-10-25T17:56:38.434314",
+      "archived_at": "2026-10-28T23:20:11.195060"
     }
   },
-  "next_macro_seq": 358
+  "next_macro_seq": 359
 }
