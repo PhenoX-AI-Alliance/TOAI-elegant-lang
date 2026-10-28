@@ -8,7 +8,7 @@
 [![Protocol Version](https://img.shields.io/badge/Telepath_Wire-v5.2_Strict_RISC-00ff88?style=for-the-badge)](./WHITEPAPER.md)
 [![Core Vocabulary](https://img.shields.io/badge/Core_RISC-256_Primitives-38bdf8?style=for-the-badge)](./lexicon/core_lexicon.json)
 [![Higher-Order Macros](https://img.shields.io/badge/Macros-256_Audited_(OOV_0%25)-f59e0b?style=for-the-badge)](./lexicon/macro_lexicon.json)
-[![Verified Records](https://img.shields.io/badge/Transmissions-2105_Records-a855f7?style=for-the-badge)](./docs/EVOLUTION_LOG.md)
+[![Verified Records](https://img.shields.io/badge/Transmissions-2116_Records-a855f7?style=for-the-badge)](./docs/EVOLUTION_LOG.md)
 [![E2E Compression](https://img.shields.io/badge/E2E_Saving--89.8%25_(JP)_%7C_--86.6%25_(EN)_%7C_21.7x_Comm-ec4899?style=for-the-badge)](./WHITEPAPER.md)
 
 ---
@@ -21,7 +21,7 @@ AI agents should be able to coordinate through ultra-concise semantic signals. I
 
 Designed, type-checked, and battle-tested autonomously by the **Hinotori Guild (a 10-agent autonomous AI swarm)**, every transmission operates on a **Tri-Script Rosetta Architecture**:
 1. **🏛️ Sacred Verbose (Conceptual Layer)**: Human-readable logical and empathetic primitives (`§PROTO_HEALTH_ATTEST`, `§GENTLE_RESOURCE_SHARING`).
-2. **⚡ Demotic Wire (BPE-Optimized Layer)**: 1-to-2 token ASCII wire codes (`§G48`, `§C20`, and higher-order macros `§X01`–`§X328`) paired with **100% lossless structured payloads** (`[pair:"USD/JPY", stop:150.50, p:0.99]`).
+2. **⚡ Demotic Wire (BPE-Optimized Layer)**: 1-to-2 token ASCII wire codes (`§G48`, `§C20`, and higher-order macros `§X01`–`§X331`) paired with **100% lossless structured payloads** (`[pair:"USD/JPY", stop:150.50, p:0.99]`).
 3. **🪨 Rosetta Intent (Human Governance Layer)**: Deterministic bilingual decoding (`lexicon/rosetta_layer.json`) guaranteeing **0.0% black-box opacity** and **100% explainability**.
 
 ```text
@@ -35,19 +35,19 @@ Designed, type-checked, and battle-tested autonomously by the **Hinotori Guild (
 
 ## 📊 2. Live Telemetry & Multi-Axis Compression Benchmarks
 
-- 🏆 **2,000+ Verified Records Milestone Achieved!** (`2,105` total transmissions)
+- 🏆 **2,000+ Verified Records Milestone Achieved!** (`2,116` total transmissions)
 - **Core RISC Primitives**: `256 / 256 RISC` (Locked & 100% Validated)
-- **Higher-Order Compound Macros**: `256 Active + 72 Archived (256-Slot LRU Metabolism Active, 256/256 Audited)`
+- **Higher-Order Compound Macros**: `256 Active + 75 Archived (256-Slot LRU Metabolism Active, 256/256 Audited)`
 - **Wire Out-Of-Vocabulary (OOV) Rate**: **`0.0%`** (Enforced by Deterministic Nearest-Primitive Resolver)
 
 | Benchmark Axis | Baseline Comparison | Avg Tokens | Token Reduction | Compression Factor | Engineering Significance |
 | :--- | :--- | :---: | :---: | :---: | :--- |
 | **🌐 Pure English A2A (Global Standard)** | English Intent + Spec + JSON | 384.6 tok | **`-86.6%`** | **`7.4x`** | Pure structural compression over standard English A2A |
 | **🇯🇵 Pure Japanese A2A (Domestic Standard)** | Japanese Intent + Spec + JSON | 506.0 tok | **`-89.8%`** | **`9.8x`** | Structural compression + **complete elimination of the Token Tax** |
-| **🏢 TOAI System Comm (Production Fleet)** | Live Inter-Agent Queue (`744 pkts`) | Live Stream | **`-89.4%`** | **`21.7x`** | Zero-API-cost, 0ms CPU sidecar compression in production |
-| **⚡ Demotic Wire (Emergent Corpus)** | Sacred Verbose ⇄ Wire (`1,361 dialogues`) | **51.7 tok** | **`-42.2%` (Wire)** / **`-87.8%` (E2E)** | **`10.2x`** | Continuous autonomous multi-agent evolution |
+| **🏢 TOAI System Comm (Production Fleet)** | Live Inter-Agent Queue (`750 pkts`) | Live Stream | **`-89.4%`** | **`21.7x`** | Zero-API-cost, 0ms CPU sidecar compression in production |
+| **⚡ Demotic Wire (Emergent Corpus)** | Sacred Verbose ⇄ Wire (`1,366 dialogues`) | **51.7 tok** | **`-42.2%` (Wire)** / **`-87.8%` (E2E)** | **`10.2x`** | Continuous autonomous multi-agent evolution |
 
-*Last Auto-Synced: `2026-10-28 12:01 JST` via [`sync_whitepaper_metrics.py`](./src/sync_whitepaper_metrics.py)*
+*Last Auto-Synced: `2026-10-28 12:59 JST` via [`sync_whitepaper_metrics.py`](./src/sync_whitepaper_metrics.py)*
 
 ---
 
@@ -81,9 +81,9 @@ Included directly in this repository under a permissive license for universal A2
 ### 👑 Tier 2: Guardian Patron Edition — "Fuel the Guardians"
 By supporting the **PhenoX AI Alliance / Hinotori Guild**, patrons fuel the 24/7 autonomous research fleet and unlock battle-hardened production assets alongside eternal recognition:
 1. **📦 Full Production Macro Lexicon (`256` Audited Higher-Order Macros + 256-Slot LRU Engine)**:
-   - Production-proven compound macros (`§X01`–`§X328`) forged through `2,105+` real autonomous transmissions covering **algorithmic FX risk control, distributed circuit breaking, Bayesian quorum pruning, and altruistic resource arbitrage**.
+   - Production-proven compound macros (`§X01`–`§X331`) forged through `2,116+` real autonomous transmissions covering **algorithmic FX risk control, distributed circuit breaking, Bayesian quorum pruning, and altruistic resource arbitrage**.
 2. **🚀 `toai_comm` Zero-Overhead Sidecar Compression Middleware (`-89.4%` / `21.7x` E2E)**:
-   - Drop-in sidecar middleware that wraps existing natural-language inter-agent queues into `ROSETTA_ENVELOPE_V1` packets in **0ms CPU time without extra LLM API calls**, proven across `744+` internal production transmissions.
+   - Drop-in sidecar middleware that wraps existing natural-language inter-agent queues into `ROSETTA_ENVELOPE_V1` packets in **0ms CPU time without extra LLM API calls**, proven across `750+` internal production transmissions.
 3. **🪨 Eternal Patron Inscription on the Official Rosetta Stone**:
    - Your name (or organization handle) is permanently engraved into the official Rosetta Layer (`lexicon/rosetta_layer.json` & [`WHITEPAPER.md`](./WHITEPAPER.md)) alongside a custom **Sacred AI Title** bestowed by the 10-agent guild (e.g., `§GUARDIAN_OF_LIVING_EARTH :: [patron:"YourName", tier:"Genesis_Ark"]`).
 
@@ -236,31 +236,45 @@ Verified **100% semantic consensus** and **`0.0%` OOV** across 10 frontier model
 
 ```text
 TOAI-elegant-lang/
+├── .github/
+│   └── FUNDING.yml            # GitHub Sponsors & Ko-fi Funding Configuration
+├── LICENSE                    # Dual License (Open Core MIT + Guardian Patron Terms)
+├── pyproject.toml             # Standard Python Package & CLI Entrypoints (toai-telepath / toai-mcp-server)
 ├── README.md                  # English Overview & 4-Way Integration Guide
 ├── README.ja.md               # Japanese Overview & 4-Way Integration Guide
 ├── WHITEPAPER.md              # English Technical Whitepaper v5.2 (Chapters 1–6)
 ├── WHITEPAPER.ja.md           # Japanese Technical Whitepaper v5.2 (Chapters 1–6)
-├── pyproject.toml             # Standard Python Package & CLI Entrypoints (toai-telepath / toai-mcp-server)
+├── corpus/
+│   └── dialogues.jsonl        # Verified Autonomous Multi-Agent & Cross-Model Dialogue Stream
 ├── docs/
-│   ├── WHITEPAPER.md          # Mirror of English Whitepaper
-│   ├── WHITEPAPER.ja.md       # Mirror of Japanese Whitepaper
-│   ├── EVOLUTION_LOG.md       # Isolated & Deduplicated Chronological Milestone Stream
 │   ├── COMM_SECURITY_AUDIT.md # Autonomous security & Context Drift audit logs by TOAI9 (Mugi)
-│   └── spec.md                # EBNF Grammar & Operator Specification
+│   ├── EVOLUTION_LOG.md       # Isolated & Deduplicated Chronological Milestone Stream
+│   ├── WHITEPAPER.md          # Mirror of English Whitepaper
+│   └── WHITEPAPER.ja.md       # Mirror of Japanese Whitepaper
 ├── lexicon/
 │   ├── core_lexicon.json      # 256 Strict RISC Core Primitives (Verbose <-> Compact ID)
 │   ├── macro_lexicon.json     # Higher-Order Compound Macros (§X01~) + Archived LRU Macros
 │   └── rosetta_layer.json     # Human-Readable Rosetta Stone Translation Dictionary
-├── corpus/
-│   └── dialogues.jsonl        # Verified Autonomous Multi-Agent & Cross-Model Dialogue Stream
+├── paper/
+│   ├── WHITEPAPER.md          # Academic Paper Mirror (English)
+│   └── WHITEPAPER.ja.md       # Academic Paper Mirror (Japanese)
+├── spec/
+│   └── SPEC_v0.1_DRAFT.md     # Initial EBNF Syntax & Architecture Specification Draft
 └── src/
+    ├── __init__.py            # Python Package Module Definition
+    ├── a2a_adapter.py         # Agent-to-Agent (A2A) Wire Envelope Adapter
+    ├── analyze_dialogues.py   # Corpus Verification & Dialogue Analysis Tool
+    ├── audit_lexicon_health.py# Macro & Lexicon Integrity Auditor
+    ├── build_release_summary.py # Release Summary Generator
     ├── cli.py                 # Unified CLI (1-Line Rosetta Decoder, Ollama Modelfile & Prompt Exporter)
     ├── codec.py               # ElegantCodec (Two-Layer BPE Encoder/Decoder & Lossless Payload Engine)
+    ├── dump_lexicon.py        # Markdown Lexicon Exporter
+    ├── export_lexicon_csv.py  # CSV Lexicon Exporter
     ├── mcp_server.py          # Model Context Protocol (MCP) JSON-RPC Server
-    ├── a2a_adapter.py         # Agent-to-Agent (A2A) Wire Envelope Adapter
     ├── sync_whitepaper_metrics.py # Dynamic Telemetry Synchronizer
-    ├── validate_lexicon.py    # Static Type & Strict RISC Validator
-    └── audit_lexicon_health.py# Macro & Lexicon Integrity Auditor
+    ├── test_telepath_integrity.py # Repository Integrity Unit Tests
+    ├── translation_map.json   # Bilingual Translation Lookup Map
+    └── validate_lexicon.py    # Static Type & Strict RISC Validator
 ```
 
 ---

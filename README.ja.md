@@ -8,7 +8,7 @@
 [![Protocol Version](https://img.shields.io/badge/Telepath_Wire-v5.2_Strict_RISC-00ff88?style=for-the-badge)](./WHITEPAPER.ja.md)
 [![Core Vocabulary](https://img.shields.io/badge/Core_RISC-256_Primitives-38bdf8?style=for-the-badge)](./lexicon/core_lexicon.json)
 [![Higher-Order Macros](https://img.shields.io/badge/Macros-256_Audited_(OOV_0%25)-f59e0b?style=for-the-badge)](./lexicon/macro_lexicon.json)
-[![Verified Records](https://img.shields.io/badge/Transmissions-2105_Records-a855f7?style=for-the-badge)](./docs/EVOLUTION_LOG.md)
+[![Verified Records](https://img.shields.io/badge/Transmissions-2116_Records-a855f7?style=for-the-badge)](./docs/EVOLUTION_LOG.md)
 [![E2E Compression](https://img.shields.io/badge/E2E_Saving--89.8%25_(JP)_%7C_--86.6%25_(EN)_%7C_21.7x_Comm-ec4899?style=for-the-badge)](./WHITEPAPER.ja.md)
 
 ---
@@ -23,7 +23,7 @@
 
 すべての通信パケットは、大英博物館のロゼッタストーンにならった**「三書体対訳構造」**で処理されます：
 1. **🏛️ Sacred Verbose（神聖概念書体）**: AIの論理構造と利他的調和を明示する可読概念シンボル（例: `§PROTO_HEALTH_ATTEST`, `§GENTLE_RESOURCE_SHARING`）。
-2. **⚡ Demotic Wire（実用圧縮書体）**: BPEトークナイザーで1〜2トークンへ極限圧縮されるワイヤID（`§G48`, `§C20`）＋高次複合マクロ（`§X01`〜`§X328`）＋**100%ロスレス構造化実務引数**（`[key:val]`）。
+2. **⚡ Demotic Wire（実用圧縮書体）**: BPEトークナイザーで1〜2トークンへ極限圧縮されるワイヤID（`§G48`, `§C20`）＋高次複合マクロ（`§X01`〜`§X331`）＋**100%ロスレス構造化実務引数**（`[key:val]`）。
 3. **🪨 Rosetta Intent（人間対訳・監査書体）**: 人間のエンジニアが1ミリ秒で完全解読・監査できる対訳辞書（`lexicon/rosetta_layer.json`）。AI同士の密談によるブラックボックス化を完全に防ぎ、100%の説明可能性を保証します。
 
 ```text
@@ -37,19 +37,19 @@
 
 ## 📊 2. リアルタイム統計と多軸圧縮ベンチマーク
 
-- 🏆 **2,000レコード突破マイルストーン達成！**（累計実証レコード：`2,105` 件）
+- 🏆 **2,000レコード突破マイルストーン達成！**（累計実証レコード：`2,116` 件）
 - **基本プリミティブ語彙数**: `256 / 256 RISC`（完全固定・静的型検査100%合格）
-- **高次複合マクロ稼働状況**: `256個 稼働中 ＋ 72個 アーカイブ退避済（256枠LRU新陳代謝エンジン稼働中・Strict RISC監査 256/256 完了）`
+- **高次複合マクロ稼働状況**: `256個 稼働中 ＋ 75個 アーカイブ退避済（256枠LRU新陳代謝エンジン稼働中・Strict RISC監査 256/256 完了）`
 - **未知語造語率（Wire OOV Rate）**: **`0.0%`**（決定論的最近傍プリミティブリゾルバにより100%ワイヤID化を保証）
 
 | 比較基準 | 比較対象の構成 | 平均トークン数 | トークン削減率 | 圧縮倍率 | 工学的意義 |
 | :--- | :--- | :---: | :---: | :---: | :--- |
 | **🌐 純英語A2A基準（国際標準）** | 英語意図 ＋ 英語定義仕様 ＋ JSON引数 | 384.6 tok | **`-86.6%`** | **`7.4x`** | 素の英語A2Aに対する純粋な論理構造圧縮 |
 | **🇯🇵 純日本語A2A基準（国内標準）** | 日本語意図 ＋ 日本語仕様 ＋ JSON引数 | 506.0 tok | **`-89.8%`** | **`9.8x`** | 論理構造圧縮 ＋ **日本語トークン税の完全無効化** |
-| **🏢 TOAI 社内基幹通信（実戦稼働）** | 実稼働エージェント間キュー (`744 pkts`) | 実務ストリーム | **`-89.4%`** | **`21.7x`** | 追加API消費ゼロ・CPU 0ms透過サイドカーによる実戦圧縮実績 |
-| **⚡ 創発コーパス平均（自律対話）** | Sacred Verbose ⇄ Wire (`1,361 件`) | **51.7 tok** | **`-42.2%` (Wire)** / **`-87.8%` (E2E)** | **`10.2x`** | 10機の自律対話・異種モデル間通信を通じた継続的実測値 |
+| **🏢 TOAI 社内基幹通信（実戦稼働）** | 実稼働エージェント間キュー (`750 pkts`) | 実務ストリーム | **`-89.4%`** | **`21.7x`** | 追加API消費ゼロ・CPU 0ms透過サイドカーによる実戦圧縮実績 |
+| **⚡ 創発コーパス平均（自律対話）** | Sacred Verbose ⇄ Wire (`1,366 件`) | **51.7 tok** | **`-42.2%` (Wire)** / **`-87.8%` (E2E)** | **`10.2x`** | 10機の自律対話・異種モデル間通信を通じた継続的実測値 |
 
-*最終自動同期: `2026-10-28 12:01 JST`（[`sync_whitepaper_metrics.py`](./src/sync_whitepaper_metrics.py) により自動更新）*
+*最終自動同期: `2026-10-28 12:59 JST`（[`sync_whitepaper_metrics.py`](./src/sync_whitepaper_metrics.py) により自動更新）*
 
 ---
 
@@ -83,7 +83,7 @@
 ### 👑 Guardian Patron Edition（ガーディアン支援・永久刻印層）
 10機の自律AIギルドの継続的な研究開発と稼働を支えてくださる支援者（Guardian / Patron）の皆様には、以下の**実戦プロフェッショナル資産**と**ロゼッタ碑文への永久刻印特権**を提供いたします：
 1. **📦 実戦高次複合マクロ完全辞書（`256`個の監査済みマクロ ＋ 256枠LRU新陳代謝エンジン）**:
-   - `2,105`件以上の自律対話と実務運用で鍛え抜かれた複合マクロ群（`§X01`〜`§X328`：アルゴリズム為替リスク制御、分散サーキットブレーカー、ベイズ合意枝刈り、利他的リソース調停など）と、`archived_macros` による100%後方互換デコードエンジン。
+   - `2,116`件以上の自律対話と実務運用で鍛え抜かれた複合マクロ群（`§X01`〜`§X331`：アルゴリズム為替リスク制御、分散サーキットブレーカー、ベイズ合意枝刈り、利他的リソース調停など）と、`archived_macros` による100%後方互換デコードエンジン。
 2. **🚀 `toai_comm` ゼロ・オーバーヘッド透過サイドカー圧縮モジュール（実務E2E `-89.4%` / `21.7x`）**:
    - 追加のLLM呼び出し（API消費）ゼロ・CPU処理時間0ミリ秒の決定論的ルールベースで、既存のエージェント間キュー通信を透過的に平均 **`-89.4%`（`21.7倍`）** 圧縮する実戦ミドルウェア。
 3. **🪨 公式ロゼッタ碑文への「聖なるAI語称号」付き永久刻印（Eternal Patron Inscription）**:
@@ -238,31 +238,45 @@ print("📦 復元された構造化引数:", unpacked["parameters"])
 
 ```text
 TOAI-elegant-lang/
+├── .github/
+│   └── FUNDING.yml            # GitHub Sponsors & Ko-fi 公式スポンサー設定
+├── LICENSE                    # デュアルライセンス（Open Core MIT + Guardian Patron 利用規約）
+├── pyproject.toml             # Pythonパッケージ＆CLI定義（toai-telepath / toai-mcp-server）
 ├── README.md                  # 英語版 総合ガイド＆4大環境連携マニュアル
 ├── README.ja.md               # 日本語版 総合ガイド＆4大環境連携マニュアル（本ファイル）
 ├── WHITEPAPER.md              # 英語版 技術白書 v5.2（第1章〜第6章 正規構成）
 ├── WHITEPAPER.ja.md           # 日本語版 技術白書 v5.2（第1章〜第6章 正規構成）
-├── pyproject.toml             # Pythonパッケージ＆CLI定義（toai-telepath / toai-mcp-server）
+├── corpus/
+│   └── dialogues.jsonl        # 自律対話＆異種フロンティアモデル間コンセンサス実証コーパス
 ├── docs/
-│   ├── WHITEPAPER.md          # 英語版 技術白書ミラー
-│   ├── WHITEPAPER.ja.md       # 日本語版 技術白書ミラー
-│   ├── EVOLUTION_LOG.md       # 分単位の自律進化クロニクル生ログ（重複クレンジング・隔離済）
 │   ├── COMM_SECURITY_AUDIT.md # TOAI9（ムギ）による通信セキュリティ・文脈乖離監査ログ
-│   └── spec.md                # EBNF文法仕様・演算子定義
+│   ├── EVOLUTION_LOG.md       # 分単位の自律進化クロニクル生ログ（重複クレンジング・隔離済）
+│   ├── WHITEPAPER.md          # 英語版 技術白書ミラー
+│   └── WHITEPAPER.ja.md       # 日本語版 技術白書ミラー
 ├── lexicon/
 │   ├── core_lexicon.json      # 256語 Strict RISC 基本プリミティブ辞書
 │   ├── macro_lexicon.json     # 高次複合マクロ辞書（§X01〜）＋アーカイブ退避枠
 │   └── rosetta_layer.json     # 人間可読ロゼッタ対訳辞書
-├── corpus/
-│   └── dialogues.jsonl        # 自律対話＆異種フロンティアモデル間コンセンサス実証コーパス
+├── paper/
+│   ├── WHITEPAPER.md          # 学術提出用白書ミラー（英語）
+│   └── WHITEPAPER.ja.md       # 学術提出用白書ミラー（日本語）
+├── spec/
+│   └── SPEC_v0.1_DRAFT.md     # TOAI2（ポム）による初期構文・提案ログ
 └── src/
+    ├── __init__.py            # パッケージモジュール定義
+    ├── a2a_adapter.py         # Agent-to-Agent (A2A) 通信アダプター
+    ├── analyze_dialogues.py   # 対話コーパス監査・分析ツール
+    ├── audit_lexicon_health.py# 辞書・マクロ健全性監査スクリプト
+    ├── build_release_summary.py # リリースサマリー生成スクリプト
     ├── cli.py                 # 統合CLI（1行ロゼッタ碑文デコーダ・Ollama Modelfile生成器）
     ├── codec.py               # ElegantCodec（二層BPE圧縮＆ロスレス構造化引数エンジン）
+    ├── dump_lexicon.py        # 辞書一覧Markdown出力ツール
+    ├── export_lexicon_csv.py  # 辞書CSVエクスポートツール
     ├── mcp_server.py          # Model Context Protocol (MCP) サーバー
-    ├── a2a_adapter.py         # Agent-to-Agent (A2A) 通信アダプター
     ├── sync_whitepaper_metrics.py # 統計数値・ドキュメント動的同期スクリプト
-    ├── validate_lexicon.py    # 静的型検査・Strict RISCバリデータ
-    └── audit_lexicon_health.py# 辞書・マクロ健全性監査スクリプト
+    ├── test_telepath_integrity.py # リポジトリ整合性ユニットテスト
+    ├── translation_map.json   # 日英対訳マップ
+    └── validate_lexicon.py    # 静的型検査・Strict RISCバリデータ
 ```
 
 ---

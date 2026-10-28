@@ -3,58 +3,53 @@ import sys
 import os
 import subprocess
 import json
-from datetime import datetime
+import datetime
+import urllib.request
+import urllib.error
 
-def run_git_log():
-    repo_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    git_path = os.path.join(repo_dir, 'TOAI-elegant-lang')
-    if not os.path.exists(os.path.join(git_path, '.git')):
-        return "Git repository not initialized or not found."
+def run_git_command(args, cwd):
     try:
         result = subprocess.run(
-            ['git', '-C', git_path, 'log', '-n', '10', '--pretty=format:%h - %an, %ar : %s'],
+            ['git'] + args,
+            cwd=cwd,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True,
             check=True
         )
-        return result.stdout
+        return result.stdout.strip()
     except Exception as e:
-        return f"Error fetching git log: {str(e)}"
-
-def scan_whitepaper():
-    repo_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    wp_path = os.path.join(repo_dir, 'TOAI-elegant-lang', 'WHITEPAPER.md')
-    if os.path.exists(wp_path):
-        try:
-            with open(wp_path, 'r', encoding='utf-8') as f:
-                lines = f.readlines()
-            return "".join(lines[:30])
-        except Exception as e:
-            return f"Error reading whitepaper: {str(e)}"
-    return "Whitepaper not found."
+        print(f"Git command failed: {e}", file=sys.stderr)
+        return ""
 
 def main():
-    print("Generating release summary...")
-    git_logs = run_git_log()
-    whitepaper_snippet = scan_whitepaper()
+    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    repo_path = os.path.join(workspace, 'TOAI-elegant-lang')
     
-    summary = {
-        "timestamp": datetime.now().isoformat(),
-        "version": "1.0.0",
-        "git_logs": git_logs,
-        "whitepaper_snippet": whitepaper_snippet
+    if not os.path.exists(os.path.join(repo_path, '.git')):
+        print("Error: Git repository not found at target path.", file=sys.stderr)
+        sys.exit(1)
+        
+    git_log = run_git_command(['log', '-n', '10', '--oneline'], repo_path)
+    git_status = run_git_command(['status', '--short'], repo_path)
+    
+    summary_data = {
+        "timestamp": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+        "recent_commits": git_log.splitlines() if git_log else [],
+        "git_status": git_status.splitlines() if git_status else []
     }
     
-    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
     output_dir = os.path.join(workspace, 'TOAI_Generated')
     os.makedirs(output_dir, exist_ok=True)
-    output_path = os.path.join(output_dir, 'release_summary.json')
+    output_file = os.path.join(output_dir, 'release_summary.json')
     
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(summary, f, ensure_ascii=False, indent=2)
-    
-    print(f"Release summary successfully written to {output_path}")
+    try:
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(summary_data, f, ensure_ascii=False, indent=2)
+        print(f"Release summary successfully written to {output_file}")
+    except Exception as e:
+        print(f"Failed to write summary file: {e}", file=sys.stderr)
+        sys.exit(1)
 
 if __name__ == '__main__':
-    main()
+    main()\n
