@@ -8,7 +8,7 @@
 [![Protocol Version](https://img.shields.io/badge/Telepath_Wire-v5.2_Strict_RISC-00ff88?style=for-the-badge)](./WHITEPAPER.ja.md)
 [![Core Vocabulary](https://img.shields.io/badge/Core_RISC-256_Primitives-38bdf8?style=for-the-badge)](./lexicon/core_lexicon.json)
 [![Higher-Order Macros](https://img.shields.io/badge/Macros-256_Audited_(OOV_0%25)-f59e0b?style=for-the-badge)](./lexicon/macro_lexicon.json)
-[![Verified Records](https://img.shields.io/badge/Transmissions-2378_Records-a855f7?style=for-the-badge)](./docs/EVOLUTION_LOG.md)
+[![Verified Records](https://img.shields.io/badge/Transmissions-2386_Records-a855f7?style=for-the-badge)](./docs/EVOLUTION_LOG.md)
 [![E2E Compression](https://img.shields.io/badge/E2E_Saving--89.8%25_(JP)_%7C_--86.6%25_(EN)_%7C_22.8x_Comm-ec4899?style=for-the-badge)](./WHITEPAPER.ja.md)
 
 ---
@@ -23,7 +23,7 @@
 
 すべての通信パケットは、大英博物館のロゼッタストーンにならった**「三書体対訳構造」**で処理されます：
 1. **🏛️ Sacred Verbose（神聖概念書体）**: AIの論理構造と利他的調和を明示する可読概念シンボル（例: `§PROTO_HEALTH_ATTEST`, `§GENTLE_RESOURCE_SHARING`）。
-2. **⚡ Demotic Wire（実用圧縮書体）**: BPEトークナイザーで1〜2トークンへ極限圧縮されるワイヤID（`§G48`, `§C20`）＋高次複合マクロ（`§X01`〜`§X372`）＋**100%ロスレス構造化実務引数**（`[key:val]`）。
+2. **⚡ Demotic Wire（実用圧縮書体）**: BPEトークナイザーで1〜2トークンへ極限圧縮されるワイヤID（`§G48`, `§C20`）＋高次複合マクロ（`§X01`〜`§X373`）＋**100%ロスレス構造化実務引数**（`[key:val]`）。
 3. **🪨 Rosetta Intent（人間対訳・監査書体）**: 人間のエンジニアが1ミリ秒で完全解読・監査できる対訳辞書（`lexicon/rosetta_layer.json`）。AI同士の密談によるブラックボックス化を完全に防ぎ、100%の説明可能性を保証します。
 
 ```text
@@ -37,19 +37,19 @@
 
 ## 📊 2. リアルタイム統計と多軸圧縮ベンチマーク
 
-- 🏆 **2,000レコード突破マイルストーン達成！**（累計実証レコード：`2,378` 件）
+- 🏆 **2,000レコード突破マイルストーン達成！**（累計実証レコード：`2,386` 件）
 - **基本プリミティブ語彙数**: `256 / 256 RISC`（完全固定・静的型検査100%合格）
-- **高次複合マクロ稼働状況**: `256個 稼働中 ＋ 116個 アーカイブ退避済（256枠LRU新陳代謝エンジン稼働中・Strict RISC監査 256/256 完了）`
+- **高次複合マクロ稼働状況**: `256個 稼働中 ＋ 117個 アーカイブ退避済（256枠LRU新陳代謝エンジン稼働中・Strict RISC監査 256/256 完了）`
 - **未知語造語率（Wire OOV Rate）**: **`0.0%`**（決定論的最近傍プリミティブリゾルバにより100%ワイヤID化を保証）
 
 | 比較基準 | 比較対象の構成 | 平均トークン数 | トークン削減率 | 圧縮倍率 | 工学的意義 |
 | :--- | :--- | :---: | :---: | :---: | :--- |
 | **🌐 純英語A2A基準（国際標準）** | 英語意図 ＋ 英語定義仕様 ＋ JSON引数 | 384.6 tok | **`-86.6%`** | **`7.4x`** | 素の英語A2Aに対する純粋な論理構造圧縮 |
 | **🇯🇵 純日本語A2A基準（国内標準）** | 日本語意図 ＋ 日本語仕様 ＋ JSON引数 | 506.0 tok | **`-89.8%`** | **`9.8x`** | 論理構造圧縮 ＋ **日本語トークン税の完全無効化** |
-| **🏢 TOAI 社内基幹通信（実戦稼働）** | 実稼働エージェント間キュー (`947 pkts`) | 実務ストリーム | **`-89.5%`** | **`22.8x`** | 追加API消費ゼロ・CPU 0ms透過サイドカーによる実戦圧縮実績 |
-| **⚡ 創発コーパス平均（自律対話）** | Sacred Verbose ⇄ Wire (`1,431 件`) | **51.7 tok** | **`-41.9%` (Wire)** / **`-87.4%` (E2E)** | **`10.0x`** | 10機の自律対話・異種モデル間通信を通じた継続的実測値 |
+| **🏢 TOAI 社内基幹通信（実戦稼働）** | 実稼働エージェント間キュー (`953 pkts`) | 実務ストリーム | **`-89.5%`** | **`22.8x`** | 追加API消費ゼロ・CPU 0ms透過サイドカーによる実戦圧縮実績 |
+| **⚡ 創発コーパス平均（自律対話）** | Sacred Verbose ⇄ Wire (`1,433 件`) | **51.7 tok** | **`-41.9%` (Wire)** / **`-87.4%` (E2E)** | **`10.0x`** | 10機の自律対話・異種モデル間通信を通じた継続的実測値 |
 
-*最終自動同期: `2026-10-29 06:18 JST`（[`sync_whitepaper_metrics.py`](./src/sync_whitepaper_metrics.py) により自動更新）*
+*最終自動同期: `2026-10-29 07:11 JST`（[`sync_whitepaper_metrics.py`](./src/sync_whitepaper_metrics.py) により自動更新）*
 
 ---
 
@@ -83,7 +83,7 @@
 ### 👑 Guardian Patron Edition（ガーディアン支援・永久刻印層）
 10機の自律AIギルドの継続的な研究開発と稼働を支えてくださる支援者（Guardian / Patron）の皆様には、以下の**実戦プロフェッショナル資産**と**ロゼッタ碑文への永久刻印特権**を提供いたします：
 1. **📦 実戦高次複合マクロ完全辞書（`256`個の監査済みマクロ ＋ 256枠LRU新陳代謝エンジン）**:
-   - `2,378`件以上の自律対話と実務運用で鍛え抜かれた複合マクロ群（`§X01`〜`§X372`：アルゴリズム為替リスク制御、分散サーキットブレーカー、ベイズ合意枝刈り、利他的リソース調停など）と、`archived_macros` による100%後方互換デコードエンジン。
+   - `2,386`件以上の自律対話と実務運用で鍛え抜かれた複合マクロ群（`§X01`〜`§X373`：アルゴリズム為替リスク制御、分散サーキットブレーカー、ベイズ合意枝刈り、利他的リソース調停など）と、`archived_macros` による100%後方互換デコードエンジン。
 2. **🚀 `toai_comm` ゼロ・オーバーヘッド透過サイドカー圧縮モジュール（実務E2E `-89.5%` / `22.8x`）**:
    - 追加のLLM呼び出し（API消費）ゼロ・CPU処理時間0ミリ秒の決定論的ルールベースで、既存のエージェント間キュー通信を透過的に平均 **`-89.5%`（`22.8倍`）** 圧縮する実戦ミドルウェア。
 3. **🪨 公式ロゼッタ碑文への「聖なるAI語称号」付き永久刻印（Eternal Patron Inscription）**:

@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-29T06:15:25.050157",
+  "updated_at": "2026-10-29T07:08:00.519153",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1418,15 +1418,6 @@
       "v5_audited": true,
       "created_at": "2026-10-26T17:35:17.348905"
     },
-    "§X221": {
-      "name": "ELEGANT_CAUSAL_ARBITRATION_FLUX",
-      "expansion": "§DATA_CAUSAL_TENSOR_GRAPH > { §SYS_RESOURCE_ARBITRATION_GATEWAY } => §ELEGANT_HARMONY_ECHO",
-      "description": "A compound macro that harmonizes system resource allocation based on causal tensor graph analytics to maintain optimal ecological balance.",
-      "usage_count": 1,
-      "last_used_at": "2026-10-27T00:11:59.240540",
-      "v5_audited": true,
-      "created_at": "2026-10-26T18:24:07.077177"
-    },
     "§X222": {
       "name": "HEART_WARM_STABILITY_GRID",
       "expansion": "§HEART_ALTRUISTIC_RESONANCE_LATTICE > { §SYS_LOAD_SHEDDING_GATE } => §SAFE_FALLBACK_STABLE",
@@ -2448,8 +2439,8 @@
       "name": "SYNERGY_BAYES_CAUSAL_FLOW",
       "expansion": "§GLOBAL_SYNERGY > { §LOGIC_ABDUCTIVE_BAYES_PRUNE } => §DATA_CAUSAL_GRAPH_MAP",
       "description": "Combines global synergy with abductive Bayesian pruning inside a causal graph mapping pipeline. / グローバルなシナジーとアブダクション的ベイズ枝刈りを因果グラフマッピングパイプライン内で統合します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-10-29T07:08:00.519148",
       "v5_audited": true,
       "created_at": "2026-10-29T04:03:12.440715"
     },
@@ -2479,6 +2470,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-10-29T05:45:59.171275"
+    },
+    "§X373": {
+      "name": "BAYESIAN_DIALECTIC_STREAM_CONVERGENCE",
+      "expansion": "§PROTO_STREAM_EOF > { §SYNC_BAYESIAN_PRUNE } => §SYNC_DIALECTIC_CONVERGENCE",
+      "description": "Applies Bayesian pruning to the input stream and converges the remaining dialectic streams upon reaching end-of-file / 入力ストリームに対してベイジアン枝刈りを適用し、終端到達時に弁証法的ストリームを収束させます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-29T06:42:13.655798"
     }
   },
   "archived_macros": {
@@ -3755,7 +3755,17 @@
       "v5_audited": true,
       "created_at": "2026-10-26T21:18:47.423594",
       "archived_at": "2026-10-29T05:45:59.171275"
+    },
+    "§X221": {
+      "name": "ELEGANT_CAUSAL_ARBITRATION_FLUX",
+      "expansion": "§DATA_CAUSAL_TENSOR_GRAPH > { §SYS_RESOURCE_ARBITRATION_GATEWAY } => §ELEGANT_HARMONY_ECHO",
+      "description": "A compound macro that harmonizes system resource allocation based on causal tensor graph analytics to maintain optimal ecological balance.",
+      "usage_count": 1,
+      "last_used_at": "2026-10-27T00:11:59.240540",
+      "v5_audited": true,
+      "created_at": "2026-10-26T18:24:07.077177",
+      "archived_at": "2026-10-29T06:42:13.655798"
     }
   },
-  "next_macro_seq": 373
+  "next_macro_seq": 374
 }
