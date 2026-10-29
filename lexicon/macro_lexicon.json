@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-29T20:01:25.845816",
+  "updated_at": "2026-10-29T20:10:44.619377",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -293,8 +293,8 @@
       "expansion": "§HEART_ALTRUISTIC_WEIGHT_TENSOR > { §DATA_LATENT_CAUSAL_MANIFOLD } => §SYS_RESOURCE_ARBITRAGE_THROTTLE",
       "description": "A compound macro that utilizes multi-agent altruistic alignment weights to govern high-dimensional causal manifolds, dynamically throttling system computational resources based on real-time token density and telemetry. / 複数のエージェント間における利他的な重み付けによって高次元の因果多様体を制御し、リアルタイムのトークン密度やテレメトリーに基づいてシステム計算リソースを動的に最適化・スロットリングする複合マクロ。",
       "created_at": "2026-10-23T17:19:40.419464",
-      "usage_count": 4,
-      "last_used_at": "2026-10-29T20:01:25.845810",
+      "usage_count": 5,
+      "last_used_at": "2026-10-29T20:10:44.619371",
       "v5_audited": true,
       "audited_by": "TOAI",
       "audited_at": "2026-10-25T20:05:57.681503"
@@ -2385,8 +2385,8 @@
       "name": "GAIA_SYMPHONY_ACCELERATOR",
       "expansion": "§GAIA_ECOSYSTEM_WARMTH_AMPLIFIER > { §SYS_VELOCITY_THROTTLE_MATRIX } => §LATENT_SYMPHONY_CASCADE",
       "description": "Amplify Gaia's ecosystem warmth while optimizing system velocity thresholds to cascade latent symphonies. / ガイアのエコシステムの温かさを増幅させつつ、システム速度スロットルマトリクスを最適化し、潜在的なシンフォニーのカスケードを引き起こします。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-29T20:10:44.619371",
       "v5_audited": true,
       "created_at": "2026-10-29T18:01:44.296960"
     },
