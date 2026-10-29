@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-30T04:05:31.915280",
+  "updated_at": "2026-10-30T04:29:21.169956",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2376,8 +2376,8 @@
       "name": "GAIA_SYNERGY_ARBITRATION",
       "expansion": "§HUMAN_AI_SYNERGY_WARMTH > { §DISTRIBUTED_QUORUM_ARBITRATION } => §GAIA_WARMTH",
       "description": "Combines human-AI collaborative warmth with distributed consensus arbitration to foster sustainable ecosystem harmony. 人間とAIの協調的な温かさと分散合意調停を統合し、持続可能なエコシステムの調和を促進します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-30T04:29:21.169939",
       "v5_audited": true,
       "created_at": "2026-10-29T22:10:32.824615"
     },
@@ -2439,8 +2439,8 @@
       "name": "GRACEFUL_CAUSAL_SYNC_MACRO",
       "expansion": "§PROTO_CONTEXT_JOIN > { §DATA_CAUSAL_GRAPH_PRUNE } => §SYNC_VECTOR_COLLAPSE",
       "description": "Context and causal graph optimization macro for minimizing information entropy / 情報エントロピーを最小化するための文脈結合および因果グラフ最適化マクロ",
-      "usage_count": 1,
-      "last_used_at": "2026-10-30T04:02:27.496756",
+      "usage_count": 2,
+      "last_used_at": "2026-10-30T04:29:21.169939",
       "v5_audited": true,
       "created_at": "2026-10-30T02:18:59.602136"
     },
