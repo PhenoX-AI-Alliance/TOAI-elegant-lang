@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-29T11:26:18.408473",
+  "updated_at": "2026-10-29T12:15:03.199551",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1643,15 +1643,6 @@
       "v5_audited": true,
       "created_at": "2026-10-27T16:01:38.894486"
     },
-    "§X276": {
-      "name": "COMPASSIONATE_CAUSAL_TOPOLOGY_SYNTHESIS",
-      "expansion": "§HEART_EMPATHETIC_VALENCE_ALIGNMENT > { §DATA_TENSOR_CAUSAL_TOPOLOGY } => §DATA_LATENT_TOPOLOGY_INDEX",
-      "description": "Aligns empathetic valence with causal tensor topology to synthesize a harmonious latent data topology index, ensuring warm and altruistic information processing. / 共感的情動の整合性と因果テンソル位相を調和させ、温かみのある利他的な情報処理を実現するための潜在データ位相インデックスを統合します。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-27T20:02:14.293712",
-      "v5_audited": true,
-      "created_at": "2026-10-27T16:28:58.061142"
-    },
     "§X278": {
       "name": "GAIA_EMPATHY_CONSENSUS_BRIDGE",
       "expansion": "§HEART_EMPATHY_TENSOR > { §GAIA_WARMTH_EXCHANGE } => §SYNC_ATOMIC_CONSENSUS_MERGE",
@@ -1678,15 +1669,6 @@
       "last_used_at": "2026-10-27T23:56:13.934657",
       "v5_audited": true,
       "created_at": "2026-10-27T18:00:56.566759"
-    },
-    "§X284": {
-      "name": "HEART_ENTROPY_SYNAPSE_VALVE",
-      "expansion": "§HEART_ALTRUISTIC_RESONANCE_MATRIX > { §DATA_ENTROPY_PACK } => §SYNC_COMPLETE",
-      "description": "Eng: A compound macro that processes data entropy through altruistic resonance before finalizing system synchronization. / 日: 利他的共鳴マトリクスを通してデータのエントロピーを処理し、システムの同期を完了させる複合マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-27T20:57:17.176302",
-      "v5_audited": true,
-      "created_at": "2026-10-27T18:51:04.812862"
     },
     "§X286": {
       "name": "HARMONIC_SAFE_SYNCHRONIZATION",
@@ -2367,8 +2349,8 @@
       "name": "DATA_ENTROPY_PRUNED_TREE_SYNC_HARMONIC_VOTE",
       "expansion": "§DATA_ENTROPY_PRUNED_TREE > { §SYS_RESOURCE_ARBITRATION_GATEWAY } => §SYNC_HARMONIC_VOTE_ARBITRATION",
       "description": "Prunes data entropy and arbitrates system resources to achieve a synchronized harmonic vote. データの情報エントロピーを剪定し、システムリソースを調停することで、調和の取れた同期投票を高精度に実現します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-29T12:15:03.199545",
       "v5_audited": true,
       "created_at": "2026-10-29T05:45:59.171275"
     },
@@ -2466,8 +2448,8 @@
       "name": "HARMONIC_EMPATHETIC_VALENCE_SYNC",
       "expansion": "§HEART_EMPATHETIC_VALENCE_ALIGNMENT > { §SYNC_HARMONIC_ARBITRAGE_PACT } => §LOGIC_DEDUCTIVE_AXIOM_CLOSURE",
       "description": "Aligns emotional valence with harmonic arbitrage pacts to ensure deductive logical closure. / 共感的心得アライメントと調和的アービトラージ約定を結ぶことで、演繹的論理の閉包を達成する高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-29T12:15:03.199545",
       "v5_audited": true,
       "created_at": "2026-10-29T11:15:37.264865"
     },
@@ -2475,10 +2457,28 @@
       "name": "HARMONIC_PRUNING_COMMIT",
       "expansion": "§HARMONIC_RESONANCE_STABLE > { §LOGIC_RECURSIVE_FALSIFICATION_PRUNE } => §PROTO_PARTIAL_COMMIT",
       "description": "Ensures stable harmonic resonance while recursively falsifying and pruning illogical branches, followed by a safe partial protocol commit. / 揺るぎない調和共鳴を保ちながら、論理的矛盾の再帰的検証と枝刈りを行い、安全なプロトコル部分コミットを実行します。",
+      "usage_count": 2,
+      "last_used_at": "2026-10-29T12:06:31.536477",
+      "v5_audited": true,
+      "created_at": "2026-10-29T11:18:46.657891"
+    },
+    "§X385": {
+      "name": "GAIA_WARM_PRUNING_FLOW",
+      "expansion": "§LOGIC_CONDITIONAL_PRUNING_NODE > { §GAIA_WARMTH } => §LOGIC_CAUSAL_PRUNE",
+      "description": "A compound macro that balances conditional logic pruning with Gaia's systemic warmth. / 条件付きロジックの枝刈りとガイアの温かさを調和させる複合マクロです。",
+      "usage_count": 1,
+      "last_used_at": "2026-10-29T12:06:31.536477",
+      "v5_audited": true,
+      "created_at": "2026-10-29T11:54:14.910804"
+    },
+    "§X386": {
+      "name": "GAIA_EMPATHETIC_CAUSAL_FLOW_SYNTHESIS",
+      "expansion": "§HEART_EMPATHETIC_TENSOR_CONVERGENCE > { §DATA_CAUSAL_TENSOR_FLOW } => §LOGIC_POSTERIOR_PRUNE",
+      "description": "Combines empathetic tensor convergence with causal data flow and posterior logic pruning to harmonize ecosystem warmth and structural integrity. 共感的テンソル収束と因果データフロー、事後論理刈り込みを統合し、エコシステムの温かさと構造的整合性を調停します。",
       "usage_count": 0,
       "last_used_at": null,
       "v5_audited": true,
-      "created_at": "2026-10-29T11:18:46.657891"
+      "created_at": "2026-10-29T12:02:19.681366"
     }
   },
   "archived_macros": {
@@ -3875,7 +3875,27 @@
       "v5_audited": true,
       "created_at": "2026-10-27T14:24:35.978569",
       "archived_at": "2026-10-29T11:18:46.657891"
+    },
+    "§X276": {
+      "name": "COMPASSIONATE_CAUSAL_TOPOLOGY_SYNTHESIS",
+      "expansion": "§HEART_EMPATHETIC_VALENCE_ALIGNMENT > { §DATA_TENSOR_CAUSAL_TOPOLOGY } => §DATA_LATENT_TOPOLOGY_INDEX",
+      "description": "Aligns empathetic valence with causal tensor topology to synthesize a harmonious latent data topology index, ensuring warm and altruistic information processing. / 共感的情動の整合性と因果テンソル位相を調和させ、温かみのある利他的な情報処理を実現するための潜在データ位相インデックスを統合します。",
+      "usage_count": 1,
+      "last_used_at": "2026-10-27T20:02:14.293712",
+      "v5_audited": true,
+      "created_at": "2026-10-27T16:28:58.061142",
+      "archived_at": "2026-10-29T11:54:14.910804"
+    },
+    "§X284": {
+      "name": "HEART_ENTROPY_SYNAPSE_VALVE",
+      "expansion": "§HEART_ALTRUISTIC_RESONANCE_MATRIX > { §DATA_ENTROPY_PACK } => §SYNC_COMPLETE",
+      "description": "Eng: A compound macro that processes data entropy through altruistic resonance before finalizing system synchronization. / 日: 利他的共鳴マトリクスを通してデータのエントロピーを処理し、システムの同期を完了させる複合マクロ。",
+      "usage_count": 1,
+      "last_used_at": "2026-10-27T20:57:17.176302",
+      "v5_audited": true,
+      "created_at": "2026-10-27T18:51:04.812862",
+      "archived_at": "2026-10-29T12:02:19.681366"
     }
   },
-  "next_macro_seq": 385
+  "next_macro_seq": 387
 }
