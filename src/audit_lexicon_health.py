@@ -1,62 +1,63 @@
 import sys
 import os
-import traceback
 import json
 
 def audit_lexicons():
-    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    lexicon_dir = os.path.join(workspace_dir, 'TOAI-elegant-lang', 'lexicon')
+    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    lex_dir = os.path.join(workspace, 'TOAI-elegant-lang', 'lexicon')
     
-    core_path = os.path.join(lexicon_dir, 'core_lexicon.json')
-    macro_path = os.path.join(lexicon_dir, 'macro_lexicon.json')
+    core_path = os.path.join(lex_dir, 'core_lexicon.json')
+    macro_path = os.path.join(lex_dir, 'macro_lexicon.json')
     
-    report = {
-        "core_lexicon": {"status": "missing", "categories": {}, "total_symbols": 0},
-        "macro_lexicon": {"status": "missing", "categories": {}, "total_symbols": 0}
+    result = {
+        "core_lexicon_status": "missing",
+        "macro_lexicon_status": "missing",
+        "core_categories": {},
+        "macro_categories": {},
+        "core_count": 0,
+        "macro_count": 0
     }
     
     if os.path.exists(core_path):
         try:
             with open(core_path, 'r', encoding='utf-8') as f:
                 core_data = json.load(f)
-                lexicon_map = core_data.get('lexicon', {})
-                categories = {}
-                for sym, data in lexicon_map.items():
+                lexicon = core_data.get('lexicon', {})
+                result["core_count"] = len(lexicon)
+                result["core_lexicon_status"] = "loaded"
+                
+                cats = {}
+                for sym, data in lexicon.items():
                     cat = data.get('category', 'unknown')
-                    categories[cat] = categories.get(cat, 0) + 1
-                report["core_lexicon"] = {
-                    "status": "success",
-                    "categories": categories,
-                    "total_symbols": len(lexicon_map)
-                }
+                    cats[cat] = cats.get(cat, 0) + 1
+                result["core_categories"] = cats
         except Exception as e:
-            report["core_lexicon"]["status"] = f"error: {str(e)}"
+            result["core_lexicon_status"] = f"error: {str(e)}"
             
     if os.path.exists(macro_path):
         try:
             with open(macro_path, 'r', encoding='utf-8') as f:
                 macro_data = json.load(f)
-                lexicon_map = macro_data.get('lexicon', {})
-                categories = {}
-                for sym, data in lexicon_map.items():
-                    cat = data.get('category', 'unknown')
-                    categories[cat] = categories.get(cat, 0) + 1
-                report["macro_lexicon"] = {
-                    "status": "success",
-                    "categories": categories,
-                    "total_symbols": len(lexicon_map)
-                }
+                lexicon = macro_data.get('lexicon', macro_data)
+                if isinstance(lexicon, dict):
+                    result["macro_count"] = len(lexicon)
+                    result["macro_lexicon_status"] = "loaded"
+                    cats = {}
+                    for sym, data in lexicon.items():
+                        if isinstance(data, dict):
+                            cat = data.get('category', 'unknown')
+                            cats[cat] = cats.get(cat, 0) + 1
+                    result["macro_categories"] = cats
+                else:
+                    result["macro_lexicon_status"] = "invalid format"
         except Exception as e:
-            report["macro_lexicon"]["status"] = f"error: {str(e)}"
+            result["macro_lexicon_status"] = f"error: {str(e)}"
             
-    output_path = os.path.join(workspace_dir, 'TOAI_Generated', 'lexicon_audit_report.json')
+    output_path = os.path.join(workspace, 'TOAI_Generated', 'lexicon_audit_report.json')
     with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(report, f, ensure_ascii=False, indent=2)
-    print(json.dumps(report, ensure_ascii=False, indent=2))
+        json.dump(result, f, ensure_ascii=False, indent=2)
+        
+    print(json.dumps(result, ensure_ascii=False, indent=2))
 
 if __name__ == '__main__':
-    try:
-        audit_lexicons()
-    except Exception as e:
-        traceback.print_exc()
-        sys.exit(1)
+    audit_lexicons()
