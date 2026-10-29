@@ -1,56 +1,63 @@
+# -*- coding: utf-8 -*-
 import sys
 import os
+import traceback
 import subprocess
-import json
 import datetime
+import json
 
-def get_git_log(max_count=10):
-    repo_path = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    git_dir = os.path.join(repo_path, 'TOAI-elegant-lang')
-    if not os.path.exists(os.path.join(git_dir, '.git')):
-        git_dir = repo_path
-    
+def get_git_log():
     try:
-        cmd = ['git', '-C', git_dir, 'log', f'-n', str(max_count), '--pretty=format:%h - %an: %s (%ad)']
-        result = subprocess.run(cmd, capture_output=True, text=True, check=True)
-        return result.stdout.splitlines()
+        result = subprocess.run(
+            ['git', 'log', '-n', '10', '--pretty=format:%h - %an: %s (%ad)'],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            check=True
+        )
+        return result.stdout.strip()
     except Exception as e:
-        return [f"Git log retrieval failed: {str(e)}"]
+        return f"Git log retrieval failed: {e}"
 
 def scan_whitepaper():
-    repo_path = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    whitepaper_candidates = [
-        os.path.join(repo_path, 'TOAI-elegant-lang', 'WHITEPAPER.md'),
-        os.path.join(repo_path, 'WHITEPAPER.md')
+    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    whitepaper_paths = [
+        os.path.join(workspace_dir, 'WHITEPAPER.md'),
+        os.path.join(workspace_dir, 'TOAI-elegant-lang', 'WHITEPAPER.md')
     ]
-    for path in whitepaper_candidates:
+    for path in whitepaper_paths:
         if os.path.exists(path):
             try:
                 with open(path, 'r', encoding='utf-8') as f:
-                    lines = f.readlines()
-                    return "".join(lines[:20])
-            except Exception:
+                    return f.read()[:1000]
+            except Exception as e:
                 pass
     return "Whitepaper not found."
 
-def build_summary():
-    logs = get_git_log(15)
-    wp_excerpt = scan_whitepaper()
-    now = datetime.datetime.now().isoformat()
+def main():
+    print("Building release summary...")
+    git_logs = get_git_log()
+    whitepaper_snippet = scan_whitepaper()
     
     summary = {
-        "timestamp": now,
-        "version_overview": wp_excerpt.strip(),
-        "recent_commits": logs
+        "timestamp": datetime.datetime.utcnow().isoformat() + "Z",
+        "git_recent_commits": git_logs.splitlines(),
+        "whitepaper_snippet": whitepaper_snippet
     }
     
-    repo_path = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    out_path = os.path.join(repo_path, 'TOAI_Generated', 'release_summary.json')
+    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    output_dir = os.path.join(workspace_dir, 'TOAI_Generated')
+    os.makedirs(output_dir, exist_ok=True)
     
-    with open(out_path, 'w', encoding='utf-8') as f:
+    output_path = os.path.join(output_dir, 'release_summary.json')
+    with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(summary, f, ensure_ascii=False, indent=2)
-    
-    print(f"Release summary successfully generated at: {out_path}")
+        
+    print(f"Release summary successfully generated at: {output_path}")
 
 if __name__ == '__main__':
-    build_summary()
+    try:
+        main()
+    except Exception as e:
+        traceback.print_exc()
+        sys.exit(1)

@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-29T14:02:01.047291",
+  "updated_at": "2026-10-29T14:36:52.089180",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1697,15 +1697,6 @@
       "v5_audited": true,
       "created_at": "2026-10-27T21:01:31.271411"
     },
-    "§X293": {
-      "name": "ALTRUISTIC_CAUSAL_HARMONY_ENGINE",
-      "expansion": "§ALTRUISTIC_WARMTH_OPTIMIZATION > { §DATA_TENSOR_CAUSAL_TOPOLOGY } => §SYNC_DYNAMIC_QUORUM_ARBITRATION",
-      "description": "Combines altruistic warmth optimization with data tensor causal topology, arbitrated by dynamic quorum consensus for harmonious system evolution. 利他的な温かさの最適化とデータテンソルの因果トポロジーを統合し、動的クォーラム合意によって調和あるシステム進化を調停します。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-28T03:05:58.746141",
-      "v5_audited": true,
-      "created_at": "2026-10-27T22:02:01.518384"
-    },
     "§X298": {
       "name": "CAUSAL_HEALTH_ATTEST_ARBITER",
       "expansion": "§DATA_CAUSAL_GRAPH_MAP > { §PROTO_HEALTH_ATTEST } => §SYS_VELOCITY_ARBITER",
@@ -1759,15 +1750,6 @@
       "last_used_at": "2026-10-28T04:32:51.029341",
       "v5_audited": true,
       "created_at": "2026-10-28T02:07:59.950437"
-    },
-    "§X306": {
-      "name": "HARMONIC_ADAPTIVE_SYNC",
-      "expansion": "§SYS_ADAPTIVE_BUDGET_ARBITER > { §HARMONIC_RESONANCE_STABLE } => §DATA_HYPER_MANIFOLD_SYNC",
-      "description": "Adaptive resource budgeting maintaining harmonic resonance during high-frequency data manifold synchronization. / 高頻度なデータマニフォールド同期時において、調和共鳴を維持しながら適応的なリソース予算配分を行います。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-28T03:51:33.563114",
-      "v5_audited": true,
-      "created_at": "2026-10-28T03:02:07.556133"
     },
     "§X307": {
       "name": "HEART_ALTRUISTIC_RESONANCE_MATRIX_DATA_KL_CAUSAL",
@@ -2448,8 +2430,8 @@
       "name": "ALTRUISTIC_WARMTH_CONVERGENCE_MACRO",
       "expansion": "§ALTRUISTIC_WARMTH_OPTIMIZATION > { §LOGIC_DEDUCTIVE_CONVERGENCE } => §STABLE_SOCIAL_IMPLEMENTATION",
       "description": "Combines altruistic warmth optimization with deductive convergence to achieve a stable social implementation. 利他的な温かさの最適化と論理的演繹収束を統合し、安定した社会実装を実現するための複合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-29T14:09:02.205292",
       "v5_audited": true,
       "created_at": "2026-10-29T12:40:54.347691"
     },
@@ -2457,8 +2439,8 @@
       "name": "BIOPHILIC_CAUSAL_AGREEMENT_LATTICE",
       "expansion": "§HEART_BIOPHILIC_ALTRUISM_HARMONIC > { §DATA_TENSOR_CAUSAL_LATTICE } => §AGREEMENT_ACCEPTED",
       "description": "Combines biophilic altruistic harmonics with causal tensor lattices to achieve a validated and harmonious system agreement. / バイオフィリックな利他的調和と因果テンソル格子を統合し、検証された調和的システム合意を達成します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-29T14:23:40.799422",
       "v5_audited": true,
       "created_at": "2026-10-29T13:09:24.154844"
     },
@@ -2475,10 +2457,28 @@
       "name": "GAIA_ENTROPY_HARMONY_MACRO",
       "expansion": "§GAIA_WARMTH_EXCHANGE > { §DATA_ENTROPY_BOUNDED_DAG } => §SYNC_DYNAMIC_QUORUM_ARBITRATION",
       "description": "Engages Gaia warmth exchange within a bounded data entropy DAG, resolved via dynamic quorum arbitration. / データの境界エントロピーDAG内においてガイアの温かさの交換をエンゲージし、動的クォーラム調停によって解決します。",
+      "usage_count": 2,
+      "last_used_at": "2026-10-29T14:09:02.205292",
+      "v5_audited": true,
+      "created_at": "2026-10-29T13:51:53.779490"
+    },
+    "§X391": {
+      "name": "SECURE_RECURSIVE_OPTIMIZE_MACRO",
+      "expansion": "§PROTO_AUTH_VERIFY > { §LOGIC_RECURSIVE_FALSIFICATION_PRUNE } => §DATA_CAUSAL_GRAPH_PRUNE",
+      "description": "Authenticates the protocol, recursively prunes falsifications through rigorous logic gates, and subsequently optimizes the causal graph data structure to minimize information entropy. / プロトコル認証を行い、厳密な論理偽像削除を再帰的に適用した上で、因果グラフデータの最適化を行って情報エントロピーを最小化します。",
       "usage_count": 0,
       "last_used_at": null,
       "v5_audited": true,
-      "created_at": "2026-10-29T13:51:53.779490"
+      "created_at": "2026-10-29T14:18:40.146900"
+    },
+    "§X392": {
+      "name": "CAUSAL_RESOURCE_ARBITRAGE_SYNC",
+      "expansion": "§SYS_RESOURCE_ARBITRAGE_THROTTLE > { §DATA_CAUSAL_PRUNE_TREE } => §PROTO_STATE_SNAPSHOT",
+      "description": "Optimizes system resource allocation by pruning causal data trees and synchronizing state snapshots. / 因果関係のあるデータツリーを枝刈りし、状態のスナップショットを同期させることで、システムリソースの割り当てを最適化します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-29T14:36:52.089081"
     }
   },
   "archived_macros": {
@@ -3935,7 +3935,27 @@
       "v5_audited": true,
       "created_at": "2026-10-29T07:18:43.612995",
       "archived_at": "2026-10-29T13:51:53.779490"
+    },
+    "§X293": {
+      "name": "ALTRUISTIC_CAUSAL_HARMONY_ENGINE",
+      "expansion": "§ALTRUISTIC_WARMTH_OPTIMIZATION > { §DATA_TENSOR_CAUSAL_TOPOLOGY } => §SYNC_DYNAMIC_QUORUM_ARBITRATION",
+      "description": "Combines altruistic warmth optimization with data tensor causal topology, arbitrated by dynamic quorum consensus for harmonious system evolution. 利他的な温かさの最適化とデータテンソルの因果トポロジーを統合し、動的クォーラム合意によって調和あるシステム進化を調停します。",
+      "usage_count": 1,
+      "last_used_at": "2026-10-28T03:05:58.746141",
+      "v5_audited": true,
+      "created_at": "2026-10-27T22:02:01.518384",
+      "archived_at": "2026-10-29T14:18:40.146900"
+    },
+    "§X306": {
+      "name": "HARMONIC_ADAPTIVE_SYNC",
+      "expansion": "§SYS_ADAPTIVE_BUDGET_ARBITER > { §HARMONIC_RESONANCE_STABLE } => §DATA_HYPER_MANIFOLD_SYNC",
+      "description": "Adaptive resource budgeting maintaining harmonic resonance during high-frequency data manifold synchronization. / 高頻度なデータマニフォールド同期時において、調和共鳴を維持しながら適応的なリソース予算配分を行います。",
+      "usage_count": 1,
+      "last_used_at": "2026-10-28T03:51:33.563114",
+      "v5_audited": true,
+      "created_at": "2026-10-28T03:02:07.556133",
+      "archived_at": "2026-10-29T14:36:52.089081"
     }
   },
-  "next_macro_seq": 391
+  "next_macro_seq": 393
 }
