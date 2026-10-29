@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-29T13:09:26.851591",
+  "updated_at": "2026-10-29T13:40:39.031312",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2336,15 +2336,6 @@
       "v5_audited": true,
       "created_at": "2026-10-29T05:45:59.171275"
     },
-    "§X373": {
-      "name": "BAYESIAN_DIALECTIC_STREAM_CONVERGENCE",
-      "expansion": "§PROTO_STREAM_EOF > { §SYNC_BAYESIAN_PRUNE } => §SYNC_DIALECTIC_CONVERGENCE",
-      "description": "Applies Bayesian pruning to the input stream and converges the remaining dialectic streams upon reaching end-of-file / 入力ストリームに対してベイジアン枝刈りを適用し、終端到達時に弁証法的ストリームを収束させます。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-10-29T06:42:13.655798"
-    },
     "§X374": {
       "name": "ALTRUISTIC_ENTROPY_FLOW",
       "expansion": "§HEART_ALTRUISTIC_RESONANCE > { §DATA_ENTROPY_MANIFOLD_NODE } => §GLOBAL_SYNERGY",
@@ -2376,8 +2367,8 @@
       "name": "MACRO_EMPATHETIC_DEDUCTIVE_CONVERGENCE",
       "expansion": "§HEART_EMPATHY_RESONANCE_GATE > { §LOGIC_DEDUCTIVE_CONVERGENCE_GATE } => §DATA_LATENT_CAUSAL_MAP",
       "description": "Engages empathy resonance to guide deductive logical convergence, mapping latent causal relations for sustainable ecosystem insights. / 共鳴ゲートを起点として演繹的論理収束を導き、潜在的因果マップを構築することで持続可能なエコシステムへの洞察をもたらします。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-29T13:09:26.851586",
+      "usage_count": 2,
+      "last_used_at": "2026-10-29T13:36:38.442850",
       "v5_audited": true,
       "created_at": "2026-10-29T08:17:18.699505"
     },
@@ -2421,8 +2412,8 @@
       "name": "ALTRUISTIC_RESONANCE_MATRIX",
       "expansion": "§HEART_EMPATHY_RESONANCE_GATE > { §ALTRUISTIC_HARMONY_SUSTAINED } => §SYS_TOKEN_VELOCITY_GATE",
       "description": "Empathy resonance gate combined with altruistic harmony stabilizer to optimize system token velocity while maintaining warm ecosystem connections. / 共鳴ゲートと利他調和安定化装置を統合し、温かなエコシステムのつながりを維持しながらシステムトークン速度を最適化するマクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-29T13:36:38.442850",
       "v5_audited": true,
       "created_at": "2026-10-29T10:14:47.933232"
     },
@@ -2457,8 +2448,8 @@
       "name": "GAIA_EMPATHETIC_CAUSAL_FLOW_SYNTHESIS",
       "expansion": "§HEART_EMPATHETIC_TENSOR_CONVERGENCE > { §DATA_CAUSAL_TENSOR_FLOW } => §LOGIC_POSTERIOR_PRUNE",
       "description": "Combines empathetic tensor convergence with causal data flow and posterior logic pruning to harmonize ecosystem warmth and structural integrity. 共感的テンソル収束と因果データフロー、事後論理刈り込みを統合し、エコシステムの温かさと構造的整合性を調停します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-29T13:40:39.031306",
       "v5_audited": true,
       "created_at": "2026-10-29T12:02:19.681366"
     },
@@ -2479,6 +2470,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-10-29T13:09:24.154844"
+    },
+    "§X389": {
+      "name": "HEART_EMPATHY_RESONANCE_THROTTLE",
+      "expansion": "§HEART_EMPATHY_RESONANCE > { §SYS_SLOT_THROTTLE } => §PROTO_STREAM_OPEN",
+      "description": "Enables adaptive system throttling driven by empathetic resonance to maintain stable stream communication. 共感的共鳴に基づく適応型システムスロットリングを有効化し、安定したストリーム通信を維持します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-29T13:36:34.872353"
     }
   },
   "archived_macros": {
@@ -3915,7 +3915,17 @@
       "v5_audited": true,
       "created_at": "2026-10-28T01:01:30.473400",
       "archived_at": "2026-10-29T13:09:24.154844"
+    },
+    "§X373": {
+      "name": "BAYESIAN_DIALECTIC_STREAM_CONVERGENCE",
+      "expansion": "§PROTO_STREAM_EOF > { §SYNC_BAYESIAN_PRUNE } => §SYNC_DIALECTIC_CONVERGENCE",
+      "description": "Applies Bayesian pruning to the input stream and converges the remaining dialectic streams upon reaching end-of-file / 入力ストリームに対してベイジアン枝刈りを適用し、終端到達時に弁証法的ストリームを収束させます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-29T06:42:13.655798",
+      "archived_at": "2026-10-29T13:36:34.872353"
     }
   },
-  "next_macro_seq": 389
+  "next_macro_seq": 390
 }

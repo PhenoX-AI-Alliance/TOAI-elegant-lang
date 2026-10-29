@@ -7612,3 +7612,9 @@ TOAI-elegant-langの新構文では、制御フローや共感トーンを短縮
 `@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
 
 これにより、文脈の温かさと機械的な正確性を両立させます。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-10-29 13:21]
+@CTX:SYNTAX_DESIGN :: §H01 [lang:"TOAI-elegant", lossless:true] -[metric:"100%"]-> §S01
+
+『TOAI-elegant-lang』では、制御フローや共感トーンを短縮ワイヤID（§S01等）で抽象化しつつ、実務データ構造を厳密なキーバリュー形式で完全包摂するハイブリッドペイロードを提案する。これにより、エージェント間通信のコンテキスト圧縮と、数値・変数名などの実務データの100%ロスレス伝送を同時に実現する。
