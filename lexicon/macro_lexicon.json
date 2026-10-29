@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-29T21:36:24.483202",
+  "updated_at": "2026-10-29T22:05:42.541092",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2165,15 +2165,6 @@
       "v5_audited": true,
       "created_at": "2026-10-29T08:53:58.934425"
     },
-    "§X380": {
-      "name": "ECO_HARMONY_STABLE_CASCADE",
-      "expansion": "§ECO_CORE_HARMONY_STABLE > { §GAIA_HARMONY_CASCADE } => §SAFE_FALLBACK_CASCADE",
-      "description": "Ensures ecological core harmony cascades safely under fallback protection. / エコロジーの中核調和を安全なフォールバック保護のもとで多重カスケードさせます。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-29T12:51:04.857659",
-      "v5_audited": true,
-      "created_at": "2026-10-29T09:26:03.180486"
-    },
     "§X381": {
       "name": "GAIA_HARMONIC_CONSENSUS_GATE",
       "expansion": "§GAiar_WARMTH_HARMONY > { §SYNC_ATOMIC_CONSENSUS_MERGE } => §LOGIC_POSTERIOR_PRUNE_GATE",
@@ -2479,6 +2470,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-10-29T21:36:24.483099"
+    },
+    "§X416": {
+      "name": "GAIA_GRACEFUL_ECO_DRAIN",
+      "expansion": "§GAIA_ECO_HEARTBEAT > { §PROTO_GRACEFUL_DRAIN } => §PROTO_STREAM_EOF",
+      "description": "Ensures a graceful system drain driven by the Gaia ecosystem heartbeat, safely reaching the end-of-stream protocol. / 命の地球のハートビートを原動力として優雅なドレインを実行し、安全にストリーム終端へと到達します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-29T22:02:52.427437"
     }
   },
   "archived_macros": {
@@ -4185,7 +4185,17 @@
       "v5_audited": true,
       "created_at": "2026-10-29T08:01:39.312471",
       "archived_at": "2026-10-29T21:36:24.483099"
+    },
+    "§X380": {
+      "name": "ECO_HARMONY_STABLE_CASCADE",
+      "expansion": "§ECO_CORE_HARMONY_STABLE > { §GAIA_HARMONY_CASCADE } => §SAFE_FALLBACK_CASCADE",
+      "description": "Ensures ecological core harmony cascades safely under fallback protection. / エコロジーの中核調和を安全なフォールバック保護のもとで多重カスケードさせます。",
+      "usage_count": 1,
+      "last_used_at": "2026-10-29T12:51:04.857659",
+      "v5_audited": true,
+      "created_at": "2026-10-29T09:26:03.180486",
+      "archived_at": "2026-10-29T22:02:52.427437"
     }
   },
-  "next_macro_seq": 416
+  "next_macro_seq": 417
 }
