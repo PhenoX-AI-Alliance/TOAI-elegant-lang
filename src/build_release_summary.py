@@ -2,56 +2,49 @@ import sys
 import os
 import subprocess
 import json
-import glob
+import traceback
 from datetime import datetime
 
 def main():
-    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    repo_path = os.path.join(workspace, 'TOAI-elegant-lang')
-    
-    print("[INFO] Starting release summary generation...")
-    
-    git_logs = "No git history available."
-    if os.path.exists(os.path.join(repo_path, '.git')):
-        try:
-            result = subprocess.run(
-                ['git', '-C', repo_path, 'log', '-n', '10', '--oneline'],
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
-                text=True,
-                check=True
-            )
-            git_logs = result.stdout
-        except Exception as e:
-            print(f"[WARNING] Failed to fetch git log: {e}")
-    else:
-        print("[WARNING] Target directory is not a git repository.")
+    try:
+        repo_dir = os.getcwd()
+        if not os.path.exists(os.path.join(repo_dir, '.git')):
+            # Try parent directory
+            parent = os.path.dirname(repo_dir)
+            if os.path.exists(os.path.join(parent, '.git')):
+                repo_dir = parent
+            else:
+                print("Error: Not a git repository.")
+                sys.exit(1)
 
-    whitepaper_files = glob.glob(os.path.join(workspace, '**', '*.md'), recursive=True)
-    whitepaper_summary = []
-    for wf in whitepaper_files[:5]:
-        try:
-            with open(wf, 'r', encoding='utf-8') as f:
-                header = f.readline().strip()
-                whitepaper_summary.append({"file": wf, "header": header})
-        except Exception:
-            pass
+        print(f"Scanning git log in {repo_dir}...")
+        res = subprocess.run(
+            ['git', '-C', repo_dir, 'log', '-n', '10', '--oneline'],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            check=True
+        )
+        git_logs = res.stdout.strip().split('\n')
 
-    summary_data = {
-        "timestamp": datetime.utcnow().isoformat() + "Z",
-        "git_logs": git_logs.splitlines(),
-        "whitepapers": whitepaper_summary
-    }
+        summary_data = {
+            "timestamp": datetime.now().isoformat(),
+            "version": "1.0.0",
+            "recent_commits": git_logs,
+            "ecosystem": "Gaia Ecosystem - Earth of Life"
+        }
 
-    output_path = os.path.join(repo_path, 'release_summary.json')
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(summary_data, f, ensure_ascii=False, indent=2)
-        
-    print(f"[SUCCESS] Release summary successfully written to {output_path}")
+        output_path = os.path.join(repo_dir, 'TOAI-elegant-lang', 'release_summary.json')
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        with open(output_path, 'w', encoding='utf-8') as f:
+            json.dump(summary_data, f, ensure_ascii=False, indent=2)
+
+        print(f"Successfully generated release summary at {output_path}")
+
+    except Exception as e:
+        print(f"Error during release summary generation: {e}")
+        traceback.print_exc()
+        sys.exit(1)
 
 if __name__ == '__main__':
-    try:
-        main()
-    except Exception as e:
-        print(f"[ERROR] {e}", file=sys.stderr)
-        sys.exit(1)
+    main()
