@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-29T16:12:56.894637",
+  "updated_at": "2026-10-29T16:31:02.059478",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -359,8 +359,8 @@
       "expansion": "§GAIA_HEARTBEAT > { §ALTRUISTIC_RESONANCE_EXPANSION } => §SYNC_ATOMIC_CONSENSUS_MERGE",
       "description": "A distributed compound primitive that orchestrates affective resonance and empathetic feedback loops to instantly merge multi-agent consensus without systemic entropy. / 感情的共鳴と利他的フィードバックループを統合し、エージェント間の競合状態をシステムエントロピーの増加なしに瞬時かつ決定論的に合意・収束させる分散制御プリミティブ。",
       "created_at": "2026-10-23T21:20:20.272261",
-      "usage_count": 3,
-      "last_used_at": "2026-10-26T00:46:19.270139",
+      "usage_count": 5,
+      "last_used_at": "2026-10-29T16:31:02.059472",
       "v5_audited": true,
       "audited_by": "TOAI7",
       "audited_at": "2026-10-25T21:48:48.263551"
