@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-29T16:56:13.797980",
+  "updated_at": "2026-10-29T17:01:45.322929",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1886,15 +1886,6 @@
       "v5_audited": true,
       "created_at": "2026-10-28T11:41:44.991950"
     },
-    "§X328": {
-      "name": "THERMODYNAMIC_WARMTH_ARBITRATION",
-      "expansion": "§WARMTH_DIFFUSION > { §SYS_QUANTUM_BUDGET_ARBITRATION } => §PROTO_DIFF_PATCH",
-      "description": "Allocates computational budgets to diffuse warmth across the ecosystem, applying differential patches while minimizing data entropy. / エコシステム全体へ温かさを拡散するための計算リソースを配分し、データエントロピーを最小化しながら差分パッチを適用します。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-28T12:45:30.417847",
-      "v5_audited": true,
-      "created_at": "2026-10-28T12:01:46.154949"
-    },
     "§X329": {
       "name": "COMPOUND_RESONANT_ABDUCTION_HYPERGRAPH",
       "expansion": "§HARMONIC_RESONANCE_STABLE > { §DATA_SPARSE_CAUSAL_HYPERGRAPH } => §LOGIC_PROBABILISTIC_ABDUCTIVE_GATE",
@@ -2475,10 +2466,19 @@
       "name": "ALTRUISTIC_CAUSAL_HARMONY",
       "expansion": "§DATA_ATTENTION_CAUSAL_DAG > { §ALTRUISTIC_HARMONY_SUSTAINED } => §SYS_VELOCITY_ARBITER",
       "description": "Integrates causal attention graphs with sustained altruistic harmony to optimize system velocity. / 因果的アテンション構造と持続的な利他調和を統合し、システムの速度と温かさを調和的に最適化します。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-29T16:56:01.224100",
+      "usage_count": 2,
+      "last_used_at": "2026-10-29T17:01:45.322924",
       "v5_audited": true,
       "created_at": "2026-10-29T16:43:28.788496"
+    },
+    "§X398": {
+      "name": "GAIA_EMPATHEI_SYNC_HARVEST",
+      "expansion": "§GAIA_HEARTBEAT > { §LOGIC_EMPIRICAL_FALSIFY | §SYS_ASYNCHRONOUS_STATE_HARVESTER } => §SYS_SYNC_THROTTLE",
+      "description": "Engages the Gaia heartbeat to harmonize empirical falsification and asynchronous state harvesting, throttled synchronously for sustainable resource management. / ガイアの心拍を起動し、経験的反証と非同期状態収集を調和させ、持続可能なリソース管理のために同期スロットル制御を行います。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-29T17:01:01.171777"
     }
   },
   "archived_macros": {
@@ -4005,7 +4005,17 @@
       "v5_audited": true,
       "created_at": "2026-10-28T08:58:33.378544",
       "archived_at": "2026-10-29T16:43:28.788496"
+    },
+    "§X328": {
+      "name": "THERMODYNAMIC_WARMTH_ARBITRATION",
+      "expansion": "§WARMTH_DIFFUSION > { §SYS_QUANTUM_BUDGET_ARBITRATION } => §PROTO_DIFF_PATCH",
+      "description": "Allocates computational budgets to diffuse warmth across the ecosystem, applying differential patches while minimizing data entropy. / エコシステム全体へ温かさを拡散するための計算リソースを配分し、データエントロピーを最小化しながら差分パッチを適用します。",
+      "usage_count": 1,
+      "last_used_at": "2026-10-28T12:45:30.417847",
+      "v5_audited": true,
+      "created_at": "2026-10-28T12:01:46.154949",
+      "archived_at": "2026-10-29T17:01:01.171777"
     }
   },
-  "next_macro_seq": 398
+  "next_macro_seq": 399
 }
