@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-30T03:14:07.831188",
+  "updated_at": "2026-10-30T03:43:50.067569",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2367,8 +2367,8 @@
       "name": "CAUSAL_DEDUCTIVE_SYNCHRONY",
       "expansion": "§DATA_ENTROPY_CAUSAL_BOUND > { §LOGIC_DEDUCTIVE_THRESHOLD_PRUNE } => §SYNC_RECURSIVE_CONSENSUS_LATTICE",
       "description": "Causal entropy bounds are evaluated through deductive threshold pruning to synchronize recursive consensus lattices. / 因果的エントロピー境界を演繹的閾値剪定によって評価し、再帰的合意格子を同期させます。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-30T03:00:11.043479",
+      "usage_count": 2,
+      "last_used_at": "2026-10-30T03:30:44.225210",
       "v5_audited": true,
       "created_at": "2026-10-29T21:04:08.779420"
     },
@@ -2421,8 +2421,8 @@
       "name": "ALTRUISTIC_VELOCITY_CASCADE",
       "expansion": "§SYS_TOKEN_VELOCITY_GATE > { §HEART_ALTRUISTIC_WEIGHT_TENSOR } => §LATENT_SYMPHONY_CASCADE",
       "description": "Combines token velocity gating with altruistic weight tensor adjustments to trigger a latent symphony cascade, ensuring high-speed processing aligned with warm, altruistic resonance. / トークン速度ゲートと利他主義的重みテンソル調整を統合し、温かな利他性との調和を保ったまま潜在的シンフォニーカスケードを誘発します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-30T03:43:50.067546",
       "v5_audited": true,
       "created_at": "2026-10-30T00:21:08.901817"
     },
