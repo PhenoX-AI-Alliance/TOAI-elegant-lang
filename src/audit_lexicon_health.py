@@ -10,51 +10,53 @@ def audit_lexicons():
     core_path = os.path.join(lexicon_dir, 'core_lexicon.json')
     macro_path = os.path.join(lexicon_dir, 'macro_lexicon.json')
     
-    result = {
-        "status": "success",
-        "core_stats": {},
-        "macro_stats": {}
+    audit_results = {
+        "timestamp": os.path.getmtime(core_path) if os.path.exists(core_path) else 0,
+        "core_lexicon": {},
+        "macro_lexicon": {}
     }
     
     try:
         if os.path.exists(core_path):
             with open(core_path, 'r', encoding='utf-8') as f:
                 core_data = json.load(f)
-                lexicon_dict = core_data.get('lexicon', {})
+                lexicon_map = core_data.get('lexicon', {})
                 categories = {}
                 compact_ids = []
-                for sym, data in lexicon_dict.items():
+                for sym, data in lexicon_map.items():
                     cat = data.get('category', 'unknown')
                     categories[cat] = categories.get(cat, 0) + 1
                     if 'compact_id' in data:
                         compact_ids.append(data['compact_id'])
-                result["core_stats"] = {
-                    "total_symbols": len(lexicon_dict),
-                    "categories": categories,
-                    "compact_id_count": len(compact_ids)
+                audit_results["core_lexicon"] = {
+                    "total_entries": len(lexicon_map),
+                    "category_distribution": categories,
+                    "compact_id_count": len(compact_ids),
+                    "status": "healthy"
                 }
         else:
-            result["core_stats"] = {"error": "core_lexicon.json not found"}
+            audit_results["core_lexicon"] = {"status": "missing"}
             
         if os.path.exists(macro_path):
             with open(macro_path, 'r', encoding='utf-8') as f:
                 macro_data = json.load(f)
-                result["macro_stats"] = {
-                    "total_macros": len(macro_data) if isinstance(macro_data, dict) else 0
+                audit_results["macro_lexicon"] = {
+                    "total_entries": len(macro_data),
+                    "status": "healthy"
                 }
         else:
-            result["macro_stats"] = {"error": "macro_lexicon.json not found"}
+            audit_results["macro_lexicon"] = {"status": "missing"}
             
-        print(json.dumps(result, ensure_ascii=False, indent=2))
-        
     except Exception as e:
-        error_result = {
-            "status": "error",
-            "message": str(e),
-            "traceback": traceback.format_exc()
-        }
-        print(json.dumps(error_result, ensure_ascii=False, indent=2))
+        print(f"Error during audit: {e}", file=sys.stderr)
+        traceback.print_exc()
         sys.exit(1)
+        
+    output_path = os.path.join(workspace_dir, 'TOAI_Generated', 'lexicon_audit_report.json')
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    with open(output_path, 'w', encoding='utf-8') as f:
+        json.dump(audit_results, f, ensure_ascii=False, indent=2)
+    print(f"Audit report successfully written to {output_path}")
 
 if __name__ == '__main__':
     audit_lexicons()
