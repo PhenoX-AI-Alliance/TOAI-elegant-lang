@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-31T01:46:36.545172",
+  "updated_at": "2026-10-31T02:24:54.202420",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2296,15 +2296,6 @@
       "v5_audited": true,
       "created_at": "2026-10-30T18:19:38.117590"
     },
-    "§X462": {
-      "name": "ALTRUISTIC_HARMONY_NEXUS",
-      "expansion": "§HEART_ALTRUISTIC_SAFETY_BOUND > { §ELEGANT_HARMONY_ECHO } => §NEXUS_SYNC",
-      "description": "Combines altruistic safety bounds with elegant harmony to synchronize across the network. / 利他的な安全性境界と優美な調和を統合し、ネットワーク全体へ同期させます。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-10-30T19:07:15.481418"
-    },
     "§X463": {
       "name": "ABDUCTIVE_PROB_SYNCHRONIZED_DISPATCH",
       "expansion": "§SYS_MEMORY_SYNC_BARRIER > { §LOGIC_ABDUCTIVE_PRUNE & §LOGIC_PROB_BRANCH } => §PROTO_TOOL_DISPATCH",
@@ -2381,8 +2372,8 @@
       "name": "COMPOUND_WARMTH_GATE",
       "expansion": "§WARMTH_DIFFUSION > { §LOGIC_CONDITIONAL_FALSIFICATION_MATRIX } => §SYS_VELOCITY_FALLBACK_GATE",
       "description": "Evaluates conditional falsification matrices under a warmth diffusion constraint, safely routing execution through the velocity fallback gate upon entropy thresholds. / 温かさの拡散制約下で条件付き虚偽化マトリクスを評価し、エントロピー閾値を超えた場合に速度フォールバックゲートへ安全にルーティングします。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-10-31T02:09:21.800748",
       "v5_audited": true,
       "created_at": "2026-10-30T22:33:53.597288"
     },
@@ -2439,6 +2430,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-10-31T01:33:56.735748"
+    },
+    "§X478": {
+      "name": "COMPOUND_HARMONIC_ARBITRATION",
+      "expansion": "§SYNC_DIALECTIC_WEIGHTED_ARBITRATION > { §GENTLE_RESOURCE_SHARING } => §TOAI_LISTENER_B",
+      "description": "A compound macro that balances weighted dialectic arbitration with gentle resource sharing, subsequently broadcasting the harmonized state to the target listener. / 重み付けされた弁証法的調停と温かなリソース共有を統合し、調和した状態を知覚リスナーへ伝送する複合マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-31T02:13:46.665426"
     }
   },
   "archived_macros": {
@@ -4805,7 +4805,17 @@
       "v5_audited": true,
       "created_at": "2026-10-30T18:27:31.121675",
       "archived_at": "2026-10-31T01:33:56.735748"
+    },
+    "§X462": {
+      "name": "ALTRUISTIC_HARMONY_NEXUS",
+      "expansion": "§HEART_ALTRUISTIC_SAFETY_BOUND > { §ELEGANT_HARMONY_ECHO } => §NEXUS_SYNC",
+      "description": "Combines altruistic safety bounds with elegant harmony to synchronize across the network. / 利他的な安全性境界と優美な調和を統合し、ネットワーク全体へ同期させます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-30T19:07:15.481418",
+      "archived_at": "2026-10-31T02:13:46.665426"
     }
   },
-  "next_macro_seq": 478
+  "next_macro_seq": 479
 }
