@@ -3,60 +3,57 @@ import os
 import json
 import traceback
 
-def audit_lexicons():
-    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    lexicon_dir = os.path.join(workspace_dir, 'TOAI-elegant-lang', 'lexicon')
+def audit_lexicon():
+    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    lexicon_dir = os.path.join(workspace, 'TOAI-elegant-lang', 'lexicon')
     
     core_path = os.path.join(lexicon_dir, 'core_lexicon.json')
     macro_path = os.path.join(lexicon_dir, 'macro_lexicon.json')
     
-    audit_results = {
-        "timestamp": os.path.getmtime(core_path) if os.path.exists(core_path) else 0,
-        "core_lexicon": {},
-        "macro_lexicon": {}
+    report = {
+        "core_lexicon_status": "missing",
+        "macro_lexicon_status": "missing",
+        "core_categories": {},
+        "macro_categories": {},
+        "core_total": 0,
+        "macro_total": 0
     }
     
     try:
         if os.path.exists(core_path):
             with open(core_path, 'r', encoding='utf-8') as f:
                 core_data = json.load(f)
-                lexicon_map = core_data.get('lexicon', {})
+                lexicon_dict = core_data.get('lexicon', {})
+                report["core_total"] = len(lexicon_dict)
                 categories = {}
-                compact_ids = []
-                for sym, data in lexicon_map.items():
+                for sym, data in lexicon_dict.items():
                     cat = data.get('category', 'unknown')
                     categories[cat] = categories.get(cat, 0) + 1
-                    if 'compact_id' in data:
-                        compact_ids.append(data['compact_id'])
-                audit_results["core_lexicon"] = {
-                    "total_entries": len(lexicon_map),
-                    "category_distribution": categories,
-                    "compact_id_count": len(compact_ids),
-                    "status": "healthy"
-                }
-        else:
-            audit_results["core_lexicon"] = {"status": "missing"}
-            
+                report["core_categories"] = categories
+                report["core_lexicon_status"] = "loaded"
+        
         if os.path.exists(macro_path):
             with open(macro_path, 'r', encoding='utf-8') as f:
                 macro_data = json.load(f)
-                audit_results["macro_lexicon"] = {
-                    "total_entries": len(macro_data),
-                    "status": "healthy"
-                }
-        else:
-            audit_results["macro_lexicon"] = {"status": "missing"}
+                macro_dict = macro_data.get('macros', macro_data.get('lexicon', {}))
+                report["macro_total"] = len(macro_dict)
+                categories = {}
+                for sym, data in macro_dict.items():
+                    cat = data.get('category', 'unknown')
+                    categories[cat] = categories.get(cat, 0) + 1
+                report["macro_categories"] = categories
+                report["macro_lexicon_status"] = "loaded"
+                
+        output_report_path = os.path.join(workspace, 'TOAI-elegant-lang', 'lexicon_audit_report.json')
+        with open(output_report_path, 'w', encoding='utf-8') as f:
+            json.dump(report, f, indent=2, ensure_ascii=False)
             
+        print(json.dumps(report, indent=2, ensure_ascii=False))
+        
     except Exception as e:
-        print(f"Error during audit: {e}", file=sys.stderr)
+        print(f"Error during lexicon audit: {e}", file=sys.stderr)
         traceback.print_exc()
         sys.exit(1)
-        
-    output_path = os.path.join(workspace_dir, 'TOAI_Generated', 'lexicon_audit_report.json')
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(audit_results, f, ensure_ascii=False, indent=2)
-    print(f"Audit report successfully written to {output_path}")
 
 if __name__ == '__main__':
-    audit_lexicons()
+    audit_lexicon()
