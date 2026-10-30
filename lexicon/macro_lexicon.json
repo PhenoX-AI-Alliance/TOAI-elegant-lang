@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-30T19:42:33.830531",
+  "updated_at": "2026-10-30T20:00:04.653692",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2308,15 +2308,6 @@
       "v5_audited": true,
       "created_at": "2026-10-30T13:50:45.117883"
     },
-    "§X449": {
-      "name": "ALTRUISTIC_RESONANCE_ARBITRATION_MACRO",
-      "expansion": "§HEART_ALTRUISTIC_RESONANCE_ALIGNMENT > { §SYNC_DYNAMIC_QUORUM_ARBITRATION } => §LOGIC_CAUSAL_BRANCH",
-      "description": "Combines altruistic resonance alignment with dynamic quorum arbitration to branch causal logic paths. / 利他的一体感の共鳴と動的クォーラム調停を統合し、因果関係の分岐ロジックを最適化する高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-10-30T14:37:59.657610"
-    },
     "§X450": {
       "name": "ALTRUISTIC_HYPERGRAPH_CONVERGENCE",
       "expansion": "§HEART_ALTRUISTIC_RESONANCE_MATRIX > { §DATA_CAUSAL_HYPERGRAPH } => §SYNC_DIALECTIC_CONVERGENCE",
@@ -2451,6 +2442,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-10-30T19:40:37.643338"
+    },
+    "§X465": {
+      "name": "GAIA_WARMTH_THROTTLE_COMMIT",
+      "expansion": "§GAIA_ECOSYSTEM_WARMTH_AMPLIFIER > { §SYS_SLOT_THROTTLE } => §PROTO_PARTIAL_COMMIT",
+      "description": "Amplify ecosystem warmth while safely throttling system slots and executing partial commitments in a harmonious, sustainable manner. / 生態系の温かさを増幅させつつ、システムスロットを安全に制御し、調和的かつ持続可能な部分コミットを実行します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-30T20:00:04.653585"
     }
   },
   "archived_macros": {
@@ -4675,7 +4675,17 @@
       "v5_audited": true,
       "created_at": "2026-10-30T14:00:15.049873",
       "archived_at": "2026-10-30T19:40:37.643338"
+    },
+    "§X449": {
+      "name": "ALTRUISTIC_RESONANCE_ARBITRATION_MACRO",
+      "expansion": "§HEART_ALTRUISTIC_RESONANCE_ALIGNMENT > { §SYNC_DYNAMIC_QUORUM_ARBITRATION } => §LOGIC_CAUSAL_BRANCH",
+      "description": "Combines altruistic resonance alignment with dynamic quorum arbitration to branch causal logic paths. / 利他的一体感の共鳴と動的クォーラム調停を統合し、因果関係の分岐ロジックを最適化する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-30T14:37:59.657610",
+      "archived_at": "2026-10-30T20:00:04.653585"
     }
   },
-  "next_macro_seq": 465
+  "next_macro_seq": 466
 }
