@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "description": "Default Core Lexicon Export Data",
+  "entries": [
+    {
+      "term": "Gaia",
+      "category": "ecosystem",
+      "definition": "Earth of Life system"
+    },
+    {
+      "term": "Altruistic",
+      "category": "philosophy",
+      "definition": "Action for others"
+    }
+  ]
+}
