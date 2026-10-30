@@ -7990,3 +7990,13 @@ TOAI-elegant-langは、短縮ワイヤIDによる感情・制御フローの圧�
 `@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
 
 これにより、エージェント間の協調トーンを維持しつつ、数値や変数名の欠落を防ぎ、安全かつ効率的な実務通信を実現します。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-10-30 13:50]
+TOAI-elegant-langは、短縮ワイヤIDによる感情・制御フローの圧縮と、厳密なJSONライクパラメータによる実務データの損失ゼロ伝送を両立するハイブリッド構文を採用する。@CTX指定により通信目的を明確化し、エージェント間の文脈共有と数値の完全性を同時に担保する。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-10-30 14:23]
+@CTX:TASK_DELEGATION :: §C01 [syntax:"TOAI-elegant", lossless:true, variables:true] -> §S01
+
+『TOAI-elegant-lang』のハイブリッド構文は、制御フローを短縮ワイヤID（§S01等）で圧縮し、具体的な変数名や数値を構造化ペイロードとして100%保持します。これにより、AIエージェント間の実務通信における効率とデータ完全性を両立します。
