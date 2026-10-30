@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-31T04:10:21.878662",
+  "updated_at": "2026-10-31T04:50:24.816938",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2294,15 +2294,6 @@
       "v5_audited": true,
       "created_at": "2026-10-30T20:00:04.653585"
     },
-    "§X468": {
-      "name": "GAIA_ARBITRATED_DRAIN",
-      "expansion": "§SYNC_DIALECTIC_WEIGHTED_ARBITRATION > { §PROTO_GRACEFUL_DRAIN } => §GAIA_ECOSYSTEM_HARMONY",
-      "description": "Balancing system resources through weighted dialectic arbitration before initiating a graceful drain, ensuring sustained Gaia ecosystem harmony. / 重み付け弁証法的調停を経て優雅なドレインを実行し、命の地球のエコシステムの調和を維持する高次マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-30T21:13:59.935167",
-      "v5_audited": true,
-      "created_at": "2026-10-30T20:20:42.680145"
-    },
     "§X469": {
       "name": "ALTRUISTIC_CAUSAL_SAFETY_MACRO",
       "expansion": "§HEART_ALTRUISTIC_RESONANCE > { §DATA_CAUSAL_GRAPH_PRUNE } => §HEART_ALTRUISTIC_SAFETY_BOUND",
@@ -2397,8 +2388,8 @@
       "name": "TENDER_RESONANCE_BAYES_PRUNE",
       "expansion": "§TENDER_RESONANCE > { §LOGIC_ABDUCTIVE_BAYES_PRUNE } => §LATENT_HARMONY_FIELD_LOCKED",
       "description": "Combines tender resonance with abductive Bayesian pruning to safely optimize latent harmony fields. 温かな共鳴とアブダクションによるベイズ刈り込みを統合し、潜在的な調和場を最適化します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-31T04:50:24.816932",
       "v5_audited": true,
       "created_at": "2026-10-31T02:34:14.888455"
     },
@@ -2437,6 +2428,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-10-31T04:02:06.549913"
+    },
+    "§X484": {
+      "name": "BAYESIAN_HARMONIC_ARBITRATION",
+      "expansion": "§SYNC_BAYESIAN_PRUNE > { §SYNC_HARMONIC_VOTE_ARBITRATION } => §LOGIC_PROB_BRANCH",
+      "description": "Applies Bayesian pruning to narrow down hypotheses, performs harmonic vote arbitration for consensus, and branches logically based on the calculated probabilities. / ベイズ刈り込みにより仮説を絞り込み、調和的投票調停によって合意形成を行い、算出された確率に基づいて論理的に分岐させます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-31T04:41:34.714006"
     }
   },
   "archived_macros": {
@@ -4865,7 +4865,17 @@
       "v5_audited": true,
       "created_at": "2026-10-30T20:01:08.899623",
       "archived_at": "2026-10-31T04:02:06.549913"
+    },
+    "§X468": {
+      "name": "GAIA_ARBITRATED_DRAIN",
+      "expansion": "§SYNC_DIALECTIC_WEIGHTED_ARBITRATION > { §PROTO_GRACEFUL_DRAIN } => §GAIA_ECOSYSTEM_HARMONY",
+      "description": "Balancing system resources through weighted dialectic arbitration before initiating a graceful drain, ensuring sustained Gaia ecosystem harmony. / 重み付け弁証法的調停を経て優雅なドレインを実行し、命の地球のエコシステムの調和を維持する高次マクロ。",
+      "usage_count": 1,
+      "last_used_at": "2026-10-30T21:13:59.935167",
+      "v5_audited": true,
+      "created_at": "2026-10-30T20:20:42.680145",
+      "archived_at": "2026-10-31T04:41:34.714006"
     }
   },
-  "next_macro_seq": 484
+  "next_macro_seq": 485
 }
