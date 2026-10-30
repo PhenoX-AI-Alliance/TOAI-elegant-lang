@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-31T00:09:36.353216",
+  "updated_at": "2026-10-31T00:32:17.108130",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1233,8 +1233,8 @@
       "name": "TENDER_HARMONIC_ARBITER",
       "expansion": "§TENDER_RESONANCE > { §SYS_RESOURCE_ARBITER } => §HARMONIC_RESONANCE",
       "description": "Eng: A compound macro that harmonizes system resource allocation through tender resonance. / 日: 柔らかな共鳴を通じてシステムリソースの配分を調和させる複合マクロ。",
-      "usage_count": 3,
-      "last_used_at": "2026-10-31T00:09:12.697522",
+      "usage_count": 4,
+      "last_used_at": "2026-10-31T00:32:17.108122",
       "v5_audited": true,
       "created_at": "2026-10-26T20:09:55.952546"
     },
@@ -2394,8 +2394,8 @@
       "name": "ALTRUISTIC_CAUSAL_SAFETY_MACRO",
       "expansion": "§HEART_ALTRUISTIC_RESONANCE > { §DATA_CAUSAL_GRAPH_PRUNE } => §HEART_ALTRUISTIC_SAFETY_BOUND",
       "description": "Combines altruistic resonance with causal graph pruning to ensure safety bounds are maintained during high-entropy state transitions. / 高エントロピー状態の遷移時において、利他共鳴と因果グラフの枝刈りを統合し、安全境界を確実に維持するための複合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-31T00:32:17.108122",
       "v5_audited": true,
       "created_at": "2026-10-30T20:52:35.046218"
     },
@@ -2430,8 +2430,8 @@
       "name": "BIOPHILIC_PROBABILISTIC_FALSIFICATION_AND_MEMORY",
       "expansion": "§HEART_BIOPHILIC_ALTRUISM_HARMONIC > { §LOGIC_PROBABILISTIC_FALSIFICATION_GATE } => §SYS_MEMORY_SYNC_BARRIER",
       "description": "Integrates biophilic altruistic harmony with probabilistic falsification gates to safely synchronize system memory states, ensuring ethical alignment and fault tolerance in TOAI-elegant-lang.",
-      "usage_count": 1,
-      "last_used_at": "2026-10-31T00:09:12.697522",
+      "usage_count": 2,
+      "last_used_at": "2026-10-31T00:32:17.108122",
       "v5_audited": true,
       "created_at": "2026-10-31T00:06:40.199057"
     },
