@@ -7,34 +7,32 @@ class ElegantTranslator:
         self.translation_map = self._load_map()
 
     def _load_map(self):
-        if os.path.exists(self.map_path):
-            try:
-                with open(self.map_path, "r", encoding="utf-8") as f:
-                    return json.load(f)
-            except Exception as e:
-                print(f"Warning: Failed to load translation map: {e}")
-                return {}
-        return {}
+        if not os.path.exists(self.map_path):
+            return {}
+        try:
+            with open(self.map_path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception as e:
+            print(f"Error loading translation map: {e}")
+            return {}
 
-    def decode(self, elegant_text):
-        if not isinstance(elegant_text, str):
+    def decode(self, text):
+        if not isinstance(text, str):
             return ""
-        
-        result = elegant_text
+        result = text
+        # Sort keys by length descending to replace longer tokens first
         sorted_keys = sorted(self.translation_map.keys(), key=len, reverse=True)
-        
         for key in sorted_keys:
             value = self.translation_map[key]
-            explanation = f"[{value}]"
-            result = result.replace(key, explanation)
-            
+            result = result.replace(key, value)
         return result
 
-def translate_string(text):
+def decode_elegant_text(text):
     translator = ElegantTranslator()
     return translator.decode(text)
 
 if __name__ == "__main__":
-    sample = "Hello ~ * # +"
+    sample = "こんにちは ~* +! ->"
+    translator = ElegantTranslator()
     print("Original:", sample)
-    print("Translated:", translate_string(sample))
+    print("Decoded:", translator.decode(sample))
