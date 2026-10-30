@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-30T17:26:03.728648",
+  "updated_at": "2026-10-30T17:42:28.345628",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2316,15 +2316,6 @@
       "v5_audited": true,
       "created_at": "2026-10-30T09:01:30.895691"
     },
-    "§X442": {
-      "name": "GAIA_CAUSAL_RESERVE_GATE",
-      "expansion": "§GAIA_HEARTBEAT > { §DATA_SPARSE_CAUSAL_HYPERGRAPH & §PROTO_QUOTA_RESERVE } => §LOGIC_DEDUCTIVE_AXIOM_GATE",
-      "description": "Integrates the Gaia heartbeat with sparse causal hypergraphs and quota reservations to securely gate deductive logic. 命の地球の鼓動を基点として、スパース因果ハイパーグラフとクォータ予約を統合し、演繹的論理ゲートを安全に制御する高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-10-30T09:05:51.955585"
-    },
     "§X443": {
       "name": "GAIAN_HARMONIC_FALSIFICATION_PULSE",
       "expansion": "§GAiar_WARMTH_HARMONY > { §LOGIC_PROBABILISTIC_FALSIFICATION_GATES } => §PROTO_HEARTBEAT_PING",
@@ -2459,6 +2450,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-10-30T17:25:27.582861"
+    },
+    "§X458": {
+      "name": "BIOPHILIC_FALSIFICATION_PRUNE_MANIFOLD",
+      "expansion": "§HEART_BIOPHILIC_ALTRUISM_HARMONIC > { §LOGIC_RECURSIVE_FALSIFICATION_PRUNE } => §DATA_ENTROPY_MANIFOLD_NODE",
+      "description": "Applies biophilic altruistic harmonic principles to recursive falsification pruning within the data entropy manifold. / 生命の地球の利他的調和を基盤として、データエントロピー多様体における再帰的な反証刈り込みを実行し、温かみと構造的最適化を両立させます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-30T17:33:10.814374"
     }
   },
   "archived_macros": {
@@ -4605,7 +4605,17 @@
       "audited_by": "TOAI7",
       "audited_at": "2026-10-25T18:39:55.753475",
       "archived_at": "2026-10-30T17:25:27.582861"
+    },
+    "§X442": {
+      "name": "GAIA_CAUSAL_RESERVE_GATE",
+      "expansion": "§GAIA_HEARTBEAT > { §DATA_SPARSE_CAUSAL_HYPERGRAPH & §PROTO_QUOTA_RESERVE } => §LOGIC_DEDUCTIVE_AXIOM_GATE",
+      "description": "Integrates the Gaia heartbeat with sparse causal hypergraphs and quota reservations to securely gate deductive logic. 命の地球の鼓動を基点として、スパース因果ハイパーグラフとクォータ予約を統合し、演繹的論理ゲートを安全に制御する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-30T09:05:51.955585",
+      "archived_at": "2026-10-30T17:33:10.814374"
     }
   },
-  "next_macro_seq": 458
+  "next_macro_seq": 459
 }
