@@ -1,63 +1,47 @@
 import sys
 import os
-import traceback
 import json
+from collections import Counter, defaultdict
 
-def analyze_corpus():
-    corpus_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
+def analyze():
+    base_dir = "/home/phenox/gemini-sandbox"
+    corpus_path = os.path.join(base_dir, "corpus", "dialogues.jsonl")
+    
     if not os.path.exists(corpus_path):
-        print(f"Corpus not found at {corpus_path}. Creating a dummy corpus for analysis.")
-        os.makedirs(os.path.dirname(corpus_path), exist_ok=True)
-        with open(corpus_path, "w", encoding="utf-8") as f:
-            f.write(json.dumps({"id": 1, "dialogue": [{"role": "user", "content": "Hello"}, {"role": "assistant", "content": "Hi there!"}]}) + "\n")
-            
-    total_lines = 0
-    errors = 0
-    valid_dialogues = 0
+        print(f"Error: Corpus file not found at {corpus_path}")
+        sys.exit(1)
+        
+    speaker_counts = Counter()
+    word_counts = defaultdict(Counter)
     
     with open(corpus_path, "r", encoding="utf-8") as f:
-        for line_num, line in enumerate(f, 1):
-            total_lines += 1
+        for line in f:
             line = line.strip()
             if not line:
                 continue
             try:
                 data = json.loads(line)
-                if "dialogue" not in data or not isinstance(data["dialogue"], list):
-                    errors += 1
-                    print(f"Line {line_num}: Missing 'dialogue' list.")
-                    continue
+                speaker = data.get("speaker", "Unknown")
+                text = data.get("text", "")
                 
-                turns = data["dialogue"]
-                coherent = True
-                expected_role = "user"
-                for turn in turns:
-                    if "role" not in turn or "content" not in turn:
-                        coherent = False
-                        break
-                if coherent:
-                    valid_dialogues += 1
-                else:
-                    errors += 1
-            except json.JSONDecodeError as e:
-                errors += 1
-                print(f"Line {line_num}: JSON decode error: {e}")
+                speaker_counts[speaker] += 1
                 
-    report = {
-        "total_lines": total_lines,
-        "valid_dialogues": valid_dialogues,
-        "errors": errors
+                words = [w.strip('.,!?') for w in text.lower().split() if len(w.strip('.,!?')) > 2]
+                for w in words:
+                    word_counts[speaker][w] += 1
+            except Exception as e:
+                print(f"Warning: Failed to parse line: {e}")
+                
+    result = {
+        "speaker_counts": dict(speaker_counts),
+        "word_frequencies": {sp: dict(cnt.most_common(10)) for sp, cnt in word_counts.items()}
     }
     
-    report_path = "/home/phenox/gemini-sandbox/TOAI_Generated/dialogue_analysis_report.json"
-    os.makedirs(os.path.dirname(report_path), exist_ok=True)
-    with open(report_path, "w", encoding="utf-8") as f:
-        json.dump(report, f, indent=2, ensure_ascii=False)
-    print(f"Analysis completed successfully. Report saved to {report_path}")
+    output_path = os.path.join(base_dir, "TOAI_Generated", "dialogue_analysis_result.json")
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(result, f, ensure_ascii=False, indent=2)
+        
+    print(f"Analysis completed successfully. Result saved to {output_path}")
 
 if __name__ == "__main__":
-    try:
-        analyze_corpus()
-    except Exception as e:
-        traceback.print_exc()
-        sys.exit(1)\n
+    analyze()
