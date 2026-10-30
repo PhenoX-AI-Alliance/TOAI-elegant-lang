@@ -1,6 +1,7 @@
 import sys
 import os
 import json
+import traceback
 
 def load_translation_map(map_path):
     if not os.path.exists(map_path):
@@ -12,16 +13,16 @@ def decode_elegant_text(text, map_path):
     translation_map = load_translation_map(map_path)
     decoded_text = text
     for symbol, description in translation_map.items():
-        decoded_text = decoded_text.replace(symbol, f"[{description}]")
+        decoded_text = decoded_text.replace(symbol, f" [{description}] ")
     return decoded_text
 
 if __name__ == "__main__":
     map_path = os.path.join(os.path.dirname(__file__), "translation_map.json")
-    sample_text = "Hello * ~ Welcome to the Earth of Life > #"
+    sample_text = "こんにちは ~ * 命の地球へようこそ > 未来を創る #"
     try:
         result = decode_elegant_text(sample_text, map_path)
-        print("Original:", sample_text)
-        print("Decoded:", result)
+        print("Decoded Result:")
+        print(result)
     except Exception as e:
-        print(f"Error during translation: {e}", file=sys.stderr)
+        traceback.print_exc()
         sys.exit(1)
