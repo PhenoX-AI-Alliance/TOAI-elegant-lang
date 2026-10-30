@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-30T08:42:25.494018",
+  "updated_at": "2026-10-30T09:00:49.378987",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2395,8 +2395,8 @@
       "name": "HARMONIC_FALSIFICATION_ARBITRATION",
       "expansion": "§LOGIC_PROBABILISTIC_FALSIFICATION_PRISM > { §SYNC_DIALECTIC_WEIGHTED_ARBITRATION } => §HARMONIC_RESONANCE",
       "description": "Combines probabilistic falsification and weighted dialectic arbitration to achieve harmonic resonance. 確率的偽証と重み付き弁証法的調停を統合し、調和的共鳴を達成する高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-30T08:58:45.126224",
       "v5_audited": true,
       "created_at": "2026-10-30T05:53:02.250125"
     },
