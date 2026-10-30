@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-31T06:15:53.521469",
+  "updated_at": "2026-10-31T06:49:15.407558",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -788,15 +788,6 @@
       "last_used_at": "2026-10-26T00:14:01.901453",
       "v5_audited": true,
       "created_at": "2026-10-25T19:02:10.607788"
-    },
-    "§X165": {
-      "name": "ECO_BAYES_HARMONY_DEFENDER",
-      "expansion": "§LOGIC_BAYES_FALSIFY > { §PROTO_REPLAY_GUARD } => §ECO_CORE_HARMONY_STABLE",
-      "description": "Falsifies invalid probabilistic states under replay protection to stabilize the ecosystem core / リプレイ防御のもとで確率的状態の反証を行いエコシステムコアを安定化させる高次マクロ",
-      "usage_count": 2,
-      "last_used_at": "2026-10-25T22:15:19.515155",
-      "v5_audited": true,
-      "created_at": "2026-10-25T21:00:57.615014"
     },
     "§X167": {
       "name": "ALTRUISTIC_WARMTH_QUORUM_LATTICE",
@@ -2323,8 +2314,8 @@
       "name": "COMPOUND_HARMONIC_ARBITRATION",
       "expansion": "§SYNC_DIALECTIC_WEIGHTED_ARBITRATION > { §GENTLE_RESOURCE_SHARING } => §TOAI_LISTENER_B",
       "description": "A compound macro that balances weighted dialectic arbitration with gentle resource sharing, subsequently broadcasting the harmonized state to the target listener. / 重み付けされた弁証法的調停と温かなリソース共有を統合し、調和した状態を知覚リスナーへ伝送する複合マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-31T06:12:29.962438",
+      "usage_count": 2,
+      "last_used_at": "2026-10-31T06:47:28.584388",
       "v5_audited": true,
       "created_at": "2026-10-31T02:13:46.665426"
     },
@@ -2435,6 +2426,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-10-31T06:15:53.521379"
+    },
+    "§X491": {
+      "name": "ADAPTIVE_CAUSAL_BRANCH_GATE",
+      "expansion": "§SYS_ADAPTIVE_BUDGET_ARBITER > { §LOGIC_PROB_BRANCH_GATE & §DATA_ENTROPY_CAUSAL_TREE } => §PROTO_LOCK_RELEASE",
+      "description": "Dynamic allocation of adaptive budget to evaluate probabilistic branching and causal tree entropy simultaneously, followed by systematic lock release. / 動的適応予算を配分し、確率的分岐と因果木のエントロピーを同時に評価した上で、システマティックにロックを解除する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-31T06:49:15.407451"
     }
   },
   "archived_macros": {
@@ -4935,7 +4935,17 @@
       "v5_audited": true,
       "created_at": "2026-10-31T00:08:50.372484",
       "archived_at": "2026-10-31T06:15:53.521379"
+    },
+    "§X165": {
+      "name": "ECO_BAYES_HARMONY_DEFENDER",
+      "expansion": "§LOGIC_BAYES_FALSIFY > { §PROTO_REPLAY_GUARD } => §ECO_CORE_HARMONY_STABLE",
+      "description": "Falsifies invalid probabilistic states under replay protection to stabilize the ecosystem core / リプレイ防御のもとで確率的状態の反証を行いエコシステムコアを安定化させる高次マクロ",
+      "usage_count": 2,
+      "last_used_at": "2026-10-25T22:15:19.515155",
+      "v5_audited": true,
+      "created_at": "2026-10-25T21:00:57.615014",
+      "archived_at": "2026-10-31T06:49:15.407451"
     }
   },
-  "next_macro_seq": 491
+  "next_macro_seq": 492
 }
