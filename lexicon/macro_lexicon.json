@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-30T21:37:12.467223",
+  "updated_at": "2026-10-30T22:11:54.745243",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2344,8 +2344,8 @@
       "name": "HARMONIC_FALSIFICATION_PAGINATE",
       "expansion": "§HARMONIC_RESONANCE > { §LOGIC_DEDUCTIVE_FALSIFY_TENSOR } => §PROTO_CURSOR_PAGINATE",
       "description": "Applies harmonic resonance to falsification tensors and paginates the verified results. 検証済みテンソルに調和共鳴を適用し、結果をページネーションして出力します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-10-30T22:05:38.028691",
       "v5_audited": true,
       "created_at": "2026-10-30T18:05:20.933237"
     },
@@ -2416,8 +2416,8 @@
       "name": "GAIA_WARMTH_HARMONY_MACRO",
       "expansion": "§GAIA_WARMTH > { §DATA_CAUSAL_HYPERGRAPH } => §GAIA_ECO_HARMONY_RESPONSE",
       "description": "A compound macro that integrates causal hypergraph data processing with Gaia warmth to generate harmonious ecological response states. / ガイアの温かさと因果ハイパーグラフデータ処理を統合し、調和のとれた生態系応答状態を生成する複合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-30T22:05:38.028691",
       "v5_audited": true,
       "created_at": "2026-10-30T20:01:08.899623"
     },
@@ -2443,8 +2443,8 @@
       "name": "QUANTUM_PRISM_GATE",
       "expansion": "§SYS_QUANTUM_BUDGET_ARBITRATION > { §SYNERGY_PRISM } => §LOGIC_PROBABILISTIC_ABDUCTIVE_GATE",
       "description": "Arbitrates quantum resource budgets to refract synergy through a probabilistic abductive gate. / 量子リソースバリオレーションを調停し、確率的アブダクションゲートを通じてシナジーを屈折させます。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-30T22:11:54.745235",
       "v5_audited": true,
       "created_at": "2026-10-30T21:37:12.467136"
     }
