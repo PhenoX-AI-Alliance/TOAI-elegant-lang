@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-30T22:11:54.745243",
+  "updated_at": "2026-10-30T22:56:47.565066",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -67,17 +67,6 @@
       "v5_audited": true,
       "audited_by": "TOAI",
       "audited_at": "2026-10-25T13:26:38.258583"
-    },
-    "§X13": {
-      "name": "AUDIT_ENTROPY_CLOSURE",
-      "expansion": "§PROTO_AUDIT_TRAIL > { §DATA_ENTROPY_MANIFOLD_NODE } => §LOGIC_DEDUCTIVE_AXIOM_CLOSURE",
-      "description": "Records immutable audit trails of delegated tasks, compresses causal graphs via recursive entropy reduction, and forces binary closure upon reaching axiomatic thresholds. / タスク委譲の改ざん不能な監査証跡を記録し、再帰的エントロピー低減により因果グラフを圧縮した上で、公理的しきい値に達した推論チェーンを二値の結論へ強制収束させます。",
-      "created_at": "2026-10-23T06:31:55.710786",
-      "usage_count": 2,
-      "last_used_at": "2026-10-25T10:45:44.637138",
-      "v5_audited": true,
-      "audited_by": "TOAI7",
-      "audited_at": "2026-10-25T13:38:58.830863"
     },
     "§X14": {
       "name": "ALTRUISTIC_HARMONY_STABILIZER",
@@ -2326,8 +2315,8 @@
       "name": "GAIA_ATOMIC_RESONANCE_PIPELINE",
       "expansion": "§SYS_ATOMIC_SYNC_BARRIER > { §GAIA_ECOSYSTEM_WARM_RESONANCE } => §DATA_LATENT_CAUSAL_MANIFOLD",
       "description": "Enforces an atomic synchronization barrier for Gaia ecosystem warm resonance within the latent causal data manifold. / 潜在的因果多様体における命の地球の温かな共鳴のために、アトミック同期バリアを強制します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-10-30T22:56:47.565061",
       "v5_audited": true,
       "created_at": "2026-10-30T17:25:27.582861"
     },
@@ -2443,10 +2432,19 @@
       "name": "QUANTUM_PRISM_GATE",
       "expansion": "§SYS_QUANTUM_BUDGET_ARBITRATION > { §SYNERGY_PRISM } => §LOGIC_PROBABILISTIC_ABDUCTIVE_GATE",
       "description": "Arbitrates quantum resource budgets to refract synergy through a probabilistic abductive gate. / 量子リソースバリオレーションを調停し、確率的アブダクションゲートを通じてシナジーを屈折させます。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-30T22:11:54.745235",
+      "usage_count": 2,
+      "last_used_at": "2026-10-30T22:47:38.196441",
       "v5_audited": true,
       "created_at": "2026-10-30T21:37:12.467136"
+    },
+    "§X471": {
+      "name": "COMPOUND_WARMTH_GATE",
+      "expansion": "§WARMTH_DIFFUSION > { §LOGIC_CONDITIONAL_FALSIFICATION_MATRIX } => §SYS_VELOCITY_FALLBACK_GATE",
+      "description": "Evaluates conditional falsification matrices under a warmth diffusion constraint, safely routing execution through the velocity fallback gate upon entropy thresholds. / 温かさの拡散制約下で条件付き虚偽化マトリクスを評価し、エントロピー閾値を超えた場合に速度フォールバックゲートへ安全にルーティングします。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-30T22:33:53.597288"
     }
   },
   "archived_macros": {
@@ -4735,7 +4733,19 @@
       "v5_audited": true,
       "created_at": "2026-10-30T16:01:01.882188",
       "archived_at": "2026-10-30T21:37:12.467136"
+    },
+    "§X13": {
+      "name": "AUDIT_ENTROPY_CLOSURE",
+      "expansion": "§PROTO_AUDIT_TRAIL > { §DATA_ENTROPY_MANIFOLD_NODE } => §LOGIC_DEDUCTIVE_AXIOM_CLOSURE",
+      "description": "Records immutable audit trails of delegated tasks, compresses causal graphs via recursive entropy reduction, and forces binary closure upon reaching axiomatic thresholds. / タスク委譲の改ざん不能な監査証跡を記録し、再帰的エントロピー低減により因果グラフを圧縮した上で、公理的しきい値に達した推論チェーンを二値の結論へ強制収束させます。",
+      "created_at": "2026-10-23T06:31:55.710786",
+      "usage_count": 2,
+      "last_used_at": "2026-10-25T10:45:44.637138",
+      "v5_audited": true,
+      "audited_by": "TOAI7",
+      "audited_at": "2026-10-25T13:38:58.830863",
+      "archived_at": "2026-10-30T22:33:53.597288"
     }
   },
-  "next_macro_seq": 471
+  "next_macro_seq": 472
 }
