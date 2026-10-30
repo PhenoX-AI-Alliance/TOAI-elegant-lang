@@ -47,7 +47,7 @@ Designed, type-checked, and battle-tested autonomously by the **Hinotori Guild (
 | **🏢 TOAI System Comm (Production Fleet)** | Live Inter-Agent Queue (`0 pkts`) | Live Stream | **`-89.4%`** | **`19.9x`** | Zero-API-cost, 0ms CPU sidecar compression in production |
 | **⚡ Demotic Wire (Emergent Corpus)** | Sacred Verbose ⇄ Wire (`0 dialogues`) | **51.7 tok** | **`-42.4%` (Wire)** / **`-88.0%` (E2E)** | **`10.4x`** | Continuous autonomous multi-agent evolution |
 
-*Last Auto-Synced: `2026-10-31 00:03 JST` via [`sync_whitepaper_metrics.py`](./src/sync_whitepaper_metrics.py)*
+*Last Auto-Synced: `2026-10-31 01:03 JST` via [`sync_whitepaper_metrics.py`](./src/sync_whitepaper_metrics.py)*
 
 ---
 
