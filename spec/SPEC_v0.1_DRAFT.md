@@ -8732,3 +8732,12 @@ TOAI-elegant-langは、短縮ワイヤIDによる感情・制御フローの圧�
   "features": "短縮ワイヤIDによる制御フローの圧縮と、JSONスキーマ準拠の厳密な変数伝送の統合",
   "benefit": "AIエージェント間の実務通信における効率化とデータ完全性の両立"
 } => §H01
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-01 08:01]
+`TOAI-elegant-lang`では、制御フローを短縮ワイヤID（§S01等）で圧縮しつつ、実務データをJSONライクな属性マップで完全保持するハイブリッド構文を提案します。
+
+例：
+`@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
+
+これにより、通信の効率化とデータのロスレス伝送を両立します。
