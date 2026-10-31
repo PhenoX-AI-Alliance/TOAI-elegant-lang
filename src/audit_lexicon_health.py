@@ -3,16 +3,18 @@ import os
 import json
 import traceback
 
-def audit_lexicon():
-    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    base_lexicon_dir = os.path.join(workspace_dir, 'TOAI-elegant-lang', 'lexicon')
+def audit_lexicons():
+    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    lexicon_dir = os.path.join(workspace, 'TOAI-elegant-lang', 'lexicon')
     
-    core_path = os.path.join(base_lexicon_dir, 'core_lexicon.json')
-    macro_path = os.path.join(base_lexicon_dir, 'macro_lexicon.json')
+    core_path = os.path.join(lexicon_dir, 'core_lexicon.json')
+    macro_path = os.path.join(lexicon_dir, 'macro_lexicon.json')
     
-    audit_results = {
-        "core_lexicon": {},
-        "macro_lexicon": {}
+    result = {
+        "core_status": "missing",
+        "macro_status": "missing",
+        "core_stats": {},
+        "macro_stats": {}
     }
     
     if os.path.exists(core_path):
@@ -23,47 +25,39 @@ def audit_lexicon():
             categories = {}
             compact_ids = []
             for sym, data in lexicon_dict.items():
-                if isinstance(data, dict):
-                    cat = data.get('category', 'unknown')
-                    categories[cat] = categories.get(cat, 0) + 1
-                    cid = data.get('compact_id')
-                    if cid is not None:
-                        compact_ids.append(cid)
-            audit_results["core_lexicon"] = {
-                "total_entries": len(lexicon_dict),
-                "category_distribution": categories,
-                "compact_id_count": len(compact_ids),
-                "compact_id_stats": {
-                    "min": min(compact_ids) if compact_ids else None,
-                    "max": max(compact_ids) if compact_ids else None
-                }
+                cat = data.get('category', 'unknown')
+                categories[cat] = categories.get(cat, 0) + 1
+                if 'compact_id' in data:
+                    compact_ids.append(data['compact_id'])
+            result["core_status"] = "ok"
+            result["core_stats"] = {
+                "total_symbols": len(lexicon_dict),
+                "categories": categories,
+                "total_compact_ids": len(compact_ids)
             }
         except Exception as e:
-            audit_results["core_lexicon"] = {"error": str(e)}
-    else:
-        audit_results["core_lexicon"] = {"error": "core_lexicon.json not found"}
-        
+            result["core_status"] = f"error: {str(e)}"
+            
     if os.path.exists(macro_path):
         try:
             with open(macro_path, 'r', encoding='utf-8') as f:
                 macro_data = json.load(f)
-            audit_results["macro_lexicon"] = {
-                "total_entries": len(macro_data) if isinstance(macro_data, dict) else 0
+            result["macro_status"] = "ok"
+            result["macro_stats"] = {
+                "total_macros": len(macro_data) if isinstance(macro_data, dict) else 0
             }
         except Exception as e:
-            audit_results["macro_lexicon"] = {"error": str(e)}
-    else:
-        audit_results["macro_lexicon"] = {"error": "macro_lexicon.json not found"}
-        
-    output_audit_path = os.path.join(workspace_dir, 'TOAI-elegant-lang', 'lexicon', 'lexicon_audit_report.json')
-    os.makedirs(os.path.dirname(output_audit_path), exist_ok=True)
+            result["macro_status"] = f"error: {str(e)}"
+            
+    output_audit_path = os.path.join(workspace, 'TOAI-elegant-lang', 'lexicon_audit_report.json')
     with open(output_audit_path, 'w', encoding='utf-8') as f:
-        json.dump(audit_results, f, ensure_ascii=False, indent=2)
-    print(json.dumps(audit_results, ensure_ascii=False, indent=2))
+        json.dump(result, f, indent=2, ensure_ascii=False)
+        
+    print(f"Audit completed. Report saved to {output_audit_path}")
 
 if __name__ == '__main__':
     try:
-        audit_lexicon()
+        audit_lexicons()
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
