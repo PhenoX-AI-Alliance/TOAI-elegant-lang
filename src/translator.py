@@ -1,4 +1,3 @@
-import sys
 import os
 import json
 
@@ -8,25 +7,17 @@ class ElegantTranslator:
         self.translation_map = self._load_map()
 
     def _load_map(self):
-        if not os.path.exists(self.map_path):
-            return {}
-        try:
+        if os.path.exists(self.map_path):
             with open(self.map_path, "r", encoding="utf-8") as f:
                 return json.load(f)
-        except Exception as e:
-            print(f"Error loading translation map: {e}")
-            return {}
+        return {}
 
-    def decode(self, text):
-        if not isinstance(text, str):
-            return text
+    def decode(self, text: str) -> str:
         decoded_text = text
-        for symbol, description in self.translation_map.items():
-            decoded_text = decoded_text.replace(symbol, f"[{description}]")
+        for symbol, meaning in self.translation_map.items():
+            decoded_text = decoded_text.replace(symbol, f"({meaning})")
         return decoded_text
 
-if __name__ == "__main__":
+def translate_text(text: str) -> str:
     translator = ElegantTranslator()
-    sample_text = "こんにちは ~* 世界。 =+ 素晴らしい未来へ向かって進もう ->"
-    print("Original:", sample_text)
-    print("Decoded:", translator.decode(sample_text))
+    return translator.decode(text)
