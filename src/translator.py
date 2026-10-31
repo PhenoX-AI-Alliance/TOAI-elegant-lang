@@ -3,36 +3,30 @@ import os
 import json
 
 class ElegantTranslator:
-    def __init__(self, map_path="/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/translation_map.json"):
+    def __init__(self, map_path):
         self.map_path = map_path
-        self.translation_map = self._load_map()
+        self.translation_map = self.load_map()
 
-    def _load_map(self):
+    def load_map(self):
         if not os.path.exists(self.map_path):
-            return {}
-        try:
-            with open(self.map_path, "r", encoding="utf-8") as f:
-                return json.load(f)
-        except Exception as e:
-            print(f"Error loading translation map: {e}", file=sys.stderr)
-            return {}
+            raise FileNotFoundError(f"Translation map not found at {self.map_path}")
+        with open(self.map_path, "r", encoding="utf-8") as f:
+            return json.load(f)
 
-    def decode(self, text: str) -> str:
+    def decode(self, text):
         sorted_keys = sorted(self.translation_map.keys(), key=len, reverse=True)
         result = text
         for key in sorted_keys:
             value = self.translation_map[key]
-            explanation = f"[{value}]"
-            result = result.replace(key, explanation)
+            result = result.replace(key, f"[{value}]")
         return result
 
-def translate_text(text: str) -> str:
-    translator = ElegantTranslator()
+def translate_elegant_text(text, map_path="/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/translation_map.json"):
+    translator = ElegantTranslator(map_path)
     return translator.decode(text)
 
 if __name__ == "__main__":
-    sample_text = "こんにちは ~ * 命の地球へようこそ -> 未来を創る #"
-    translator = ElegantTranslator()
-    decoded = translator.decode(sample_text)
-    print("Original:", sample_text)
-    print("Decoded:", decoded)
+    sample_text = "Gaia * ~ -> # ecosystem"
+    decoded = translate_elegant_text(sample_text)
+    print(f"Original: {sample_text}")
+    print(f"Decoded: {decoded}")
