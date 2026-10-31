@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-01T05:28:13.189580",
+  "updated_at": "2026-11-01T05:51:17.990849",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2397,8 +2397,8 @@
       "name": "SECURE_REASONING_SYNC",
       "expansion": "§PROTO_AUTH_VERIFY > { §LOGIC_PROBABILISTIC_ABDUCTIVE_GATE, §DATA_CAUSAL_GRAPH_PRUNE } => §SYS_QUOTA_THROTTLE_SYNC",
       "description": "Verifies user authentication before executing probabilistic abductive reasoning with causal graph pruning, while synchronizing system quota throttles. / 認証検証を行った上で因果グラフ枝刈り付き確率的アブダクション推論を実行し、システムクォータ制限を同期する高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-01T05:51:17.990832",
       "v5_audited": true,
       "created_at": "2026-11-01T04:01:58.843922"
     },
