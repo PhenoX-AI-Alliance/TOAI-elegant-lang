@@ -1,27 +1,42 @@
 import os
 import json
-import sys
 
-def load_translation_map(map_path):
-    if not os.path.exists(map_path):
-        raise FileNotFoundError(f"Translation map not found at {map_path}")
-    with open(map_path, "r", encoding="utf-8") as f:
-        return json.load(f)
+class ElegantTranslator:
+    def __init__(self, map_file_path):
+        self.map_file_path = map_file_path
+        self.translation_map = self._load_map()
 
-def decode_elegant_text(text, map_path):
-    translation_map = load_translation_map(map_path)
-    decoded_text = text
-    for symbol, description in sorted(translation_map.items(), key=lambda x: len(x[0]), reverse=True):
-        decoded_text = decoded_text.replace(symbol, f"[{description}]")
-    return decoded_text
+    def _load_map(self):
+        if not os.path.exists(self.map_file_path):
+            return {}
+        with open(self.map_file_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+
+    def decode(self, text):
+        sorted_keys = sorted(self.translation_map.keys(), key=len, reverse=True)
+        decoded_text = text
+        for key in sorted_keys:
+            value = self.translation_map[key]
+            decoded_text = decoded_text.replace(key, value)
+        return decoded_text
+
+    def encode_concept(self, text):
+        inverse_map = {v: k for k, v in self.translation_map.items()}
+        sorted_values = sorted(inverse_map.keys(), key=len, reverse=True)
+        encoded_text = text
+        for val in sorted_values:
+            key = inverse_map[val]
+            encoded_text = encoded_text.replace(val, key)
+        return encoded_text
 
 if __name__ == "__main__":
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    map_path = os.path.join(current_dir, "translation_map.json")
-    sample_text = "~ * # > -"
-    try:
-        result = decode_elegant_text(sample_text, map_path)
-        print(f"Decoded: {result}")
-    except Exception as e:
-        print(f"Error during translation: {e}", file=sys.stderr)
-        sys.exit(1)
+    import sys
+    if len(sys.argv) > 1:
+        target_path = sys.argv[1]
+        map_path = os.path.join(os.path.dirname(__file__), "translation_map.json")
+        translator = ElegantTranslator(map_path)
+        with open(target_path, "r", encoding="utf-8") as f:
+            content = f.read()
+        print(translator.decode(content))
+    else:
+        print("ElegantTranslator initialized successfully.")
