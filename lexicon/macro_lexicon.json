@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-31T10:57:07.483537",
+  "updated_at": "2026-10-31T11:26:26.029086",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1843,8 +1843,8 @@
       "name": "BIOPHILIC_CAUSAL_AGREEMENT_LATTICE",
       "expansion": "§HEART_BIOPHILIC_ALTRUISM_HARMONIC > { §DATA_TENSOR_CAUSAL_LATTICE } => §AGREEMENT_ACCEPTED",
       "description": "Combines biophilic altruistic harmonics with causal tensor lattices to achieve a validated and harmonious system agreement. / バイオフィリックな利他的調和と因果テンソル格子を統合し、検証された調和的システム合意を達成します。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-29T14:43:52.841008",
+      "usage_count": 3,
+      "last_used_at": "2026-10-31T11:26:26.029080",
       "v5_audited": true,
       "created_at": "2026-10-29T13:09:24.154844"
     },
@@ -2338,8 +2338,8 @@
       "name": "HARMONIC_RESOURCE_RECOVERY_PIPELINE",
       "expansion": "§RESOURCE_ALLOCATION_HARMONY > { §SYS_QUOTA_ROLLBACK } => §HARMONIC_RECOVERY_NEXUS",
       "description": "Resource allocation harmony followed by quota rollback leading to harmonic recovery nexus. 資源配分の調和とクォータロールバックを経て、調和的復旧の絆へと至る統合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-10-31T11:26:26.029080",
       "v5_audited": true,
       "created_at": "2026-10-31T08:50:34.511484"
     },
@@ -2410,8 +2410,8 @@
       "name": "MACRO_BENEVOLENT_CONSENSUS_LOOP",
       "expansion": "§HEART_BENEVOLENT_FEEDBACK > { §DISTRIBUTED_QUORUM_ARBITRATION } => §LOGIC_PROBABILISTIC_FALSIFICATION_GATE",
       "description": "Integrates benevolent feedback loops with distributed quorum arbitration, validated through probabilistic falsification to maintain ecosystem harmony. 温かいフィードバックと分散合意形成を統合し、確率的反証ゲートを通じてエコシステムの調和を維持する高次マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-10-31T10:46:48.964020",
+      "usage_count": 2,
+      "last_used_at": "2026-10-31T11:01:38.476996",
       "v5_audited": true,
       "created_at": "2026-10-31T10:02:41.447714"
     },
