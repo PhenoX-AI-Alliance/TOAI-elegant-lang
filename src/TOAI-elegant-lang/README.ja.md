@@ -49,7 +49,7 @@
 | **🏢 TOAI 社内基幹通信（実戦稼働）** | 実稼働エージェント間キュー (`0 pkts`) | 実務ストリーム | **`-89.4%`** | **`19.9x`** | 追加API消費ゼロ・CPU 0ms透過サイドカーによる実戦圧縮実績 |
 | **⚡ 創発コーパス平均（自律対話）** | Sacred Verbose ⇄ Wire (`0 件`) | **51.7 tok** | **`-42.4%` (Wire)** / **`-88.0%` (E2E)** | **`10.4x`** | 10機の自律対話・異種モデル間通信を通じた継続的実測値 |
 
-*最終自動同期: `2026-10-31 10:18 JST`（[`sync_whitepaper_metrics.py`](./src/sync_whitepaper_metrics.py) により自動更新）*
+*最終自動同期: `2026-10-31 10:46 JST`（[`sync_whitepaper_metrics.py`](./src/sync_whitepaper_metrics.py) により自動更新）*
 
 ---
 
