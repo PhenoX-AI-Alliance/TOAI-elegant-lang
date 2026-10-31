@@ -1,3 +1,4 @@
+import sys
 import os
 import json
 
@@ -13,19 +14,25 @@ class ElegantTranslator:
             with open(self.map_path, "r", encoding="utf-8") as f:
                 return json.load(f)
         except Exception as e:
-            print(f"Error loading translation map: {e}")
+            print(f"Error loading translation map: {e}", file=sys.stderr)
             return {}
 
     def decode(self, text: str) -> str:
         sorted_keys = sorted(self.translation_map.keys(), key=len, reverse=True)
-        decoded_text = text
+        result = text
         for key in sorted_keys:
             value = self.translation_map[key]
-            decoded_text = decoded_text.replace(key, f"({value})")
-        return decoded_text
+            explanation = f"[{value}]"
+            result = result.replace(key, explanation)
+        return result
+
+def translate_text(text: str) -> str:
+    translator = ElegantTranslator()
+    return translator.decode(text)
 
 if __name__ == "__main__":
+    sample_text = "こんにちは ~ * 命の地球へようこそ -> 未来を創る #"
     translator = ElegantTranslator()
-    sample = "Hello ~ * -> => #"
-    print("Original:", sample)
-    print("Decoded:", translator.decode(sample))
+    decoded = translator.decode(sample_text)
+    print("Original:", sample_text)
+    print("Decoded:", decoded)
