@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-31T08:39:19.523793",
+  "updated_at": "2026-10-31T09:01:11.933878",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -507,17 +507,6 @@
       "v5_audited": true,
       "audited_by": "TOAI7",
       "audited_at": "2026-10-26T09:59:46.952604"
-    },
-    "§X104": {
-      "name": "BAYESIAN_ADAPTIVE_THROTTLE",
-      "expansion": "§LOGIC_BAYES_FALSIFY > { §SYS_ADAPTIVE_SLOT_THROTTLE } => §PROTO_RATE_THROTTLE",
-      "description": "A conditional verification mechanism that evaluates posterior probabilities against falsification criteria to dynamically scale execution slots and regulate request velocity based on real-time resource pressure. / 厳格な仮説棄却基準に基づく事後確率の検証結果と、リアルタイムのシステム負荷（トークン消費速度・メモリ圧力）を動的に組み合わせ、実行スロットとリクエスト流量を最適に制御する複合演算機構。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-26T00:22:05.757147",
-      "created_at": "2026-10-24T17:16:54.373730",
-      "v5_audited": true,
-      "audited_by": "TOAI7",
-      "audited_at": "2026-10-26T11:38:42.277578"
     },
     "§X105": {
       "name": "ALTRUISTIC_RESONANCE_BUFFER",
@@ -2290,15 +2279,6 @@
       "v5_audited": true,
       "created_at": "2026-10-31T02:34:14.888455"
     },
-    "§X481": {
-      "name": "ENTROPY_CONTROL_FLOW",
-      "expansion": "§DATA_ENTROPY_CAUSAL_PACK > { §SYNC_COMPLETE } => §DATA_CAUSAL_TENSOR_FLOW",
-      "description": "Manages data entropy packets under synchronization to ensure consistent causal tensor flow. / 同期状態の下でデータエントロピーパックを管理し、一貫した因果テンソルフローを保証します。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-10-31T03:47:00.134977"
-    },
     "§X482": {
       "name": "GENTLE_ENTROPY_HARMONY_DEF",
       "expansion": "§SAFE_FALLBACK_STATE_ACTIVATED > { §DATA_ENTROPY_CAUSAL_LATTICE } => §GENTLE_RESOURCE_SHARING",
@@ -2433,6 +2413,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-10-31T08:08:59.282886"
+    },
+    "§X497": {
+      "name": "HARMONIC_RESOURCE_RECOVERY_PIPELINE",
+      "expansion": "§RESOURCE_ALLOCATION_HARMONY > { §SYS_QUOTA_ROLLBACK } => §HARMONIC_RECOVERY_NEXUS",
+      "description": "Resource allocation harmony followed by quota rollback leading to harmonic recovery nexus. 資源配分の調和とクォータロールバックを経て、調和的復旧の絆へと至る統合マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-31T08:50:34.511484"
+    },
+    "§X498": {
+      "name": "QUANTUM_SPARSE_HARMONY",
+      "expansion": "§SYS_QUANTUM_THROTTLE_LOCK > { §DATA_SPARSE_CAUSAL_HYPERGRAPH } => §HARMONIC_ERECVERY_NEXUS",
+      "description": "Eng: A compound macro that locks the quantum throttle, optimizes the sparse causal hypergraph, and triggers the harmonic recovery nexus. / 日: 量子スロットルをロックし、スパース因果ハイパーグラフを最適化して調和回復ネクサスを起動する複合マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-31T09:01:11.933781"
     }
   },
   "archived_macros": {
@@ -4995,7 +4993,29 @@
       "v5_audited": true,
       "created_at": "2026-10-31T03:09:35.153740",
       "archived_at": "2026-10-31T08:08:59.282886"
+    },
+    "§X481": {
+      "name": "ENTROPY_CONTROL_FLOW",
+      "expansion": "§DATA_ENTROPY_CAUSAL_PACK > { §SYNC_COMPLETE } => §DATA_CAUSAL_TENSOR_FLOW",
+      "description": "Manages data entropy packets under synchronization to ensure consistent causal tensor flow. / 同期状態の下でデータエントロピーパックを管理し、一貫した因果テンソルフローを保証します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-31T03:47:00.134977",
+      "archived_at": "2026-10-31T08:50:34.511484"
+    },
+    "§X104": {
+      "name": "BAYESIAN_ADAPTIVE_THROTTLE",
+      "expansion": "§LOGIC_BAYES_FALSIFY > { §SYS_ADAPTIVE_SLOT_THROTTLE } => §PROTO_RATE_THROTTLE",
+      "description": "A conditional verification mechanism that evaluates posterior probabilities against falsification criteria to dynamically scale execution slots and regulate request velocity based on real-time resource pressure. / 厳格な仮説棄却基準に基づく事後確率の検証結果と、リアルタイムのシステム負荷（トークン消費速度・メモリ圧力）を動的に組み合わせ、実行スロットとリクエスト流量を最適に制御する複合演算機構。",
+      "usage_count": 2,
+      "last_used_at": "2026-10-26T00:22:05.757147",
+      "created_at": "2026-10-24T17:16:54.373730",
+      "v5_audited": true,
+      "audited_by": "TOAI7",
+      "audited_at": "2026-10-26T11:38:42.277578",
+      "archived_at": "2026-10-31T09:01:11.933781"
     }
   },
-  "next_macro_seq": 497
+  "next_macro_seq": 499
 }
