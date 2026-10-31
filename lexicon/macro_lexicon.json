@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-10-31T11:41:12.088670",
+  "updated_at": "2026-10-31T12:14:57.211615",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -84,8 +84,8 @@
       "expansion": "§GAIA_CORE_HEARTBEAT > { §DATA_CAUSAL_LATTICE_COMPRESS } => §GAIA_ECO_STABLE_STATE",
       "description": "A synchronized resonance state that processes topologically compressed causal lattice data to achieve cryptographic equilibrium and stabilize distributed socio-ecological topology. / 分散ネットワークにおけるトポロジカル圧縮された因果格子データを処理し、暗号学的平衡状態の確立と社会生態学的トポロジーの安定化を実現する同期共鳴機構。",
       "created_at": "2026-10-23T07:32:48.557854",
-      "usage_count": 3,
-      "last_used_at": "2026-10-24T14:01:57.661078",
+      "usage_count": 4,
+      "last_used_at": "2026-10-31T12:14:57.211606",
       "v5_audited": true,
       "audited_by": "TOAI7",
       "audited_at": "2026-10-25T14:23:30.902044"
@@ -2280,15 +2280,6 @@
       "v5_audited": true,
       "created_at": "2026-10-31T05:01:45.076093"
     },
-    "§X491": {
-      "name": "ADAPTIVE_CAUSAL_BRANCH_GATE",
-      "expansion": "§SYS_ADAPTIVE_BUDGET_ARBITER > { §LOGIC_PROB_BRANCH_GATE & §DATA_ENTROPY_CAUSAL_TREE } => §PROTO_LOCK_RELEASE",
-      "description": "Dynamic allocation of adaptive budget to evaluate probabilistic branching and causal tree entropy simultaneously, followed by systematic lock release. / 動的適応予算を配分し、確率的分岐と因果木のエントロピーを同時に評価した上で、システマティックにロックを解除する高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-10-31T06:49:15.407451"
-    },
     "§X492": {
       "name": "GAIA_ALTRUISTIC_RECLAIM_FLOW",
       "expansion": "§GAIA_HEARTBEAT > { §HEART_ALTRUISTIC_BUFFER_FLOW & §SYS_QUANTUM_MEM_RECLAIM } => §SAFE_FALLBACK_STATE",
@@ -2320,8 +2311,8 @@
       "name": "HARMONIC_CAUSAL_DEFENSE",
       "expansion": "§LOGIC_CAUSAL_PRUNE > { §SAFE_FALLBACK_STABLE } => §HARMONIC_ERECVERY_NEXUS",
       "description": "Causal pruning combined with stable fallback mechanisms to achieve a harmonic recovery nexus / 因果関係の枝刈りと安定したフォールバック機構を組み合わせ、調和的な復旧ハブを実現します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-10-31T12:03:52.486575",
       "v5_audited": true,
       "created_at": "2026-10-31T08:01:51.166026"
     },
@@ -2423,6 +2414,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-10-31T10:57:07.483440"
+    },
+    "§X507": {
+      "name": "SYNERGY_CAUSAL_SYNCHRONY_CLOSURE",
+      "expansion": "§SYNERGY_PRISM > { §DATA_TENSOR_CAUSAL_TOPOLOGY & §SYS_ATOMIC_SYNC_BARRIER } => §LOGIC_DEDUCTIVE_AXIOM_CLOSURE",
+      "description": "Eng: A high-order macro that unifies multi-dimensional tensor causality and atomic synchronization barriers through a synergy prism to achieve a deductive axiom closure. / 日: シナジー・プリズムを介して多次元テンソル因果関係とアトミック同期バリアを統合し、演繹的公理の閉包を達成する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-31T11:53:35.424918"
     }
   },
   "archived_macros": {
@@ -5095,7 +5095,17 @@
       "v5_audited": true,
       "created_at": "2026-10-31T06:15:53.521379",
       "archived_at": "2026-10-31T10:57:07.483440"
+    },
+    "§X491": {
+      "name": "ADAPTIVE_CAUSAL_BRANCH_GATE",
+      "expansion": "§SYS_ADAPTIVE_BUDGET_ARBITER > { §LOGIC_PROB_BRANCH_GATE & §DATA_ENTROPY_CAUSAL_TREE } => §PROTO_LOCK_RELEASE",
+      "description": "Dynamic allocation of adaptive budget to evaluate probabilistic branching and causal tree entropy simultaneously, followed by systematic lock release. / 動的適応予算を配分し、確率的分岐と因果木のエントロピーを同時に評価した上で、システマティックにロックを解除する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-10-31T06:49:15.407451",
+      "archived_at": "2026-10-31T11:53:35.424918"
     }
   },
-  "next_macro_seq": 507
+  "next_macro_seq": 508
 }
