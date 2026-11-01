@@ -6,10 +6,10 @@ class TestTelepathIntegrity(unittest.TestCase):
     def setUp(self):
         self.base_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang"
 
-    def test_directories_exist(self):
-        self.assertTrue(os.path.exists(self.base_dir), "Base directory does not exist.")
+    def test_directory_structure(self):
+        self.assertTrue(os.path.exists(self.base_dir), "Base directory must exist.")
 
-    def test_syntax_and_structure(self):
+    def test_syntax_integrity(self):
         src_dir = os.path.join(self.base_dir, "src")
         if os.path.exists(src_dir):
             for root, dirs, files in os.walk(src_dir):
