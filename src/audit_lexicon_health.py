@@ -11,47 +11,46 @@ def audit_lexicon():
     macro_path = os.path.join(lexicon_dir, 'macro_lexicon.json')
     
     report = {
-        "core_lexicon": {},
-        "macro_lexicon": {},
-        "status": "success"
+        "core_lexicon_status": "missing",
+        "macro_lexicon_status": "missing",
+        "core_categories": {},
+        "macro_categories": {},
+        "core_total": 0,
+        "macro_total": 0
     }
     
     try:
         if os.path.exists(core_path):
             with open(core_path, 'r', encoding='utf-8') as f:
                 core_data = json.load(f)
-                lexicon_dict = core_data.get('lexicon', {})
-                categories = {}
-                compact_ids = []
-                for sym, data in lexicon_dict.items():
-                    cat = data.get('category', 'unknown')
-                    categories[cat] = categories.get(cat, 0) + 1
-                    if 'compact_id' in data:
-                        compact_ids.append(data['compact_id'])
-                report['core_lexicon'] = {
-                    "total_entries": len(lexicon_dict),
-                    "categories": categories,
-                    "compact_id_count": len(compact_ids)
-                }
-        else:
-            report['core_lexicon'] = {"error": "core_lexicon.json not found"}
+            lexicon_dict = core_data.get('lexicon', {})
+            report["core_lexicon_status"] = "loaded"
+            report["core_total"] = len(lexicon_dict)
             
+            categories = {}
+            for sym, data in lexicon_dict.items():
+                cat = data.get('category', 'unknown') if isinstance(data, dict) else 'unknown'
+                categories[cat] = categories.get(cat, 0) + 1
+            report["core_categories"] = categories
+        
         if os.path.exists(macro_path):
             with open(macro_path, 'r', encoding='utf-8') as f:
                 macro_data = json.load(f)
-                report['macro_lexicon'] = {
-                    "total_entries": len(macro_data) if isinstance(macro_data, dict) else 0
-                }
-        else:
-            report['macro_lexicon'] = {"error": "macro_lexicon.json not found"}
+            macro_dict = macro_data.get('lexicon', {}) if isinstance(macro_data, dict) else macro_data
+            report["macro_lexicon_status"] = "loaded"
+            report["macro_total"] = len(macro_dict)
             
-        output_report_path = os.path.join(workspace, 'TOAI-elegant-lang', 'lexicon_audit_report.json')
-        with open(output_report_path, 'w', encoding='utf-8') as f:
-            json.dump(report, f, ensure_ascii=False, indent=2)
-        print("Audit completed successfully. Report saved to:", output_report_path)
+            macro_cats = {}
+            if isinstance(macro_dict, dict):
+                for sym, data in macro_dict.items():
+                    cat = data.get('category', 'unknown') if isinstance(data, dict) else 'unknown'
+                    macro_cats[cat] = macro_cats.get(cat, 0) + 1
+            report["macro_categories"] = macro_cats
+            
+        print(json.dumps(report, ensure_ascii=False, indent=2))
         
     except Exception as e:
-        print("Error during lexicon audit:", str(e))
+        print(f"Error during audit: {e}", file=sys.stderr)
         traceback.print_exc()
         sys.exit(1)
 
