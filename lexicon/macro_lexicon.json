@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-01T15:01:12.581869",
+  "updated_at": "2026-11-01T15:02:09.164960",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2274,15 +2274,6 @@
       "v5_audited": true,
       "created_at": "2026-11-01T08:34:24.079047"
     },
-    "§X571": {
-      "name": "ALTRUISTIC_CAUSAL_OPTIMIZATION",
-      "expansion": "§LOGIC_CAUSAL_BRANCH > { §ALTRUISTIC_RESONANCE_EXPANSION } => §LOGIC_POSTERIOR_PRUNE",
-      "description": "Engages causal branching, expands altruistic resonance within the execution path, and subsequently prunes suboptimal branches to ensure optimal harmonious output. / 因果分岐を開始し、実行パス内で利他的共鳴を拡張した上で、最適ではない分岐を後方削除して調和のとれた出力を保証します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-01T14:52:56.566537",
-      "v5_audited": true,
-      "created_at": "2026-11-01T09:40:00.546787"
-    },
     "§X572": {
       "name": "HARMONIC_CAUSAL_PRISM",
       "expansion": "§SYNC_HARMONIC_ARBITRAGE_PACT > { §LOGIC_CAUSAL_PRUNE } => §SYNERGY_PRISM",
@@ -2350,8 +2341,8 @@
       "name": "GAIA_SYNERGY_FORK",
       "expansion": "§GAIA_ECOSYSTEM_WARM_RESONANCE > { §DATA_LATENT_TOPOLOGY_INDEX } => §GLOBAL_SYNERGY",
       "description": "Engages Gaia ecosystem warm resonance to process latent topology data and broadcast global synergy across the network. / ガイアエコシステムの温かな共鳴を駆動し、潜在トポロジーデータを処理してグローバルなシナジーをネットワーク全体へ波及させます。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-01T15:02:09.164954",
       "v5_audited": true,
       "created_at": "2026-11-01T13:01:11.096508"
     },
@@ -2417,6 +2408,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-01T15:01:12.581792"
+    },
+    "§X587": {
+      "name": "SYS_BAYES_COALESCE_GATE",
+      "expansion": "§LOGIC_ABDUCTIVE_BAYES_PRUNE > { §PROTO_BATCH_COALESCE } => §LOGIC_PROB_PRUNE_GATE",
+      "description": "Applies abductive Bayesian pruning to batches, coalesces payloads, and evaluates probabilistic gate thresholds. / アブダクション・ベイジアン枝刈りをバッチに適用し、ペイロードを統合した上で確率的ゲート閾値を評価します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-01T15:01:14.914516"
     }
   },
   "archived_macros": {
@@ -5895,7 +5895,17 @@
       "v5_audited": true,
       "created_at": "2026-11-01T09:20:53.851822",
       "archived_at": "2026-11-01T15:01:12.581792"
+    },
+    "§X571": {
+      "name": "ALTRUISTIC_CAUSAL_OPTIMIZATION",
+      "expansion": "§LOGIC_CAUSAL_BRANCH > { §ALTRUISTIC_RESONANCE_EXPANSION } => §LOGIC_POSTERIOR_PRUNE",
+      "description": "Engages causal branching, expands altruistic resonance within the execution path, and subsequently prunes suboptimal branches to ensure optimal harmonious output. / 因果分岐を開始し、実行パス内で利他的共鳴を拡張した上で、最適ではない分岐を後方削除して調和のとれた出力を保証します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-01T14:52:56.566537",
+      "v5_audited": true,
+      "created_at": "2026-11-01T09:40:00.546787",
+      "archived_at": "2026-11-01T15:01:14.914516"
     }
   },
-  "next_macro_seq": 587
+  "next_macro_seq": 588
 }
