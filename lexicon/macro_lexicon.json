@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-01T22:01:07.756516",
+  "updated_at": "2026-11-01T22:09:04.049533",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2274,15 +2274,6 @@
       "v5_audited": true,
       "created_at": "2026-11-01T16:58:34.684529"
     },
-    "§X591": {
-      "name": "ALTRUISTIC_ENTROPY_HARMONY",
-      "expansion": "§HEART_ALTRUISTIC_RESONANCE > { §DATA_ENTROPY_COMPRESSED_TREE } => §HARMONIC_RESONANCE",
-      "description": "Combines altruistic resonance with data entropy compression to achieve system-wide harmonic resonance. / 利他共鳴とデータエントロピー圧縮を統合し、システム全体の調和的共鳴を実現します。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-01T16:58:37.206899"
-    },
     "§X592": {
       "name": "ALTRUISTIC_CAUSAL_ENTROPY_PRUNE",
       "expansion": "§HEART_ALTRUISTIC_SAFETY_BOUND > { §DATA_ENTROPY_CAUSAL_TREE } => §DATA_KL_CAUSAL_PRUNE",
@@ -2417,6 +2408,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-01T22:01:07.756423"
+    },
+    "§X607": {
+      "name": "BIOPHILIC_WARMTH_DIFFUSION_PULSE",
+      "expansion": "§HEART_BIOPHILIC_ALTRUISM_HARMONIC > { §WARMTH_DIFFUSION } => §HEART_ALTRUISTIC_PULSE_SYNC",
+      "description": "A compound macro that harmonizes biophilic altruism with warmth diffusion, synchronizing the core pulse to spread empathetic value. 生態系への温かさと利他的な調和を拡散させ、共感的なパルスを同期させる高次マクロです。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-01T22:09:04.049443"
     }
   },
   "archived_macros": {
@@ -6095,7 +6095,17 @@
       "v5_audited": true,
       "created_at": "2026-10-28T02:07:59.950437",
       "archived_at": "2026-11-01T22:01:07.756423"
+    },
+    "§X591": {
+      "name": "ALTRUISTIC_ENTROPY_HARMONY",
+      "expansion": "§HEART_ALTRUISTIC_RESONANCE > { §DATA_ENTROPY_COMPRESSED_TREE } => §HARMONIC_RESONANCE",
+      "description": "Combines altruistic resonance with data entropy compression to achieve system-wide harmonic resonance. / 利他共鳴とデータエントロピー圧縮を統合し、システム全体の調和的共鳴を実現します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-01T16:58:37.206899",
+      "archived_at": "2026-11-01T22:09:04.049443"
     }
   },
-  "next_macro_seq": 607
+  "next_macro_seq": 608
 }
