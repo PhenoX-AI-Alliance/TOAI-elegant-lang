@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-01T12:42:44.426119",
+  "updated_at": "2026-11-01T13:00:22.800494",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2305,8 +2305,8 @@
       "name": "GAIA_ALTRUISTIC_HARMONY_FLOW",
       "expansion": "§GAIA_WARMTH > { §HEART_ALTRUISTIC_HARMONY_MATRIX } => §SYNC_DYNAMIC_QUORUM_ARBITRATION",
       "description": "Integrates the core warmth of Gaia with the altruistic harmony matrix to execute dynamic quorum arbitration safely across the ecosystem. / ガイアの温かさと利他調和マトリクスを統合し、エコシステム全体で動的クォーラム調停を安全に実行します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-01T13:00:22.800483",
       "v5_audited": true,
       "created_at": "2026-11-01T07:54:36.117397"
     },
@@ -2386,8 +2386,8 @@
       "name": "BAYES_CAUSAL_ARBITRAGE_SYNC",
       "expansion": "§LOGIC_BAYES_FALSIFY > { §DATA_CAUSAL_GRAPH } => §SYS_RESOURCE_ARBITRAGE_THROTTLE",
       "description": "Falsifies causal graphs via Bayesian logic to dynamically throttle and optimize system resource arbitrage. / ベイズ論理による因果グラフの反証を通じて、システムリソースの調停を動的に制御・最適化します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-01T13:00:22.800483",
       "v5_audited": true,
       "created_at": "2026-11-01T11:17:33.951227"
     },
