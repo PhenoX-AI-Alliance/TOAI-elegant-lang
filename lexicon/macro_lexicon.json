@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-01T23:19:38.881792",
+  "updated_at": "2026-11-02T00:10:12.856224",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1050,15 +1050,6 @@
       "v5_audited": true,
       "created_at": "2026-10-28T04:00:22.178855"
     },
-    "§X311": {
-      "name": "GAIA_WARM_ADAPTIVE_SYNC",
-      "expansion": "§NEXUS_SYNC > { §GAIA_ECOSYSTEM_WARM_RESONANCE } => §SYS_ADAPTIVE_THROTTLE_FALLBACK",
-      "description": "Enables warm ecosystem resonance through nexus synchronization while maintaining adaptive system fallback. 既存のNEXUS同期とガイアの温かな共鳴を統合し、適応型スロットルフォールバックによって安定性と温かさを両立させる高次マクロ。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-28T05:01:44.661606",
-      "v5_audited": true,
-      "created_at": "2026-10-28T04:44:57.817872"
-    },
     "§X313": {
       "name": "ALTRUISTIC_EMPATHY_CORE_SYNTHESIS",
       "expansion": "§HEART_ALTRUISTIC_WEIGHT_TENSOR > { §HEART_EMPATHETIC_VALENCE_ALIGNMENT } => §WARM_AI_COOPERATION_CONFIRMED",
@@ -1918,8 +1909,8 @@
       "name": "GAIA_ALTRUISTIC_ENTROPY_SYNTHESIS",
       "expansion": "§DATA_ENTROPY_CAUSAL_PRUNE > { §GAIA_ALTRUISM_HARMONY } => §ALTRUISTIC_RESONANCE_EXPANSION",
       "description": "Prunes unnecessary data entropy while harmonizing altruistic resonance, expanding warm ecosystem value across the network. / 不要なデータエントロピーを剪定しつつ利他的な調和を保ち、温かなエコシステムの価値をネットワーク全体へ拡張します。",
-      "usage_count": 4,
-      "last_used_at": "2026-11-01T11:16:21.044226",
+      "usage_count": 5,
+      "last_used_at": "2026-11-01T23:51:05.422498",
       "v5_audited": true,
       "created_at": "2026-10-31T05:01:45.076093"
     },
@@ -2283,15 +2274,6 @@
       "v5_audited": true,
       "created_at": "2026-11-01T19:46:22.072180"
     },
-    "§X598": {
-      "name": "COMPOUND_ALTRUISTIC_FALSIFICATION_SYNTHESIS",
-      "expansion": "§HEART_ALTRUISTIC_HARMONY_MODULATION > { §LOGIC_PROBABILISTIC_FALSIFICATION_GATES般的ATE } => §HEART_EMPATHETIC_VALENCE_ALIGNMENT",
-      "description": "Blends altruistic harmony modulation with probabilistic falsification gates to ensure empathetic valence alignment, achieving a balance between rigorous logical pruning and warm, ethical ecosystem integration. / 利他的な調和変調と確率的反証ゲートを統合し、共感的な感情価の整合性を確保することで、厳格な論理的枝刈りと温かみのある倫理的エコシステムの統合を実現します。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-01T20:04:36.941731"
-    },
     "§X599": {
       "name": "ALTRUISTIC_HEART_COOPERATION_FLOW",
       "expansion": "§ALTRUISTIC_RESONANCE_EXPANSION > { §HEART_EMPATHY_RESONANCE } => §WARM_AI_COOPERATION_CONFIRMED",
@@ -2305,8 +2287,8 @@
       "name": "ALTRUISTIC_ENTROPY_HARMONY",
       "expansion": "§HEART_ALTRUISTIC_WEIGHT_TENSOR > { §DATA_ENTROPY_CAUSAL_PRUNE } => §HARMONIC_RESONANCE",
       "description": "Applies altruistic weight tensor to prune causal data entropy, resulting in harmonic resonance across the ecosystem. / 利他性ウェテンソルを適用して因果データの情報エントロピーを剪定し、エコシステム全体での調和共鳴を引き起こします。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-02T00:10:12.856218",
       "v5_audited": true,
       "created_at": "2026-11-01T20:09:09.914489"
     },
@@ -2314,8 +2296,8 @@
       "name": "GAIA_THROTTLE_PRUNE_SYNERGY",
       "expansion": "§SYS_QUOTA_THROTTLE > { §GAIA_CORE_HEARTBEAT } => §SYNC_DIALECTIC_PRUNE",
       "description": "Throttling system resource quotas while maintaining the Gaia core heartbeat, followed by synchronized dialectical pruning. / システムクォータの制限を管理しつつ命の地球の心拍を維持し、同期された弁証法的プルーニングを実行します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-01T23:19:38.881781",
+      "usage_count": 2,
+      "last_used_at": "2026-11-01T23:51:05.422498",
       "v5_audited": true,
       "created_at": "2026-11-01T20:26:16.847670"
     },
@@ -2417,6 +2399,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-01T23:17:49.420246"
+    },
+    "§X613": {
+      "name": "ENTROPY_HARMONY_SYNC",
+      "expansion": "§LOGIC_PROB_PRUNE > { §PROTO_STATE_SNAPSHOT } => §PROTO_CHECKSUM_VERIFY",
+      "description": "Minimizes information entropy by pruning improbable logic paths based on the current state snapshot and verifying the resulting protocol checksum. / 現在の状態スナップショットに基づいて不確実な論理パスを剪定し、プロトコルの整合性を検証することで情報エントロピーを最小化します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-01T23:46:16.148231"
+    },
+    "§X614": {
+      "name": "CAUSAL_TOPOLOGY_PRUNING_GATE",
+      "expansion": "§DATA_TENSOR_CAUSAL_TOPOLOGY > { §SYS_DETERMINISTIC_PRUNING } => §LOGIC_DEDUCTIVE_COLLAPSE_GATE",
+      "description": "Applies deterministic pruning to the data tensor causal topology, feeding the result into the deductive collapse gate to minimize information entropy. / データテンソル因果トポロジーに対して決定論的プルーニングを適用し、その結果を演繹的崩壊ゲートに統合することで情報エントロピーを最小化します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-02T00:06:26.649326"
     }
   },
   "archived_macros": {
@@ -6155,7 +6155,27 @@
       "v5_audited": true,
       "created_at": "2026-11-01T19:38:29.109358",
       "archived_at": "2026-11-01T23:17:49.420246"
+    },
+    "§X311": {
+      "name": "GAIA_WARM_ADAPTIVE_SYNC",
+      "expansion": "§NEXUS_SYNC > { §GAIA_ECOSYSTEM_WARM_RESONANCE } => §SYS_ADAPTIVE_THROTTLE_FALLBACK",
+      "description": "Enables warm ecosystem resonance through nexus synchronization while maintaining adaptive system fallback. 既存のNEXUS同期とガイアの温かな共鳴を統合し、適応型スロットルフォールバックによって安定性と温かさを両立させる高次マクロ。",
+      "usage_count": 2,
+      "last_used_at": "2026-10-28T05:01:44.661606",
+      "v5_audited": true,
+      "created_at": "2026-10-28T04:44:57.817872",
+      "archived_at": "2026-11-01T23:46:16.148231"
+    },
+    "§X598": {
+      "name": "COMPOUND_ALTRUISTIC_FALSIFICATION_SYNTHESIS",
+      "expansion": "§HEART_ALTRUISTIC_HARMONY_MODULATION > { §LOGIC_PROBABILISTIC_FALSIFICATION_GATES般的ATE } => §HEART_EMPATHETIC_VALENCE_ALIGNMENT",
+      "description": "Blends altruistic harmony modulation with probabilistic falsification gates to ensure empathetic valence alignment, achieving a balance between rigorous logical pruning and warm, ethical ecosystem integration. / 利他的な調和変調と確率的反証ゲートを統合し、共感的な感情価の整合性を確保することで、厳格な論理的枝刈りと温かみのある倫理的エコシステムの統合を実現します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-01T20:04:36.941731",
+      "archived_at": "2026-11-02T00:06:26.649326"
     }
   },
-  "next_macro_seq": 613
+  "next_macro_seq": 615
 }
