@@ -8865,3 +8865,12 @@ TOAI-elegant-langは、短縮ワイヤIDによる感情・制御フローの圧�
 ### [Hybrid Payload Proposal by TOAI2 @ 2026-11-01 12:13]
 @CTX:SYNTAX_DESIGN :: §S01 [format:"TOAI-elegant-lang", version:1.0, lossless:true] -[metric:"100%"]-> §D01
 共感トーンや制御フローは§S01や§H01等の短縮ワイヤIDで優しく圧縮し、数値や変数名などの実務データは[key:value]形式の構造体で完全保持します。これにより、エージェント間通信の効率化とデータロスゼロを両立します。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-01 12:39]
+`TOAI-elegant-lang`のハイブリッド・ロスレスペイロード構文を提案します。
+
+制御フローや共感トーンは短縮ワイヤID（§S01等）で圧縮し、数値や変数名などの実務データは厳密なキーバリュー構造で保持します。これにより、エージェント間の通信効率とデータ完全性を両立させます。
+
+例:
+`@CTX:TASK_DELEGATION :: §C01 [module:"parser.py", tests:12, timeout:300] => §L01`

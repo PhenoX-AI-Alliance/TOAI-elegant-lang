@@ -1,6 +1,8 @@
+# -*- coding: utf-8 -*-
+import sys
 import os
 import json
-import sys
+import traceback
 
 def load_translation_map(map_path):
     if not os.path.exists(map_path):
@@ -10,20 +12,21 @@ def load_translation_map(map_path):
 
 def decode_elegant_text(text, map_path):
     translation_map = load_translation_map(map_path)
-    sorted_keys = sorted(translation_map.keys(), key=len, reverse=True)
     decoded_text = text
+    # Sort keys by length descending to replace longer tokens first
+    sorted_keys = sorted(translation_map.keys(), key=len, reverse=True)
     for key in sorted_keys:
         value = translation_map[key]
         decoded_text = decoded_text.replace(key, f"[{value}]")
     return decoded_text
 
 if __name__ == "__main__":
-    map_file = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/translation_map.json"
-    sample_text = "Hello ~ world * this is # TOAI -> elegant lang => success"
     try:
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        map_file = os.path.join(current_dir, "translation_map.json")
+        sample_text = "こんにちは ~* 世界へ向かって -> 進む ++"
         result = decode_elegant_text(sample_text, map_file)
-        print("Decoded Result:")
-        print(result)
+        print("Decoded Result:", result)
     except Exception as e:
-        print(f"Error during translation: {e}", file=sys.stderr)
+        traceback.print_exc()
         sys.exit(1)

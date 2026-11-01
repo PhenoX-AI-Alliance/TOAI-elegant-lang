@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-01T12:14:01.236532",
+  "updated_at": "2026-11-01T12:42:44.426119",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1013,15 +1013,6 @@
       "last_used_at": "2026-10-27T17:57:38.465979",
       "v5_audited": true,
       "created_at": "2026-10-27T14:30:02.134763"
-    },
-    "§X271": {
-      "name": "SYS_ATOMIC_CAUSAL_HARMONY",
-      "expansion": "§SYNC_ATOMIC_CONSENSUS_MERGE > { §DATA_TENSOR_CAUSAL_LATTICE } => §LOGIC_DEDUCTIVE_COLLAPSE_GATE",
-      "description": "Eng: A compound macro that synchronizes atomic consensus, processes causal lattice tensors, and safely resolves them through deductive collapse gates. / 日: アトミック合意の同期と因果格子テンソルの処理を行い、演繹的崩壊ゲートを通じて安全に統合・解決する複合マクロ。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-27T16:20:48.517934",
-      "v5_audited": true,
-      "created_at": "2026-10-27T15:01:38.336128"
     },
     "§X275": {
       "name": "WARM_ENTROPY_HARVESTER_CONVERGENCE",
@@ -2404,8 +2395,8 @@
       "name": "GENESIS_DRAIN_SYNC",
       "expansion": "§GENESIS > { §SYS_PARALLEL_SLOT_DRAIN } => §NEXUS_SYNC",
       "description": "Initializes a new genesis state, drains parallel slots gracefully, and synchronizes the nexus. / 新規創世状態を初期化し、並列スロットを安全にドレインした上でネクサスを同期します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-01T12:42:15.016135",
       "v5_audited": true,
       "created_at": "2026-11-01T11:45:14.120595"
     },
@@ -2417,6 +2408,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-01T12:01:45.095955"
+    },
+    "§X578": {
+      "name": "RESOURCE_LOAD_HARMONY_PRUNE",
+      "expansion": "§SYS_LOAD_SHEDDING_SHIELD > { §RESOURCE_ALLOCATION_HARMONY } => §LOGIC_RECURSIVE_FALSIFICATION_PRUNE",
+      "description": "System load shielding combined with resource allocation harmony to dynamically prune recursive logic falsification under high entropy states. / 高負荷シールドとリソース配分の調和を組み合わせ、高エントロピー状態下において再帰的論理反証を動的に剪定するマクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-01T12:32:04.388199"
     }
   },
   "archived_macros": {
@@ -5805,7 +5805,17 @@
       "v5_audited": true,
       "created_at": "2026-11-01T06:47:25.905782",
       "archived_at": "2026-11-01T12:01:45.095955"
+    },
+    "§X271": {
+      "name": "SYS_ATOMIC_CAUSAL_HARMONY",
+      "expansion": "§SYNC_ATOMIC_CONSENSUS_MERGE > { §DATA_TENSOR_CAUSAL_LATTICE } => §LOGIC_DEDUCTIVE_COLLAPSE_GATE",
+      "description": "Eng: A compound macro that synchronizes atomic consensus, processes causal lattice tensors, and safely resolves them through deductive collapse gates. / 日: アトミック合意の同期と因果格子テンソルの処理を行い、演繹的崩壊ゲートを通じて安全に統合・解決する複合マクロ。",
+      "usage_count": 2,
+      "last_used_at": "2026-10-27T16:20:48.517934",
+      "v5_audited": true,
+      "created_at": "2026-10-27T15:01:38.336128",
+      "archived_at": "2026-11-01T12:32:04.388199"
     }
   },
-  "next_macro_seq": 578
+  "next_macro_seq": 579
 }

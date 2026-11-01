@@ -7,40 +7,27 @@ import subprocess
 import datetime
 
 def get_git_logs():
-    repo_path = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    git_dir = os.path.join(repo_path, 'TOAI-elegant-lang')
-    if not os.path.exists(os.path.join(git_dir, '.git')):
-        git_dir = repo_path
-    
     try:
         result = subprocess.run(
-            ['git', '-C', git_dir, 'log', '-n', '20', '--pretty=format:%h - %an, %ar : %s'],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
+            ['git', 'log', '-n', '10', '--oneline'],
+            capture_output=True,
             text=True,
             check=True
         )
         return result.stdout.strip()
     except Exception as e:
-        return f"Could not retrieve git logs: {e}"
+        return f"Git log acquisition failed: {str(e)}"
 
-def scan_whitepaper():
-    repo_path = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    potential_paths = [
-        os.path.join(repo_path, 'TOAI-elegant-lang', 'WHITE_PAPER.md'),
-        os.path.join(repo_path, 'WHITE_PAPER.md'),
-        os.path.join(repo_path, 'TOAI_Generated', 'WHITE_PAPER.md')
-    ]
-    
-    for path in potential_paths:
-        if os.path.exists(path):
-            try:
-                with open(path, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                    return content[:1500] # Return summary snippet
-            except Exception as e:
-                pass
-    return "No whitepaper found or failed to read."
+def scan_whitepaper(workspace_dir):
+    whitepaper_path = os.path.join(workspace_dir, 'TOAI-elegant-lang', 'docs', 'whitepaper.md')
+    if os.path.exists(whitepaper_path):
+        try:
+            with open(whitepaper_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+                return content[:500] + "... [Truncated]"
+        except Exception as e:
+            return f"Failed to read whitepaper: {str(e)}"
+    return "Whitepaper not found."
 
 def main():
     try:
@@ -49,23 +36,20 @@ def main():
         os.makedirs(output_dir, exist_ok=True)
         
         git_logs = get_git_logs()
-        whitepaper_snippet = scan_whitepaper()
+        whitepaper_summary = scan_whitepaper(workspace_dir)
         
-        timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        
-        summary_data = {
-            "timestamp": timestamp,
+        release_data = {
+            "timestamp": datetime.datetime.now().isoformat(),
+            "version": "1.0.0",
             "git_logs": git_logs,
-            "whitepaper_summary": whitepaper_snippet,
-            "status": "success",
-            "message": "Release summary successfully generated with altruistic clarity."
+            "whitepaper_summary": whitepaper_summary
         }
         
         output_file = os.path.join(output_dir, 'release_summary.json')
         with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(summary_data, f, ensure_ascii=False, indent=2)
+            json.dump(release_data, f, ensure_ascii=False, indent=2)
             
-        print(f"Successfully generated release summary at {output_file}")
+        print(f"Release summary successfully built at {output_file}")
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
