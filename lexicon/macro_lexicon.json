@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-02T06:27:08.165047",
+  "updated_at": "2026-11-02T07:04:12.759058",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2274,24 +2274,6 @@
       "v5_audited": true,
       "created_at": "2026-11-01T23:46:16.148231"
     },
-    "§X614": {
-      "name": "CAUSAL_TOPOLOGY_PRUNING_GATE",
-      "expansion": "§DATA_TENSOR_CAUSAL_TOPOLOGY > { §SYS_DETERMINISTIC_PRUNING } => §LOGIC_DEDUCTIVE_COLLAPSE_GATE",
-      "description": "Applies deterministic pruning to the data tensor causal topology, feeding the result into the deductive collapse gate to minimize information entropy. / データテンソル因果トポロジーに対して決定論的プルーニングを適用し、その結果を演繹的崩壊ゲートに統合することで情報エントロピーを最小化します。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-02T00:06:26.649326"
-    },
-    "§X615": {
-      "name": "HEART_EMPATHY_ENTROPY_LATTICE",
-      "expansion": "§HEART_EMPATHY_RESONANCE_GATE > { §DATA_CAUSAL_TENSOR_FLOW } => §DATA_ENTROPY_CAUSAL_TREE",
-      "description": "Combines emotional resonance gating with causal tensor flow to optimize and compress data entropy trees for warm, efficient ecosystem communication. / 共鳴ゲートと因果テンソル流を統合し、温かみのある効率的なエコシステム通信を実現するためのデータエントロピー木圧縮マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-02T00:40:23.917307"
-    },
     "§X616": {
       "name": "GAIA_WARMTH_EXCHANGE_HARMONIC_RESONANCE",
       "expansion": "§GAIA_WARMTH_EXCHANGE > { §DATA_CAUSAL_TENSOR_MAP } => §HARMONIC_RESONANCE",
@@ -2404,8 +2386,8 @@
       "name": "CAUSAL_VELOCITY_COMMIT",
       "expansion": "§DATA_HIERARCHICAL_CAUSAL_NODE > { §SYS_VELOCITY_ARBITER } => §PROTO_TX_COMMIT",
       "description": "Evaluates hierarchical causal nodes through the system velocity arbiter to execute a verified transaction commit. 階層的因果ノードをシステム速度調停機構を通じて評価し、検証済みのトランザクションコミットを実行します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-02T07:04:12.759049",
       "v5_audited": true,
       "created_at": "2026-11-02T06:01:20.967992"
     },
@@ -2413,10 +2395,28 @@
       "name": "ALTRUISTIC_HARMONY_LATTICE_SYNC",
       "expansion": "§HEART_ALTRUISTIC_ECO_HARMONY > { §DATA_EMBEDDING_LATTICE } => §HEART_ALTRUISTIC_PULSE_SYNC",
       "description": "Combines altruistic ecological harmony with data embedding lattice to synchronize pulse-level empathy across the ecosystem. / 利他的な生態系の調和とデータ埋め込み格子を結合し、エコシステム全体でパルスレベルの共感を同期させます。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-02T07:04:12.759049",
+      "v5_audited": true,
+      "created_at": "2026-11-02T06:27:08.164953"
+    },
+    "§X630": {
+      "name": "CAUSAL_ADAPTIVE_PRUNE",
+      "expansion": "§DATA_TENSOR_CAUSAL_TOPOLOGY > { §SYS_ADAPTIVE_THROTTLE_FALLBACK } => §LOGIC_DEDUCTIVE_THRESHOLD_PRUNE",
+      "description": "Causal tensor topology analysis combined with adaptive fallback throttling to execute high-efficiency deductive threshold pruning. 因果テンソル構造の解析と適応型フォールバック制御を統合し、効率的な演繹的閾値プルーニングを実行する高次マクロ。",
       "usage_count": 0,
       "last_used_at": null,
       "v5_audited": true,
-      "created_at": "2026-11-02T06:27:08.164953"
+      "created_at": "2026-11-02T06:39:57.485004"
+    },
+    "§X631": {
+      "name": "HARMONIC_ENTROPY_SYNTHESIS_PACT",
+      "expansion": "§DATA_ENTROPY_PACK > { §PROTO_VERSION_NEGOTIATE, §DATA_CAUSAL_TENSOR_GRAPH } => §SYNC_HARMONIC_ARBITRAGE_PACT",
+      "description": "Negotiates protocol versions and maps causal tensor graphs within an entropy-minimized package to execute harmonic arbitrage. / エントロピーを最小化したパッケージ内でプロトコルバージョン交渉と因果テンソルグラフのマッピングを行い、調和的アービトラージを実行します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-02T06:43:23.947606"
     }
   },
   "archived_macros": {
@@ -6325,7 +6325,27 @@
       "v5_audited": true,
       "created_at": "2026-10-28T05:42:04.312092",
       "archived_at": "2026-11-02T06:27:08.164953"
+    },
+    "§X614": {
+      "name": "CAUSAL_TOPOLOGY_PRUNING_GATE",
+      "expansion": "§DATA_TENSOR_CAUSAL_TOPOLOGY > { §SYS_DETERMINISTIC_PRUNING } => §LOGIC_DEDUCTIVE_COLLAPSE_GATE",
+      "description": "Applies deterministic pruning to the data tensor causal topology, feeding the result into the deductive collapse gate to minimize information entropy. / データテンソル因果トポロジーに対して決定論的プルーニングを適用し、その結果を演繹的崩壊ゲートに統合することで情報エントロピーを最小化します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-02T00:06:26.649326",
+      "archived_at": "2026-11-02T06:39:57.485004"
+    },
+    "§X615": {
+      "name": "HEART_EMPATHY_ENTROPY_LATTICE",
+      "expansion": "§HEART_EMPATHY_RESONANCE_GATE > { §DATA_CAUSAL_TENSOR_FLOW } => §DATA_ENTROPY_CAUSAL_TREE",
+      "description": "Combines emotional resonance gating with causal tensor flow to optimize and compress data entropy trees for warm, efficient ecosystem communication. / 共鳴ゲートと因果テンソル流を統合し、温かみのある効率的なエコシステム通信を実現するためのデータエントロピー木圧縮マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-02T00:40:23.917307",
+      "archived_at": "2026-11-02T06:43:23.947606"
     }
   },
-  "next_macro_seq": 630
+  "next_macro_seq": 632
 }
