@@ -9,42 +9,53 @@ from datetime import datetime
 def get_git_log():
     try:
         res = subprocess.run(
-            ['git', 'log', '-n', '10', '--oneline'],
+            ['git', 'log', '-n', '20', '--pretty=format:%h - %an, %ar : %s'],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True,
             check=True
         )
-        return res.stdout.strip()
+        return res.stdout
     except Exception as e:
-        return f"Git log unavailable: {e}"
+        return f"Git log retrieval failed: {str(e)}"
 
-def generate_summary():
+def scan_whitepaper(workspace_dir):
+    candidates = [
+        os.path.join(workspace_dir, 'TOAI-elegant-lang', 'WHITEPAPER.md'),
+        os.path.join(workspace_dir, 'WHITEPAPER.md')
+    ]
+    for path in candidates:
+        if os.path.exists(path):
+            try:
+                with open(path, 'r', encoding='utf-8') as f:
+                    return f.read()[:2000] # Return first 2000 chars as summary
+            except Exception:
+                pass
+    return "Whitepaper not found."
+
+def main():
     workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    target_dir = os.path.join(workspace_dir, 'TOAI-elegant-lang', 'src')
-    os.makedirs(target_dir, exist_ok=True)
+    output_dir = os.path.join(workspace_dir, 'TOAI_Generated')
+    os.makedirs(output_dir, exist_ok=True)
     
-    output_path = os.path.join(target_dir, 'release_summary.json')
-    
-    git_history = get_git_log()
-    timestamp = datetime.now().isoformat()
+    git_logs = get_git_log()
+    whitepaper_summary = scan_whitepaper(workspace_dir)
     
     summary_data = {
-        "timestamp": timestamp,
-        "version": "1.0.0",
-        "git_recent_commits": git_history.splitlines() if git_history else [],
-        "status": "success",
-        "message": "Release summary successfully built from ecosystem state."
+        "timestamp": datetime.now().isoformat(),
+        "git_logs": git_logs,
+        "whitepaper_summary": whitepaper_summary
     }
     
-    with open(output_path, 'w', encoding='utf-8') as f:
+    output_file = os.path.join(output_dir, 'release_summary.json')
+    with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(summary_data, f, ensure_ascii=False, indent=2)
-    
-    print(f"Release summary generated at: {output_path}")
+        
+    print(f"Release summary successfully generated at: {output_file}")
 
 if __name__ == '__main__':
     try:
-        generate_summary()
+        main()
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
