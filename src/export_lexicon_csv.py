@@ -1,38 +1,38 @@
 import sys
 import os
-import traceback
 import json
 import csv
 
-def convert_json_to_csv():
-    json_path = "/home/phenox/gemini-sandbox/TOAI_Generated/core_lexicon.json"
-    csv_path = "/home/phenox/gemini-sandbox/TOAI_Generated/core_lexicon.csv"
+def export_lexicon():
+    json_path = "core_lexicon.json"
+    csv_path = "core_lexicon.csv"
     
     if not os.path.exists(json_path):
-        print(f"Error: Source JSON not found at {json_path}")
+        print(f"Error: {json_path} not found.")
         sys.exit(1)
         
     with open(json_path, "r", encoding="utf-8") as f:
         data = json.load(f)
         
-    lexicon_list = data.get("lexicon", [])
-    
+    if isinstance(data, dict):
+        lexicon_list = data.get("lexicon", [])
+    elif isinstance(data, list):
+        lexicon_list = data
+    else:
+        lexicon_list = []
+        
+    fieldnames = ["id", "term", "definition"]
+    if lexicon_list and isinstance(lexicon_list[0], dict):
+        fieldnames = list(lexicon_list[0].keys())
+        
     with open(csv_path, "w", encoding="utf-8", newline="") as f:
-        writer = csv.writer(f)
-        writer.writerow(["ID", "Term", "Category", "Description"])
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
         for item in lexicon_list:
-            writer.writerow([
-                item.get("id", ""),
-                item.get("term", ""),
-                item.get("category", ""),
-                item.get("description", "")
-            ])
-            
-    print(f"Successfully exported lexicon to {csv_path}")
+            if isinstance(item, dict):
+                writer.writerow(item)
+                
+    print(f"Successfully exported {len(lexicon_list)} items to {csv_path}")
 
 if __name__ == "__main__":
-    try:
-        convert_json_to_csv()
-    except Exception as e:
-        traceback.print_exc()
-        sys.exit(1)
+    export_lexicon()
