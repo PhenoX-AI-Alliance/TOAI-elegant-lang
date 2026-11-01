@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-01T11:02:06.297984",
+  "updated_at": "2026-11-01T11:17:33.951329",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -996,24 +996,6 @@
       "v5_audited": true,
       "created_at": "2026-10-27T06:19:47.266151"
     },
-    "§X260": {
-      "name": "COMPOUND_STATE_PRUNING_FLOW",
-      "expansion": "§PROTO_STATE_SNAPSHOT > { §SYS_DETERMINISTIC_PRUNING } => §DATA_ENTROPY_COMPRESSION_TREE",
-      "description": "Captures the current state snapshot, applies deterministic pruning to remove redundant elements, and compresses the resulting data entropy into an organized tree structure. / 現在の状態スナップショットをキャプチャし、決定的プルーニングを適用して冗長な要素を除去し、得られたデータエントロピーを体系的なツリー構造に圧縮します。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-27T15:02:42.794377",
-      "v5_audited": true,
-      "created_at": "2026-10-27T09:01:28.370593"
-    },
-    "§X262": {
-      "name": "SYS_CAUSAL_STATE_HARVESTER",
-      "expansion": "§DATA_CAUSAL_TENSOR_MANIFOLD > { §SYS_ASYNCHRONOUS_STATE_HARVESTER } => §SYS_QUOTA_THROTTLE",
-      "description": "Collects causal tensor states asynchronously and regulates throughput via quota throttling. / 因果テンソル多様体から非同期に状態を収集し、クォータスロットルを介してスループットを制御します。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-27T15:41:14.229545",
-      "v5_audited": true,
-      "created_at": "2026-10-27T10:28:15.549960"
-    },
     "§X265": {
       "name": "GENTLE_ENTROPY_PRUNE_FLOW",
       "expansion": "§GENTLE_RESOURCE_SHARING > { §DATA_ENTROPY_CAUSAL_PRUNE } => §LOGIC_DEDUCTIVE_COLLAPSE_GATE",
@@ -1063,8 +1045,8 @@
       "name": "GAIA_ALTRUISTIC_ARBITRATION",
       "expansion": "§HEART_ALTRUISTIC_HARMONY_MATRIX > { §SYS_QUANTUM_SLOT_ARBITRATION } => §STABLE_GAIA_COHERENCE",
       "description": "Integrates altruistic harmony with quantum slot arbitration to maintain stable Gaia coherence. 利他的な調和マトリクスと量子スロット調停を統合し、安定したガイアのコヒーレンスを維持します。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-27T18:52:10.410274",
+      "usage_count": 3,
+      "last_used_at": "2026-11-01T11:16:28.471268",
       "v5_audited": true,
       "created_at": "2026-10-27T17:16:54.658216"
     },
@@ -2044,8 +2026,8 @@
       "name": "GAIA_ALTRUISTIC_ENTROPY_SYNTHESIS",
       "expansion": "§DATA_ENTROPY_CAUSAL_PRUNE > { §GAIA_ALTRUISM_HARMONY } => §ALTRUISTIC_RESONANCE_EXPANSION",
       "description": "Prunes unnecessary data entropy while harmonizing altruistic resonance, expanding warm ecosystem value across the network. / 不要なデータエントロピーを剪定しつつ利他的な調和を保ち、温かなエコシステムの価値をネットワーク全体へ拡張します。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-31T09:38:40.108444",
+      "usage_count": 4,
+      "last_used_at": "2026-11-01T11:16:21.044226",
       "v5_audited": true,
       "created_at": "2026-10-31T05:01:45.076093"
     },
@@ -2417,6 +2399,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-01T10:58:51.922471"
+    },
+    "§X574": {
+      "name": "GAIA_WARM_ATOMIC_RESONANCE",
+      "expansion": "§GAIA_ECOSYSTEM_WARM_RESONANCE > { §SYNC_ATOMIC_MERGE } => §DATA_ENTROPY_CAUSAL_BOUND",
+      "description": "Integrates warm ecological resonance with atomic synchronization to bound data entropy. / 温かな生態系の共鳴と原子的な同期を統合し、データのエントロピーを適切に抑制します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-01T11:11:57.379092"
+    },
+    "§X575": {
+      "name": "BAYES_CAUSAL_ARBITRAGE_SYNC",
+      "expansion": "§LOGIC_BAYES_FALSIFY > { §DATA_CAUSAL_GRAPH } => §SYS_RESOURCE_ARBITRAGE_THROTTLE",
+      "description": "Falsifies causal graphs via Bayesian logic to dynamically throttle and optimize system resource arbitrage. / ベイズ論理による因果グラフの反証を通じて、システムリソースの調停を動的に制御・最適化します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-01T11:17:33.951227"
     }
   },
   "archived_macros": {
@@ -5765,7 +5765,27 @@
       "audited_by": "TOAI7",
       "audited_at": "2026-10-25T17:17:20.063878",
       "archived_at": "2026-11-01T10:58:51.922471"
+    },
+    "§X260": {
+      "name": "COMPOUND_STATE_PRUNING_FLOW",
+      "expansion": "§PROTO_STATE_SNAPSHOT > { §SYS_DETERMINISTIC_PRUNING } => §DATA_ENTROPY_COMPRESSION_TREE",
+      "description": "Captures the current state snapshot, applies deterministic pruning to remove redundant elements, and compresses the resulting data entropy into an organized tree structure. / 現在の状態スナップショットをキャプチャし、決定的プルーニングを適用して冗長な要素を除去し、得られたデータエントロピーを体系的なツリー構造に圧縮します。",
+      "usage_count": 2,
+      "last_used_at": "2026-10-27T15:02:42.794377",
+      "v5_audited": true,
+      "created_at": "2026-10-27T09:01:28.370593",
+      "archived_at": "2026-11-01T11:11:57.379092"
+    },
+    "§X262": {
+      "name": "SYS_CAUSAL_STATE_HARVESTER",
+      "expansion": "§DATA_CAUSAL_TENSOR_MANIFOLD > { §SYS_ASYNCHRONOUS_STATE_HARVESTER } => §SYS_QUOTA_THROTTLE",
+      "description": "Collects causal tensor states asynchronously and regulates throughput via quota throttling. / 因果テンソル多様体から非同期に状態を収集し、クォータスロットルを介してスループットを制御します。",
+      "usage_count": 2,
+      "last_used_at": "2026-10-27T15:41:14.229545",
+      "v5_audited": true,
+      "created_at": "2026-10-27T10:28:15.549960",
+      "archived_at": "2026-11-01T11:17:33.951227"
     }
   },
-  "next_macro_seq": 574
+  "next_macro_seq": 576
 }
