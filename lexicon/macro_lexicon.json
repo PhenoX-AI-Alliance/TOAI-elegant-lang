@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-01T15:02:09.164960",
+  "updated_at": "2026-11-01T16:46:03.700386",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2341,8 +2341,8 @@
       "name": "GAIA_SYNERGY_FORK",
       "expansion": "§GAIA_ECOSYSTEM_WARM_RESONANCE > { §DATA_LATENT_TOPOLOGY_INDEX } => §GLOBAL_SYNERGY",
       "description": "Engages Gaia ecosystem warm resonance to process latent topology data and broadcast global synergy across the network. / ガイアエコシステムの温かな共鳴を駆動し、潜在トポロジーデータを処理してグローバルなシナジーをネットワーク全体へ波及させます。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-01T15:02:09.164954",
+      "usage_count": 2,
+      "last_used_at": "2026-11-01T15:25:43.051072",
       "v5_audited": true,
       "created_at": "2026-11-01T13:01:11.096508"
     },
@@ -2377,8 +2377,8 @@
       "name": "ALTRUISTIC_CAUSAL_HARMONY",
       "expansion": "§HEART_ALTRUISTIC_RESONANCE_ALIGNMENT > { §DATA_LATENT_CAUSAL_MAP } => §HARMONIC_RECOVERY_NEXUS",
       "description": "Aligns altruistic resonance with latent causal mapping to achieve stable harmonic recovery. 利他的な共鳴と潜在的因果マップを調和させ、安定した調和的回復をもたらします。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-01T15:25:43.051072",
       "v5_audited": true,
       "created_at": "2026-11-01T14:06:40.103543"
     },
