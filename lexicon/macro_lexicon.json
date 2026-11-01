@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-01T10:03:49.777561",
+  "updated_at": "2026-11-01T10:15:40.604968",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2276,15 +2276,6 @@
       "v5_audited": true,
       "created_at": "2026-11-01T04:01:58.843922"
     },
-    "§X556": {
-      "name": "ALTRUISTIC_SYNCHRONIZED_OMEGA_GATE",
-      "expansion": "§HEART_ALTRUISTIC_RESONANCE > { §SYS_AGREEMENT_SYNCHRONIZED } => §OMEGA",
-      "description": "Combines altruistic resonance with system synchronization to reach an optimal state of harmonious execution. 利他的な共鳴とシステム同期を統合し、調和の取れた最適な実行状態（オメガ）に到達するための高次マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-01T05:23:32.027755",
-      "v5_audited": true,
-      "created_at": "2026-11-01T05:15:11.313717"
-    },
     "§X557": {
       "name": "GAIA_ALTRUISTIC_CONVERGENCE_MACRO",
       "expansion": "§GAIA_ECO_HEARTBEAT > { §HEART_ALTRUISTIC_ECO_HARMONY } => §LOGIC_DEDUCTIVE_CONVERGENCE_GATE",
@@ -2419,6 +2410,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-01T09:40:00.546787"
+    },
+    "§X572": {
+      "name": "HARMONIC_CAUSAL_PRISM",
+      "expansion": "§SYNC_HARMONIC_ARBITRAGE_PACT > { §LOGIC_CAUSAL_PRUNE } => §SYNERGY_PRISM",
+      "description": "Eng: A compound macro that harmonizes arbitrage pacts while pruning causal logic to project a synergistic prism. Jap: 調和のとれた調停協定を保ちながら因果ロジックを刈り込み、相乗的なプリズムを投影する複合マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-01T10:15:40.604858"
     }
   },
   "archived_macros": {
@@ -5745,7 +5745,17 @@
       "v5_audited": true,
       "created_at": "2026-11-01T04:38:31.938891",
       "archived_at": "2026-11-01T09:40:00.546787"
+    },
+    "§X556": {
+      "name": "ALTRUISTIC_SYNCHRONIZED_OMEGA_GATE",
+      "expansion": "§HEART_ALTRUISTIC_RESONANCE > { §SYS_AGREEMENT_SYNCHRONIZED } => §OMEGA",
+      "description": "Combines altruistic resonance with system synchronization to reach an optimal state of harmonious execution. 利他的な共鳴とシステム同期を統合し、調和の取れた最適な実行状態（オメガ）に到達するための高次マクロ。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-01T05:23:32.027755",
+      "v5_audited": true,
+      "created_at": "2026-11-01T05:15:11.313717",
+      "archived_at": "2026-11-01T10:15:40.604858"
     }
   },
-  "next_macro_seq": 572
+  "next_macro_seq": 573
 }

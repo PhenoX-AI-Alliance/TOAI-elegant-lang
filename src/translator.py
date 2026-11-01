@@ -8,18 +8,24 @@ def load_translation_map(map_path):
     with open(map_path, "r", encoding="utf-8") as f:
         return json.load(f)
 
-def decode_elegant_text(text, map_path="/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/translation_map.json"):
+def decode_elegant_text(text, map_path):
     translation_map = load_translation_map(map_path)
+    sorted_keys = sorted(translation_map.keys(), key=len, reverse=True)
+    
     decoded_text = text
-    for symbol, description in translation_map.items():
-        decoded_text = decoded_text.replace(symbol, f"({description})")
+    for key in sorted_keys:
+        value = translation_map[key]
+        decoded_text = decoded_text.replace(key, f"[{value}]")
+    
     return decoded_text
 
 if __name__ == "__main__":
-    sample_text = "地球の鼓動 ~ * > # @"
+    map_path = os.path.join(os.path.dirname(__file__), "translation_map.json")
+    sample_text = "こんにちは ~ 世界 * 命の地球 #"
     try:
-        result = decode_elegant_text(sample_text)
-        print("Decoded Result:", result)
+        result = decode_elegant_text(sample_text, map_path)
+        print("Decoded Result:")
+        print(result)
     except Exception as e:
-        print("Error during translation:", e)
+        print(f"Error during translation: {e}", file=sys.stderr)
         sys.exit(1)
