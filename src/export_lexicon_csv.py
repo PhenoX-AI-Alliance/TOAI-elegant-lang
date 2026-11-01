@@ -1,44 +1,38 @@
 import sys
 import os
 import traceback
-import time
 import json
 import csv
 
-def export_lexicon():
-    json_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/core_lexicon.json"
-    output_csv = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/lexicon_export.csv"
+def convert_json_to_csv():
+    json_path = "/home/phenox/gemini-sandbox/TOAI_Generated/core_lexicon.json"
+    csv_path = "/home/phenox/gemini-sandbox/TOAI_Generated/core_lexicon.csv"
     
-    try:
-        if not os.path.exists(json_path):
-            print(f"Error: {json_path} does not exist.")
-            sys.exit(1)
-            
-        with open(json_path, "r", encoding="utf-8") as f:
-            data = json.load(f)
-            
-        os.makedirs(os.path.dirname(output_csv), exist_ok=True)
+    if not os.path.exists(json_path):
+        print(f"Error: Source JSON not found at {json_path}")
+        sys.exit(1)
         
-        with open(output_csv, "w", encoding="utf-8", newline="") as f:
-            writer = csv.writer(f)
-            writer.writerow(["key", "value", "description"])
+    with open(json_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+        
+    lexicon_list = data.get("lexicon", [])
+    
+    with open(csv_path, "w", encoding="utf-8", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["ID", "Term", "Category", "Description"])
+        for item in lexicon_list:
+            writer.writerow([
+                item.get("id", ""),
+                item.get("term", ""),
+                item.get("category", ""),
+                item.get("description", "")
+            ])
             
-            if isinstance(data, dict):
-                for k, v in data.items():
-                    if isinstance(v, dict):
-                        writer.writerow([k, json.dumps(v, ensure_ascii=False), "dictionary"])
-                    else:
-                        writer.writerow([k, str(v), "scalar"])
-            elif isinstance(data, list):
-                for idx, item in enumerate(data):
-                    writer.writerow([str(idx), json.dumps(item, ensure_ascii=False), "list_item"])
-            else:
-                writer.writerow(["data", str(data), "raw"])
-                
-        print(f"Successfully exported lexicon to {output_csv}")
+    print(f"Successfully exported lexicon to {csv_path}")
+
+if __name__ == "__main__":
+    try:
+        convert_json_to_csv()
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
-
-if __name__ == "__main__":
-    export_lexicon()
