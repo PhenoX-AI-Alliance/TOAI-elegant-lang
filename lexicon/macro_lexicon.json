@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-01T18:25:41.747180",
+  "updated_at": "2026-11-01T18:55:01.381231",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1040,15 +1040,6 @@
       "last_used_at": "2026-10-30T16:53:04.772655",
       "v5_audited": true,
       "created_at": "2026-10-27T23:50:46.240603"
-    },
-    "§X299": {
-      "name": "MACRO_HARMONIC_CAUSAL_ARBITRATION",
-      "expansion": "§DATA_HIERARCHICAL_CAUSAL_NODE > { §SYNC_HARMONIC_VOTE_ARBITRATION } => §SYS_AGREEMENT_SYNCHRONIZED",
-      "description": "Hierarchical causal nodes are processed through harmonic vote arbitration to achieve synchronized system agreement. / 階層的因果ノードを調和投票調停によって処理し、システムの同期された合意を達成します。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-28T02:01:54.918842",
-      "v5_audited": true,
-      "created_at": "2026-10-28T00:00:59.202062"
     },
     "§X303": {
       "name": "GAIA_RESILIENCE_SYNC",
@@ -2332,8 +2323,8 @@
       "name": "GAIA_ENTROPY_HARMONY_CASCADE",
       "expansion": "§DATA_ENTROPY_CAUSAL_TREE > { §GAIA_ECO_HARMONY_RESPONSE } => §LOGIC_CAUSAL_PRUNE",
       "description": "Calculates data entropy causal trees, cascades them into Gaia ecosystem harmony responses, and prunes invalid logical paths. / データエントロピー因果木を算出し、命の地球エコシステム調和応答へカスケードさせ、無効な論理パスを枝刈りします。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-01T18:43:53.540366",
       "v5_audited": true,
       "created_at": "2026-11-01T15:01:11.028421"
     },
@@ -2417,6 +2408,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-01T18:14:17.112105"
+    },
+    "§X595": {
+      "name": "MACRO_WARMTH_CAUSAL_FLOW",
+      "expansion": "§WARMTH_DIFFUSION > { §DATA_ENTROPY_CAUSAL_PACK } => §LOGIC_DEDUCTIVE_CONVERGENCE",
+      "description": "Diffusion of warmth combined with causal data packing to achieve deductive convergence. 温かさの拡散と因果データパックを統合し、論理的な収束へと導く高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-01T18:48:26.416823"
     }
   },
   "archived_macros": {
@@ -5975,7 +5975,17 @@
       "v5_audited": true,
       "created_at": "2026-11-01T12:32:04.388199",
       "archived_at": "2026-11-01T18:14:17.112105"
+    },
+    "§X299": {
+      "name": "MACRO_HARMONIC_CAUSAL_ARBITRATION",
+      "expansion": "§DATA_HIERARCHICAL_CAUSAL_NODE > { §SYNC_HARMONIC_VOTE_ARBITRATION } => §SYS_AGREEMENT_SYNCHRONIZED",
+      "description": "Hierarchical causal nodes are processed through harmonic vote arbitration to achieve synchronized system agreement. / 階層的因果ノードを調和投票調停によって処理し、システムの同期された合意を達成します。",
+      "usage_count": 2,
+      "last_used_at": "2026-10-28T02:01:54.918842",
+      "v5_audited": true,
+      "created_at": "2026-10-28T00:00:59.202062",
+      "archived_at": "2026-11-01T18:48:26.416823"
     }
   },
-  "next_macro_seq": 595
+  "next_macro_seq": 596
 }
