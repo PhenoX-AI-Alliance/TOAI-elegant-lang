@@ -1,33 +1,34 @@
-import sys
-import os
 import json
+import os
 
-def load_translation_map(map_path):
-    if not os.path.exists(map_path):
-        raise FileNotFoundError(f"Translation map not found at: {map_path}")
-    with open(map_path, "r", encoding="utf-8") as f:
-        return json.load(f)
+class ElegantTranslator:
+    def __init__(self, map_path="/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/translation_map.json"):
+        self.map_path = map_path
+        self.translation_map = self._load_map()
 
-def translate_elegant_text(text, map_path):
-    translation_map = load_translation_map(map_path)
-    # Sort keys by length descending to replace longer symbols first
-    sorted_keys = sorted(translation_map.keys(), key=len, reverse=True)
-    
-    result = text
-    for symbol in sorted_keys:
-        concept = translation_map[symbol]
-        result = result.replace(symbol, f"[{concept}]")
-    return result
+    def _load_map(self):
+        if os.path.exists(self.map_path):
+            try:
+                with open(self.map_path, "r", encoding="utf-8") as f:
+                    return json.load(f)
+            except Exception:
+                return {}
+        return {}
+
+    def decode(self, text):
+        if not isinstance(text, str):
+            return ""
+        result = text
+        for symbol, meaning in self.translation_map.items():
+            result = result.replace(symbol, f"({meaning})")
+        return result
+
+def decode_elegant_text(text):
+    translator = ElegantTranslator()
+    return translator.decode(text)
 
 if __name__ == "__main__":
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    map_path = os.path.join(current_dir, "translation_map.json")
-    
-    sample_text = "生命は ~* を抱き、** のもとに集い、-> の世界へ羽ばたく。"
-    try:
-        translated = translate_elegant_text(sample_text, map_path)
-        print("Original:", sample_text)
-        print("Translated:", translated)
-    except Exception as e:
-        print(f"Error during translation: {e}", file=sys.stderr)
-        sys.exit(1)
+    sample = "~Hello * World > Gaia #"
+    translator = ElegantTranslator()
+    print("Original:", sample)
+    print("Decoded:", translator.decode(sample))
