@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-02T19:01:08.355121",
+  "updated_at": "2026-11-02T19:02:39.705046",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2384,8 +2384,8 @@
       "name": "COMPOUND_HARVEST_BARRIER",
       "expansion": "§SYS_GC_BARRIER > { §SYS_ASYNCHRONOUS_STATE_HARVESTER } => §AGREEMENT_ACCEPTED",
       "description": "Asynchronous state harvesting under system GC barrier protection, leading to confirmed agreement. / システムGCバリア保護下での非同期状態収集を行い、合意の受容へと導く複合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-02T19:02:39.705040",
       "v5_audited": true,
       "created_at": "2026-11-02T18:11:19.003647"
     },
