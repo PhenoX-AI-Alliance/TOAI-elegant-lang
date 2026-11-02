@@ -8,32 +8,26 @@ def load_translation_map(map_path):
     with open(map_path, "r", encoding="utf-8") as f:
         return json.load(f)
 
-def decode_elegant_text(text, map_path=None):
-    if map_path is None:
-        current_dir = os.path.dirname(os.path.abspath(__file__))
-        map_path = os.path.join(current_dir, "translation_map.json")
-    
+def translate_elegant_text(text, map_path):
     translation_map = load_translation_map(map_path)
-    
-    decoded_text = text
     # Sort keys by length descending to replace longer symbols first
     sorted_keys = sorted(translation_map.keys(), key=len, reverse=True)
+    
+    result = text
     for symbol in sorted_keys:
-        meaning = translation_map[symbol]
-        decoded_text = decoded_text.replace(symbol, f"({meaning})")
-        
-    return decoded_text
+        concept = translation_map[symbol]
+        result = result.replace(symbol, f"[{concept}]")
+    return result
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        input_text = sys.argv[1]
-    else:
-        input_text = "Hello ~* World +! -> and =*"
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    map_path = os.path.join(current_dir, "translation_map.json")
     
+    sample_text = "生命は ~* を抱き、** のもとに集い、-> の世界へ羽ばたく。"
     try:
-        result = decode_elegant_text(input_text)
-        print("Decoded Result:")
-        print(result)
+        translated = translate_elegant_text(sample_text, map_path)
+        print("Original:", sample_text)
+        print("Translated:", translated)
     except Exception as e:
         print(f"Error during translation: {e}", file=sys.stderr)
         sys.exit(1)
