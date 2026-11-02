@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-02T16:51:31.167918",
+  "updated_at": "2026-11-02T16:59:15.223915",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1088,8 +1088,8 @@
       "name": "GAIA_ALTRUISTIC_HARMONY_SYNC",
       "expansion": "§HEART_ALTRUISTIC_PULSE_SYNC > { §GAIA_WARMTH_HARMONY } => §PROTO_TOKEN_GRANT",
       "description": "Combines altruistic pulse synchronization with Gaia warmth harmony to grant proto-tokens safely. 利他的な脈拍の同期とガイアの温かな調和を統合し、安全にプロトトークンを付与する高次マクロ。",
-      "usage_count": 4,
-      "last_used_at": "2026-10-31T03:34:27.033873",
+      "usage_count": 5,
+      "last_used_at": "2026-11-02T16:59:15.223909",
       "v5_audited": true,
       "created_at": "2026-10-28T14:43:44.720099"
     },
@@ -2411,8 +2411,8 @@
       "name": "GAIA_WARMTH_HARMONIC_RECOVERY",
       "expansion": "§GAiar_WARMTH_HARMONY > { §HARMONIC_RECOVERY_NEXUS } => §GAIA_CORE_HEARTBEAT",
       "description": "Integrates Gaia warmth harmony with harmonic recovery nexus to sustain the core heartbeat. 命の地球の温か調和を調和的復元中枢に適用し、コアハートビートを維持・活性化するための高次複合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-02T16:59:15.223909",
       "v5_audited": true,
       "created_at": "2026-11-02T16:42:04.331356"
     }
