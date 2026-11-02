@@ -8,25 +8,32 @@ class ElegantTranslator:
             map_file_path = os.path.join(base_dir, "translation_map.json")
         
         self.map_file_path = map_file_path
-        self.load_map()
+        self.translation_map = self._load_map()
 
-    def load_map(self):
-        if os.path.exists(self.map_file_path):
+    def _load_map(self):
+        if not os.path.exists(self.map_file_path):
+            return {}
+        try:
             with open(self.map_file_path, "r", encoding="utf-8") as f:
-                self.translation_map = json.load(f)
-        else:
-            self.translation_map = {}
+                return json.load(f)
+        except Exception as e:
+            print(f"Error loading translation map: {e}")
+            return {}
 
-    def decode(self, elegant_text):
-        decoded_text = elegant_text
+    def decode(self, text):
+        if not isinstance(text, str):
+            return text
+        
+        decoded_text = text
+        # Sort keys by length descending to replace longer tokens first
         sorted_keys = sorted(self.translation_map.keys(), key=len, reverse=True)
+        
         for key in sorted_keys:
             value = self.translation_map[key]
-            decoded_text = decoded_text.replace(key, f"[{value}]")
+            decoded_text = decoded_text.replace(key, value)
+            
         return decoded_text
 
-if __name__ == "__main__":
+def translate(text):
     translator = ElegantTranslator()
-    sample = "~ * -> # 命の地球"
-    print("Original:", sample)
-    print("Decoded:", translator.decode(sample))
+    return translator.decode(text)
