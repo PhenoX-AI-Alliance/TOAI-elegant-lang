@@ -8,19 +8,16 @@ class ElegantTranslator:
 
     def _load_map(self):
         if os.path.exists(self.map_path):
-            try:
-                with open(self.map_path, "r", encoding="utf-8") as f:
-                    return json.load(f)
-            except Exception:
-                return {}
+            with open(self.map_path, "r", encoding="utf-8") as f:
+                return json.load(f)
         return {}
 
     def decode(self, text):
-        if not isinstance(text, str):
-            return ""
+        sorted_keys = sorted(self.translation_map.keys(), key=len, reverse=True)
         result = text
-        for symbol, meaning in self.translation_map.items():
-            result = result.replace(symbol, f"({meaning})")
+        for key in sorted_keys:
+            value = self.translation_map[key]
+            result = result.replace(key, f"({value})")
         return result
 
 def decode_elegant_text(text):
@@ -28,7 +25,6 @@ def decode_elegant_text(text):
     return translator.decode(text)
 
 if __name__ == "__main__":
-    sample = "~Hello * World > Gaia #"
-    translator = ElegantTranslator()
+    sample = "Gaia ~ * # -> =>"
     print("Original:", sample)
-    print("Decoded:", translator.decode(sample))
+    print("Decoded:", decode_elegant_text(sample))
