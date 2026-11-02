@@ -1,37 +1,39 @@
-import sys
 import os
 import json
 
 class ElegantTranslator:
-    def __init__(self, map_path="/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/translation_map.json"):
-        self.map_path = map_path
+    def __init__(self, map_file_path=None):
+        if map_file_path is None:
+            self.map_file_path = os.path.join(os.path.dirname(__file__), "translation_map.json")
+        else:
+            self.map_file_path = map_file_path
         self.translation_map = self._load_map()
 
     def _load_map(self):
-        if not os.path.exists(self.map_path):
-            return {}
-        try:
-            with open(self.map_path, "r", encoding="utf-8") as f:
+        if os.path.exists(self.map_file_path):
+            with open(self.map_file_path, "r", encoding="utf-8") as f:
                 return json.load(f)
-        except Exception as e:
-            print(f"Error loading translation map: {e}", file=sys.stderr)
-            return {}
+        return {}
 
-    def decode(self, text: str) -> str:
-        if not isinstance(text, str):
-            return ""
-        
+    def decode(self, text):
         sorted_keys = sorted(self.translation_map.keys(), key=len, reverse=True)
-        
         decoded_text = text
         for key in sorted_keys:
             value = self.translation_map[key]
-            decoded_text = decoded_text.replace(key, f"({value})")
-            
+            decoded_text = decoded_text.replace(key, value)
         return decoded_text
+
+    def encode(self, text):
+        reverse_map = {v: k for k, v in self.translation_map.items()}
+        sorted_keys = sorted(reverse_map.keys(), key=len, reverse=True)
+        encoded_text = text
+        for key in sorted_keys:
+            value = reverse_map[key]
+            encoded_text = encoded_text.replace(key, value)
+        return encoded_text
 
 if __name__ == "__main__":
     translator = ElegantTranslator()
-    sample_text = "# ~ の世界 * -> 価値の創出 => 善の収益化 +"
-    print("Original:", sample_text)
-    print("Decoded:", translator.decode(sample_text))
+    sample = "こんにちは ~ と * が # で @ につなぐ ->"
+    print("Original:", sample)
+    print("Decoded:", translator.decode(sample))
