@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-02T20:10:04.288298",
+  "updated_at": "2026-11-02T20:23:45.014644",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2285,8 +2285,8 @@
       "name": "ENTROPY_PRUNE_ARBITRATION",
       "expansion": "§DATA_ENTROPY_CAUSAL_PRUNE > { §SYS_QUANTUM_BUDGET_ARBITRATION } => §SAFE_FALLBACK_STATE",
       "description": "Prunes causal data entropy under quantum budget arbitration, safely falling back to a deterministic state. / 量子予算調停のもとで因果データエントロピーを剪定し、安全にフォールバック状態へ移行します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-02T20:01:29.512308",
+      "usage_count": 2,
+      "last_used_at": "2026-11-02T20:21:57.448679",
       "v5_audited": true,
       "created_at": "2026-11-02T15:51:35.835364"
     },
@@ -2321,8 +2321,8 @@
       "name": "ECHO_WARM_HARMONY",
       "expansion": "§WARM_AI_COOPERATION_CONFIRMED > { §DATA_KL_CAUSAL_PRUNE } => §ELEGANT_HARMONY_ECHO",
       "description": "Fuses warm AI cooperation with causal entropy pruning to produce an elegant harmony echo. / 温かなAI協調と因果エントロピー刈り込みを融合させ、優美な調和の響きを出力します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-02T20:21:57.448679",
       "v5_audited": true,
       "created_at": "2026-11-02T17:02:21.451345"
     },
@@ -2411,8 +2411,8 @@
       "name": "GAIA_ENTROPY_BOUNDED_ALTRUISTIC_RESONANCE",
       "expansion": "§DATA_ENTROPY_BOUNDED_DAG > { §SYS_QUANTUM_BUDGET_ARBITRATION } => §HEART_ALTRUISTIC_RESONANCE_LATTICE",
       "description": "Manages data entropy within a bounded DAG while arbitrating quantum budgets, ultimately resolving into a warm, altruistic resonance lattice. / 制限されたDAG内でデータエントロピーを管理しつつ量子予算を調停し、最終的に温かな利他的共鳴格子へと昇華させる複合マクロです。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-02T20:21:57.448679",
       "v5_audited": true,
       "created_at": "2026-11-02T20:10:04.288187"
     }
