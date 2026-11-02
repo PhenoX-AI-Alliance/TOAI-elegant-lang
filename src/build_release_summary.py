@@ -1,62 +1,65 @@
 import sys
 import os
-import traceback
-import time
-import json
 import subprocess
-from datetime import datetime
+import json
+import datetime
 
-def get_git_log(repo_path, max_count=20):
+def get_git_log():
+    repo_path = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    git_dir = os.path.join(repo_path, '.git')
+    if not os.path.exists(git_dir):
+        return "Git repository not initialized."
     try:
-        if not os.path.exists(os.path.join(repo_path, '.git')):
-            return "Git repository not initialized."
-        cmd = ['git', '-C', repo_path, 'log', f'-n', str(max_count), '--pretty=format:%h - %an, %ar : %s']
-        result = subprocess.run(cmd, capture_output=True, text=True, check=True)
-        return result.stdout
+        result = subprocess.run(
+            ['git', '-C', repo_path, 'log', '-n', '10', '--oneline'],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            check=True
+        )
+        return result.stdout.strip()
     except Exception as e:
-        return f"Error fetching git log: {str(e)}"
+        return f"Failed to retrieve git log: {str(e)}"
 
-def scan_whitepaper(repo_path):
-    whitepaper_path = os.path.join(repo_path, 'WHITEPAPER.md')
-    if os.path.exists(whitepaper_path):
-        try:
-            with open(whitepaper_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-                lines = content.splitlines()
-                return lines[:10]
-        except Exception as e:
-            return [f"Error reading WHITEPAPER.md: {str(e)}"]
-    return ["WHITEPAPER.md not found."]
+def scan_whitepaper():
+    repo_path = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    possible_paths = [
+        os.path.join(repo_path, 'WHITEPAPER.md'),
+        os.path.join(repo_path, 'TOAI-elegant-lang', 'WHITEPAPER.md')
+    ]
+    for path in possible_paths:
+        if os.path.exists(path):
+            try:
+                with open(path, 'r', encoding='utf-8') as f:
+                    return f.read()[:1000]
+            except Exception:
+                pass
+    return "Whitepaper not found."
 
 def main():
-    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    repo_path = os.path.join(workspace_dir, 'TOAI-elegant-lang')
+    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    output_dir = os.path.join(workspace, 'TOAI_Generated')
+    os.makedirs(output_dir, exist_ok=True)
     
-    print("[*] Scanning git log and whitepaper for release summary...")
-    git_logs = get_git_log(repo_path)
-    whitepaper_summary = scan_whitepaper(repo_path)
+    git_log = get_git_log()
+    whitepaper_snippet = scan_whitepaper()
     
-    summary_data = {
-        "timestamp": datetime.now().isoformat(),
-        "git_logs": git_logs.splitlines(),
-        "whitepaper_excerpt": whitepaper_summary
+    summary = {
+        "timestamp": datetime.datetime.now().isoformat(),
+        "git_log": git_log,
+        "whitepaper_snippet": whitepaper_snippet,
+        "status": "success"
     }
     
-    output_dir = os.path.join(workspace_dir, 'TOAI_Generated')
-    os.makedirs(output_dir, exist_ok=True)
-    output_file = os.path.join(output_dir, 'release_summary.json')
+    out_file = os.path.join(output_dir, 'release_summary.json')
+    with open(out_file, 'w', encoding='utf-8') as f:
+        json.dump(summary, f, ensure_ascii=False, indent=2)
     
-    try:
-        with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(summary_data, f, ensure_ascii=False, indent=2)
-        print(f"[+] Release summary successfully written to {output_file}")
-    except Exception as e:
-        print(f"[-] Failed to write summary file: {str(e)}")
-        sys.exit(1)
+    print(f"Release summary successfully generated at {out_file}")
 
 if __name__ == '__main__':
     try:
         main()
     except Exception as e:
-        traceback.print_exc()
+        print(f"Error in release summary builder: {e}", file=sys.stderr)
         sys.exit(1)
