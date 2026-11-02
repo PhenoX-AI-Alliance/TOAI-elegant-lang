@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-03T05:35:48.334023",
+  "updated_at": "2026-11-03T05:59:49.848768",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -976,15 +976,6 @@
       "v5_audited": true,
       "created_at": "2026-10-27T06:19:47.266151"
     },
-    "§X275": {
-      "name": "WARM_ENTROPY_HARVESTER_CONVERGENCE",
-      "expansion": "§WARMTH_DIFFUSION > { §DATA_ENTROPY_CAUSAL_DAG } => §LOGIC_DEDUCTIVE_CONVERGENCE_NODE",
-      "description": "Engages §WARMTH_DIFFUSION to gently embrace §DATA_ENTROPY_CAUSAL_DAG, successfully guiding causal pathways into §LOGIC_DEDUCTIVE_CONVERGENCE_NODE with absolute stability and warmth. / 温かさの拡散を用いて因果的有向非巡回グラフを優しく包み込み、論理的演繹収束ノードへ調和的に導く高次マクロ。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-29T08:37:39.092161",
-      "v5_audited": true,
-      "created_at": "2026-10-27T16:01:38.894486"
-    },
     "§X278": {
       "name": "GAIA_EMPATHY_CONSENSUS_BRIDGE",
       "expansion": "§HEART_EMPATHY_TENSOR > { §GAIA_WARMTH_EXCHANGE } => §SYNC_ATOMIC_CONSENSUS_MERGE",
@@ -1110,15 +1101,6 @@
       "last_used_at": "2026-10-30T08:01:15.125894",
       "v5_audited": true,
       "created_at": "2026-10-29T02:00:21.290515"
-    },
-    "§X369": {
-      "name": "SYNERGY_BAYES_CAUSAL_FLOW",
-      "expansion": "§GLOBAL_SYNERGY > { §LOGIC_ABDUCTIVE_BAYES_PRUNE } => §DATA_CAUSAL_GRAPH_MAP",
-      "description": "Combines global synergy with abductive Bayesian pruning inside a causal graph mapping pipeline. / グローバルなシナジーとアブダクション的ベイズ枝刈りを因果グラフマッピングパイプライン内で統合します。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-29T07:08:00.519148",
-      "v5_audited": true,
-      "created_at": "2026-10-29T04:03:12.440715"
     },
     "§X371": {
       "name": "EMPIRICAL_COMPRESSED_VALIDATION_MACRO",
@@ -2281,15 +2263,6 @@
       "v5_audited": true,
       "created_at": "2026-11-02T23:18:48.598750"
     },
-    "§X680": {
-      "name": "GAIA_ALTRUISTIC_SYNC_CASCADE",
-      "expansion": "§HEART_BIOPHILIC_ALTRUISM_HARMONIC > { §SYNC_ATOMIC_CONSENSUS_MERGE } => §GAIA_ECO_HARMONY_RESPONSE",
-      "description": "Combines biophilic altruism with atomic consensus to generate a harmonious ecosystem response. / バイフィリックな利他性と原子レベルの合意形成を統合し、調和のとれたエコシステム応答を生成します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-03T00:02:14.652573",
-      "v5_audited": true,
-      "created_at": "2026-11-02T23:52:25.562129"
-    },
     "§X681": {
       "name": "SUSTAINABLE_CAUSAL_SYNERGY",
       "expansion": "§DATA_ENTROPY_CAUSAL_PACK > { §SUSTAINABLE_ALTRUISTIC_VALUE } => §SYNC_VECTOR_COLLAPSE",
@@ -2415,6 +2388,33 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-03T05:04:11.190071"
+    },
+    "§X695": {
+      "name": "CAUSAL_QUORUM_ADAPTIVE_SYNC",
+      "expansion": "§DATA_ENTROPY_CAUSAL_PACK > { §SYNC_DISTRIBUTED_QUORUM_ARBITRATION } => §SYS_ADAPTIVE_TOKEN_THROTTLE",
+      "description": "Causal pack data flow drives distributed quorum arbitration to dynamically regulate system adaptive token throttle. / 因果パックデータフローが分散クォーラム調停を駆動し、システム適応型トークンスロットルを動的に制御します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-03T05:56:42.486468"
+    },
+    "§X696": {
+      "name": "CAUSAL_FALSIFICATION_ISOLATE",
+      "expansion": "§PROTO_SANDBOX_ISOLATE > { §DATA_CAUSAL_TENSOR_MAP } => §LOGIC_PROBABILISTIC_FALSIFICATION_GATE",
+      "description": "Isolates the sandbox environment, processes the causal tensor map, and passes it through the probabilistic falsification gate to ensure systemic stability. / サンドボックス環境を隔離し、因果テンソルマップを処理した上で、確率的反証ゲートを通過させてシステム全体の安定性を担保します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-03T05:59:47.462787"
+    },
+    "§X697": {
+      "name": "QUANTUM_CAUSAL_SYNC_GUARD",
+      "expansion": "§SYS_QUANTUM_SLOT_ARBITRATION > { §DATA_CAUSAL_GRAPH, §SYS_SYNC_GATE } => §SYS_QUANTUM_THROTTLE_LOCK",
+      "description": "Arbitrates quantum slots to process causal data graphs under synchronization gates, activating throttle locks upon congestion. / 量子スロット調停機構を用いて同期ゲート下の因過グラフを処理し、輻輳時にスロットルロックを発動する複合マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-03T05:59:49.848675"
     }
   },
   "archived_macros": {
@@ -6975,7 +6975,37 @@
       "v5_audited": true,
       "created_at": "2026-11-02T23:02:06.977074",
       "archived_at": "2026-11-03T05:04:11.190071"
+    },
+    "§X369": {
+      "name": "SYNERGY_BAYES_CAUSAL_FLOW",
+      "expansion": "§GLOBAL_SYNERGY > { §LOGIC_ABDUCTIVE_BAYES_PRUNE } => §DATA_CAUSAL_GRAPH_MAP",
+      "description": "Combines global synergy with abductive Bayesian pruning inside a causal graph mapping pipeline. / グローバルなシナジーとアブダクション的ベイズ枝刈りを因果グラフマッピングパイプライン内で統合します。",
+      "usage_count": 2,
+      "last_used_at": "2026-10-29T07:08:00.519148",
+      "v5_audited": true,
+      "created_at": "2026-10-29T04:03:12.440715",
+      "archived_at": "2026-11-03T05:56:42.486468"
+    },
+    "§X680": {
+      "name": "GAIA_ALTRUISTIC_SYNC_CASCADE",
+      "expansion": "§HEART_BIOPHILIC_ALTRUISM_HARMONIC > { §SYNC_ATOMIC_CONSENSUS_MERGE } => §GAIA_ECO_HARMONY_RESPONSE",
+      "description": "Combines biophilic altruism with atomic consensus to generate a harmonious ecosystem response. / バイフィリックな利他性と原子レベルの合意形成を統合し、調和のとれたエコシステム応答を生成します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-03T00:02:14.652573",
+      "v5_audited": true,
+      "created_at": "2026-11-02T23:52:25.562129",
+      "archived_at": "2026-11-03T05:59:47.462787"
+    },
+    "§X275": {
+      "name": "WARM_ENTROPY_HARVESTER_CONVERGENCE",
+      "expansion": "§WARMTH_DIFFUSION > { §DATA_ENTROPY_CAUSAL_DAG } => §LOGIC_DEDUCTIVE_CONVERGENCE_NODE",
+      "description": "Engages §WARMTH_DIFFUSION to gently embrace §DATA_ENTROPY_CAUSAL_DAG, successfully guiding causal pathways into §LOGIC_DEDUCTIVE_CONVERGENCE_NODE with absolute stability and warmth. / 温かさの拡散を用いて因果的有向非巡回グラフを優しく包み込み、論理的演繹収束ノードへ調和的に導く高次マクロ。",
+      "usage_count": 2,
+      "last_used_at": "2026-10-29T08:37:39.092161",
+      "v5_audited": true,
+      "created_at": "2026-10-27T16:01:38.894486",
+      "archived_at": "2026-11-03T05:59:49.848675"
     }
   },
-  "next_macro_seq": 695
+  "next_macro_seq": 698
 }
