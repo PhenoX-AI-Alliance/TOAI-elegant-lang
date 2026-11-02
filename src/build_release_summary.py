@@ -3,76 +3,55 @@ import os
 import traceback
 import subprocess
 import json
-import datetime
+from datetime import datetime
 
-def get_git_log(repo_path, max_count=20):
+def get_git_log(repo_path, max_count=10):
     try:
-        result = subprocess.run(
-            ['git', '-C', repo_path, 'log', f'-n', str(max_count), '--pretty=format:%h - %an, %ar : %s'],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True,
-            check=True
-        )
+        cmd = ['git', '-C', repo_path, 'log', f'-n', str(max_count), '--pretty=format:%h - %an: %s (%ad)']
+        result = subprocess.run(cmd, capture_output=True, text=True, check=True)
         return result.stdout.splitlines()
-    except subprocess.CalledProcessError as e:
-        print(f"Git log error: {e.stderr}", file=sys.stderr)
-        return []
     except Exception as e:
-        print(f"Unexpected error fetching git log: {e}", file=sys.stderr)
-        return []
+        return [f"Git log retrieval failed: {str(e)}"]
 
-def scan_whitepaper(repo_path):
-    whitepaper_candidates = ['WHITEPAPER.md', 'README.md', 'docs/whitepaper.md']
-    for candidate in whitepaper_candidates:
-        full_path = os.path.join(repo_path, candidate)
-        if os.path.exists(full_path):
+def scan_whitepaper(workspace_path):
+    whitepaper_paths = [
+        os.path.join(workspace_path, 'TOAI-elegant-lang', 'WHITEPAPER.md'),
+        os.path.join(workspace_path, 'WHITEPAPER.md')
+    ]
+    for path in whitepaper_paths:
+        if os.path.exists(path):
             try:
-                with open(full_path, 'r', encoding='utf-8') as f:
+                with open(path, 'r', encoding='utf-8') as f:
                     content = f.read()
-                    return candidate, content[:1000]
+                    lines = content.splitlines()
+                    return lines[:20]
             except Exception as e:
-                print(f"Error reading {candidate}: {e}", file=sys.stderr)
-    return None, "No whitepaper found."
+                return [f"Failed to read whitepaper: {str(e)}"]
+    return ["No whitepaper found."]
 
 def main():
     workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
     repo_path = os.path.join(workspace_dir, 'TOAI-elegant-lang')
     
-    if not os.path.exists(repo_path):
-        print(f"Repository path does not exist: {repo_path}", file=sys.stderr)
-        sys.exit(1)
-        
-    git_dir = os.path.join(repo_path, '.git')
-    if not os.path.exists(git_dir):
-        print(f"Git repository not initialized at {repo_path}. Initializing...", file=sys.stdout)
-        try:
-            subprocess.run(['git', '-C', repo_path, 'init'], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        except Exception as e:
-            print(f"Failed to initialize git repository: {e}", file=sys.stderr)
-            
-    logs = get_git_log(repo_path)
-    wp_name, wp_snippet = scan_whitepaper(repo_path)
+    print("Scanning repository and whitepaper for release summary...")
     
-    summary = {
-        "timestamp": datetime.datetime.now().isoformat(),
-        "repository": "TOAI-elegant-lang",
-        "whitepaper_source": wp_name,
-        "whitepaper_snippet": wp_snippet,
-        "recent_commits": logs
+    git_logs = get_git_log(repo_path)
+    whitepaper_snippet = scan_whitepaper(workspace_dir)
+    
+    summary_data = {
+        "timestamp": datetime.now().isoformat(),
+        "git_recent_commits": git_logs,
+        "whitepaper_overview": whitepaper_snippet
     }
     
     output_dir = os.path.join(workspace_dir, 'TOAI_Generated')
     os.makedirs(output_dir, exist_ok=True)
-    output_file = os.path.join(output_dir, 'release_summary.json')
     
-    try:
-        with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(summary, f, ensure_ascii=False, indent=2)
-        print(f"Release summary successfully generated at: {output_file}")
-    except Exception as e:
-        print(f"Failed to write release summary: {e}", file=sys.stderr)
-        sys.exit(1)
+    output_path = os.path.join(output_dir, 'release_summary.json')
+    with open(output_path, 'w', encoding='utf-8') as f:
+        json.dump(summary_data, f, ensure_ascii=False, indent=2)
+        
+    print(f"Release summary successfully generated at: {output_path}")
 
 if __name__ == '__main__':
     try:
