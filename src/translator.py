@@ -1,39 +1,27 @@
 import os
 import json
 
-class ElegantTranslator:
-    def __init__(self, map_file_path=None):
-        if map_file_path is None:
-            base_dir = os.path.dirname(os.path.abspath(__file__))
-            map_file_path = os.path.join(base_dir, "translation_map.json")
-        
-        self.map_file_path = map_file_path
-        self.translation_map = self._load_map()
+def load_translation_map(map_path):
+    if not os.path.exists(map_path):
+        return {}
+    with open(map_path, "r", encoding="utf-8") as f:
+        return json.load(f)
 
-    def _load_map(self):
-        if not os.path.exists(self.map_file_path):
-            return {}
-        try:
-            with open(self.map_file_path, "r", encoding="utf-8") as f:
-                return json.load(f)
-        except Exception as e:
-            print(f"Error loading translation map: {e}")
-            return {}
-
-    def decode(self, text):
-        if not isinstance(text, str):
-            return text
+def translate_elegant_text(text, map_path="/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/translation_map.json"):
+    translation_map = load_translation_map(map_path)
+    
+    # Sort keys by length descending to replace longer tokens first (e.g. "=>" before ">")
+    sorted_keys = sorted(translation_map.keys(), key=len, reverse=True)
+    
+    translated_text = text
+    for key in sorted_keys:
+        value = translation_map[key]
+        translated_text = translated_text.replace(key, f"[{value}]")
         
-        decoded_text = text
-        # Sort keys by length descending to replace longer tokens first
-        sorted_keys = sorted(self.translation_map.keys(), key=len, reverse=True)
-        
-        for key in sorted_keys:
-            value = self.translation_map[key]
-            decoded_text = decoded_text.replace(key, value)
-            
-        return decoded_text
+    return translated_text
 
-def translate(text):
-    translator = ElegantTranslator()
-    return translator.decode(text)
+if __name__ == "__main__":
+    sample_text = "Gaia Ecosystem ~ active * # -> sustainable => success"
+    result = translate_elegant_text(sample_text)
+    print("Original:", sample_text)
+    print("Translated:", result)
