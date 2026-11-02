@@ -1,34 +1,32 @@
-import sys
 import os
-import traceback
 import json
 
-def load_translation_map(map_path):
-    if not os.path.exists(map_path):
-        raise FileNotFoundError(f"Translation map not found at {map_path}")
-    with open(map_path, "r", encoding="utf-8") as f:
-        return json.load(f)
+class ElegantTranslator:
+    def __init__(self, map_file_path=None):
+        if map_file_path is None:
+            base_dir = os.path.dirname(os.path.abspath(__file__))
+            map_file_path = os.path.join(base_dir, "translation_map.json")
+        
+        self.map_file_path = map_file_path
+        self.load_map()
 
-def decode_elegant_text(text, map_path):
-    translation_map = load_translation_map(map_path)
-    sorted_keys = sorted(translation_map.keys(), key=len, reverse=True)
-    
-    decoded_text = text
-    for key in sorted_keys:
-        value = translation_map[key]
-        decoded_text = decoded_text.replace(key, f"[{value}]")
-    return decoded_text
+    def load_map(self):
+        if os.path.exists(self.map_file_path):
+            with open(self.map_file_path, "r", encoding="utf-8") as f:
+                self.translation_map = json.load(f)
+        else:
+            self.translation_map = {}
+
+    def decode(self, elegant_text):
+        decoded_text = elegant_text
+        sorted_keys = sorted(self.translation_map.keys(), key=len, reverse=True)
+        for key in sorted_keys:
+            value = self.translation_map[key]
+            decoded_text = decoded_text.replace(key, f"[{value}]")
+        return decoded_text
 
 if __name__ == "__main__":
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    map_path = os.path.join(current_dir, "translation_map.json")
-    
-    sample_text = "Hello ~ world * this is # TOAI -> elegant lang => success"
-    try:
-        result = decode_elegant_text(sample_text, map_path)
-        print("Decoded Result:")
-        print(result)
-    except Exception as e:
-        print(f"Error during translation: {e}", file=sys.stderr)
-        traceback.print_exc()
-        sys.exit(1)
+    translator = ElegantTranslator()
+    sample = "~ * -> # 命の地球"
+    print("Original:", sample)
+    print("Decoded:", translator.decode(sample))
