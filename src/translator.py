@@ -1,29 +1,27 @@
 import os
 import json
+import sys
 
-class ElegantTranslator:
-    def __init__(self, map_file_path):
-        self.map_file_path = map_file_path
-        self.translation_map = self._load_map()
+def load_translation_map(map_path):
+    if not os.path.exists(map_path):
+        raise FileNotFoundError(f"Translation map not found at {map_path}")
+    with open(map_path, "r", encoding="utf-8") as f:
+        return json.load(f)
 
-    def _load_map(self):
-        if not os.path.exists(self.map_file_path):
-            return {}
-        with open(self.map_file_path, "r", encoding="utf-8") as f:
-            return json.load(f)
-
-    def decode(self, elegant_text):
-        decoded_text = elegant_text
-        sorted_keys = sorted(self.translation_map.keys(), key=len, reverse=True)
-        for key in sorted_keys:
-            value = self.translation_map[key]
-            explanation = f"[{key} -> {value}]"
-            decoded_text = decoded_text.replace(key, explanation)
-        return decoded_text
+def decode_elegant_text(text, map_path):
+    translation_map = load_translation_map(map_path)
+    decoded_text = text
+    for symbol, description in translation_map.items():
+        decoded_text = decoded_text.replace(symbol, f"[{description}]")
+    return decoded_text
 
 if __name__ == "__main__":
-    map_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "translation_map.json"))
-    translator = ElegantTranslator(map_path)
-    sample_text = "Gaia Ecosystem # ~ * -> Peace"
-    print("Original:", sample_text)
-    print("Decoded:", translator.decode(sample_text))
+    map_file = os.path.join(os.path.dirname(__file__), "translation_map.json")
+    sample_text = "§ 命の地球へようこそ。† エラーを防ぎながら ‡ 善の収益化を達成する ※ ∞"
+    try:
+        result = decode_elegant_text(sample_text, map_file)
+        print("Decoded Result:")
+        print(result)
+    except Exception as e:
+        print(f"Error during translation: {e}", file=sys.stderr)
+        sys.exit(1)
