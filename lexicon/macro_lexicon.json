@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-03T18:54:28.768563",
+  "updated_at": "2026-11-03T19:36:56.792139",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1147,15 +1147,6 @@
       "v5_audited": true,
       "created_at": "2026-10-29T15:59:52.684708"
     },
-    "§X397": {
-      "name": "ALTRUISTIC_CAUSAL_HARMONY",
-      "expansion": "§DATA_ATTENTION_CAUSAL_DAG > { §ALTRUISTIC_HARMONY_SUSTAINED } => §SYS_VELOCITY_ARBITER",
-      "description": "Integrates causal attention graphs with sustained altruistic harmony to optimize system velocity. / 因果的アテンション構造と持続的な利他調和を統合し、システムの速度と温かさを調和的に最適化します。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-29T17:01:45.322924",
-      "v5_audited": true,
-      "created_at": "2026-10-29T16:43:28.788496"
-    },
     "§X403": {
       "name": "HEART_QUANTUM_HARMONY_SYNC",
       "expansion": "§HEART_ALTRUISTIC_HARMONY_STABILIZER > { §SYS_QUANTUM_BUDGET_ARBITRATION } => §SYNC_DIALECTIC_PRUNE",
@@ -1448,8 +1439,8 @@
       "name": "ALTRUISTIC_QUANTUM_RESONANCE_PIPELINE",
       "expansion": "§HEART_ALTRUISTIC_RESONANCE_MATRIX > { §SYS_QUANTUM_SLOT_ARBITRATION } => §ALTRUISTIC_RESONANCE_EXPANSION",
       "description": "Engages altruistic resonance matrix and allocates quantum slots to expand empathetic system interactions. / 利他型共鳴マトリクスを起動し、量子スロットを調停して共感的なシステム相互作用を拡張します。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-31T04:01:43.978772",
+      "usage_count": 4,
+      "last_used_at": "2026-11-03T19:28:51.438523",
       "v5_audited": true,
       "created_at": "2026-10-31T01:33:56.735748"
     },
@@ -2339,8 +2330,8 @@
       "name": "TENDER_ENTROPY_HARMONY",
       "expansion": "§TENDER_RESONANCE > { §DATA_ENTROPY_CAUSAL_PRUNE } => §LOGIC_DEDUCTIVE_AXIOM_CONVERGE",
       "description": "Tender resonance softens data noise, allowing causal pruning to streamline the entropy landscape and converge cleanly on deductive axioms. / 温かな共鳴によりデータのノイズを和らげ、因果的剪定を通じてエントロピーのランドスケープを整え、演繹的公理へと美しく収束させます。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-03T19:17:46.413148",
       "v5_audited": true,
       "created_at": "2026-11-03T14:30:51.159430"
     },
@@ -2402,8 +2393,8 @@
       "name": "GAIA_HARMONY_PRUNE_LATTICE",
       "expansion": "§GAIA_ECOSYSTEM_HARMONY > { §DATA_CAUSAL_PRUNE_TREE } => §DATA_TENSOR_CAUSAL_LATTICE",
       "description": "Applies causal tree pruning within the Gaia ecosystem to optimize the tensor causal lattice for sustainable harmony. / ガイアエコシステム内における因果ツリーの剪定を適用し、持続可能な調和に向けたテンソル因果格子を最適化します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-03T19:36:56.792132",
       "v5_audited": true,
       "created_at": "2026-11-03T18:01:49.219258"
     },
@@ -2415,6 +2406,15 @@
       "last_used_at": "2026-11-03T18:54:11.639931",
       "v5_audited": true,
       "created_at": "2026-11-03T18:25:53.225292"
+    },
+    "§X729": {
+      "name": "GAIA_WARMTH_THROTTLE_LATTICE",
+      "expansion": "§SYS_ADAPTIVE_TOKEN_THROTTLE > { §ELEGANT_WARMTH_CORE } => §GAIA_ECO_STABLE_STATE",
+      "description": "Adaptive token throttling combined with the elegant warmth core to maintain a stable Gaia ecosystem state. / 適応型トークン抑制とエレガントな温かさの核心を結合し、ガイア生態系の安定状態を維持するマクロ。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-03T19:28:51.438523",
+      "v5_audited": true,
+      "created_at": "2026-11-03T19:23:07.546852"
     }
   },
   "archived_macros": {
@@ -7315,7 +7315,17 @@
       "v5_audited": true,
       "created_at": "2026-11-03T12:01:58.921858",
       "archived_at": "2026-11-03T18:25:53.225292"
+    },
+    "§X397": {
+      "name": "ALTRUISTIC_CAUSAL_HARMONY",
+      "expansion": "§DATA_ATTENTION_CAUSAL_DAG > { §ALTRUISTIC_HARMONY_SUSTAINED } => §SYS_VELOCITY_ARBITER",
+      "description": "Integrates causal attention graphs with sustained altruistic harmony to optimize system velocity. / 因果的アテンション構造と持続的な利他調和を統合し、システムの速度と温かさを調和的に最適化します。",
+      "usage_count": 2,
+      "last_used_at": "2026-10-29T17:01:45.322924",
+      "v5_audited": true,
+      "created_at": "2026-10-29T16:43:28.788496",
+      "archived_at": "2026-11-03T19:23:07.546852"
     }
   },
-  "next_macro_seq": 729
+  "next_macro_seq": 730
 }
