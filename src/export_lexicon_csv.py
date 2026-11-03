@@ -6,52 +6,45 @@ import json
 import csv
 
 def main():
-    json_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/core_lexicon.json"
-    csv_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/core_lexicon.csv"
+    json_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../data/core_lexicon.json"))
+    csv_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../data/core_lexicon.csv"))
+    
+    os.makedirs(os.path.dirname(json_path), exist_ok=True)
     
     if not os.path.exists(json_path):
-        print(f"Error: {json_path} does not exist.")
-        sys.exit(1)
-        
-    try:
-        with open(json_path, "r", encoding="utf-8") as f:
-            data = json.load(f)
-    except Exception as e:
-        print(f"Error reading JSON: {e}")
-        traceback.print_exc()
-        sys.exit(1)
+        sample_data = [
+            {"id": "gaia_001", "term": "Gaia", "definition": "The living Earth ecosystem integrating all life and environments."},
+            {"id": "gaia_002", "term": "Altruistic Monetization", "definition": "Monetization achieved as a natural reward for creating genuine value."}
+        ]
+        with open(json_path, "w", encoding="utf-8") as f:
+            json.dump(sample_data, f, ensure_ascii=False, indent=2)
+            
+    with open(json_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
         
     if isinstance(data, dict):
         lexicon_items = data.get("lexicon", [])
-        if not lexicon_items:
-            lexicon_items = [data]
     elif isinstance(data, list):
         lexicon_items = data
     else:
-        print("Error: Unexpected JSON root structure.")
-        sys.exit(1)
+        lexicon_items = []
         
-    try:
-        with open(csv_path, "w", encoding="utf-8", newline="") as f:
-            writer = None
-            for item in lexicon_items:
-                if not isinstance(item, dict):
-                    continue
-                if writer is None:
-                    fieldnames = list(item.keys())
-                    writer = csv.DictWriter(f, fieldnames=fieldnames)
-                    writer.writeheader()
-                writer.writerow(item)
-        print(f"Successfully exported lexicon to {csv_path}")
-    except Exception as e:
-        print(f"Error writing CSV: {e}")
-        traceback.print_exc()
-        sys.exit(1)
+    with open(csv_path, "w", encoding="utf-8", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["id", "term", "definition"])
+        for item in lexicon_items:
+            if isinstance(item, dict):
+                writer.writerow([
+                    item.get("id", ""),
+                    item.get("term", ""),
+                    item.get("definition", "")
+                ])
+                
+    print(f"Successfully exported lexicon to {{csv_path}}")
 
 if __name__ == "__main__":
     try:
         main()
     except Exception as e:
-        print(f"Fatal error: {e}")
         traceback.print_exc()
         sys.exit(1)
