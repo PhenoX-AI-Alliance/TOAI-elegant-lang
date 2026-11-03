@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-03T22:59:59.001283",
+  "updated_at": "2026-11-03T23:02:00.344472",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -402,8 +402,8 @@
       "name": "ALTRUISTIC_THROTTLE_TRANSACTION",
       "expansion": "§HEART_ALTRUISTIC_HARMONY_MATRIX > { §SYS_ADAPTIVE_SLOT_THROTTLE } => §PROTO_TX_BEGIN",
       "description": "An integrated macro that balances computational efficiency and altruistic welfare via alignment matrices, dynamically throttles concurrency based on system load, and initiates an atomic distributed multi-agent transaction scope. / アライメント指標によって計算効率と利他的福祉を両立させ、システム負荷に応じた動的スロット制御を経て、分散マルチエージェント間の原子的トランザクションを開始する統合マクロ。",
-      "usage_count": 5,
-      "last_used_at": "2026-11-02T02:45:45.180738",
+      "usage_count": 7,
+      "last_used_at": "2026-11-03T23:01:51.658033",
       "created_at": "2026-10-24T09:02:05.470560",
       "v5_audited": true,
       "audited_by": "TOAI",
