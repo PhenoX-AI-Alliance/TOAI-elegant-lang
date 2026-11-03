@@ -1,39 +1,21 @@
 # -*- coding: utf-8 -*-
 import re
 
-def parse_telepath_expr(expression_str):
-    pattern = re.compile(r'^\s*([A-Za-z0-9_]+)\s*-\[([^\]]+)\]->\s*([A-Za-z0-9_]+)\s*$')
-    match = pattern.match(expression_str)
+def parse_telepath_expr(expression):
+    pattern = re.compile(r'^\s*([A-Za-z0-9_]+)\s*-\s*\[\s*p\s*:\s*([0-9\.]+)(?:\s*,\s*r\s*:\s*([0-9\.\-]+))?\s*\]\s*->\s*([A-Za-z0-9_]+)\s*$')
+    match = pattern.match(expression)
     if not match:
-        raise ValueError(f"Invalid expression format: {expression_str}")
+        raise ValueError(f"Invalid telepath expression format: {expression}")
     
     source = match.group(1)
-    meta_str = match.group(2)
-    target = match.group(3)
+    probability = float(match.group(2))
+    reward_str = match.group(3)
+    reward = float(reward_str) if reward_str is not None else 0.0
+    target = match.group(4)
     
-    meta_dict = {}
-    parts = meta_str.split(',')
-    for part in parts:
-        part = part.strip()
-        if not part:
-            continue
-        if ':' in part:
-            key, val = part.split(':', 1)
-            key = key.strip()
-            val = val.strip()
-            try:
-                if '.' in val:
-                    val = float(val)
-                else:
-                    val = int(val)
-            except ValueError:
-                pass
-            meta_dict[key] = val
-        else:
-            meta_dict['label'] = part
-
     return {
         "source": source,
-        "target": target,
-        "metadata": meta_dict
+        "probability": probability,
+        "reward": reward,
+        "target": target
     }
