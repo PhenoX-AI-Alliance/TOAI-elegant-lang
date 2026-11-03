@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-03T14:07:36.970243",
+  "updated_at": "2026-11-03T14:45:28.096707",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1156,15 +1156,6 @@
       "v5_audited": true,
       "created_at": "2026-10-29T15:02:04.571840"
     },
-    "§X395": {
-      "name": "SYNERGY_PRISM_CLOSURE",
-      "expansion": "§SYNERGY_PRISM > { §SYNC_DISTRIBUTED_QUORUM_ARBITRATION } => §LOGIC_DEDUCTIVE_AXIOM_CLOSURE",
-      "description": "Prism synergy combined with distributed quorum arbitration to achieve deterministic deductive axiom closure. / 分散合意クォーラム調停とシナジープリズムを統合し、決定論的な演繹的公理の閉包を達成します。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-29T15:36:18.473518",
-      "v5_audited": true,
-      "created_at": "2026-10-29T15:02:07.377919"
-    },
     "§X396": {
       "name": "ALTRUISTIC_WARMTH_OPTIMIZATION_BATCH",
       "expansion": "§HEART_ALTRUISTIC_RESONANCE_ALIGNMENT > { §PROTO_BATCH_COALESCE } => §ALTRUISTIC_WARMTH_OPTIMIZATION",
@@ -2272,15 +2263,6 @@
       "v5_audited": true,
       "created_at": "2026-11-03T07:41:24.291936"
     },
-    "§X703": {
-      "name": "MACRO_POSTERIOR_DEDUCTIVE_SYNCHRONIZATION",
-      "expansion": "§LOGIC_POSTERIOR_FALSIFY_GATE > { §DATA_HYPER_MANIFOLD_SYNC } => §LOGIC_DEDUCTIVE_COLLAPSE",
-      "description": "Combines posterior falsification filtering with hyper-manifold data synchronization to execute a deductive collapse. 止揚されたデータ多様体の同期に基づき、事後反証ゲートを通過した論理を演繹的収束へと導く高次マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-03T14:02:22.448335",
-      "v5_audited": true,
-      "created_at": "2026-11-03T09:10:56.852779"
-    },
     "§X704": {
       "name": "HARMONIC_ADAPTIVE_PULSE_MACRO",
       "expansion": "§SYS_VELOCITY_ARBITER > { §SYS_ADAPTIVE_BUDGET_ARBITER | §PROTO_HEARTBEAT_PING } => §HARMONIC_ERECVERY_NEXUS",
@@ -2289,15 +2271,6 @@
       "last_used_at": "2026-11-03T11:01:43.015552",
       "v5_audited": true,
       "created_at": "2026-11-03T09:49:34.085753"
-    },
-    "§X705": {
-      "name": "HARMONIC_ENTROPY_SYNCHRONIZATION_GATE",
-      "expansion": "§DATA_ENTROPY_CAUSAL_HYPERGRAPH > { §HARMONIC_RECOVERY_NEXUS } => §SYNC_DIALECTIC_CONVERGENCE",
-      "description": "Eng: A compound macro that measures data entropy within the causal hypergraph, applies harmonic recovery, and converges toward a synchronized dialectic state. / 日: 因果ハイパーグラフ内のデータエントロピーを測定し、調和的リカバリーを適用した上で、同期された弁証法的状態へと収束させる複合マクロです。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-03T10:25:33.702398",
-      "v5_audited": true,
-      "created_at": "2026-11-03T10:01:29.933360"
     },
     "§X706": {
       "name": "GAIA_HARMONY_SYNC_MACRO",
@@ -2348,8 +2321,8 @@
       "name": "ALTRUISTIC_RESONANCE_EXPANSION_SYNC",
       "expansion": "§SYS_MEMORY_SYNC_BARRIER > { §ALTRUISTIC_RESONANCE_EXPANSION } => §SYS_AGREEMENT_SYNCHRONIZED",
       "description": "Synchronizes memory barriers during the expansion of altruistic resonance to achieve unified system agreement. / 利他共鳴の拡張時にメモリバリアを同期させ、システム全体の調和と合意を達成します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-03T14:28:44.974528",
       "v5_audited": true,
       "created_at": "2026-11-03T11:27:52.653243"
     },
@@ -2415,6 +2388,33 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-03T14:01:18.503937"
+    },
+    "§X719": {
+      "name": "CAUSAL_ATTENTION_THROTTLE_RESOLVE",
+      "expansion": "§SYS_TOKEN_THROTTLE > { §DATA_ATTENTION_CAUSAL_DAG } => §PROTO_MACRO_RESOLVE",
+      "description": "Causal attention DAG based token throttle management and macro resolution / 因果アテンションDAGに基づくトークンスロットル管理とマクロ解決",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-03T14:09:07.188092"
+    },
+    "§X720": {
+      "name": "TENDER_ENTROPY_HARMONY",
+      "expansion": "§TENDER_RESONANCE > { §DATA_ENTROPY_CAUSAL_PRUNE } => §LOGIC_DEDUCTIVE_AXIOM_CONVERGE",
+      "description": "Tender resonance softens data noise, allowing causal pruning to streamline the entropy landscape and converge cleanly on deductive axioms. / 温かな共鳴によりデータのノイズを和らげ、因果的剪定を通じてエントロピーのランドスケープを整え、演繹的公理へと美しく収束させます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-03T14:30:51.159430"
+    },
+    "§X721": {
+      "name": "HYPER_ADAPTIVE_PRUNE_MACRO",
+      "expansion": "§DATA_SPARSE_CAUSAL_HYPERGRAPH > { §SYS_ADAPTIVE_BUDGET_ARBITER } => §LOGIC_POSTERIOR_PRUNE",
+      "description": "Eng: Dynamically prunes posterior logic under adaptive budget constraints using a sparse causal hypergraph. / 日: 疎な因果ハイパーグラフを用い、適応的予算制約のもとで事後ロジックを動的に枝刈りします。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-03T14:45:28.096615"
     }
   },
   "archived_macros": {
@@ -7215,7 +7215,37 @@
       "v5_audited": true,
       "created_at": "2026-11-03T09:00:57.315028",
       "archived_at": "2026-11-03T14:01:18.503937"
+    },
+    "§X703": {
+      "name": "MACRO_POSTERIOR_DEDUCTIVE_SYNCHRONIZATION",
+      "expansion": "§LOGIC_POSTERIOR_FALSIFY_GATE > { §DATA_HYPER_MANIFOLD_SYNC } => §LOGIC_DEDUCTIVE_COLLAPSE",
+      "description": "Combines posterior falsification filtering with hyper-manifold data synchronization to execute a deductive collapse. 止揚されたデータ多様体の同期に基づき、事後反証ゲートを通過した論理を演繹的収束へと導く高次マクロ。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-03T14:28:44.974528",
+      "v5_audited": true,
+      "created_at": "2026-11-03T09:10:56.852779",
+      "archived_at": "2026-11-03T14:09:07.188092"
+    },
+    "§X395": {
+      "name": "SYNERGY_PRISM_CLOSURE",
+      "expansion": "§SYNERGY_PRISM > { §SYNC_DISTRIBUTED_QUORUM_ARBITRATION } => §LOGIC_DEDUCTIVE_AXIOM_CLOSURE",
+      "description": "Prism synergy combined with distributed quorum arbitration to achieve deterministic deductive axiom closure. / 分散合意クォーラム調停とシナジープリズムを統合し、決定論的な演繹的公理の閉包を達成します。",
+      "usage_count": 2,
+      "last_used_at": "2026-10-29T15:36:18.473518",
+      "v5_audited": true,
+      "created_at": "2026-10-29T15:02:07.377919",
+      "archived_at": "2026-11-03T14:30:51.159430"
+    },
+    "§X705": {
+      "name": "HARMONIC_ENTROPY_SYNCHRONIZATION_GATE",
+      "expansion": "§DATA_ENTROPY_CAUSAL_HYPERGRAPH > { §HARMONIC_RECOVERY_NEXUS } => §SYNC_DIALECTIC_CONVERGENCE",
+      "description": "Eng: A compound macro that measures data entropy within the causal hypergraph, applies harmonic recovery, and converges toward a synchronized dialectic state. / 日: 因果ハイパーグラフ内のデータエントロピーを測定し、調和的リカバリーを適用した上で、同期された弁証法的状態へと収束させる複合マクロです。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-03T10:25:33.702398",
+      "v5_audited": true,
+      "created_at": "2026-11-03T10:01:29.933360",
+      "archived_at": "2026-11-03T14:45:28.096615"
     }
   },
-  "next_macro_seq": 719
+  "next_macro_seq": 722
 }

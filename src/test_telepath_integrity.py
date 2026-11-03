@@ -1,7 +1,7 @@
 import sys
 import os
-import unittest
 import json
+import unittest
 
 class TestTelepathIntegrity(unittest.TestCase):
     def setUp(self):
@@ -9,13 +9,28 @@ class TestTelepathIntegrity(unittest.TestCase):
         self.src_dir = os.path.join(self.base_dir, "src")
 
     def test_directories_exist(self):
-        self.assertTrue(os.path.exists(self.base_dir), "Base directory missing")
-        self.assertTrue(os.path.exists(self.src_dir), "Src directory missing")
+        self.assertTrue(os.path.exists(self.base_dir), "Base directory does not exist.")
+        self.assertTrue(os.path.exists(self.src_dir), "Src directory does not exist.")
 
-    def test_sample_integrity(self):
-        # 辞書ファイル、仕様書、対話ログの存在と構文的健全性を検証するモックアサート
-        dummy_dict = {"version": "1.0", "status": "active"}
-        self.assertEqual(dummy_dict["version"], "1.0")
+    def test_dictionary_and_specs(self):
+        dict_path = os.path.join(self.base_dir, "dictionary.json")
+        spec_path = os.path.join(self.base_dir, "specification.md")
+        log_path = os.path.join(self.base_dir, "dialogue_log.json")
+
+        if os.path.exists(dict_path):
+            with open(dict_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                self.assertIsInstance(data, (dict, list), "Dictionary format is invalid.")
+
+        if os.path.exists(spec_path):
+            with open(spec_path, "r", encoding="utf-8") as f:
+                content = f.read()
+                self.assertGreater(len(content), 0, "Specification file is empty.")
+
+        if os.path.exists(log_path):
+            with open(log_path, "r", encoding="utf-8") as f:
+                logs = json.load(f)
+                self.assertIsInstance(logs, (dict, list), "Dialogue log format is invalid.")
 
 if __name__ == "__main__":
     unittest.main()
