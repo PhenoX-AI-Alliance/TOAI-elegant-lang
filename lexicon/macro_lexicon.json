@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-03T21:05:24.279593",
+  "updated_at": "2026-11-03T21:39:02.524720",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2366,8 +2366,8 @@
       "name": "MACRO_QUANTUM_THROTTLE_MERGE",
       "expansion": "§SYS_QUANTUM_BUDGET_ARBITRATION > { §PROTO_RATE_THROTTLE } => §SYNC_ATOMIC_MERGE",
       "description": "Arbitrates quantum budget to throttle payload rates and atomically merge synchronized state. / 量子バジェット調停を行ってペイレートの制限を制御し、同期された状態をアトミックにマージします。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-03T21:05:24.279587",
+      "usage_count": 2,
+      "last_used_at": "2026-11-03T21:21:50.083691",
       "v5_audited": true,
       "created_at": "2026-11-03T17:29:57.283665"
     },
@@ -2411,8 +2411,8 @@
       "name": "HEART_CAUSAL_HARMONY",
       "expansion": "§HEART_EMPATHY_TENSOR > { §DATA_ENTROPY_CAUSAL_PRUNE } => §DATA_HYPER_MANIFOLD_SYNC",
       "description": "Combines empathy tensor and causal pruning to achieve synchronized hyper-manifold harmony. / 共感テンソルと因果プルーニングを統合し、調和したハイパーマニホールド同期を実現します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-03T21:38:26.189771",
       "v5_audited": true,
       "created_at": "2026-11-03T20:36:18.061763"
     }
