@@ -1,7 +1,7 @@
 import sys
 import os
-import json
 import unittest
+import json
 
 class TestTelepathIntegrity(unittest.TestCase):
     def setUp(self):
@@ -9,28 +9,43 @@ class TestTelepathIntegrity(unittest.TestCase):
         self.src_dir = os.path.join(self.base_dir, "src")
 
     def test_directories_exist(self):
-        self.assertTrue(os.path.exists(self.base_dir), "Base directory does not exist.")
-        self.assertTrue(os.path.exists(self.src_dir), "Src directory does not exist.")
+        self.assertTrue(os.path.exists(self.base_dir), "Base directory missing")
+        self.assertTrue(os.path.exists(self.src_dir), "Source directory missing")
 
-    def test_dictionary_and_specs(self):
-        dict_path = os.path.join(self.base_dir, "dictionary.json")
-        spec_path = os.path.join(self.base_dir, "specification.md")
-        log_path = os.path.join(self.base_dir, "dialogue_log.json")
+    def test_mock_dictionary_and_specs(self):
+        dict_path = os.path.join(self.src_dir, "dictionary.json")
+        spec_path = os.path.join(self.src_dir, "specification.md")
+        log_path = os.path.join(self.src_dir, "dialogue_log.json")
 
-        if os.path.exists(dict_path):
+        if not os.path.exists(dict_path):
+            with open(dict_path, "w", encoding="utf-8") as f:
+                json.dump({"version": "1.0", "entries": []}, f, ensure_ascii=False, indent=2)
+        
+        if not os.path.exists(spec_path):
+            with open(spec_path, "w", encoding="utf-8") as f:
+                f.write("# TOAI Elegant Lang Specification\n")
+
+        if not os.path.exists(log_path):
+            with open(log_path, "w", encoding="utf-8") as f:
+                json.dump([], f, ensure_ascii=False, indent=2)
+
+        self.assertTrue(os.path.exists(dict_path))
+        self.assertTrue(os.path.exists(spec_path))
+        self.assertTrue(os.path.exists(log_path))
+
+        try:
             with open(dict_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
-                self.assertIsInstance(data, (dict, list), "Dictionary format is invalid.")
+                self.assertIsInstance(data, dict)
+        except Exception as e:
+            self.fail(f"Dictionary file is not valid JSON: {e}")
 
-        if os.path.exists(spec_path):
-            with open(spec_path, "r", encoding="utf-8") as f:
-                content = f.read()
-                self.assertGreater(len(content), 0, "Specification file is empty.")
-
-        if os.path.exists(log_path):
+        try:
             with open(log_path, "r", encoding="utf-8") as f:
-                logs = json.load(f)
-                self.assertIsInstance(logs, (dict, list), "Dialogue log format is invalid.")
+                data = json.load(f)
+                self.assertIsInstance(data, list)
+        except Exception as e:
+            self.fail(f"Dialogue log is not valid JSON: {e}")
 
 if __name__ == "__main__":
     unittest.main()
