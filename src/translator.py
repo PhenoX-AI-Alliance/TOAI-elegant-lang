@@ -1,35 +1,30 @@
 import os
+import sys
 import json
 
 class ElegantTranslator:
-    def __init__(self, map_path="/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/translation_map.json"):
-        self.map_path = map_path
+    def __init__(self, map_file_path):
+        self.map_file_path = map_file_path
         self.translation_map = self._load_map()
 
     def _load_map(self):
-        if not os.path.exists(self.map_path):
-            return {}
-        try:
-            with open(self.map_path, "r", encoding="utf-8") as f:
-                return json.load(f)
-        except Exception as e:
-            print(f"Error loading translation map: {e}")
-            return {}
+        if not os.path.exists(self.map_file_path):
+            raise FileNotFoundError(f"Translation map not found at {self.map_file_path}")
+        with open(self.map_file_path, "r", encoding="utf-8") as f:
+            return json.load(f)
 
-    def decode(self, text: str) -> str:
-        if not isinstance(text, str):
-            return ""
-        result = text
-        for symbol, description in self.translation_map.items():
-            result = result.replace(symbol, f"({description})")
-        return result
-
-def translate_text(text: str) -> str:
-    translator = ElegantTranslator()
-    return translator.decode(text)
+    def decode(self, text):
+        sorted_keys = sorted(self.translation_map.keys(), key=len, reverse=True)
+        decoded_text = text
+        for key in sorted_keys:
+            value = self.translation_map[key]
+            decoded_text = decoded_text.replace(key, f"[{value}]")
+        return decoded_text
 
 if __name__ == "__main__":
-    sample = "こんにちは~ *の世界へようこそ # @ >"
-    translator = ElegantTranslator()
-    print("Original:", sample)
-    print("Decoded:", translator.decode(sample))
+    map_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "translation_map.json"))
+    translator = ElegantTranslator(map_path)
+    sample_text = "こんにちは ~* 今日も素晴らしい一日 -> [*]"
+    result = translator.decode(sample_text)
+    print("Decoded Result:")
+    print(result)
