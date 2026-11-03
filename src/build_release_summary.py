@@ -5,54 +5,56 @@ import subprocess
 import json
 from datetime import datetime
 
-def get_git_log(repo_path, max_count=20):
+def get_git_log():
     try:
-        if not os.path.exists(os.path.join(repo_path, '.git')):
-            return "Git repository not initialized."
-        cmd = ['git', '-C', repo_path, 'log', f'-n', str(max_count), '--oneline']
-        result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+        repo_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
+        if not os.path.exists(os.path.join(repo_dir, '.git')):
+            return "Git repository not found at target path."
+        
+        result = subprocess.run(
+            ['git', 'log', '-n', '10', '--oneline'],
+            cwd=repo_dir,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            check=True
+        )
         return result.stdout
     except Exception as e:
-        return f"Error fetching git log: {str(e)}"
+        return f"Could not retrieve git log: {str(e)}"
 
-def scan_whitepaper(repo_path):
-    whitepaper_paths = [
-        os.path.join(repo_path, 'WHITEPAPER.md'),
-        os.path.join(repo_path, 'docs', 'WHITEPAPER.md'),
-        os.path.join(repo_path, 'src', 'WHITEPAPER.md')
-    ]
-    for path in whitepaper_paths:
-        if os.path.exists(path):
-            try:
-                with open(path, 'r', encoding='utf-8') as f:
-                    return f.read()[:2000] # Return first 2000 chars as summary
-            except Exception as e:
-                pass
-    return "Whitepaper not found."
+def scan_whitepaper():
+    try:
+        workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+        whitepaper_path = os.path.join(workspace, 'TOAI-elegant-lang', 'WHITEPAPER.md')
+        if os.path.exists(whitepaper_path):
+            with open(whitepaper_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+                return content[:500] + "... [truncated]"
+        return "Whitepaper not found."
+    except Exception as e:
+        return f"Could not read whitepaper: {str(e)}"
 
 def main():
     workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    repo_path = os.path.join(workspace, 'TOAI-elegant-lang')
-    
-    print(f"Analyzing repository at: {repo_path}")
-    
-    git_history = get_git_log(repo_path)
-    whitepaper_summary = scan_whitepaper(repo_path)
-    
-    summary_data = {
-        "timestamp": datetime.utcnow().isoformat() + "Z",
-        "git_log": git_history,
-        "whitepaper_summary": whitepaper_summary
-    }
-    
     output_dir = os.path.join(workspace, 'TOAI_Generated')
     os.makedirs(output_dir, exist_ok=True)
     
+    git_log = get_git_log()
+    whitepaper_snippet = scan_whitepaper()
+    
+    summary = {
+        "timestamp": datetime.now().isoformat(),
+        "git_log": git_log,
+        "whitepaper_snippet": whitepaper_snippet,
+        "release_status": "Ready for publication"
+    }
+    
     output_file = os.path.join(output_dir, 'release_summary.json')
     with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(summary_data, f, ensure_ascii=False, indent=2)
+        json.dump(summary, f, ensure_ascii=False, indent=2)
         
-    print(f"Release summary successfully generated at: {output_file}")
+    print(f"Successfully generated release summary at {output_file}")
 
 if __name__ == '__main__':
     try:
