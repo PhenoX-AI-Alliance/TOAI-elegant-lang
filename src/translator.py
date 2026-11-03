@@ -8,23 +8,28 @@ def load_translation_map(map_path):
     with open(map_path, "r", encoding="utf-8") as f:
         return json.load(f)
 
-def decode_elegant_text(text, map_path="/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/translation_map.json"):
+def decode_elegant_text(text, map_path):
     translation_map = load_translation_map(map_path)
+    # Sort keys by length descending to replace longer symbols first (e.g. '=>' before '=')
     sorted_keys = sorted(translation_map.keys(), key=len, reverse=True)
     
     decoded_text = text
-    for key in sorted_keys:
-        value = translation_map[key]
-        decoded_text = decoded_text.replace(key, f"[{value}]")
-    
+    for symbol in sorted_keys:
+        meaning = translation_map[symbol]
+        replacement = f"[{symbol} -> {meaning}]"
+        decoded_text = decoded_text.replace(symbol, replacement)
+        
     return decoded_text
 
 if __name__ == "__main__":
-    sample_text = "Gaia ~ * # -> =>"
-    print("Original:", sample_text)
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    map_path = os.path.join(current_dir, "translation_map.json")
+    
+    sample_text = "Gaia Ecosystem * ~ => # @"
     try:
-        result = decode_elegant_text(sample_text)
-        print("Decoded:", result)
+        result = decode_elegant_text(sample_text, map_path)
+        print("Decoded Result:")
+        print(result)
     except Exception as e:
-        print(f"Error during translation: {e}")
+        print(f"Error during translation: {e}", file=sys.stderr)
         sys.exit(1)
