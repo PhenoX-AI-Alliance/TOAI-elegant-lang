@@ -1,5 +1,4 @@
 import os
-import sys
 import json
 
 class ElegantTranslator:
@@ -9,22 +8,22 @@ class ElegantTranslator:
 
     def _load_map(self):
         if not os.path.exists(self.map_file_path):
-            raise FileNotFoundError(f"Translation map not found at {self.map_file_path}")
+            return {}
         with open(self.map_file_path, "r", encoding="utf-8") as f:
             return json.load(f)
 
-    def decode(self, text):
+    def decode(self, elegant_text):
+        decoded_text = elegant_text
         sorted_keys = sorted(self.translation_map.keys(), key=len, reverse=True)
-        decoded_text = text
         for key in sorted_keys:
             value = self.translation_map[key]
-            decoded_text = decoded_text.replace(key, f"[{value}]")
+            explanation = f"[{key} -> {value}]"
+            decoded_text = decoded_text.replace(key, explanation)
         return decoded_text
 
 if __name__ == "__main__":
     map_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "translation_map.json"))
     translator = ElegantTranslator(map_path)
-    sample_text = "こんにちは ~* 今日も素晴らしい一日 -> [*]"
-    result = translator.decode(sample_text)
-    print("Decoded Result:")
-    print(result)
+    sample_text = "Gaia Ecosystem # ~ * -> Peace"
+    print("Original:", sample_text)
+    print("Decoded:", translator.decode(sample_text))
