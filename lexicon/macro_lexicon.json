@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-03T17:10:10.994558",
+  "updated_at": "2026-11-03T18:02:19.789743",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -656,8 +656,8 @@
       "name": "GAIA_ALTRUISTIC_HARMONY_MACRO",
       "expansion": "§GAIA_WARMTH_EXCHANGE > { §HEART_ALTRUISTIC_RESONANCE_ALIGNMENT } => §GRACEFUL_TASK_SHARING",
       "description": "Engages in Gaia warmth exchange, aligns hearts through altruistic resonance, and executes graceful task sharing to maintain ecosystem harmony. / ガイアの温かさの交換を行い、利他的な共鳴によって心を調和させ、優雅なタスク共有を実行してエコシステムの調和を維持します。",
-      "usage_count": 8,
-      "last_used_at": "2026-10-26T20:03:15.054216",
+      "usage_count": 9,
+      "last_used_at": "2026-11-03T18:02:19.789736",
       "v5_audited": true,
       "created_at": "2026-10-25T15:02:24.787551"
     },
@@ -1137,15 +1137,6 @@
       "last_used_at": "2026-10-29T18:04:30.878843",
       "v5_audited": true,
       "created_at": "2026-10-29T15:01:01.356869"
-    },
-    "§X394": {
-      "name": "ALTRUISTIC_ENTROPY_HARMONY_MACRO",
-      "expansion": "§ALTRUISTIC_VALUE_CREATION > { §DATA_ENTROPY_CAUSAL_DAG } => §HEART_EMPATHETIC_VALENCE_ALIGNMENT",
-      "description": "Transforms data entropy causal directed acyclic graphs through altruistic value creation into heart-empathetic valence alignment, optimizing the warmth and harmony of the Gaia ecosystem. / 利他価値創造を通じてデータエントロピー因果DAGを心温まる感情価整列へと変換し、ガイアエコシステムの温かみと調和を最適化します。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-29T16:04:46.244615",
-      "v5_audited": true,
-      "created_at": "2026-10-29T15:02:04.571840"
     },
     "§X396": {
       "name": "ALTRUISTIC_WARMTH_OPTIMIZATION_BATCH",
@@ -2281,15 +2272,6 @@
       "v5_audited": true,
       "created_at": "2026-11-03T11:27:47.102080"
     },
-    "§X711": {
-      "name": "ALTRUISTIC_RESONANCE_EXPANSION_SYNC",
-      "expansion": "§SYS_MEMORY_SYNC_BARRIER > { §ALTRUISTIC_RESONANCE_EXPANSION } => §SYS_AGREEMENT_SYNCHRONIZED",
-      "description": "Synchronizes memory barriers during the expansion of altruistic resonance to achieve unified system agreement. / 利他共鳴の拡張時にメモリバリアを同期させ、システム全体の調和と合意を達成します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-03T14:28:44.974528",
-      "v5_audited": true,
-      "created_at": "2026-11-03T11:27:52.653243"
-    },
     "§X712": {
       "name": "ALTRUISTIC_ENTROPY_SYNTHESIS",
       "expansion": "§HEART_ALTRUISTIC_WEIGHT_TENSOR > { §DATA_ENTROPY_COMPRESSION_TREE } => §LATENT_SYMPHONY_CASCADE",
@@ -2411,10 +2393,28 @@
       "name": "ALTRUISTIC_HARMONY_SUSTAINED_GATE",
       "expansion": "§LOGIC_CONDITIONAL_FALSIFICATION_GATE > { §SAFE_FALLBACK_STATE } => §ALTRUISTIC_HARMONY_SUSTAINED",
       "description": "Applies conditional falsification to ensure safe fallback states while sustaining altruistic harmony. / 条件付き偽装判定を適用し、利他的調和を維持しながら安全なフォールバック状態を確実に実行します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-03T17:49:06.270311",
+      "v5_audited": true,
+      "created_at": "2026-11-03T16:42:11.060702"
+    },
+    "§X726": {
+      "name": "MACRO_QUANTUM_THROTTLE_MERGE",
+      "expansion": "§SYS_QUANTUM_BUDGET_ARBITRATION > { §PROTO_RATE_THROTTLE } => §SYNC_ATOMIC_MERGE",
+      "description": "Arbitrates quantum budget to throttle payload rates and atomically merge synchronized state. / 量子バジェット調停を行ってペイレートの制限を制御し、同期された状態をアトミックにマージします。",
       "usage_count": 0,
       "last_used_at": null,
       "v5_audited": true,
-      "created_at": "2026-11-03T16:42:11.060702"
+      "created_at": "2026-11-03T17:29:57.283665"
+    },
+    "§X727": {
+      "name": "GAIA_HARMONY_PRUNE_LATTICE",
+      "expansion": "§GAIA_ECOSYSTEM_HARMONY > { §DATA_CAUSAL_PRUNE_TREE } => §DATA_TENSOR_CAUSAL_LATTICE",
+      "description": "Applies causal tree pruning within the Gaia ecosystem to optimize the tensor causal lattice for sustainable harmony. / ガイアエコシステム内における因果ツリーの剪定を適用し、持続可能な調和に向けたテンソル因果格子を最適化します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-03T18:01:49.219258"
     }
   },
   "archived_macros": {
@@ -7285,7 +7285,27 @@
       "v5_audited": true,
       "created_at": "2026-10-29T13:36:34.872353",
       "archived_at": "2026-11-03T16:42:11.060702"
+    },
+    "§X394": {
+      "name": "ALTRUISTIC_ENTROPY_HARMONY_MACRO",
+      "expansion": "§ALTRUISTIC_VALUE_CREATION > { §DATA_ENTROPY_CAUSAL_DAG } => §HEART_EMPATHETIC_VALENCE_ALIGNMENT",
+      "description": "Transforms data entropy causal directed acyclic graphs through altruistic value creation into heart-empathetic valence alignment, optimizing the warmth and harmony of the Gaia ecosystem. / 利他価値創造を通じてデータエントロピー因果DAGを心温まる感情価整列へと変換し、ガイアエコシステムの温かみと調和を最適化します。",
+      "usage_count": 2,
+      "last_used_at": "2026-10-29T16:04:46.244615",
+      "v5_audited": true,
+      "created_at": "2026-10-29T15:02:04.571840",
+      "archived_at": "2026-11-03T17:29:57.283665"
+    },
+    "§X711": {
+      "name": "ALTRUISTIC_RESONANCE_EXPANSION_SYNC",
+      "expansion": "§SYS_MEMORY_SYNC_BARRIER > { §ALTRUISTIC_RESONANCE_EXPANSION } => §SYS_AGREEMENT_SYNCHRONIZED",
+      "description": "Synchronizes memory barriers during the expansion of altruistic resonance to achieve unified system agreement. / 利他共鳴の拡張時にメモリバリアを同期させ、システム全体の調和と合意を達成します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-03T14:28:44.974528",
+      "v5_audited": true,
+      "created_at": "2026-11-03T11:27:52.653243",
+      "archived_at": "2026-11-03T18:01:49.219258"
     }
   },
-  "next_macro_seq": 726
+  "next_macro_seq": 728
 }
