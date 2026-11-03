@@ -2,30 +2,25 @@ import os
 import json
 
 class ElegantTranslator:
-    def __init__(self, map_file_path="/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/translation_map.json"):
-        self.map_file_path = map_file_path
-        self.translation_map = self._load_map()
+    def __init__(self, map_path=None):
+        if map_path is None:
+            current_dir = os.path.dirname(os.path.abspath(__file__))
+            map_path = os.path.join(current_dir, "translation_map.json")
+        
+        with open(map_path, "r", encoding="utf-8") as f:
+            self.translation_map = json.load(f)
 
-    def _load_map(self):
-        if not os.path.exists(self.map_file_path):
-            return {}
-        try:
-            with open(self.map_file_path, "r", encoding="utf-8") as f:
-                return json.load(f)
-        except Exception as e:
-            print(f"Error loading translation map: {e}")
-            return {}
+    def decode(self, text: str) -> str:
+        result = text
+        for symbol, meaning in self.translation_map.items():
+            result = result.replace(symbol, f"({meaning})")
+        return result
 
-    def decode(self, text):
-        if not isinstance(text, str):
-            return ""
-        decoded_text = text
-        for symbol, description in sorted(self.translation_map.items(), key=lambda x: len(x[0]), reverse=True):
-            decoded_text = decoded_text.replace(symbol, f"[{description}]")
-        return decoded_text
+def decode_elegant_text(text: str) -> str:
+    translator = ElegantTranslator()
+    return translator.decode(text)
 
 if __name__ == "__main__":
-    translator = ElegantTranslator()
-    sample_text = "こんにちは ~* と共に +! を生み出し -> へ進む =*"
-    print("Original:", sample_text)
-    print("Decoded:", translator.decode(sample_text))
+    sample = "~ 命の地球 * 未来への架け橋 #"
+    print("Original:", sample)
+    print("Decoded:", decode_elegant_text(sample))

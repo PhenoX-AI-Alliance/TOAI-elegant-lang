@@ -1,7 +1,7 @@
 import sys
 import os
-import traceback
 import json
+import traceback
 
 def audit_lexicons():
     workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
@@ -15,8 +15,8 @@ def audit_lexicons():
         "macro_lexicon_status": "missing",
         "core_categories": {},
         "macro_categories": {},
-        "total_core_symbols": 0,
-        "total_macro_symbols": 0
+        "core_total": 0,
+        "macro_total": 0
     }
     
     try:
@@ -24,30 +24,36 @@ def audit_lexicons():
             with open(core_path, 'r', encoding='utf-8') as f:
                 core_data = json.load(f)
                 lexicon_map = core_data.get('lexicon', {})
-                report["total_core_symbols"] = len(lexicon_map)
-                cats = {}
-                for sym, data in lexicon_map.items():
-                    cat = data.get('category', 'unknown')
-                    cats[cat] = cats.get(cat, 0) + 1
-                report["core_categories"] = cats
                 report["core_lexicon_status"] = "loaded"
+                report["core_total"] = len(lexicon_map)
+                
+                categories = {}
+                for sym, data in lexicon_map.items():
+                    cat = data.get('category', 'unknown') if isinstance(data, dict) else 'unknown'
+                    categories[cat] = categories.get(cat, 0) + 1
+                report["core_categories"] = categories
         
         if os.path.exists(macro_path):
             with open(macro_path, 'r', encoding='utf-8') as f:
                 macro_data = json.load(f)
-                macro_map = macro_data.get('lexicon', {})
-                report["total_macro_symbols"] = len(macro_map)
-                m_cats = {}
-                for sym, data in macro_map.items():
-                    cat = data.get('category', 'unknown')
-                    m_cats[cat] = m_cats.get(cat, 0) + 1
-                report["macro_categories"] = m_cats
+                macro_map = macro_data.get('macro_lexicon', macro_data.get('lexicon', {}))
                 report["macro_lexicon_status"] = "loaded"
+                report["macro_total"] = len(macro_map)
                 
-        print(json.dumps(report, ensure_ascii=False, indent=2))
+                m_categories = {}
+                for sym, data in macro_map.items():
+                    cat = data.get('category', 'unknown') if isinstance(data, dict) else 'unknown'
+                    m_categories[cat] = m_categories.get(cat, 0) + 1
+                report["macro_categories"] = m_categories
+                
+        output_report_path = os.path.join(workspace_dir, 'TOAI-elegant-lang', 'lexicon_audit_report.json')
+        with open(output_report_path, 'w', encoding='utf-8') as f:
+            json.dump(report, f, ensure_ascii=False, indent=2)
+            
+        print(f"Audit completed successfully. Report saved to {output_report_path}")
         
     except Exception as e:
-        print(f"Error during audit: {e}", file=sys.stderr)
+        print(f"Error during lexicon audit: {e}", file=sys.stderr)
         traceback.print_exc()
         sys.exit(1)
 
