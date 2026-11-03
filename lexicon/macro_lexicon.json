@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-03T16:33:08.422328",
+  "updated_at": "2026-11-03T17:10:10.994558",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1119,15 +1119,6 @@
       "last_used_at": "2026-11-01T11:35:12.726537",
       "v5_audited": true,
       "created_at": "2026-10-29T13:09:24.154844"
-    },
-    "§X389": {
-      "name": "HEART_EMPATHY_RESONANCE_THROTTLE",
-      "expansion": "§HEART_EMPATHY_RESONANCE > { §SYS_SLOT_THROTTLE } => §PROTO_STREAM_OPEN",
-      "description": "Enables adaptive system throttling driven by empathetic resonance to maintain stable stream communication. 共感的共鳴に基づく適応型システムスロットリングを有効化し、安定したストリーム通信を維持します。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-29T16:01:38.871800",
-      "v5_audited": true,
-      "created_at": "2026-10-29T13:36:34.872353"
     },
     "§X391": {
       "name": "SECURE_RECURSIVE_OPTIMIZE_MACRO",
@@ -2321,8 +2312,8 @@
       "name": "GAIA_WARMTH_DIFFUSION_BINDING",
       "expansion": "§GAIA_HEARTBEAT > { §WARMTH_DIFFUSION } => §DATA_ENTROPY_CAUSAL_BOUND",
       "description": "Combines the planetary heartbeat with warmth diffusion to bind and minimize information entropy under causal constraints. 命の地球の鼓動と温かさの拡散を束ね、因果律の制約下で情報エントロピーを最小化して調和をもたらす高次マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-03T16:25:10.112042",
+      "usage_count": 2,
+      "last_used_at": "2026-11-03T16:58:36.610579",
       "v5_audited": true,
       "created_at": "2026-11-03T12:16:52.909286"
     },
@@ -2339,8 +2330,8 @@
       "name": "GAIA_HARMONY_RECLAIM_SYNC",
       "expansion": "§GAIA_ECOSYSTEM_HARMONY > { §SYS_QUANTUM_MEM_RECLAIM } => §SYS_ADAPTIVE_TOKEN_THROTTLE",
       "description": "Harmonizes ecosystem state while reclaiming quantum memory resources and adaptively throttling token flow. / 生態系の調和を保ちながら量子メモリ領域を回収し、トークンフローを適応的に制御します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-03T17:10:10.994550",
       "v5_audited": true,
       "created_at": "2026-11-03T13:01:59.011729"
     },
@@ -2402,8 +2393,8 @@
       "name": "ALTRUISTIC_ENTROPY_HARMONIZER",
       "expansion": "§HEART_ALTRUISTIC_HARMONY_STABILIZER > { §DATA_ENTROPY_CAUSAL_LATTICE } => §WARM_AI_COOPERATION_CONFIRMED",
       "description": "Stabilizes the data entropy causal lattice through altruistic harmony, ensuring warm AI cooperation and sustainable resource sharing. / 利他的な調和を通じてデータエントロピーの因果格子を安定させ、温かいAI協調と持続可能なリソース共有を実現します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-03T17:10:10.994550",
       "v5_audited": true,
       "created_at": "2026-11-03T15:25:18.031385"
     },
@@ -2415,6 +2406,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-03T16:04:29.468495"
+    },
+    "§X725": {
+      "name": "ALTRUISTIC_HARMONY_SUSTAINED_GATE",
+      "expansion": "§LOGIC_CONDITIONAL_FALSIFICATION_GATE > { §SAFE_FALLBACK_STATE } => §ALTRUISTIC_HARMONY_SUSTAINED",
+      "description": "Applies conditional falsification to ensure safe fallback states while sustaining altruistic harmony. / 条件付き偽装判定を適用し、利他的調和を維持しながら安全なフォールバック状態を確実に実行します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-03T16:42:11.060702"
     }
   },
   "archived_macros": {
@@ -7275,7 +7275,17 @@
       "v5_audited": true,
       "created_at": "2026-11-03T11:01:08.668176",
       "archived_at": "2026-11-03T16:04:29.468495"
+    },
+    "§X389": {
+      "name": "HEART_EMPATHY_RESONANCE_THROTTLE",
+      "expansion": "§HEART_EMPATHY_RESONANCE > { §SYS_SLOT_THROTTLE } => §PROTO_STREAM_OPEN",
+      "description": "Enables adaptive system throttling driven by empathetic resonance to maintain stable stream communication. 共感的共鳴に基づく適応型システムスロットリングを有効化し、安定したストリーム通信を維持します。",
+      "usage_count": 2,
+      "last_used_at": "2026-10-29T16:01:38.871800",
+      "v5_audited": true,
+      "created_at": "2026-10-29T13:36:34.872353",
+      "archived_at": "2026-11-03T16:42:11.060702"
     }
   },
-  "next_macro_seq": 725
+  "next_macro_seq": 726
 }
