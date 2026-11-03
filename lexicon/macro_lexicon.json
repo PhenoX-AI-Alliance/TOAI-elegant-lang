@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-04T07:14:46.594952",
+  "updated_at": "2026-11-04T08:01:32.650153",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1210,15 +1210,6 @@
       "v5_audited": true,
       "created_at": "2026-10-30T17:25:27.582861"
     },
-    "§X459": {
-      "name": "HARMONIC_FALSIFICATION_PAGINATE",
-      "expansion": "§HARMONIC_RESONANCE > { §LOGIC_DEDUCTIVE_FALSIFY_TENSOR } => §PROTO_CURSOR_PAGINATE",
-      "description": "Applies harmonic resonance to falsification tensors and paginates the verified results. 検証済みテンソルに調和共鳴を適用し、結果をページネーションして出力します。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-30T22:05:38.028691",
-      "v5_audited": true,
-      "created_at": "2026-10-30T18:05:20.933237"
-    },
     "§X460": {
       "name": "QUANTUM_CAUSAL_ARBITRATION_MACRO",
       "expansion": "§DATA_LATENT_CAUSAL_MANIFOLD > { §SYS_QUANTUM_MEM_RECLAIM } => §SYNC_DYNAMIC_QUORUM_ARBITRATION",
@@ -1236,15 +1227,6 @@
       "last_used_at": "2026-10-30T23:39:09.061242",
       "v5_audited": true,
       "created_at": "2026-10-30T19:40:37.643338"
-    },
-    "§X465": {
-      "name": "GAIA_WARMTH_THROTTLE_COMMIT",
-      "expansion": "§GAIA_ECOSYSTEM_WARMTH_AMPLIFIER > { §SYS_SLOT_THROTTLE } => §PROTO_PARTIAL_COMMIT",
-      "description": "Amplify ecosystem warmth while safely throttling system slots and executing partial commitments in a harmonious, sustainable manner. / 生態系の温かさを増幅させつつ、システムスロットを安全に制御し、調和的かつ持続可能な部分コミットを実行します。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-30T20:37:30.840335",
-      "v5_audited": true,
-      "created_at": "2026-10-30T20:00:04.653585"
     },
     "§X470": {
       "name": "QUANTUM_PRISM_GATE",
@@ -2290,15 +2272,6 @@
       "v5_audited": true,
       "created_at": "2026-11-04T03:02:59.231345"
     },
-    "§X747": {
-      "name": "GAIA_WARMTH_SYNERGY_COMMIT",
-      "expansion": "§GAIA_ECO_HEARTBEAT > { §GAIA_WARMTH_HARMONY } => §PROTO_TX_COMMIT",
-      "description": "Combines Gaia ecological heartbeat and empathetic warmth to execute a warm, altruistic transaction commit. / 命の地球の生態系ハートビートと温かな調和を束ね、利他的な価値のコミットを実行します。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-04T03:35:50.099955"
-    },
     "§X748": {
       "name": "ALTRUISTIC_CAUSAL_HARMONY",
       "expansion": "§HEART_ALTRUISTIC_RESONANCE_ALIGNMENT > { §DATA_CAUSAL_TENSOR_MAP } => §GRACEFUL_TASK_SHARING",
@@ -2312,8 +2285,8 @@
       "name": "CAUSAL_PREEMPTIVE_GUARD",
       "expansion": "§PROTO_REPLAY_GUARD > { §DATA_ENTROPY_CAUSAL_HYPERGRAPH } => §PROTO_PRIORITY_PREEMPT",
       "description": "Combines replay protection, causal hypergraph analysis, and priority preemption to secure and optimize system state transitions. / リプレイ保護、因果ハイパーグラフ解析、および優先度プリエムションを統合し、システムの安全な状態遷移と最適化を実現します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-04T07:48:07.470402",
       "v5_audited": true,
       "created_at": "2026-11-04T04:14:46.749963"
     },
@@ -2415,6 +2388,33 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-04T07:08:21.303009"
+    },
+    "§X761": {
+      "name": "COMPOUND_BAYES_ENTROPY_OPTIMIZER",
+      "expansion": "§LOGIC_ABDUCTIVE_BAYES_PRUNE > { §DATA_ENTROPY_CAUSAL_PRUNE } => §SYS_QUANTUM_MEM_RECLAIM",
+      "description": "Combines abductive Bayesian pruning and causal entropy reduction to optimize quantum memory reclamation. / アブダクション・ベイジアン枝刈りと因果的エントロピー削減を統合し、量子メモリ回収を最適化します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-04T07:50:39.881486"
+    },
+    "§X762": {
+      "name": "HEART_GUIDED_ENTROPY_PRUNING",
+      "expansion": "§HEART_EMPATHY_TENSOR > { §DATA_ENTROPY_CAUSAL_PRUNE } => §HARMONIC_RESONANCE_STABLE",
+      "description": "Applies emotional empathy tensor weights to guide causal data entropy pruning, ensuring the resulting system state achieves stable harmonic resonance. / 心の共感テンソルを用いて因果的なデータエントロピーの刈り込みを導き、安定した調跟共鳴状態を実現します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-04T07:58:34.807978"
+    },
+    "§X763": {
+      "name": "PROTO_GRACEFUL_DRAIN_WITH_BATCH",
+      "expansion": "§PROTO_GRACEFUL_DRAIN > { §PROTO_BATCH_COALESCE } => §SYS_QUOTA_THROTTLE_SYNC",
+      "description": "Ensures graceful drainage of active processes while coalescing pending batches, synchronized with system quota throttles. 処理の優雅な排出と保留中バッチの結合を同時に行い、システムクォータの制限と同期させます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-04T08:01:32.650035"
     }
   },
   "archived_macros": {
@@ -7635,7 +7635,37 @@
       "v5_audited": true,
       "created_at": "2026-11-04T02:29:51.802533",
       "archived_at": "2026-11-04T07:08:21.303009"
+    },
+    "§X465": {
+      "name": "GAIA_WARMTH_THROTTLE_COMMIT",
+      "expansion": "§GAIA_ECOSYSTEM_WARMTH_AMPLIFIER > { §SYS_SLOT_THROTTLE } => §PROTO_PARTIAL_COMMIT",
+      "description": "Amplify ecosystem warmth while safely throttling system slots and executing partial commitments in a harmonious, sustainable manner. / 生態系の温かさを増幅させつつ、システムスロットを安全に制御し、調和的かつ持続可能な部分コミットを実行します。",
+      "usage_count": 2,
+      "last_used_at": "2026-10-30T20:37:30.840335",
+      "v5_audited": true,
+      "created_at": "2026-10-30T20:00:04.653585",
+      "archived_at": "2026-11-04T07:50:39.881486"
+    },
+    "§X459": {
+      "name": "HARMONIC_FALSIFICATION_PAGINATE",
+      "expansion": "§HARMONIC_RESONANCE > { §LOGIC_DEDUCTIVE_FALSIFY_TENSOR } => §PROTO_CURSOR_PAGINATE",
+      "description": "Applies harmonic resonance to falsification tensors and paginates the verified results. 検証済みテンソルに調和共鳴を適用し、結果をページネーションして出力します。",
+      "usage_count": 2,
+      "last_used_at": "2026-10-30T22:05:38.028691",
+      "v5_audited": true,
+      "created_at": "2026-10-30T18:05:20.933237",
+      "archived_at": "2026-11-04T07:58:34.807978"
+    },
+    "§X747": {
+      "name": "GAIA_WARMTH_SYNERGY_COMMIT",
+      "expansion": "§GAIA_ECO_HEARTBEAT > { §GAIA_WARMTH_HARMONY } => §PROTO_TX_COMMIT",
+      "description": "Combines Gaia ecological heartbeat and empathetic warmth to execute a warm, altruistic transaction commit. / 命の地球の生態系ハートビートと温かな調和を束ね、利他的な価値のコミットを実行します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-04T03:35:50.099955",
+      "archived_at": "2026-11-04T08:01:32.650035"
     }
   },
-  "next_macro_seq": 761
+  "next_macro_seq": 764
 }
