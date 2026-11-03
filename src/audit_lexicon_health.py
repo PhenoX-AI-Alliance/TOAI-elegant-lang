@@ -10,56 +10,39 @@ def audit_lexicons():
     core_path = os.path.join(lexicon_dir, 'core_lexicon.json')
     macro_path = os.path.join(lexicon_dir, 'macro_lexicon.json')
     
-    audit_results = {
-        'timestamp': os.path.exists(core_path) and os.path.getmtime(core_path) or 0,
-        'core_lexicon': {},
-        'macro_lexicon': {}
+    report = {
+        "core_lexicon": {"total_symbols": 0, "categories": {}, "compact_id_stats": {}},
+        "macro_lexicon": {"total_symbols": 0, "categories": {}, "compact_id_stats": {}}
     }
     
-    if os.path.exists(core_path):
-        try:
-            with open(core_path, 'r', encoding='utf-8') as f:
-                core_data = json.load(f)
-                lexicon = core_data.get('lexicon', {})
-                categories = {}
-                compact_ids = []
-                for sym, data in lexicon.items():
-                    cat = data.get('category', 'unknown')
-                    categories[cat] = categories.get(cat, 0) + 1
-                    if 'compact_id' in data:
-                        compact_ids.append(data['compact_id'])
-                audit_results['core_lexicon'] = {
-                    'total_symbols': len(lexicon),
-                    'category_distribution': categories,
-                    'compact_id_count': len(compact_ids)
-                }
-        except Exception as e:
-            audit_results['core_lexicon']['error'] = str(e)
-            
-    if os.path.exists(macro_path):
-        try:
-            with open(macro_path, 'r', encoding='utf-8') as f:
-                macro_data = json.load(f)
-                lexicon = macro_data.get('lexicon', {})
-                categories = {}
-                for sym, data in lexicon.items():
-                    cat = data.get('category', 'unknown')
-                    categories[cat] = categories.get(cat, 0) + 1
-                audit_results['macro_lexicon'] = {
-                    'total_symbols': len(lexicon),
-                    'category_distribution': categories
-                }
-        except Exception as e:
-            audit_results['macro_lexicon']['error'] = str(e)
-            
-    output_path = os.path.join(workspace_dir, 'TOAI-elegant-lang', 'lexicon', 'audit_report.json')
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(audit_results, f, ensure_ascii=False, indent=2)
-    print(json.dumps(audit_results, ensure_ascii=False, indent=2))
-
-if __name__ == '__main__':
     try:
-        audit_lexicons()
+        if os.path.exists(core_path):
+            with open(core_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                lexicon_map = data.get('lexicon', {})
+                report["core_lexicon"]["total_symbols"] = len(lexicon_map)
+                cats = {}
+                for sym, val in lexicon_map.items():
+                    cat = val.get('category', 'unknown') if isinstance(val, dict) else 'unknown'
+                    cats[cat] = cats.get(cat, 0) + 1
+                report["core_lexicon"]["categories"] = cats
+                
+        if os.path.exists(macro_path):
+            with open(macro_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                lexicon_map = data.get('lexicon', {})
+                report["macro_lexicon"]["total_symbols"] = len(lexicon_map)
+                cats = {}
+                for sym, val in lexicon_map.items():
+                    cat = val.get('category', 'unknown') if isinstance(val, dict) else 'unknown'
+                    cats[cat] = cats.get(cat, 0) + 1
+                report["macro_lexicon"]["categories"] = cats
+                
+        print(json.dumps(report, ensure_ascii=False, indent=2))
     except Exception as e:
+        print(f"Error during audit: {e}", file=sys.stderr)
         traceback.print_exc()
         sys.exit(1)
+
+if __name__ == '__main__':
+    audit_lexicons()

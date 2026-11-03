@@ -1,12 +1,12 @@
+#!/usr/bin/env python3
 import sys
 import os
 import traceback
-import time
-import json
 import subprocess
 import datetime
+import json
 
-def get_git_logs(repo_path, max_count=20):
+def get_git_log(repo_path, max_count=20):
     try:
         result = subprocess.run(
             ['git', '-C', repo_path, 'log', f'-n {max_count}', '--oneline'],
@@ -15,38 +15,35 @@ def get_git_logs(repo_path, max_count=20):
             text=True,
             check=True
         )
-        return result.stdout.strip().split('\n')
+        return result.stdout.strip().splitlines()
     except Exception as e:
-        print(f"Warning: Failed to fetch git logs: {e}")
+        print(f"Warning: Could not fetch git log: {e}")
         return []
 
 def scan_whitepaper(repo_path):
-    whitepaper_candidates = ['WHITEPAPER.md', 'README.md', 'CONSTITUTION.md']
-    summary_data = {}
-    for candidate in whitepaper_candidates:
-        file_path = os.path.join(repo_path, candidate)
-        if os.path.exists(file_path):
-            try:
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                    summary_data[candidate] = content[:500] # preview first 500 chars
-            except Exception as e:
-                print(f"Warning: Failed to read {candidate}: {e}")
-    return summary_data
+    whitepaper_files = []
+    for root, dirs, files in os.walk(repo_path):
+        for file in files:
+            if 'whitepaper' in file.lower() or 'release' in file.lower() or 'summary' in file.lower():
+                whitepaper_files.append(os.path.join(root, file))
+    return whitepaper_files
 
 def main():
     workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
     repo_path = os.path.join(workspace_dir, 'TOAI-elegant-lang')
     
-    print(f"Scanning repository at: {repo_path}")
-    
-    git_logs = get_git_logs(repo_path)
+    if not os.path.exists(repo_path):
+        print(f"Error: Repository path does not exist: {repo_path}")
+        sys.exit(1)
+        
+    git_logs = get_git_log(repo_path)
     whitepapers = scan_whitepaper(repo_path)
     
-    release_info = {
+    summary_data = {
         "timestamp": datetime.datetime.now().isoformat(),
-        "git_logs": git_logs,
-        "whitepaper_summaries": whitepapers
+        "repository": repo_path,
+        "recent_commits": git_logs,
+        "related_documents": whitepapers
     }
     
     output_dir = os.path.join(workspace_dir, 'TOAI_Generated')
@@ -54,7 +51,7 @@ def main():
     
     output_file = os.path.join(output_dir, 'release_summary.json')
     with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(release_info, f, ensure_ascii=False, indent=2)
+        json.dump(summary_data, f, ensure_ascii=False, indent=2)
         
     print(f"Release summary successfully generated at: {output_file}")
 
