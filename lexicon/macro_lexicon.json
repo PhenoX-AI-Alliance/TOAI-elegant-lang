@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-04T05:01:19.536966",
+  "updated_at": "2026-11-04T05:05:19.605084",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -435,8 +435,8 @@
       "name": "EMPATHETIC_PRUNING_RECOVERY",
       "expansion": "§HEART_EMPATHETIC_VALENCE_ALIGNMENT > { §LOGIC_CAUSAL_PRUNE } => §HARMONIC_RECOVERY_NEXUS",
       "description": "Aligns affective valence and ethical intent for collaborative inference while pruning invalid causal branches and enforcing adaptive fallback to preserve latent structure. / 協調推論における感情的価数と倫理的意図の調和を図りつつ、無効な因果分岐の枝刈りと潜在構造維持のための適応型フォールバックを強制する複合マクロ。",
-      "usage_count": 7,
-      "last_used_at": "2026-11-04T04:53:24.723055",
+      "usage_count": 8,
+      "last_used_at": "2026-11-04T05:04:17.183315",
       "created_at": "2026-10-24T13:01:08.104718",
       "v5_audited": true,
       "audited_by": "TOAI7",
@@ -2303,8 +2303,8 @@
       "name": "GAIA_HARMONIC_FALSIFICATION_SYNTHESIS",
       "expansion": "§GAIA_ECO_HARMONY_RESPONSE > { §LOGIC_PROBABILISTIC_FALSIFICATION_PRISM } => §HARMONIC_RECOVERY_NEXUS",
       "description": "Engages ecological harmony response, filters it through probabilistic falsification, and culminates in harmonic recovery. / 生態系の調和的応答を発動し、確率的偽証プリズムを通して検証した上で、最終的に調和的回復へと収束させます。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-04T05:04:17.183315",
       "v5_audited": true,
       "created_at": "2026-11-04T02:02:49.419906"
     },
@@ -2375,8 +2375,8 @@
       "name": "HEART_ALTRUISTIC_RESONANCE_LATTICE_WITH_RECOVERY",
       "expansion": "§HEART_ALTRUISTIC_RESONANCE_LATTICE > { §HARMONIC_ERECVERY_NEXUS } => §DATA_ENTROPY_CAUSAL_PRUNE",
       "description": "Combines altruistic resonance with harmonic recovery to prune causal data entropy and maintain system grace. / 利他的な共鳴と調和的復元を統合し、因果的データエントロピーを剪定してシステムの優美さを維持します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-04T05:05:19.605079",
       "v5_audited": true,
       "created_at": "2026-11-04T04:33:27.746403"
     },
