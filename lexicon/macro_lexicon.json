@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-04T03:41:51.939142",
+  "updated_at": "2026-11-04T03:50:39.839055",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2393,8 +2393,8 @@
       "name": "GAIA_HARMONY_DRAIN_DEF",
       "expansion": "§PROTO_GRACEFUL_DRAIN > { §GAIA_ECO_HARMONY_RESPONSE } => §SYS_ADAPTIVE_THROTTLE_FALLBACK",
       "description": "Eng: Gracefully drains system load while maintaining Gaia ecosystem harmony and falling back adaptively. Jap: ガイアエコシステムの調和を保ちつつ、適応型フォールバックにより優雅に負荷を解放します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-04T03:39:05.721104",
+      "usage_count": 2,
+      "last_used_at": "2026-11-04T03:49:08.184302",
       "v5_audited": true,
       "created_at": "2026-11-04T03:02:41.576186"
     },
@@ -2402,8 +2402,8 @@
       "name": "GAIA_ALTRUISTIC_RESONANCE_GATEWAY",
       "expansion": "§SYS_RESOURCE_ARBITRATION_GATEWAY > { §GAIA_ALTRUISM_HARMONY } => §ALTRUISTIC_RESONANCE_EXPANSION",
       "description": "Allocates system resources through the Gaia altruism harmony filter to expand altruistic resonance safely. Gaiaエコシステムの調和フィルターを通してリソースを配分し、利他的共鳴を安全に拡張します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-04T03:50:01.806752",
       "v5_audited": true,
       "created_at": "2026-11-04T03:02:59.231345"
     },
