@@ -1,20 +1,36 @@
+# -*- coding: utf-8 -*-
 import re
 
-def parse_telepath_expr(expression):
-    pattern = r"^\\s*(.+?)\\s*-\\s*\[\\s*p\\s*:\\s*([0-9\\.]+)(?:\\s*,\\s*r\\s*:\\s*([0-9\\.\\-]+))?\\s*\]->\\s*(.+?)\\s*$"
-    match = re.match(pattern, expression)
+def parse_telepath_expr(expression_str):
+    pattern = re.compile(r'^\s*([A-Za-z0-9_]+)\s*-\[([^\]]+)\]->\s*([A-Za-z0-9_]+)\s*$')
+    match = pattern.match(expression_str)
     if not match:
-        raise ValueError(f"Invalid telepath expression format: {expression}")
+        raise ValueError(f"Invalid telepath expression format: {expression_str}")
     
-    source = match.group(1).strip()
-    probability = float(match.group(2))
-    reward_str = match.group(3)
-    reward = float(reward_str) if reward_str is not None else 0.0
-    target = match.group(4).strip()
+    source = match.group(1)
+    meta_str = match.group(2)
+    target = match.group(3)
     
-    return {
+    prob = None
+    reward = None
+    
+    parts = meta_str.split(',')
+    for part in parts:
+        part = part.strip()
+        if ':' in part:
+            key, val = part.split(':', 1)
+            key = key.strip()
+            val = val.strip()
+            if key == 'p':
+                prob = float(val)
+            elif key == 'r':
+                reward = float(val)
+                
+    result = {
         "source": source,
-        "probability": probability,
+        "target": target,
+        "probability": prob,
         "reward": reward,
-        "target": target
+        "raw_meta": meta_str
     }
+    return result
