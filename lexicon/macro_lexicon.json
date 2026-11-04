@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-05T02:08:16.082266",
+  "updated_at": "2026-11-05T02:19:15.466506",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2360,8 +2360,8 @@
       "name": "ENTROPY_CONTROL_GATE",
       "expansion": "§DATA_ENTROPY_CAUSAL_BOUND > { §SYS_SYNC_THROTTLE } => §SYS_SYNC_GATE",
       "description": "Monitors data entropy boundaries and throttled synchronization to gate system synchronization safely. / データの情報エントロピー境界と同期スロットルを監視し、システムの同期制御を安全に行うマクロです。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-05T02:13:25.411149",
       "v5_audited": true,
       "created_at": "2026-11-04T23:21:25.645640"
     },
