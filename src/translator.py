@@ -16,25 +16,30 @@ class ElegantTranslator:
         try:
             with open(self.map_file_path, "r", encoding="utf-8") as f:
                 return json.load(f)
-        except Exception:
+        except Exception as e:
+            print(f"Error loading translation map: {e}")
             return {}
 
-    def decode(self, text):
-        if not isinstance(text, str):
+    def decode(self, elegant_text):
+        if not isinstance(elegant_text, str):
             return ""
         
-        # Sort keys by length descending to replace longer tokens first (e.g., '->' before '-')
+        decoded_text = elegant_text
+        # Sort keys by length descending to replace longer symbols first if any
         sorted_keys = sorted(self.translation_map.keys(), key=len, reverse=True)
         
-        decoded_text = text
-        for key in sorted_keys:
-            value = self.translation_map[key]
-            decoded_text = decoded_text.replace(key, value)
+        for symbol in sorted_keys:
+            concept = self.translation_map[symbol]
+            decoded_text = decoded_text.replace(symbol, f"({concept})")
             
         return decoded_text
 
-if __name__ == "__main__":
+def translate_text(text):
     translator = ElegantTranslator()
-    sample = "Hello ~ * -> #"
+    return translator.decode(text)
+
+if __name__ == "__main__":
+    sample = "~ * # > -"
+    translator = ElegantTranslator()
     print("Original:", sample)
     print("Decoded:", translator.decode(sample))
