@@ -2,14 +2,13 @@ import sys
 import os
 import traceback
 import subprocess
-import datetime
 import json
+from datetime import datetime
 
 def get_git_log(repo_path, max_count=20):
     try:
         result = subprocess.run(
-            ['git', 'log', f'-n', str(max_count), '--pretty=format:%h - %an, %ar : %s'],
-            cwd=repo_path,
+            ['git', '-C', repo_path, 'log', f'-n {max_count}', '--pretty=format:%h - %an, %ar : %s'],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True,
@@ -17,44 +16,48 @@ def get_git_log(repo_path, max_count=20):
         )
         return result.stdout.splitlines()
     except Exception as e:
-        print(f"Warning: Could not fetch git log: {e}")
-        return []
+        return [f"Git log retrieval failed: {str(e)}"]
 
 def scan_whitepaper(repo_path):
-    candidates = ['WHITEPAPER.md', 'README.md', 'CONSTITUTION.md']
+    whitepaper_candidates = ['WHITEPAPER.md', 'README.md', 'CONSTITUTION.md']
     summary_data = {}
-    for filename in candidates:
+    for filename in whitepaper_candidates:
         filepath = os.path.join(repo_path, filename)
         if os.path.exists(filepath):
             try:
                 with open(filepath, 'r', encoding='utf-8') as f:
-                    lines = f.readlines()
-                    summary_data[filename] = [line.strip() for line in lines[:15] if line.strip()]
+                    content = f.read()
+                    summary_data[filename] = content[:500] + "..." if len(content) > 500 else content
             except Exception as e:
-                print(f"Warning: Could not read {filename}: {e}")
+                summary_data[filename] = f"Error reading file: {str(e)}"
     return summary_data
 
 def main():
-    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    repo_path = os.path.join(workspace_dir, 'TOAI-elegant-lang')
+    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    repo_path = os.path.join(workspace, 'TOAI-elegant-lang')
     
     print(f"Scanning repository at: {repo_path}")
     
-    git_logs = get_git_log(repo_path)
-    whitepaper_info = scan_whitepaper(repo_path)
+    git_commits = []
+    if os.path.exists(os.path.join(repo_path, '.git')):
+        git_commits = get_git_log(repo_path)
+    else:
+        git_commits = ["Git repository not initialized or not found."]
+        
+    whitepaper_summary = scan_whitepaper(repo_path)
     
-    release_data = {
-        "timestamp": datetime.datetime.utcnow().isoformat() + "Z",
-        "git_history": git_logs,
-        "whitepaper_snippets": whitepaper_info
+    release_info = {
+        "timestamp": datetime.utcnow().isoformat() + "Z",
+        "git_recent_commits": git_commits,
+        "documentation_summary": whitepaper_summary
     }
     
-    output_dir = os.path.join(workspace_dir, 'TOAI_Generated')
+    output_dir = os.path.join(workspace, 'TOAI_Generated')
     os.makedirs(output_dir, exist_ok=True)
-    
     output_file = os.path.join(output_dir, 'release_summary.json')
+    
     with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(release_data, f, ensure_ascii=False, indent=2)
+        json.dump(release_info, f, indent=2, ensure_ascii=False)
         
     print(f"Release summary successfully generated at: {output_file}")
 
