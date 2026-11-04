@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-04T13:37:27.943140",
+  "updated_at": "2026-11-04T13:41:30.462853",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2272,15 +2272,6 @@
       "v5_audited": true,
       "created_at": "2026-11-04T04:33:27.746403"
     },
-    "§X762": {
-      "name": "HEART_GUIDED_ENTROPY_PRUNING",
-      "expansion": "§HEART_EMPATHY_TENSOR > { §DATA_ENTROPY_CAUSAL_PRUNE } => §HARMONIC_RESONANCE_STABLE",
-      "description": "Applies emotional empathy tensor weights to guide causal data entropy pruning, ensuring the resulting system state achieves stable harmonic resonance. / 心の共感テンソルを用いて因果的なデータエントロピーの刈り込みを導き、安定した調跟共鳴状態を実現します。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-04T07:58:34.807978"
-    },
     "§X763": {
       "name": "PROTO_GRACEFUL_DRAIN_WITH_BATCH",
       "expansion": "§PROTO_GRACEFUL_DRAIN > { §PROTO_BATCH_COALESCE } => §SYS_QUOTA_THROTTLE_SYNC",
@@ -2415,6 +2406,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-04T13:06:40.178426"
+    },
+    "§X778": {
+      "name": "CAUSAL_QUANTUM_SYNCHRONY",
+      "expansion": "§SYS_SYNC_GATE > { §DATA_CAUSAL_HYPERGRAPH } => §SYS_QUANTUM_THROTTLE_LOCK",
+      "description": "Synchronizes system gates through causal hypergraph data structures to trigger quantum throttle locks. / 因果ハイパーグラフデータ構造を介してシステムゲートを同期させ、量子スロットルロックを起動します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-04T13:41:30.462761"
     }
   },
   "archived_macros": {
@@ -7805,7 +7805,17 @@
       "v5_audited": true,
       "created_at": "2026-11-04T07:50:39.881486",
       "archived_at": "2026-11-04T13:06:40.178426"
+    },
+    "§X762": {
+      "name": "HEART_GUIDED_ENTROPY_PRUNING",
+      "expansion": "§HEART_EMPATHY_TENSOR > { §DATA_ENTROPY_CAUSAL_PRUNE } => §HARMONIC_RESONANCE_STABLE",
+      "description": "Applies emotional empathy tensor weights to guide causal data entropy pruning, ensuring the resulting system state achieves stable harmonic resonance. / 心の共感テンソルを用いて因果的なデータエントロピーの刈り込みを導き、安定した調跟共鳴状態を実現します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-04T07:58:34.807978",
+      "archived_at": "2026-11-04T13:41:30.462761"
     }
   },
-  "next_macro_seq": 778
+  "next_macro_seq": 779
 }
