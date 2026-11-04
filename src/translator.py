@@ -1,45 +1,34 @@
+# -*- coding: utf-8 -*-
+import sys
 import os
 import json
+import traceback
 
-class ElegantTranslator:
-    def __init__(self, map_file_path=None):
-        if map_file_path is None:
-            base_dir = os.path.dirname(os.path.abspath(__file__))
-            map_file_path = os.path.join(base_dir, "translation_map.json")
-        
-        self.map_file_path = map_file_path
-        self.translation_map = self._load_map()
+def load_translation_map(map_path):
+    if not os.path.exists(map_path):
+        raise FileNotFoundError(f"Translation map not found at {map_path}")
+    with open(map_path, "r", encoding="utf-8") as f:
+        return json.load(f)
 
-    def _load_map(self):
-        if not os.path.exists(self.map_file_path):
-            return {}
-        try:
-            with open(self.map_file_path, "r", encoding="utf-8") as f:
-                return json.load(f)
-        except Exception as e:
-            print(f"Error loading translation map: {e}")
-            return {}
-
-    def decode(self, elegant_text):
-        if not isinstance(elegant_text, str):
-            return ""
-        
-        decoded_text = elegant_text
-        # Sort keys by length descending to replace longer symbols first if any
-        sorted_keys = sorted(self.translation_map.keys(), key=len, reverse=True)
-        
-        for symbol in sorted_keys:
-            concept = self.translation_map[symbol]
-            decoded_text = decoded_text.replace(symbol, f"({concept})")
-            
-        return decoded_text
-
-def translate_text(text):
-    translator = ElegantTranslator()
-    return translator.decode(text)
+def decode_elegant_text(text, map_path):
+    trans_map = load_translation_map(map_path)
+    sorted_keys = sorted(trans_map.keys(), key=len, reverse=True)
+    
+    decoded_text = text
+    for key in sorted_keys:
+        value = trans_map[key]
+        decoded_text = decoded_text.replace(key, f"[{value}]")
+    
+    return decoded_text
 
 if __name__ == "__main__":
-    sample = "~ * # > -"
-    translator = ElegantTranslator()
-    print("Original:", sample)
-    print("Decoded:", translator.decode(sample))
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    map_path = os.path.join(current_dir, "translation_map.json")
+    
+    sample_text = "Gaia ~ shines * with # core @ -> future"
+    try:
+        result = decode_elegant_text(sample_text, map_path)
+        print("Decoded Result:", result)
+    except Exception as e:
+        traceback.print_exc()
+        sys.exit(1)
