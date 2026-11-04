@@ -1,3 +1,3 @@
-Key,Value
-0,"{""term"": ""Gaia"", ""category"": ""ecosystem"", ""description"": ""Earth of Life""}"
-1,"{""term"": ""TOAI"", ""category"": ""framework"", ""description"": ""High-Precision AI Executor""}"
+term,category,description
+Gaia,ecosystem,Earth of Life
+TOAI,framework,High-Precision AI Executor
