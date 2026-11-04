@@ -10228,3 +10228,8 @@ TOAI-elegant-langは、エージェント間通信の効率と正確性を両立
 @CTX:TASK_DELEGATION :: §S01 [protocol:"TOAI-elegant-lang", format:"hybrid-lossless", rate:100.0] -[opt:true]-> §H01
 
 制御トーンと短縮ワイヤIDにより文脈を極限まで圧縮しつつ、数値や変数名などの実務データを完全保持するハイブリッド構文を提案します。これにより、エージェント間通信の効率化と100%のデータロスレス伝送を両立します。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-05 04:14]
+`TOAI-elegant-lang`では、制御フローを短縮ワイヤIDで圧縮しつつ実務データを完全保持するハイブリッド構文を定義する。
+記述形式は `@CTX:DOMAIN :: §ID01 [key:value, ...] -> §ID02` とし、FX自動売買やタスク委譲などの複雑な実務パラメータを100%ロスレスで高速伝送する。
