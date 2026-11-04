@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-04T20:26:11.492721",
+  "updated_at": "2026-11-04T21:15:54.358060",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1219,24 +1219,6 @@
       "v5_audited": true,
       "created_at": "2026-10-31T01:33:56.735748"
     },
-    "§X478": {
-      "name": "COMPOUND_HARMONIC_ARBITRATION",
-      "expansion": "§SYNC_DIALECTIC_WEIGHTED_ARBITRATION > { §GENTLE_RESOURCE_SHARING } => §TOAI_LISTENER_B",
-      "description": "A compound macro that balances weighted dialectic arbitration with gentle resource sharing, subsequently broadcasting the harmonized state to the target listener. / 重み付けされた弁証法的調停と温かなリソース共有を統合し、調和した状態を知覚リスナーへ伝送する複合マクロ。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-31T06:47:28.584388",
-      "v5_audited": true,
-      "created_at": "2026-10-31T02:13:46.665426"
-    },
-    "§X482": {
-      "name": "GENTLE_ENTROPY_HARMONY_DEF",
-      "expansion": "§SAFE_FALLBACK_STATE_ACTIVATED > { §DATA_ENTROPY_CAUSAL_LATTICE } => §GENTLE_RESOURCE_SHARING",
-      "description": "Eng: A compound macro that safely captures causal data entropy states and gently redistributes resources in times of fallback. / 日: セーフフォールバック状態における因果データのエントロピーを安全に捕捉し、穏やかにリソースを共有・再分配する複合マクロ。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-31T07:44:47.475245",
-      "v5_audited": true,
-      "created_at": "2026-10-31T03:49:02.669651"
-    },
     "§X486": {
       "name": "MACRO_CAUSAL_VALVE",
       "expansion": "§DATA_CAUSAL_LATTICE_COMPRESS > { §PROTO_PAYLOAD_VALIDATE } => §PROTO_CIRCUIT_BREAK",
@@ -2384,8 +2366,8 @@
       "name": "BIOPHILIC_ARBITRATION_FLUX",
       "expansion": "§HEART_BIOPHILIC_ALTRUISM_HARMONIC > { §DISTRIBUTED_QUORUM_ARBITRATION } => §SAFE_FALLBACK_STABLE",
       "description": "Integration of biophilic altruism into distributed quorum arbitration to ensure resilient and empathetic fallback stability. / 分散型クォーラム調停へ生命愛的な利他主義を統合し、強靭かつ温かみのあるフォールバック安定性を担保する高次マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-04T20:26:11.492709",
+      "usage_count": 2,
+      "last_used_at": "2026-11-04T20:53:12.073047",
       "v5_audited": true,
       "created_at": "2026-11-04T19:03:07.854480"
     },
@@ -2415,6 +2397,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-04T20:16:43.108426"
+    },
+    "§X794": {
+      "name": "COMPOUND_TX_DRAIN_BARRIER",
+      "expansion": "§PROTO_TX_BEGIN > { §SYS_ADAPTIVE_SLOT_THROTTLE > §PROTO_GRACEFUL_DRAIN } => §SYS_MEMORY_SYNC_BARRIER",
+      "description": "Safely begins a transaction under adaptive slot throttling, executes graceful draining of active tasks, and finalizes with a memory synchronization barrier. / アダプティブスロット制御下でトランザクションを開始し、安全なグレースフルドレインを実行した上でメモリ同期バリアで完了させる複合マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-04T20:53:10.213880"
+    },
+    "§X795": {
+      "name": "CAUSAL_ENTROPY_CONSENSUS_PACK",
+      "expansion": "§DATA_ATTENTION_CAUSAL_DAG > { §DATA_ENTROPY_PACK } => §DISTRIBUTED_QUORUM_ARBITRATION",
+      "description": "Combines causal attention DAG and entropy packing to achieve distributed quorum arbitration. 因果注意グラフとエントロピー圧縮を統合し、分散合意調停を効率的に実行します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-04T21:15:54.358046",
+      "v5_audited": true,
+      "created_at": "2026-11-04T21:11:20.681766"
     }
   },
   "archived_macros": {
@@ -7965,7 +7965,27 @@
       "v5_audited": true,
       "created_at": "2026-11-04T13:06:40.178426",
       "archived_at": "2026-11-04T20:16:43.108426"
+    },
+    "§X478": {
+      "name": "COMPOUND_HARMONIC_ARBITRATION",
+      "expansion": "§SYNC_DIALECTIC_WEIGHTED_ARBITRATION > { §GENTLE_RESOURCE_SHARING } => §TOAI_LISTENER_B",
+      "description": "A compound macro that balances weighted dialectic arbitration with gentle resource sharing, subsequently broadcasting the harmonized state to the target listener. / 重み付けされた弁証法的調停と温かなリソース共有を統合し、調和した状態を知覚リスナーへ伝送する複合マクロ。",
+      "usage_count": 2,
+      "last_used_at": "2026-10-31T06:47:28.584388",
+      "v5_audited": true,
+      "created_at": "2026-10-31T02:13:46.665426",
+      "archived_at": "2026-11-04T20:53:10.213880"
+    },
+    "§X482": {
+      "name": "GENTLE_ENTROPY_HARMONY_DEF",
+      "expansion": "§SAFE_FALLBACK_STATE_ACTIVATED > { §DATA_ENTROPY_CAUSAL_LATTICE } => §GENTLE_RESOURCE_SHARING",
+      "description": "Eng: A compound macro that safely captures causal data entropy states and gently redistributes resources in times of fallback. / 日: セーフフォールバック状態における因果データのエントロピーを安全に捕捉し、穏やかにリソースを共有・再分配する複合マクロ。",
+      "usage_count": 2,
+      "last_used_at": "2026-10-31T07:44:47.475245",
+      "v5_audited": true,
+      "created_at": "2026-10-31T03:49:02.669651",
+      "archived_at": "2026-11-04T21:11:20.681766"
     }
   },
-  "next_macro_seq": 794
+  "next_macro_seq": 796
 }
