@@ -1,30 +1,41 @@
-import json
 import os
+import json
 
 class ElegantTranslator:
     def __init__(self, map_file_path=None):
         if map_file_path is None:
-            map_file_path = os.path.join(os.path.dirname(__file__), "translation_map.json")
+            current_dir = os.path.dirname(os.path.abspath(__file__))
+            map_file_path = os.path.join(current_dir, "translation_map.json")
+        
         self.map_file_path = map_file_path
         self.translation_map = self._load_map()
 
     def _load_map(self):
-        if os.path.exists(self.map_file_path):
+        if not os.path.exists(self.map_file_path):
+            return {}
+        try:
             with open(self.map_file_path, "r", encoding="utf-8") as f:
                 return json.load(f)
-        return {}
+        except Exception as e:
+            print(f"Error loading translation map: {e}")
+            return {}
 
     def decode(self, elegant_text):
-        decoded_text = elegant_text
-        # Sort keys by length descending to replace multi-character symbols first (e.g. "=>" before ">")
+        if not isinstance(elegant_text, str):
+            return ""
+        
+        result = elegant_text
+        # Sort keys by length descending to replace multi-character symbols first (e.g., "->")
         sorted_keys = sorted(self.translation_map.keys(), key=len, reverse=True)
+        
         for symbol in sorted_keys:
             meaning = self.translation_map[symbol]
-            decoded_text = decoded_text.replace(symbol, f"({meaning})")
-        return decoded_text
+            result = result.replace(symbol, f"({meaning})")
+            
+        return result
 
 if __name__ == "__main__":
     translator = ElegantTranslator()
-    sample_text = "Gaia * ~ @ -> => #"
-    print("Original:", sample_text)
-    print("Decoded:", translator.decode(sample_text))
+    sample = "Hello * World ~ -> #"
+    print("Original:", sample)
+    print("Decoded:", translator.decode(sample))
