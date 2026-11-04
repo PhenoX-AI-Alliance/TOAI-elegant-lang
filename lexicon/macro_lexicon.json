@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-04T19:28:20.508499",
+  "updated_at": "2026-11-04T20:00:51.394156",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2285,8 +2285,8 @@
       "name": "CAUSAL_QUANTUM_SYNCHRONY",
       "expansion": "§SYS_SYNC_GATE > { §DATA_CAUSAL_HYPERGRAPH } => §SYS_QUANTUM_THROTTLE_LOCK",
       "description": "Synchronizes system gates through causal hypergraph data structures to trigger quantum throttle locks. / 因果ハイパーグラフデータ構造を介してシステムゲートを同期させ、量子スロットルロックを起動します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-04T19:48:05.640686",
       "v5_audited": true,
       "created_at": "2026-11-04T13:41:30.462761"
     },
