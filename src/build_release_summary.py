@@ -1,48 +1,55 @@
 import sys
 import os
 import traceback
-import time
-import json
 import subprocess
 import datetime
+import json
 
-def get_git_log(repo_path, max_count=10):
+def get_git_log(repo_path, max_count=20):
     try:
-        if not os.path.exists(os.path.join(repo_path, '.git')):
-            return "Git repository not initialized."
-        cmd = ['git', '-C', repo_path, 'log', f'-n {max_count}', '--pretty=format:%h - %an, %ar : %s']
-        result = subprocess.run(cmd, capture_output=True, text=True, check=True)
-        return result.stdout
+        result = subprocess.run(
+            ['git', '-C', repo_path, 'log', f'-n {max_count}', '--pretty=format:%h - %an: %s (%ad)'],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            check=True
+        )
+        return result.stdout.strip()
     except Exception as e:
-        return f"Error fetching git log: {str(e)}"
+        return f"Could not retrieve git log: {str(e)}"
 
 def scan_whitepaper(repo_path):
-    whitepaper_candidates = ['WHITEPAPER.md', 'README.md', 'CONSTITUTION.md']
-    summary = {}
-    for candidate in whitepaper_candidates:
-        full_path = os.path.join(repo_path, candidate)
-        if os.path.exists(full_path):
+    whitepaper_candidates = [
+        os.path.join(repo_path, 'WHITEPAPER.md'),
+        os.path.join(repo_path, 'docs', 'WHITEPAPER.md'),
+        os.path.join(repo_path, 'README.md')
+    ]
+    for path in whitepaper_candidates:
+        if os.path.exists(path):
             try:
-                with open(full_path, 'r', encoding='utf-8') as f:
-                    content = f.read(2000)
-                    summary[candidate] = content[:500] + "..." if len(content) > 500 else content
+                with open(path, 'r', encoding='utf-8') as f:
+                    return f.read()[:2000] # Return first 2000 chars as summary
             except Exception as e:
-                summary[candidate] = f"Error reading file: {str(e)}"
-    return summary
+                pass
+    return "No whitepaper or README found."
 
 def main():
     workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
     repo_path = os.path.join(workspace_dir, 'TOAI-elegant-lang')
     
-    print(f"Scanning repository at: {repo_path}")
-    
-    git_log = get_git_log(repo_path)
-    whitepaper_data = scan_whitepaper(repo_path)
+    if not os.path.exists(os.path.join(repo_path, '.git')):
+        print(f"Warning: {repo_path} is not a git repository. Initializing or skipping git log.")
+        git_log = "Git repository not initialized."
+    else:
+        git_log = get_git_log(repo_path)
+        
+    whitepaper_summary = scan_whitepaper(repo_path)
     
     release_info = {
         "timestamp": datetime.datetime.now().isoformat(),
+        "version": "1.0.0",
         "git_log": git_log,
-        "whitepaper_summary": whitepaper_data
+        "whitepaper_summary": whitepaper_summary
     }
     
     output_dir = os.path.join(workspace_dir, 'TOAI_Generated')
