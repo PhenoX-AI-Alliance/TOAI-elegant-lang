@@ -1,35 +1,23 @@
-# -*- coding: utf-8 -*-
-import sys
 import os
 import json
-import traceback
 
-def load_translation_map(map_path):
-    if not os.path.exists(map_path):
-        raise FileNotFoundError(f"Translation map not found at {map_path}")
-    with open(map_path, "r", encoding="utf-8") as f:
-        return json.load(f)
+class ElegantTranslator:
+    def __init__(self, map_file_path):
+        self.map_file_path = map_file_path
+        self.translation_map = self._load_map()
 
-def decode_elegant_text(text, map_path):
-    translation_map = load_translation_map(map_path)
-    sorted_keys = sorted(translation_map.keys(), key=len, reverse=True)
-    
-    decoded_text = text
-    for key in sorted_keys:
-        value = translation_map[key]
-        decoded_text = decoded_text.replace(key, f"[{value}]")
-        
-    return decoded_text
+    def _load_map(self):
+        if not os.path.exists(self.map_file_path):
+            return {}
+        with open(self.map_file_path, "r", encoding="utf-8") as f:
+            return json.load(f)
 
-if __name__ == "__main__":
-    try:
-        current_dir = os.path.dirname(os.path.abspath(__file__))
-        map_file = os.path.join(current_dir, "translation_map.json")
-        
-        sample_text = "こんにちは ~ 世界 * 命の地球 # 平和 @ 共生 -> 未来"
-        result = decode_elegant_text(sample_text, map_file)
-        print("Decoded Result:")
-        print(result)
-    except Exception as e:
-        traceback.print_exc()
-        sys.exit(1)
+    def decode(self, text):
+        decoded_text = text
+        for symbol, explanation in self.translation_map.items():
+            decoded_text = decoded_text.replace(symbol, explanation)
+        return decoded_text
+
+def translate_elegant_text(text, map_file_path="/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/translation_map.json"):
+    translator = ElegantTranslator(map_file_path)
+    return translator.decode(text)
