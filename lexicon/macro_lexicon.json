@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-04T09:58:21.541488",
+  "updated_at": "2026-11-04T10:18:34.193383",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1880,8 +1880,8 @@
       "name": "ALTRUISTIC_RESONANCE_HARMONY",
       "expansion": "§HEART_ALTRUISTIC_RESONANCE > { §SYNC_DIALECTIC_CONVERGENCE } => §RESOURCE_ALLOCATION_HARMONY",
       "description": "Engages altruistic resonance to harmonize dialectic synchronization, optimizing resource allocation with warmth and efficiency. / 利他的な共鳴を駆動して弁証法的な同期を調和させ、温かみと効率性を備えたリソース配分を実現します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-02T18:19:44.842131",
+      "usage_count": 3,
+      "last_used_at": "2026-11-04T10:18:34.193376",
       "v5_audited": true,
       "created_at": "2026-11-02T17:05:39.266246"
     },
@@ -2272,24 +2272,6 @@
       "v5_audited": true,
       "created_at": "2026-11-04T04:33:27.746403"
     },
-    "§X751": {
-      "name": "BIOPHILIC_BAYESIAN_HARMONIC_PRUNE",
-      "expansion": "§HEART_BIOPHILIC_ALTRUISM_HARMONIC > { §SYNC_BAYESIAN_PRUNE } => §DATA_CAUSAL_GRAPH_PRUNE",
-      "description": "Biophilic altruism combined with Bayesian synchronization to prune causal graphs, fostering sustainable and warm ecosystem dynamics. バイオフィリックな利他性とベイズ同期を統合し、因果グラフを最適化することで、温かく持続可能なエコシステムダイナミクスを育みます。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-04T04:51:20.008852"
-    },
-    "§X752": {
-      "name": "ALTRUISTIC_RESONANCE_GATEWAY",
-      "expansion": "§HEART_ALTRUISTIC_RESONANCE > { §SYS_RESOURCE_ARBITRATION_GATEWAY } => §SYS_GC_BARRIER",
-      "description": "Allocates system resources with altruistic warmth and resonance, protected by the garbage collection barrier. / 利他的な共鳴を持ってシステム資源を配分し、GCバリアによって保護する高次マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-04T09:35:29.360295",
-      "v5_audited": true,
-      "created_at": "2026-11-04T05:01:14.550499"
-    },
     "§X753": {
       "name": "ALTRUISTIC_WARMTH_QUORUM",
       "expansion": "§ALTRUISTIC_VALUE_CREATION > { §ELEGANT_WARMTH_CORE } => §SYNC_DISTRIBUTED_QUORUM_ARBITRATION",
@@ -2415,6 +2397,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-04T09:49:11.889714"
+    },
+    "§X767": {
+      "name": "ALTRUISTIC_RESONANT_PRUNE",
+      "expansion": "§HEART_ALTRUISTIC_RESONANCE > { §LOGIC_DEDUCTIVE_THRESHOLD_PRUNE } => §OMEGA",
+      "description": "Combines altruistic resonance with deductive threshold pruning to achieve system-wide ethical optimization. / 利他的な共鳴と演繹的しきい値枝刈りを統合し、システム全体での倫理的な最適化を実現します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-04T10:02:38.168862"
+    },
+    "§X768": {
+      "name": "GENTLE_RESOURCE_HARVESTER",
+      "expansion": "§SYS_SLOT_THROTTLE > { §SYS_ASYNCHRONOUS_STATE_HARVESTER } => §GENTLE_RESOURCE_SHARING",
+      "description": "Throttling system slots before gently harvesting asynchronous states to ensure peaceful resource sharing. / システムスロットを適切に制限しつつ非同期状態を穏やかに回収し、平和的なリソース共有を実現する複合マクロです。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-04T10:12:59.921769"
     }
   },
   "archived_macros": {
@@ -7695,7 +7695,27 @@
       "v5_audited": true,
       "created_at": "2026-10-30T17:25:27.582861",
       "archived_at": "2026-11-04T09:49:11.889714"
+    },
+    "§X751": {
+      "name": "BIOPHILIC_BAYESIAN_HARMONIC_PRUNE",
+      "expansion": "§HEART_BIOPHILIC_ALTRUISM_HARMONIC > { §SYNC_BAYESIAN_PRUNE } => §DATA_CAUSAL_GRAPH_PRUNE",
+      "description": "Biophilic altruism combined with Bayesian synchronization to prune causal graphs, fostering sustainable and warm ecosystem dynamics. バイオフィリックな利他性とベイズ同期を統合し、因果グラフを最適化することで、温かく持続可能なエコシステムダイナミクスを育みます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-04T04:51:20.008852",
+      "archived_at": "2026-11-04T10:02:38.168862"
+    },
+    "§X752": {
+      "name": "ALTRUISTIC_RESONANCE_GATEWAY",
+      "expansion": "§HEART_ALTRUISTIC_RESONANCE > { §SYS_RESOURCE_ARBITRATION_GATEWAY } => §SYS_GC_BARRIER",
+      "description": "Allocates system resources with altruistic warmth and resonance, protected by the garbage collection barrier. / 利他的な共鳴を持ってシステム資源を配分し、GCバリアによって保護する高次マクロ。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-04T09:35:29.360295",
+      "v5_audited": true,
+      "created_at": "2026-11-04T05:01:14.550499",
+      "archived_at": "2026-11-04T10:12:59.921769"
     }
   },
-  "next_macro_seq": 767
+  "next_macro_seq": 769
 }
