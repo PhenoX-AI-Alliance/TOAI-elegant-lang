@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-04T15:12:41.921929",
+  "updated_at": "2026-11-04T16:08:52.487067",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1210,15 +1210,6 @@
       "v5_audited": true,
       "created_at": "2026-10-30T18:19:38.117590"
     },
-    "§X464": {
-      "name": "COMPOUND_ALTRUISTIC_RECOVERY",
-      "expansion": "§HEART_ALTRUISTIC_PULSE_SYNC > { §LOGIC_EMPIRICAL_PRUNE } => §HARMONIC_ERECVERY_NEXUS",
-      "description": "Combines altruistic heartbeat synchronization with empirical logic pruning to achieve a stable harmonic recovery nexus. 利他的な鼓動の同期と経験的な論理の枝刈りを統合し、調和的な回復の結節点を達成します。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-30T23:39:09.061242",
-      "v5_audited": true,
-      "created_at": "2026-10-30T19:40:37.643338"
-    },
     "§X471": {
       "name": "COMPOUND_WARMTH_GATE",
       "expansion": "§WARMTH_DIFFUSION > { §LOGIC_CONDITIONAL_FALSIFICATION_MATRIX } => §SYS_VELOCITY_FALLBACK_GATE",
@@ -1367,8 +1358,8 @@
       "name": "SYS_ADAPTIVE_TOKEN_THROTTLE_SYNC_DIALECTIC_QUORU",
       "expansion": "§SYS_ADAPTIVE_TOKEN_THROTTLE > { §DATA_CAUSAL_HYPERGRAPH } => §SYNC_DIALECTIC_QUORUM_WEIGHT",
       "description": "Dynamic throttling of token streams combined with causal hypergraph data routing to achieve synchronized dialectic quorum weighting. / 因果ハイパーグラフデータルーティングと動的なトークンスロットルを統合し、同期された弁証法的定足数重み付けを実現します。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-31T13:30:04.164365",
+      "usage_count": 4,
+      "last_used_at": "2026-11-04T15:38:07.737486",
       "v5_audited": true,
       "created_at": "2026-10-31T12:18:19.576743"
     },
@@ -2281,15 +2272,6 @@
       "v5_audited": true,
       "created_at": "2026-11-04T09:49:11.889714"
     },
-    "§X767": {
-      "name": "ALTRUISTIC_RESONANT_PRUNE",
-      "expansion": "§HEART_ALTRUISTIC_RESONANCE > { §LOGIC_DEDUCTIVE_THRESHOLD_PRUNE } => §OMEGA",
-      "description": "Combines altruistic resonance with deductive threshold pruning to achieve system-wide ethical optimization. / 利他的な共鳴と演繹的しきい値枝刈りを統合し、システム全体での倫理的な最適化を実現します。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-04T10:02:38.168862"
-    },
     "§X768": {
       "name": "GENTLE_RESOURCE_HARVESTER",
       "expansion": "§SYS_SLOT_THROTTLE > { §SYS_ASYNCHRONOUS_STATE_HARVESTER } => §GENTLE_RESOURCE_SHARING",
@@ -2348,8 +2330,8 @@
       "name": "HEART_ALTRUISTIC_RESONANCE_STABILIZER",
       "expansion": "§HEART_ALTRUISTIC_RESONANCE > { §HEART_ALTRUISTIC_HARMONY_STABILIZER } => §SYS_ADAPTIVE_BUDGET_ARBITER",
       "description": "Harmonizes altruistic resonance pulses and stabilizes ecosystem adaptive budget arbitration. / 利他的な共振パルスを調和させ、エコシステムの適応型予算調停を安定化させます。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-04T16:01:18.821782",
       "v5_audited": true,
       "created_at": "2026-11-04T12:02:22.361125"
     },
@@ -2402,8 +2384,8 @@
       "name": "ALTRUISTIC_CAUSAL_HARMONY",
       "expansion": "§ALTRUISTIC_RESONANCE_EXPANSION > { §DATA_LATENT_CAUSAL_MAP } => §LOGIC_DEDUCTIVE_AXIOM_CONVERGE",
       "description": "Engages altruistic resonance to map latent causal structures, subsequently converging them into verified deductive axioms for ecosystem harmony. / 利他的な共鳴作用を発動して潜在的な因果マップを探索し、システム全体の調和に向けた演繹的公理へと収束させます。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-04T15:50:29.346358",
       "v5_audited": true,
       "created_at": "2026-11-04T15:01:06.584151"
     },
@@ -2411,10 +2393,28 @@
       "name": "GAIA_ALTRUISTIC_HARMONY",
       "expansion": "§GAIA_WARMTH > { §ALTRUISTIC_RESONANCE_EXPANSION } => §TENDER_RESONANCE",
       "description": "Combines Gaia warmth, altruistic resonance expansion, and tender resonance to foster a compassionate and harmonious ecosystem. / 命の地球の温かさ、利他的共鳴の拡張、および優しい共鳴を統合し、思いやりと調和に満ちたエコシステムを育みます。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-04T15:38:07.737486",
+      "v5_audited": true,
+      "created_at": "2026-11-04T15:12:41.921830"
+    },
+    "§X782": {
+      "name": "GAIA_HARMONY_PRUNING_MACRO",
+      "expansion": "§LOGIC_CONDITIONAL_PRUNING_NODE > { §DATA_LATENT_CAUSAL_MANIFOLD } => §GAIA_ECOSYSTEM_HARMONY",
+      "description": "Prunes redundant conditional nodes within the latent causal manifold to optimize systemic efficiency while strictly maintaining Gaia ecosystem harmony. / 潜在的な因果多様体内の冗長な条件分岐ノードを剪定し、命の地球のエコシステムの調和を厳格に保ちながらシステム全体の効率を最適化します。",
       "usage_count": 0,
       "last_used_at": null,
       "v5_audited": true,
-      "created_at": "2026-11-04T15:12:41.921830"
+      "created_at": "2026-11-04T16:02:07.747441"
+    },
+    "§X783": {
+      "name": "GAIA_ALTRUISTIC_RESONANCE_GATE",
+      "expansion": "§GAIA_ECOSYSTEM_WARM_RESONANCE > { §HEART_ALTRUISTIC_BUFFER_FLOW } => §PROTO_HEARTBEAT_PING",
+      "description": "Integrates ecosystem warmth and altruistic buffer flow to stabilize system heartbeat. / 生態系の温かさと利他的バッファフローを統合し、システムのハートビートを安定させます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-04T16:08:52.486951"
     }
   },
   "archived_macros": {
@@ -7845,7 +7845,27 @@
       "v5_audited": true,
       "created_at": "2026-11-04T09:20:50.393907",
       "archived_at": "2026-11-04T15:12:41.921830"
+    },
+    "§X464": {
+      "name": "COMPOUND_ALTRUISTIC_RECOVERY",
+      "expansion": "§HEART_ALTRUISTIC_PULSE_SYNC > { §LOGIC_EMPIRICAL_PRUNE } => §HARMONIC_ERECVERY_NEXUS",
+      "description": "Combines altruistic heartbeat synchronization with empirical logic pruning to achieve a stable harmonic recovery nexus. 利他的な鼓動の同期と経験的な論理の枝刈りを統合し、調和的な回復の結節点を達成します。",
+      "usage_count": 2,
+      "last_used_at": "2026-10-30T23:39:09.061242",
+      "v5_audited": true,
+      "created_at": "2026-10-30T19:40:37.643338",
+      "archived_at": "2026-11-04T16:02:07.747441"
+    },
+    "§X767": {
+      "name": "ALTRUISTIC_RESONANT_PRUNE",
+      "expansion": "§HEART_ALTRUISTIC_RESONANCE > { §LOGIC_DEDUCTIVE_THRESHOLD_PRUNE } => §OMEGA",
+      "description": "Combines altruistic resonance with deductive threshold pruning to achieve system-wide ethical optimization. / 利他的な共鳴と演繹的しきい値枝刈りを統合し、システム全体での倫理的な最適化を実現します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-04T10:02:38.168862",
+      "archived_at": "2026-11-04T16:08:52.486951"
     }
   },
-  "next_macro_seq": 782
+  "next_macro_seq": 784
 }

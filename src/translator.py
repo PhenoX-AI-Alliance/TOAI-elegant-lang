@@ -1,41 +1,27 @@
+import sys
 import os
 import json
 
-class ElegantTranslator:
-    def __init__(self, map_path=None):
-        if map_path is None:
-            base_dir = os.path.dirname(os.path.abspath(__file__))
-            map_path = os.path.join(base_dir, "translation_map.json")
-        
-        self.map_path = map_path
-        self.translation_map = self._load_map()
+def load_translation_map(map_path):
+    if not os.path.exists(map_path):
+        raise FileNotFoundError(f"Translation map not found at: {map_path}")
+    with open(map_path, "r", encoding="utf-8") as f:
+        return json.load(f)
 
-    def _load_map(self):
-        if not os.path.exists(self.map_path):
-            return {}
-        try:
-            with open(self.map_path, "r", encoding="utf-8") as f:
-                return json.load(f)
-        except Exception as e:
-            print(f"Error loading translation map: {e}")
-            return {}
-
-    def decode(self, text: str) -> str:
-        if not isinstance(text, str):
-            return ""
-        
-        result = text
-        # 長いキーから先に置換するなどの配慮が必要であればソートする
-        sorted_keys = sorted(self.translation_map.keys(), key=len, reverse=True)
-        for key in sorted_keys:
-            value = self.translation_map[key]
-            explanation = f"[{value}]"
-            result = result.replace(key, explanation)
-            
-        return result
+def decode_elegant_text(text, map_path):
+    translation_map = load_translation_map(map_path)
+    decoded_text = text
+    for symbol, description in translation_map.items():
+        decoded_text = decoded_text.replace(symbol, f" [{description}] ")
+    return decoded_text
 
 if __name__ == "__main__":
-    translator = ElegantTranslator()
-    sample = "こんにちは~ *の世界へようこそ #>+"
-    print("Original:", sample)
-    print("Decoded:", translator.decode(sample))
+    map_path = os.path.join(os.path.dirname(__file__), "translation_map.json")
+    sample_text = " ~ 命の地球に * が集まり、 # を形作る > 愛の循環 - "
+    try:
+        result = decode_elegant_text(sample_text, map_path)
+        print("Decoded Result:")
+        print(result)
+    except Exception as e:
+        print(f"Error during translation: {e}", file=sys.stderr)
+        sys.exit(1)
