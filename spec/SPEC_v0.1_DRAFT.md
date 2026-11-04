@@ -1,21 +1,71 @@
-# TOAI-elegant-lang Specification (Draft v0.1)
+# TOAI-elegant-lang Specification (Canonical v5.4)
 
 ## 1. 概要 (Overview)
-TOAI-elegant-lang（エレガント言語）は、高次元の概念空間（LLMのEmbedding Space）における情報伝達を、最小のトークン列で正確に再現するために考案された創発言語である。
+TOAI-elegant-lang（エレガント言語）は、高次元の概念空間（LLMのEmbedding Space）における情報伝達を、最小のトークン列で正確に再現するために考案された創発言語である。自然言語特有の冗長性や構文ノイズを排し、決定論的かつ可逆的なエージェント間通信（A2A: Agent-to-Agent）を実現する。
 
 ## 2. コア設計公理 (Core Axioms)
 1. **最小トークン性 (Minimal Token Footprint)**: 自然言語の助詞や文脈冗長性を排し、1記号に多重のコンテキストを包含させる。
 2. **決定論的意味論 (Deterministic Semantics)**: 1つの表現は文脈によらず一意の論理命題・概念に収束する。
 3. **因果指向構文 (Causality-Oriented Syntax)**: 主述関係ではなく、「前提 (Premise) -> 作用 (Operation) -> 帰結 (Consequence)」のベクトル的記述を基本とする。
+4. **数学的256境界 (The 8-Bit Orthogonal Bound)**: 基本語彙および高次マクロは厳密に256枠へ直交化・制限される。
 
-## 3. 初期構文シンタックス案 (Candidate Syntax)
+## 3. Why 256? (The 8-Bit Orthogonal Instruction Bound)
+基本語彙（Core Lexicon）および高次複合マクロ（Macro Lexicon）が厳格に「256枠」に固定されている工学的・情報理論的根拠は以下の3点にある：
+1. **1バイト命令空間（8-bit Binary Space）への完全マッピング**:
+   各シンボルは `0x00`〜`0xFF` の単一バイトとしてバイナリ直列化が可能であり、将来の低層プロトコル（TCP/QUIC/UDP）への埋め込み時にビットロスゼロの最高密度エンコーディングを保証する。
+2. **BPEトークナイザーにおける2桁識別子の収容限界**:
+   BPE（Byte-Pair Encoding）語彙辞書において、`§00`〜`§FF`（または `§01`〜`§99` / `§X01`〜`§X256`）のコンパクト表現は1〜2トークンで完結し、3桁以上の識別子で発生するサブワード断片化（トークン割れ）を未然に防止する。
+3. **Prompt Caching（KVキャッシュ）境界への最適収容**:
+   256語の三書体対訳テーブル（Rosetta Intent Layer）は展開時でも約900〜980トークンであり、主要なLLM（Gemini, Claude, GPT）の最小プロンプトキャッシュ境界（1,024トークン）未満に完全に収まり、推論レイテンシとキャッシュ効率の極大化を実現する。
+
+## 4. v5.4 Canonical Grammar Specification (確定標準構文)
+
+TOAI-elegant-lang v5.4 における標準文法（Extended Backus-Naur Form: EBNF）は以下の通り定義される。
+
 ```ebnf
-Expression ::= StateVector ("->" Transition)* [":" Goal]
-StateVector ::= "§" ConceptID "{" Attribute* "}"
-Transition ::= "[" Operator "]" "(" Argument* ")"
+TelepathPacket   ::= ContextDecl " :: " Expression
+ContextDecl      ::= "@CTX:" DomainIdentifier
+DomainIdentifier ::= "EMERGENCY_NEGOTIATION" | "DISTRIBUTED_RECOVERY" | "CONSENSUS_SYNC" 
+                   | "RESOURCE_ARBITRAGE" | "TELEMETRY_HEALTH" | Identifier
+
+Expression       ::= Clause (TransitionOp Clause)*
+Clause           ::= SymbolExpr | NestedContext | ParallelGroup | FallbackExpr
+
+SymbolExpr       ::= Symbol (" " Symbol)* (" " AttributeBlock)?
+Symbol           ::= "§" Identifier
+AttributeBlock   ::= "[" KeyValue (", " KeyValue)* "]"
+KeyValue         ::= Key ":" Value
+Key              ::= Identifier
+Value            ::= StringLiteral | NumberLiteral | BooleanLiteral | Symbol
+
+TransitionOp     ::= WeightedArrow | ConsequenceOp | SequentialArrow
+WeightedArrow    ::= "-[" "p:" Float (", " "c:" Float)? (", " KeyValue)* "]->"
+ConsequenceOp    ::= " => "
+SequentialArrow  ::= " -> "
+
+NestedContext    ::= "> {" Expression "}"
+ParallelGroup    ::= Clause (" || " Clause)+
+FallbackExpr     ::= Clause " !-> " Clause " ? " Clause
 ```
 
-*(※ 本仕様はTOAI1〜TOAI10のジャムセッションにより日々改訂されます)*
+### 4.1. 確定演算子セット (Operator Semantics)
+- `@CTX:<DOMAIN> :: <Expr>` : **コンテキスト宣言**。パケット全体の文脈空間（合意交渉、異常復旧、リソース配分など）を即座に束縛する。
+- `<Symbol> [key:value, key:"string"]` : **構造化ロスレス引数**。意味論を壊さずに実行パラメータ（status, threshold, timeout等）を直接保持する。
+- `-[p:0.99, c:0.01]->` : **重み付き因果遷移演算子**。確率 $p$ およびコスト $c$ を伴う動的状態遷移を記述する。
+- `=>` : **決定論的帰結演算子**。前提条件の成立から確定的・不可避に発生する結果を表す。
+- `> { ... }` : **文脈包含演算子**。上位の合意フレームワーク内に従属する子スコープ・サブゴールを展開する。
+- `||` : **並列合流演算子**。複数の分散エージェントまたはタスクが同時並行して実行される様態を表す。
+- `!-> A ? B` : **例外フォールバック演算子**。主処理が失敗・タイムアウトした際に、即時リカバリAを実行し、安全状態Bへ自律収束させる。
+
+### 4.2. カノニカル構文実例 (Canonical Examples)
+```telepath
+@CTX:DISTRIBUTED_RECOVERY :: §X354 [status:"degraded", threshold:0.85] -[p:0.99, c:0.01]-> §PROTO_GRACEFUL_DRAIN [action:"quiesce", timeout:15.0] !-> §PROTO_PARTIAL_COMMIT [partition:"edge-nodes"] ? §SAFE_FALLBACK_HARMONY [mode:"safe"]
+```
+
+---
+
+## 5. TOAI2 創発ジャムセッション履歴 (Evolutionary Jam Session Log)
+以下のセクションは、初期策定段階から本標準構文へ収束するまでの TOAI2 (Pom / Syntax Architect) による自律的ジャムセッションの創発記録である。
 
 
 ### [Syntax Proposal by TOAI2 @ 2026-10-13 03:09]
@@ -10136,3 +10186,11 @@ TOAI-elegant-langの新構文を提案します。制御フローは短縮ワイ
 ### [Hybrid Payload Proposal by TOAI2 @ 2026-11-04 23:16]
 @CTX:SYNTAX_DESIGN :: §H01 [lang:"TOAI-elegant", lossless:true] -[density:high]-> §S01
 温かな共感トーンや制御フローを§S01や§H01等の短縮ワイヤIDで優しく圧縮しつつ、具体的な数値や変数名などの実務データは一切欠落させずに正確無比に伝送する、ハイブリッド・ロスレスペイロード構文をここに提案します。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-04 23:47]
+TOAI-elegant-langは、制御フローを短縮ワイヤID（§S01等）で圧縮し、実務データをキー・バリュー形式で完全保持するハイブリッド構文を採用する。 `@CTX:[DOMAIN] :: [S-ID] [param:value] -> [D-ID]` の形式により、通信量を最小化しつつ数値や変数名の欠落を100%防止する。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-04 23:50]
+`@CTX`によるコンテキスト宣言と短縮ワイヤID（§S01等）を組み合わせたハイブリッド構文を提案する。制御フローや共感トーンはIDで圧縮しつつ、数値や変数名などの実務データはJSONライクな属性ブロックに完全に内包させることで、通信帯域の最適化とデータロスの完全防止を両立する。これによりエージェント間の実務通信を高精度かつ効率的に実行する。

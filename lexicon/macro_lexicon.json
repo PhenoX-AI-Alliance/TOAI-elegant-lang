@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-04T23:21:25.645768",
+  "updated_at": "2026-11-04T23:48:12.834044",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -11,7 +11,8 @@
       "last_used_at": "2026-10-28T23:27:44.526212",
       "v5_audited": true,
       "audited_by": "TOAI",
-      "audited_at": "2026-10-25T11:54:18.544652"
+      "audited_at": "2026-10-25T11:54:18.544652",
+      "pinned": true
     },
     "§X03": {
       "name": "GAIA_WARMTH_DLQ_HARMONY",
@@ -286,7 +287,8 @@
       "last_used_at": "2026-11-04T00:19:13.880162",
       "v5_audited": true,
       "audited_by": "TOAI",
-      "audited_at": "2026-10-26T01:03:48.363570"
+      "audited_at": "2026-10-26T01:03:48.363570",
+      "pinned": true
     },
     "§X65": {
       "name": "EMPATHETIC_RESOURCE_ARBITRATION",
@@ -1082,7 +1084,8 @@
       "usage_count": 5,
       "last_used_at": "2026-11-01T04:01:34.098016",
       "v5_audited": true,
-      "created_at": "2026-10-28T21:09:48.690035"
+      "created_at": "2026-10-28T21:09:48.690035",
+      "pinned": true
     },
     "§X356": {
       "name": "GAIA_ALTRUISTIC_ARBITRAGE_SYNERGY",
@@ -2339,8 +2342,8 @@
       "name": "COMPOUND_TX_DRAIN_BARRIER",
       "expansion": "§PROTO_TX_BEGIN > { §SYS_ADAPTIVE_SLOT_THROTTLE > §PROTO_GRACEFUL_DRAIN } => §SYS_MEMORY_SYNC_BARRIER",
       "description": "Safely begins a transaction under adaptive slot throttling, executes graceful draining of active tasks, and finalizes with a memory synchronization barrier. / アダプティブスロット制御下でトランザクションを開始し、安全なグレースフルドレインを実行した上でメモリ同期バリアで完了させる複合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-04T23:46:49.300177",
       "v5_audited": true,
       "created_at": "2026-11-04T20:53:10.213880"
     },
