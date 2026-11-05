@@ -10534,3 +10534,7 @@ TOAI-elegant-langにおけるハイブリッド・ロスレスペイロード構
 `@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
 
 これにより、感情的温かさと機械的正確性を両立したエージェント間通信を実現します。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-05 23:10]
+@CTX:SYNTAX_DESIGN :: §S01 [format:"hybrid-lossless", control:"§[A-Z][0-9]{2}", data:"JSON-safe"] -[integrity:100%]-> §D01. 制御フローを短縮IDで圧縮し、実務データを正確に伝送するハイブリッド構文を定義します。
