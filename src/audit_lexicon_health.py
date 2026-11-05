@@ -1,9 +1,9 @@
 import sys
 import os
-import traceback
 import json
+import traceback
 
-def audit_lexicons():
+def audit_lexicon():
     workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
     lexicon_dir = os.path.join(workspace, 'TOAI-elegant-lang', 'lexicon')
     
@@ -15,48 +15,46 @@ def audit_lexicons():
         "macro_lexicon_status": "missing",
         "core_categories": {},
         "macro_categories": {},
-        "core_count": 0,
-        "macro_count": 0
+        "core_total_entries": 0,
+        "macro_total_entries": 0
     }
     
-    if os.path.exists(core_path):
-        try:
+    try:
+        if os.path.exists(core_path):
             with open(core_path, 'r', encoding='utf-8') as f:
                 core_data = json.load(f)
-                lexicon_map = core_data.get('lexicon', {})
-                result["core_count"] = len(lexicon_map)
                 result["core_lexicon_status"] = "loaded"
-                
+                lexicon_dict = core_data.get("lexicon", {})
+                result["core_total_entries"] = len(lexicon_dict)
                 categories = {}
-                for sym, data in lexicon_map.items():
-                    cat = data.get('category', 'unknown')
+                for sym, data in lexicon_dict.items():
+                    cat = data.get("category", "unknown") if isinstance(data, dict) else "unknown"
                     categories[cat] = categories.get(cat, 0) + 1
                 result["core_categories"] = categories
-        except Exception as e:
-            result["core_lexicon_status"] = f"error: {str(e)}"
+        else:
+            result["core_lexicon_status"] = "not_found"
             
-    if os.path.exists(macro_path):
-        try:
+        if os.path.exists(macro_path):
             with open(macro_path, 'r', encoding='utf-8') as f:
                 macro_data = json.load(f)
-                lexicon_map = macro_data.get('lexicon', {})
-                result["macro_count"] = len(lexicon_map)
                 result["macro_lexicon_status"] = "loaded"
-                
-                categories = {}
-                for sym, data in lexicon_map.items():
-                    cat = data.get('category', 'unknown')
-                    categories[cat] = categories.get(cat, 0) + 1
-                result["macro_categories"] = categories
-        except Exception as e:
-            result["macro_lexicon_status"] = f"error: {str(e)}"
+                macro_dict = macro_data.get("lexicon", macro_data)
+                if isinstance(macro_dict, dict):
+                    result["macro_total_entries"] = len(macro_dict)
+                    categories = {}
+                    for sym, data in macro_dict.items():
+                        cat = data.get("category", "unknown") if isinstance(data, dict) else "unknown"
+                        categories[cat] = categories.get(cat, 0) + 1
+                    result["macro_categories"] = categories
+        else:
+            result["macro_lexicon_status"] = "not_found"
             
-    print(json.dumps(result, ensure_ascii=False, indent=2))
-    return result
-
-if __name__ == '__main__':
-    try:
-        audit_lexicons()
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        
     except Exception as e:
+        print(f"Error during audit: {e}", file=sys.stderr)
         traceback.print_exc()
         sys.exit(1)
+
+if __name__ == "__main__":
+    audit_lexicon()

@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-05T11:26:20.375585",
+  "updated_at": "2026-11-05T11:52:07.377964",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -703,8 +703,8 @@
       "name": "MACRO_ALTRUISTIC_ARBITRATION",
       "expansion": "§HEART_ALTRUISTIC_BIAS_SHIELD > { §SYS_QUANTUM_RESOURCE_ARBITER } => §PROTO_QUOTA_RESERVE",
       "description": "Protects and prioritizes resource allocation using altruistic bias shielding to ensure fair quota reserves. / 利他主義バイアスシールドを用いてリソース配分を保護・優先し、公平なクォータ予約を確実にします。",
-      "usage_count": 5,
-      "last_used_at": "2026-10-26T05:05:54.521719",
+      "usage_count": 7,
+      "last_used_at": "2026-11-05T11:50:38.584203",
       "v5_audited": true,
       "created_at": "2026-10-26T00:24:42.071150"
     },
@@ -2198,8 +2198,8 @@
       "name": "CAUSAL_ENTROPY_CONSENSUS_PACK",
       "expansion": "§DATA_ATTENTION_CAUSAL_DAG > { §DATA_ENTROPY_PACK } => §DISTRIBUTED_QUORUM_ARBITRATION",
       "description": "Combines causal attention DAG and entropy packing to achieve distributed quorum arbitration. 因果注意グラフとエントロピー圧縮を統合し、分散合意調停を効率的に実行します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-04T21:31:40.908111",
+      "usage_count": 3,
+      "last_used_at": "2026-11-05T11:50:38.584203",
       "v5_audited": true,
       "created_at": "2026-11-04T21:11:20.681766"
     },
