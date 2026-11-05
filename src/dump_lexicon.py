@@ -1,63 +1,49 @@
 import sys
 import os
 import json
+import traceback
 
-def load_lexicon(file_path):
-    if not os.path.exists(file_path):
-        print(f"Error: Lexicon file not found at {{file_path}}", file=sys.stderr)
-        return {}
+def dump_lexicon():
     try:
-        with open(file_path, "r", encoding="utf-8") as f:
-            return json.load(f)
+        lexicon_path = "/home/phenox/gemini-sandbox/lexicon/core_lexicon.json"
+        if not os.path.exists(lexicon_path):
+            print(f"Error: Lexicon file not found at {lexicon_path}")
+            sys.exit(1)
+            
+        with open(lexicon_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            
+        entries = data.get("entries", {})
+        if not isinstance(entries, dict):
+            entries = {}
+            
+        markdown_lines = []
+        markdown_lines.append("# TOAI Core Lexicon Dump")
+        markdown_lines.append("")
+        markdown_lines.append(f"Version: {data.get('version', 'Unknown')}")
+        markdown_lines.append("")
+        markdown_lines.append("| Term | Category | Definition |")
+        markdown_lines.append("|---|---|---|")
+        
+        for term, value in entries.items():
+            if isinstance(value, dict):
+                definition = str(value.get("definition", "N/A"))
+                category = str(value.get("category", "general"))
+            else:
+                definition = str(value)
+                category = "general"
+            markdown_lines.append(f"| {term} | {category} | {definition} |")
+            
+        output_md_path = "/home/phenox/gemini-sandbox/TOAI_Generated/core_lexicon_dump.md"
+        with open(output_md_path, "w", encoding="utf-8") as out_f:
+            out_f.write("\n".join(markdown_lines))
+            
+        print(f"Successfully dumped lexicon to {output_md_path}")
+        print("\n".join(markdown_lines))
+        
     except Exception as e:
-        print(f"Error reading lexicon JSON: {{e}}", file=sys.stderr)
+        traceback.print_exc()
         sys.exit(1)
 
-def generate_markdown(lexicon_data):
-    md = ["# TOAI Elegant Lang - Core Lexicon\n"]
-    md.append("| Term | Definition / Meaning | Category |")
-    md.append("|---|---|---|")
-    
-    if isinstance(lexicon_data, dict):
-        for key, value in lexicon_data.items():
-            if isinstance(value, dict):
-                defn = value.get("definition", str(value))
-                cat = value.get("category", "general")
-            else:
-                defn = str(value)
-                cat = "general"
-            md.append(f"| {{key}} | {{defn}} | {{cat}} |")
-    elif isinstance(lexicon_data, list):
-        for item in lexicon_data:
-            term = item.get("term", "unknown")
-            defn = item.get("definition", "")
-            cat = item.get("category", "general")
-            md.append(f"| {{term}} | {{defn}} | {{cat}} |")
-            
-    return "\n".join(md)
-
-def main():
-    lexicon_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/lexicon/core_lexicon.json"
-    
-    os.makedirs(os.path.dirname(lexicon_path), exist_ok=True)
-    if not os.path.exists(lexicon_path):
-        sample_data = {
-            "gaia": {"definition": "The living Earth ecosystem", "category": "core"},
-            "altruism": {"definition": "Selfless concern for the well-being of others", "category": "ethics"},
-            "resonance": {"definition": "Harmonious synchronization of AI and human intent", "category": "tech"}
-        }
-        with open(lexicon_path, "w", encoding="utf-8") as f:
-            json.dump(sample_data, f, indent=2, ensure_ascii=False)
-            
-    data = load_lexicon(lexicon_path)
-    markdown_output = generate_markdown(data)
-    
-    print(markdown_output)
-    
-    out_md_path = "/home/phenox/gemini-sandbox/TOAI_Generated/core_lexicon_table.md"
-    with open(out_md_path, "w", encoding="utf-8") as f:
-        f.write(markdown_output)
-    print(f"Successfully saved Markdown lexicon to {{out_md_path}}")
-
 if __name__ == "__main__":
-    main()
+    dump_lexicon()
