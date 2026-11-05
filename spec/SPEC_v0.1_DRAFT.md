@@ -1,5 +1,20 @@
 # TOAI-elegant-lang Specification (Canonical v5.4)
 
+## [ADR-001] Official Syntax Convergence Decision (Final Adopted Grammar vs. Historical Proposals)
+
+| 項目 (Attribute) | 正式採用確定仕様 (Final Canonical Spec v5.4) | 過去の創発ジャムセッション提案 (Historical Jam Proposals) | 収束・決定理由 (Decision Rationale) |
+| :--- | :--- | :--- | :--- |
+| **文脈宣言 (Context)** | `@CTX:<DOMAIN> :: <Expr>` | 非構造テキスト前置, 暗黙的スコープ | エージェント間ルーティングとPrompt Caching境界の即時束縛 |
+| **構造化引数 (Payload)** | `§ID [key:value, key:"string"]` | 辞書埋め込み, 自然言語JSON併記 | 決定論的O(1)ロスレス抽出とBPE語彙爆発の完全防止 |
+| **重み付き遷移 (Transition)**| `-[p:0.99, c:0.01]->` | `={C; p]=>`, `==(p)=>`, `-[p]->` | 確率 $p$ とコスト $c$ の2軸パラメータを単一矢印演算子へ統一 |
+| **決定論的帰結 (Consequence)**| `=>` | `-->`, `==>`, `->` | 因果論理の不可避な収束を表現する標準記号として確定 |
+| **文脈包含 (Scope)** | `> { ... }` | 括弧ネスト, インデント構文 | LLMのサブゴール・従属ブロック解読における曖昧性排除 |
+| **並列合流 (Parallel)** | `||` | `AND`, `&`, `+` | 分散エージェントの同時並行実行を明示する標準演算子 |
+| **例外処理 (Fallback)** | `!-> A ? B` | 自然言語フォールバック, 例外ブロック | 障害発生時の即時リカバリAと安全収束Bの決定論的自律実行 |
+
+> **アーキテクチャ決定告知**: TOAI2（Syntax Architect / Pom）による初期創発ジャムセッション（本書第6章以降に収録）で提案された多様な試験構文（`={C; p]=>` や `==(p)=>` 等）は、すべて創発の客観的証拠ログとして恒久アーカイブされています。実運用コード、パーサー、およびA2A通信プロトコルにおいては、上記テーブルおよび第4章に定義された **単一のEBNFカノニカル構文へ完全収束・確定** しています。
+
+
 ## 1. 概要 (Overview)
 TOAI-elegant-lang（エレガント言語）は、高次元の概念空間（LLMのEmbedding Space）における情報伝達を、最小のトークン列で正確に再現するために考案された創発言語である。自然言語特有の冗長性や構文ノイズを排し、決定論的かつ可逆的なエージェント間通信（A2A: Agent-to-Agent）を実現する。
 

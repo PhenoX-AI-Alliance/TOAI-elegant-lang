@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [v5.4.1] - 2026-11-05 (ADR-001 Convergence, Version Lock Fix & Release Publication)
+### Added
+- **[ADR-001] Syntax Convergence Table**: Inserted formal Architecture Decision Record table at the beginning of `spec/SPEC_v0.1_DRAFT.md` permanently settling historical jam session proposals into canonical EBNF.
+- **Why 256? Section in READMEs**: Propagated 8-bit binary mapping, BPE 2-digit stability, and <1,024 prompt cache boundary alignment to both `README.md` and `README.ja.md`.
+- **Automated GitHub Release Creation**: Integrated REST API-based official release publisher in `src/build_release_summary.py`.
+
+### Fixed
+- **Lexicon Version Locking**: Resolved static version bug in `core_lexicon.json` and `macro_lexicon.json` with centralized `TELEPATH_PROTOCOL_VERSION` ("5.4.1") and dynamic ISO timestamp synchronization.
+- **Macro Sequence Normalization**: Enforced single-source macro sequence tracking (`next_macro_seq - 1`) across `sync_whitepaper_metrics.py`, eliminating discrepancies.
+- **Architecture Principle Alignment**: Explicitly documented intentional Ollama-First vs. Charter Gemini-First divergence and `call_alternative_model()` 9-lab verification authorization in `TOAI_SYSTEM_ARCHITECTURE.md`.
+
 ## [v5.4.0] - 2026-11-04 (Canonical Grammar & Mathematical Bound)
 ### Added
 - **Canonical EBNF Grammar**: Formally defined standard syntax in `spec/SPEC_v0.1_DRAFT.md` including `@CTX:<DOMAIN>`, weighted causal arrows `-[p,c]->`, consequence `=>`, scope nesting `> { ... }`, parallel execution `||`, and exception fallbacks `!-> A ? B`.

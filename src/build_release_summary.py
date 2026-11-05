@@ -1,14 +1,13 @@
 import sys
 import os
 import traceback
-import time
-import json
 import subprocess
-import datetime
+import json
+from datetime import datetime
 
 def run_git_command(repo_path):
     if not os.path.exists(os.path.join(repo_path, '.git')):
-        return "Git repository not initialized."
+        return "Not a git repository"
     try:
         result = subprocess.run(
             ['git', 'log', '-n', '10', '--oneline'],
@@ -18,30 +17,46 @@ def run_git_command(repo_path):
             text=True,
             check=True
         )
-        return result.stdout
-    except Exception as e:
-        return f"Error fetching git log: {str(e)}"
+        return result.stdout.strip()
+    except subprocess.CalledProcessError as e:
+        return f"Git error: {e.stderr.strip()}"
+
+def scan_whitepaper(repo_path):
+    whitepaper_path = os.path.join(repo_path, 'WHITEPAPER.md')
+    if os.path.exists(whitepaper_path):
+        try:
+            with open(whitepaper_path, 'r', encoding='utf-8') as f:
+                return f.read()[:500] + "... [truncated]"
+        except Exception as e:
+            return f"Error reading whitepaper: {str(e)}"
+    return "Whitepaper not found"
 
 def main():
-    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    repo_path = os.path.join(workspace, 'TOAI-elegant-lang')
+    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    repo_path = os.path.join(workspace_dir, 'TOAI-elegant-lang')
+    
+    print(f"Scanning repository at: {repo_path}")
     
     git_log = run_git_command(repo_path)
+    whitepaper_summary = scan_whitepaper(repo_path)
     
     summary_data = {
-        "timestamp": datetime.datetime.now().isoformat(),
-        "version": "1.0.0",
-        "git_recent_commits": git_log
+        "timestamp": datetime.utcnow().isoformat() + "Z",
+        "git_recent_commits": git_log,
+        "whitepaper_excerpt": whitepaper_summary
     }
     
-    output_dir = os.path.join(workspace, 'TOAI_Generated')
+    output_dir = os.path.join(workspace_dir, 'TOAI_Generated')
     os.makedirs(output_dir, exist_ok=True)
-    
     output_file = os.path.join(output_dir, 'release_summary.json')
-    with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(summary_data, f, ensure_ascii=False, indent=2)
-        
-    print(f"Successfully generated release summary at {output_file}")
+    
+    try:
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(summary_data, f, ensure_ascii=False, indent=2)
+        print(f"Release summary successfully written to {output_file}")
+    except Exception as e:
+        print(f"Failed to write summary file: {str(e)}")
+        sys.exit(1)
 
 if __name__ == '__main__':
     try:
