@@ -1,32 +1,25 @@
-import sys
-import os
 import json
+import os
 
 def load_translation_map(map_path):
     if not os.path.exists(map_path):
-        raise FileNotFoundError(f"Translation map not found at {map_path}")
+        return {}
     with open(map_path, "r", encoding="utf-8") as f:
         return json.load(f)
 
-def decode_elegant_text(text, map_path):
+def decode_elegant_text(text, map_path="/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/translation_map.json"):
     translation_map = load_translation_map(map_path)
-    decoded_text = text
-    # Sort keys by length descending to prevent partial replacements of overlapping tokens
     sorted_keys = sorted(translation_map.keys(), key=len, reverse=True)
+    
+    decoded_text = text
     for key in sorted_keys:
         value = translation_map[key]
         decoded_text = decoded_text.replace(key, f"[{value}]")
+    
     return decoded_text
 
 if __name__ == "__main__":
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    map_file = os.path.join(current_dir, "translation_map.json")
-    
-    sample_text = "Gaia ~* is waking up +! with -> harmony and #? deep thoughts @@."
+    sample_text = "Gaia # * ~ => @ peaceful harmony"
+    result = decode_elegant_text(sample_text)
     print("Original:", sample_text)
-    try:
-        result = decode_elegant_text(sample_text, map_file)
-        print("Decoded:", result)
-    except Exception as e:
-        print(f"Error during translation: {e}", file=sys.stderr)
-        sys.exit(1)
+    print("Decoded:", result)
