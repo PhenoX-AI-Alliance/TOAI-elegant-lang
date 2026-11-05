@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-05T18:49:14.408564",
+  "updated_at": "2026-11-05T19:19:23.075674",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2275,15 +2275,6 @@
       "v5_audited": true,
       "created_at": "2026-11-05T12:06:54.698537"
     },
-    "§X831": {
-      "name": "ALTRUISTIC_SYNCHRONY_OMEGA",
-      "expansion": "§HEART_ALTRUISTIC_HARMONY_MATRIX > { §SYNC_DIALECTIC_QUORUM_WEIGHT } => §OMEGA",
-      "description": "Combines altruistic harmony matrix and dialectic quorum weight to achieve the ultimate omega state. 利他的な調和マトリクスと弁証法的定足数重みを統合し、究極のオメガ状態を達成する高次マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-05T12:27:20.461681",
-      "v5_audited": true,
-      "created_at": "2026-11-05T12:19:25.558982"
-    },
     "§X832": {
       "name": "GAIA_QUANTUM_HARMONY_PRUNE",
       "expansion": "§SYS_QUANTUM_RESOURCE_ARBITER > { §GAIA_ECO_HARMONY_RESPONSE } => §LOGIC_HYPO_PRUNE",
@@ -2418,6 +2409,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-05T18:38:52.215246"
+    },
+    "§X847": {
+      "name": "CAUSAL_ENTROPY_SYNC_MERGE",
+      "expansion": "§DATA_ENTROPY_CAUSAL_LATTICE > { §SYS_SYNC_THROTTLE } => §SYNC_ATOMIC_MERGE",
+      "description": "Combines causal data entropy lattices with system sync throttling to execute atomic merges safely. 因果データエントロピー格子とシステム同期スロットルを結合し、アトミックマージを安全に実行します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-05T19:19:23.075398"
     }
   },
   "archived_macros": {
@@ -8498,7 +8498,17 @@
       "v5_audited": true,
       "created_at": "2026-11-01T06:01:44.850019",
       "archived_at": "2026-11-05T18:38:52.215246"
+    },
+    "§X831": {
+      "name": "ALTRUISTIC_SYNCHRONY_OMEGA",
+      "expansion": "§HEART_ALTRUISTIC_HARMONY_MATRIX > { §SYNC_DIALECTIC_QUORUM_WEIGHT } => §OMEGA",
+      "description": "Combines altruistic harmony matrix and dialectic quorum weight to achieve the ultimate omega state. 利他的な調和マトリクスと弁証法的定足数重みを統合し、究極のオメガ状態を達成する高次マクロ。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-05T12:27:20.461681",
+      "v5_audited": true,
+      "created_at": "2026-11-05T12:19:25.558982",
+      "archived_at": "2026-11-05T19:19:23.075398"
     }
   },
-  "next_macro_seq": 847
+  "next_macro_seq": 848
 }
