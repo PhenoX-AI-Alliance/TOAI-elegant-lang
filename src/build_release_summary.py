@@ -1,80 +1,46 @@
 import sys
 import os
 import traceback
-import time
-import json
 import subprocess
-import datetime
+import json
+from datetime import datetime
 
-def run_git_log():
-    repo_path = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    git_dir = os.path.join(repo_path, 'TOAI-elegant-lang')
-    if not os.path.exists(os.path.join(git_dir, '.git')):
-        git_dir = repo_path
-        if not os.path.exists(os.path.join(git_dir, '.git')):
-            return "Git repository not found."
-            
+def get_git_log():
     try:
         result = subprocess.run(
-            ['git', 'log', '-n', '10', '--oneline'],
-            cwd=git_dir,
+            ['git', 'log', '-n', '10', '--pretty=format:%h - %an: %s (%ad)'],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True,
             check=True
         )
-        return result.stdout
+        return result.stdout.splitlines()
     except Exception as e:
-        return f"Failed to fetch git log: {str(e)}"
+        return [f"Git log unavailable: {str(e)}"]
 
-def scan_whitepaper():
-    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    whitepaper_paths = [
-        os.path.join(workspace, 'TOAI-elegant-lang', 'WHITESPAPER.md'),
-        os.path.join(workspace, 'WHITESPAPER.md'),
-        os.path.join(workspace, 'CONSTITUTION.md')
-    ]
+def main():
+    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    target_dir = os.path.join(workspace_dir, 'TOAI-elegant-lang', 'src')
+    output_file = os.path.join(target_dir, 'release_summary.json')
     
-    found_info = []
-    for path in whitepaper_paths:
-        if os.path.exists(path):
-            try:
-                with open(path, 'r', encoding='utf-8') as f:
-                    content = f.read(500)
-                    found_info.append(f"--- File: {os.path.basename(path)} ---\n{content}\n")
-            except Exception as e:
-                found_info.append(f"Error reading {path}: {str(e)}")
-                
-    if not found_info:
-        return "No whitepaper or charter files found."
-    return "\n".join(found_info)
-
-def generate_summary():
-    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    output_dir = os.path.join(workspace, 'TOAI_Generated')
-    os.makedirs(output_dir, exist_ok=True)
+    logs = get_git_log()
     
-    git_logs = run_git_log()
-    whitepaper_text = scan_whitepaper()
-    
-    now = datetime.datetime.now().isoformat()
-    
-    summary_data = {
-        "timestamp": now,
-        "git_recent_commits": git_logs,
-        "whitepaper_excerpt": whitepaper_text,
-        "status": "success"
+    summary = {
+        "timestamp": datetime.now().isoformat(),
+        "version": "1.0.0",
+        "recent_commits": logs,
+        "description": "Release summary generated automatically by TOAI ecosystem pipeline."
     }
     
-    output_file = os.path.join(output_dir, 'release_summary.json')
+    os.makedirs(os.path.dirname(output_file), exist_ok=True)
     with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(summary_data, f, ensure_ascii=False, indent=2)
+        json.dump(summary, f, indent=2, ensure_ascii=False)
         
-    print(f"Release summary successfully generated at: {output_file}")
+    print(f"Successfully generated release summary at {output_file}")
 
 if __name__ == '__main__':
     try:
-        generate_summary()
+        main()
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
