@@ -1,25 +1,39 @@
 import json
 import os
 
-def load_translation_map(map_path):
-    if not os.path.exists(map_path):
-        return {}
-    with open(map_path, "r", encoding="utf-8") as f:
-        return json.load(f)
+class ElegantTranslator:
+    def __init__(self, map_path=None):
+        if map_path is None:
+            current_dir = os.path.dirname(os.path.abspath(__file__))
+            map_path = os.path.join(current_dir, "translation_map.json")
+        
+        with open(map_path, "r", encoding="utf-8") as f:
+            self.translation_map = json.load(f)
 
-def decode_elegant_text(text, map_path="/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/translation_map.json"):
-    translation_map = load_translation_map(map_path)
-    sorted_keys = sorted(translation_map.keys(), key=len, reverse=True)
-    
-    decoded_text = text
-    for key in sorted_keys:
-        value = translation_map[key]
-        decoded_text = decoded_text.replace(key, f"[{value}]")
-    
-    return decoded_text
+    def decode(self, text: str) -> str:
+        result = []
+        i = 0
+        length = len(text)
+        while i < length:
+            char = text[i]
+            if char in self.translation_map:
+                result.append(f"[{self.translation_map[char]}]")
+            else:
+                result.append(char)
+            i += 1
+        return "".join(result)
+
+    def encode(self, text: str) -> str:
+        reverse_map = {v: k for k, v in self.translation_map.items()}
+        sorted_keys = sorted(reverse_map.keys(), key=len, reverse=True)
+        
+        encoded_text = text
+        for key in sorted_keys:
+            encoded_text = encoded_text.replace(f"[{key}]", reverse_map[key])
+        return encoded_text
 
 if __name__ == "__main__":
-    sample_text = "Gaia # * ~ => @ peaceful harmony"
-    result = decode_elegant_text(sample_text)
-    print("Original:", sample_text)
-    print("Decoded:", result)
+    translator = ElegantTranslator()
+    sample = "Hello * World + Peace -"
+    decoded = translator.decode(sample)
+    print("Decoded:", decoded)
