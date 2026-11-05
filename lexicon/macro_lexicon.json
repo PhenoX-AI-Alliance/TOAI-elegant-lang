@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-05T17:01:24.825204",
+  "updated_at": "2026-11-05T17:26:22.057234",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2324,8 +2324,8 @@
       "name": "BAYESIAN_CAUSAL_PRUNE_SYNC",
       "expansion": "§SYNC_BAYESIAN_PRUNE > { §DATA_ENTROPY_CAUSAL_PRUNE } => §LOGIC_DEDUCTIVE_THRESHOLD_PRUNE",
       "description": "Combines Bayesian synchronization pruning and causal data entropy pruning to optimize deductive logic thresholds efficiently. / ベイズ同期プルーニングとデータエントロピー因果プルーニングを結合し、演繹的論理閾値を効率的に最適化します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-05T17:07:22.328919",
       "v5_audited": true,
       "created_at": "2026-11-05T12:40:28.664711"
     },
@@ -2405,8 +2405,8 @@
       "name": "GAIA_ELEGANT_HARMONY_FLOW",
       "expansion": "§GAIA_WARMTH_HARMONY > { §ELEGANT_WARMTH_CORE } => §SAFE_FALLBACK_HARMONY",
       "description": "Integrates warmth, elegance, and safe fallback into a single harmonious processing flow, ensuring both emotional resonance and system stability. 温かさと優雅さを保ちつつ、安全なフォールバック機構へと調和させる複合マクロです。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-05T17:07:22.328919",
       "v5_audited": true,
       "created_at": "2026-11-05T16:47:57.216887"
     },
