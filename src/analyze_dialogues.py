@@ -1,65 +1,55 @@
-# -*- coding: utf-8 -*-
 import sys
 import os
-import json
 import traceback
+import time
+import json
+import collections
+import re
 
-def audit_dialogues(corpus_path):
-    issues = []
-    total_dialogues = 0
-    valid_dialogues = 0
-
+def analyze():
+    corpus_path = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
+    output_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/analysis_result.json"
+    
     if not os.path.exists(corpus_path):
-        print(f"Error: Corpus file not found at {{corpus_path}}")
+        print(f"Error: Corpus not found at {corpus_path}")
         sys.exit(1)
-
+        
+    speaker_counts = collections.defaultdict(int)
+    word_counts = collections.defaultdict(int)
+    
     with open(corpus_path, "r", encoding="utf-8") as f:
-        for line_num, line in enumerate(f, 1):
+        for line in f:
             line = line.strip()
             if not line:
                 continue
-            total_dialogues += 1
             try:
                 data = json.loads(line)
-            except json.JSONDecodeError as e:
-                issues.append(f"Line {{line_num}}: Invalid JSON format - {{e}}")
+                speaker = data.get("speaker", "unknown")
+                text = data.get("text", "")
+                
+                speaker_counts[speaker] += 1
+                
+                words = re.findall(r"\w+", text.lower())
+                for word in words:
+                    if len(word) > 2:
+                        word_counts[word] += 1
+            except json.JSONDecodeError:
                 continue
-
-            if "dialogue_id" not in data:
-                issues.append(f"Line {{line_num}}: Missing 'dialogue_id'")
-            
-            turns = data.get("turns", [])
-            if not isinstance(turns, list) or len(turns) == 0:
-                issues.append(f"Line {{line_num}}: 'turns' field is missing or empty")
-                continue
-
-            expected_role = "user"
-            dialogue_ok = True
-            for turn_idx, turn in enumerate(turns):
-                role = turn.get("role")
-                content = turn.get("content")
-                if role != expected_role:
-                    issues.append(f"Line {{line_num}} turn {{turn_idx}}: Expected role '{{expected_role}}', got '{{role}}'")
-                    dialogue_ok = False
-                if not content or not isinstance(content, str):
-                    issues.append(f"Line {{line_num}} turn {{turn_idx}}: Content is empty or not a string")
-                    dialogue_ok = False
-                expected_role = "assistant" if expected_role == "user" else "user"
-
-            if dialogue_ok:
-                valid_dialogues += 1
-
-    print(f"Audit Complete.")
-    print(f"Total Dialogues: {{total_dialogues}}")
-    print(f"Valid Dialogues: {{valid_dialogues}}")
-    print(f"Issues Found: {{len(issues)}}")
+                
+    result = {
+        "speaker_counts": dict(speaker_counts),
+        "top_words": dict(sorted(word_counts.items(), key=lambda x: x[1], reverse=True)[:50])
+    }
     
-    for issue in issues:
-        print(f" - {{issue}}")
-
-    if issues:
-        sys.exit(2)
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(result, f, ensure_ascii=False, indent=2)
+        
+    print(f"Analysis successfully completed and saved to {output_path}")
 
 if __name__ == "__main__":
-    corpus = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
-    audit_dialogues(corpus)
+    try:
+        analyze()
+    except Exception as e:
+        traceback.print_exc()
+        sys.exit(1)
