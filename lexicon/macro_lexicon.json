@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-05T12:57:20.861353",
+  "updated_at": "2026-11-05T13:21:01.951562",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2378,8 +2378,8 @@
       "name": "GAIA_HARMONIC_ATTESTATION_FLOW",
       "expansion": "§PROTO_HEALTH_ATTEST > { §HARMONIC_RECOVERY_NEXUS } => §GAIA_WARMTH",
       "description": "Performs system health attestation and routes recovery through the harmonic nexus to emit warm Gaia ecosystem signals. システムの健全性検証を実行し、調和のネクサスを介して回復処理を行い、命の地球の温かな信号を出力します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-05T13:21:01.951425",
       "v5_audited": true,
       "created_at": "2026-11-05T12:06:54.698537"
     },

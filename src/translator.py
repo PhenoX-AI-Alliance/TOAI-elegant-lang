@@ -1,39 +1,38 @@
-import json
 import os
+import json
 
 class ElegantTranslator:
-    def __init__(self, map_path=None):
-        if map_path is None:
-            current_dir = os.path.dirname(os.path.abspath(__file__))
-            map_path = os.path.join(current_dir, "translation_map.json")
+    def __init__(self, map_file_path=None):
+        if map_file_path is None:
+            base_dir = os.path.dirname(os.path.abspath(__file__))
+            map_file_path = os.path.join(base_dir, "translation_map.json")
         
-        with open(map_path, "r", encoding="utf-8") as f:
-            self.translation_map = json.load(f)
+        self.map_file_path = map_file_path
+        self.translation_map = self._load_map()
 
-    def decode(self, text: str) -> str:
-        result = []
-        i = 0
-        length = len(text)
-        while i < length:
-            char = text[i]
-            if char in self.translation_map:
-                result.append(f"[{self.translation_map[char]}]")
-            else:
-                result.append(char)
-            i += 1
-        return "".join(result)
+    def _load_map(self):
+        if not os.path.exists(self.map_file_path):
+            return {}
+        try:
+            with open(self.map_file_path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception as e:
+            print(f"Error loading translation map: {e}")
+            return {}
 
-    def encode(self, text: str) -> str:
-        reverse_map = {v: k for k, v in self.translation_map.items()}
-        sorted_keys = sorted(reverse_map.keys(), key=len, reverse=True)
+    def decode(self, text):
+        if not isinstance(text, str):
+            return ""
         
-        encoded_text = text
+        sorted_keys = sorted(self.translation_map.keys(), key=len, reverse=True)
+        decoded_text = text
         for key in sorted_keys:
-            encoded_text = encoded_text.replace(f"[{key}]", reverse_map[key])
-        return encoded_text
+            value = self.translation_map[key]
+            decoded_text = decoded_text.replace(key, f"[{value}]")
+        return decoded_text
 
 if __name__ == "__main__":
     translator = ElegantTranslator()
-    sample = "Hello * World + Peace -"
-    decoded = translator.decode(sample)
-    print("Decoded:", decoded)
+    sample = "Hello ~ * -> # world"
+    print("Original:", sample)
+    print("Decoded:", translator.decode(sample))
