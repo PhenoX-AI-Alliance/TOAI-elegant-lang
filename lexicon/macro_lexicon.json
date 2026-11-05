@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "updated_at": "2026-11-05T10:10:27.288308",
+  "updated_at": "2026-11-05T10:43:15.392592",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1249,15 +1249,6 @@
       "v5_audited": true,
       "created_at": "2026-10-31T19:55:26.252977"
     },
-    "§X527": {
-      "name": "HARMONIC_ENTROPY_PRUNE_SYNC",
-      "expansion": "§DATA_ENTROPY_COMPRESSION_TREE > { §LOGIC_AXIOM_PRUNE } => §HARMONIC_RESONANCE",
-      "description": "Compresses data entropy by pruning logical axioms to achieve harmonic resonance across the ecosystem. / データの情報エントロピーを圧縮し、論理的公理の不要部分を剪定することで、エコシステム全体で調和共鳴を達成する高次マクロ。",
-      "usage_count": 2,
-      "last_used_at": "2026-10-31T23:01:40.313919",
-      "v5_audited": true,
-      "created_at": "2026-10-31T20:00:32.716968"
-    },
     "§X530": {
       "name": "GAIA_WARMTH_HARMONY_FLOW",
       "expansion": "§GAIA_CORE_HEARTBEAT > { §WARMTH_DIFFUSION } => §GAIA_ECOSYSTEM_HARMONY",
@@ -2297,8 +2288,8 @@
       "name": "EMPATHY_GATED_ENTROPY_COMPRESSION",
       "expansion": "§HEART_EMPATHY_TENSOR > { §DATA_ENTROPY_COMPRESSED_TREE } => §SYS_SYNC_GATE",
       "description": "Applies emotional empathy weighting to compress data entropy trees before synchronizing through the system gate. / システムゲートを通じた同期の前に、感情共鳴テンソルを適用してデータエントロピー木を圧縮します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-05T10:02:22.738803",
+      "usage_count": 2,
+      "last_used_at": "2026-11-05T10:39:24.295073",
       "v5_audited": true,
       "created_at": "2026-11-05T04:40:21.151930"
     },
@@ -2418,6 +2409,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-05T10:05:25.979162"
+    },
+    "§X828": {
+      "name": "ALTRUISTIC_CAUSAL_HARMONY_FLOW",
+      "expansion": "§HEART_ALTRUISTIC_HARMONY_STABILIZER > { §DATA_CAUSAL_GRAPH, §DATA_CAUSAL_TENSOR_FLOW } => §PROTO_RATE_THROTTLE",
+      "description": "Combines altruistic harmony stabilization with causal graph and tensor flow data processing, regulated by protocol rate throttling. / 利他調和の安定化器を因果グラフおよび因果テンソル流のデータ処理と結合し、プロトコル速度制限によって制御します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-05T10:39:26.140566"
     }
   },
   "archived_macros": {
@@ -8308,7 +8308,17 @@
       "v5_audited": true,
       "created_at": "2026-11-05T03:24:28.321038",
       "archived_at": "2026-11-05T10:05:25.979162"
+    },
+    "§X527": {
+      "name": "HARMONIC_ENTROPY_PRUNE_SYNC",
+      "expansion": "§DATA_ENTROPY_COMPRESSION_TREE > { §LOGIC_AXIOM_PRUNE } => §HARMONIC_RESONANCE",
+      "description": "Compresses data entropy by pruning logical axioms to achieve harmonic resonance across the ecosystem. / データの情報エントロピーを圧縮し、論理的公理の不要部分を剪定することで、エコシステム全体で調和共鳴を達成する高次マクロ。",
+      "usage_count": 2,
+      "last_used_at": "2026-10-31T23:01:40.313919",
+      "v5_audited": true,
+      "created_at": "2026-10-31T20:00:32.716968",
+      "archived_at": "2026-11-05T10:39:26.140566"
     }
   },
-  "next_macro_seq": 828
+  "next_macro_seq": 829
 }
