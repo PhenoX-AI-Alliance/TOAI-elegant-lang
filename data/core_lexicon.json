@@ -1,0 +1,16 @@
+{
+  "lexicon": [
+    {
+      "id": 1,
+      "term": "Gaia",
+      "category": "ecosystem",
+      "definition": "Earth as a living organism."
+    },
+    {
+      "id": 2,
+      "term": "Altruism",
+      "category": "ethics",
+      "definition": "Regard for the well-being of others."
+    }
+  ]
+}
