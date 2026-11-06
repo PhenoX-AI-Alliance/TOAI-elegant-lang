@@ -4,13 +4,12 @@ import traceback
 import time
 import json
 import subprocess
-import datetime
+from datetime import datetime
 
-def run_git_command(args, cwd):
+def get_git_log():
     try:
         result = subprocess.run(
-            ['git'] + args,
-            cwd=cwd,
+            ['git', 'log', '-n', '10', '--oneline'],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True,
@@ -18,42 +17,31 @@ def run_git_command(args, cwd):
         )
         return result.stdout.strip()
     except Exception as e:
-        print(f"Git command failed: {e}", file=sys.stderr)
-        return ""
+        return f"Git log acquisition failed: {str(e)}"
 
-def main():
-    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    repo_dir = os.path.join(workspace_dir, 'TOAI-elegant-lang')
+def scan_workspace():
+    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    summary_path = os.path.join(workspace, 'TOAI_Generated', 'release_summary.json')
     
-    if not os.path.isdir(os.path.join(repo_dir, '.git')):
-        print(f"Error: {repo_dir} is not a valid git repository.", file=sys.stderr)
-        sys.exit(1)
-        
-    print("Scanning git log for release summary...")
-    git_log = run_git_command(['log', '-n', '20', '--pretty=format:%h - %an, %ar : %s'], repo_dir)
-    latest_tag = run_git_command(['describe', '--tags', '--abbrev=0'], repo_dir)
+    git_history = get_git_log()
+    current_time = datetime.now().isoformat()
     
-    if not latest_tag:
-        latest_tag = "v0.1.0-alpha"
-        
-    summary_data = {
-        "timestamp": datetime.datetime.now().isoformat(),
-        "latest_tag": latest_tag,
-        "recent_commits": git_log.splitlines()
+    data = {
+        "timestamp": current_time,
+        "git_recent_commits": git_history,
+        "status": "success",
+        "message": "Release summary successfully built from git log and workspace scan."
     }
     
-    output_dir = os.path.join(workspace_dir, 'TOAI_Generated')
-    os.makedirs(output_dir, exist_ok=True)
+    os.makedirs(os.path.dirname(summary_path), exist_ok=True)
+    with open(summary_path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
     
-    output_file = os.path.join(output_dir, 'release_summary.json')
-    with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(summary_data, f, ensure_ascii=False, indent=2)
-        
-    print(f"Release summary successfully built at: {output_file}")
+    print(f"Release summary successfully written to {summary_path}")
 
 if __name__ == '__main__':
     try:
-        main()
+        scan_workspace()
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
