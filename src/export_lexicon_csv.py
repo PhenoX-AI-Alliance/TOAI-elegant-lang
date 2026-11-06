@@ -5,57 +5,41 @@ import time
 import json
 import csv
 
-def convert_lexicon_to_csv():
-    try:
-        sandbox_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang"
-        json_path = os.path.join(sandbox_dir, "core_lexicon.json")
-        csv_path = os.path.join(sandbox_dir, "core_lexicon.csv")
+def main():
+    input_json_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/core_lexicon.json"
+    output_csv_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/core_lexicon.csv"
+    
+    if not os.path.exists(input_json_path):
+        print(f"Error: {input_json_path} does not exist.")
+        sys.exit(1)
         
-        if not os.path.exists(json_path):
-            print(f"Error: {json_path} does not exist.")
-            sys.exit(1)
-            
-        with open(json_path, "r", encoding="utf-8") as f:
+    try:
+        with open(input_json_path, "r", encoding="utf-8") as f:
             data = json.load(f)
             
         if isinstance(data, dict):
-            rows = []
-            for key, value in data.items():
-                if isinstance(value, dict):
-                    row = {"key": key}
-                    row.update(value)
-                    rows.append(row)
-                else:
-                    rows.append({"key": key, "value": value})
+            lexicon_items = data.get("lexicon", [])
         elif isinstance(data, list):
-            rows = data
+            lexicon_items = data
         else:
-            print("Error: Unsupported JSON root structure.")
-            sys.exit(1)
+            lexicon_items = []
             
-        if not rows:
-            print("Warning: No data to export.")
-            return
+        with open(output_csv_path, "w", encoding="utf-8", newline="") as f:
+            writer = csv.writer(f)
+            writer.writerow(["term", "definition", "category", "tags"])
             
-        fieldnames = set()
-        for row in rows:
-            if isinstance(row, dict):
-                fieldnames.update(row.keys())
-                
-        fieldnames = sorted(list(fieldnames))
-        
-        with open(csv_path, "w", encoding="utf-8", newline="") as f:
-            writer = csv.DictWriter(f, fieldnames=fieldnames)
-            writer.writeheader()
-            for row in rows:
-                if isinstance(row, dict):
-                    writer.writerow(row)
+            for item in lexicon_items:
+                if isinstance(item, dict):
+                    term = item.get("term", "")
+                    definition = item.get("definition", "")
+                    category = item.get("category", "")
+                    tags = ",".join(item.get("tags", [])) if isinstance(item.get("tags"), list) else str(item.get("tags", ""))
+                    writer.writerow([term, definition, category, tags])
                     
-        print(f"Successfully exported lexicon to {csv_path}")
-        
+        print(f"Successfully exported lexicon to {output_csv_path}")
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
 
 if __name__ == "__main__":
-    convert_lexicon_to_csv()
+    main()

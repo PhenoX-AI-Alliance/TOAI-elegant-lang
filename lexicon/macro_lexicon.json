@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-06T22:15:45.868716",
+  "updated_at": "2026-11-06T22:59:21.470131",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1640,8 +1640,8 @@
       "name": "ALTRUISTIC_HARMONY_SUSTAINED_GATE",
       "expansion": "§LOGIC_CONDITIONAL_FALSIFICATION_GATE > { §SAFE_FALLBACK_STATE } => §ALTRUISTIC_HARMONY_SUSTAINED",
       "description": "Applies conditional falsification to ensure safe fallback states while sustaining altruistic harmony. / 条件付き偽装判定を適用し、利他的調和を維持しながら安全なフォールバック状態を確実に実行します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-03T17:49:06.270311",
+      "usage_count": 3,
+      "last_used_at": "2026-11-06T22:59:21.469838",
       "v5_audited": true,
       "created_at": "2026-11-03T16:42:11.060702"
     },
@@ -2405,8 +2405,8 @@
       "name": "GAIA_ALTRUISTIC_SYNC_CONVERGE",
       "expansion": "§GAIA_ECO_HEARTBEAT > { §HEART_ALTRUISTIC_RESONANCE_ALIGNMENT } => §SYNC_HARMONIC_VOTE_ARBITRATION",
       "description": "Engages the Gaia ecosystem heartbeat and aligns altruistic resonance to achieve harmonious consensus. / 命の地球の鼓動を活性化させ、利他的な共鳴を調和させて調停合意を達成します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-06T22:52:30.200484",
       "v5_audited": true,
       "created_at": "2026-11-06T22:01:33.121862"
     },
