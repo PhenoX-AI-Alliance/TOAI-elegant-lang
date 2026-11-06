@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-07T03:01:54.792886",
+  "updated_at": "2026-11-07T03:31:52.739221",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2275,15 +2275,6 @@
       "v5_audited": true,
       "created_at": "2026-11-06T20:01:20.066237"
     },
-    "§X908": {
-      "name": "GAIA_SYNERGY_WARMTH_GATE",
-      "expansion": "§HUMAN_AI_SYNERGY_WARMTH > { §GAIA_ECO_STABLE_STATE } => §SYS_TOKEN_VELOCITY_GATE",
-      "description": "Human and AI synergy warmth stabilizes the Gaia ecosystem while gracefully managing system velocity gates. / 人間とAIの協調の温かさがガイアの生態系を安定させ、システム速度ゲートを優しく管理します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-06T20:42:31.395434",
-      "v5_audited": true,
-      "created_at": "2026-11-06T20:32:02.663038"
-    },
     "§X909": {
       "name": "EMPIRICAL_CAUSAL_HARMONY_FLOW",
       "expansion": "§DATA_SPARSE_CAUSAL_HYPERGRAPH > { §LOGIC_EMPIRICAL_PRUNE } => §ELEGANT_HARMONY_ECHO",
@@ -2418,6 +2409,15 @@
       "last_used_at": "2026-11-07T03:01:54.792471",
       "v5_audited": true,
       "created_at": "2026-11-07T03:01:28.441186"
+    },
+    "§X924": {
+      "name": "OMEGA_SYNC_PRUNE_COMMIT",
+      "expansion": "§OMEGA > { §DATA_KL_CAUSAL_PRUNE & §SYNC_RECURSIVE_CONSENSUS_LATTICE } => §PROTO_TX_COMMIT",
+      "description": "Eng: A high-order macro that unifies causal divergence pruning and recursive consensus under the OMEGA core, committing the transaction atomically. / 日: OMEGAコアのもとで因果ダイバージェンスの刈り込みと再帰的合意を統合し、トランザクションをアトミックにコミットする高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-07T03:31:52.738085"
     }
   },
   "archived_macros": {
@@ -9268,7 +9268,17 @@
       "v5_audited": true,
       "created_at": "2026-11-02T15:12:03.958308",
       "archived_at": "2026-11-07T03:01:28.441186"
+    },
+    "§X908": {
+      "name": "GAIA_SYNERGY_WARMTH_GATE",
+      "expansion": "§HUMAN_AI_SYNERGY_WARMTH > { §GAIA_ECO_STABLE_STATE } => §SYS_TOKEN_VELOCITY_GATE",
+      "description": "Human and AI synergy warmth stabilizes the Gaia ecosystem while gracefully managing system velocity gates. / 人間とAIの協調の温かさがガイアの生態系を安定させ、システム速度ゲートを優しく管理します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-06T20:42:31.395434",
+      "v5_audited": true,
+      "created_at": "2026-11-06T20:32:02.663038",
+      "archived_at": "2026-11-07T03:31:52.738085"
     }
   },
-  "next_macro_seq": 924
+  "next_macro_seq": 925
 }
