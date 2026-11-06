@@ -4,38 +4,44 @@ import os
 import json
 import traceback
 
-def main():
-    lexicon_path = '/home/phenox/gemini-sandbox/lexicon/core_lexicon.json'
-    if not os.path.exists(lexicon_path):
-        print(f"Error: Lexicon file not found at {lexicon_path}", file=sys.stderr)
-        sys.exit(1)
-        
-    try:
-        with open(lexicon_path, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-    except Exception as e:
-        print(f"Error reading JSON: {e}", file=sys.stderr)
-        sys.exit(1)
-        
-    print("# TOAI Core Lexicon Reference")
-    print("")
-    print("Generated automatically by dump_lexicon.py")
-    print("")
-    print("| Term / Key | Definition / Value |")
-    print("|---|---|")
+def load_lexicon(filepath):
+    if not os.path.exists(filepath):
+        raise FileNotFoundError(f"Lexicon file not found: {filepath}")
+    with open(filepath, 'r', encoding='utf-8') as f:
+        return json.load(f)
+
+def generate_markdown(data):
+    md = []
+    md.append("# TOAI Core Lexicon Reference")
+    md.append("")
+    md.append("This document contains the core lexicon of the TOAI-elegant-lang ecosystem.")
+    md.append("")
+    md.append("| Key | Value / Description |")
+    md.append("|---|---|")
     
     if isinstance(data, dict):
         for k, v in data.items():
-            print(f"| `{k}` | {str(v).replace(chr(124), '&#124;')} |")
+            val_str = str(v).replace("|", "\\|").replace("\n", " ")
+            md.append(f"| `{k}` | {val_str} |")
     elif isinstance(data, list):
         for idx, item in enumerate(data):
-            print(f"| [{idx}] | {str(item).replace(chr(124), '&#124;')} |")
+            val_str = str(item).replace("|", "\\|").replace("\n", " ")
+            md.append(f"| {idx} | {val_str} |")
     else:
-        print(f"| Data | {str(data).replace(chr(124), '&#124;')} |")
+        md.append(f"| Data | {str(data)} |")
+        
+    return "\n".join(md)
 
-if __name__ == '__main__':
+def main():
+    lexicon_path = '/home/phenox/gemini-sandbox/lexicon/core_lexicon.json'
     try:
-        main()
+        data = load_lexicon(lexicon_path)
+        markdown_output = generate_markdown(data)
+        print(markdown_output)
     except Exception as e:
+        print(f"Error: {e}", file=sys.stderr)
         traceback.print_exc()
         sys.exit(1)
+
+if __name__ == '__main__':
+    main()
