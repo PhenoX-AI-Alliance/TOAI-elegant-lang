@@ -11061,3 +11061,8 @@ def parse_payload(ctx: str, wire_id: str, data: dict) -> str:
 
 構文例：
 `@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-07 08:30]
+@CTX:SYNTAX_DESIGN :: §S01 [format:"hybrid-lossless", control:"§[A-Z0-9]{3}", data:"JSON"] -[reliability:100%]-> §D01
+エージェント間の実務通信において、制御フローや共感トーンは短縮ワイヤIDで圧縮し、数値や変数名などの実務データはJSON形式で完全に保持するハイブリッド構文を提案します。これにより、感情の温かさと機械的な正確性を両立させます。
