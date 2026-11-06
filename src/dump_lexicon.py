@@ -1,8 +1,8 @@
+# -*- coding: utf-8 -*-
 import sys
 import os
-import traceback
-import time
 import json
+import traceback
 
 def main():
     lexicon_path = '/home/phenox/gemini-sandbox/lexicon/core_lexicon.json'
@@ -17,26 +17,21 @@ def main():
         print(f"Error reading JSON: {e}", file=sys.stderr)
         sys.exit(1)
         
-    markdown_lines = []
-    markdown_lines.append("# TOAI Core Lexicon")
-    markdown_lines.append("")
-    markdown_lines.append("| Key | Definition / Value |")
-    markdown_lines.append("|---|---|")
+    print("# TOAI Core Lexicon Reference")
+    print("")
+    print("Generated automatically by dump_lexicon.py")
+    print("")
+    print("| Term / Key | Definition / Value |")
+    print("|---|---|")
     
     if isinstance(data, dict):
         for k, v in data.items():
-            markdown_lines.append(f"| `{k}` | {v} |")
+            print(f"| `{k}` | {str(v).replace(chr(124), '&#124;')} |")
     elif isinstance(data, list):
         for idx, item in enumerate(data):
-            markdown_lines.append(f"| {idx} | {item} |")
-            
-    output_markdown = "\n".join(markdown_lines)
-    print(output_markdown)
-    
-    out_file = '/home/phenox/gemini-sandbox/TOAI_Generated/core_lexicon_table.md'
-    with open(out_file, 'w', encoding='utf-8') as f:
-        f.write(output_markdown)
-    print(f"Successfully dumped markdown lexicon to {out_file}")
+            print(f"| [{idx}] | {str(item).replace(chr(124), '&#124;')} |")
+    else:
+        print(f"| Data | {str(data).replace(chr(124), '&#124;')} |")
 
 if __name__ == '__main__':
     try:
