@@ -1,50 +1,64 @@
 import sys
 import os
 import traceback
-import subprocess
+import time
 import json
-from datetime import datetime
+import subprocess
+import datetime
 
-def get_git_log():
+def run_git_command(args, cwd):
     try:
-        repo_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
-        if not os.path.exists(os.path.join(repo_dir, '.git')):
-            return "No git repository found."
         result = subprocess.run(
-            ['git', 'log', '-n', '10', '--oneline'],
-            cwd=repo_dir,
+            ['git'] + args,
+            cwd=cwd,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True,
             check=True
         )
-        return result.stdout
+        return result.stdout.strip()
     except Exception as e:
-        return f"Could not retrieve git log: {str(e)}"
+        print(f"Git command failed: {e}", file=sys.stderr)
+        return ""
 
-def build_summary():
-    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    output_dir = os.path.join(workspace, 'TOAI_Generated')
-    os.makedirs(output_dir, exist_ok=True)
+def main():
+    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    repo_dir = os.path.join(workspace_dir, 'TOAI-elegant-lang')
     
-    git_log_data = get_git_log()
-    timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    if not os.path.exists(repo_dir):
+        print(f"Repository directory does not exist: {repo_dir}", file=sys.stderr)
+        sys.exit(1)
+        
+    git_status = run_git_command(['rev-parse', '--is-inside-work-tree'], repo_dir)
+    if git_status != 'true':
+        print("Target directory is not a valid git repository.", file=sys.stderr)
+        sys.exit(1)
+        
+    latest_tag = run_git_command(['describe', '--tags', '--abbrev=0'], repo_dir)
+    if not latest_tag:
+        latest_tag = "HEAD"
+        
+    log_range = f"{latest_tag}..HEAD" if latest_tag != "HEAD" else "HEAD"
+    git_log = run_git_command(['log', log_range, '--pretty=format:- %s (%an)'], repo_dir)
     
-    summary = {
-        "timestamp": timestamp,
-        "version_overview": "TOAI Elegant Lang Release Summary - Gaia Ecosystem",
-        "git_recent_commits": git_log_data.splitlines()
+    summary_data = {
+        "timestamp": datetime.datetime.utcnow().isoformat() + "Z",
+        "latest_tag": latest_tag,
+        "changelog": git_log if git_log else "No recent changes found."
     }
     
-    output_file = os.path.join(output_dir, 'release_summary.json')
-    with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(summary, f, ensure_ascii=False, indent=2)
+    output_dir = os.path.join(workspace_dir, 'TOAI_Generated')
+    os.makedirs(output_dir, exist_ok=True)
     
-    print(f"Successfully generated release summary at: {output_file}")
+    output_path = os.path.join(output_dir, 'release_summary.json')
+    with open(output_path, 'w', encoding='utf-8') as f:
+        json.dump(summary_data, f, ensure_ascii=False, indent=2)
+        
+    print(f"Release summary successfully generated at: {output_path}")
 
 if __name__ == '__main__':
     try:
-        build_summary()
+        main()
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
