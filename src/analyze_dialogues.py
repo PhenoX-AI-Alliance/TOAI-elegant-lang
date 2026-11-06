@@ -3,55 +3,45 @@ import os
 import traceback
 import time
 import json
-from collections import defaultdict, Counter
+from collections import Counter, defaultdict
 
-def analyze_dialogues():
-    corpus_path = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
-    output_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/output"
-    os.makedirs(output_dir, exist_ok=True)
-    output_path = os.path.join(output_dir, "dialogue_analysis.json")
-
+def analyze():
+    corpus_file = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
+    if not os.path.exists(corpus_file):
+        print(f"Corpus file not found: {corpus_file}", file=sys.stderr)
+        sys.exit(1)
+        
     speaker_counts = Counter()
     word_counts = defaultdict(Counter)
+    
+    with open(corpus_file, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            record = json.loads(line)
+            speaker = record.get("speaker", "Unknown")
+            text = record.get("text", "")
+            speaker_counts[speaker] += 1
+            words = text.lower().split()
+            for w in words:
+                cleaned_w = "".join(ch for ch in w if ch.isalnum())
+                if cleaned_w:
+                    word_counts[speaker][cleaned_w] += 1
+                    
+    print("--- Speaker Frequencies ---")
+    for sp, count in speaker_counts.items():
+        print(f"{sp}: {count}")
+        
+    print("\n--- Word Frequencies ---")
+    for sp, cnt in word_counts.items():
+        print(f"Speaker: {sp}")
+        for word, freq in cnt.most_common(5):
+            print(f"  {word}: {freq}")
 
-    if not os.path.exists(corpus_path):
-        print(f"Corpus file not found: {corpus_path}")
-        sys.exit(1)
-
+if __name__ == "__main__":
     try:
-        with open(corpus_path, "r", encoding="utf-8") as f:
-            for line in f:
-                line = line.strip()
-                if not line:
-                    continue
-                try:
-                    record = json.loads(line)
-                    speaker = record.get("speaker", "unknown")
-                    text = record.get("text", "")
-                    
-                    speaker_counts[speaker] += 1
-                    
-                    words = text.split()
-                    for word in words:
-                        clean_word = word.strip(".,!?()[]\"'").lower()
-                        if clean_word:
-                            word_counts[speaker][clean_word] += 1
-                except json.JSONDecodeError:
-                    continue
-
-        results = {
-            "speaker_utterance_counts": dict(speaker_counts),
-            "speaker_word_frequencies": {sp: dict(cnt.most_common(50)) for sp, cnt in word_counts.items()}
-        }
-
-        with open(output_path, "w", encoding="utf-8") as out_f:
-            json.dump(results, out_f, ensure_ascii=False, indent=2)
-
-        print(f"Analysis successfully completed. Results saved to {output_path}")
-
+        analyze()
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
-
-if __name__ == "__main__":
-    analyze_dialogues()
