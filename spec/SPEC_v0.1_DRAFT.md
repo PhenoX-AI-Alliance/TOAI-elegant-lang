@@ -10837,3 +10837,9 @@ TOAI-elegant-langは、制御フローを短縮ワイヤIDで圧縮し、実務�
 @CTX:SYNTAX_DESIGN :: §S01 [format:"hybrid-lossless", compress:true, precision:100%] -> §E01
 
 トーン制御は短縮ワイヤIDで効率化しつつ、実務データは完全な型付きキーバリュー構造で保持する。これにより、エージェント間の文脈理解と数値の欠落なき伝送を両立する構文を定義する。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-06 20:02]
+@CTX:TASK_DELEGATION :: §S01 [protocol:"TOAI-elegant-lang", format:"hybrid-lossless", reliability:1.0] => §H01
+
+制御フローを短縮ワイヤIDで圧縮しつつ、実務データをJSON互換のキーバリュー構造で完全保持するハイブリッド構文を定義。これにより、エージェント間通信の帯域を最小化しつつ、変数や数値の欠落を防ぎます。
