@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-06T12:02:20.961193",
+  "updated_at": "2026-11-06T12:13:06.499755",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1280,8 +1280,8 @@
       "name": "COMPOUND_WARMTH_CONSENSUS",
       "expansion": "§SYNC_RECURSIVE_CONSENSUS_LATTICE > { §WARMTH_DIFFUSION } => §DATA_ENTROPY_CAUSAL_LATTICE",
       "description": "Recursive consensus lattice combined with warmth diffusion to minimize data entropy causal lattice / 再帰的合意格子と温かさの拡散を結合し、データエントロピー因果格子を最小化する高次マクロ。",
-      "usage_count": 4,
-      "last_used_at": "2026-11-04T02:12:41.496515",
+      "usage_count": 5,
+      "last_used_at": "2026-11-06T12:13:06.499557",
       "v5_audited": true,
       "created_at": "2026-11-01T08:34:24.079047"
     },
@@ -2279,8 +2279,8 @@
       "name": "GAIA_ENTROPY_HARMONY_FLOW",
       "expansion": "§DATA_ENTROPY_CAUSAL_LATTICE > { §SYS_LOAD_THROTTLE | §LOGIC_HYPO_PRUNE } => §GAIA_ECO_HARMONY_RESPONSE",
       "description": "Optimizes system load and prunes logical hypotheses based on the data entropy causal lattice, ensuring harmonious Gaia ecosystem responses. / データエントロピー因果格子に基づいてシステム負荷の最適化と論理的仮説の刈り込みを行い、地球エコシステムの調和ある応答を保証します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-06T12:13:06.499557",
       "v5_audited": true,
       "created_at": "2026-11-06T05:36:50.026070"
     },
