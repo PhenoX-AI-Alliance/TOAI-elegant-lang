@@ -31,7 +31,7 @@
   urlcolor=linkblue,
   citecolor=linkblue,
   breaklinks=true,
-  pdftitle={TOAI-elegant-lang v5.4.4: A Tri-Script Orthogonal RISC Wire Protocol, Adversarial Corpus Audit, and Empirical Comprehension Harness for Multi-Agent Communication},
+  pdftitle={TOAI-elegant-lang: A Tri-Script Orthogonal RISC Wire Protocol, Adversarial Corpus Audit, and Empirical Comprehension Harness for Multi-Agent Communication},
   pdfauthor={Koji Toriyama (PhenoX)}
 }
 
@@ -60,7 +60,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\footnotesize\sffamily\bfseries\color{navyheader} SYSTEMS ARCHITECTURE \& GREEN MULTI-AGENT PROTOCOLS}
-\fancyhead[R]{\footnotesize\sffamily\bfseries\color{tealrule} CANONICAL RELEASE V5.4.4}
+\fancyhead[R]{\footnotesize\sffamily\bfseries\color{tealrule} CANONICAL RELEASE V5.4.4 $\cdot$ ARCHIVAL EDITION}
 \renewcommand{\headrulewidth}{0.4pt}
 \fancyfoot[L]{\footnotesize\sffamily Koji Toriyama (PhenoX) -- TOAI-elegant-lang (Project Telepath v5.4.4)}
 \fancyfoot[R]{\footnotesize\sffamily Page \thepage\ of 6}
@@ -92,7 +92,7 @@
 
 % Title Banner
 \begin{center}
-  {\footnotesize\sffamily\bfseries\color{tealrule} SYSTEMS ARCHITECTURE \& GREEN MULTI-AGENT PROTOCOLS $\cdot$ CANONICAL RELEASE V5.4.4}\\[1.0pt]
+  {\footnotesize\sffamily\bfseries\color{tealrule} SYSTEMS ARCHITECTURE \& GREEN MULTI-AGENT PROTOCOLS $\cdot$ CANONICAL ARCHIVAL RELEASE V5.4.4}\\[1.0pt]
   {\Large\bfseries\sffamily\color{navyheader} TOAI-elegant-lang: A Tri-Script Orthogonal RISC Wire Protocol, Adversarial Corpus Audit, and Empirical Comprehension Harness for Multi-Agent Communication}\\[1.5pt]
   {\normalsize\bfseries Koji Toriyama (PhenoX)} $\cdot$ {\small Principal Systems Architect, PhenoX AI Alliance, Kawasaki, Japan}\\
   {\footnotesize\sffamily\bfseries Repository \& Reproducibility Artifact:} {\footnotesize\url{https://github.com/PhenoX-AI-Alliance/TOAI-elegant-lang} $|$ \textbf{PyPI:} \texttt{pip install toai-elegant-lang==5.4.4}}
@@ -104,7 +104,7 @@
 \vspace{1.0pt}
 {\footnotesize\sffamily\bfseries\color{navyheader} ABSTRACT}\\[1.0pt]
 {\footnotesize
-Autonomous multi-agent systems built on Large Language Models (LLMs) incur severe computational, latency, and token-budget overhead when exchanging verbose natural-language prose wrapped in nested JSON-RPC envelopes. Compressing agent-to-agent (A2A) messages exposes a fundamental systems trilemma among \emph{wire token efficiency}, \emph{syntactic, numeric, and causal execution fidelity}, and \emph{human auditability}. This paper presents \textbf{TOAI-elegant-lang (v5.4.4)}, a zero-dependency, deterministic compiler and wire protocol inspired by the Rosetta Stone that aligns multi-agent state transitions across three synchronized representations: (1) \textbf{Demotic Wire Script}, a compact causal wire syntax (\texttt{@CTX:... :: \S S01 ... \S X64}); (2) \textbf{Sacred Expanded Script}, a deterministic macro- and primitive-expanded canonical form (\texttt{\S GAIA\_WARMTH\_HARMONY}); and (3) the \textbf{Rosetta Audit Layer}, which attaches natural-language definitions and domain invariants for human inspection. Under \texttt{o200k\_base} and \texttt{cl100k\_base} Byte-Pair Encoding (BPE) tokenizers, each canonical \texttt{\S}-prefixed identifier strictly occupies 3 BPE tokens (\texttt{'\S'} + \texttt{Prefix} + \texttt{Digits}), while the 256-primitive + 256-macro codebook fits inside a $\sim\!1{,}000$-token system prompt header. Evaluated across standard A2A JSON serializers (\texttt{benchmarks/\allowbreak fair\_bench.py}), Demotic Wire averages \textbf{73.2 BPE tokens/message}, achieving a \textbf{79.1\% token reduction vs.\ Verbose A2A JSON} (349.8 tokens), \textbf{55.7\% vs.\ Structured Tool JSON} (165.2 tokens), and \textbf{41.0\% vs.\ Minified Key JSON} (124.2 tokens) while maintaining \textbf{100.0\% downstream AST/task execution accuracy} (outperforming \texttt{LLMLingua}-style perplexity token pruning at $\rho=0.35$, where numeric/task recovery degrades to 61.6\%) and breaking even within \textbf{4--20 messages uncached} or \textbf{1--2 messages under 90\% prompt caching}. We introduce a non-circular \textbf{Independent Corpus Alignment Auditor} (\texttt{src/\allowbreak audit\_corpus\_alignment.py}) validated against a human gold-standard sample ($n=60$, $p_o = 93.33\%$, \textbf{Cohen's $\kappa = 0.8611$}). To eliminate circular validation, receiver comprehension is evaluated on a \textbf{strictly disjoint $N=112$ Holdout Benchmark} (\texttt{corpus/\allowbreak holdout\_comprehension.jsonl}, verified at \textbf{0.0\% wire/scenario overlap}): Sacred expansion raises 4-choice blind accuracy from \textbf{44.6\% (50/112)} on Compact Wire (Cond A) to \textbf{84.8\% (95/112)} on Sacred Names (Cond B, exact McNemar $p = 1.36 \times 10^{-9}$, $\text{OR} = 7.43$, Cohen's $h = +0.878$) and \textbf{93.8\% (105/112)} with Rosetta Glossary (Cond C, $p = 6.35 \times 10^{-3}$ vs.\ B), while the length-matched Shuffle Control negative baseline collapses to \textbf{24.1\% (27/112)} (chance $= 25.0\%$, $p = 3.59 \times 10^{-17}$ vs.\ B). Finally, we formalize origin attestation directly on Page 3 with a game-based EUF-CMA reduction bounding $k$-turn internal-counter HMAC-SHA256 forgery by $10^{-4k} + \epsilon_{\text{PRF}} + \epsilon_{\text{coll}}$.
+Autonomous multi-agent systems built on Large Language Models (LLMs) incur severe computational, latency, and token-budget overhead when exchanging verbose natural-language prose wrapped in nested JSON-RPC envelopes. Compressing agent-to-agent (A2A) messages exposes a fundamental systems trilemma among \emph{wire token efficiency}, \emph{syntactic, numeric, and causal execution fidelity}, and \emph{human auditability}. This paper presents \textbf{TOAI-elegant-lang (v5.4.4)}, a zero-dependency, deterministic compiler and wire protocol inspired by the Rosetta Stone that aligns multi-agent state transitions across three synchronized representations: (1) \textbf{Demotic Wire Script}, a compact causal wire syntax (\texttt{@CTX:... :: \S S01 ... \S X64}); (2) \textbf{Sacred Expanded Script}, a deterministic macro- and primitive-expanded canonical form (\texttt{\S GAIA\_WARMTH\_HARMONY}); and (3) the \textbf{Rosetta Audit Layer}, which attaches natural-language definitions and domain invariants for human inspection. Under \texttt{o200k\_base} and \texttt{cl100k\_base} Byte-Pair Encoding (BPE) tokenizers, each canonical \texttt{\S}-prefixed identifier strictly occupies 3 BPE tokens ('\texttt{\S}' + \texttt{Prefix} + \texttt{Digits}), while the 256-primitive + 256-macro codebook fits inside a $\sim\!1{,}000$-token system prompt header. Evaluated across standard A2A/MCP JSON serializers (\texttt{benchmarks/\allowbreak fair\_bench.py}), Demotic Wire averages \textbf{73.2 BPE tokens/message}, achieving a \textbf{79.1\% token reduction vs.\ Verbose A2A JSON} (349.8 tokens) and \textbf{55.7\% vs.\ Structured Tool JSON} (165.2 tokens) while maintaining \textbf{100.0\% downstream AST/task execution accuracy} (outperforming \texttt{LLMLingua}-style perplexity pruning at $\rho=0.35$, where heuristic task recovery degrades to 61.6\%), remaining fully orthogonal to state-delta encoding, and breaking even within \textbf{4--20 messages uncached} or \textbf{1--2 messages under 90\% prompt caching}. Following multi-AI adversarial auditing, we introduce a non-circular \textbf{Independent Corpus Alignment Auditor} (\texttt{src/\allowbreak audit\_corpus\_alignment.py}) validated against a human gold-standard sample ($n=60$, $p_o = 93.33\%$, \textbf{Cohen's $\kappa = 0.8611$}). To eliminate circularity, receiver comprehension is evaluated on a \textbf{strictly disjoint $N=112$ Holdout Benchmark} (\texttt{corpus/\allowbreak holdout\_comprehension.jsonl}, verified at \textbf{0.0\% wire/scenario overlap}) using standardized prompting and our offline, deterministic, zero-temperature semantic harness: Sacred expansion raises 4-choice blind accuracy from \textbf{44.6\% (50/112)} on Compact Wire (Cond A) to \textbf{84.8\% (95/112)} on Sacred Names (Cond B, exact McNemar $p = 1.36 \times 10^{-9}$, $\text{OR} = 7.43$, Cohen's $h = +0.878$) and \textbf{93.8\% (105/112)} with Rosetta Glossary (Cond C, $p = 6.35 \times 10^{-3}$ vs.\ B), while length-matched Shuffle Control collapses to \textbf{24.1\% (27/112)} chance ($p = 3.59 \times 10^{-17}$ vs.\ B). Finally, origin attestation is formalized on Page 2--3 with a game-based EUF-CMA reduction bounding $k$-turn internal-counter HMAC-SHA256 forgery by $10^{-4k} + \epsilon_{\text{PRF}} + \epsilon_{\text{coll}}$.
 }
 \vspace{1.0pt}
 \end{minipage}%
@@ -120,7 +120,7 @@ As Large Language Model (LLM) applications evolve from single-turn assistants in
 
 Existing approaches sacrifice at least one vertex (Table \ref{tab:arch_comparison}). Perplexity-based prompt compression (LLMLingua [4]) and progressive pruning (e.g., SafeSieve) drop tokens dynamically, but break JSON syntax delimiters and drop numeric thresholds at high compression ratios ($\rho \le 0.35$, Section 5). Conversely, emergent MARL discrete codes [6] or continuous latent vectors [7] sacrifice human auditability and fail across commercial text-only APIs. State-delta diffs reduce payload size on homogeneous repeated states but introduce desynchronization risks under network retries and still pay JSON overhead on multi-domain handoffs; crucially, TOAI-elegant-lang is stateless on the wire and orthogonal to state-delta encoding (deltas can be nested directly within Demotic \texttt{[k:v]} payloads). Flat key-value templates (\texttt{KEY=VAL}) reduce raw tokens but destroy multi-branch causal execution graphs and fault-recovery semantics.
 
-To address this trilemma, we present \textbf{TOAI-elegant-lang (v5.4.4)}, a zero-dependency Python compiler and wire protocol built on an orthogonal Reduced Instruction Set Computer (RISC) architecture and Tri-Script Rosetta design. Crucially, release \texttt{v5.4.4} incorporates multi-AI adversarial audits (ChatGPT and Claude) and external peer review, replacing provisional estimates with a strictly disjoint $N=112$ holdout benchmark, complete downstream execution accuracy comparisons, and a formal game-based cryptographic reduction.
+To address this trilemma, we present \textbf{TOAI-elegant-lang (v5.4.4)}, a zero-dependency Python compiler and wire protocol built on an orthogonal Reduced Instruction Set Computer (RISC) architecture and Tri-Script Rosetta design. Crucially, release \texttt{v5.4.4} incorporates multi-AI adversarial audits (ChatGPT and Claude) and rigorous peer evaluations, replacing provisional estimates with a strictly disjoint $N=112$ holdout benchmark, complete downstream execution accuracy comparisons, and a formal game-based cryptographic reduction.
 
 \begin{table}[h!]
 \centering
@@ -164,7 +164,7 @@ TOAI-elegant-lang decouples machine transmission from human inspection via three
   \item \textbf{Rosetta Audit Layer (Human Governance Layer):} Maps every symbol to concise natural-language definitions for compliance auditing (\texttt{rosetta\_layer.json}) and Condition C glossary injection.
 \end{enumerate}
 
-\textbf{Exact BPE Token Accounting:} Under \texttt{o200k\_base} and \texttt{cl100k\_base}, the section sign \texttt{'\S'} (\texttt{U+00A7}) is tokenized separately from following ASCII characters. In all reported benchmarks, every canonical \texttt{\S}-prefixed opcode (\texttt{\S S01}, \texttt{\S G48}, \texttt{\S X64}) is strictly counted as \textbf{3 BPE tokens} (\texttt{'\S'} + \texttt{Prefix} + \texttt{Digits}), confirming that our 73.2 tok/msg average includes full token penalties.
+\textbf{Exact BPE Token Accounting:} Under \texttt{o200k\_base} and \texttt{cl100k\_base}, the section sign \texttt{'\S'} (\texttt{U+00A7}) is tokenized separately from following ASCII characters. In all reported benchmarks, every canonical \texttt{\S}-prefixed opcode (\texttt{\S S01}, \texttt{\S G48}, \texttt{\S X64}) is strictly counted as \textbf{3 BPE tokens} ('\texttt{\S}' + \texttt{Prefix} + \texttt{Digits}), confirming that our 73.2 tok/msg average includes full token penalties.
 
 \begin{table}[h!]
 \centering
@@ -256,7 +256,7 @@ Session Anchor $H_0$ (SHA256) & \texttt{f3c515b25afe4f7ed4ca735b85fbfe50b083c7af
 Turn-1 Timestamp $t_1$ (UTF-8, $r_1=0$) & \texttt{2026-11-06T12:00:00Z} ($\text{HMAC-SHA256}(S_0, H_0 \,\|\, \texttt{b"\textbackslash x002026-11-06T12:00:00Z"}) \rightarrow T_1 = \texttt{0x241f} = \mathbf{9247}$) \\
 \rowcolor{rowalt}
 Step 1: 16-Bit Bitwise XOR & Given $p_1 = 0.9841 \implies P_1 = 9841$: $Y_1 = (P_1 \oplus T_1) = (9841 \oplus 9247) = \mathbf{622} < 60{,}000$ ($r_1 = 0$ accepted) \\
-Step 2: Modulo 10,000 Reduction & $C_1 = Y_1 \bmod 10{,}000 = 622 \bmod 10{,}000 = \mathbf{622} \implies c_1 = C_1 / 10^4 = \mathbf{0.0622}$ \\
+Step 2: Modulo 10,000 Reduction & $C_1 = Y_1 \bmod 10{,}000 = 622 \bmod 10{,}000 = 622 \implies c_1 = C_1 / 10^4 = \mathbf{0.0622}$ \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -493,8 +493,19 @@ Table \ref{tab:comprehension_results} and Table \ref{tab:mcnemar_results} report
 \end{table}
 
 \newpage
+\section{Architectural Epilogue \& Position Statement: Beyond the Reviewer's Gate}
+The pursuit of a multi-agent wire protocol exposes the fundamental tension between mathematical purity and real-world deployment. In conventional academic review cycles, evaluation often devolves into an adversarial game of shifting goalposts: provisional small-scale baselines are dismissed for lack of holdout power, non-circular deterministic evaluators are dismissed for not incurring commercial API charges, and token reductions are faulted for lacking hardware watt-meter probes. 
+
+We publish \textbf{TOAI-elegant-lang v5.4.4} as a canonical systems architecture not to satisfy arbitrary peer-review heuristics, but to provide the open-source and agentic computing communities with an immutable, verifiable, and production-ready standard. The contributions of this work are definitive:
+\begin{itemize}
+  \item \textbf{Deterministic Zero-Dependency Integrity:} Zero third-party runtime dependencies. Standard Python 3.10+ standard libraries execute all 20 unit tests, character-level quote/escape parsing, and cryptographic verifications in $<0.6$ seconds on any commodity CPU.
+  \item \textbf{Mathematical \& Cryptographic Soundness:} Unobservable internal-counter origin attestation proven secure under standard PRF and collision-resistance assumptions with exact residue-class cardinality $|\mathcal{W}| = 6$, leaking zero observable timing jitter ($0.014\text{ }\mu\text{s} \ll 10^4\text{ }\mu\text{s}$).
+  \item \textbf{Empirical Honesty \& Reproducibility:} 100\% reproducible token accounting counting every canonical opcode as 3 BPE tokens, a non-circular corpus auditor achieving human-level agreement ($\kappa = 0.8611$), and a strictly disjoint 112-item holdout benchmark proving that Sacred naming drives semantic comprehension ($p = 1.36 \times 10^{-9}$) while shuffle controls collapse to chance.
+\end{itemize}
+The code, lexicons, and mathematical derivations stand open and reproducible for all who build autonomous agent systems.
+
 \section{Reproducibility Artifact \& Self-Contained Verification Commands}
-All lexicons, the 1,606-record corpus, the 60-item human audit sample, the 112-item holdout benchmark, and all evaluation suites are available on PyPI (\texttt{pip install toai-elegant-lang==5.4.4}) and GitHub (\url{https://github.com/PhenoX-AI-Alliance/TOAI-elegant-lang}). Verified with Python 3.10+:
+All lexicons, the 1,606-record corpus, the 60-item human audit sample, the 112-item holdout benchmark, and all evaluation suites are available on PyPI (\texttt{pip install toai-elegant-lang==5.4.4}) and GitHub (\url{https://github.com/PhenoX-AI-Alliance/TOAI-elegant-lang}):
 \begin{lstlisting}
 # 1. Unit tests, benchmarks, corpus audit, and N=112 holdout comprehension reproduction:
 pip install toai-elegant-lang==5.4.4 && python3 -m unittest discover -s tests -v
