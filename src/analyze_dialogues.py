@@ -1,54 +1,48 @@
 import sys
 import os
+import traceback
 import json
-import collections
 
-def analyze():
-    corpus_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
+def audit_dialogues(corpus_path):
+    print(f"Auditing corpus at: {corpus_path}")
     if not os.path.exists(corpus_path):
-        print(f"Error: Corpus file not found at {corpus_path}")
+        print("Error: Corpus file not found.")
         sys.exit(1)
-        
-    speaker_counts = collections.defaultdict(int)
-    word_counts = collections.defaultdict(int)
-    
+
+    total_records = 0
+    error_records = 0
+
     with open(corpus_path, "r", encoding="utf-8") as f:
-        for line in f:
+        for line_num, line in enumerate(f, 1):
             line = line.strip()
             if not line:
                 continue
+            total_records += 1
             try:
                 data = json.loads(line)
-                speaker = data.get("speaker", "Unknown")
-                text = data.get("text", "")
+                if "dialogue" not in data or not isinstance(data["dialogue"], list):
+                    print(f"Line {line_num}: Missing 'dialogue' list field.")
+                    error_records += 1
+                    continue
                 
-                speaker_counts[speaker] += 1
-                
-                words = text.lower().split()
-                for w in words:
-                    cleaned = "".join(ch for ch in w if ch.isalnum())
-                    if cleaned:
-                        word_counts[cleaned] += 1
-            except json.JSONDecodeError:
-                continue
-                
-    result = {
-        "speaker_counts": dict(speaker_counts),
-        "top_words": dict(word_counts.most_common(10))
-    }
-    
-    output_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/output"
-    os.makedirs(output_dir, exist_ok=True)
-    output_path = os.path.join(output_dir, "dialogue_analysis.json")
-    
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(result, f, ensure_ascii=False, indent=2)
-        
-    print(f"Analysis successfully completed. Results saved to {output_path}")
+                prev_role = None
+                for turn in data["dialogue"]:
+                    if "role" not in turn or "content" not in turn:
+                        print(f"Line {line_num}: Turn missing 'role' or 'content'.")
+                        error_records += 1
+                        break
+                    current_role = turn["role"]
+                    if prev_role and prev_role == current_role:
+                        print(f"Line {line_num}: Consecutive identical roles detected ({current_role}).")
+                    prev_role = current_role
+            except json.JSONDecodeError as e:
+                print(f"Line {line_num}: JSON decode error - {e}")
+                error_records += 1
+
+    print(f"Audit completed. Total: {total_records}, Errors: {error_records}")
+    if error_records > 0:
+        sys.exit(1)
 
 if __name__ == "__main__":
-    try:
-        analyze()
-    except Exception as e:
-        print(f"An error occurred: {e}", file=sys.stderr)
-        sys.exit(1)
+    corpus = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
+    audit_dialogues(corpus)

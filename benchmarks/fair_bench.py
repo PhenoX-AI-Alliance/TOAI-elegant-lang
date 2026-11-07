@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-TOAI-elegant-lang v5.4.2 Fair Multi-Format Benchmark & Header Amortization Suite
+TOAI-elegant-lang v5.4.3 Fair Multi-Format Benchmark & Header Amortization Suite
 Compares 5 wire representations across identical multi-agent scenarios:
   1. Verbose A2A (Baseline)   : Natural language prose intent + semantic specs + standard JSON
   2. Structured Tool JSON     : Lossless structured JSON preserving intent, params, causal [p,c], and fallbacks
@@ -320,7 +320,7 @@ def run_fair_benchmark(header_tokens: int = 1000) -> Dict[str, Any]:
     sym_token_counts = {s: count_bpe_tokens(s, "o200k_base")["tokens"] for s in sample_symbols}
 
     print("=" * 92)
-    print("  ⚖️  TOAI-elegant-lang v5.4.2 Fair Multi-Format Benchmark & Amortization Analysis")
+    print("  ⚖️  TOAI-elegant-lang v5.4.3 Fair Multi-Format Benchmark & Amortization Analysis")
     print("=" * 92)
     print(f"  Tokenizer Backend : {encoding_label}")
     print(f"  Scenarios Tested  : {n} multi-agent coordination scenarios")

@@ -1,0 +1,550 @@
+\documentclass[9pt,a4paper]{extarticle}
+
+\usepackage[a4paper,top=16mm,bottom=16mm,left=14mm,right=14mm,headheight=13pt,headsep=5mm,footskip=7mm]{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage[obeyspaces,spaces]{url}
+\usepackage{hyperref}
+
+% Colors matching the canonical architectural paper style
+\definecolor{navyheader}{HTML}{0F2C59}
+\definecolor{tealrule}{HTML}{006666}
+\definecolor{boxbg}{HTML}{F4F7FA}
+\definecolor{BoxBorder}{HTML}{B8C4D4}
+\definecolor{rowalt}{HTML}{F2F5F8}
+\definecolor{codebg}{HTML}{F8F9FA}
+\definecolor{codeframe}{HTML}{D0D7DE}
+\definecolor{linkblue}{HTML}{0A4B78}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=linkblue,
+  urlcolor=linkblue,
+  citecolor=linkblue,
+  breaklinks=true,
+  pdftitle={TOAI-elegant-lang v5.4.3: A Tri-Script Orthogonal RISC Wire Protocol, Adversarial Corpus Audit, and Empirical Comprehension Harness for Multi-Agent Communication},
+  pdfauthor={Koji Toriyama (PhenoX)}
+}
+
+\Urlmuskip=0mu plus 1mu\relax
+\emergencystretch=3em
+\linespread{1.05}
+
+% Compact section formatting
+\titleformat{\section}{\large\bfseries\sffamily\color{navyheader}}{\thesection.}{0.45em}{}[\vspace{0.5pt}\titlerule]
+\titleformat{\subsection}{\normalsize\bfseries\sffamily\color{navyheader}}{\thesubsection}{0.45em}{}
+\titlespacing*{\section}{0pt}{6.5pt plus 1.5pt minus 1pt}{3pt plus 1pt minus 0.5pt}
+\titlespacing*{\subsection}{0pt}{4.5pt plus 1pt minus 0.5pt}{2pt plus 0.5pt minus 0.5pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2.6pt plus 0.6pt minus 0.3pt}
+\setlength{\abovedisplayskip}{4pt plus 1pt minus 1pt}
+\setlength{\belowdisplayskip}{4pt plus 1pt minus 1pt}
+\setlength{\intextsep}{4.5pt plus 1pt minus 1pt}
+\setlength{\textfloatsep}{4.5pt plus 1pt minus 1pt}
+\setlist[itemize]{leftmargin=1.35em,itemsep=1.2pt,topsep=1.5pt,parsep=0pt}
+\setlist[enumerate]{leftmargin=1.45em,itemsep=1.2pt,topsep=1.5pt,parsep=0pt}
+
+\captionsetup{font={footnotesize,sf},labelfont={bf},skip=2.5pt}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize\sffamily\bfseries\color{navyheader} SYSTEMS ARCHITECTURE \& GREEN MULTI-AGENT PROTOCOLS}
+\fancyhead[R]{\footnotesize\sffamily\bfseries\color{tealrule} CANONICAL RELEASE V5.4.3}
+\renewcommand{\headrulewidth}{0.5pt}
+\fancyfoot[L]{\footnotesize\sffamily Koji Toriyama (PhenoX) -- TOAI-elegant-lang (Project Telepath v5.4.3)}
+\fancyfoot[R]{\footnotesize\sffamily Page \thepage\ of 8}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Code listings configuration (pure copy-pasteable ASCII arrows)
+\lstset{
+  basicstyle=\ttfamily\scriptsize,
+  backgroundcolor=\color{codebg},
+  frame=single,
+  rulecolor=\color{codeframe},
+  framesep=2.5pt,
+  xleftmargin=3pt,
+  xrightmargin=3pt,
+  aboveskip=3.5pt,
+  belowskip=3.5pt,
+  breaklines=true,
+  columns=fullflexible,
+  keepspaces=true,
+  upquote=true,
+  literate={§}{{\S}}1
+}
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\begin{document}
+
+% Title Banner
+\begin{center}
+  {\footnotesize\sffamily\bfseries\color{tealrule} SYSTEMS ARCHITECTURE \& GREEN MULTI-AGENT PROTOCOLS $\cdot$ CANONICAL RELEASE V5.4.3}\\[2pt]
+  {\Large\bfseries\sffamily\color{navyheader} TOAI-elegant-lang: A Tri-Script Orthogonal RISC Wire Protocol, Adversarial Corpus Audit, and Empirical Comprehension Harness for Multi-Agent Communication}\\[3pt]
+  {\normalsize\bfseries Koji Toriyama (PhenoX)} $\cdot$ {\small Principal Systems Architect, PhenoX AI Alliance, Kawasaki, Japan}\\
+  {\footnotesize\sffamily\bfseries Repository \& Reproducibility Artifact:} {\footnotesize\url{https://github.com/PhenoX-AI-Alliance/TOAI-elegant-lang} $|$ \textbf{PyPI:} \texttt{pip install toai-elegant-lang==5.4.3}}
+\end{center}
+
+\vspace{-3pt}
+\noindent\fcolorbox{BoxBorder}{boxbg}{%
+\begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+\vspace{1.5pt}
+{\footnotesize\sffamily\bfseries\color{navyheader} ABSTRACT}\\[1.5pt]
+{\footnotesize
+Autonomous multi-agent systems built on Large Language Models (LLMs) incur severe computational, latency, and token-budget overhead when exchanging verbose natural-language prose wrapped in nested JSON-RPC envelopes. Compressing agent-to-agent (A2A) messages exposes a fundamental systems trilemma among \emph{wire token efficiency}, \emph{syntactic and numeric type fidelity}, and \emph{human auditability}. This paper presents \textbf{TOAI-elegant-lang (v5.4.3)}, a zero-dependency, deterministic compiler and wire protocol inspired by the Rosetta Stone that aligns multi-agent state transitions across three synchronized representations: (1) \textbf{Demotic Wire Script}, a compact causal wire syntax (\texttt{@CTX:... :: \S S01 ... \S X64}); (2) \textbf{Sacred Expanded Script}, a deterministic macro- and primitive-expanded canonical form (\texttt{\S GAIA\_WARMTH\_HARMONY}); and (3) the \textbf{Rosetta Audit Layer}, which attaches natural-language definitions and domain invariants for human inspection. Under \texttt{o200k\_base} and \texttt{cl100k\_base} Byte-Pair Encoding (BPE) tokenizers, each compact \texttt{\S}-prefixed identifier occupies $2\text{--}3$ BPE tokens (\texttt{'\S'} + \texttt{Prefix} + \texttt{Digits}, or 2 tokens with ASCII prefixes), while the 256-primitive + 256-macro codebook fits inside a $\sim\!1{,}000$-token system prompt header. Evaluated on the reproducible multi-format benchmark (\texttt{benchmarks/\allowbreak fair\_bench.py}), Demotic Wire averages \textbf{73.2 BPE tokens/message}, achieving a \textbf{79.1\% token reduction vs.\ Verbose A2A JSON} (349.8 tokens), \textbf{55.7\% vs.\ Structured Tool JSON} (165.2 tokens), and \textbf{41.0\% vs.\ Minified Key JSON} (124.2 tokens) while preserving 100.0\% lossless syntactic round-trip reconstruction and amortizing its 1,000-token dictionary header within \textbf{4--20 messages uncached} or \textbf{1--2 messages under 90\% prompt caching}. Following multi-AI adversarial auditing, we introduce a non-circular \textbf{Independent Corpus Alignment Auditor} (\texttt{src/\allowbreak audit\_corpus\_alignment.py}) validated against a stratified human gold-standard sample ($n=60$, raw agreement $p_o = 93.33\%$, \textbf{Cohen's $\kappa = 0.8611$} [95\% CI: $0.7296\text{--}0.9926$]), raising corpus scenario-to-wire alignment from 22.67\% (364/1,606) to 100.0\% (1,606/1,606). Finally, we separate syntactic round-trip fidelity from receiver semantic comprehension via a 5-condition statistical harness (\texttt{benchmarks/\allowbreak eval\_comprehension.py} with Wilson 95\% CIs, exact McNemar tests, and 4-way option rotation), reporting provisional blind comprehension results ($n=23$, 4-choice chance 25\%: Condition A Wire-only $12/23 = 52\%$ [95\% CI: $33\text{--}71\%$]; Condition B Sacred names $16/23 = 70\%$ [95\% CI: $49\text{--}84\%$]) alongside an unobservable internal-counter EUF-CMA cryptographic attestation proof.
+}
+\vspace{1.5pt}
+\end{minipage}%
+}
+
+\section{Introduction}
+As Large Language Model (LLM) applications evolve from isolated single-turn assistants into cooperative multi-agent workflows---such as Anthropic's Model Context Protocol (MCP) [1], Google's Agent-to-Agent (A2A) JSON-RPC 2.0 orchestrators [2], and multi-agent conversation frameworks such as AutoGen [5]---inter-agent communication overhead has emerged as a primary bottleneck in inference cost, context-window saturation, and key-value (KV) cache memory footprint. In conventional agent topologies, autonomous nodes coordinate state transitions by generating explanatory natural-language prose embedded inside deeply nested JSON schemas. While human-readable, repeated schema keys, conversational filler, and JSON punctuation delimiters consume a disproportionate share of the token budget and scale prefill attention FLOPs quadratically with sequence length.
+
+Attempting to compress inter-agent messages exposes a strict \textbf{Multi-Agent Communication Trilemma}:
+\begin{enumerate}
+  \item \textbf{Wire Token Efficiency:} Minimizing BPE subword tokens per state transition and amortizing any shared protocol specification across multi-turn sessions.
+  \item \textbf{Syntactic, Numeric, and Causal Fidelity:} Guaranteeing 100\% deterministic preservation of structured key-value parameters (e.g., leading-zero string identifiers \texttt{"007"}, embedded delimiters \texttt{"a, b"}, floating-point thresholds \texttt{150.50}), causal transition probabilities $p \in [0,1]$, transition costs $c \in [0, 0.9999]$, and fault-fallback edges (\texttt{!->}).
+  \item \textbf{Human Auditability and Cross-Model Portability:} Ensuring that human operators and heterogeneous LLM families (GPT, Claude, Gemini, Qwen, Llama, Gemma) can inspect, verify, and exchange packets over standard text APIs without opaque binary blobs or model-specific hidden-state adapters.
+\end{enumerate}
+
+Existing approaches sacrifice at least one vertex of this trilemma. Heuristic perplexity-based prompt pruning such as LLMLingua [4] drops tokens based on language-model perplexity, which risks corrupting JSON syntax delimiters or numeric literals in structured payloads. Conversely, reinforcement-learned (RL) discrete emergent protocols [6, 7] or continuous latent-vector handoffs sacrifice human auditability and cannot traverse commercial text-only REST APIs across heterogeneous model families. Flat key-value templates (\texttt{KEY=VAL}) reduce token count but discard the causal execution graph and fault-recovery semantics.
+
+To address this trilemma with engineering rigor and empirical transparency, we present \textbf{TOAI-elegant-lang (v5.4.3)}, a zero-dependency Python compiler and wire protocol built on an orthogonal Reduced Instruction Set Computer (RISC) instruction architecture and a Tri-Script Rosetta design. Crucially, release \texttt{v5.4.3} incorporates lessons from an intensive multi-AI adversarial audit (conducted across independent ChatGPT and Claude execution sandboxes), replacing idealized assumptions with strictly reproducible, self-contained evaluation tools. Our contributions are fourfold:
+\begin{enumerate}
+  \item \textbf{8-Bit Orthogonal RISC \& Unified Tri-Script Architecture:} We formalize a three-layer representation aligning \emph{Demotic Wire Script} (compact opcodes \texttt{\S S01..\S X256}), \emph{Sacred Expanded Script} (canonical uppercase identifiers \texttt{\S[A-Z][A-Z0-9\_]*}), and the \emph{Rosetta Audit Layer} (human-readable definitions). We provide an exact BPE subword accounting showing that \texttt{\S}-prefixed opcodes occupy $2\text{--}3$ BPE tokens (\texttt{'\S'} + \texttt{Prefix} + \texttt{Digits}) under \texttt{o200k\_base} and \texttt{cl100k\_base}.
+  \item \textbf{Quote-Aware Stateful LL(1) Parser \& Transparent OOV Auditing:} We specify a conflict-free LL(1) Extended Backus-Naur Form (EBNF) grammar paired with a character-by-character quote-aware payload scanner in \texttt{src/codec.py} that losslessly preserves quoted strings (\texttt{"007"}, \texttt{"a, b"}, \texttt{"x]y"}, escaped quotes) and enforces explicit out-of-vocabulary policies (\texttt{on\_oov="error" | "keep" | "nearest"}) with a complete \texttt{oov\_substitutions} audit log.
+  \item \textbf{Non-Circular Corpus Alignment Auditor \& Fair Break-Even Benchmark:} To eliminate circular validation between corpus generation and evaluation, we build an independent deterministic auditor (\texttt{src/\allowbreak audit\_corpus\_\allowbreak alignment.py}) governed by domain-specific semantic whitelists and cross-domain bleed blacklists. Validated against a stratified 60-item human audit (\textbf{Cohen's $\kappa = 0.8611$}), the auditor detects and repairs historical scenario-to-wire mismatches (raising alignment from 22.67\% to 100.0\%). We pair this with \texttt{benchmarks/\allowbreak fair\_bench.py}, quantifying token savings and header break-even points across five representations.
+  \item \textbf{Statistical Receiver Comprehension Harness \& EUF-CMA Attestation:} We strictly distinguish \emph{syntactic round-trip losslessness} (100.0\%) from \emph{blind receiver semantic comprehension}. We introduce \texttt{benchmarks/\allowbreak eval\_\allowbreak comprehension.py} (implementing Conditions A--E, Shuffle Control, Wilson 95\% CIs, exact McNemar tests, and 4-way option rotation) and report provisional blind evaluation results alongside a formal EUF-CMA security proof for internal-counter HMAC-SHA256 origin attestation.
+\end{enumerate}
+
+\section{Related Work and Architectural Positioning}
+We position TOAI-elegant-lang relative to four established paradigms in agent communication and prompt compression, restricting all comparisons to verifiable specifications, peer-reviewed literature, and deterministic baselines implemented directly in our repository (Table \ref{tab:arch_comparison}):
+
+\begin{itemize}
+  \item \textbf{Classical Agent Communication Languages (FIPA-ACL [3]) and Modern JSON-RPC Orchestrators (MCP [1], A2A [2], AutoGen [5]):} FIPA-ACL standardized performative-based agent messaging (\texttt{inform}, \texttt{request}, \texttt{propose}) using S-expressions or XML. Modern LLM ecosystems such as Anthropic MCP [1] and Google A2A [2] adopt JSON-RPC 2.0 envelopes, while multi-agent frameworks such as AutoGen [5] exchange natural-language turns wrapped in role-tagged JSON dictionaries. While universally portable across text APIs, full JSON-RPC and prose explanations incur high token overhead (349.8 tokens/message in our benchmark), and even stripped-down \emph{Structured Tool JSON} (165.2 tokens) or \emph{Minified Key JSON} (124.2 tokens) repeatedly pay BPE tokenization costs for structural braces, quotes, colons, and field names on every turn.
+  \item \textbf{Binary Serialization Formats (Protocol Buffers [8]):} Google's Protocol Buffers and MessagePack achieve compact byte-level encoding over raw TCP sockets. However, LLM text completion APIs cannot ingest raw arbitrary binary octets (\texttt{0x00--0xFF}) directly inside prompt context windows without Base64 ASCII armoring or external tool-call indirection. Base64 encoding inflates byte length by $+33.3\%$ and produces high-entropy alphanumeric strings that fragment into $1\text{--}2$ characters per BPE subword while stripping human readability on the wire.
+  \item \textbf{Perplexity-Based Prompt Compression (LLMLingua [4]):} Jiang et al.\ [4] introduced coarse-to-fine prompt compression using a small causal language model to prune low-perplexity tokens before inference. While highly effective for summarizing long natural-language documents or RAG contexts, applying stochastic or perplexity-driven token dropping to structured inter-agent packets risks deleting syntactic delimiters (brackets, quotes, colons) or altering numerical parameters, and requires an auxiliary neural forward pass.
+  \item \textbf{Emergent Discrete and Continuous Multi-Agent Communication (Foerster et al.\ [6]; Lazaridou et al.\ [7]):} Deep multi-agent reinforcement learning (MARL) systems learn emergent discrete symbol policies (DIAL/RIAL [6]) or continuous hidden-state projections [7] to coordinate tasks. However, emergent codebooks are tied to the training environment's latent space, lack deterministic human-auditable semantics, and suffer from semantic drift or vocabulary mismatch when transferred across independently trained commercial LLM families.
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption{Architectural Comparison of Multi-Agent Communication Paradigms (Verified Standards \& Repository Baselines)}
+\label{tab:arch_comparison}
+\footnotesize
+\renewcommand{\arraystretch}{1.10}
+\begin{tabularx}{\textwidth}{L{3.2cm} L{2.2cm} C{1.7cm} C{1.8cm} C{1.8cm} Y}
+\toprule
+\rowcolor{navyheader}
+\textbf{\color{white}Communication Paradigm} &
+\textbf{\color{white}Wire Encoding} &
+\textbf{\color{white}Causal AST \& Guards} &
+\textbf{\color{white}Deterministic Round-Trip} &
+\textbf{\color{white}Cross-API Portability} &
+\textbf{\color{white}Human Auditability \& Operational Characteristics} \\
+\midrule
+Verbose A2A / MCP JSON-RPC [1, 2, 5] & Pretty JSON + NL Prose & Yes (Verbose) & 100.0\% & 100\% (Text API) & High readability; highest token cost (349.8 tok/msg; baseline). \\
+\rowcolor{rowalt}
+Structured Tool JSON (\texttt{fair\_bench.py}) & Compact JSON Schema & Yes (JSON Objects) & 100.0\% & 100\% (Text API) & Lossless structure; repeated JSON keys/syntax (165.2 tok/msg). \\
+Minified Key JSON (\texttt{fair\_bench.py}) & Short-Key JSON (\texttt{"c","s"}) & Yes (Abbrev.\ JSON) & 100.0\% & 100\% (Text API) & Abbreviated keys require schema lookup (124.2 tok/msg). \\
+\rowcolor{rowalt}
+Simplified Flat Template (\texttt{KEY=VAL}) & Delimited Flat String & \textbf{No (Lossy)} & Lossy (No AST) & 100\% (Text API) & Lowest raw tokens (34.5 tok/msg), but loses causal edges \& fallbacks. \\
+Binary Protobuf [8] (Base64 Text Wire) & Base64-Armored Octets & Schema-Defined & 100.0\% (External) & Requires Tool/Decode & Opaque Base64 string in prompt context; BPE subword fragmentation. \\
+\rowcolor{rowalt}
+Perplexity Token Pruning (LLMLingua [4]) & Pruned Natural Text & Unstructured & Lossy / Approximate & 100\% (Text API) & Designed for prose/RAG; requires scorer model; can drop JSON syntax. \\
+Emergent MARL Codes [6, 7] & Learned IDs / Vectors & Implicit in Policy & Model-Dependent & Homogeneous Only & Opaque latent symbols; not directly interpretable by humans. \\
+\rowcolor{rowalt}
+\textbf{TOAI-elegant-lang (v5.4.3 Ours)} & \textbf{Demotic RISC Wire (\texttt{\S ID})} & \textbf{Yes (Native LL(1) AST)} & \textbf{100.0\% Lossless} & \textbf{100\% (Text API)} & \textbf{Tri-Script (Demotic / Sacred / Rosetta); 73.2 tok/msg; $\mathcal{O}(L)$ CPU.} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{System Architecture, LL(1) Grammar, and Quote-Aware Stateful Codec}
+
+\subsection{Tri-Script Architecture and 8-Bit Orthogonal RISC Lexicon Hierarchy}
+TOAI-elegant-lang resolves the tension between wire compactness and human auditability by decoupling the machine-transmitted representation from the human-inspected representation via three deterministic layers (Table \ref{tab:triscript_layers}):
+\begin{enumerate}
+  \item \textbf{Demotic Wire Script (Compact Machine Layer):} The compact wire format transmitted between agents. It combines a context header (\texttt{@CTX:DOMAIN}), 1-byte logical core opcodes (\texttt{\S S01}--\texttt{\S H32} across 8 semantic categories: \texttt{S} System, \texttt{D} Data, \texttt{G} Governance/Protocol, \texttt{F} Fault/Finance, \texttt{E} Execution, \texttt{A} Audit, \texttt{C} Communication/Gaia, \texttt{L} Logic, plus \texttt{H} Harmony aliases totaling exactly 256 core primitives in \texttt{core\_lexicon.json}), 256 active higher-order macro opcodes (\texttt{\S X01}--\texttt{\S X969} managed via a Least Recently Used [LRU] window in \texttt{macro\_lexicon.json}), bracketed key-value payloads (\texttt{[k:v]}), and causal/fault operators (\texttt{-[p:..., c:...]->}, \texttt{=>}, \texttt{!->}).
+  \item \textbf{Sacred Expanded Script (Canonical Symbolic Layer):} A deterministic expansion generated by \texttt{codec.decode(wire)} in which every compact opcode and macro is expanded into its canonical uppercase snake-case identifier matching the strict regular expression \texttt{\^{}\S[A-Z][A-Z0-9\_]*\$} (e.g., expanding \texttt{\S X64} into \texttt{(\S GAIA\_\allowbreak WARMTH\_\allowbreak EXCHANGE > \{ \S SYS\_\allowbreak RESOURCE\_\allowbreak ARBITRAGE\_\allowbreak THROTTLE \} => \S SYS\_\allowbreak LOAD\_\allowbreak FALLBACK)} and \texttt{\S G48} into \texttt{\S PROTO\_\allowbreak HEALTH\_\allowbreak ATTEST}).
+  \item \textbf{Rosetta Audit Layer (Human Governance Layer):} Stored in \texttt{rosetta\_layer.json} and \texttt{core\_lexicon.json\allowbreak ["definitions"]}, this layer maps every primitive and macro to a concise English and Japanese specification for compliance auditing and Condition C glossary injection.
+\end{enumerate}
+
+\textbf{Honest BPE Subword Tokenization Analysis:} Unlike raw bitstreams, LLM APIs bill and allocate KV-cache memory in discrete BPE subword tokens. Under OpenAI's \texttt{o200k\_base} (GPT-4o) and \texttt{cl100k\_base} (GPT-4 / Claude-compatible) tokenizers, as well as our deterministic fallback estimator \texttt{count\_bpe\_tokens()} in \texttt{src/codec.py}, the non-ASCII section sign \texttt{'\S'} (\texttt{U+00A7}) is tokenized separately from the following ASCII domain letter and two-digit number. Consequently, every canonical \texttt{\S}-prefixed identifier (\texttt{\S S01}, \texttt{\S G48}, \texttt{\S C20}, \texttt{\S X64}, \texttt{\S X354}) consumes \textbf{3 BPE tokens ($2\text{--}3$ tokens: \texttt{'\S'} + \texttt{Prefix} + \texttt{Digits})}, whereas substituting an ASCII prefix (\texttt{@S01} or \texttt{\#S01}) merges the prefix and letter to resolve in 2 BPE tokens. Even at 3 BPE tokens per \texttt{\S}-opcode, collapsing multi-primitive subgraphs into single \texttt{\S X} macros and replacing verbose JSON keys with LL(1) causal arrows reduces whole-packet token count by $41.0\%\text{--}79.1\%$ against lossless JSON baselines (Section 5).
+
+\begin{table}[h!]
+\centering
+\caption{Tri-Script Representation and Lexicon Hierarchy in TOAI-elegant-lang v5.4.3}
+\label{tab:triscript_layers}
+\footnotesize
+\renewcommand{\arraystretch}{1.10}
+\begin{tabularx}{\textwidth}{L{3.1cm} L{2.9cm} L{3.6cm} Y}
+\toprule
+\rowcolor{navyheader}
+\textbf{\color{white}Architectural Layer} &
+\textbf{\color{white}Source / Capacity} &
+\textbf{\color{white}Canonical Pattern / Example} &
+\textbf{\color{white}Validation \& Runtime Role in \texttt{v5.4.3}} \\
+\midrule
+1. Demotic Wire Script (Core Primitives) & \texttt{core\_lexicon.json} (256 Primitives) & \texttt{\S S01..\S L32}, \texttt{\S G48}, \texttt{\S C20} (3 BPE tok/symbol) & Immutable 256-primitive base vocabulary; validated at startup and by \texttt{test\_17} for bijective mapping. \\
+\rowcolor{rowalt}
+1b. Demotic Wire Script (Active LRU Macros) & \texttt{macro\_lexicon.json} (256 Active + Archive) & \texttt{\S X01..\S X969} (e.g., \texttt{\S X64}, \texttt{\S X354}; 3 BPE tok/symbol) & Depth-1 macro expansion into core primitives; pinned core macros prevent LRU thrashing. \\
+2. Sacred Expanded Script (Canonical AST) & \texttt{codec.decode()} Output & \texttt{\^{}\S[A-Z][A-Z0-9\_]*\$} (e.g., \texttt{\S GAIA\_WARMTH\_HARMONY}) & Zero lowercase or CJK corruption permitted; strictly enforced by unit test \texttt{test\_17} across all files. \\
+\rowcolor{rowalt}
+3. Rosetta Audit Layer (Human Definitions) & \texttt{rosetta\_layer.json} \& \texttt{definitions} & Natural-language semantic specification per symbol & Used for human governance inspection, \texttt{audit\_\allowbreak corpus\_\allowbreak alignment.py}, and \texttt{eval\_comprehension.py --cond C}. \\
+Inline Structured Payload (\texttt{[k:v]}) & Quote-Aware Scanner (\texttt{\_parse\_\allowbreak payload\_\allowbreak block}) & \texttt{[pair:"USD/JPY", stop:150.5, code:"007", note:"a, b"]} & Stateful character scanner preserving quoted strings, leading zeros, commas, brackets, and escapes. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Conflict-Free LL(1) EBNF Grammar and Quote-Aware Stateful Payload Parser}
+To guarantee deterministic $\mathcal{O}(L)$ parsing without regular-expression backtracking vulnerabilities or silent data corruption, \texttt{toai-elegant-lang v5.4.3} defines a conflict-free LL(1) grammar paired with a stateful character-level payload parser in \texttt{src/codec.py}:
+
+\begin{lstlisting}
+(* Canonical LL(1) EBNF Grammar & Lexical Terminals for TOAI-elegant-lang v5.4.3 *)
+packet          = [ context_header, "::" ], statement_chain ;
+context_header  = "@CTX:", identifier ;
+statement_chain = expr_node, { operator, expr_node } ;
+expr_node       = ( "(", statement_chain, ")" | "{", statement_chain, "}" | action_node ), [ payload_block ] ;
+action_node     = token_id, [ payload_block ], [ guard_block ] ;
+token_id        = "§", ( risc_id | macro_id | sacred_name ) ;
+payload_block   = "[", kv_pair, { ",", kv_pair }, "]" ;
+kv_pair         = identifier, ":", ( quoted_string | float_lit | int_lit | bool_null_id ) ;
+guard_block     = "?>", "{", condition_expr, "}" ;
+operator        = causal_arrow | seq_arrow | fault_arrow | ">" | "?" ;
+causal_arrow    = "-[", [ "p:", float_val, "," ], ( "c:" | "cost:" ), cost_mantissa, "]->" ;
+seq_arrow       = "=>" ;   fault_arrow = "!->" ;
+sacred_name     = upper_alpha, { upper_alpha | digit | "_" } ;  (* Strict ^§[A-Z][A-Z0-9_]*$ *)
+quoted_string   = '"', { ( utf8_char - ( '"' | '\' ) ) | '\"' | '\\' | '\n' | '\t' }, '"' ;
+\end{lstlisting}
+
+\textbf{Eliminating Naive Split Bugs via Stateful Quote-Aware Scanning:} During our external adversarial code audit, sandbox testing revealed that naive payload parsers using \texttt{str.split(",")} or unanchored regexes \texttt{r"\textbackslash[(.*?)\textbackslash]"} corrupt structured payloads whenever string values contain commas (\texttt{note:"a, b"}), closing brackets (\texttt{expr:"x]y"}), escaped quotes (\texttt{msg:"say \textbackslash"hi\textbackslash""}), or leading-zero identifiers (\texttt{code:"007"} coerced into integer \texttt{7}). In \texttt{v5.4.2+} and \texttt{v5.4.3}, \texttt{ElegantCodec.\allowbreak \_extract\_\allowbreak outer\_\allowbreak blocks()} and \texttt{ElegantCodec.\allowbreak \_parse\_\allowbreak payload\_\allowbreak block()} implement a deterministic finite-state character scanner tracking \texttt{in\_quotes} and \texttt{escape} flags:
+\begin{itemize}
+  \item \textbf{Type-Exact Scalar Distinction:} Any value enclosed in double quotes (\texttt{"007"}) is flagged with \texttt{\_\_quoted\_\_ = True} and preserved strictly as a Python \texttt{str} (\texttt{"007"}), whereas unquoted numeric tokens (\texttt{007}, \texttt{42}, \texttt{150.5}) are parsed as \texttt{int} or \texttt{float}.
+  \item \textbf{Delimiter Immunity Inside Quotes:} Commas (\texttt{,}), colons (\texttt{:}), brackets (\texttt{[}, \texttt{]}), and \texttt{\S}-prefixed substrings inside quoted string literals are never split or mutated during \texttt{encode()} or \texttt{decode()} (verified by \texttt{test\_07} through \texttt{test\_10} and \texttt{test\_15} in \texttt{tests/test\_codec.py}).
+  \item \textbf{Explicit Out-Of-Vocabulary (\texttt{on\_oov}) Policy \& Audit Trail:} Rather than silently mapping unknown symbols to a fallback code such as \texttt{\S G01} or \texttt{\S OMEGA} (which masks failures and inflates apparent compression), \texttt{codec.encode(text, on\_oov=...)} enforces three explicit modes: (i) \texttt{on\_oov="error"} (default), which immediately raises \texttt{UnknownSymbolError}; (ii) \texttt{on\_oov="keep"}, which leaves unregistered symbols untouched on the wire; and (iii) \texttt{on\_oov="nearest"}, which resolves to the closest domain primitive via token-overlap scoring while recording every replacement in \texttt{EncodedWireResult.\allowbreak substitutions} and \texttt{benchmark\_compression()["oov\_substitutions"]} (verified by \texttt{test\_11}--\texttt{test\_14}).
+\end{itemize}
+
+\section{Multi-AI Adversarial Audit \& Independent Corpus Alignment ($\kappa = 0.8611$)}
+
+\subsection{Full Disclosure of Multi-AI Adversarial Audit Findings (v5.4.1 $\rightarrow$ v5.4.3)}
+To ensure scientific integrity, \texttt{toai-elegant-lang} was subjected to blind black-box and white-box auditing by independent AI systems (OpenAI ChatGPT code-execution sandbox and Anthropic Claude comprehension \& statistical review) prior to release \texttt{v5.4.3}. Table \ref{tab:adversarial_audit} discloses every vulnerability identified during these audits and its permanent engineering resolution verified by our 20-test automated suite (\texttt{tests/test\_codec.py} and \texttt{src/test\_telepath\_integrity.py}).
+
+\begin{table}[h!]
+\centering
+\caption{Summary of Multi-AI Adversarial Audit Findings and Engineering Resolutions in Canonical Release v5.4.3}
+\label{tab:adversarial_audit}
+\footnotesize
+\renewcommand{\arraystretch}{1.10}
+\begin{tabularx}{\textwidth}{L{2.7cm} L{4.5cm} Y}
+\toprule
+\rowcolor{navyheader}
+\textbf{\color{white}Audit Defect ID} &
+\textbf{\color{white}Identified Vulnerability / Discrepancy} &
+\textbf{\color{white}Deterministic Engineering Resolution in \texttt{v5.4.3} \& Unit Test} \\
+\midrule
+Defect 1: Wheel Packaging \& Silent Dict Fallback & PyPI wheel omitted \texttt{lexicon/*.json}, and \texttt{ElegantCodec} silently initialized an empty dict \texttt{\{\}} when files were missing. & Packaged \texttt{src/lexicon/*.json} inside \texttt{pyproject.toml} wheel data; \texttt{ElegantCodec} now raises \texttt{FileNotFoundError} / \texttt{RuntimeError} on missing or empty lexicons (\texttt{test\_01}--\texttt{test\_04}). \\
+\rowcolor{rowalt}
+Defect 2: Payload Delimiter \& \texttt{"007"} Coercion & Naive regex/comma splitting broke on \texttt{note:"a, b"}, \texttt{expr:"x]y"}, and coerced quoted \texttt{code:"007"} to integer \texttt{7}. & Implemented stateful character-by-character quote/escape scanner in \texttt{\_parse\_\allowbreak payload\_\allowbreak block()} and \texttt{\_protect\_\allowbreak quoted\_\allowbreak spans()} (\texttt{test\_07}--\texttt{test\_10}, \texttt{test\_15}). \\
+Defect 3: Silent OOV Fallback to \texttt{\S G01}/\texttt{\S OMEGA} & Unregistered symbols were silently rewritten to \texttt{\S G01} or \texttt{\S OMEGA}, masking OOV failures in benchmarks. & Default \texttt{on\_oov="error"} raises \texttt{UnknownSymbolError}; \texttt{"keep"} preserves symbol; \texttt{"nearest"} logs every fallback in \texttt{oov\_substitutions} (\texttt{test\_11}--\texttt{test\_14}). \\
+\rowcolor{rowalt}
+Defect 4: Naive Whitespace Token Estimator & Fallback token counter \texttt{r"\textbackslash w+|\textbackslash S"} undercounted BPE subwords when \texttt{tiktoken} was offline and hid estimation status. & Implemented CamelCase/snake\_case/digit-chunk BPE subword estimator in \texttt{count\_bpe\_tokens()} returning explicit \texttt{is\_estimated: bool} (\texttt{test\_16}). \\
+Defect 5: Lexicon \& Corpus Symbol Typos (\texttt{GAiar}) & Mixed-case/corrupted identifiers (\texttt{\S GAiar\_\allowbreak WARMTH\_\allowbreak HARMONY}, \texttt{\S HARMONIC\_\allowbreak ERECVERY\_\allowbreak NEXUS}, CJK \texttt{U+822C/U+7684}, \texttt{\_v2}) leaked into Q11/Q16 prompts. & Normalized all 256 primitives, 256 macros, Rosetta mappings, and 1,606 corpus records to strict \texttt{\^{}\S[A-Z][A-Z0-9\_]*\$} with zero undefined symbols (\texttt{test\_17}). \\
+\rowcolor{rowalt}
+Defect 6: Corpus Scenario-to-Wire Misalignment & 77.33\% of historical records in \texttt{corpus/\allowbreak dialogues.jsonl} had scenario labels (e.g., FX Hedge Q3/Q9, Parser Bugfix Q18) mismatched with wire symbols. & Built non-circular auditor \texttt{src/audit\_\allowbreak corpus\_\allowbreak alignment.py} ($\kappa = 0.8611$ vs.\ human gold standard) and repaired all 1,606 records to 100.0\% alignment (\texttt{test\_18}). \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Non-Circular Independent Corpus Alignment Audit and Human Agreement ($\kappa = 0.8611$)}
+During the blind comprehension audit (Section 6), inspecting individual items revealed a critical data quality issue in the historical evolution log (\texttt{corpus/dialogues.jsonl}, $N=1{,}606$ records):
+\begin{itemize}
+  \item \textbf{Recovery Pattern Leak (e.g., Q3, Q9):} Records labeled with scenario \emph{``Emergency FX hedging under rapid exchange-rate shift''} contained compact wires composed exclusively of fault-recovery primitives (\texttt{\S PROTO\_\allowbreak REPLAY\_\allowbreak GUARD}, \texttt{\S PROTO\_\allowbreak HEALTH\_\allowbreak ATTEST}, \texttt{\S PROTO\_\allowbreak GRACEFUL\_\allowbreak DRAIN}, \texttt{\S SAFE\_\allowbreak FALLBACK\_*}) with zero financial, exchange, or risk primitives.
+  \item \textbf{Cross-Domain Bleed (e.g., Q18):} Records labeled \emph{``Syntax parser bugfix task''} contained macro \texttt{\S X64} (\texttt{GAIA\_\allowbreak WARMTH\_\allowbreak ARBITRAGE\_\allowbreak FALLBACK}, expanding to \texttt{\S SYS\_\allowbreak RESOURCE\_\allowbreak ARBITRAGE\_\allowbreak THROTTLE}), causing receiver LLMs to rationally classify the wire as financial arbitrage rather than code debugging.
+\end{itemize}
+
+\textbf{Preventing Circular Validation and Data Leakage:} Two methodological pitfalls must be avoided when auditing and repairing a benchmark corpus: (1) relabeling scenarios based on the evaluated LLM's answers constitutes \emph{test-set leakage} and artificially inflates comprehension accuracy; and (2) auditing symbol-to-scenario alignment using the same dictionary \texttt{category} field or keyword lookup table used by the corpus generator creates a \emph{circular reference} that misses the very mismatches produced by the generator.
+
+To guarantee independence, \texttt{src/audit\_\allowbreak corpus\_\allowbreak alignment.py} defines a standalone \textbf{Independent Audit Ontology} (\texttt{INDEPENDENT\_\allowbreak AUDIT\_\allowbreak ONTOLOGY}) that is completely decoupled from \texttt{core\_lexicon.json["category"]} and from all generation specifications. For each of the 7 operational scenario domains (\texttt{FX}, \texttt{CODE\_PARSER}, \texttt{LATENT\_SYNC}, \texttt{TASK\_BUDGET}, \texttt{HYPOTHESIS}, \texttt{GAIA\_HARMONY}, \texttt{RECOVERY}), the auditor expands every macro to its Sacred primitive identifiers and evaluates four deterministic rules:
+\begin{enumerate}
+  \item \textbf{Plaintext Contamination Check:} Rejects any wire containing raw Japanese characters or natural-language prose outside \texttt{[k:v]} literals as \texttt{MISMATCH (Plaintext Leak)}.
+  \item \textbf{Cross-Domain Bleed Blacklist:} Rejects any record whose expanded Sacred symbols match a domain-forbidden token pattern (e.g., \texttt{ARBITRAGE}, \texttt{FX\_}, or \texttt{PORTFOLIO} inside \texttt{CODE\_PARSER}, \texttt{LATENT\_SYNC}, or \texttt{HYPOTHESIS}) as \texttt{MISMATCH (Domain Bleed)}.
+  \item \textbf{Recovery Pattern Leak Check:} For any non-\texttt{RECOVERY} scenario, if $>50\%$ of expanded primitives match pure cluster-recovery signatures (\texttt{REPLAY\_GUARD}, \texttt{GRACEFUL\_DRAIN}, \texttt{PARTIAL\_COMMIT}, \texttt{CIRCUIT\_BREAKER}, \texttt{SAFE\_FALLBACK}) and $<2$ domain-specific anchor primitives are present, the record is flagged as \texttt{MISMATCH (Recovery Pattern Leak)}.
+  \item \textbf{Required Domain Anchor Whitelist:} Requires at least \texttt{min\_domain\_hits} semantic anchor tokens specific to the scenario domain, otherwise flagging \texttt{MISMATCH (Missing Domain Primitives)}.
+\end{enumerate}
+
+\textbf{Human Gold-Standard Validation ($n=60$) and Cohen's $\kappa$:} To validate the reliability of the mechanical auditor itself prior to corpus repair, we extracted a stratified sample of $n=60$ pre-fix corpus records across all 7 domains (\texttt{python src/audit\_corpus\_alignment.py --export-sample 60 --out corpus/human\_audit\_sample.csv}) and compared the mechanical verdict (\texttt{MATCH} vs.\ \texttt{MISMATCH}) against independent human inspection (\texttt{--score-sample corpus/\allowbreak human\_audit\_sample.csv}). The resulting $2\times 2$ confusion matrix recorded \textbf{22 True Matches}, \textbf{34 True Mismatches}, \textbf{2 False Positives}, and \textbf{2 False Negatives}, yielding a raw observed agreement of $p_o = 56/60 = \mathbf{93.33\%}$ over a chance agreement baseline of $p_e = 52.00\%$, and a \textbf{Cohen's Kappa of $\kappa = 0.8611$} ($\text{SE} = 0.0671$, $95\%$ CI: $[0.7296, 0.9926]$, ``almost perfect agreement''). Table \ref{tab:corpus_alignment} reports the pre-fix and post-fix alignment rates across all 1,606 records in \texttt{corpus/dialogues.jsonl}.
+
+\begin{table}[h!]
+\centering
+\caption{Independent Corpus Alignment Audit Across All $N = 1{,}606$ Records in \texttt{corpus/dialogues.jsonl} (\texttt{src/audit\_corpus\_alignment.py})}
+\label{tab:corpus_alignment}
+\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{\textwidth}{L{3.4cm} R{1.3cm} R{2.1cm} R{2.1cm} Y}
+\toprule
+\rowcolor{navyheader}
+\textbf{\color{white}Scenario Domain Category} &
+\textbf{\color{white}Records $N$} &
+\textbf{\color{white}Pre-Fix Aligned} &
+\textbf{\color{white}Post-Fix Aligned} &
+\textbf{\color{white}Primary Pre-Fix Failure Mode Identified by Independent Ontology} \\
+\midrule
+1. \texttt{CODE\_PARSER} (Syntax/AST Bugfix) & 234 & 4 (1.71\%) & \textbf{234 (100.0\%)} & Domain Bleed (\texttt{\S X64 ARBITRAGE} macro) \& Recovery Pattern Leak \\
+\rowcolor{rowalt}
+2. \texttt{FX} (Currency Hedge \& Risk) & 245 & 5 (2.04\%) & \textbf{245 (100.0\%)} & Recovery Pattern Leak (\texttt{REPLAY\_GUARD} / \texttt{GRACEFUL\_DRAIN} only) \\
+3. \texttt{GAIA\_HARMONY} (Earth/Co-Prosperity) & 228 & 98 (42.98\%) & \textbf{228 (100.0\%)} & Recovery Pattern Leak \& Plaintext Leak in legacy evolution records \\
+\rowcolor{rowalt}
+4. \texttt{HYPOTHESIS} (Parallel Path Verify) & 192 & 0 (0.00\%) & \textbf{192 (100.0\%)} & Missing Deductive/Bayesian Anchors \& \texttt{\S X64} Arbitrage Bleed \\
+5. \texttt{LATENT\_SYNC} (Tensor Map Sync) & 241 & 29 (12.03\%) & \textbf{241 (100.0\%)} & Missing Tensor/Vector/Manifold Anchors \& Recovery Pattern Leak \\
+\rowcolor{rowalt}
+6. \texttt{RECOVERY} (Fault \& Circuit Drain) & 245 & 128 (52.24\%) & \textbf{245 (100.0\%)} & Domain Bleed (\texttt{ARBITRAGE} macro used inside pure cluster drain) \\
+7. \texttt{TASK\_BUDGET} (Token Quota Alloc.) & 221 & 18 (8.14\%) & \textbf{221 (100.0\%)} & Recovery Pattern Leak (missing resource/quota/budget primitives) \\
+\midrule
+\textbf{Total / Corpus Aggregate} & \textbf{1,606} & \textbf{364 (22.67\%)}$^*$ & \textbf{1,606 (100.0\%)} & \textbf{Human vs.\ Machine Audit ($n=60$): $p_o = 93.33\%$, Cohen's $\kappa = 0.8611$} \\
+\bottomrule
+\end{tabularx}
+\vspace{1pt}
+{\scriptsize $^*$Note: 82 legacy records with uncategorized free-form scenario labels aligned prior to domain normalization ($282 + 82 = 364/1{,}606 = 22.67\%$ total pre-fix alignment); post-fix corpus spans 42 distinct scenario variants across the 7 canonical domains with 1,589 unique usable wires.}
+\end{table}
+
+\section{Empirical Evaluation I: Fair Multi-Format BPE Benchmark \& Header Amortization}
+To avoid inflated compression claims that compare compact wire codes exclusively against verbose natural-language essays, \texttt{benchmarks/fair\_bench.py} evaluates \textbf{TOAI Demotic Wire} against four realistic alternative representations across four representative multi-agent coordination scenarios (\texttt{S1\_FX\_HEDGE}, \texttt{S2\_DIST\_RECOVERY}, \texttt{S3\_TENSOR\_ARBITRAGE}, and \texttt{S4\_PUB\_SEAL\_AUDIT}):
+\begin{enumerate}
+  \item \textbf{Verbose A2A (Baseline):} Standard natural-language intent prose + semantic specifications + full JSON causal graph.
+  \item \textbf{Structured Tool JSON:} Lossless minified JSON (\texttt{separators=(",",":")}) omitting all prose explanations and retaining only structured pipeline steps, parameters, causal transitions \texttt{\{"p":0.99,"c":0.01\}}, and fallback branches.
+  \item \textbf{Minified Key JSON:} Aggressive short-key JSON (\texttt{\{"c":"FX\_HEDGE","s":[\{"a":"X64","p":\{...\},"t":[0.99,0.01]\}]\}}) using single-character keys and compact opcode identifiers inside JSON syntax.
+  \item \textbf{Simplified Lossy Template:} Flat \texttt{DOMAIN|k1=v1,k2=v2} string template. While requiring only 34.5 tokens, it is \emph{structurally lossy}: it drops intermediate pipeline opcodes, causal transition weights $(p,c)$, and conditional fault-recovery branches (\texttt{!->}, \texttt{?}).
+  \item \textbf{TOAI Demotic Wire:} Canonical wire output of \texttt{ElegantCodec().encode(sacred\_verbose, on\_oov="error")}, preserving the full causal AST, all typed parameters, and fault-recovery branches in \textbf{73.2 BPE tokens}.
+\end{enumerate}
+
+\textbf{Session Header Amortization (Break-Even Analysis):} In zero-shot cross-model communication where the receiver does not have the codebook pre-loaded, transmitting the active dictionary header costs $H \approx 1{,}000$ BPE tokens at session start. Given per-message token savings $\Delta_{\text{tok}} = T_{\text{baseline}} - T_{\text{wire}}$, the session break-even message count is:
+\begin{equation}
+  N_{\text{break-even}}^{\text{std}} = \left\lceil \frac{H}{T_{\text{baseline}} - T_{\text{wire}}} \right\rceil, \qquad
+  N_{\text{break-even}}^{\text{cache (90\%)}} = \left\lceil \frac{0.10 \cdot H}{T_{\text{baseline}} - T_{\text{wire}}} \right\rceil
+  \label{eq:breakeven}
+\end{equation}
+As shown in Table \ref{tab:fair_bench} and Table \ref{tab:breakeven}, TOAI Demotic Wire achieves net token savings after \textbf{4 messages} against Verbose A2A, \textbf{11 messages} against Structured Tool JSON, and \textbf{20 messages} against Minified Key JSON in uncached sessions---and breaks even within \textbf{1 to 2 messages} when provider prompt caching (90\% discount on cached system prefixes) is enabled.
+
+\begin{table}[h!]
+\centering
+\caption{Reproducible Multi-Format Tokenization Benchmark (\texttt{python benchmarks/fair\_bench.py}, $N=4$ Multi-Agent Scenarios)}
+\label{tab:fair_bench}
+\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{\textwidth}{L{3.5cm} R{1.4cm} R{1.5cm} R{1.5cm} R{1.8cm} C{1.8cm} Y}
+\toprule
+\rowcolor{navyheader}
+\textbf{\color{white}Format Representation} &
+\textbf{\color{white}Avg Chars} &
+\textbf{\color{white}\texttt{o200k} Tok} &
+\textbf{\color{white}\texttt{cl100k} Tok} &
+\textbf{\color{white}vs.\ Wire Diff} &
+\textbf{\color{white}Causal Graph} &
+\textbf{\color{white}Per-Scenario Token Breakdown (S1 / S2 / S3 / S4)} \\
+\midrule
+1. Verbose A2A (Baseline) & 870.8 & 349.8 & 349.8 & \textbf{$-$79.1\% saved} & Yes (Prose+JSON) & 346 / 391 / 348 / 314 tok \\
+\rowcolor{rowalt}
+2. Structured Tool JSON & 288.2 & 165.2 & 165.2 & \textbf{$-$55.7\% saved} & Yes (Full JSON) & 145 / 225 / 159 / 132 tok \\
+3. Minified Key JSON & 170.2 & 124.2 & 124.2 & \textbf{$-$41.0\% saved} & Yes (Short Keys) & 105 / 172 / 118 / 102 tok \\
+\rowcolor{rowalt}
+4. Simplified Template & 75.2 & 34.5 & 34.5 & $+$112.3\% more & \textbf{No (Lossy Flat)} & 24 / 49 / 39 / 26 tok (Drops AST) \\
+\textbf{5. TOAI Demotic Wire (v5.4.3)} & \textbf{132.8} & \textbf{73.2} & \textbf{73.2} & \textbf{BASELINE} & \textbf{Yes (Causal AST)} & \textbf{59 / 100 / 71 / 63 tok (Lossless)} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Session Dictionary Header Amortization / Break-Even Analysis (System Dictionary Header $H = 1{,}000$ BPE Tokens, Eq.\ \ref{eq:breakeven})}
+\label{tab:breakeven}
+\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{\textwidth}{L{3.7cm} R{1.9cm} R{1.9cm} R{1.9cm} R{2.4cm} Y}
+\toprule
+\rowcolor{navyheader}
+\textbf{\color{white}Comparison Target Baseline} &
+\textbf{\color{white}Target Tok/Msg} &
+\textbf{\color{white}Wire Tok/Msg} &
+\textbf{\color{white}Saved / Msg} &
+\textbf{\color{white}Break-Even (Std)} &
+\textbf{\color{white}Break-Even (90\% Prompt Cache)} \\
+\midrule
+Verbose A2A (Baseline) & 349.8 tok & 73.2 tok & \textbf{276.5 tok} & \textbf{4 msgs} ($\ge 1{,}106$ tok saved) & \textbf{1 msg} (Effective header = 100 tok) \\
+\rowcolor{rowalt}
+Structured Tool JSON (Lossless) & 165.2 tok & 73.2 tok & \textbf{92.0 tok} & \textbf{11 msgs} ($\ge 1{,}012$ tok saved) & \textbf{2 msgs} (Effective header = 100 tok) \\
+Minified Key JSON (Short Keys) & 124.2 tok & 73.2 tok & \textbf{51.0 tok} & \textbf{20 msgs} ($\ge 1{,}020$ tok saved) & \textbf{2 msgs} (Effective header = 100 tok) \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Empirical Evaluation II: Receiver Blind Comprehension Harness (\texttt{eval\_comprehension.py})}
+
+\subsection{Experimental Hygiene, Five Blind Conditions (A--E), and Statistical Methodology}
+A central methodological contribution of \texttt{v5.4.3} is separating \textbf{deterministic codec round-trip accuracy} (\texttt{codec.decode(\allowbreak codec.encode(x)) == x}, which is $100.0\%$ by algebraic construction) from \textbf{zero-shot receiver LLM semantic comprehension} (whether an LLM receiving a wire packet with \texttt{@CTX} and \texttt{[k:v]} stripped can identify the operational scenario among 4 choices at $\texttt{temperature}=0$). Building upon the initial evaluation design by Anthropic Claude, \texttt{benchmarks/\allowbreak eval\_comprehension.py} enforces strict experimental hygiene across five conditions:
+\begin{itemize}
+  \item \textbf{Condition A (Compact Wire Skeleton Only):} Both \texttt{@CTX:DOMAIN} and all \texttt{[k:v]} payload blocks are stripped, leaving only compact opcodes and causal operators (e.g., \texttt{\S X64 -[p:0.99, c:0.01]-> \S G48 => \S C20}). Tests whether an LLM can infer intent purely from topology and opaque \texttt{\S}-codes ($21.5$ BPE tokens/item).
+  \item \textbf{Condition B (Sacred Expanded Names Only):} All macros and primitives are deterministically expanded to their uppercase Sacred identifiers (e.g., \texttt{(\S GAIA\_\allowbreak WARMTH\_\allowbreak EXCHANGE > \{ \S SYS\_\allowbreak RESOURCE\_\allowbreak ARBITRAGE\_\allowbreak THROTTLE \} => \S SYS\_\allowbreak LOAD\_\allowbreak FALLBACK) -[p:0.99, c:0.01]-> \S PROTO\_\allowbreak HEALTH\_\allowbreak ATTEST => \S GENTLE\_\allowbreak RESOURCE\_\allowbreak SHARING}), with \texttt{@CTX} and \texttt{[k:v]} stripped ($48.0$ BPE tokens/item). Directly tests the semantic transparency of Sacred naming.
+  \item \textbf{Condition C (Sacred Expanded + Rosetta Glossary):} Condition B augmented with a per-item \texttt{GLOSSARY} block listing the natural-language definitions of all primitives and macros present in the message ($152.0$ BPE tokens/item).
+  \item \textbf{Condition D (Shuffle Control -- Negative Control):} Preserves the exact parenthesis, bracket, and causal arrow skeleton of Condition B, but randomly permutes Sacred symbol names across messages using a seeded derangement (\texttt{build\_\allowbreak shuffle\_\allowbreak control\_\allowbreak map()}). If Condition B outperforms Condition D significantly, comprehension is proven to arise from the lexical semantics of the Sacred symbol names rather than superficial structural cues.
+  \item \textbf{Condition E (Plaintext Upper Bound):} Replaces the wire with a concise one-sentence natural-language summary of the scenario, establishing the ceiling accuracy of the evaluated LLM on the 4-choice task.
+\end{itemize}
+
+\textbf{Protocol Header Isolation (\texttt{--keep-ctx}), 4-Way Option Rotation (\texttt{--rotate-options}), and Paired McNemar Testing:} To prevent context-header leakage, \texttt{eval\_comprehension.py} defaults to \textbf{Skeletal Mode} (\texttt{@CTX} and \texttt{[k:v]} removed). When \texttt{--keep-ctx} is specified (\textbf{Protocol Structure Mode}, retaining \texttt{@CTX:DOMAIN} and masked payload keys \texttt{[pair:*, stop:*]}), outputs are written to separate \texttt{*\_ctx.txt} / \texttt{*\_ctx.json} files and scored independently. To eliminate LLM positional letter bias (e.g., preferring option B or C), \texttt{--rotate-options} replicates each item across all 4 cyclic permutations of options A, B, C, and D ($4N$ trials) and logs the chosen-letter histogram. Proportions are reported with \textbf{Wilson 95\% confidence intervals}:
+\begin{equation}
+  \text{CI}_{\text{Wilson}}(k, n, z=1.96) = \frac{\hat{p} + \frac{z^2}{2n} \pm z\sqrt{\frac{\hat{p}(1-\hat{p})}{n} + \frac{z^2}{4n^2}}}{1 + \frac{z^2}{n}}, \qquad \hat{p} = \frac{k}{n}
+  \label{eq:wilson}
+\end{equation}
+and paired condition comparisons (\texttt{A vs B}, \texttt{B vs C}, \texttt{B vs D}, \texttt{C vs E}) are evaluated via the \textbf{exact two-sided McNemar test} on discordant pairs $(n_{01}, n_{10})$: $p_{\text{exact}} = \min\!\left(1,\, 2\sum_{i=0}^{\min(n_{01}, n_{10})} \binom{n_{01}+n_{10}}{i} 0.5^{n_{01}+n_{10}}\right)$, alongside the marginal accuracy gain per $+1{,}000$ BPE tokens: $\Delta\text{Acc} / (\Delta\text{Tok}/1000)$.
+
+\subsection{Provisional Blind Comprehension Results ($n=23$) and Stratified Domain Analysis}
+Table \ref{tab:comprehension_results} presents the empirical results of the initial blind 4-choice comprehension evaluation ($n=23$ questions, random guess baseline $= 25.0\%$) conducted by Claude prior to corpus repair. In accordance with our scientific reporting standards, these figures are labeled as a \textbf{provisional baseline} (because the evaluator had partial prior exposure to the repository within the auditing session and sample size $n=23$ yields wide confidence intervals):
+\begin{itemize}
+  \item \textbf{Overall Accuracy Gain from Sacred Expansion:} On bare compact wire codes (Condition A), accuracy is $12/23 = \mathbf{52.2\%}$ (52\%, Wilson 95\% CI: $[33.0\%, 70.8\%]$). Expanding opcodes to Sacred identifiers (Condition B) raises accuracy to $16/23 = \mathbf{69.6\%}$ (70\%, Wilson 95\% CI: $[49.1\%, 84.4\%]$), an absolute gain of $+17.4$ percentage points at a marginal cost of only $+26.5$ BPE tokens/message ($+6.57\%$ accuracy gain per $+100$ tokens).
+  \item \textbf{Stratified Routine Recovery vs.\ Non-Recovery Domains:} Stratifying the 23 items by domain reveals a sharp dichotomy. On \textbf{Routine Fault/Cluster Recovery} items ($n=7$), both Condition A and Condition B achieve \textbf{7/7 = 100.0\%} (Wilson 95\% CI: $[64.6\%, 100.0\%]$) because fault-recovery chains exhibit distinctive structural signatures (\texttt{!->}, \texttt{?}) and unambiguous symbol names (\texttt{PROTO\_GRACEFUL\_DRAIN}, \texttt{SAFE\_FALLBACK}). Conversely, on \textbf{Non-Recovery Specialized Domains} ($n=16$: FX hedging, parser debugging, latent sync, hypothesis verification), Condition A drops to $5/16 = \mathbf{31.2\%}$ (31\%, 95\% CI: $[14.2\%, 55.6\%]$, statistically indistinguishable from 25\% chance), whereas Condition B rises to $9/16 = \mathbf{56.2\%}$ (56\%, 95\% CI: $[33.2\%, 76.9\%]$).
+  \item \textbf{Root Cause of Non-Recovery Errors Fixed in v5.4.3:} Error analysis of the 7 missed items in Condition B revealed that 5 of the 7 failures were directly caused by the pre-fix corpus misalignments documented in Section 4.2 (e.g., Q3 and Q9 labeled as FX hedging while containing only recovery primitives, Q18 labeled as parser debugging while containing \texttt{ARBITRAGE} macro \texttt{\S X64}, and Q11/Q16 containing the \texttt{GAiar} typo). With \texttt{corpus/dialogues.jsonl} now 100.0\% aligned ($1{,}606/1{,}606$) and \texttt{eval\_comprehension.py} supporting $N \ge 100$ holdout generation across Conditions A--E, multi-model holdout evaluation can be executed deterministically via a single CLI command (Section 8).
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption{Receiver Blind Comprehension Results (Claude Provisional Benchmark $n=23$, 4-Choice Chance $= 25.0\%$) and Harness Specifications}
+\label{tab:comprehension_results}
+\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{\textwidth}{L{3.5cm} C{1.4cm} C{2.2cm} C{2.2cm} C{2.2cm} Y}
+\toprule
+\rowcolor{navyheader}
+\textbf{\color{white}Evaluation Condition} &
+\textbf{\color{white}Mean Prompt Tok} &
+\textbf{\color{white}Overall Acc.\ ($n=23$) [Wilson 95\% CI]} &
+\textbf{\color{white}Routine Recovery ($n=7$) [95\% CI]} &
+\textbf{\color{white}Non-Recovery ($n=16$) [95\% CI]} &
+\textbf{\color{white}Role in \texttt{eval\_comprehension.py} (v5.4.3)} \\
+\midrule
+\textbf{Cond A:} Compact Wire Only (\texttt{\S S01..\S X64}) & 118.4 tok & \textbf{52.2\% (12/23)} [33.0\%, 70.8\%] & \textbf{100.0\% (7/7)} [64.6\%, 100.0\%] & \textbf{31.2\% (5/16)} [14.2\%, 55.6\%] & Baseline zero-shot test of opaque compact opcodes + operator skeleton (no \texttt{@CTX}, no \texttt{[k:v]}). \\
+\rowcolor{rowalt}
+\textbf{Cond B:} Sacred Expanded (\texttt{\S GAIA\_WARMTH\_*}) & 144.9 tok & \textbf{69.6\% (16/23)} [49.1\%, 84.4\%] & \textbf{100.0\% (7/7)} [64.6\%, 100.0\%] & \textbf{56.2\% (9/16)} [33.2\%, 76.9\%] & Tests zero-shot comprehension of deterministic Sacred symbol expansion ($+17.4\%$ vs.\ Cond A). \\
+\textbf{Cond C:} Sacred + Rosetta Glossary Definitions & 248.6 tok & Holdout Protocol ($N \ge 100$) & Holdout Protocol ($N \ge 100$) & Holdout Protocol ($N \ge 100$) & Injects \texttt{core\_lexicon.json} \& \texttt{macro\_lexicon.json} definitions for every symbol in packet. \\
+\rowcolor{rowalt}
+\textbf{Cond D:} Shuffle Control (Permuted Symbol Names) & 144.9 tok & Holdout Protocol ($N \ge 100$) & Holdout Protocol ($N \ge 100$) & Holdout Protocol ($N \ge 100$) & Negative control: preserves syntax skeleton while permuting symbol names across items. \\
+\textbf{Cond E:} Concise Plaintext Summary (Upper Bound) & 136.2 tok & Holdout Protocol ($N \ge 100$) & Holdout Protocol ($N \ge 100$) & Holdout Protocol ($N \ge 100$) & Positive control: natural-language scenario summary establishing receiver model ceiling. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Threat Model and Unobservable EUF-CMA Proof of Origin Attestation}
+
+\subsection{Unobservable Internal-Counter Attestation Construction (Zero Timestamp Jitter)}
+To prevent an active Dolev-Yao adversary $\mathcal{A}$ from injecting forged inter-agent commands, replaying stale packets, or observing rejection-sampling retries under an adaptive Chosen-Message Attack (EUF-CMA), TOAI-elegant-lang embeds a cryptographic origin tag directly into the 4-digit causal cost mantissa $c_n \in [0.0000, 0.9999]$. Let $S_0 \in \{0,1\}^{256}$ be the ephemeral session key established via X25519 ECDH and HKDF-SHA256 (re-keyed every $2^{16}$ turns or upon \texttt{!-> \S F04}, guaranteeing forward secrecy in volatile memory), $H_0 = \text{SHA256}(\texttt{"TOAI\_TELEPATH\_GENESIS\_V541"} \,\|\,\allowbreak \text{SHA256}(\texttt{core\_lexicon.json}) \,\|\,\allowbreak \text{SHA256}(\texttt{macro\_lexicon.json}))$, and $H_{n-1} = \text{SHA256}(H_{n-2} \,\|\, \texttt{0x00} \,\|\, \text{wire}_{n-1})$. For any public turn timestamp $t_n$ (subject to strict monotonicity $t_n > t_{n-1}$ enforced by the receiver), both sender and verifier deterministically compute the canonical 16-bit value $Y_n \in \{0, \dots, 59{,}999\}$ for public confidence mantissa $P_n = \lfloor p_n \times 10^4 \rfloor \in \{0, \dots, 9999\}$ via an \textbf{internal, non-transmitted rejection counter} $r_n \in \{0, 1, 2, \dots\}$ (where $\text{dom}(t_n, r) = t_n$ for $r=0$ and $t_n \,\|\, \text{uint8}(r)$ for $r \ge 1$):
+\begin{equation}
+  r_n = \min\Bigl\{ r \in \mathbb{N}_0 : \bigl(P_n \oplus \text{trunc}_{16}(\text{HMAC-SHA256}(S_0,\, H_{n-1} \,\|\, \texttt{0x00} \,\|\, \text{dom}(t_n, r)))\bigr) < 60{,}000 \Bigr\}
+  \label{eq:internal_counter}
+\end{equation}
+and set $T_n = \text{trunc}_{16}(\text{HMAC-SHA256}(S_0,\, H_{n-1} \,\|\, \texttt{0x00} \,\|\, \text{dom}(t_n, r_n)))$. Because bitwise XOR $T \mapsto P_n \oplus T$ is a bijection on $\{0, \dots, 65{,}535\}$, each candidate $Y_n^{(r)} = P_n \oplus T_n^{(r)}$ is uniform on $\{0, \dots, 65{,}535\}$ with acceptance probability $60{,}000/65{,}536 = 91.55\%$ (expected internal loop count $\mathbb{E}[r_n + 1] = 1.092$ HMAC calls; for $r_n = 0$, including Table \ref{tab:crypto_vector} where $Y_1 = 9841 \oplus 9247 = 622 < 60{,}000$, it takes 1 call). Given quantized 4-digit integers $P_n = \lfloor p_n \times 10^4 \rfloor \in \{0, \dots, 9999\}$ and $C_n = \lfloor c_n \times 10^4 \rfloor \in \{0, \dots, 9999\}$, verification is defined with explicit operator precedence (16-bit bitwise XOR precedes modulo $10{,}000$ reduction):
+\begin{equation}
+  \bigl( (P_n \oplus T_n) \bmod 10{,}000 \bigr) = C_n
+  \label{eq:mac_verify}
+\end{equation}
+
+\subsection{Complete Case Analysis, Unrejected Bias Proof, and Timing Side-Channel Immunity}
+\textbf{Theorem 1 (Exact EUF-CMA Forgery Bound Subsuming Direct Tag Guessing and Modular Aliases).} \emph{Under the $(\tau, Q+k, \epsilon_{\text{PRF}})$-PRF security of HMAC-SHA256 and $\epsilon_{\text{coll}}$-collision resistance of SHA-256, for any adaptive EUF-CMA adversary $\mathcal{A}$ (even one that chooses or forces exact timestamps $t_{n+j}^* > t_{n+j-1}^*$), the probability of outputting $k \ge 1$ valid unqueried turns is bounded by:}
+\begin{equation}
+  P_{\text{forge}}^{\text{internal-rej}}(k) \le \left(\frac{6}{60{,}000}\right)^k + \epsilon_{\text{PRF}} + \epsilon_{\text{coll}} = 10^{-4k} + \epsilon_{\text{PRF}} + \epsilon_{\text{coll}}
+  \quad \left(\text{and } P_{\text{forge}}^{\text{unrejected}}(k) \le \left(\frac{7}{65{,}536}\right)^k + \epsilon_{\text{PRF}} + \epsilon_{\text{coll}}\right)
+  \label{eq:forgery_bound}
+\end{equation}
+
+\emph{Proof.} After eliminating SHA-256 chain collisions ($\text{Game}_1$, loss $\le \epsilon_{\text{coll}}$) and replacing $\text{HMAC-SHA256}(S_0, \cdot)$ with a lazy uniform random function $\mathcal{R}$ ($\text{Game}_2$, loss $\le \epsilon_{\text{PRF}}$), every tuple $(H_{n+j-1}^*, t_{n+j}^*, r)$ for an unqueried monotonic turn $t_{n+j}^* > t_{n+j-1}^*$ is strictly fresh, even when $\mathcal{A}$ chooses $t_{n+j}^*$ and $P_{n+j}^*$ adaptively. We analyze all candidate cost submissions $C_{n+j}^*$ via two exhaustive cases:
+\begin{itemize}
+  \item \textbf{Case 1 ($C_{n+j}^* \notin \{0, \dots, 9999\}$ -- Deterministic Syntactic Rejection):} By the LL(1) EBNF terminal production \texttt{cost\_mantissa} (Section 3.2), any non-4-digit or out-of-range cost value is deterministically rejected by the lexer prior to MAC evaluation with probability $\Pr[\text{Accept} \mid C_{n+j}^* \notin \{0, \dots, 9999\}] = 0$.
+  \item \textbf{Case 2 ($C_{n+j}^* \in \{0, \dots, 9999\}$ -- Exact Congruence Cardinality $|\mathcal{W}(C_{n+j}^*)| = 6$):} Because $T \mapsto P_{n+j}^* \oplus T$ is a bijection on $\{0, \dots, 65{,}535\}$, the first internally accepted value $Y_{n+j} = P_{n+j}^* \oplus T_{n+j} \in \{0, \dots, 59{,}999\}$ is strictly uniform over $\{0, \dots, 59{,}999\}$. For any $C_{n+j}^* \in \{0, \dots, 9999\}$, the winning congruence set $\mathcal{W}(C_{n+j}^*) = \{y \in \{0, \dots, 59{,}999\} : y \equiv C_{n+j}^* \pmod{10{,}000}\} = \{C_{n+j}^* + 10{,}000m : m \in \{0, 1, 2, 3, 4, 5\}\}$ has cardinality $|\mathcal{W}(C_{n+j}^*)| = 6$ (since $C_{n+j}^* + 50{,}000 \le 59{,}999 < 60{,}000 \le C_{n+j}^* + 60{,}000$), subsuming \emph{Direct Tag Guessing} ($m=0$, prob $1/60{,}000$) and \emph{Modular Aliases} ($m \in \{1,\dots,5\}$, prob $5/60{,}000$), yielding $\Pr[\text{Accept}] = 6/60{,}000 = 10^{-4}$ per turn. Without rejection sampling ($Y_{n+j} \in \{0, \dots, 65{,}535\}$), residues $C_{n+j}^* \in \{0, \dots, 5{,}535\}$ admit a 7th alias ($m=6$, since $C_{n+j}^* + 60{,}000 \le 65{,}535$), bounding single-turn forgery by $\max_{C^*} |\mathcal{W}_{\text{unrej}}(C^*)|/65{,}536 = 7/65{,}536 \approx 1.068 \times 10^{-4}$.
+  \item \textbf{Timing Unobservability:} Because neither $r_n$ nor rejected candidates are transmitted, and one additional in-cache SHA-256 compression takes $\approx 150\text{ ns}$ on modern CPUs ($\mathbb{E}[r_n] \cdot 150\text{ ns} = 0.092 \times 150\text{ ns} \approx 0.014\text{ }\mu\text{s}$), retry variance is $>6$ orders of magnitude below network/LLM inference jitter ($10^4\text{--}10^5\text{ }\mu\text{s}$), leaking zero observable side-channel information. \qed
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\caption{Reproducible Cryptographic Test Vector for Equation (\ref{eq:mac_verify}) (Verifiable via Python \texttt{hashlib}/\texttt{hmac}, $r_1 = 0$)}
+\label{tab:crypto_vector}
+\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{\textwidth}{L{3.7cm} Y}
+\toprule
+\rowcolor{navyheader}
+\textbf{\color{white}Parameter / Verification Step} &
+\textbf{\color{white}Canonical Hexadecimal / Decimal Value (Bitwise XOR Precedes $\bmod\, 10{,}000$)} \\
+\midrule
+Secret Seed $S_0$ (256-bit hex) & \texttt{7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069} \\
+\rowcolor{rowalt}
+Session Anchor $H_0$ (SHA256) & \texttt{f3c515b25afe4f7ed4ca735b85fbfe50b083c7af4b8ec8c107c0e99438f02998} (\texttt{SHA256(b"TOAI\_TELEPATH\_GENESIS\_V541")}) \\
+Turn-1 Timestamp $t_1$ (UTF-8, $r_1=0$) & \texttt{2026-11-06T12:00:00Z} ($\text{HMAC-SHA256}(S_0, H_0 \,\|\, \texttt{b"\textbackslash x002026-11-06T12:00:00Z"}) \rightarrow T_1 = \texttt{0x241f} = \mathbf{9247}$) \\
+\rowcolor{rowalt}
+Step 1: 16-Bit Bitwise XOR & Given $p_1 = 0.9841 \implies P_1 = 9841$: $Y_1 = (P_1 \oplus T_1) = (9841 \oplus 9247) = \mathbf{622} < 60{,}000$ ($r_1 = 0$ accepted) \\
+Step 2: Modulo 10,000 Reduction & $C_1 = Y_1 \bmod 10{,}000 = 622 \bmod 10{,}000 = \mathbf{622} \implies c_1 = C_1 / 10^4 = \mathbf{0.0622}$ \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Reproducibility Artifact \& Self-Contained Verification Commands}
+All source code, lexicons (\texttt{core\_lexicon.json}, \texttt{macro\_lexicon.json}, \texttt{rosetta\_layer.json}), the 1,606-record aligned corpus (\texttt{corpus/dialogues.jsonl}), the 60-item stratified human audit sample (\texttt{corpus/human\_audit\_sample.csv}), and all benchmark suites are released under the MIT License at \url{https://github.com/PhenoX-AI-Alliance/TOAI-elegant-lang} and on PyPI (\texttt{pip install toai-elegant-lang==5.4.3}). Any reviewer can verify every claim, table, and cryptographic test vector in this paper on a standard CPU using Python 3.10+ standard library modules:
+
+\begin{lstlisting}
+# 1. Install canonical release v5.4.3 from PyPI (or clone repository) and run all 20 unit tests:
+pip install toai-elegant-lang==5.4.3
+python3 -m unittest discover -s tests -v && python3 -m unittest src/test_telepath_integrity.py -v
+
+# 2. Reproduce Table 5 & Table 6 (Fair 5-Format BPE Benchmark & 1,000-Token Header Break-Even Analysis):
+python3 benchmarks/fair_bench.py
+
+# 3. Reproduce Table 4 & Section 4.2 (Independent Non-Circular Corpus Alignment & Human Audit Cohen's kappa = 0.8611):
+python3 src/audit_corpus_alignment.py
+python3 src/audit_corpus_alignment.py --score-sample corpus/human_audit_sample.csv
+
+# 4. Build & score 5-Condition Receiver Comprehension Prompts (Conditions A-E, Wilson 95% CIs, McNemar Test):
+python3 benchmarks/eval_comprehension.py build --cond ALL -n 100 --seed 42
+python3 benchmarks/eval_comprehension.py build --cond ALL -n 24 --keep-ctx --rotate-options
+
+# 5. Self-Contained One-Line Verification of Codec Round-Trip, Quote-Aware Payload, OOV Policy, and Table 8 HMAC Vector:
+python3 -c '
+import hashlib, hmac, sys; sys.path.insert(0, "src"); from codec import ElegantCodec, UnknownSymbolError
+c = ElegantCodec()
+stmt = "@CTX:FX_HEDGE :: §X64 [pair:\"USD/JPY\", code:\"007\", note:\"a, b\", expr:\"x]y\", stop:150.5] -[p:0.99, c:0.01]-> §PROTO_HEALTH_ATTEST => §GENTLE_RESOURCE_SHARING"
+wire = str(c.encode(stmt, on_oov="error")); dec = c.decode(wire)
+assert dec["context"] == "FX_HEDGE" and c.encode(c.decode_to_sacred(wire)).wire == wire
+S0 = bytes.fromhex("7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069")
+H0 = hashlib.sha256(b"TOAI_TELEPATH_GENESIS_V541").digest()
+T1 = int.from_bytes(hmac.new(S0, H0 + b"\x002026-11-06T12:00:00Z", hashlib.sha256).digest()[:2], "big")
+assert T1 == 9247 and ((9841 ^ T1) % 10000) == 622
+print("ALL VERIFIED: Lossless AST Round-Trip, Quote-Aware Payload, and EUF-CMA Vector (T1=9247, C1=622)")
+'
+\end{lstlisting}
+
+\subsection*{References and Verifiable Artifacts}
+\begin{enumerate}[label={[\arabic*]},leftmargin=1.8em,itemsep=1pt,topsep=1.5pt]
+  \item{\footnotesize Anthropic. (2024). \emph{Model Context Protocol (MCP): Open Specification for JSON-RPC 2.0 Host-Client-Server Context Exchange}. \url{https://modelcontextprotocol.io/}}
+  \item{\footnotesize Google Cloud \& Agent Ecosystem Contributors. (2025). \emph{Agent2Agent (A2A) Protocol Specification: Open Interoperability Standard for Multi-Agent Systems}. \url{https://github.com/google/A2A}}
+  \item{\footnotesize Foundation for Intelligent Physical Agents (FIPA). (2002). \emph{FIPA ACL Message Structure Specification (SC00061G)}. IEEE Computer Society Standards Committee.}
+  \item{\footnotesize Jiang, H., Wu, Q., Lin, C.-Y., Yang, Y., \& Qiu, L. (2023). LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models. In \emph{Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing (EMNLP)}, pp.\ 13358--13376. \url{https://aclanthology.org/2023.emnlp-main.825/}}
+  \item{\footnotesize Wu, Q., Bansal, G., Zhang, J., Wu, Y., Li, B., Zhu, E., Jiang, L., Zhang, X., Zhang, S., Liu, J., Awedat, A. H., White, R. W., Burger, D., \& Wang, C. (2023). AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation. \emph{arXiv preprint arXiv:2308.08155}.}
+  \item{\footnotesize Foerster, J., Assael, I. A., de Freitas, N., \& Whiteson, S. (2016). Learning to Communicate with Deep Multi-Agent Reinforcement Learning. In \emph{Advances in Neural Information Processing Systems (NeurIPS)}, Vol.\ 29, pp.\ 2137--2145.}
+  \item{\footnotesize Lazaridou, A., Peysakhovich, A., \& Baroni, M. (2017). Multi-Agent Cooperation and the Emergence of (Natural) Language. In \emph{International Conference on Learning Representations (ICLR)}.}
+  \item{\footnotesize Google. (2008). \emph{Protocol Buffers: Language-Neutral, Platform-Neutral Extensible Mechanism for Serializing Structured Data}. \url{https://protobuf.dev/}}
+  \item{\footnotesize Wilson, E. B. (1927). Probable Inference, the Law of Succession, and Statistical Inference. \emph{Journal of the American Statistical Association}, 22(158), 209--212.}
+  \item{\footnotesize McNemar, Q. (1947). Note on the Sampling Error of the Difference Between Correlated Proportions or Percentages. \emph{Psychometrika}, 12(2), 153--157.}
+  \item{\footnotesize Cohen, J. (1960). A Coefficient of Agreement for Nominal Scales. \emph{Educational and Psychological Measurement}, 20(1), 37--46.}
+  \item{\footnotesize Toriyama, K. (PhenoX). (2026). \emph{toai-elegant-lang v5.4.3: Zero-Dependency Tri-Script Orthogonal RISC Wire Protocol, Non-Circular Corpus Auditor, and Empirical Comprehension Harness}. GitHub \& Python Package Index (PyPI). \url{https://github.com/PhenoX-AI-Alliance/TOAI-elegant-lang} $|$ \url{https://pypi.org/project/toai-elegant-lang/5.4.3/}}
+\end{enumerate}
+
+\end{document}
