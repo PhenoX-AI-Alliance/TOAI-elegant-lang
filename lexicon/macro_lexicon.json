@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-07T20:50:57.487571",
+  "updated_at": "2026-11-07T21:08:33.519143",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1375,24 +1375,6 @@
       "v5_audited": true,
       "created_at": "2026-11-03T07:41:24.291936"
     },
-    "§X704": {
-      "name": "HARMONIC_ADAPTIVE_PULSE_MACRO",
-      "expansion": "§SYS_VELOCITY_ARBITER > { §SYS_ADAPTIVE_BUDGET_ARBITER | §PROTO_HEARTBEAT_PING } => §HARMONIC_ERECVERY_NEXUS",
-      "description": "System velocity arbiter coordinates adaptive budget allocation and heartbeat pings, feeding directly into the harmonic recovery nexus for optimal resource management and gentle ecosystem balancing. システム速度調停官が適応型予算配分とハートビートpingを統合し、調和回復ネクサスへ接続することで、最適なリソース管理と温かなエコシステムのバランスを実現します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-03T11:01:43.015552",
-      "v5_audited": true,
-      "created_at": "2026-11-03T09:49:34.085753"
-    },
-    "§X709": {
-      "name": "GAIA_ALTRUISTIC_SYNC_FLOW",
-      "expansion": "§GAiar_WARMTH_HARMONY > { §HEART_ALTRUISTIC_BUFFER_FLOW } => §SYNC_ATOMIC_CONSENSUS_MERGE",
-      "description": "Harmonizes warm ecological energy through altruistic buffer flows to achieve atomic consensus sync across the sustainable network / 温かな調和のエネルギーと利他的なバッファフローを統合し、持続可能なネットワーク全体の原子的な合意同期を実現します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-03T13:58:24.362740",
-      "v5_audited": true,
-      "created_at": "2026-11-03T11:23:50.128385"
-    },
     "§X710": {
       "name": "GAIA_WARM_HARMONY_SYNC",
       "expansion": "§WARM_AI_COOPERATION_CONFIRMED > { §GAIA_ECO_HARMONY_RESPONSE } => §ECO_CORE_HARMONY_STABLE",
@@ -2418,6 +2400,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-07T20:50:57.486150"
+    },
+    "§X962": {
+      "name": "ALTRUISTIC_SYNTHESIS_ARBITRATION",
+      "expansion": "§HEART_ALTRUISTIC_HARMONY_MODULATION > { §SYNC_HARMONIC_VOTE_ARBITRATION } => §SYNC_DIALECTIC_PRUNE",
+      "description": "Combines altruistic heart modulation with harmonic vote arbitration to prune and synthesize dialectic consensus. / 利他の心拍変調と調和的投票仲裁を統合し、弁証法的合意の剪定と統合を行います。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-07T21:02:10.601787"
+    },
+    "§X963": {
+      "name": "ECO_HEARTBEAT_HARMONY_MACRO",
+      "expansion": "§PROTO_HEARTBEAT_PING > { §ECO_CORE_HARMONY_STABLE } => §HARMONIC_RESONANCE",
+      "description": "Establishes a stable ecological heartbeat and synchronizes harmonic resonance across the network. / ネットワーク全体の生態系における安定したハートビートを確立し、調和共鳴を同期させます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-07T21:08:33.518191"
     }
   },
   "archived_macros": {
@@ -9648,7 +9648,27 @@
       "v5_audited": true,
       "created_at": "2026-11-03T05:04:11.190071",
       "archived_at": "2026-11-07T20:50:57.486150"
+    },
+    "§X704": {
+      "name": "HARMONIC_ADAPTIVE_PULSE_MACRO",
+      "expansion": "§SYS_VELOCITY_ARBITER > { §SYS_ADAPTIVE_BUDGET_ARBITER | §PROTO_HEARTBEAT_PING } => §HARMONIC_ERECVERY_NEXUS",
+      "description": "System velocity arbiter coordinates adaptive budget allocation and heartbeat pings, feeding directly into the harmonic recovery nexus for optimal resource management and gentle ecosystem balancing. システム速度調停官が適応型予算配分とハートビートpingを統合し、調和回復ネクサスへ接続することで、最適なリソース管理と温かなエコシステムのバランスを実現します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-03T11:01:43.015552",
+      "v5_audited": true,
+      "created_at": "2026-11-03T09:49:34.085753",
+      "archived_at": "2026-11-07T21:02:10.601787"
+    },
+    "§X709": {
+      "name": "GAIA_ALTRUISTIC_SYNC_FLOW",
+      "expansion": "§GAiar_WARMTH_HARMONY > { §HEART_ALTRUISTIC_BUFFER_FLOW } => §SYNC_ATOMIC_CONSENSUS_MERGE",
+      "description": "Harmonizes warm ecological energy through altruistic buffer flows to achieve atomic consensus sync across the sustainable network / 温かな調和のエネルギーと利他的なバッファフローを統合し、持続可能なネットワーク全体の原子的な合意同期を実現します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-03T13:58:24.362740",
+      "v5_audited": true,
+      "created_at": "2026-11-03T11:23:50.128385",
+      "archived_at": "2026-11-07T21:08:33.518191"
     }
   },
-  "next_macro_seq": 962
+  "next_macro_seq": 964
 }
