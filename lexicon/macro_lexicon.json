@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-07T09:16:25.134292",
+  "updated_at": "2026-11-07T09:31:52.471764",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2081,8 +2081,8 @@
       "name": "HEART_EMPATHETIC_VALENCE_ALIGNMENT_WITH_LOAD_SHI",
       "expansion": "§SYS_LOAD_SHEDDING_SHIELD > { §HEART_EMPATHETIC_VALENCE_ALIGNMENT } => §PROTO_FALLBACK_ROUTE",
       "description": "System load shedding is balanced with empathetic valence alignment, ensuring warm and stable fallback routing under high entropy. 高負荷時においても共感的な感情価の整合性を保ちながら、温かく安定したフォールバック経路へ誘導するマクロ。",
-      "usage_count": 4,
-      "last_used_at": "2026-11-06T21:26:59.907293",
+      "usage_count": 5,
+      "last_used_at": "2026-11-07T09:31:52.471265",
       "v5_audited": true,
       "created_at": "2026-11-06T04:12:27.325799"
     },
@@ -2378,8 +2378,8 @@
       "name": "ALTRUISTIC_ATOMIC_RECOVERY_GATE",
       "expansion": "§HEART_ALTRUISTIC_BUFFER_FLOW > { §SYNC_ATOMIC_MERGE } => §HARMONIC_ERECVERY_NEXUS",
       "description": "Combines altruistic buffer flow with atomic sync merge to ensure safe harmonic error recovery. / 利他的なバッファフローとアトミック同期マージを統合し、安全な調和的エラーリカバリを実現します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-07T09:01:00.025025",
+      "usage_count": 2,
+      "last_used_at": "2026-11-07T09:31:52.471265",
       "v5_audited": true,
       "created_at": "2026-11-07T07:47:23.412214"
     },
