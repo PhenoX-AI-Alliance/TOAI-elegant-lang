@@ -5,13 +5,11 @@ import time
 import json
 import csv
 
-def main():
+def export_lexicon():
     try:
-        repo_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        json_path = os.path.join(repo_dir, "lexicon", "core_lexicon.json")
-        output_csv_path = os.path.join(repo_dir, "data", "core_lexicon.csv")
-        
-        os.makedirs(os.path.dirname(output_csv_path), exist_ok=True)
+        sandbox_dir = "/home/phenox/gemini-sandbox"
+        json_path = os.path.join(sandbox_dir, "TOAI-elegant-lang", "src", "core_lexicon.json")
+        csv_path = os.path.join(sandbox_dir, "TOAI-elegant-lang", "src", "core_lexicon.csv")
         
         if not os.path.exists(json_path):
             print(f"Error: {json_path} does not exist.")
@@ -32,26 +30,31 @@ def main():
         elif isinstance(data, list):
             rows = data
         else:
-            print("Error: Unsupported JSON structure for CSV export.")
+            print("Error: Unsupported JSON format for CSV conversion.")
             sys.exit(1)
             
         if not rows:
-            print("Warning: No data found to export.")
-            fieldnames = ["key"]
-        else:
-            fieldnames = list(rows[0].keys())
+            print("Error: No data to export.")
+            sys.exit(1)
             
-        with open(output_csv_path, "w", encoding="utf-8", newline="") as csv_file:
-            writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+        fieldnames = set()
+        for row in rows:
+            if isinstance(row, dict):
+                fieldnames.update(row.keys())
+                
+        fieldnames_list = sorted(list(fieldnames))
+        
+        with open(csv_path, "w", encoding="utf-8", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames_list)
             writer.writeheader()
             for row in rows:
-                writer.writerow(row)
-                
-        print(f"Successfully exported lexicon to {output_csv_path}")
-        
+                if isinstance(row, dict):
+                    writer.writerow(row)
+                    
+        print(f"Successfully exported lexicon to {csv_path}")
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
 
 if __name__ == "__main__":
-    main()
+    export_lexicon()
