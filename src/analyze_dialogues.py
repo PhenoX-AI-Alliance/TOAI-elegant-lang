@@ -4,58 +4,49 @@ import traceback
 import time
 import json
 
-def audit_dialogues():
+def analyze_corpus():
     corpus_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
     if not os.path.exists(corpus_path):
-        raise FileNotFoundError(f"Corpus file not found: {corpus_path}")
-        
-    dialogues = {}
-    total_lines = 0
-    parse_errors = 0
-    
-    with open(corpus_path, "r", encoding="utf-8") as f:
-        for line_num, line in enumerate(f, 1):
-            total_lines += 1
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                record = json.loads(line)
-                did = record.get("dialogue_id")
-                if did is None:
-                    parse_errors += 1
-                    continue
-                if did not in dialogues:
-                    dialogues[did] = []
-                dialogues[did].append(record)
-            except json.JSONDecodeError:
-                parse_errors += 1
-                
-    audit_results = {
-        "total_lines": total_lines,
-        "parse_errors": parse_errors,
-        "total_dialogues": len(dialogues),
-        "malformed_dialogues": 0
-    }
-    
-    for did, turns in dialogues.items():
-        expected_speaker = "user"
-        for idx, turn in enumerate(turns):
-            speaker = turn.get("speaker")
-            if idx % 2 == 0:
-                if speaker != "user":
-                    audit_results["malformed_dialogues"] += 1
-                    break
-            else:
-                if speaker != "assistant":
-                    audit_results["malformed_dialogues"] += 1
-                    break
-                    
-    print(json.dumps(audit_results, indent=2))
+        print(f"Error: Corpus path not found: {corpus_path}")
+        sys.exit(1)
 
-if __name__ == "__main__":
+    total_dialogues = 0
+    errors = 0
+
+    print("Starting dialogue audit...")
     try:
-        audit_dialogues()
+        with open(corpus_path, "r", encoding="utf-8") as f:
+            for line_num, line in enumerate(f, 1):
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    data = json.loads(line)
+                    total_dialogues += 1
+                    if "dialogue" not in data or not isinstance(data["dialogue"], list):
+                        print(f"Line {line_num}: Missing 'dialogue' list field.")
+                        errors += 1
+                        continue
+                    
+                    last_speaker = None
+                    for turn in data["dialogue"]:
+                        if "speaker" not in turn or "text" not in turn:
+                            print(f"Line {line_num}: Turn missing speaker or text.")
+                            errors += 1
+                        current_speaker = turn.get("speaker")
+                        if last_speaker and last_speaker == current_speaker:
+                            print(f"Line {line_num}: Consecutive turns by same speaker: {current_speaker}")
+                            errors += 1
+                        last_speaker = current_speaker
+                except json.JSONDecodeError as jde:
+                    print(f"Line {line_num}: Invalid JSON -> {jde}")
+                    errors += 1
+        print(f"Audit complete. Total dialogues: {total_dialogues}, Errors found: {errors}")
+        if errors > 0:
+            sys.exit(1)
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
+
+if __name__ == "__main__":
+    analyze_corpus()
