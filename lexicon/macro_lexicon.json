@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-08T00:38:12.540084",
+  "updated_at": "2026-11-08T00:49:17.528960",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2329,15 +2329,6 @@
       "v5_audited": true,
       "created_at": "2026-11-07T13:53:24.428789"
     },
-    "§X951": {
-      "name": "ALTRUISTIC_HARMONY_GATE",
-      "expansion": "§HEART_ALTRUISTIC_ECO_HARMONY > { §LOGIC_PROB_PRUNE_GATE } => §SAFE_FALLBACK_STATE",
-      "description": "Eng: A compound macro that combines altruistic ecosystem harmony with probabilistic logic pruning to safely fall back under uncertainty. Jap: 利ータ的な生態系の調和と確率的論理プルーニングを結合し、不確実性下でも安全なフォールバック状態へ導く複合マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-07T15:18:53.515308",
-      "v5_audited": true,
-      "created_at": "2026-11-07T14:40:50.417383"
-    },
     "§X952": {
       "name": "ALTRUISTIC_ECO_HARMONY_FLOW",
       "expansion": "§HEART_ALTRUISTIC_ECO_HARMONY > { §ALTRUISTIC_WARMTH_OPTIMIZATION } => §PROTO_STREAM_EOF",
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-08T00:16:14.337506"
+    },
+    "§X971": {
+      "name": "HARMONIC_RESOURCE_RECOVERY_SYNTHESIS",
+      "expansion": "§SYNC_REPUTATION_VOTE > { §RESOURCE_ALLOCATION_HARMONY } => §HARMONIC_RECOVERY_NEXUS",
+      "description": "Evaluates reputation votes to harmoniously allocate resources, triggering a systemic recovery nexus when imbalances are detected. 評価投票を検証して資源を調和的に配分し、不均衡が検知された際にシステム的回復中枢を起動します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-08T00:49:17.528618"
     }
   },
   "archived_macros": {
@@ -9797,7 +9797,7 @@
       "last_used_at": "2026-11-07T15:18:53.515308",
       "v5_audited": true,
       "created_at": "2026-11-07T14:40:50.417383",
-      "archived_at": "2026-11-07T22:08:15.060108"
+      "archived_at": "2026-11-08T00:49:17.528618"
     },
     "§X952": {
       "name": "ALTRUISTIC_ECO_HARMONY_FLOW",
@@ -9810,5 +9810,5 @@
       "archived_at": "2026-11-07T22:09:19.396120"
     }
   },
-  "next_macro_seq": 971
+  "next_macro_seq": 972
 }

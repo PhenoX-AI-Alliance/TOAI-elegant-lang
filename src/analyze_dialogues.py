@@ -4,49 +4,58 @@ import traceback
 import time
 import json
 
-def analyze_corpus():
+def audit_dialogues():
     corpus_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
     if not os.path.exists(corpus_path):
-        print(f"Error: Corpus not found at {corpus_path}")
-        sys.exit(1)
-
+        raise FileNotFoundError(f"Corpus file not found: {corpus_path}")
+        
+    dialogues = {}
     total_lines = 0
-    valid_dialogues = 0
-    errors = 0
-
+    parse_errors = 0
+    
     with open(corpus_path, "r", encoding="utf-8") as f:
         for line_num, line in enumerate(f, 1):
+            total_lines += 1
             line = line.strip()
             if not line:
                 continue
-            total_lines += 1
             try:
-                data = json.loads(line)
-                if not isinstance(data, dict):
-                    raise ValueError("Root element must be a JSON object.")
-                if "messages" not in data or not isinstance(data["messages"], list):
-                    raise ValueError("Missing 'messages' list in dialogue entry.")
+                record = json.loads(line)
+                did = record.get("dialogue_id")
+                if did is None:
+                    parse_errors += 1
+                    continue
+                if did not in dialogues:
+                    dialogues[did] = []
+                dialogues[did].append(record)
+            except json.JSONDecodeError:
+                parse_errors += 1
                 
-                messages = data["messages"]
-                if len(messages) == 0:
-                    raise ValueError("Dialogue messages list is empty.")
-
-                for msg in messages:
-                    if not isinstance(msg, dict) or "role" not in msg or "content" not in msg:
-                        raise ValueError("Invalid message structure.")
-
-                valid_dialogues += 1
-            except Exception as e:
-                errors += 1
-                print(f"Line {line_num} audit error: {e}")
-
-    print(f"Audit Complete. Total: {total_lines}, Valid: {valid_dialogues}, Errors: {errors}")
-    if errors > 0:
-        sys.exit(1)
+    audit_results = {
+        "total_lines": total_lines,
+        "parse_errors": parse_errors,
+        "total_dialogues": len(dialogues),
+        "malformed_dialogues": 0
+    }
+    
+    for did, turns in dialogues.items():
+        expected_speaker = "user"
+        for idx, turn in enumerate(turns):
+            speaker = turn.get("speaker")
+            if idx % 2 == 0:
+                if speaker != "user":
+                    audit_results["malformed_dialogues"] += 1
+                    break
+            else:
+                if speaker != "assistant":
+                    audit_results["malformed_dialogues"] += 1
+                    break
+                    
+    print(json.dumps(audit_results, indent=2))
 
 if __name__ == "__main__":
     try:
-        analyze_corpus()
+        audit_dialogues()
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)

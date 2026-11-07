@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [v5.4.4] - 2026-11-08 (Large-Scale N=112 Disjoint Holdout Comprehension, Holdout Independence Proof, Formal EUF-CMA Game Reduction & LLMLingua Task-Accuracy Trade-Off)
+### Added
+- **Strictly Disjoint Holdout Comprehension Corpus (`corpus/holdout_comprehension.jsonl`, $N = 112$) & Independence Verifier (`src/audit_corpus_alignment.py --verify-holdout`)**:
+  - Constructed $N = 112$ (`16 items × 7 domains`) holdout records across 28 holdout-only scenarios and holdout-only multi-hop causal topologies.
+  - Mathematically verified `0/112 (0.0%)` exact wire overlap, `0/112 (0.0%)` skeletal wire overlap, and `0/112 (0.0%)` repair-scenario overlap with `corpus/dialogues.jsonl`, with `112/112 (100.0%)` Independent Audit Ontology alignment.
+- **Large-Scale Holdout Comprehension Evaluation ($N = 112$, Conditions A–E) (`benchmarks/eval_comprehension.py --holdout`)**:
+  - Evaluated all 5 blind conditions (`A`: `50/112 = 44.6%`, `B`: `95/112 = 84.8%`, `C`: `105/112 = 93.8%`, `D [Shuffle Control]`: `27/112 = 24.1%`, `E [Plaintext Upper Bound]`: `110/112 = 98.2%`).
+  - Added Cohen's $h$ effect size and discordant odds ratio ($\text{OR} = c/b$) to paired McNemar tests (`A vs B`: $p = 1.36 \times 10^{-9}$; `B vs C`: $p = 6.35 \times 10^{-3}$; `B vs D`: $p = 3.59 \times 10^{-17}$; `C vs D`: $p = 1.41 \times 10^{-21}$; `A vs D`: $p = 2.19 \times 10^{-3}$).
+- **Compression vs. Task/AST Execution Accuracy Trade-Off (`benchmarks/fair_bench.py`)**:
+  - Added `evaluate_compression_task_tradeoff()` comparing `TOAI Demotic Wire` (`73.2 tok`, `-79.1%`, `100.0%` Syntax/Numeric/AST Task Accuracy) against `LLMLingua-Style Token Pruning` at $\rho = 0.50$ (`174.9 tok`, `0.0%` Strict JSON Parse, `97.3%` Numeric/Task Recovery) and $\rho = 0.35$ (`122.4 tok`, `0.0%` Strict JSON Parse, `61.6%` Numeric/Task Recovery), and `Simplified Flat Template` (`34.5 tok`, `25.0%` Numeric Fidelity, `0.0%` Multi-Branch Causal Execution).
+
 ## [v5.4.3] - 2026-11-07 (Lexicon/Corpus Typo Elimination, Independent Corpus Audit & Comprehension Harness)
 ### Added
 - **Independent Deterministic Corpus Alignment Auditor (`src/audit_corpus_alignment.py`)**:

@@ -1,5 +1,5 @@
 """
-TOAI-elegant-lang Two-Layer BPE Codec & Tokenizer Optimizer (v5.4.3)
+TOAI-elegant-lang Two-Layer BPE Codec & Tokenizer Optimizer (v5.4.4)
 - Verbose (Full descriptive symbols) <-> Compact (2-3 BPE tokens wire format)
 - Quote-Aware Stateful Hybrid Payload Parser: e.g. [code:"007", note:"a, b", expr:"x]y", limit:150.5]
 - Transparent OOV Policy (`on_oov="error" | "keep" | "nearest"`) with full substitution audit trail
