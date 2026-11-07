@@ -26,7 +26,8 @@ def scan_whitepaper(repo_path):
 
 def main():
     try:
-        workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+        default_ws = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', default_ws)
         repo_path = os.path.join(workspace_dir, 'TOAI-elegant-lang')
         
         print(f"Scanning repository at: {repo_path}")

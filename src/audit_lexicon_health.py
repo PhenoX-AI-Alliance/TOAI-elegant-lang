@@ -5,7 +5,8 @@ import time
 import json
 
 def audit_lexicons():
-    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    default_ws = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    workspace = os.environ.get('TOAI_WORKSPACE_DIR', default_ws)
     lexicon_dir = os.path.join(workspace, 'TOAI-elegant-lang', 'lexicon')
     
     core_path = os.path.join(lexicon_dir, 'core_lexicon.json')

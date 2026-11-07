@@ -33,7 +33,10 @@ def generate_markdown(data):
     return "\n".join(md)
 
 def main():
-    lexicon_path = '/home/phenox/gemini-sandbox/lexicon/core_lexicon.json'
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    lexicon_path = os.path.join(base_dir, 'lexicon', 'core_lexicon.json')
+    if not os.path.exists(lexicon_path):
+        lexicon_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lexicon', 'core_lexicon.json')
     data = load_lexicon(lexicon_path)
     markdown_output = generate_markdown(data)
     print(markdown_output)

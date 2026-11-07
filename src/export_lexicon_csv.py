@@ -7,9 +7,9 @@ import csv
 
 def main():
     try:
-        sandbox_dir = "/home/phenox/gemini-sandbox"
-        json_path = os.path.join(sandbox_dir, "TOAI-elegant-lang", "data", "core_lexicon.json")
-        output_csv_path = os.path.join(sandbox_dir, "TOAI-elegant-lang", "data", "core_lexicon.csv")
+        repo_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        json_path = os.path.join(repo_dir, "lexicon", "core_lexicon.json")
+        output_csv_path = os.path.join(repo_dir, "data", "core_lexicon.csv")
         
         os.makedirs(os.path.dirname(output_csv_path), exist_ok=True)
         

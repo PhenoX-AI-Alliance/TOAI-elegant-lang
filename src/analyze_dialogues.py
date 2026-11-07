@@ -6,8 +6,9 @@ import json
 from collections import Counter, defaultdict
 
 def analyze_dialogues():
-    corpus_path = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
-    output_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/dialogue_analysis_result.json"
+    repo_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    corpus_path = os.path.join(repo_dir, "corpus", "dialogues.jsonl")
+    output_path = os.path.join(repo_dir, "src", "dialogue_analysis_result.json")
     
     speaker_counts = Counter()
     word_counts = defaultdict(Counter)

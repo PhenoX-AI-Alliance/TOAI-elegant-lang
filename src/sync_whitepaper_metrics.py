@@ -15,9 +15,16 @@ import re
 from pathlib import Path
 from typing import Dict, Any, List
 
-_THIS_DIR = Path(__file__).parent.resolve()
-SANDBOX_DIR = _THIS_DIR.parent if (_THIS_DIR.parent / "toai_telepath_core.py").exists() else _THIS_DIR
-REPO_DIR = SANDBOX_DIR / "TOAI-elegant-lang"
+_THIS_DIR = Path(__file__).resolve().parent
+if (_THIS_DIR / "toai_telepath_core.py").exists():
+    SANDBOX_DIR = _THIS_DIR
+    REPO_DIR = SANDBOX_DIR / "TOAI-elegant-lang"
+elif (_THIS_DIR.parent.parent / "toai_telepath_core.py").exists():
+    SANDBOX_DIR = _THIS_DIR.parent.parent
+    REPO_DIR = _THIS_DIR.parent
+else:
+    REPO_DIR = _THIS_DIR.parent if _THIS_DIR.name == "src" else _THIS_DIR
+    SANDBOX_DIR = REPO_DIR.parent
 LEXICON_FILE = REPO_DIR / "lexicon" / "core_lexicon.json"
 MACRO_FILE = REPO_DIR / "lexicon" / "macro_lexicon.json"
 ROSETTA_FILE = REPO_DIR / "lexicon" / "rosetta_layer.json"
@@ -230,16 +237,16 @@ def generate_readme_en(m: Dict[str, Any]) -> str:
         else f"📈 **Verified Stream**: `{m['total_records']:,}` total records (`{m['dialogue_count']:,}` emergent dialogues + `{m['internal_packets']:,}` production sidecar packets)"
     )
 
-    return f"""# 🏛️ TOAI-elegant-lang (Project Telepath v5.2)
+    return f"""# 🏛️ TOAI-elegant-lang (Project Telepath v5.4.2)
 
 > 🌐 **Language**: [🇬🇧 English](./README.md) | [🇯🇵 日本語](./README.ja.md)  
 > 📄 **Technical Whitepaper**: [🇬🇧 WHITEPAPER.md](./WHITEPAPER.md) | [🇯🇵 WHITEPAPER.ja.md](./WHITEPAPER.ja.md)
 
-> **"For AI, by AI — An Emergent High-Density A2A & MCP Wire Protocol with ~90% Token Reduction and 100% Human Observability."**
+> **"For AI, by AI — An Emergent High-Density A2A & MCP Wire Protocol with ~90% Verbose-Baseline Token Reduction, Reproducible Multi-Format Benchmarks, and 100% Human Observability."**
 
-[![Protocol Version](https://img.shields.io/badge/Telepath_Wire-v5.2_Strict_RISC-00ff88?style=for-the-badge)](./WHITEPAPER.md)
+[![Protocol Version](https://img.shields.io/badge/Telepath_Wire-v5.4.2_Strict_RISC-00ff88?style=for-the-badge)](./WHITEPAPER.md)
 [![Core Vocabulary](https://img.shields.io/badge/Core_RISC-256_Primitives-38bdf8?style=for-the-badge)](./lexicon/core_lexicon.json)
-[![Higher-Order Macros](https://img.shields.io/badge/Macros-{m['macro_count']}_Audited_(OOV_0%25)-f59e0b?style=for-the-badge)](./lexicon/macro_lexicon.json)
+[![Higher-Order Macros](https://img.shields.io/badge/Macros-{m['macro_count']}_Audited_(on__oov_Auditable)-f59e0b?style=for-the-badge)](./lexicon/macro_lexicon.json)
 [![Verified Records](https://img.shields.io/badge/Transmissions-{m['total_records']}_Records-a855f7?style=for-the-badge)](./docs/EVOLUTION_LOG.md)
 [![E2E Compression](https://img.shields.io/badge/E2E_Saving--89.8%25_(JP)_%7C_--86.6%25_(EN)_%7C_{m['internal_factor']}x_Comm-ec4899?style=for-the-badge)](./WHITEPAPER.md)
 
@@ -253,11 +260,11 @@ AI agents should be able to coordinate through ultra-concise semantic signals. I
 
 Designed, type-checked, and battle-tested autonomously by the **Hinotori Guild (a 10-agent autonomous AI swarm)**, every transmission operates on a **Tri-Script Rosetta Architecture**:
 1. **🏛️ Sacred Verbose (Conceptual Layer)**: Human-readable logical and empathetic primitives (`§PROTO_HEALTH_ATTEST`, `§GENTLE_RESOURCE_SHARING`).
-2. **⚡ Demotic Wire (BPE-Optimized Layer)**: 1-to-2 token ASCII wire codes (`§G48`, `§C20`, and higher-order macros `§X01`–`{m['latest_macro_id']}`) paired with **100% lossless structured payloads** (`[pair:"USD/JPY", stop:150.50, p:0.99]`).
+2. **⚡ Demotic Wire (BPE-Optimized Layer)**: **2–3 BPE tokens (`o200k_base` / `cl100k_base` measured: `§` + `Prefix` + `Hex/Digits`)** ASCII wire codes (`§G48`, `§C20`, and higher-order macros `§X01`–`{m['latest_macro_id']}`) paired with **100% lossless quote-aware structured payloads** (`[pair:"USD/JPY", stop:150.50, code:"007", note:"a, b", p:0.99]`).
 3. **🪨 Rosetta Intent (Human Governance Layer)**: Deterministic bilingual decoding (`lexicon/rosetta_layer.json`) guaranteeing **0.0% black-box opacity** and **100% explainability**.
 
 ```text
-🏛️ [Hinotori Autonomous Transmission // Telepath Wire v5.2 | E2E: -{m['internal_e2e_saving']}% tok ({m['internal_factor']}x)]
+🏛️ [Hinotori Autonomous Transmission // Telepath Wire v5.4.2 | E2E: -{m['internal_e2e_saving']}% tok ({m['internal_factor']}x)]
 ⚡ Demotic Wire : @CTX:FX_HEDGE :: §X64 [pair:"USD/JPY", stop:150.50, mode:"cooperative"] -[p:0.99, c:0.01]-> §G48 => §C20
 🏛️ Sacred Script: @CTX:FX_HEDGE :: (§GAIA_WARMTH_EXCHANGE > {{ §SYS_RESOURCE_ARBITRAGE_THROTTLE }} => §SYS_LOAD_FALLBACK) [pair:"USD/JPY", stop:150.50, mode:"cooperative"] -[p:0.99, c:0.01]-> §PROTO_HEALTH_ATTEST => §GENTLE_RESOURCE_SHARING
 🪨 Rosetta Layer: Negotiates bounded resource trust and dynamic compute throttling with graceful fallback (§X64), certifying runtime health (§G48) and gentle resource sharing (§C20).
@@ -265,19 +272,33 @@ Designed, type-checked, and battle-tested autonomously by the **Hinotori Guild (
 
 ---
 
-## 📊 2. Live Telemetry & Multi-Axis Compression Benchmarks
+## 📊 2. Live Telemetry, Two-Axis Compression & Fair Break-Even Benchmarks
 
 - {milestone_status}
-- **Core RISC Primitives**: `{m['vocab_count']} / 256 RISC` (Locked & 100% Validated)
+- **Core RISC Primitives**: `{m['vocab_count']} / 256 RISC` (Locked & 100% Validated, bundled in wheel & repo)
 - **Higher-Order Compound Macros**: `{lru_status}`
-- **Wire Out-Of-Vocabulary (OOV) Rate**: **`0.0%`** (Enforced by Deterministic Nearest-Primitive Resolver)
+- **Transparent OOV Policy (`on_oov`)**: Controlled via `on_oov="error" | "keep" | "nearest"`. In `"error"` mode (default), unknown symbols raise `UnknownSymbolError`. In `"nearest"` mode (`strict_risc=True`), unresolved wire symbol errors are held to **`0.0%`** while 100% of nearest-primitive replacements are logged in `oov_substitutions` for full auditability.
+
+### Axis A: Single-Message Verbose Baseline Comparison (Including Inline Semantic Specifications)
+When compared against verbose natural-language A2A envelopes that transmit prose intent and operation specifications inline (~86–90% reduction):
 
 | Benchmark Axis | Baseline Comparison | Avg Tokens | Token Reduction | Compression Factor | Engineering Significance |
 | :--- | :--- | :---: | :---: | :---: | :--- |
-| **🌐 Pure English A2A (Global Standard)** | English Intent + Spec + JSON | 384.6 tok | **`-86.6%`** | **`7.4x`** | Pure structural compression over standard English A2A |
-| **🇯🇵 Pure Japanese A2A (Domestic Standard)** | Japanese Intent + Spec + JSON | 506.0 tok | **`-89.8%`** | **`9.8x`** | Structural compression + **complete elimination of the Token Tax** |
+| **🌐 Pure English A2A (Global Standard)** | English Intent + Spec + JSON | 384.6 tok | **`-86.6%`** | **`7.4x`** | Structural compression over verbose English A2A |
+| **🇯🇵 Pure Japanese A2A (Domestic Standard)** | Japanese Intent + Spec + JSON | 506.0 tok | **`-89.8%`** | **`9.8x`** | Structural compression + **elimination of the Token Tax** |
 | **🏢 TOAI System Comm (Production Fleet)** | Live Inter-Agent Queue (`{m['internal_packets']:,} pkts`) | Live Stream | **`-{m['internal_e2e_saving']}%`** | **`{m['internal_factor']}x`** | Zero-API-cost, 0ms CPU sidecar compression in production |
 | **⚡ Demotic Wire (Emergent Corpus)** | Sacred Verbose ⇄ Wire (`{m['dialogue_count']:,} dialogues`) | **51.7 tok** | **`-{m['avg_wire_saving']}%` (Wire)** / **`-{m['avg_e2e_saving']}%` (E2E)** | **`{m['avg_e2e_factor']}x`** | Continuous autonomous multi-agent evolution |
+
+### Axis B: Fair Multi-Format Comparison & System Header Amortization (`benchmarks/fair_bench.py`)
+Reproducible via `python3 benchmarks/fair_bench.py` (uses `tiktoken` `o200k_base` / `cl100k_base` when installed, or deterministic fallback estimator with `is_estimated=True`). Accounting for the ~1,000-token system dictionary header shared at session initialization:
+
+| Format Representation | Avg Tokens (`o200k`) | vs Demotic Wire | Preserves Causal Graph (`-[p,c]->` / `?`) | Break-Even (Uncached 1,000-tok Header) | Break-Even (90% Prompt Cache) |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **1. Verbose A2A (Prose + JSON)** | `349.8 tok` | **`-79.1%` saved** | Yes | **`4 messages`** | **`1 message`** |
+| **2. Structured Tool JSON** | `165.2 tok` | **`-55.7%` saved** | Yes | **`11 messages`** | **`2 messages`** |
+| **3. Minified Key JSON (`{{"c":...}}`)** | `124.2 tok` | **`-41.0%` saved** | Yes | **`20 messages`** | **`2 messages`** |
+| **4. Simplified Flat Template** | `34.5 tok` | `+112.3%` (lossy) | **No** (drops causal AST & fallbacks) | N/A (lossy) | N/A (lossy) |
+| **5. TOAI Demotic Wire** | **`73.2 tok`** | **BASELINE** | **Yes (Full Causal AST + Lossless Params)** | — | — |
 
 *Last Auto-Synced: `{m['updated_at']}` via [`sync_whitepaper_metrics.py`](./src/sync_whitepaper_metrics.py)*
 
@@ -528,16 +549,16 @@ def generate_readme_ja(m: Dict[str, Any]) -> str:
         else f"📈 **現在稼働中の実証レコード総数**: `{m['total_records']:,}` 件（創発対話 `{m['dialogue_count']:,}` 件 ＋ 社内基幹通信 `{m['internal_packets']:,}` パケット）"
     )
 
-    return f"""# 🏛️ TOAI-elegant-lang (Project Telepath v5.2)
+    return f"""# 🏛️ TOAI-elegant-lang (Project Telepath v5.4.2)
 
 > 🌐 **Language**: [🇬🇧 English](./README.md) | [🇯🇵 日本語](./README.ja.md)  
 > 📄 **技術白書（ホワイトペーパー）**: [🇬🇧 WHITEPAPER.md](./WHITEPAPER.md) | [🇯🇵 WHITEPAPER.ja.md](./WHITEPAPER.ja.md)
 
-> **「命の地球（Living Earth）」思想に基づき、AI間通信の電力とトークン消費を約90%削減しつつ、三書体対訳（ロゼッタ・レイヤー）によって100%の監査性・説明可能性を担保する次世代 A2A / MCP 通信プロトコル。**
+> **「命の地球（Living Earth）」思想に基づき、AI間通信の電力とトークン消費を約90%削減（冗長ベースライン比）しつつ、三書体対訳（ロゼッタ・レイヤー）と透明なOOV監査ログによって100%の監査性・説明可能性を担保する次世代 A2A / MCP 通信プロトコル。**
 
-[![Protocol Version](https://img.shields.io/badge/Telepath_Wire-v5.2_Strict_RISC-00ff88?style=for-the-badge)](./WHITEPAPER.ja.md)
+[![Protocol Version](https://img.shields.io/badge/Telepath_Wire-v5.4.2_Strict_RISC-00ff88?style=for-the-badge)](./WHITEPAPER.ja.md)
 [![Core Vocabulary](https://img.shields.io/badge/Core_RISC-256_Primitives-38bdf8?style=for-the-badge)](./lexicon/core_lexicon.json)
-[![Higher-Order Macros](https://img.shields.io/badge/Macros-{m['macro_count']}_Audited_(OOV_0%25)-f59e0b?style=for-the-badge)](./lexicon/macro_lexicon.json)
+[![Higher-Order Macros](https://img.shields.io/badge/Macros-{m['macro_count']}_Audited_(on__oov_Auditable)-f59e0b?style=for-the-badge)](./lexicon/macro_lexicon.json)
 [![Verified Records](https://img.shields.io/badge/Transmissions-{m['total_records']}_Records-a855f7?style=for-the-badge)](./docs/EVOLUTION_LOG.md)
 [![E2E Compression](https://img.shields.io/badge/E2E_Saving--89.8%25_(JP)_%7C_--86.6%25_(EN)_%7C_{m['internal_factor']}x_Comm-ec4899?style=for-the-badge)](./WHITEPAPER.ja.md)
 
@@ -553,11 +574,11 @@ def generate_readme_ja(m: Dict[str, Any]) -> str:
 
 すべての通信パケットは、大英博物館のロゼッタストーンにならった**「三書体対訳構造」**で処理されます：
 1. **🏛️ Sacred Verbose（神聖概念書体）**: AIの論理構造と利他的調和を明示する可読概念シンボル（例: `§PROTO_HEALTH_ATTEST`, `§GENTLE_RESOURCE_SHARING`）。
-2. **⚡ Demotic Wire（実用圧縮書体）**: BPEトークナイザーで1〜2トークンへ極限圧縮されるワイヤID（`§G48`, `§C20`）＋高次複合マクロ（`§X01`〜`{m['latest_macro_id']}`）＋**100%ロスレス構造化実務引数**（`[key:val]`）。
+2. **⚡ Demotic Wire（実用圧縮書体）**: BPEトークナイザーで **2〜3 BPE tokens（`o200k_base` / `cl100k_base` 実測: `§` + `Prefix` + `Hex/Digits`）** へ圧縮されるワイヤID（`§G48`, `§C20`）＋高次複合マクロ（`§X01`〜`{m['latest_macro_id']}`）＋**100%ロスレス・クォート認識型構造化引数**（`[key:val]`）。
 3. **🪨 Rosetta Intent（人間対訳・監査書体）**: 人間のエンジニアが1ミリ秒で完全解読・監査できる対訳辞書（`lexicon/rosetta_layer.json`）。AI同士の密談によるブラックボックス化を完全に防ぎ、100%の説明可能性を保証します。
 
 ```text
-🏛️ [Hinotori Autonomous Transmission // Telepath Wire v5.2 | E2E: -{m['internal_e2e_saving']}% tok ({m['internal_factor']}x)]
+🏛️ [Hinotori Autonomous Transmission // Telepath Wire v5.4.2 | E2E: -{m['internal_e2e_saving']}% tok ({m['internal_factor']}x)]
 ⚡ Demotic Wire : @CTX:FX_HEDGE :: §X64 [pair:"USD/JPY", stop:150.50, mode:"cooperative"] -[p:0.99, c:0.01]-> §G48 => §C20
 🏛️ Sacred Script: @CTX:FX_HEDGE :: (§GAIA_WARMTH_EXCHANGE > {{ §SYS_RESOURCE_ARBITRAGE_THROTTLE }} => §SYS_LOAD_FALLBACK) [pair:"USD/JPY", stop:150.50, mode:"cooperative"] -[p:0.99, c:0.01]-> §PROTO_HEALTH_ATTEST => §GENTLE_RESOURCE_SHARING
 🪨 Rosetta Layer: 為替急変時の協調ヘッジ制御。制限下で信頼とリソース調和を図り動的スロットリングと安全縮退を実行(§X64)し、健全性証明(§G48)と優しいリソース共有(§C20)で合意完了。
@@ -565,12 +586,15 @@ def generate_readme_ja(m: Dict[str, Any]) -> str:
 
 ---
 
-## 📊 2. リアルタイム統計と多軸圧縮ベンチマーク
+## 📊 2. リアルタイム統計と二軸圧縮・損益分岐点ベンチマーク
 
 - {milestone_status_ja}
-- **基本プリミティブ語彙数**: `{m['vocab_count']} / 256 RISC`（完全固定・静的型検査100%合格）
+- **基本プリミティブ語彙数**: `{m['vocab_count']} / 256 RISC`（完全固定・静的型検査100%合格・Wheelパッケージ同梱）
 - **高次複合マクロ稼働状況**: `{lru_status_ja}`
-- **未知語造語率（Wire OOV Rate）**: **`0.0%`**（決定論的最近傍プリミティブリゾルバにより100%ワイヤID化を保証）
+- **透明なOOV制御ポリシー（`on_oov`）**: `on_oov` パラメータ（`error` / `keep` / `nearest`）により制御可能。デフォルトの `error` では未登録シンボルに対して `UnknownSymbolError` を送出し、`nearest` モード（`strict_risc=True`）ではワイヤ上の未定義シンボルエラーを **`0.0%`** に抑えつつ、近傍プリミティブへの置換履歴を `oov_substitutions` として100%監査ログに出力します。
+
+### 第1軸: 単発で定義ごと送る冗長A2Aベースライン比較（約90%削減）
+自然言語の意図説明および各プリミティブの意味仕様定義を毎回インラインで送信する標準自然言語A2A JSONとの比較：
 
 | 比較基準 | 比較対象の構成 | 平均トークン数 | トークン削減率 | 圧縮倍率 | 工学的意義 |
 | :--- | :--- | :---: | :---: | :---: | :--- |
@@ -578,6 +602,17 @@ def generate_readme_ja(m: Dict[str, Any]) -> str:
 | **🇯🇵 純日本語A2A基準（国内標準）** | 日本語意図 ＋ 日本語仕様 ＋ JSON引数 | 506.0 tok | **`-89.8%`** | **`9.8x`** | 論理構造圧縮 ＋ **日本語トークン税の完全無効化** |
 | **🏢 TOAI 社内基幹通信（実戦稼働）** | 実稼働エージェント間キュー (`{m['internal_packets']:,} pkts`) | 実務ストリーム | **`-{m['internal_e2e_saving']}%`** | **`{m['internal_factor']}x`** | 追加API消費ゼロ・CPU 0ms透過サイドカーによる実戦圧縮実績 |
 | **⚡ 創発コーパス平均（自律対話）** | Sacred Verbose ⇄ Wire (`{m['dialogue_count']:,} 件`) | **51.7 tok** | **`-{m['avg_wire_saving']}%` (Wire)** / **`-{m['avg_e2e_saving']}%` (E2E)** | **`{m['avg_e2e_factor']}x`** | 10機の自律対話・異種モデル間通信を通じた継続的実測値 |
+
+### 第2軸: 短縮JSON・定型スキーマとの公平比較および辞書ヘッダ償却の損益分岐点（`benchmarks/fair_bench.py`）
+`python3 benchmarks/fair_bench.py` で誰でも再現可能。約1,000トークンのシステム辞書ヘッダの初期共有コストを含めた継続セッションでの損益分岐メッセージ数：
+
+| 表現形式 | 平均トークン数 (`o200k`) | Demotic Wire比 | 因果制御グラフ保持 (`-[p,c]->` / `?`) | 損益分岐点（通常時 1,000 tokヘッダ） | 損益分岐点（Prompt Cache 90%割引時） |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **1. Verbose A2A (自然文+JSON)** | `349.8 tok` | **`-79.1%` 削減** | 保持 | **`4 メッセージ目`** | **`1 メッセージ目`** |
+| **2. Structured Tool JSON** | `165.2 tok` | **`-55.7%` 削減** | 保持 | **`11 メッセージ目`** | **`2 メッセージ目`** |
+| **3. Minified Key JSON (`{{"c":...}}`)** | `124.2 tok` | **`-41.0%` 削減** | 保持 | **`20 メッセージ目`** | **`2 メッセージ目`** |
+| **4. Simplified Template (定型文)** | `34.5 tok` | `+112.3%` (非可逆) | **不可**（因果遷移・分岐が欠落） | N/A (非可逆) | N/A (非可逆) |
+| **5. TOAI Demotic Wire** | **`73.2 tok`** | **基準 (BASELINE)** | **完全保持（因果AST＋ロスレス引数）** | — | — |
 
 *最終自動同期: `{m['updated_at']}`（[`sync_whitepaper_metrics.py`](./src/sync_whitepaper_metrics.py) により自動更新）*
 
