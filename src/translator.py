@@ -1,25 +1,30 @@
+import sys
 import os
 import json
 
 def load_translation_map(map_path):
     if not os.path.exists(map_path):
-        return {}
+        raise FileNotFoundError(f"Translation map not found at {map_path}")
     with open(map_path, "r", encoding="utf-8") as f:
         return json.load(f)
 
-def translate_elegant_text(text, map_path):
-    t_map = load_translation_map(map_path)
-    sorted_keys = sorted(t_map.keys(), key=len, reverse=True)
+def decode_elegant_text(text, map_path=None):
+    if map_path is None:
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        map_path = os.path.join(current_dir, "translation_map.json")
     
-    result = text
+    trans_map = load_translation_map(map_path)
+    
+    sorted_keys = sorted(trans_map.keys(), key=len, reverse=True)
+    
+    decoded_text = text
     for key in sorted_keys:
-        value = t_map[key]
-        result = result.replace(key, f"({value})")
-    return result
+        value = trans_map[key]
+        decoded_text = decoded_text.replace(key, f"[{value}]")
+        
+    return decoded_text
 
 if __name__ == "__main__":
-    sample = "Gaia Ecosystem * ~ -> #"
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    m_path = os.path.join(current_dir, "translation_map.json")
+    sample = "Hello * ~ # -> !"
     print("Original:", sample)
-    print("Translated:", translate_elegant_text(sample, m_path))
+    print("Decoded:", decode_elegant_text(sample))
