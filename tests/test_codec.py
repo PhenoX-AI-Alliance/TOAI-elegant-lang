@@ -345,6 +345,29 @@ class TestElegantCodec(unittest.TestCase):
             self.assertEqual(meta_rot["n_total_prompts"], 32)
             self.assertEqual(meta_rot["protocol_mode"], "protocol_header_keep_ctx")
 
+        # v5.4.4: Verify N=112 disjoint holdout corpus independence & compression-accuracy tradeoff
+        from src.audit_corpus_alignment import verify_holdout_independence
+        from benchmarks.fair_bench import evaluate_compression_task_tradeoff
+
+        holdout_path = REPO_ROOT / "corpus" / "holdout_comprehension.jsonl"
+        self.assertTrue(holdout_path.is_file(), "holdout_comprehension.jsonl must exist")
+        ind_res = verify_holdout_independence(
+            self.codec, REPO_ROOT / "corpus" / "dialogues.jsonl", holdout_path
+        )
+        self.assertEqual(ind_res["holdout_rows"], 112)
+        self.assertEqual(ind_res["exact_wire_overlap_count"], 0)
+        self.assertEqual(ind_res["skeletal_wire_overlap_count"], 0)
+        self.assertEqual(ind_res["repair_scenario_overlap_count"], 0)
+        self.assertEqual(ind_res["holdout_ontology_alignment_pct"], 100.0)
+        self.assertTrue(ind_res["strictly_independent"])
+
+        tradeoff = evaluate_compression_task_tradeoff(self.codec)
+        self.assertEqual(len(tradeoff), 7)
+        toai_row = [r for r in tradeoff if "TOAI Demotic Wire" in r["method"]][0]
+        self.assertEqual(toai_row["syntax_parse_rate_pct"], 100.0)
+        self.assertEqual(toai_row["numeric_param_fidelity_pct"], 100.0)
+        self.assertEqual(toai_row["task_ast_execution_acc_pct"], 100.0)
+
 
 if __name__ == "__main__":
     unittest.main()
