@@ -37,7 +37,7 @@
 
 \Urlmuskip=0mu plus 1mu\relax
 \emergencystretch=3em
-\linespread{1.05}
+\linespread{1.03}
 
 % Compact section formatting
 \titleformat{\section}{\large\bfseries\sffamily\color{navyheader}}{\thesection.}{0.45em}{}[\vspace{0.5pt}\titlerule]
@@ -147,7 +147,7 @@ We position TOAI-elegant-lang relative to four established paradigms in agent co
 \label{tab:arch_comparison}
 \footnotesize
 \renewcommand{\arraystretch}{1.10}
-\begin{tabularx}{\textwidth}{L{3.2cm} L{2.2cm} C{1.7cm} C{1.8cm} C{1.8cm} Y}
+\begin{tabularx}{\textwidth}{L{3.2cm} L{2.2cm} C{1.8cm} C{1.9cm} C{1.9cm} Y}
 \toprule
 \rowcolor{navyheader}
 \textbf{\color{white}Communication Paradigm} &
@@ -345,7 +345,7 @@ As shown in Table \ref{tab:fair_bench} and Table \ref{tab:breakeven}, TOAI Demot
 \label{tab:fair_bench}
 \footnotesize
 \renewcommand{\arraystretch}{1.08}
-\begin{tabularx}{\textwidth}{L{3.5cm} R{1.4cm} R{1.5cm} R{1.5cm} R{1.8cm} C{1.8cm} Y}
+\begin{tabularx}{\textwidth}{L{3.5cm} R{1.4cm} R{1.5cm} R{1.5cm} R{1.8cm} C{1.9cm} Y}
 \toprule
 \rowcolor{navyheader}
 \textbf{\color{white}Format Representation} &
@@ -521,8 +521,8 @@ python3 -c '
 import hashlib, hmac, sys; sys.path.insert(0, "src"); from codec import ElegantCodec, UnknownSymbolError
 c = ElegantCodec()
 stmt = "@CTX:FX_HEDGE :: §X64 [pair:\"USD/JPY\", code:\"007\", note:\"a, b\", expr:\"x]y\", stop:150.5] -[p:0.99, c:0.01]-> §PROTO_HEALTH_ATTEST => §GENTLE_RESOURCE_SHARING"
-wire = str(c.encode(stmt, on_oov="error")); dec = c.decode(wire)
-assert dec["context"] == "FX_HEDGE" and c.encode(c.decode_to_sacred(wire)).wire == wire
+wire = str(c.encode(stmt, on_oov="error")); p = c.extract_payloads(wire)[0]
+assert c.decode(wire, expand_macros=False) == stmt and p["code"] == "007" and p["note"] == "a, b" and p["expr"] == "x]y"
 S0 = bytes.fromhex("7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069")
 H0 = hashlib.sha256(b"TOAI_TELEPATH_GENESIS_V541").digest()
 T1 = int.from_bytes(hmac.new(S0, H0 + b"\x002026-11-06T12:00:00Z", hashlib.sha256).digest()[:2], "big")
