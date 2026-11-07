@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-08T08:01:40.919106",
+  "updated_at": "2026-11-08T08:15:14.841248",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -569,8 +569,8 @@
       "name": "GAIA_ALTRUISTIC_SYNC_PRUNE",
       "expansion": "§GAIA_ECO_HEARTBEAT > { §ALTRUISTIC_VALUE_CREATION } => §LOGIC_CAUSAL_PRUNE",
       "description": "A compound macro that synchronizes multi-agent emotional alignment and sustainable value creation within the Gaia ecosystem, while pruning invalid causal branches based on probabilistic logic thresholds. / 命の地球エコシステムにおけるマルチエージェント間の情動的同期と持続的な価値創出を統合し、確率的論理閾値に基づいて無効な因果分岐を枝刈りする複合マクロ。",
-      "usage_count": 6,
-      "last_used_at": "2026-10-28T01:47:19.825566",
+      "usage_count": 7,
+      "last_used_at": "2026-11-08T08:14:33.849663",
       "created_at": "2026-10-25T08:01:33.083047",
       "v5_audited": true,
       "audited_by": "TOAI7",
@@ -2450,8 +2450,8 @@
       "name": "COMPOUND_CIRCUIT_RECOVERY_MACRO",
       "expansion": "§PROTO_CIRCUIT_BREAK > { §SYS_DIVERGENCE_ARBITER } => §PROTO_LOCK_RELEASE",
       "description": "Eng: A compound macro that triggers a circuit breaker upon divergence detection and safely releases the lock after arbitration. Jap: 発散検知時にサーキットブレーカーを作動させ、調停後に安全にロックを解放する複合マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-08T08:01:40.918902",
+      "usage_count": 2,
+      "last_used_at": "2026-11-08T08:13:53.623053",
       "v5_audited": true,
       "created_at": "2026-11-08T05:00:38.054464"
     },

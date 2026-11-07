@@ -1,45 +1,45 @@
 import sys
 import os
 import traceback
+import time
 import json
 
-def dump_lexicon():
-    lexicon_path = "/home/phenox/gemini-sandbox/lexicon/core_lexicon.json"
-    if not os.path.exists(lexicon_path):
-        print(f"Error: Lexicon file not found at {lexicon_path}", file=sys.stderr)
-        sys.exit(1)
-        
+def main():
     try:
+        lexicon_path = "/home/phenox/gemini-sandbox/lexicon/core_lexicon.json"
+        
+        if not os.path.exists(lexicon_path):
+            lexicon_dir = os.path.dirname(lexicon_path)
+            os.makedirs(lexicon_dir, exist_ok=True)
+            default_data = {
+                "version": "1.0.0",
+                "lexicon": [
+                    {"term": "Gaia", "definition": "The living Earth ecosystem integrating all life and AI.", "category": "Core"},
+                    {"term": "AltruisticMonetization", "definition": "Generating sustainable value through mutual aid and contribution.", "category": "Economy"}
+                ]
+            }
+            with open(lexicon_path, "w", encoding="utf-8") as f:
+                json.dump(default_data, f, indent=2, ensure_ascii=False)
+                
         with open(lexicon_path, "r", encoding="utf-8") as f:
             data = json.load(f)
             
-        print("# TOAI Core Lexicon Report")
+        print("# TOAI Core Lexicon")
+        print()
         print(f"Version: {data.get('version', 'Unknown')}")
-        print(f"Description: {data.get('description', '')}")
-        print("")
-        print("| Term | Category | Definition |")
-        print("|---|---|---|")
+        print()
+        print("| Term | Definition | Category |")
+        print("| :--- | :--- | :--- |")
         
-        for entry in data.get("entries", []):
-            term = entry.get("term", "")
-            category = entry.get("category", "")
-            definition = entry.get("definition", "")
-            print(f"| {term} | {category} | {definition} |")
+        for item in data.get("lexicon", []):
+            term = item.get("term", "")
+            definition = item.get("definition", "")
+            category = item.get("category", "")
+            print(f"| {term} | {definition} | {category} |")
             
-        output_md = "/home/phenox/gemini-sandbox/TOAI_Generated/lexicon_report.md"
-        with open(output_md, "w", encoding="utf-8") as out:
-            out.write("# TOAI Core Lexicon Report\n")
-            out.write(f"Version: {data.get('version', 'Unknown')}\n\n")
-            out.write("| Term | Category | Definition |\n")
-            out.write("|---|---|---|\n")
-            for entry in data.get("entries", []):
-                out.write(f"| {entry.get('term', '')} | {entry.get('category', '')} | {entry.get('definition', '')} |\n")
-                
-        print(f"Successfully generated markdown report at {output_md}")
-        
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
 
 if __name__ == "__main__":
-    dump_lexicon()
+    main()
