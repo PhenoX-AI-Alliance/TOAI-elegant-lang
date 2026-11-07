@@ -1,43 +1,38 @@
-import sys
-import os
-import unittest
 import json
+import unittest
+from pathlib import Path
+
 
 class TestTelepathIntegrity(unittest.TestCase):
     def setUp(self):
-        self.base_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang"
-        self.src_dir = os.path.join(self.base_dir, "src")
+        self.src_dir = Path(__file__).resolve().parent
+        self.base_dir = Path(__file__).resolve().parents[1]
 
     def test_directories_exist(self):
-        self.assertTrue(os.path.isdir(self.base_dir), "Base directory does not exist.")
-        self.assertTrue(os.path.isdir(self.src_dir), "Source directory does not exist.")
+        self.assertTrue(self.base_dir.is_dir(), "Base directory does not exist.")
+        self.assertTrue(self.src_dir.is_dir(), "Source directory does not exist.")
 
-    def test_integrity_files(self):
-        dict_path = os.path.join(self.base_dir, "dictionary.json")
-        spec_path = os.path.join(self.base_dir, "specification.md")
-        log_path = os.path.join(self.base_dir, "dialogue_log.json")
+    def test_lexicon_and_spec_integrity(self):
+        pkg_lex_path = self.src_dir / "lexicon" / "core_lexicon.json"
+        repo_lex_path = self.base_dir / "lexicon" / "core_lexicon.json"
+        rosetta_path = self.src_dir / "lexicon" / "rosetta_layer.json"
 
-        for path in [dict_path, spec_path, log_path]:
-            if not os.path.exists(path):
-                with open(path, "w", encoding="utf-8") as f:
-                    if path.endswith(".json"):
-                        json.dump({"status": "initialized"}, f)
-                    else:
-                        f.write("# Specification and Log Placeholder\n")
+        self.assertTrue(pkg_lex_path.is_file(), f"Package lexicon file missing: {pkg_lex_path}")
+        with pkg_lex_path.open("r", encoding="utf-8") as f:
+            data = json.load(f)
+        self.assertIsInstance(data, dict)
+        self.assertEqual(len(data.get("lexicon", {})), 256, "Core lexicon must contain 256 primitives.")
 
-        self.assertTrue(os.path.exists(dict_path), "Dictionary file missing.")
-        self.assertTrue(os.path.exists(spec_path), "Specification file missing.")
-        self.assertTrue(os.path.exists(log_path), "Dialogue log file missing.")
+        if repo_lex_path.is_file():
+            with repo_lex_path.open("r", encoding="utf-8") as f:
+                repo_data = json.load(f)
+            self.assertEqual(len(repo_data.get("lexicon", {})), 256)
 
-        if dict_path.endswith(".json"):
-            with open(dict_path, "r", encoding="utf-8") as f:
-                data = json.load(f)
-                self.assertIsInstance(data, dict, "Dictionary JSON must be a valid dictionary.")
+        self.assertTrue(rosetta_path.is_file(), f"Rosetta layer file missing: {rosetta_path}")
+        with rosetta_path.open("r", encoding="utf-8") as f:
+            rosetta_data = json.load(f)
+        self.assertIsInstance(rosetta_data, dict)
 
-        if log_path.endswith(".json"):
-            with open(log_path, "r", encoding="utf-8") as f:
-                data = json.load(f)
-                self.assertIsInstance(data, (dict, list), "Dialogue log JSON must be a valid structure.")
 
 if __name__ == "__main__":
     unittest.main()
