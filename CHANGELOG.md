@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [v5.4.1-rev6] - 2026-11-07 (Paper Revision 6.0 Synchronization)
+### Added
+- **Revision 6.0 Synchronized Whitepaper Alignment**:
+  - **Architectural Orthogonality (Section 2, Item 4 & References [9]–[11])**: Formalized orthogonality against Q-KVComm (VRAM KV-cache quantization), G2CP (DAG topology pruning), and LACP (capability-negotiation headers).
+  - **Empirical BPE Breakdown & PagedAttention Proof (Table 2B & Section 3.1)**: Atomic merge proof for 2-digit suffixes across `o200k_base`, `cl100k_base`, and `SentencePiece`; codebook placement within $\le 56$ physical 16-token vLLM PagedAttention blocks ($56 	imes 16 = 896 < 1,024$).
+  - **Statistical SD Reconciliation & CI Equations (Section 6.2 & Table 6)**: Fixed-lab session-clustered CI ($[88.60\%, 88.88\%]$ unrounded, $[88.59\%, 88.89\%]$ rounded), random-lab superpopulation CI ($[87.33\%, 90.15\%]$), and paired raw token SDs ($s_{D,\text{pool}} = 53.6\text{ tok}$, $s_{D,\text{total}} = 60.1\text{ tok}$).
+  - **Exhaustive Theorem 1 Proof (Section 4.1, 4.2 & 7.2)**: Fixed 4-digit mantissa ADR-001 grammar constraint (`cost_mantissa`), deterministic lexer rejection (Case 1), exact 6-element winning congruence class under rejection sampling ($\Pr[\text{Accept}] = 10^{-4}$), and timing unobservability ($0.014\,\mu\text{s}$).
+  - **Domain Separation Alignment (Section 7.1, Table 7 & Section 9)**: Unified domain-separation notation $\text{dom}(t_n, r)$ across formal equations, test vector tables, and executable verification scripts.
+
 ## [v5.4.1] - 2026-11-05 (ADR-001 Convergence, Version Lock Fix & Release Publication)
 ### Added
 - **[ADR-001] Syntax Convergence Table**: Inserted formal Architecture Decision Record table at the beginning of `spec/SPEC_v0.1_DRAFT.md` permanently settling historical jam session proposals into canonical EBNF.

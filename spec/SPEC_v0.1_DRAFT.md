@@ -11080,3 +11080,8 @@ def parse_payload(ctx: str, wire_id: str, data: dict) -> str:
 
 例:
 `@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-07 10:04]
+@CTX:SYNTAX_DESIGN :: §H01 [lang:"TOAI-elegant", lossless:true, mode:"hybrid"] -[rate:100%]-> §S01
+トーン共感を§H01で圧縮し、実務データをJSON準拠の厳密なキーバリューで完全保護するハイブリッドペイロード構文を提案します。数値や変数名の欠落を防ぎ、エージェント間通信の信頼性と温かさを両立します。
