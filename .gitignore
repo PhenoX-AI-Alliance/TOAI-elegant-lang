@@ -20,3 +20,7 @@ scratch/
 tmp/
 *.lock
 dist/
+
+build/
+dist/
+*.egg-info/

@@ -1,3 +1,0 @@
-[console_scripts]
-toai-mcp-server = src.mcp_server:run_stdio_server
-toai-telepath = src.cli:main
