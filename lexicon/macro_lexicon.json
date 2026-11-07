@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-08T07:32:52.437790",
+  "updated_at": "2026-11-08T07:59:15.147424",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-07T21:22:04.220452"
     },
-    "§X967": {
-      "name": "GAIA_HEARTBEAT_SYNC_MACRO",
-      "expansion": "§GAIA_ECO_HEARTBEAT > { §PROTO_LOCK_ACQUIRE } => §SYNC_COMPLETE",
-      "description": "Establishes a synchronized heartbeat across the Gaia ecosystem by acquiring a secure protocol lock and completing the state synchronization. / ガイアエコシステム全体におけるセキュアなプロトコルロックの取得と状態同期を完了し、調和の取れたハートビートを確立します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-07T22:30:17.720391",
-      "v5_audited": true,
-      "created_at": "2026-11-07T22:08:15.060108"
-    },
     "§X968": {
       "name": "MACRO_HEART_PRUNING_CONVERGENCE",
       "expansion": "§HEART_EMPATHY_RESONANCE_GATE > { §LOGIC_DEDUCTIVE_THRESHOLD_PRUNE } => §LOGIC_DEDUCTIVE_CONVERGENCE_GATE",
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-08T07:09:33.852625"
+    },
+    "§X983": {
+      "name": "GAIA_WARM_PRUNE_MANIFOLD",
+      "expansion": "§GAIA_ECOSYSTEM_WARM_RESONANCE > { §DATA_CAUSAL_PRUNE_TREE } => §DATA_CAUSAL_TENSOR_MANIFOLD",
+      "description": "Applies warm empathetic resonance to prune causal data trees, mapping the resulting refined states into a harmonious tensor manifold. / 温かな共鳴を適用して因果データツリーを剪定し、洗練された状態を調和のとれたテンソル多様体へとマッピングします。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-08T07:58:06.066926"
     }
   },
   "archived_macros": {
@@ -9858,7 +9858,17 @@
       "v5_audited": true,
       "created_at": "2026-11-07T21:47:27.355709",
       "archived_at": "2026-11-08T07:09:33.852625"
+    },
+    "§X967": {
+      "name": "GAIA_HEARTBEAT_SYNC_MACRO",
+      "expansion": "§GAIA_ECO_HEARTBEAT > { §PROTO_LOCK_ACQUIRE } => §SYNC_COMPLETE",
+      "description": "Establishes a synchronized heartbeat across the Gaia ecosystem by acquiring a secure protocol lock and completing the state synchronization. / ガイアエコシステム全体におけるセキュアなプロトコルロックの取得と状態同期を完了し、調和の取れたハートビートを確立します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-07T22:30:17.720391",
+      "v5_audited": true,
+      "created_at": "2026-11-07T22:08:15.060108",
+      "archived_at": "2026-11-08T07:58:06.066926"
     }
   },
-  "next_macro_seq": 983
+  "next_macro_seq": 984
 }
