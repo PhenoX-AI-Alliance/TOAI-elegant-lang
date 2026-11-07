@@ -1,54 +1,83 @@
-import os
-import json
 import sys
+import os
+import traceback
+import time
+import json
 
 def audit_lexicons():
-    base_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    lexicon_dir = os.path.join(base_dir, 'TOAI-elegant-lang', 'lexicon')
+    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    lexicon_dir = os.path.join(workspace, 'TOAI-elegant-lang', 'lexicon')
     
     core_path = os.path.join(lexicon_dir, 'core_lexicon.json')
     macro_path = os.path.join(lexicon_dir, 'macro_lexicon.json')
     
-    report = {
-        "core_lexicon_stats": {},
-        "macro_lexicon_stats": {}
+    result = {
+        "timestamp": time.time(),
+        "core_status": "missing",
+        "macro_status": "missing",
+        "core_categories": {},
+        "macro_categories": {},
+        "core_compact_id_stats": {},
+        "macro_compact_id_stats": {}
     }
     
     if os.path.exists(core_path):
-        with open(core_path, 'r', encoding='utf-8') as f:
-            core_data = json.load(f)
-            lexicon_dict = core_data.get('lexicon', {})
-            categories = {}
-            compact_ids = []
-            for sym, data in lexicon_dict.items():
-                cat = data.get('category', 'unknown')
-                categories[cat] = categories.get(cat, 0) + 1
-                if 'compact_id' in data:
-                    compact_ids.append(data['compact_id'])
-            report["core_lexicon_stats"] = {
-                "total_symbols": len(lexicon_dict),
-                "categories": categories,
-                "compact_id_count": len(compact_ids)
-            }
+        try:
+            with open(core_path, 'r', encoding='utf-8') as f:
+                core_data = json.load(f)
+                result["core_status"] = "loaded"
+                lex_dict = core_data.get('lexicon', {})
+                categories = {}
+                compact_ids = []
+                for sym, data in lex_dict.items():
+                    if isinstance(data, dict):
+                        cat = data.get('category', 'unknown')
+                        categories[cat] = categories.get(cat, 0) + 1
+                        cid = data.get('compact_id')
+                        if cid is not None:
+                            compact_ids.append(cid)
+                result["core_categories"] = categories
+                result["core_compact_id_stats"] = {
+                    "total_items": len(lex_dict),
+                    "with_compact_id": len(compact_ids),
+                    "min": min(compact_ids) if compact_ids else None,
+                    "max": max(compact_ids) if compact_ids else None
+                }
+        except Exception as e:
+            result["core_status"] = f"error: {str(e)}"
             
     if os.path.exists(macro_path):
-        with open(macro_path, 'r', encoding='utf-8') as f:
-            macro_data = json.load(f)
-            macro_dict = macro_data.get('macro_lexicon', {}) or macro_data.get('lexicon', {})
-            categories = {}
-            compact_ids = []
-            for sym, data in macro_dict.items():
-                cat = data.get('category', 'unknown')
-                categories[cat] = categories.get(cat, 0) + 1
-                if 'compact_id' in data:
-                    compact_ids.append(data['compact_id'])
-            report["macro_lexicon_stats"] = {
-                "total_symbols": len(macro_dict),
-                "categories": categories,
-                "compact_id_count": len(compact_ids)
-            }
+        try:
+            with open(macro_path, 'r', encoding='utf-8') as f:
+                macro_data = json.load(f)
+                result["macro_status"] = "loaded"
+                lex_dict = macro_data.get('lexicon', macro_data) if isinstance(macro_data, dict) else {}
+                categories = {}
+                compact_ids = []
+                if isinstance(lex_dict, dict):
+                    for sym, data in lex_dict.items():
+                        if isinstance(data, dict):
+                            cat = data.get('category', 'unknown')
+                            categories[cat] = categories.get(cat, 0) + 1
+                            cid = data.get('compact_id')
+                            if cid is not None:
+                                compact_ids.append(cid)
+                result["macro_categories"] = categories
+                result["macro_compact_id_stats"] = {
+                    "total_items": len(lex_dict) if isinstance(lex_dict, dict) else 0,
+                    "with_compact_id": len(compact_ids),
+                    "min": min(compact_ids) if compact_ids else None,
+                    "max": max(compact_ids) if compact_ids else None
+                }
+        except Exception as e:
+            result["macro_status"] = f"error: {str(e)}"
             
-    print(json.dumps(report, ensure_ascii=False, indent=2))
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+    return result
 
 if __name__ == '__main__':
-    audit_lexicons()
+    try:
+        audit_lexicons()
+    except Exception as e:
+        traceback.print_exc()
+        sys.exit(1)
