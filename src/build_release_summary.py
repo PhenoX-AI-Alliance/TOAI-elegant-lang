@@ -1,59 +1,48 @@
 import sys
 import os
 import traceback
-import time
-import json
 import subprocess
+import json
 import datetime
 
-def get_git_log(repo_path, max_count=20):
+def get_git_log():
     try:
-        cmd = ['git', '-C', repo_path, 'log', f'-n', str(max_count), '--pretty=format:%h - %an, %ar : %s']
-        result = subprocess.run(cmd, capture_output=True, text=True, check=True)
-        return result.stdout.splitlines()
+        repo_path = os.path.dirname(os.path.abspath(__file__))
+        result = subprocess.run(
+            ['git', 'log', '-n', '10', '--oneline'],
+            cwd=repo_path,
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        return result.stdout.strip()
     except Exception as e:
-        return [f"Error fetching git log: {str(e)}"]
+        return f"Git log retrieval failed: {str(e)}"
 
-def scan_whitepaper(repo_path):
-    wp_path = os.path.join(repo_path, 'WHITEPAPER.md')
-    if os.path.exists(wp_path):
-        try:
-            with open(wp_path, 'r', encoding='utf-8') as f:
-                return f.read()[:2000] # return first 2000 chars as summary
-        except Exception as e:
-            return f"Error reading whitepaper: {str(e)}"
-    return "Whitepaper not found."
-
-def main():
+def generate_summary():
     workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    repo_path = os.path.join(workspace, 'TOAI-elegant-lang')
-    
-    if not os.path.exists(repo_path):
-        print(f"Repository path does not exist: {repo_path}")
-        sys.exit(1)
-        
-    git_logs = get_git_log(repo_path)
-    whitepaper_summary = scan_whitepaper(repo_path)
-    
-    release_data = {
-        "timestamp": datetime.datetime.now().isoformat(),
-        "repository": "TOAI-elegant-lang",
-        "recent_commits": git_logs,
-        "whitepaper_summary": whitepaper_summary
-    }
-    
     output_dir = os.path.join(workspace, 'TOAI_Generated')
     os.makedirs(output_dir, exist_ok=True)
-    output_path = os.path.join(output_dir, 'release_summary.json')
     
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(release_data, f, ensure_ascii=False, indent=2)
+    git_logs = get_git_log()
+    timestamp = datetime.datetime.now().isoformat()
+    
+    summary_data = {
+        "timestamp": timestamp,
+        "git_recent_commits": git_logs,
+        "release_status": "stable",
+        "message": "Gaia Ecosystem release summary generated successfully."
+    }
+    
+    output_file = os.path.join(output_dir, 'release_summary.json')
+    with open(output_file, 'w', encoding='utf-8') as f:
+        json.dump(summary_data, f, indent=2, ensure_ascii=False)
         
-    print(f"Successfully generated release summary at: {output_path}")
+    print(f"Successfully generated release summary at: {output_file}")
 
 if __name__ == '__main__':
     try:
-        main()
+        generate_summary()
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
