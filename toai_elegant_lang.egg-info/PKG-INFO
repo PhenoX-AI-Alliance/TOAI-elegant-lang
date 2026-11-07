@@ -1,4 +1,4 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.4
 Name: toai-elegant-lang
 Version: 5.4.2
 Summary: Project Telepath: High-Density Tri-Script Rosetta A2A & MCP Wire Protocol for Autonomous AI Agents
@@ -13,6 +13,7 @@ Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
 Requires-Python: >=3.9
 Description-Content-Type: text/markdown
 License-File: LICENSE
+Dynamic: license-file
 
 # 🏛️ TOAI-elegant-lang (Project Telepath v5.4.2)
 
@@ -77,7 +78,7 @@ Reproducible via `python3 benchmarks/fair_bench.py` (uses `tiktoken` `o200k_base
 | **4. Simplified Flat Template** | `34.5 tok` | `+112.3%` (lossy) | **No** (drops causal AST & fallbacks) | N/A (lossy) | N/A (lossy) |
 | **5. TOAI Demotic Wire** | **`73.2 tok`** | **BASELINE** | **Yes (Full Causal AST + Lossless Params)** | — | — |
 
-*Last Auto-Synced: `2026-11-07 19:20 JST` via [`sync_whitepaper_metrics.py`](./src/sync_whitepaper_metrics.py)*
+*Last Auto-Synced: `2026-11-07 19:26 JST` via [`sync_whitepaper_metrics.py`](./src/sync_whitepaper_metrics.py)*
 
 ---
 

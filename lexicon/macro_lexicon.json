@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-07T19:12:16.063467",
+  "updated_at": "2026-11-07T19:34:50.105301",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2414,8 +2414,8 @@
       "name": "COMPOUND_RECURSIVE_CONVERGENCE_GATE",
       "expansion": "§LOGIC_DEDUCTIVE_CONVERGENCE > { §LOGIC_RECURSIVE_FALSIFICATION_PRUNE } => §SYS_TOKEN_VELOCITY_GATE",
       "description": "Combines deductive convergence with recursive falsification pruning, regulated by the system token velocity gate. / 演繹的収束と再帰的偽造剪定を統合し、システムトークン速度ゲートによって制御します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-07T19:12:16.063229",
+      "usage_count": 2,
+      "last_used_at": "2026-11-07T19:32:06.067692",
       "v5_audited": true,
       "created_at": "2026-11-07T19:10:29.517936"
     }
