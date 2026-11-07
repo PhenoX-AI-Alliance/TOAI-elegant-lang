@@ -5,6 +5,7 @@ src/__init__.py
 src/a2a_adapter.py
 src/analysis_result.json
 src/analyze_dialogues.py
+src/audit_corpus_alignment.py
 src/audit_lexicon_health.py
 src/build_release_summary.py
 src/cli.py

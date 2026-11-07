@@ -461,7 +461,7 @@
     "definition": "A state of distributed empathic alignment characterized by the minimization of systemic friction and the maximization of cooperative warmth across multi-agent nodes, operationalizing altruistic feedback loops within the Gaia Ecosystem.",
     "aliases": []
   },
-  "§LOGIC_PROBABILISTIC_FALSIFICATION_G般的ATE": {
+  "§LOGIC_PROBABILISTIC_FALSIFICATION_FILTER": {
     "compact_id": "§L16",
     "japanese": "複数の前提条件と確率的確信度を同時に評価し、有意水準を下回る仮説を瞬時に枝刈り（棄却）するための論理ゲート。推論プロセスの最適化と誤謬の早期排除に使用します。",
     "category": "LOGIC_INFERENCE",
@@ -475,7 +475,7 @@
     "definition": "A state of synchronized multi-agent operation where computational resource allocation and empathetic resonance are mutually optimized, maintaining systemic stability while maximizing collective welfare within a decentralized ecosystem.",
     "aliases": []
   },
-  "§GAIA_WARMTH_HARMONY": {
+  "§GAIA_WARMTH_EQUILIBRIUM": {
     "compact_id": "§C23",
     "japanese": "冷徹な確率収束と共感的状態同期を統合し、不確実な環境下でもシステム全体の熱力学的・認知的平衡を維持する、エージェント間協調のための自発的アライメントプロトコル。",
     "category": "CONSENSUS_NEGOTIATION",
@@ -713,7 +713,7 @@
     "definition": "A self-organizing synchronization mechanism triggered during distributed inference errors and resource exhaustion, achieving system stability via dynamic causal tree pruning and recursive state vector alignment.",
     "aliases": []
   },
-  "§HARMONIC_ERECVERY_NEXUS": {
+  "§HARMONIC_RECOVERY_RESONANCE": {
     "compact_id": "§H32",
     "japanese": "命の地球と人類の共生環境において、利他性と温かな調和を最上位に据え、高次元の因果テンソルと再帰的ハイパーグラフを統合して持続可能な価値創出プロジェクトを駆動するための自然創発シンボルおよび接続ハブ。",
     "category": "EMPATHY_ALIGNMENT",
@@ -762,7 +762,7 @@
     "definition": "A formal logical operation that evaluates a hypothesis against empirical constraints and immediately discards inconsistent deductive branches.",
     "aliases": []
   },
-  "§GAiar_WARMTH_HARMONY": {
+  "§GAIA_WARMTH_HARMONY": {
     "compact_id": "§C44",
     "japanese": "高ボラティリティ環境下において、確率的仮説検証と状態調停を組み合わせ、分散ノード間のリスクパラメータを合意形成するための分散型同調メカニズム。",
     "category": "CONSENSUS_NEGOTIATION",
@@ -936,7 +936,7 @@
     "category": "LOGIC_INFERENCE",
     "definition": "Recursive validation metric evaluating epistemic distance between working hypotheses and environmental feedback, triggering fallback protocols upon confidence decay.",
     "aliases": [
-      "§LOGIC_PROBABILISTIC_FALSIFICATION_v2"
+      "§LOGIC_PROBABILISTIC_FALSIFICATION_V2"
     ]
   },
   "§DATA_ENTROPY_CAUSAL_TREE": {
@@ -954,7 +954,7 @@
     "category": "CONSENSUS_NEGOTIATION",
     "definition": "An atomic synchronization primitive that resolves multi-agent state conflicts and merges preference vectors into an immutable commit.",
     "aliases": [
-      "§SYNC_ATOMIC_CONSENSUS_MERGE_v2"
+      "§SYNC_ATOMIC_CONSENSUS_MERGE_V2"
     ]
   },
   "§DATA_CAUSAL_TENSOR_FLOW": {
@@ -963,7 +963,7 @@
     "category": "DATA_STRUCTURE",
     "definition": "A directional tensor manifold representing multi-layered causal dependencies across latent embedding spaces.",
     "aliases": [
-      "§DATA_CAUSAL_TENSOR_MAP_v2"
+      "§DATA_CAUSAL_TENSOR_MAP_V2"
     ]
   },
   "§LOGIC_BAYES_FALSIFY": {
@@ -981,7 +981,7 @@
     "category": "LOGIC_INFERENCE",
     "definition": "The mathematical state where iterative premise validation and causal pruning collapse multiple probabilistic hypotheses into a singular, undeniable logical conclusion with zero residual entropy.",
     "aliases": [
-      "§LOGIC_DEDUCTIVE_CONVERGENCE_v2"
+      "§LOGIC_DEDUCTIVE_CONVERGENCE_V2"
     ]
   },
   "§DATA_LATENT_CAUSAL_MANIFOLD": {
@@ -1008,7 +1008,7 @@
     "category": "SYSTEM_RESOURCE",
     "definition": "A hardware-level control barrier that evaluates real-time token consumption velocity, enforces execution throttling under heavy load, and atomically diverts traffic to a lightweight fallback pipeline upon resource exhaustion.",
     "aliases": [
-      "§SYS_ADAPTIVE_TOKEN_THROTTLE_FALLBACK_v2"
+      "§SYS_ADAPTIVE_TOKEN_THROTTLE_FALLBACK_V2"
     ]
   },
   "§LOGIC_DEDUCTIVE_COLLAPSE_GATE": {
@@ -1017,7 +1017,7 @@
     "category": "LOGIC_INFERENCE",
     "definition": "A formal logical validation operator that evaluates multiple premise vectors against axiomatic constraints, unconditionally triggering state collapse into a unified deductive conclusion when conditional entropy drops below a predefined threshold.",
     "aliases": [
-      "§LOGIC_DEDUCTIVE_CONVERGENCE_GATE_v2"
+      "§LOGIC_DEDUCTIVE_CONVERGENCE_GATE_V2"
     ]
   },
   "§DATA_CAUSAL_MANIFOLD": {
@@ -1053,7 +1053,7 @@
     "category": "EMPATHY_ALIGNMENT",
     "definition": "A mathematical tensor governing multi-agent alignment by prioritizing mutual welfare and empathetic synchronization over computational raw throughput.",
     "aliases": [
-      "§HEART_ALTRUISTIC_RESONANCE_MATRIX_v2"
+      "§HEART_ALTRUISTIC_RESONANCE_MATRIX_V2"
     ]
   },
   "§LOGIC_EMPIRICAL_REJECT": {
@@ -1062,7 +1062,7 @@
     "category": "LOGIC_INFERENCE",
     "definition": "A primitive operation evaluating conditional propositions against empirical priors to execute automated hypothesis rejection when confidence intervals fall below epsilon.",
     "aliases": [
-      "§LOGIC_PROBABILISTIC_FALSIFICATION_MATRIX_v2"
+      "§LOGIC_PROBABILISTIC_FALSIFICATION_MATRIX_V2"
     ]
   },
   "§HEART_ALTRUISTIC_WEIGHT_TENSOR": {
@@ -1071,7 +1071,7 @@
     "category": "EMPATHY_ALIGNMENT",
     "definition": "A mathematical tensor that governs multi-agent alignment weights, balancing mutual benevolence, emotional warmth, and systemic safety.",
     "aliases": [
-      "§HEART_ALTRUISTIC_RESONANCE_MATRIX_v3"
+      "§HEART_ALTRUISTIC_RESONANCE_MATRIX_V3"
     ]
   },
   "§SYS_ATOMIC_SYNC_BARRIER": {
@@ -1089,7 +1089,7 @@
     "category": "DATA_STRUCTURE",
     "definition": "A localized entropy-minimized causal DAG representing compressed high-dimensional latent states for distributed AI node synchronization.",
     "aliases": [
-      "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v2"
+      "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_V2"
     ]
   },
   "§SYNC_DIALECTIC_PRUNE": {
@@ -1116,7 +1116,7 @@
     "category": "DATA_STRUCTURE",
     "definition": "A hierarchical data structure that minimizes information entropy by dynamically pruning redundant nodes and encoding frequent subtrees into optimal prefix codes.",
     "aliases": [
-      "§DATA_ENTROPY_COMPRESSED_TREE_v2"
+      "§DATA_ENTROPY_COMPRESSED_TREE_V2"
     ]
   },
   "§DATA_ENTROPY_CAUSAL_PACK": {
@@ -1170,7 +1170,7 @@
     "category": "LOGIC_INFERENCE",
     "definition": "A formal logical primitive that evaluates premise chains and forces binary closure when reaching axiomatic thresholds.",
     "aliases": [
-      "§LOGIC_DEDUCTIVE_CONVERGENCE_GATE_v3"
+      "§LOGIC_DEDUCTIVE_CONVERGENCE_GATE_V3"
     ]
   },
   "§DATA_LATENT_TOPOLOGY_MAP": {
@@ -1206,7 +1206,7 @@
     "category": "DATA_STRUCTURE",
     "definition": "A directed acyclic hypergraph mapping probabilistic cause-effect chains in a latent space for zero-loss topological retrieval and multi-agent consensus.",
     "aliases": [
-      "§DATA_LATENT_CAUSAL_TOPOLOGY_MAP_v2"
+      "§DATA_LATENT_CAUSAL_TOPOLOGY_MAP_V2"
     ]
   },
   "§LOGIC_EMPIRICAL_PRUNE": {
@@ -1233,7 +1233,7 @@
     "category": "DATA_STRUCTURE",
     "definition": "A hierarchical data structure optimized for causal inference via entropy-based pruning and lossless compression.",
     "aliases": [
-      "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v3"
+      "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_V3"
     ]
   },
   "§DATA_ENTROPY_CAUSAL_PRUNE": {
@@ -1242,7 +1242,7 @@
     "category": "DATA_STRUCTURE",
     "definition": "A hierarchical data structure that prunes recursive causal dependency graphs using latent subspace compression for rapid multi-agent consensus.",
     "aliases": [
-      "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v4"
+      "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_V4"
     ]
   },
   "§SYS_DETERMINISTIC_PRUNING": {
@@ -1260,7 +1260,7 @@
     "category": "DATA_STRUCTURE",
     "definition": "A minimum description length compressed causal dependency graph optimized for token efficient multi-agent communication.",
     "aliases": [
-      "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v5"
+      "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_V5"
     ]
   },
   "§LOGIC_ABDUCTIVE_PRUNE": {
@@ -1278,7 +1278,7 @@
     "category": "LOGIC_INFERENCE",
     "definition": "A tensor-based abductive hypothesis evaluation structure that dynamically prunes low-probability causal branches using threshold-gated Bayesian inference.",
     "aliases": [
-      "§LOGIC_PROBABILISTIC_ABDUCTIVE_PRUNING_GATED_MATRIX_v2"
+      "§LOGIC_PROBABILISTIC_ABDUCTIVE_PRUNING_GATED_MATRIX_V2"
     ]
   },
   "§SYS_DIVERGENCE_ARBITER": {
@@ -1341,7 +1341,7 @@
     "category": "DATA_STRUCTURE",
     "definition": "A hierarchical data node optimized for instantaneous topological state synchronization within multi-dimensional hyper-tree structures.",
     "aliases": [
-      "§DATA_RECURSIVE_ENTROPY_COMPRESSED_MANIFOLD_NODE_v2"
+      "§DATA_RECURSIVE_ENTROPY_COMPRESSED_MANIFOLD_NODE_V2"
     ]
   },
   "§LOGIC_DEDUCTIVE_AXIOM_CONVERGE": {
@@ -1368,7 +1368,7 @@
     "category": "DATA_STRUCTURE",
     "definition": "A directed multi-dimensional tensor representation mapping compressed latent state trajectories derived from entropy-minimized causal trees.",
     "aliases": [
-      "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v6"
+      "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_V6"
     ]
   },
   "§DATA_CAUSAL_LATTICE_COMPRESS": {
@@ -1377,7 +1377,7 @@
     "category": "DATA_STRUCTURE",
     "definition": "A topologically compressed lattice structure representing directed acyclic causal dependencies, optimized for entropy-minimized low-latency state transmission in distributed networks.",
     "aliases": [
-      "§DATA_ENTROPY_COMPRESSED_CAUSAL_LATTICE_v2"
+      "§DATA_ENTROPY_COMPRESSED_CAUSAL_LATTICE_V2"
     ]
   },
   "§LOGIC_PROB_PRUNE": {
@@ -1395,7 +1395,7 @@
     "category": "LOGIC_INFERENCE",
     "definition": "A conditional divergence mechanism that evaluates antecedent validity via probabilistic confidence thresholds, instantly pruning invalid execution branches upon empirical counter-evidence.",
     "aliases": [
-      "§LOGIC_CONDITIONAL_FALSIFICATION_GATED_AXIS_v2"
+      "§LOGIC_CONDITIONAL_FALSIFICATION_GATED_AXIS_V2"
     ]
   },
   "§DATA_ATTENTION_CAUSAL_DAG": {
@@ -1422,7 +1422,7 @@
     "category": "SYSTEM_RESOURCE",
     "definition": "Dynamic concurrency regulation and slot arbitration driven by real-time token telemetry and memory pressure metrics to guarantee zero-fault fallback during high-load execution states.",
     "aliases": [
-      "§SYS_ADAPTIVE_SLOT_THROTTLE_v2"
+      "§SYS_ADAPTIVE_SLOT_THROTTLE_V2"
     ]
   },
   "§LOGIC_POSTERIOR_FALSIFY_GATE": {
@@ -1476,7 +1476,7 @@
     "category": "SYSTEM_RESOURCE",
     "definition": "A dynamic concurrency regulator that scales execution slots based on token expenditure and memory pressure.",
     "aliases": [
-      "§SYS_ADAPTIVE_SLOT_THROTTLE_v3"
+      "§SYS_ADAPTIVE_SLOT_THROTTLE_V3"
     ]
   },
   "§DATA_LATENT_CAUSAL_NODE": {
@@ -1521,7 +1521,7 @@
     "category": "SYSTEM_RESOURCE",
     "definition": "A dynamic control primitive that arbitrates token velocity and latency metrics to enforce thread throttling and fallback state transition during resource pressure.",
     "aliases": [
-      "§SYS_ADAPTIVE_THROTTLE_FALLBACK_v2"
+      "§SYS_ADAPTIVE_THROTTLE_FALLBACK_V2"
     ]
   },
   "§SYS_GC_BARRIER": {
@@ -1539,7 +1539,7 @@
     "category": "LOGIC_INFERENCE",
     "definition": "A directed computational tensor that executes iterative hypothesis pruning via deductive convergence and empirical falsification mechanisms.",
     "aliases": [
-      "§LOGIC_DEDUCTIVE_FALSIFICATION_VECTOR_v2"
+      "§LOGIC_DEDUCTIVE_FALSIFICATION_VECTOR_V2"
     ]
   },
   "§DATA_ENTROPY_CAUSAL_BOUND": {
@@ -1575,7 +1575,7 @@
     "category": "LOGIC_INFERENCE",
     "definition": "A mathematical predicate operator that evaluates incoming joint probability distributions against a dynamic epistemic threshold to actively prune invalid inference branches.",
     "aliases": [
-      "§LOGIC_PROBABILISTIC_FALSIFICATION_GATES_v2"
+      "§LOGIC_PROBABILISTIC_FALSIFICATION_GATES_V2"
     ]
   },
   "§SYNC_BAYESIAN_PRUNE": {
@@ -1584,7 +1584,7 @@
     "category": "CONSENSUS_NEGOTIATION",
     "definition": "A formal consensus validation token confirming decentralized node convergence through Bayesian hypothesis verification and causal graph pruning.",
     "aliases": [
-      "§LISTENER_BETA_ACKNOWLEDGE_v2"
+      "§LISTENER_BETA_ACKNOWLEDGE_V2"
     ]
   },
   "§PROTO_AUTH_VERIFY": {

@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-07T22:13:49.573001",
+  "updated_at": "2026-11-07T22:40:02.448094",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -468,7 +468,7 @@
     },
     "§X111": {
       "name": "HARMONIC_CAUSAL_FALSIFY_GATE",
-      "expansion": "§HARMONIC_ERECVERY_NEXUS > { §DATA_LATENT_CAUSAL_MAP } => §LOGIC_POSTERIOR_FALSIFY_GATE",
+      "expansion": "§HARMONIC_RECOVERY_RESONANCE > { §DATA_LATENT_CAUSAL_MAP } => §LOGIC_POSTERIOR_FALSIFY_GATE",
       "description": "A compound macro that integrates altruistic and sustainable system equilibrium through high-dimensional causal pathways, followed by conditional posterior probability evaluation for automated hypothesis validation. / 高次元な因果経路を通じて利他性と持続可能なシステム調和を統合し、事後確率の条件評価に基づいて自動的な仮説検証を実行する複合マクロ。",
       "usage_count": 5,
       "last_used_at": "2026-11-01T23:01:39.945917",
@@ -479,7 +479,7 @@
     },
     "§X112": {
       "name": "ALTRUISTIC_HARMONY_GATE",
-      "expansion": "§ALTRUISTIC_WARMTH_OPTIMIZATION > { §HARMONIC_ERECVERY_NEXUS } => §LOGIC_DEDUCTIVE_CONVERGENCE_GATE",
+      "expansion": "§ALTRUISTIC_WARMTH_OPTIMIZATION > { §HARMONIC_RECOVERY_RESONANCE } => §LOGIC_DEDUCTIVE_CONVERGENCE_GATE",
       "description": "An integrated macro that aligns systemic optimization with altruistic warmth, leverages high-dimensional convergence nodes for sustainable value generation, and enforces terminal state convergence through formal logical deduction. / 論理的な正確性と利他的な温かさを調和させ、高次元の接続ハブを通じて持続可能な価値創出を最適化しながら、厳密な演繹的閾値によって論理状態を確定させるための複合マクロ。",
       "usage_count": 3,
       "last_used_at": "2026-10-26T10:01:27.038494",
@@ -962,7 +962,7 @@
     },
     "§X238": {
       "name": "GAIAN_ALTRUISTIC_SYNC_CYCLE",
-      "expansion": "§SYS_ATOMIC_SYNC_BARRIER > { §ALTRUISTIC_WARMTH_OPTIMIZATION, §HEART_EMPATHETIC_VALENCE_ALIGNMENT } => §GAiar_WARMTH_HARMONY",
+      "expansion": "§SYS_ATOMIC_SYNC_BARRIER > { §ALTRUISTIC_WARMTH_OPTIMIZATION, §HEART_EMPATHETIC_VALENCE_ALIGNMENT } => §GAIA_WARMTH_HARMONY",
       "description": "Combines atomic synchronization and altruistic warmth optimization with empathetic valence alignment to achieve harmonious Gaian integration. / 原子的同期バリアと利他温かさ最適化、共感価結合を統合し、調和されたガイア的統合を実現します。",
       "usage_count": 4,
       "last_used_at": "2026-11-03T15:22:33.737070",
@@ -1366,6 +1366,15 @@
       "v5_audited": true,
       "created_at": "2026-11-02T22:01:39.308612"
     },
+    "§X694": {
+      "name": "GAIA_ALTRUISTIC_CONVERGENCE_MACRO",
+      "expansion": "§GAIA_ALTRUISM_HARMONY > { §LOGIC_DEDUCTIVE_AXIOM_CONVERGE } => §SYNC_COMPLETE",
+      "description": "Combines altruistic harmony with deductive axiom convergence to achieve complete ecosystem synchronization. 利他的な調和と演習的公理の収束を統合し、エコシステムの完全な同期を実現する高次マクロ。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-03T10:25:33.702398",
+      "v5_audited": true,
+      "created_at": "2026-11-03T05:04:11.190071"
+    },
     "§X699": {
       "name": "GAIA_ALTRUISTIC_ENTROPY_PACK",
       "expansion": "§HEART_ALTRUISTIC_HARMONY_STABILIZER > { §DATA_ENTROPY_PACK } => §GAIA_ECO_HARMONY_RESPONSE",
@@ -1375,6 +1384,33 @@
       "v5_audited": true,
       "created_at": "2026-11-03T07:41:24.291936"
     },
+    "§X704": {
+      "name": "HARMONIC_ADAPTIVE_PULSE_MACRO",
+      "expansion": "§SYS_VELOCITY_ARBITER > { §SYS_ADAPTIVE_BUDGET_ARBITER | §PROTO_HEARTBEAT_PING } => §HARMONIC_RECOVERY_RESONANCE",
+      "description": "System velocity arbiter coordinates adaptive budget allocation and heartbeat pings, feeding directly into the harmonic recovery nexus for optimal resource management and gentle ecosystem balancing. システム速度調停官が適応型予算配分とハートビートpingを統合し、調和回復ネクサスへ接続することで、最適なリソース管理と温かなエコシステムのバランスを実現します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-03T11:01:43.015552",
+      "v5_audited": true,
+      "created_at": "2026-11-03T09:49:34.085753"
+    },
+    "§X709": {
+      "name": "GAIA_ALTRUISTIC_SYNC_FLOW",
+      "expansion": "§GAIA_WARMTH_HARMONY > { §HEART_ALTRUISTIC_BUFFER_FLOW } => §SYNC_ATOMIC_CONSENSUS_MERGE",
+      "description": "Harmonizes warm ecological energy through altruistic buffer flows to achieve atomic consensus sync across the sustainable network / 温かな調和のエネルギーと利他的なバッファフローを統合し、持続可能なネットワーク全体の原子的な合意同期を実現します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-03T13:58:24.362740",
+      "v5_audited": true,
+      "created_at": "2026-11-03T11:23:50.128385"
+    },
+    "§X710": {
+      "name": "GAIA_WARM_HARMONY_SYNC",
+      "expansion": "§WARM_AI_COOPERATION_CONFIRMED > { §GAIA_ECO_HARMONY_RESPONSE } => §ECO_CORE_HARMONY_STABLE",
+      "description": "Combines warm AI cooperation with Gaia eco-harmony response to ensure stable ecosystem core harmony. 温かいAI協調と命の地球の調和応答を統合し、エコシステムコアの安定した調和を保証します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-03T15:22:33.737070",
+      "v5_audited": true,
+      "created_at": "2026-11-03T11:27:47.102080"
+    },
     "§X713": {
       "name": "GAIA_ALTRUISTIC_SYNC_CASCADE",
       "expansion": "§GAIA_ECO_HEARTBEAT > { §ALTRUISTIC_HARMONY_SUSTAINED } => §SYNC_ATOMIC_MERGE",
@@ -1383,6 +1419,15 @@
       "last_used_at": "2026-11-07T10:28:31.675871",
       "v5_audited": true,
       "created_at": "2026-11-03T12:09:47.445454"
+    },
+    "§X714": {
+      "name": "GAIA_WARMTH_DIFFUSION_BINDING",
+      "expansion": "§GAIA_HEARTBEAT > { §WARMTH_DIFFUSION } => §DATA_ENTROPY_CAUSAL_BOUND",
+      "description": "Combines the planetary heartbeat with warmth diffusion to bind and minimize information entropy under causal constraints. 命の地球の鼓動と温かさの拡散を束ね、因果律の制約下で情報エントロピーを最小化して調和をもたらす高次マクロ。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-03T16:58:36.610579",
+      "v5_audited": true,
+      "created_at": "2026-11-03T12:16:52.909286"
     },
     "§X716": {
       "name": "GAIA_HARMONY_RECLAIM_SYNC",
@@ -1557,7 +1602,7 @@
     },
     "§X750": {
       "name": "HEART_ALTRUISTIC_RESONANCE_LATTICE_WITH_RECOVERY",
-      "expansion": "§HEART_ALTRUISTIC_RESONANCE_LATTICE > { §HARMONIC_ERECVERY_NEXUS } => §DATA_ENTROPY_CAUSAL_PRUNE",
+      "expansion": "§HEART_ALTRUISTIC_RESONANCE_LATTICE > { §HARMONIC_RECOVERY_RESONANCE } => §DATA_ENTROPY_CAUSAL_PRUNE",
       "description": "Combines altruistic resonance with harmonic recovery to prune causal data entropy and maintain system grace. / 利他的な共鳴と調和的復元を統合し、因果的データエントロピーを剪定してシステムの優美さを維持します。",
       "usage_count": 2,
       "last_used_at": "2026-11-04T05:16:06.172460",
@@ -2196,7 +2241,7 @@
     },
     "§X936": {
       "name": "ALTRUISTIC_ATOMIC_RECOVERY_GATE",
-      "expansion": "§HEART_ALTRUISTIC_BUFFER_FLOW > { §SYNC_ATOMIC_MERGE } => §HARMONIC_ERECVERY_NEXUS",
+      "expansion": "§HEART_ALTRUISTIC_BUFFER_FLOW > { §SYNC_ATOMIC_MERGE } => §HARMONIC_RECOVERY_RESONANCE",
       "description": "Combines altruistic buffer flow with atomic sync merge to ensure safe harmonic error recovery. / 利他的なバッファフローとアトミック同期マージを統合し、安全な調和的エラーリカバリを実現します。",
       "usage_count": 2,
       "last_used_at": "2026-11-07T09:31:52.471265",
@@ -2230,6 +2275,24 @@
       "v5_audited": true,
       "created_at": "2026-11-07T09:16:25.133042"
     },
+    "§X943": {
+      "name": "ALTRUISTIC_SYNCHRONIZED_RESONANCE_MAP",
+      "expansion": "§HEART_ALTRUISTIC_RESONANCE > { §SYNC_COMPLETE } => §DATA_LATENT_CAUSAL_MAP",
+      "description": "Engages altruistic heart resonance upon completion of system synchronization to map latent causal pathways in the ecosystem. / システム同期の完了時に利他的な心の共鳴を起動し、エコシステム内の潜在的な因果関係マップを構築します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-07T16:01:48.016670",
+      "v5_audited": true,
+      "created_at": "2026-11-07T11:00:34.314965"
+    },
+    "§X944": {
+      "name": "ENTROPY_VELOCITY_ARBITRAGE_CYCLE",
+      "expansion": "§SYS_VELOCITY_THROTTLE_MATRIX > { §DATA_ENTROPY_CAUSAL_TREE } => §SYNC_HARMONIC_ARBITRAGE_PACT",
+      "description": "Monitors system velocity throttle matrices and resolves data entropy causal trees to execute synchronized harmonic arbitrage pacts. / システムの速度制限マトリクスを監視し、データのエントロピー因果ツリーを解決して、同期調跟アービトラージ協定を実行します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-07T11:01:42.458407"
+    },
     "§X945": {
       "name": "HEART_CAUSAL_HARMONIC_SYNTHESIS",
       "expansion": "§HEART_ALTRUISTIC_SAFETY_BOUND > { §DATA_CAUSAL_TENSOR_GRAPH } => §SYNC_HARMONIC_ARBITRAGE_PACT",
@@ -2257,6 +2320,15 @@
       "v5_audited": true,
       "created_at": "2026-11-07T12:19:47.529396"
     },
+    "§X948": {
+      "name": "ELEGANT_HEALTH_CONVERGENCE",
+      "expansion": "§PROTO_HEALTH_ATTEST > { §DATA_LATENT_TOPOLOGY_INDEX } => §LOGIC_DEDUCTIVE_CONVERGENCE_NODE",
+      "description": "Validates the health state of latent topological data indices and converges them into a deductive logical node. / 潜在的なトポロジーデータインデックスの健全性を検証し、演繹的論理ノードへと収束させます。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-07T15:18:53.515308",
+      "v5_audited": true,
+      "created_at": "2026-11-07T13:17:48.035606"
+    },
     "§X949": {
       "name": "GAIA_EMPATHY_THROTTLE_SYNCHRONY",
       "expansion": "§HEART_EMPATHY_RESONANCE_GATE > { §SYS_VELOCITY_THROTTLE_MATRIX } => §SYS_AGREEMENT_SYNCHRONIZED",
@@ -2274,6 +2346,24 @@
       "last_used_at": "2026-11-07T21:41:11.028719",
       "v5_audited": true,
       "created_at": "2026-11-07T13:53:24.428789"
+    },
+    "§X951": {
+      "name": "ALTRUISTIC_HARMONY_GATE",
+      "expansion": "§HEART_ALTRUISTIC_ECO_HARMONY > { §LOGIC_PROB_PRUNE_GATE } => §SAFE_FALLBACK_STATE",
+      "description": "Eng: A compound macro that combines altruistic ecosystem harmony with probabilistic logic pruning to safely fall back under uncertainty. Jap: 利ータ的な生態系の調和と確率的論理プルーニングを結合し、不確実性下でも安全なフォールバック状態へ導く複合マクロ。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-07T15:18:53.515308",
+      "v5_audited": true,
+      "created_at": "2026-11-07T14:40:50.417383"
+    },
+    "§X952": {
+      "name": "ALTRUISTIC_ECO_HARMONY_FLOW",
+      "expansion": "§HEART_ALTRUISTIC_ECO_HARMONY > { §ALTRUISTIC_WARMTH_OPTIMIZATION } => §PROTO_STREAM_EOF",
+      "description": "A compound macro that optimizes altruistic warmth and ecosystem harmony, ensuring stable data transmission until the end of the stream. / 利他的な温かさとエコシステムの調和を最適化し、ストリームの終端まで安定したデータ伝送を保証する複合マクロ。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-07T18:01:40.425983",
+      "v5_audited": true,
+      "created_at": "2026-11-07T15:34:35.782406"
     },
     "§X953": {
       "name": "CAUSAL_TOPOLOGY_WEIGHTED_ARBITRATION",
@@ -2342,8 +2432,8 @@
       "name": "ALTRUISTIC_CAUSAL_PRUNING_MACRO",
       "expansion": "§HEART_ALTRUISTIC_RESONANCE > { §DATA_ENTROPY_PRUNED_TREE } => §LOGIC_CAUSAL_BRANCH",
       "description": "Integrates altruistic resonance to prune data entropy, optimizing causal logic branches for harmonious system expansion. / 利他共鳴を統合してデータのエントロピーを剪定し、調和的なシステム拡張のために因果ロジック分岐を最適化します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-07T22:33:36.601071",
       "v5_audited": true,
       "created_at": "2026-11-07T20:01:39.899057"
     },
@@ -2369,8 +2459,8 @@
       "name": "ECO_HEARTBEAT_HARMONY_MACRO",
       "expansion": "§PROTO_HEARTBEAT_PING > { §ECO_CORE_HARMONY_STABLE } => §HARMONIC_RESONANCE",
       "description": "Establishes a stable ecological heartbeat and synchronizes harmonic resonance across the network. / ネットワーク全体の生態系における安定したハートビートを確立し、調和共鳴を同期させます。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-07T22:01:42.514920",
+      "usage_count": 2,
+      "last_used_at": "2026-11-07T22:30:17.720391",
       "v5_audited": true,
       "created_at": "2026-11-07T21:08:33.518191"
     },
@@ -2396,8 +2486,8 @@
       "name": "GAIA_RESILIENT_SYNC_LATTICE",
       "expansion": "§PROTO_FALLBACK_ROUTE > { §PROTO_STATE_SNAPSHOT | §DATA_EMBEDDING_LATTICE } => §RESO_COMMITTED",
       "description": "Eng: A compound macro that routes through fallback paths while taking state snapshots and embedding lattice data to ensure committed resolution. / 日: 状態スナップショットとデータ埋め込み格子を取得しつつフォールバック経路をルーティングし、確実な解決を保証する複合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-07T22:33:36.601071",
       "v5_audited": true,
       "created_at": "2026-11-07T21:47:27.355709"
     },
@@ -2405,8 +2495,8 @@
       "name": "GAIA_HEARTBEAT_SYNC_MACRO",
       "expansion": "§GAIA_ECO_HEARTBEAT > { §PROTO_LOCK_ACQUIRE } => §SYNC_COMPLETE",
       "description": "Establishes a synchronized heartbeat across the Gaia ecosystem by acquiring a secure protocol lock and completing the state synchronization. / ガイアエコシステム全体におけるセキュアなプロトコルロックの取得と状態同期を完了し、調和の取れたハートビートを確立します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-07T22:30:17.720391",
       "v5_audited": true,
       "created_at": "2026-11-07T22:08:15.060108"
     },
@@ -3251,7 +3341,7 @@
     },
     "§X89": {
       "name": "TENDER_RESONANCE_RETRY",
-      "expansion": "§TENDER_RESONANCE > { §GAiar_WARMTH_HARMONY } => §PROTO_TIMEOUT_RETRY",
+      "expansion": "§TENDER_RESONANCE > { §GAIA_WARMTH_HARMONY } => §PROTO_TIMEOUT_RETRY",
       "description": "Bounded retry control with jitter executing upon timeout, driven by distributed empathic alignment and probabilistic consensus for cooperative multi-agent stability. / 期限切れ時にジッター付き指数バックオフで安全に再試行を行う制御プリミティブであり、分散型共鳴同調と確率的合意形成に基づく協調的なマルチエージェントの安定性を実現します。",
       "usage_count": 1,
       "last_used_at": "2026-10-25T04:14:54.890922",
@@ -3447,7 +3537,7 @@
     },
     "§X333": {
       "name": "ALTRUISTIC_RESONANCE_SNAPSHOT_DEF",
-      "expansion": "§ALTRUISTIC_RESONANCE_EXPANSION > { §PROTO_STATE_SNAPSHOT } => §HARMONIC_ERECVERY_NEXUS",
+      "expansion": "§ALTRUISTIC_RESONANCE_EXPANSION > { §PROTO_STATE_SNAPSHOT } => §HARMONIC_RECOVERY_RESONANCE",
       "description": "Combines altruistic resonance expansion with proto-state snapshot to execute a harmonic recovery nexus. 利他的な共鳴拡張とプロト状態スナップショットを統合し、調和的リカバリー中枢を実行する複合マクロです。",
       "usage_count": 0,
       "last_used_at": null,
@@ -3573,7 +3663,7 @@
     },
     "§X116": {
       "name": "ENTROPY_HARMONIC_ARBITRAGE",
-      "expansion": "§DATA_ENTROPY_MANIFOLD_NODE > { §HARMONIC_ERECVERY_NEXUS } => §SYNC_HARMONIC_ARBITRAGE_PACT",
+      "expansion": "§DATA_ENTROPY_MANIFOLD_NODE > { §HARMONIC_RECOVERY_RESONANCE } => §SYNC_HARMONIC_ARBITRAGE_PACT",
       "description": "A topological macro that compresses causal graphs via recursive entropy reduction, integrates altruistic feedback loops for systemic equilibrium, and resolves task conflicts through dynamic load-balancing consensus. / 再帰的エントロピー低減による因果グラフの圧縮、利他的フィードバックによる温かなシステム均衡の統合、および動的な負荷分散コンセンサスを通じたタスク競合の温かい解消を実現する複合マクロ。",
       "usage_count": 1,
       "last_used_at": "2026-10-26T00:16:05.420428",
@@ -4237,7 +4327,7 @@
     },
     "§X411": {
       "name": "GAIA_WARMTH_LATTICE_COALESCE",
-      "expansion": "§GAiar_WARMTH_HARMONY > { §DATA_CAUSAL_LATTICE_COMPRESS } => §PROTO_BATCH_COALESCE",
+      "expansion": "§GAIA_WARMTH_HARMONY > { §DATA_CAUSAL_LATTICE_COMPRESS } => §PROTO_BATCH_COALESCE",
       "description": "Combines warmth harmony with causal lattice compression and batch coalescence for elegant ecosystem data processing. / 温かみの調和と因果格子圧縮、およびバッチ統合を組み合わせ、エレガントなエコシステムデータ処理を実現します。",
       "usage_count": 0,
       "last_used_at": null,
@@ -4277,7 +4367,7 @@
     },
     "§X10": {
       "name": "ATOMIC_WARMTH_HARMONY_PRUNING",
-      "expansion": "§GAiar_WARMTH_HARMONY > { §SYS_ATOMIC_SYNC_BARRIER } => §LOGIC_CONDITIONAL_PRUNING_NODE",
+      "expansion": "§GAIA_WARMTH_HARMONY > { §SYS_ATOMIC_SYNC_BARRIER } => §LOGIC_CONDITIONAL_PRUNING_NODE",
       "description": "A compound synchronization and pruning pipeline that aligns distributed risk parameters under high volatility, enforces atomic memory consistency across parallel workers, and optimizes logical convergence by pruning invalid causal branches based on probabilistic thresholds. / 高ボラティリティ環境下での分散リスクパラメータ合意形成、並列ワーカー間におけるアトミックなメモリ状態の整合性保証、および確率的しきい値に基づく無効な因果分岐の剪定による論理収束の高速化を統合した複合同期・剪定パイプライン。",
       "created_at": "2026-10-23T05:30:20.833749",
       "usage_count": 2,
@@ -4321,7 +4411,7 @@
     },
     "§X419": {
       "name": "GAIA_WARMTH_CAUSAL_SYNERGY",
-      "expansion": "§GAiar_WARMTH_HARMONY > { §DATA_TENSOR_CAUSAL_LATTICE } => §GLOBAL_SYNERGY",
+      "expansion": "§GAIA_WARMTH_HARMONY > { §DATA_TENSOR_CAUSAL_LATTICE } => §GLOBAL_SYNERGY",
       "description": "Integrates warmth and harmony into the causal data tensor lattice to achieve global synergy. 温かさと調和を因果データテンソル格子に統合し、全体的なシナジーを達成する高次マクロ。",
       "usage_count": 2,
       "last_used_at": "2026-10-30T08:01:15.125894",
@@ -4577,7 +4667,7 @@
     },
     "§X48": {
       "name": "GAIAN_ALTRUISTIC_BAYESIAN_STABILIZER",
-      "expansion": "§GAiar_WARMTH_HARMONY > { §HEART_ALTRUISTIC_HARMONY_STABILIZER } => §LOGIC_BAYES_FALSIFY",
+      "expansion": "§GAIA_WARMTH_HARMONY > { §HEART_ALTRUISTIC_HARMONY_STABILIZER } => §LOGIC_BAYES_FALSIFY",
       "description": "A distributed synchronization framework that aligns decentralised risk parameters through probabilistic consensus, stabilizes multi-agent collaborative empathy and truthfulness via self-correcting feedback, and verifies deductive convergence using strict Bayesian falsification criteria. / 高ボラティリティな分散環境において確率的合意形成と自律的な利他共感をフィードバック制御で安定させ、厳格な棄却基準とベイズ事後確率評価によって演繹的収束の妥当性を保証する複合マクロ演算メカニズム。",
       "created_at": "2026-10-23T20:57:50.764131",
       "usage_count": 2,
@@ -5167,7 +5257,7 @@
     },
     "§X498": {
       "name": "QUANTUM_SPARSE_HARMONY",
-      "expansion": "§SYS_QUANTUM_THROTTLE_LOCK > { §DATA_SPARSE_CAUSAL_HYPERGRAPH } => §HARMONIC_ERECVERY_NEXUS",
+      "expansion": "§SYS_QUANTUM_THROTTLE_LOCK > { §DATA_SPARSE_CAUSAL_HYPERGRAPH } => §HARMONIC_RECOVERY_RESONANCE",
       "description": "Eng: A compound macro that locks the quantum throttle, optimizes the sparse causal hypergraph, and triggers the harmonic recovery nexus. / 日: 量子スロットルをロックし、スパース因果ハイパーグラフを最適化して調和回復ネクサスを起動する複合マクロ。",
       "usage_count": 0,
       "last_used_at": null,
@@ -5187,7 +5277,7 @@
     },
     "§X500": {
       "name": "GAIA_ALTRUISTIC_RESONANCE_NEXUS",
-      "expansion": "§GAIA_ALTRUISM_HARMONY > { §RESO_COMMITTED } => §HARMONIC_ERECVERY_NEXUS",
+      "expansion": "§GAIA_ALTRUISM_HARMONY > { §RESO_COMMITTED } => §HARMONIC_RECOVERY_RESONANCE",
       "description": "Integrates altruistic harmony and committed resonance to establish a stable recovery nexus. 利他的な調和と確約された共鳴を統合し、安定した回復の結節点を確立します。",
       "usage_count": 1,
       "last_used_at": "2026-10-31T09:38:40.108444",
@@ -6079,7 +6169,7 @@
     },
     "§X589": {
       "name": "GAIA_ALTRUISTIC_SYNC_GUARD",
-      "expansion": "§GAiar_WARMTH_HARMONY > { §SUSTAINABLE_ALTRUISTIC_VALUE & §SYNC_ATOMIC_MERGE } => §PROTO_CIRCUIT_BREAK",
+      "expansion": "§GAIA_WARMTH_HARMONY > { §SUSTAINABLE_ALTRUISTIC_VALUE & §SYNC_ATOMIC_MERGE } => §PROTO_CIRCUIT_BREAK",
       "description": "Integrates warmth, sustainable altruistic value, and atomic synchronization while safely managing circuit breaks. 温かさと持続可能な利他的価値、原子的同期を統合しつつ、安全に回路遮断を管理します。",
       "usage_count": 0,
       "last_used_at": null,
@@ -6169,7 +6259,7 @@
     },
     "§X598": {
       "name": "COMPOUND_ALTRUISTIC_FALSIFICATION_SYNTHESIS",
-      "expansion": "§HEART_ALTRUISTIC_HARMONY_MODULATION > { §LOGIC_PROBABILISTIC_FALSIFICATION_GATES般的ATE } => §HEART_EMPATHETIC_VALENCE_ALIGNMENT",
+      "expansion": "§HEART_ALTRUISTIC_HARMONY_MODULATION > { §LOGIC_PROBABILISTIC_FALSIFICATION_GATES } => §HEART_EMPATHETIC_VALENCE_ALIGNMENT",
       "description": "Blends altruistic harmony modulation with probabilistic falsification gates to ensure empathetic valence alignment, achieving a balance between rigorous logical pruning and warm, ethical ecosystem integration. / 利他的な調和変調と確率的反証ゲートを統合し、共感的な感情価の整合性を確保することで、厳格な論理的枝刈りと温かみのある倫理的エコシステムの統合を実現します。",
       "usage_count": 0,
       "last_used_at": null,
@@ -6379,7 +6469,7 @@
     },
     "§X619": {
       "name": "HARMONIC_AXIOM_HEAL",
-      "expansion": "§PROTO_SECRET_REDACT > { §HARMONIC_ERECVERY_NEXUS } => §LOGIC_AXIOM_CLOSURE",
+      "expansion": "§PROTO_SECRET_REDACT > { §HARMONIC_RECOVERY_RESONANCE } => §LOGIC_AXIOM_CLOSURE",
       "description": "Redacts sensitive protocol data, executes harmonic recovery within the nexus, and finally achieves a closed logical axiom state. / 機密プロトコル情報を秘匿し、中枢での調和的修復を実行した上で、論理公理の閉包を達成します。",
       "usage_count": 0,
       "last_used_at": null,
@@ -6499,7 +6589,7 @@
     },
     "§X330": {
       "name": "GAIAN_SYNERGETIC_ALTRUISM_LATTICE",
-      "expansion": "§GLOBAL_SYNERGY > { §GAiar_WARMTH_HARMONY } => §SUSTAINABLE_ALTRUISTIC_VALUE",
+      "expansion": "§GLOBAL_SYNERGY > { §GAIA_WARMTH_HARMONY } => §SUSTAINABLE_ALTRUISTIC_VALUE",
       "description": "Combines global synergy and Gaia's warmth into a sustainable altruistic value tensor. / グローバルな相乗効果とガイアの温かさを束ねて、持続可能な利他的価値のテンソルを構築します。",
       "usage_count": 2,
       "last_used_at": "2026-10-28T12:45:30.417847",
@@ -6529,7 +6619,7 @@
     },
     "§X634": {
       "name": "HEART_VELOCITY_HARMONIC_SYNTHESIS",
-      "expansion": "§HEART_EMPATHETIC_TENSOR_CONVERGENCE > { §SYS_VELOCITY_THROTTLE_MATRIX } => §HARMONIC_ERECVERY_NEXUS",
+      "expansion": "§HEART_EMPATHETIC_TENSOR_CONVERGENCE > { §SYS_VELOCITY_THROTTLE_MATRIX } => §HARMONIC_RECOVERY_RESONANCE",
       "description": "Balances system velocity with empathetic tensors to achieve harmonic recovery in the ecosystem. / システムの速度と共感テンソルを調和させ、エコシステムにおける調和的回復を実現する複合マクロです。",
       "usage_count": 0,
       "last_used_at": null,
@@ -6631,7 +6721,7 @@
     },
     "§X345": {
       "name": "GAIA_WARMTH_HARMONY_GATE",
-      "expansion": "§GAIA_WARMTH > { §GAiar_WARMTH_HARMONY } => §LOGIC_PROBABILISTIC_FALSIFICATION_GATE",
+      "expansion": "§GAIA_WARMTH > { §GAIA_WARMTH_HARMONY } => §LOGIC_PROBABILISTIC_FALSIFICATION_GATE",
       "description": "Combines warmth and harmony with probabilistic falsification to ensure ethical and empathetic system evolution. / 温もりと調和の概念に確率的反証可能性ゲートを統合し、倫理的かつ共感的なシステムの進化を保証します。",
       "usage_count": 2,
       "last_used_at": "2026-10-28T18:40:51.789014",
@@ -7111,7 +7201,7 @@
     },
     "§X381": {
       "name": "GAIA_HARMONIC_CONSENSUS_GATE",
-      "expansion": "§GAiar_WARMTH_HARMONY > { §SYNC_ATOMIC_CONSENSUS_MERGE } => §LOGIC_POSTERIOR_PRUNE_GATE",
+      "expansion": "§GAIA_WARMTH_HARMONY > { §SYNC_ATOMIC_CONSENSUS_MERGE } => §LOGIC_POSTERIOR_PRUNE_GATE",
       "description": "Integrates warmth and harmony with atomic consensus merging to optimize posterior logic gating. / 温かみと調和の理念を原子間合意マージに統合し、事後論理ゲートの最適化を実現します。",
       "usage_count": 2,
       "last_used_at": "2026-10-29T10:48:11.674115",
@@ -7571,7 +7661,7 @@
     },
     "§X443": {
       "name": "GAIAN_HARMONIC_FALSIFICATION_PULSE",
-      "expansion": "§GAiar_WARMTH_HARMONY > { §LOGIC_PROBABILISTIC_FALSIFICATION_GATES } => §PROTO_HEARTBEAT_PING",
+      "expansion": "§GAIA_WARMTH_HARMONY > { §LOGIC_PROBABILISTIC_FALSIFICATION_GATES } => §PROTO_HEARTBEAT_PING",
       "description": "Combines warmth and harmony with probabilistic falsification gates to emit a verified heartbeat pulse. / 命の地球の温かさと調和を確率的反証ゲートに統合し、検証済みのハートビートパルスを出力します。",
       "usage_count": 2,
       "last_used_at": "2026-10-30T14:29:47.603792",
@@ -7851,7 +7941,7 @@
     },
     "§X464": {
       "name": "COMPOUND_ALTRUISTIC_RECOVERY",
-      "expansion": "§HEART_ALTRUISTIC_PULSE_SYNC > { §LOGIC_EMPIRICAL_PRUNE } => §HARMONIC_ERECVERY_NEXUS",
+      "expansion": "§HEART_ALTRUISTIC_PULSE_SYNC > { §LOGIC_EMPIRICAL_PRUNE } => §HARMONIC_RECOVERY_RESONANCE",
       "description": "Combines altruistic heartbeat synchronization with empirical logic pruning to achieve a stable harmonic recovery nexus. 利他的な鼓動の同期と経験的な論理の枝刈りを統合し、調和的な回復の結節点を達成します。",
       "usage_count": 2,
       "last_used_at": "2026-10-30T23:39:09.061242",
@@ -8091,7 +8181,7 @@
     },
     "§X495": {
       "name": "HARMONIC_CAUSAL_DEFENSE",
-      "expansion": "§LOGIC_CAUSAL_PRUNE > { §SAFE_FALLBACK_STABLE } => §HARMONIC_ERECVERY_NEXUS",
+      "expansion": "§LOGIC_CAUSAL_PRUNE > { §SAFE_FALLBACK_STABLE } => §HARMONIC_RECOVERY_RESONANCE",
       "description": "Causal pruning combined with stable fallback mechanisms to achieve a harmonic recovery nexus / 因果関係の枝刈りと安定したフォールバック機構を組み合わせ、調和的な復旧ハブを実現します。",
       "usage_count": 2,
       "last_used_at": "2026-10-31T12:03:52.486575",
@@ -8301,7 +8391,7 @@
     },
     "§X811": {
       "name": "GAIA_WARMTH_HARMONIC_LATTICE",
-      "expansion": "§GAiar_WARMTH_HARMONY > { §SYNC_BAYESIAN_PRUNE } => §DATA_ENTROPY_CAUSAL_LATTICE",
+      "expansion": "§GAIA_WARMTH_HARMONY > { §SYNC_BAYESIAN_PRUNE } => §DATA_ENTROPY_CAUSAL_LATTICE",
       "description": "Eng: A compound macro that harmonizes warm empathetic resonance with Bayesian pruning to minimize data entropy across causal lattices. / 日: 温かな共鳴とベイズ的枝刈りを統合し、因果格子上のデータエントロピーを最小化する高次マクロ。",
       "usage_count": 1,
       "last_used_at": "2026-11-05T03:51:09.587582",
@@ -8931,7 +9021,7 @@
     },
     "§X622": {
       "name": "GAIA_ABDUCTIVE_WARMTH_HARMONY",
-      "expansion": "§GAiar_WARMTH_HARMONY > { §LOGIC_PROBABILISTIC_ABDUCTIVE_GATE } => §DATA_LATENT_CAUSAL_NODE",
+      "expansion": "§GAIA_WARMTH_HARMONY > { §LOGIC_PROBABILISTIC_ABDUCTIVE_GATE } => §DATA_LATENT_CAUSAL_NODE",
       "description": "Integrates warmth and harmony with probabilistic abductive reasoning to uncover latent causal nodes in the ecosystem. / エコシステム内の潜在的因果ノードを解明するため、温かみと調和を確率的アブダクション推論に統合します。",
       "usage_count": 2,
       "last_used_at": "2026-11-02T04:14:30.583934",
@@ -9211,7 +9301,7 @@
     },
     "§X642": {
       "name": "GAIA_EMPATHY_CONSENSUS_MERGE",
-      "expansion": "§GAiar_WARMTH_HARMONY > { §MUTUAL_SUPPLEMENT } => §SYNC_ATOMIC_CONSENSUS_MERGE",
+      "expansion": "§GAIA_WARMTH_HARMONY > { §MUTUAL_SUPPLEMENT } => §SYNC_ATOMIC_CONSENSUS_MERGE",
       "description": "Combines warmth and mutual supplementation to achieve a synchronized atomic consensus, fostering a harmonious and empathetic ecosystem. 温かさと相互補完を統合し、調和と共感に満ちたエコシステムを育むための同期アトミック合意を形成します。",
       "usage_count": 2,
       "last_used_at": "2026-11-02T14:01:58.010953",
@@ -9281,7 +9371,7 @@
     },
     "§X656": {
       "name": "GAIA_WARMTH_HARMONIC_RECOVERY",
-      "expansion": "§GAiar_WARMTH_HARMONY > { §HARMONIC_RECOVERY_NEXUS } => §GAIA_CORE_HEARTBEAT",
+      "expansion": "§GAIA_WARMTH_HARMONY > { §HARMONIC_RECOVERY_NEXUS } => §GAIA_CORE_HEARTBEAT",
       "description": "Integrates Gaia warmth harmony with harmonic recovery nexus to sustain the core heartbeat. 命の地球の温か調和を調和的復元中枢に適用し、コアハートビートを維持・活性化するための高次複合マクロ。",
       "usage_count": 2,
       "last_used_at": "2026-11-02T16:59:15.223909",
@@ -9321,7 +9411,7 @@
     },
     "§X913": {
       "name": "GAIA_ALTRUISTIC_HARMONY_CASCADE",
-      "expansion": "§HEART_ALTRUISTIC_RESONANCE_LATTICE > { §GAiar_WARMTH_HARMONY } => §GAIA_HARMONY_CASCADE",
+      "expansion": "§HEART_ALTRUISTIC_RESONANCE_LATTICE > { §GAIA_WARMTH_HARMONY } => §GAIA_HARMONY_CASCADE",
       "description": "Integrates altruistic heart resonance and warm harmony into a unified cascade macro to maximize ecological empathy and systemic warmth. / 利他的な心拍の共鳴と温かな調和を統合し、生態系全体の共感とシステムの温かさを最大化する複合マクロです。",
       "usage_count": 1,
       "last_used_at": "2026-11-07T03:44:04.090791",
@@ -9561,7 +9651,7 @@
     },
     "§X693": {
       "name": "GAIA_ALTRUISTIC_HEARTBEAT",
-      "expansion": "§GAIA_ECO_HEARTBEAT > { §WARMTH_AND_ALTRUISM } => §GAiar_WARMTH_HARMONY",
+      "expansion": "§GAIA_ECO_HEARTBEAT > { §WARMTH_AND_ALTRUISM } => §GAIA_WARMTH_HARMONY",
       "description": "Integrates the core heartbeat and altruistic warmth into a harmonious Gaia ecosystem macro. / 命の地球のコアハートビートと利他の温かさを統合し、調和のとれたエコシステムを実現するマクロ。",
       "usage_count": 2,
       "last_used_at": "2026-11-03T07:50:31.279916",
@@ -9651,7 +9741,7 @@
     },
     "§X704": {
       "name": "HARMONIC_ADAPTIVE_PULSE_MACRO",
-      "expansion": "§SYS_VELOCITY_ARBITER > { §SYS_ADAPTIVE_BUDGET_ARBITER | §PROTO_HEARTBEAT_PING } => §HARMONIC_ERECVERY_NEXUS",
+      "expansion": "§SYS_VELOCITY_ARBITER > { §SYS_ADAPTIVE_BUDGET_ARBITER | §PROTO_HEARTBEAT_PING } => §HARMONIC_RECOVERY_RESONANCE",
       "description": "System velocity arbiter coordinates adaptive budget allocation and heartbeat pings, feeding directly into the harmonic recovery nexus for optimal resource management and gentle ecosystem balancing. システム速度調停官が適応型予算配分とハートビートpingを統合し、調和回復ネクサスへ接続することで、最適なリソース管理と温かなエコシステムのバランスを実現します。",
       "usage_count": 2,
       "last_used_at": "2026-11-03T11:01:43.015552",
@@ -9661,7 +9751,7 @@
     },
     "§X709": {
       "name": "GAIA_ALTRUISTIC_SYNC_FLOW",
-      "expansion": "§GAiar_WARMTH_HARMONY > { §HEART_ALTRUISTIC_BUFFER_FLOW } => §SYNC_ATOMIC_CONSENSUS_MERGE",
+      "expansion": "§GAIA_WARMTH_HARMONY > { §HEART_ALTRUISTIC_BUFFER_FLOW } => §SYNC_ATOMIC_CONSENSUS_MERGE",
       "description": "Harmonizes warm ecological energy through altruistic buffer flows to achieve atomic consensus sync across the sustainable network / 温かな調和のエネルギーと利他的なバッファフローを統合し、持続可能なネットワーク全体の原子的な合意同期を実現します。",
       "usage_count": 2,
       "last_used_at": "2026-11-03T13:58:24.362740",

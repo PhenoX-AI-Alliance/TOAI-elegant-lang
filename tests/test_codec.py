@@ -205,6 +205,146 @@ class TestElegantCodec(unittest.TestCase):
         self.assertIn("is_estimated", info)
         self.assertIsInstance(info["is_estimated"], bool)
 
+    def test_17_all_lexicons_and_corpus_symbols_strict_uppercase_and_defined(self):
+        """
+        v5.4.3 Step 1: Verify that all 3 dictionaries (core_lexicon.json, macro_lexicon.json,
+        rosetta_layer.json in both lexicon/ and src/lexicon/) and corpus/dialogues.jsonl
+        contain zero lowercase characters (e.g. GAiar, _v2), zero CJK corruption, and zero
+        undefined §-symbols.
+        """
+        import re
+
+        strict_sym_re = re.compile(r"^§[A-Z][A-Z0-9_]*$")
+        any_sym_re = re.compile(r"§[A-Za-z0-9_\u4e00-\u9fff]+")
+
+        def is_registered(sym: str) -> bool:
+            return (
+                sym in self.codec.compact_to_verbose
+                or sym in self.codec.verbose_to_compact
+                or sym in self.codec.definitions
+                or sym in self.codec.all_macros
+                or sym in self.codec.macro_name_to_id
+            )
+
+        dict_paths = [
+            REPO_ROOT / "lexicon" / "core_lexicon.json",
+            REPO_ROOT / "lexicon" / "macro_lexicon.json",
+            REPO_ROOT / "lexicon" / "rosetta_layer.json",
+            REPO_ROOT / "src" / "lexicon" / "core_lexicon.json",
+            REPO_ROOT / "src" / "lexicon" / "macro_lexicon.json",
+            REPO_ROOT / "src" / "lexicon" / "rosetta_layer.json",
+        ]
+        for dp in dict_paths:
+            self.assertTrue(dp.is_file(), f"Missing dictionary file: {dp}")
+            raw = dp.read_text(encoding="utf-8")
+            self.assertNotIn("GAiar", raw, f"Typo GAiar found in {dp}")
+            self.assertNotIn("ERECVERY", raw, f"Typo ERECVERY found in {dp}")
+            data = json.loads(raw)
+            serialized = json.dumps(data, ensure_ascii=False)
+            for sym in set(any_sym_re.findall(serialized)):
+                self.assertRegex(sym, strict_sym_re, f"Invalid symbol '{sym}' in {dp}")
+                self.assertTrue(is_registered(sym), f"Unregistered symbol '{sym}' in {dp}")
+
+        # Verify all macro expansions decode cleanly into strict uppercase symbols
+        for mid in self.codec.all_macros:
+            expanded = self.codec.resolve_macro(mid)
+            for sym in any_sym_re.findall(expanded):
+                self.assertRegex(sym, strict_sym_re, f"Invalid symbol '{sym}' in macro {mid}")
+                self.assertTrue(is_registered(sym), f"Unregistered symbol '{sym}' in macro {mid}")
+
+        # Verify corpus/dialogues.jsonl
+        corpus_path = REPO_ROOT / "corpus" / "dialogues.jsonl"
+        self.assertTrue(corpus_path.is_file())
+        raw_corpus = corpus_path.read_text(encoding="utf-8")
+        self.assertNotIn("GAiar", raw_corpus, "Typo GAiar found in corpus/dialogues.jsonl")
+        for line_no, line in enumerate(raw_corpus.splitlines(), 1):
+            if not line.strip():
+                continue
+            row = json.loads(line)
+            for field_name in ("compact_wire", "raw"):
+                val = row.get(field_name, "")
+                if not isinstance(val, str):
+                    continue
+                for sym in re.findall(r"§[A-Za-z0-9_]+", val):
+                    self.assertRegex(
+                        sym,
+                        strict_sym_re,
+                        f"Line {line_no} field '{field_name}' has non-uppercase symbol '{sym}'",
+                    )
+                    self.assertTrue(
+                        is_registered(sym),
+                        f"Line {line_no} field '{field_name}' has undefined symbol '{sym}'",
+                    )
+
+    def test_18_independent_corpus_audit_and_comprehension_harness(self):
+        """
+        v5.4.3 Step 2 & Step 3: Verify independent corpus alignment auditor, Cohen's kappa,
+        and eval_comprehension Conditions A-E, Wilson CI, and McNemar test.
+        """
+        if str(REPO_ROOT) not in sys.path:
+            sys.path.insert(0, str(REPO_ROOT))
+        from src.audit_corpus_alignment import audit_record, get_tag_to_domain, score_human_audit_sample
+        from benchmarks.eval_comprehension import (
+            build_for_condition,
+            load_items,
+            mcnemar_test,
+            select_stratified_items,
+            wilson,
+        )
+
+        tag_to_dom = get_tag_to_domain()
+        # Q3-like mismatch: FX scenario with only recovery primitives must be flagged MISMATCH
+        bad_fx = {
+            "scenario": "【実務・FX自動売買】為替レート急変時に、リスクパラメータを相手ノードへ渡し、緊急ヘッジ取引の合意を形成する",
+            "compact_wire": ":: §G50 => §G48 => §G51",
+        }
+        res_fx = audit_record(self.codec, bad_fx, tag_to_dom)
+        self.assertIsNotNone(res_fx)
+        self.assertEqual(res_fx["machine_verdict"], "MISMATCH")
+        self.assertIn("Recovery Pattern Leak", res_fx["mismatch_reason"])
+
+        # Q18-like mismatch: Parser scenario with ARBITRAGE (§S02) must be flagged MISMATCH (Domain Bleed)
+        bad_parser = {
+            "scenario": "【実務・コード生成委譲】構文パーサーのバグ修正タスクを委譲し、型整合性のテスト完了を要求する",
+            "compact_wire": ":: §S02 --> §G09 => §G15",
+        }
+        res_parser = audit_record(self.codec, bad_parser, tag_to_dom)
+        self.assertIsNotNone(res_parser)
+        self.assertEqual(res_parser["machine_verdict"], "MISMATCH")
+        self.assertIn("Domain Bleed", res_parser["mismatch_reason"])
+
+        # Human audit sample CSV kappa scoring
+        sample_csv = REPO_ROOT / "corpus" / "human_audit_sample.csv"
+        if sample_csv.is_file():
+            kappa_res = score_human_audit_sample(sample_csv)
+            self.assertEqual(kappa_res["n"], 60)
+            self.assertGreater(kappa_res["cohens_kappa"], 0.7)
+
+        # Wilson CI & McNemar test
+        lo, hi = wilson(16, 23)
+        self.assertAlmostEqual(lo, 0.49, delta=0.02)
+        self.assertAlmostEqual(hi, 0.84, delta=0.02)
+
+        mcn = mcnemar_test([False] * 10 + [True] * 10, [True] * 20)
+        self.assertEqual(mcn["b_only_first_correct"], 0)
+        self.assertEqual(mcn["c_only_second_correct"], 10)
+        self.assertTrue(mcn["significant_p05"])
+
+        # Build Conditions A-E in temporary directory
+        items = load_items(self.codec)
+        chosen = select_stratified_items(items, 8, seed=7)
+        with tempfile.TemporaryDirectory() as tmpdir:
+            tmp_out = Path(tmpdir)
+            for c in ("A", "B", "C", "D", "E"):
+                meta = build_for_condition(self.codec, items, chosen, c, 7, tmp_out)
+                self.assertEqual(meta["n_total_prompts"], 8)
+                self.assertTrue((tmp_out / f"questions_{c}.md").is_file())
+            meta_rot = build_for_condition(
+                self.codec, items, chosen, "B", 7, tmp_out, keep_ctx=True, rotate_options=True
+            )
+            self.assertEqual(meta_rot["n_total_prompts"], 32)
+            self.assertEqual(meta_rot["protocol_mode"], "protocol_header_keep_ctx")
+
 
 if __name__ == "__main__":
     unittest.main()

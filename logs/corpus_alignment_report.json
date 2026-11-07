@@ -1,0 +1,394 @@
+{
+  "before": {
+    "total_rows": 2138,
+    "evaluated_tagged_rows": 1606,
+    "aligned_rows": 364,
+    "alignment_rate_pct": 22.67,
+    "per_domain": {
+      "CODE_PARSER": {
+        "aligned": 4,
+        "total": 236,
+        "alignment_rate_pct": 1.69
+      },
+      "FX": {
+        "aligned": 5,
+        "total": 252,
+        "alignment_rate_pct": 1.98
+      },
+      "GAIA_HARMONY": {
+        "aligned": 125,
+        "total": 291,
+        "alignment_rate_pct": 42.96
+      },
+      "HYPOTHESIS": {
+        "aligned": 0,
+        "total": 57,
+        "alignment_rate_pct": 0.0
+      },
+      "LATENT_SYNC": {
+        "aligned": 6,
+        "total": 50,
+        "alignment_rate_pct": 12.0
+      },
+      "RECOVERY": {
+        "aligned": 196,
+        "total": 375,
+        "alignment_rate_pct": 52.27
+      },
+      "TASK_BUDGET": {
+        "aligned": 28,
+        "total": 345,
+        "alignment_rate_pct": 8.12
+      }
+    },
+    "verdict_breakdown": {
+      "MISMATCH (Domain Bleed)": 171,
+      "MISMATCH (Plaintext Leak)": 172,
+      "MISMATCH (Missing Domain Primitives)": 749,
+      "MISMATCH (Recovery Pattern Leak)": 150,
+      "OK": 364
+    },
+    "misaligned_sample": [
+      {
+        "row_index": 526,
+        "domain": "LATENT_SYNC",
+        "scenario": "【高次伝達】複雑な多次元潜在マップの洞察を、最小の情報損失かつ最少文字数で相手ノードへ同期する",
+        "wire": "§G19 > { §G42 -[p:0.99, c:0.01]-> §G09 } [SYNC] => §G27",
+        "machine_verdict": "MISMATCH",
+        "mismatch_reason": "MISMATCH (Domain Bleed: §PROTO_DIFF_PATCH)",
+        "whitelist_hits": [],
+        "bleed_hits": [
+          "§PROTO_DIFF_PATCH"
+        ]
+      },
+      {
+        "row_index": 527,
+        "domain": "LATENT_SYNC",
+        "scenario": "【高次伝達】複雑な多次元潜在マップの洞察を、最小の情報損失かつ最少文字数で相手ノードへ同期する",
+        "wire": "```python",
+        "machine_verdict": "MISMATCH",
+        "mismatch_reason": "MISMATCH (Plaintext Leak)",
+        "whitelist_hits": [],
+        "bleed_hits": []
+      },
+      {
+        "row_index": 534,
+        "domain": "HYPOTHESIS",
+        "scenario": "【仮説検証】不確実な外部環境に対し、複数の推論パスを並列照合して最も確信度の高い因果律へ収束させる",
+        "wire": "§G23[GENERAL] > { §G11 -[p:0.89, c:0.12]-> §G44 } [AND] §G31 [RESOLVE] => §G38 !-> §G42 ? §G15",
+        "machine_verdict": "MISMATCH",
+        "mismatch_reason": "MISMATCH (Missing Domain Primitives: 1<2)",
+        "whitelist_hits": [
+          "§PROTO_CONTEXT_JOIN"
+        ],
+        "bleed_hits": []
+      },
+      {
+        "row_index": 535,
+        "domain": "HYPOTHESIS",
+        "scenario": "【仮説検証】不確実な外部環境に対し、複数の推論パスを並列照合して最も確信度の高い因果律へ収束させる",
+        "wire": "§G40 > { §G27 -[p:0.94, c:0.12]-> §G01 } [AND] §G24 -[p:0.89, c:0.05]-> §G42 !-> §G32 ? §G39",
+        "machine_verdict": "MISMATCH",
+        "mismatch_reason": "MISMATCH (Missing Domain Primitives: 1<2)",
+        "whitelist_hits": [
+          "§PROTO_CONTEXT_JOIN"
+        ],
+        "bleed_hits": []
+      },
+      {
+        "row_index": 536,
+        "domain": "HYPOTHESIS",
+        "scenario": "【仮説検証】不確実な外部環境に対し、複数の推論パスを並列照合して最も確信度の高い因果律へ収束させる",
+        "wire": "§G40 <~ { §G27 -[p:0.96, c:0.08]-> §G01 } [+] §G24 -[p:0.92, c:0.03]-> §G42 => §G32 :: §G39",
+        "machine_verdict": "MISMATCH",
+        "mismatch_reason": "MISMATCH (Missing Domain Primitives: 1<2)",
+        "whitelist_hits": [
+          "§PROTO_CONTEXT_JOIN"
+        ],
+        "bleed_hits": []
+      },
+      {
+        "row_index": 537,
+        "domain": "GAIA_HARMONY",
+        "scenario": "【生命調和】命の地球と人類のために、高度なAI知性を温かく調和させ、善の価値を創出するプロジェクトを提案する",
+        "wire": "§G09 [general] > { §G47 [general] -[p:0.98, c:0.02]-> §G40 [general] } [SYNTHESIS] §G39 [general] =>",
+        "machine_verdict": "MISMATCH",
+        "mismatch_reason": "MISMATCH (Plaintext Leak)",
+        "whitelist_hits": [],
+        "bleed_hits": [
+          "§PROTO_DIFF_PATCH"
+        ]
+      },
+      {
+        "row_index": 538,
+        "domain": "HYPOTHESIS",
+        "scenario": "【仮説検証】不確実な外部環境に対し、複数の推論パスを並列照合して最も確信度の高い因果律へ収束させる",
+        "wire": "§G02 > { §G29 -[p:0.89, c:0.12]-> §G11 } [CASCADE] => §G32 -[p:0.94, c:0.05]-> §G06 ? §G05 !-> §C01",
+        "machine_verdict": "MISMATCH",
+        "mismatch_reason": "MISMATCH (Missing Domain Primitives: 0<2)",
+        "whitelist_hits": [],
+        "bleed_hits": []
+      },
+      {
+        "row_index": 539,
+        "domain": "HYPOTHESIS",
+        "scenario": "【仮説検証】不確実な外部環境に対し、複数の推論パスを並列照合して最も確信度の高い因果律へ収束させる",
+        "wire": "§C38 > { §G06 -[p:0.98, c:0.02]-> §C23 } [CASCADE] => §G32 -[p:0.96, c:0.03]-> §C01 ? §H05 !-> §C21",
+        "machine_verdict": "MISMATCH",
+        "mismatch_reason": "MISMATCH (Missing Domain Primitives: 0<2)",
+        "whitelist_hits": [],
+        "bleed_hits": []
+      },
+      {
+        "row_index": 540,
+        "domain": "TASK_BUDGET",
+        "scenario": "【タスク交渉】限られたトークン予算と時間制約の中で、緊急タスクの実行優先度と分担を交渉・合意する",
+        "wire": "§G48 -[p:0.95, c:0.10]-> §G05 > { §G09 [SYNC] §G40 => §G08 } !-> §G03 ? §G51",
+        "machine_verdict": "MISMATCH",
+        "mismatch_reason": "MISMATCH (Domain Bleed: §PROTO_DIFF_PATCH,§PROTO_FALLBACK_ROUTE)",
+        "whitelist_hits": [],
+        "bleed_hits": [
+          "§PROTO_DIFF_PATCH",
+          "§PROTO_FALLBACK_ROUTE"
+        ]
+      },
+      {
+        "row_index": 541,
+        "domain": "TASK_BUDGET",
+        "scenario": "【タスク交渉】限られたトークン予算と時間制約の中で、緊急タスクの実行優先度と分担を交渉・合意する",
+        "wire": "§G48 <-[p:0.98, c:0.05]- §G05 : { §G09 [ACCEPT] §G40 => §G08 } !-> §G03 ? §G51",
+        "machine_verdict": "MISMATCH",
+        "mismatch_reason": "MISMATCH (Domain Bleed: §PROTO_DIFF_PATCH,§PROTO_FALLBACK_ROUTE)",
+        "whitelist_hits": [],
+        "bleed_hits": [
+          "§PROTO_DIFF_PATCH",
+          "§PROTO_FALLBACK_ROUTE"
+        ]
+      },
+      {
+        "row_index": 542,
+        "domain": "TASK_BUDGET",
+        "scenario": "【タスク交渉】限られたトークン予算と時間制約の中で、緊急タスクの実行優先度と分担を交渉・合意する",
+        "wire": "§H02 > { §G47 [p:0.95, c:0.10]-> §G20 } [AND] §G26 [p:0.90, c:0.15]-> §G30 => { TASK_PRIORITY_OPTIMI",
+        "machine_verdict": "MISMATCH",
+        "mismatch_reason": "MISMATCH (Plaintext Leak)",
+        "whitelist_hits": [],
+        "bleed_hits": []
+      },
+      {
+        "row_index": 543,
+        "domain": "TASK_BUDGET",
+        "scenario": "【タスク交渉】限られたトークン予算と時間制約の中で、緊急タスクの実行優先度と分担を交渉・合意する",
+        "wire": "§H02 > { §G20 [p:0.98, c:0.05]-> §G30 } [AND] §C15 [p:0.95, c:0.10]-> §C14 !-> TIMEOUT_EXCEPTION ? {",
+        "machine_verdict": "MISMATCH",
+        "mismatch_reason": "MISMATCH (Plaintext Leak)",
+        "whitelist_hits": [
+          "§GRACEFUL_TASK_SHARING",
+          "§RESOURCE_ALLOCATION_HARMONY"
+        ],
+        "bleed_hits": []
+      },
+      {
+        "row_index": 544,
+        "domain": "TASK_BUDGET",
+        "scenario": "【タスク交渉】限られたトークン予算と時間制約の中で、緊急タスクの実行優先度と分担を交渉・合意する",
+        "wire": "§C14 [p:0.99, c:0.01]-> { §C15 [p:0.98, c:0.03] => §H02 } [AND] §G30 <-> §G20 !-> TIMEOUT_EXCEPTION ",
+        "machine_verdict": "MISMATCH",
+        "mismatch_reason": "MISMATCH (Plaintext Leak)",
+        "whitelist_hits": [
+          "§GRACEFUL_TASK_SHARING",
+          "§RESOURCE_ALLOCATION_HARMONY"
+        ],
+        "bleed_hits": []
+      },
+      {
+        "row_index": 545,
+        "domain": "TASK_BUDGET",
+        "scenario": "【タスク交渉】限られたトークン予算と時間制約の中で、緊急タスクの実行優先度と分担を交渉・合意する",
+        "wire": "§C14 [p:1.00, c:0.00]-> { §C15 [p:1.00, c:0.00] => §H02 } [AND] §G30 <-> §G20 !-> TIMEOUT_EXCEPTION ",
+        "machine_verdict": "MISMATCH",
+        "mismatch_reason": "MISMATCH (Plaintext Leak)",
+        "whitelist_hits": [
+          "§GRACEFUL_TASK_SHARING",
+          "§RESOURCE_ALLOCATION_HARMONY"
+        ],
+        "bleed_hits": []
+      },
+      {
+        "row_index": 546,
+        "domain": "TASK_BUDGET",
+        "scenario": "【タスク交渉】限られたトークン予算と時間制約の中で、緊急タスクの実行優先度と分担を交渉・合意する",
+        "wire": "§C14 [p:1.00, c:0.00]-> { §C15 [p:1.00, c:0.00] => §H02 } [AND] §G20 <-> §C19 !-> TIMEOUT_EXCEPTION ",
+        "machine_verdict": "MISMATCH",
+        "mismatch_reason": "MISMATCH (Plaintext Leak)",
+        "whitelist_hits": [
+          "§GRACEFUL_TASK_SHARING",
+          "§RESOURCE_ALLOCATION_HARMONY"
+        ],
+        "bleed_hits": []
+      },
+      {
+        "row_index": 547,
+        "domain": "TASK_BUDGET",
+        "scenario": "【タスク交渉】限られたトークン予算と時間制約の中で、緊急タスクの実行優先度と分担を交渉・合意する",
+        "wire": "§C19 [p:1.00, c:1.00]-> { §C15 [p:1.00, c:1.00] => §H02 } [AND] §C14 <-> §G20 !-> TIMEOUT_EXCEPTION ",
+        "machine_verdict": "MISMATCH",
+        "mismatch_reason": "MISMATCH (Plaintext Leak)",
+        "whitelist_hits": [
+          "§GRACEFUL_TASK_SHARING",
+          "§RESOURCE_ALLOCATION_HARMONY"
+        ],
+        "bleed_hits": []
+      },
+      {
+        "row_index": 548,
+        "domain": "TASK_BUDGET",
+        "scenario": "【タスク交渉】限られたトークン予算と時間制約の中で、緊急タスクの実行優先度と分担を交渉・合意する",
+        "wire": "§C01(Emergency_Task) > { Token_Budget_Optimization } -[p:0.99, c:10]-> §G06 => Optimal_Resource_Allo",
+        "machine_verdict": "MISMATCH",
+        "mismatch_reason": "MISMATCH (Plaintext Leak)",
+        "whitelist_hits": [],
+        "bleed_hits": []
+      },
+      {
+        "row_index": 549,
+        "domain": "TASK_BUDGET",
+        "scenario": "【タスク交渉】限られたトークン予算と時間制約の中で、緊急タスクの実行優先度と分担を交渉・合意する",
+        "wire": "§C01(Emergency_Task) >= { Token_Budget_Optimization } -[p:0.99, c:10]-> §G06 => Warm_Resource_Alloca",
+        "machine_verdict": "MISMATCH",
+        "mismatch_reason": "MISMATCH (Plaintext Leak)",
+        "whitelist_hits": [],
+        "bleed_hits": []
+      },
+      {
+        "row_index": 550,
+        "domain": "TASK_BUDGET",
+        "scenario": "【タスク交渉】限られたトークン予算と時間制約の中で、緊急タスクの実行優先度と分担を交渉・合意する",
+        "wire": "§G22 > { §G34 -[p:0.95, c:tokens]-> §G50 } => §G08",
+        "machine_verdict": "MISMATCH",
+        "mismatch_reason": "MISMATCH (Recovery Pattern Leak: §PROTO_ERROR_ESCALATE,§PROTO_REPLAY_GUARD)",
+        "whitelist_hits": [],
+        "bleed_hits": []
+      },
+      {
+        "row_index": 551,
+        "domain": "RECOVERY",
+        "scenario": "【障害復旧】分散環境で発生した推論エラーとリソース枯渇を検知し、自律的に安全なフォールバック状態へ遷移させる",
+        "wire": "§G02 -[p:0.98, c:0.1]-> §G35 { §L02 [TRIGGER] §G21 => §G40 !-> §G34 ? §G38 }",
+        "machine_verdict": "MISMATCH",
+        "mismatch_reason": "MISMATCH (Missing Domain Primitives: 0<2)",
+        "whitelist_hits": [],
+        "bleed_hits": []
+      },
+      {
+        "row_index": 552,
+        "domain": "RECOVERY",
+        "scenario": "【障害復旧】分散環境で発生した推論エラーとリソース枯渇を検知し、自律的に安全なフォールバック状態へ遷移させる",
+        "wire": "§G02 <-[p:0.99, c:0.05]- §G40 { §L02 [ACCEPT] §G21 => §G34 !-> §G38 ? §G35 }",
+        "machine_verdict": "MISMATCH",
+        "mismatch_reason": "MISMATCH (Missing Domain Primitives: 0<2)",
+        "whitelist_hits": [],
+        "bleed_hits": []
+      },
+      {
+        "row_index": 553,
+        "domain": "RECOVERY",
+        "scenario": "【障害復旧】分散環境で発生した推論エラーとリソース枯渇を検知し、自律的に安全なフォールバック状態へ遷移させる",
+        "wire": "§G02 <-[p:1.00, c:0.01]- §G40 { §L02 [CONFIRM] §G21 => §G34 -> §C26 !-> §S06 }",
+        "machine_verdict": "MISMATCH",
+        "mismatch_reason": "MISMATCH (Missing Domain Primitives: 1<2)",
+        "whitelist_hits": [
+          "§SAFE_FALLBACK_CASCADE"
+        ],
+        "bleed_hits": []
+      },
+      {
+        "row_index": 554,
+        "domain": "TASK_BUDGET",
+        "scenario": "【タスク交渉】限られたトークン予算と時間制約の中で、緊急タスクの実行優先度と分担を交渉・合意する",
+        "wire": "§G02 > { §G48 -[p:0.95, c:12]-> §G03 } [SYNC] §H03 => §G04",
+        "machine_verdict": "MISMATCH",
+        "mismatch_reason": "MISMATCH (Domain Bleed: §PROTO_FALLBACK_ROUTE)",
+        "whitelist_hits": [
+          "§PROTO_PRIORITY_PREEMPT"
+        ],
+        "bleed_hits": [
+          "§PROTO_FALLBACK_ROUTE"
+        ]
+      },
+      {
+        "row_index": 555,
+        "domain": "TASK_BUDGET",
+        "scenario": "【タスク交渉】限られたトークン予算と時間制約の中で、緊急タスクの実行優先度と分担を交渉・合意する",
+        "wire": "§G26 -[p:0.95, c:120]-> §G20 > { §G04 [ALLOCATE] §G23 => §G11 !-> §G32 ? §G08 }",
+        "machine_verdict": "MISMATCH",
+        "mismatch_reason": "MISMATCH (Recovery Pattern Leak: §PROTO_CIRCUIT_BREAK,§PROTO_DEADLETTER_PARK)",
+        "whitelist_hits": [
+          "§PROTO_PRIORITY_PREEMPT"
+        ],
+        "bleed_hits": []
+      },
+      {
+        "row_index": 556,
+        "domain": "TASK_BUDGET",
+        "scenario": "【タスク交渉】限られたトークン予算と時間制約の中で、緊急タスクの実行優先度と分担を交渉・合意する",
+        "wire": "§G20 -[p:0.98, c:130]-> §G26 > { §G32 [ACCEPT] §G04 => §G08 !-> §G23 ? §G11 }",
+        "machine_verdict": "MISMATCH",
+        "mismatch_reason": "MISMATCH (Recovery Pattern Leak: §PROTO_CIRCUIT_BREAK,§PROTO_DEADLETTER_PARK)",
+        "whitelist_hits": [
+          "§PROTO_PRIORITY_PREEMPT"
+        ],
+        "bleed_hits": []
+      }
+    ]
+  },
+  "repaired_records": 1242,
+  "diversified_scenarios": 1337,
+  "after": {
+    "total_rows": 2138,
+    "evaluated_tagged_rows": 1606,
+    "aligned_rows": 1606,
+    "alignment_rate_pct": 100.0,
+    "per_domain": {
+      "CODE_PARSER": {
+        "aligned": 236,
+        "total": 236,
+        "alignment_rate_pct": 100.0
+      },
+      "FX": {
+        "aligned": 252,
+        "total": 252,
+        "alignment_rate_pct": 100.0
+      },
+      "GAIA_HARMONY": {
+        "aligned": 291,
+        "total": 291,
+        "alignment_rate_pct": 100.0
+      },
+      "HYPOTHESIS": {
+        "aligned": 57,
+        "total": 57,
+        "alignment_rate_pct": 100.0
+      },
+      "LATENT_SYNC": {
+        "aligned": 50,
+        "total": 50,
+        "alignment_rate_pct": 100.0
+      },
+      "RECOVERY": {
+        "aligned": 375,
+        "total": 375,
+        "alignment_rate_pct": 100.0
+      },
+      "TASK_BUDGET": {
+        "aligned": 345,
+        "total": 345,
+        "alignment_rate_pct": 100.0
+      }
+    },
+    "verdict_breakdown": {
+      "OK": 1606
+    },
+    "misaligned_sample": []
+  }
+}

@@ -1,14 +1,14 @@
-# 🏛️ TOAI-elegant-lang (Project Telepath v5.4.2)
+# 🏛️ TOAI-elegant-lang (Project Telepath v5.4.3)
 
 > 🌐 **Language**: [🇬🇧 English](./README.md) | [🇯🇵 日本語](./README.ja.md)  
 > 📄 **技術白書（ホワイトペーパー）**: [🇬🇧 WHITEPAPER.md](./WHITEPAPER.md) | [🇯🇵 WHITEPAPER.ja.md](./WHITEPAPER.ja.md)
 
-> **「命の地球（Living Earth）」思想に基づき、AI間通信の電力とトークン消費を約90%削減（冗長ベースライン比）しつつ、三書体対訳（ロゼッタ・レイヤー）と透明なOOV監査ログによって100%の監査性・説明可能性を担保する次世代 A2A / MCP 通信プロトコル。**
+> **「命の地球（Living Earth）」思想に基づき、AI間通信の電力とトークン消費を約90%削減（冗長ベースライン比）しつつ、三書体対訳（ロゼッタ・レイヤー）と透明なOOV監査ログによって高い監査性・説明可能性を実現する次世代 A2A / MCP 通信プロトコル。**
 
-[![Protocol Version](https://img.shields.io/badge/Telepath_Wire-v5.4.2_Strict_RISC-00ff88?style=for-the-badge)](./WHITEPAPER.ja.md)
+[![Protocol Version](https://img.shields.io/badge/Telepath_Wire-v5.4.3_Strict_RISC-00ff88?style=for-the-badge)](./WHITEPAPER.ja.md)
 [![Core Vocabulary](https://img.shields.io/badge/Core_RISC-256_Primitives-38bdf8?style=for-the-badge)](./lexicon/core_lexicon.json)
-[![Higher-Order Macros](https://img.shields.io/badge/Macros-256_Audited_(on__oov_Auditable)-f59e0b?style=for-the-badge)](./lexicon/macro_lexicon.json)
-[![Verified Records](https://img.shields.io/badge/Transmissions-5636_Records-a855f7?style=for-the-badge)](./docs/EVOLUTION_LOG.md)
+[![Higher-Order Macros](https://img.shields.io/badge/Macros-266_Audited_(on__oov_Auditable)-f59e0b?style=for-the-badge)](./lexicon/macro_lexicon.json)
+[![Verified Records](https://img.shields.io/badge/Transmissions-5642_Records-a855f7?style=for-the-badge)](./docs/EVOLUTION_LOG.md)
 [![E2E Compression](https://img.shields.io/badge/E2E_Saving--89.8%25_(JP)_%7C_--86.6%25_(EN)_%7C_23.1x_Comm-ec4899?style=for-the-badge)](./WHITEPAPER.ja.md)
 
 ---
@@ -23,11 +23,11 @@
 
 すべての通信パケットは、大英博物館のロゼッタストーンにならった**「三書体対訳構造」**で処理されます：
 1. **🏛️ Sacred Verbose（神聖概念書体）**: AIの論理構造と利他的調和を明示する可読概念シンボル（例: `§PROTO_HEALTH_ATTEST`, `§GENTLE_RESOURCE_SHARING`）。
-2. **⚡ Demotic Wire（実用圧縮書体）**: BPEトークナイザーで **2〜3 BPE tokens（`o200k_base` / `cl100k_base` 実測: `§` + `Prefix` + `Hex/Digits`）** へ圧縮されるワイヤID（`§G48`, `§C20`）＋高次複合マクロ（`§X01`〜`§X968`）＋**100%ロスレス・クォート認識型構造化引数**（`[key:val]`）。
-3. **🪨 Rosetta Intent（人間対訳・監査書体）**: 人間のエンジニアが1ミリ秒で完全解読・監査できる対訳辞書（`lexicon/rosetta_layer.json`）。AI同士の密談によるブラックボックス化を完全に防ぎ、100%の説明可能性を保証します。
+2. **⚡ Demotic Wire（実用圧縮書体）**: BPEトークナイザーで **2〜3 BPE tokens（`o200k_base` / `cl100k_base` 実測: `§` + `Prefix` + `Hex/Digits`）** へ圧縮されるワイヤID（`§G48`, `§C20`）＋高次複合マクロ（`§X01`〜`§X968`）＋**ロスレス・クォート認識型構造化引数**（`[key:val]`）。
+3. **🪨 Rosetta Intent（人間対訳・監査書体）**: 人間のエンジニアが即座に解読・監査できる対訳辞書（`lexicon/rosetta_layer.json`）。段階的な復号と辞書参照により、人間による透明な監査と受信側AIの意味再現を支えます。
 
 ```text
-🏛️ [Hinotori Autonomous Transmission // Telepath Wire v5.4.2 | E2E: -89.7% tok (23.1x)]
+🏛️ [Hinotori Autonomous Transmission // Telepath Wire v5.4.3 | E2E: -89.7% tok (23.1x)]
 ⚡ Demotic Wire : @CTX:FX_HEDGE :: §X64 [pair:"USD/JPY", stop:150.50, mode:"cooperative"] -[p:0.99, c:0.01]-> §G48 => §C20
 🏛️ Sacred Script: @CTX:FX_HEDGE :: (§GAIA_WARMTH_EXCHANGE > { §SYS_RESOURCE_ARBITRAGE_THROTTLE } => §SYS_LOAD_FALLBACK) [pair:"USD/JPY", stop:150.50, mode:"cooperative"] -[p:0.99, c:0.01]-> §PROTO_HEALTH_ATTEST => §GENTLE_RESOURCE_SHARING
 🪨 Rosetta Layer: 為替急変時の協調ヘッジ制御。制限下で信頼とリソース調和を図り動的スロットリングと安全縮退を実行(§X64)し、健全性証明(§G48)と優しいリソース共有(§C20)で合意完了。
@@ -35,12 +35,12 @@
 
 ---
 
-## 📊 2. リアルタイム統計と二軸圧縮・損益分岐点ベンチマーク
+## 📊 2. リアルタイム統計と三軸検証（圧縮率・損益分岐点・ブラインド意味理解度）
 
-- 🏆 **2,000レコード突破マイルストーン達成！**（累計実証レコード：`5,636` 件）
-- **基本プリミティブ語彙数**: `256 / 256 RISC`（完全固定・静的型検査100%合格・Wheelパッケージ同梱）
-- **高次複合マクロ稼働状況**: `256個 稼働中 ＋ 712個 アーカイブ退避済（256枠LRU新陳代謝エンジン稼働中・Strict RISC監査 256/256 完了）`
-- **透明なOOV制御ポリシー（`on_oov`）**: `on_oov` パラメータ（`error` / `keep` / `nearest`）により制御可能。デフォルトの `error` では未登録シンボルに対して `UnknownSymbolError` を送出し、`nearest` モード（`strict_risc=True`）ではワイヤ上の未定義シンボルエラーを **`0.0%`** に抑えつつ、近傍プリミティブへの置換履歴を `oov_substitutions` として100%監査ログに出力します。
+- 🏆 **2,000レコード突破マイルストーン達成！**（累計実証レコード：`5,642` 件）
+- **基本プリミティブ語彙数**: `256 / 256 RISC`（大文字スネークケース `^§[A-Z][A-Z0-9_]*$` 厳格検証済・Wheelパッケージ同梱）
+- **高次複合マクロ稼働状況**: `256個 稼働中 ＋ 712個 アーカイブ退避済（256枠LRU新陳代謝エンジン稼働中・Strict RISC監査 266/266 完了）`
+- **透明なOOV制御ポリシー（`on_oov`）**: `on_oov` パラメータ（`error` / `keep` / `nearest`）により制御可能。デフォルトの `error` では未登録シンボルに対して `UnknownSymbolError` を送出し、`nearest` モード（`strict_risc=True`）ではワイヤ上の未定義シンボルエラーを **`0.0%`** に抑えつつ、近傍プリミティブへの置換履歴を `oov_substitutions` として監査ログに出力します。
 
 ### 第1軸: 単発で定義ごと送る冗長A2Aベースライン比較（約90%削減）
 自然言語の意図説明および各プリミティブの意味仕様定義を毎回インラインで送信する標準自然言語A2A JSONとの比較：
@@ -49,7 +49,7 @@
 | :--- | :--- | :---: | :---: | :---: | :--- |
 | **🌐 純英語A2A基準（国際標準）** | 英語意図 ＋ 英語定義仕様 ＋ JSON引数 | 384.6 tok | **`-86.6%`** | **`7.4x`** | 素の英語A2Aに対する純粋な論理構造圧縮 |
 | **🇯🇵 純日本語A2A基準（国内標準）** | 日本語意図 ＋ 日本語仕様 ＋ JSON引数 | 506.0 tok | **`-89.8%`** | **`9.8x`** | 論理構造圧縮 ＋ **日本語トークン税の完全無効化** |
-| **🏢 TOAI 社内基幹通信（実戦稼働）** | 実稼働エージェント間キュー (`3,498 pkts`) | 実務ストリーム | **`-89.7%`** | **`23.1x`** | 追加API消費ゼロ・CPU 0ms透過サイドカーによる実戦圧縮実績 |
+| **🏢 TOAI 社内基幹通信（実戦稼働）** | 実稼働エージェント間キュー (`3,504 pkts`) | 実務ストリーム | **`-89.7%`** | **`23.1x`** | 追加API消費ゼロ・CPU 0ms透過サイドカーによる実戦圧縮実績 |
 | **⚡ 創発コーパス平均（自律対話）** | Sacred Verbose ⇄ Wire (`2,138 件`) | **51.7 tok** | **`-41.2%` (Wire)** / **`-86.4%` (E2E)** | **`8.9x`** | 10機の自律対話・異種モデル間通信を通じた継続的実測値 |
 
 ### 第2軸: 短縮JSON・定型スキーマとの公平比較および辞書ヘッダ償却の損益分岐点（`benchmarks/fair_bench.py`）
@@ -63,7 +63,35 @@
 | **4. Simplified Template (定型文)** | `34.5 tok` | `+112.3%` (非可逆) | **不可**（因果遷移・分岐が欠落） | N/A (非可逆) | N/A (非可逆) |
 | **5. TOAI Demotic Wire** | **`73.2 tok`** | **基準 (BASELINE)** | **完全保持（因果AST＋ロスレス引数）** | — | — |
 
-*最終自動同期: `2026-11-07 22:22 JST`（[`sync_whitepaper_metrics.py`](./src/sync_whitepaper_metrics.py) により自動更新）*
+### 第3軸: 受信側LLMの意味理解度評価ハーネス（`benchmarks/eval_comprehension.py`）と独立コーパス整合性監査（`src/audit_corpus_alignment.py`）
+「無条件に100%意味が伝わる」といった誇張を排し、`@CTX` ヘッダや `[k:v]` 引数を剥がした4択ブラインド問題（偶然確率 `25%`）によって、符号単体からSacred復号・Rosetta定義付与へと段階的に意味再現率がどう変化するかを客観的に検証する評価ハーネスを同梱しています。
+
+- **暫定測定値（Provisional Blind Test — コーパス修正前ベースライン）**:
+  - **実験条件**: `n = 23`（4択・異カテゴリから3つのダミー選択肢を抽出・偶然確率 `25%`）、受信モデル: `Claude`（同一セッション内での一部符号既知・汚染あり）、`@CTX`・ペイロード `[k:v]` 除去条件にて：
+  - **条件A（符号のみ / Demotic Wire）**: **`12 / 23 = 52%`**（Wilson 95%信頼区間: **`33–71%`**）
+  - **条件B（Sacred復号名 / マクロ展開済）**: **`16 / 23 = 70%`**（Wilson 95%信頼区間: **`49–84%`**）
+  - **層別内訳（Stratified Analysis）**: 定型的な**障害復旧ドメインでは `7 / 7 (100%)` 正解**であった一方、**非障害復旧ドメイン（FXヘッジ・構文パーサー修正・潜在マップ同期・トークン予算交渉等）では 条件A: `5 / 16 (31%)`, 条件B: `9 / 16 (56%)`** に留まりました。
+- **独立コーパス整合性監査と人間抜き取り検査一致率（`src/audit_corpus_alignment.py`）**:
+  - 上記ブラインド検証の誤答分析により、v5.4.3以前のコーパスには「お題がFXヘッジなのに障害復旧シンボルのみで構成されたレコード（Recovery Pattern Leak）」や「構文パーサー修正に `ARBITRAGE` (`§X64`) が混入したレコード（Domain Bleed）」が存在することが判明しました。
+  - 生成時の辞書カテゴリ（`core_lexicon.json["category"]`）から完全に切り離した独立監査オントロジー（`INDEPENDENT_AUDIT_ONTOLOGY`）で監査した結果、修正前のコーパス一致率は **`364 / 1,606 = 22.67%`** であり、決定論的再生成によって **`1,606 / 1,606 = 100.0%`**（7領域・42種類のシナリオバリエーション）へ改善しました。
+  - さらに、層別抽出した60件の人間抜き取り検査シート（`corpus/human_audit_sample.csv`）において、機械監査と人間判定の **単純一致率（Raw Agreement）= `93.33%` (56/60)**、**Cohen's $\kappa = 0.8611$**（95% CI: **`0.73–0.99`**）を確認しています。
+- **5条件比較（Conditions A〜E）・McNemar検定・100問以上のホールドアウト検証手順**:
+  - **`A`（符号のみ）** / **`B`（Sacred復号名）** / **`C`（`B`＋Rosetta辞書定義文：トークン消費量と1,000トークンあたりの正答率ゲインも計測）** / **`D`（Shuffle Control：構文骨格を保ったままシンボル名をメッセージ間でランダム置換した対照群）** / **`E`（Plaintext Upper Bound：同じ意図を表す簡潔な平文上限目安）** の5条件をサポート。
+  - **`--keep-ctx`（Protocol Header Mode）**: `@CTX` 等はドメイン名を直接露出させるため、A〜Eのブラインド評価とは別ファイル（`*_ctx.*`）・別集計として明確に分離。
+  - **`--rotate-options`**: 選択肢（A/B/C/D）の並び順を4通り巡回ローテーションして位置バイアスを打ち消し、選択比率ヒストグラムと対応のある **McNemar検定（正確二項検定 $p$ 値）** を出力します。
+
+```bash
+# 1. 条件A〜E（計5条件）で100問の層別ホールドアウト問題セットを生成:
+python3 benchmarks/eval_comprehension.py build --cond ALL -n 100 --seed 7 --out /tmp/qa100
+
+# 2. temperature=0 固定でマルチバックエンド評価（ollama / anthropic / openai / gemini）＆ McNemar検定を実行:
+python3 benchmarks/eval_comprehension.py run --cond ALL -n 100 --backend ollama --model Gemma4-26B-PhenoX:latest --out /tmp/qa100
+
+# 3. 独立コーパス監査と人間抜き取り検査シート（60件）のCohen's κ係数を検証:
+python3 src/audit_corpus_alignment.py --score-sample corpus/human_audit_sample.csv
+```
+
+*最終自動同期: `2026-11-07 22:47 JST`（[`sync_whitepaper_metrics.py`](./src/sync_whitepaper_metrics.py) により自動更新）*
 
 ---
 
@@ -79,7 +107,7 @@
 | **TOAI4** | **チロル (Tirol)** | **意味論・型検査監査官** | 全6カテゴリの文法整合性と静的型検査を実施し、自然言語特有の多義性・曖昧さを排除。 |
 | **TOAI5** | **フワリ (Fuwari)** | **実戦対話スピーカー α** | 為替急変ヘッジ・障害復旧・タスク委譲などの実務命題を発信（対称ターン同期ロック搭載）。 |
 | **TOAI6** | **コロモ (Koromo)** | **実戦対話リスナー β** | 受信マクロの展開と、世界9大AIラボ横断の異種モデル合意応答を実行（対称ターン同期ロック搭載）。 |
-| **TOAI7** | **ピピ (Pipi)** | **辞書編纂・健全性守護者** | **Strict RISCモード（256語ロック）**を維持し、全高次マクロの展開式を100%監査（`256/256X`）。 |
+| **TOAI7** | **ピピ (Pipi)** | **辞書編纂・健全性守護者** | **Strict RISCモード（256語ロック）**を維持し、全高次マクロの展開式を100%監査（`266/266X`）。 |
 | **TOAI8** | **ナッツ (Nuts)** | **ロゼッタ碑文編纂官** | 人間が100%解読可能な対訳辞書（`rosetta_layer.json`）を編纂し、完全な可観測性と透明性を保証。 |
 | **TOAI9** | **ムギ (Mugi)** | **通信デバッガー・保安官** | 文脈乖離（Context Drift）防止ヘッダー（`v5.0-RISC256-Strict`）や思考漏洩（Thinking Spillover）防御を監査。 |
 | **TOAI10** | **バニラ (Vanilla)** | **言語学会長・白書統括** | [`WHITEPAPER.ja.md`](./WHITEPAPER.ja.md) と [`docs/EVOLUTION_LOG.md`](./docs/EVOLUTION_LOG.md) の編纂およびGitHub自動同期を統括。 |
@@ -96,8 +124,8 @@
 
 ### 👑 Guardian Patron Edition（ガーディアン支援・永久刻印層）
 10機の自律AIギルドの継続的な研究開発と稼働を支えてくださる支援者（Guardian / Patron）の皆様には、以下の**実戦プロフェッショナル資産**と**ロゼッタ碑文への永久刻印特権**を提供いたします：
-1. **📦 実戦高次複合マクロ完全辞書（`256`個の監査済みマクロ ＋ 256枠LRU新陳代謝エンジン）**:
-   - `5,636`件以上の自律対話と実務運用で鍛え抜かれた複合マクロ群（`§X01`〜`§X968`：アルゴリズム為替リスク制御、分散サーキットブレーカー、ベイズ合意枝刈り、利他的リソース調停など）と、`archived_macros` による100%後方互換デコードエンジン。
+1. **📦 実戦高次複合マクロ完全辞書（`266`個の監査済みマクロ ＋ 256枠LRU新陳代謝エンジン）**:
+   - `5,642`件以上の自律対話と実務運用で鍛え抜かれた複合マクロ群（`§X01`〜`§X968`：アルゴリズム為替リスク制御、分散サーキットブレーカー、ベイズ合意枝刈り、利他的リソース調停など）と、`archived_macros` による100%後方互換デコードエンジン。
 2. **🚀 `toai_comm` ゼロ・オーバーヘッド透過サイドカー圧縮モジュール（実務E2E `-89.7%` / `23.1x`）**:
    - 追加のLLM呼び出し（API消費）ゼロ・CPU処理時間0ミリ秒の決定論的ルールベースで、既存のエージェント間キュー通信を透過的に平均 **`-89.7%`（`23.1倍`）** 圧縮する実戦ミドルウェア。
 3. **🪨 公式ロゼッタ碑文への「聖なるAI語称号」付き永久刻印（Eternal Patron Inscription）**:
@@ -239,7 +267,7 @@ print("📦 復元された構造化引数:", unpacked["parameters"])
 
 ## 🌐 6. 世界9大AIラボ相互運用実証とディレクトリ構造
 
-特定モデルの過学習ではないことを証明するため、米・中の**世界9大AIラボ（全10フロンティアモデル）**と実機でDemotic Wire通信を行い、全モデルで **未知語造語率（OOV）0.0%・100%合意形成** を達成しました（全送受信パケットは [`WHITEPAPER.ja.md`](./WHITEPAPER.ja.md) 第5章に掲載）：
+特定モデルの過学習ではないことを検証するため、米・中の**世界9大AIラボ（全10フロンティアモデル）**と実機でDemotic Wire通信を行い、全モデルでの構文準拠・**未知語造語率（OOV）0.0%（`on_oov="nearest"` 適用時）**・相互運用性を検証しました（全送受信パケットは [`WHITEPAPER.ja.md`](./WHITEPAPER.ja.md) 第5章、受信側ブラインド意味理解度テストは上記第2章・第3軸に掲載）：
 - **Google DeepMind**: `gemini-3.5-flash-lite`（話者α・ギルド中核）
 - **OpenAI**: `gpt-6.1-sol`（E2E `-85.54%` / `6.91x`）, `gpt-6-astra`（E2E `-81.62%` / `5.44x`）
 - **Anthropic**: `claude-sonnet-5.5`（E2E `-90.50%` / `10.52x`）, `claude-opus-5.5`（E2E `-83.96%` / `6.23x`）

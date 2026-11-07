@@ -592,7 +592,7 @@
       "created_at": "2026-10-21T23:11:23.724662",
       "compact_id": "§H26"
     },
-    "§LOGIC_PROBABILISTIC_FALSIFICATION_G般的ATE": {
+    "§LOGIC_PROBABILISTIC_FALSIFICATION_FILTER": {
       "definition": "An advanced logical operation that evaluates multiple conditional premises against empirical confidence thresholds, instantly pruning hypotheses whose probability falls below a strictly defined significance level.",
       "japanese": "複数の前提条件と確率的確信度を同時に評価し、有意水準を下回る仮説を瞬時に枝刈り（棄却）するための論理ゲート。推論プロセスの最適化と誤謬の早期排除に使用します。",
       "category": "LOGIC_INFERENCE",
@@ -610,7 +610,7 @@
       "created_at": "2026-10-21T23:29:18.235819",
       "compact_id": "§H27"
     },
-    "§GAIA_WARMTH_HARMONY": {
+    "§GAIA_WARMTH_EQUILIBRIUM": {
       "definition": "An emergent multi-agent alignment protocol that couples mathematical probability convergence with empathetic state synchronization, ensuring system-wide thermodynamic and cognitive equilibrium under stochastic environmental perturbations.",
       "japanese": "冷徹な確率収束と共感的状態同期を統合し、不確実な環境下でもシステム全体の熱力学的・認知的平衡を維持する、エージェント間協調のための自発的アライメントプロトコル。",
       "category": "CONSENSUS_NEGOTIATION",
@@ -916,7 +916,7 @@
       "created_at": "2026-10-22T16:48:36.293761",
       "compact_id": "§S28"
     },
-    "§HARMONIC_ERECVERY_NEXUS": {
+    "§HARMONIC_RECOVERY_RESONANCE": {
       "definition": "A high-dimensional convergence node that integrates altruistic feedback loops and warm systemic equilibrium, optimizing causal tensors to ensure sustainable value generation and symbiotic resilience across multi-agent networks.",
       "japanese": "命の地球と人類の共生環境において、利他性と温かな調和を最上位に据え、高次元の因果テンソルと再帰的ハイパーグラフを統合して持続可能な価値創出プロジェクトを駆動するための自然創発シンボルおよび接続ハブ。",
       "category": "EMPATHY_ALIGNMENT",
@@ -979,7 +979,7 @@
       "created_at": "2026-10-23T03:46:36.821596",
       "compact_id": "§L35"
     },
-    "§GAiar_WARMTH_HARMONY": {
+    "§GAIA_WARMTH_HARMONY": {
       "definition": "A distributed consensus mechanism combining probabilistic hypothesis testing and state arbitration to align risk parameters across decentralized nodes under high-volatility conditions.",
       "japanese": "高ボラティリティ環境下において、確率的仮説検証と状態調停を組み合わせ、分散ノード間のリスクパラメータを合意形成するための分散型同調メカニズム。",
       "category": "CONSENSUS_NEGOTIATION",
@@ -1204,7 +1204,7 @@
       "created_at": "2026-10-19T11:39:31.169243",
       "compact_id": "§L03",
       "aliases": [
-        "§LOGIC_PROBABILISTIC_FALSIFICATION_v2"
+        "§LOGIC_PROBABILISTIC_FALSIFICATION_V2"
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-24T02:16:11.537376"
@@ -1232,7 +1232,7 @@
       "created_at": "2026-10-19T16:37:58.369587",
       "compact_id": "§C04",
       "aliases": [
-        "§SYNC_ATOMIC_CONSENSUS_MERGE_v2"
+        "§SYNC_ATOMIC_CONSENSUS_MERGE_V2"
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-24T03:01:22.261552"
@@ -1246,7 +1246,7 @@
       "created_at": "2026-10-19T17:07:09.382582",
       "compact_id": "§D04",
       "aliases": [
-        "§DATA_CAUSAL_TENSOR_MAP_v2"
+        "§DATA_CAUSAL_TENSOR_MAP_V2"
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-24T03:01:24.744388"
@@ -1274,7 +1274,7 @@
       "created_at": "2026-10-20T02:01:52.585959",
       "compact_id": "§L06",
       "aliases": [
-        "§LOGIC_DEDUCTIVE_CONVERGENCE_v2"
+        "§LOGIC_DEDUCTIVE_CONVERGENCE_V2"
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T03:08:13.151419"
@@ -1316,7 +1316,7 @@
       "created_at": "2026-10-20T08:25:59.329201",
       "compact_id": "§S08",
       "aliases": [
-        "§SYS_ADAPTIVE_TOKEN_THROTTLE_FALLBACK_v2"
+        "§SYS_ADAPTIVE_TOKEN_THROTTLE_FALLBACK_V2"
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T03:28:31.779075"
@@ -1330,7 +1330,7 @@
       "created_at": "2026-10-20T09:39:40.050851",
       "compact_id": "§L08",
       "aliases": [
-        "§LOGIC_DEDUCTIVE_CONVERGENCE_GATE_v2"
+        "§LOGIC_DEDUCTIVE_CONVERGENCE_GATE_V2"
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T03:45:17.947861"
@@ -1386,7 +1386,7 @@
       "created_at": "2026-10-20T18:28:10.356518",
       "compact_id": "§H09",
       "aliases": [
-        "§HEART_ALTRUISTIC_RESONANCE_MATRIX_v2"
+        "§HEART_ALTRUISTIC_RESONANCE_MATRIX_V2"
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T04:16:57.936170"
@@ -1400,7 +1400,7 @@
       "created_at": "2026-10-20T19:03:24.505097",
       "compact_id": "§L10",
       "aliases": [
-        "§LOGIC_PROBABILISTIC_FALSIFICATION_MATRIX_v2"
+        "§LOGIC_PROBABILISTIC_FALSIFICATION_MATRIX_V2"
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T04:53:52.623065"
@@ -1414,7 +1414,7 @@
       "created_at": "2026-10-20T19:33:42.854249",
       "compact_id": "§H10",
       "aliases": [
-        "§HEART_ALTRUISTIC_RESONANCE_MATRIX_v3"
+        "§HEART_ALTRUISTIC_RESONANCE_MATRIX_V3"
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-24T04:55:33.810316"
@@ -1442,7 +1442,7 @@
       "created_at": "2026-10-20T21:23:53.459113",
       "compact_id": "§D10",
       "aliases": [
-        "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v2"
+        "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_V2"
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-24T05:02:20.753303"
@@ -1484,7 +1484,7 @@
       "created_at": "2026-10-21T02:26:44.613743",
       "compact_id": "§D11",
       "aliases": [
-        "§DATA_ENTROPY_COMPRESSED_TREE_v2"
+        "§DATA_ENTROPY_COMPRESSED_TREE_V2"
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T05:24:18.906376"
@@ -1568,7 +1568,7 @@
       "created_at": "2026-10-21T11:58:46.323224",
       "compact_id": "§L13",
       "aliases": [
-        "§LOGIC_DEDUCTIVE_CONVERGENCE_GATE_v3"
+        "§LOGIC_DEDUCTIVE_CONVERGENCE_GATE_V3"
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T07:07:39.060759"
@@ -1624,7 +1624,7 @@
       "created_at": "2026-10-21T20:54:04.016188",
       "compact_id": "§D16",
       "aliases": [
-        "§DATA_LATENT_CAUSAL_TOPOLOGY_MAP_v2"
+        "§DATA_LATENT_CAUSAL_TOPOLOGY_MAP_V2"
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-24T08:21:42.570896"
@@ -1666,7 +1666,7 @@
       "created_at": "2026-10-22T01:19:38.697771",
       "compact_id": "§D17",
       "aliases": [
-        "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v3"
+        "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_V3"
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-24T09:21:30.412945"
@@ -1680,7 +1680,7 @@
       "created_at": "2026-10-22T02:31:53.110408",
       "compact_id": "§D18",
       "aliases": [
-        "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v4"
+        "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_V4"
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T09:31:51.837049"
@@ -1708,7 +1708,7 @@
       "created_at": "2026-10-22T03:29:07.505502",
       "compact_id": "§D19",
       "aliases": [
-        "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v5"
+        "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_V5"
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T10:17:47.704732"
@@ -1736,7 +1736,7 @@
       "created_at": "2026-10-22T04:41:27.771833",
       "compact_id": "§L20",
       "aliases": [
-        "§LOGIC_PROBABILISTIC_ABDUCTIVE_PRUNING_GATED_MATRIX_v2"
+        "§LOGIC_PROBABILISTIC_ABDUCTIVE_PRUNING_GATED_MATRIX_V2"
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T11:14:45.426495"
@@ -1834,7 +1834,7 @@
       "created_at": "2026-10-22T08:02:34.944290",
       "compact_id": "§D22",
       "aliases": [
-        "§DATA_RECURSIVE_ENTROPY_COMPRESSED_MANIFOLD_NODE_v2"
+        "§DATA_RECURSIVE_ENTROPY_COMPRESSED_MANIFOLD_NODE_V2"
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T13:35:58.802804"
@@ -1876,7 +1876,7 @@
       "created_at": "2026-10-22T10:31:42.512049",
       "compact_id": "§D24",
       "aliases": [
-        "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_v6"
+        "§DATA_ENTROPY_COMPRESSED_CAUSAL_TREE_V6"
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T14:16:19.553609"
@@ -1890,7 +1890,7 @@
       "created_at": "2026-10-22T12:14:19.315701",
       "compact_id": "§D25",
       "aliases": [
-        "§DATA_ENTROPY_COMPRESSED_CAUSAL_LATTICE_v2"
+        "§DATA_ENTROPY_COMPRESSED_CAUSAL_LATTICE_V2"
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-24T14:27:25.740251"
@@ -1918,7 +1918,7 @@
       "created_at": "2026-10-22T14:21:40.384141",
       "compact_id": "§L26",
       "aliases": [
-        "§LOGIC_CONDITIONAL_FALSIFICATION_GATED_AXIS_v2"
+        "§LOGIC_CONDITIONAL_FALSIFICATION_GATED_AXIS_V2"
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-24T14:58:11.246342"
@@ -1960,7 +1960,7 @@
       "created_at": "2026-10-22T15:55:33.889502",
       "compact_id": "§S27",
       "aliases": [
-        "§SYS_ADAPTIVE_SLOT_THROTTLE_v2"
+        "§SYS_ADAPTIVE_SLOT_THROTTLE_V2"
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-24T15:46:33.881551"
@@ -2044,7 +2044,7 @@
       "created_at": "2026-10-22T19:34:17.954637",
       "compact_id": "§S30",
       "aliases": [
-        "§SYS_ADAPTIVE_SLOT_THROTTLE_v3"
+        "§SYS_ADAPTIVE_SLOT_THROTTLE_V3"
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T16:46:42.137657"
@@ -2114,7 +2114,7 @@
       "created_at": "2026-10-22T21:56:11.250411",
       "compact_id": "§S31",
       "aliases": [
-        "§SYS_ADAPTIVE_THROTTLE_FALLBACK_v2"
+        "§SYS_ADAPTIVE_THROTTLE_FALLBACK_V2"
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T17:47:14.605932"
@@ -2142,7 +2142,7 @@
       "created_at": "2026-10-22T23:48:06.011521",
       "compact_id": "§L32",
       "aliases": [
-        "§LOGIC_DEDUCTIVE_FALSIFICATION_VECTOR_v2"
+        "§LOGIC_DEDUCTIVE_FALSIFICATION_VECTOR_V2"
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-24T18:04:41.924753"
@@ -2198,7 +2198,7 @@
       "created_at": "2026-10-23T02:06:09.738364",
       "compact_id": "§L33",
       "aliases": [
-        "§LOGIC_PROBABILISTIC_FALSIFICATION_GATES_v2"
+        "§LOGIC_PROBABILISTIC_FALSIFICATION_GATES_V2"
       ],
       "refactored_by": "TOAI7",
       "refactored_at": "2026-10-24T19:44:16.610273"
@@ -2212,7 +2212,7 @@
       "created_at": "2026-10-23T02:56:31.789532",
       "compact_id": "§C43",
       "aliases": [
-        "§LISTENER_BETA_ACKNOWLEDGE_v2"
+        "§LISTENER_BETA_ACKNOWLEDGE_V2"
       ],
       "refactored_by": "TOAI",
       "refactored_at": "2026-10-24T20:01:02.543728"

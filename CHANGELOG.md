@@ -6,6 +6,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [v5.4.3] - 2026-11-07 (Lexicon/Corpus Typo Elimination, Independent Corpus Audit & Comprehension Harness)
+### Added
+- **Independent Deterministic Corpus Alignment Auditor (`src/audit_corpus_alignment.py`)**:
+  - Decoupled from `core_lexicon.json["category"]` and generation templates (`INDEPENDENT_AUDIT_ONTOLOGY`) to prevent circular validation.
+  - Classifies records into `MATCH`, `MISMATCH (Domain Bleed)`, `MISMATCH (Recovery Pattern Leak)`, `MISMATCH (Missing Domain Primitives)`, and `MISMATCH (Plaintext Leak)`.
+  - Added `--export-sample` and `--score-sample` for human spot-check auditing (`corpus/human_audit_sample.csv`, $n=60$: Raw Agreement = `93.33%` [56/60], Cohen's $\kappa = 0.8611$ [95% CI: `0.73–0.99`]).
+  - Repaired corpus alignment from pre-fix `364/1,606 (22.67%)` to `1,606/1,606 (100.0%)` and expanded scenario diversity to 42 distinct scenarios across 7 domains.
+- **Statistical Receiver-Comprehension Evaluation Harness (`benchmarks/eval_comprehension.py` & `examples/eval_comprehension.py`)**:
+  - Supports 5 blind conditions (`A`: wire only, `B`: Sacred verbose names, `C`: Sacred + Rosetta glossary, `D`: shuffled symbol-name control, `E`: concise plaintext upper bound) with `--keep-ctx` isolated as Protocol Header Mode.
+  - Implements Wilson 95% confidence intervals, paired McNemar exact binomial test (`mcnemar_test`), 4-way cyclic option rotation (`--rotate-options`), chosen-letter position bias histograms, stratified recovery vs. non-recovery reporting, BPE prompt token cost & gain per 1,000 tokens, and multi-backend `temperature=0` execution (`ollama`, `anthropic`, `openai`, `gemini`).
+
+### Fixed
+- **Strict Uppercase Symbol Hygiene**: Eliminated all `GAiar` (`§GAiar_WARMTH_HARMONY` -> `§GAIA_WARMTH_HARMONY`), `ERECVERY`, CJK typos, and lowercase `_vN` suffixes across `core_lexicon.json`, `macro_lexicon.json`, `rosetta_layer.json`, and `corpus/dialogues.jsonl`, enforced by `tests/test_codec.py`.
+
 ## [v5.4.1-rev6] - 2026-11-07 (Paper Revision 6.0 Synchronization)
 ### Added
 - **Revision 6.0 Synchronized Whitepaper Alignment**:

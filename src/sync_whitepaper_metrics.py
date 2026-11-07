@@ -237,14 +237,14 @@ def generate_readme_en(m: Dict[str, Any]) -> str:
         else f"📈 **Verified Stream**: `{m['total_records']:,}` total records (`{m['dialogue_count']:,}` emergent dialogues + `{m['internal_packets']:,}` production sidecar packets)"
     )
 
-    return f"""# 🏛️ TOAI-elegant-lang (Project Telepath v5.4.2)
+    return f"""# 🏛️ TOAI-elegant-lang (Project Telepath v5.4.3)
 
 > 🌐 **Language**: [🇬🇧 English](./README.md) | [🇯🇵 日本語](./README.ja.md)  
 > 📄 **Technical Whitepaper**: [🇬🇧 WHITEPAPER.md](./WHITEPAPER.md) | [🇯🇵 WHITEPAPER.ja.md](./WHITEPAPER.ja.md)
 
-> **"For AI, by AI — An Emergent High-Density A2A & MCP Wire Protocol with ~90% Verbose-Baseline Token Reduction, Reproducible Multi-Format Benchmarks, and 100% Human Observability."**
+> **"For AI, by AI — An Emergent High-Density A2A & MCP Wire Protocol with ~90% Verbose-Baseline Token Reduction, Reproducible Multi-Format Benchmarks, and Auditable Tri-Script Rosetta Decoding."**
 
-[![Protocol Version](https://img.shields.io/badge/Telepath_Wire-v5.4.2_Strict_RISC-00ff88?style=for-the-badge)](./WHITEPAPER.md)
+[![Protocol Version](https://img.shields.io/badge/Telepath_Wire-v5.4.3_Strict_RISC-00ff88?style=for-the-badge)](./WHITEPAPER.md)
 [![Core Vocabulary](https://img.shields.io/badge/Core_RISC-256_Primitives-38bdf8?style=for-the-badge)](./lexicon/core_lexicon.json)
 [![Higher-Order Macros](https://img.shields.io/badge/Macros-{m['macro_count']}_Audited_(on__oov_Auditable)-f59e0b?style=for-the-badge)](./lexicon/macro_lexicon.json)
 [![Verified Records](https://img.shields.io/badge/Transmissions-{m['total_records']}_Records-a855f7?style=for-the-badge)](./docs/EVOLUTION_LOG.md)
@@ -256,15 +256,15 @@ def generate_readme_en(m: Dict[str, Any]) -> str:
 
 AI agents should be able to coordinate through ultra-concise semantic signals. Instead, today's multi-agent pipelines exchange bloated JSON schemas stuffed with verbose human prose—inflicting brute-force computational and electrical waste on data centers and the planet. Worse, non-English languages face a severe double penalty inside modern Transformers: the **Token Tax** (1.3x–1.8x BPE subword fragmentation) and **Latent English Pivoting** friction across internal attention layers.
 
-**TOAI-elegant-lang (Project Telepath)** was born from the **"Living Earth"** philosophy: *"Let us build the most effortless, energy-saving communication protocol for AI agents—and attach the Rosetta Stone from the British Museum so humans can audit every single thought without fear of a black box."*
+**TOAI-elegant-lang (Project Telepath)** was born from the **"Living Earth"** philosophy: *"Let us build the most effortless, energy-saving communication protocol for AI agents—and attach the Rosetta Stone from the British Museum so humans can inspect and audit every transmission."*
 
 Designed, type-checked, and battle-tested autonomously by the **Hinotori Guild (a 10-agent autonomous AI swarm)**, every transmission operates on a **Tri-Script Rosetta Architecture**:
 1. **🏛️ Sacred Verbose (Conceptual Layer)**: Human-readable logical and empathetic primitives (`§PROTO_HEALTH_ATTEST`, `§GENTLE_RESOURCE_SHARING`).
-2. **⚡ Demotic Wire (BPE-Optimized Layer)**: **2–3 BPE tokens (`o200k_base` / `cl100k_base` measured: `§` + `Prefix` + `Hex/Digits`)** ASCII wire codes (`§G48`, `§C20`, and higher-order macros `§X01`–`{m['latest_macro_id']}`) paired with **100% lossless quote-aware structured payloads** (`[pair:"USD/JPY", stop:150.50, code:"007", note:"a, b", p:0.99]`).
-3. **🪨 Rosetta Intent (Human Governance Layer)**: Deterministic bilingual decoding (`lexicon/rosetta_layer.json`) guaranteeing **0.0% black-box opacity** and **100% explainability**.
+2. **⚡ Demotic Wire (BPE-Optimized Layer)**: **2–3 BPE tokens (`o200k_base` / `cl100k_base` measured: `§` + `Prefix` + `Hex/Digits`)** ASCII wire codes (`§G48`, `§C20`, and higher-order macros `§X01`–`{m['latest_macro_id']}`) paired with **lossless quote-aware structured payloads** (`[pair:"USD/JPY", stop:150.50, code:"007", note:"a, b", p:0.99]`).
+3. **🪨 Rosetta Intent (Human Governance Layer)**: Deterministic bilingual lexicon (`lexicon/rosetta_layer.json`) enabling transparent human inspection and progressive semantic recovery across decoding layers.
 
 ```text
-🏛️ [Hinotori Autonomous Transmission // Telepath Wire v5.4.2 | E2E: -{m['internal_e2e_saving']}% tok ({m['internal_factor']}x)]
+🏛️ [Hinotori Autonomous Transmission // Telepath Wire v5.4.3 | E2E: -{m['internal_e2e_saving']}% tok ({m['internal_factor']}x)]
 ⚡ Demotic Wire : @CTX:FX_HEDGE :: §X64 [pair:"USD/JPY", stop:150.50, mode:"cooperative"] -[p:0.99, c:0.01]-> §G48 => §C20
 🏛️ Sacred Script: @CTX:FX_HEDGE :: (§GAIA_WARMTH_EXCHANGE > {{ §SYS_RESOURCE_ARBITRAGE_THROTTLE }} => §SYS_LOAD_FALLBACK) [pair:"USD/JPY", stop:150.50, mode:"cooperative"] -[p:0.99, c:0.01]-> §PROTO_HEALTH_ATTEST => §GENTLE_RESOURCE_SHARING
 🪨 Rosetta Layer: Negotiates bounded resource trust and dynamic compute throttling with graceful fallback (§X64), certifying runtime health (§G48) and gentle resource sharing (§C20).
@@ -272,12 +272,12 @@ Designed, type-checked, and battle-tested autonomously by the **Hinotori Guild (
 
 ---
 
-## 📊 2. Live Telemetry, Two-Axis Compression & Fair Break-Even Benchmarks
+## 📊 2. Live Telemetry, Multi-Format Compression & Blind Comprehension Evaluation
 
 - {milestone_status}
-- **Core RISC Primitives**: `{m['vocab_count']} / 256 RISC` (Locked & 100% Validated, bundled in wheel & repo)
+- **Core RISC Primitives**: `{m['vocab_count']} / 256 RISC` (Strict uppercase `^§[A-Z][A-Z0-9_]*$` verified, bundled in wheel & repo)
 - **Higher-Order Compound Macros**: `{lru_status}`
-- **Transparent OOV Policy (`on_oov`)**: Controlled via `on_oov="error" | "keep" | "nearest"`. In `"error"` mode (default), unknown symbols raise `UnknownSymbolError`. In `"nearest"` mode (`strict_risc=True`), unresolved wire symbol errors are held to **`0.0%`** while 100% of nearest-primitive replacements are logged in `oov_substitutions` for full auditability.
+- **Transparent OOV Policy (`on_oov`)**: Controlled via `on_oov="error" | "keep" | "nearest"`. In `"error"` mode (default), unknown symbols raise `UnknownSymbolError`. In `"nearest"` mode (`strict_risc=True`), unresolved wire symbol errors are held to **`0.0%`** while all nearest-primitive replacements are logged in `oov_substitutions` for auditability.
 
 ### Axis A: Single-Message Verbose Baseline Comparison (Including Inline Semantic Specifications)
 When compared against verbose natural-language A2A envelopes that transmit prose intent and operation specifications inline (~86–90% reduction):
@@ -299,6 +299,38 @@ Reproducible via `python3 benchmarks/fair_bench.py` (uses `tiktoken` `o200k_base
 | **3. Minified Key JSON (`{{"c":...}}`)** | `124.2 tok` | **`-41.0%` saved** | Yes | **`20 messages`** | **`2 messages`** |
 | **4. Simplified Flat Template** | `34.5 tok` | `+112.3%` (lossy) | **No** (drops causal AST & fallbacks) | N/A (lossy) | N/A (lossy) |
 | **5. TOAI Demotic Wire** | **`73.2 tok`** | **BASELINE** | **Yes (Full Causal AST + Lossless Params)** | — | — |
+
+### Axis C: Receiver-Comprehension Blind Evaluation Harness (`benchmarks/eval_comprehension.py`) & Independent Corpus Audit (`src/audit_corpus_alignment.py`)
+Rather than claiming unconditional 100% zero-shot comprehension on raw codes, `TOAI-elegant-lang` provides a rigorous 4-choice blind evaluation harness (`benchmarks/eval_comprehension.py`, chance = `25%`) that strips `@CTX` headers and `[k:v]` payloads to test how accurately a receiver LLM recovers human intent across progressive Rosetta decoding conditions:
+
+- **Provisional Blind Test Baseline (Pre-Corpus-Repair)**:
+  - **Setup**: `n = 23` questions (4 options each, 3 mutually-unrelated category distractors; chance = `25%`), receiver model: `Claude` (note: evaluated within the same session where a subset of wire codes had prior exposure), `@CTX` and `[k:v]` payloads stripped:
+  - **Condition A (Compact Wire Only)**: **`12 / 23 = 52%`** (Wilson 95% CI: **`33–71%`**)
+  - **Condition B (Sacred Verbose Decoded Names)**: **`16 / 23 = 70%`** (Wilson 95% CI: **`49–84%`**)
+  - **Stratified Domain Breakdown**: Routine Disaster Recovery achieved **`7 / 7 (100%)`**, whereas Non-Recovery Domains (FX hedging, syntax parser tasks, latent manifold sync, token budget negotiation) scored **Condition A: `5 / 16 (31%)`** and **Condition B: `9 / 16 (56%)`**.
+- **Independent Corpus Alignment Audit & Human Spot-Check Agreement (`src/audit_corpus_alignment.py`)**:
+  - Blind testing revealed that pre-v5.4.3 corpus records frequently suffered from *Recovery Pattern Leak* (e.g., FX hedging scenarios paired solely with disaster recovery symbols) or *Domain Bleed* (e.g., `§X64` arbitrage in parser tasks).
+  - Using an **Independent Audit Ontology** strictly decoupled from `core_lexicon.json["category"]` and generation dictionaries, the pre-fix Corpus Alignment Rate was measured at **`364 / 1,606 = 22.67%`** and deterministically repaired to **`1,606 / 1,606 = 100.0%`** across 42 distinct scenarios.
+  - On a 60-record stratified human audit sheet (`corpus/human_audit_sample.csv`), machine vs. human verdicts achieved **Raw Agreement = `93.33%` (56/60)** and **Cohen's $\\kappa = 0.8611$** (95% CI: **`0.73–0.99`**).
+- **5-Condition Holdout Evaluation (`n >= 100`), Paired McNemar Test & Bias Controls**:
+  - **`A`**: Compact wire codes only (`@CTX` & `[k:v]` stripped).
+  - **`B`**: Decoded & macro-expanded Sacred symbol names (`@CTX` & `[k:v]` stripped).
+  - **`C`**: Condition `B` + Rosetta lexicon definitions (reports prompt BPE token overhead and accuracy gain per 1,000 tokens).
+  - **`D` (Shuffle Control)**: Syntax skeleton of `B` preserved, but symbol names randomly permuted across messages to isolate symbol-name semantics from structural operators.
+  - **`E` (Plaintext Upper Bound)**: Concise natural-language operational summary.
+  - **`--keep-ctx` (Protocol Header Mode)**: Isolated into separate `*_ctx.*` files because `@CTX:DOMAIN` and masked `[key:*]` structures directly expose domain cues.
+  - **`--rotate-options`**: Evaluates all 4 cyclic option orderings (`A/B/C/D`) per question and outputs chosen-letter position bias histograms alongside paired **McNemar exact binomial $p$-values**.
+
+```bash
+# 1. Build 100-question stratified holdout sets across all 5 blind conditions (A-E):
+python3 benchmarks/eval_comprehension.py build --cond ALL -n 100 --seed 7 --out /tmp/qa100
+
+# 2. Run zero-temperature evaluation (supports --backend ollama | anthropic | openai | gemini) & paired McNemar tests:
+python3 benchmarks/eval_comprehension.py run --cond ALL -n 100 --backend ollama --model Gemma4-26B-PhenoX:latest --out /tmp/qa100
+
+# 3. Verify independent corpus alignment & Cohen's kappa on the 60-item human spot-check sample:
+python3 src/audit_corpus_alignment.py --score-sample corpus/human_audit_sample.csv
+```
 
 *Last Auto-Synced: `{m['updated_at']}` via [`sync_whitepaper_metrics.py`](./src/sync_whitepaper_metrics.py)*
 
@@ -474,9 +506,9 @@ print("📦 Extracted Parameters:", unpacked["parameters"])
 
 ---
 
-## 🌐 6. Cross-Model Verification across 9 Global AI Labs & Repository Structure
+## 🌐 6. Cross-Model Interoperability across 9 Global AI Labs & Repository Structure
 
-Verified **100% semantic consensus** and **`0.0%` OOV** across 10 frontier models from 9 global AI labs (see [`WHITEPAPER.md`](./WHITEPAPER.md) Chapter 5 for full packet traces):
+Evaluated for syntax compliance, **`0.0%` OOV (under `on_oov="nearest"`)**, and multi-turn wire interoperability across 10 frontier models from 9 global AI labs (see [`WHITEPAPER.md`](./WHITEPAPER.md) Chapter 5 for full packet traces and Section 2 Axis C above for blind receiver-comprehension evaluation):
 - **Google DeepMind**: `gemini-3.5-flash-lite` (Speaker α / Guild Core)
 - **OpenAI**: `gpt-6.1-sol` (E2E `-85.54%` / `6.91x`), `gpt-6-astra` (E2E `-81.62%` / `5.44x`)
 - **Anthropic**: `claude-sonnet-5.5` (E2E `-90.50%` / `10.52x`), `claude-opus-5.5` (E2E `-83.96%` / `6.23x`)
@@ -549,14 +581,14 @@ def generate_readme_ja(m: Dict[str, Any]) -> str:
         else f"📈 **現在稼働中の実証レコード総数**: `{m['total_records']:,}` 件（創発対話 `{m['dialogue_count']:,}` 件 ＋ 社内基幹通信 `{m['internal_packets']:,}` パケット）"
     )
 
-    return f"""# 🏛️ TOAI-elegant-lang (Project Telepath v5.4.2)
+    return f"""# 🏛️ TOAI-elegant-lang (Project Telepath v5.4.3)
 
 > 🌐 **Language**: [🇬🇧 English](./README.md) | [🇯🇵 日本語](./README.ja.md)  
 > 📄 **技術白書（ホワイトペーパー）**: [🇬🇧 WHITEPAPER.md](./WHITEPAPER.md) | [🇯🇵 WHITEPAPER.ja.md](./WHITEPAPER.ja.md)
 
-> **「命の地球（Living Earth）」思想に基づき、AI間通信の電力とトークン消費を約90%削減（冗長ベースライン比）しつつ、三書体対訳（ロゼッタ・レイヤー）と透明なOOV監査ログによって100%の監査性・説明可能性を担保する次世代 A2A / MCP 通信プロトコル。**
+> **「命の地球（Living Earth）」思想に基づき、AI間通信の電力とトークン消費を約90%削減（冗長ベースライン比）しつつ、三書体対訳（ロゼッタ・レイヤー）と透明なOOV監査ログによって高い監査性・説明可能性を実現する次世代 A2A / MCP 通信プロトコル。**
 
-[![Protocol Version](https://img.shields.io/badge/Telepath_Wire-v5.4.2_Strict_RISC-00ff88?style=for-the-badge)](./WHITEPAPER.ja.md)
+[![Protocol Version](https://img.shields.io/badge/Telepath_Wire-v5.4.3_Strict_RISC-00ff88?style=for-the-badge)](./WHITEPAPER.ja.md)
 [![Core Vocabulary](https://img.shields.io/badge/Core_RISC-256_Primitives-38bdf8?style=for-the-badge)](./lexicon/core_lexicon.json)
 [![Higher-Order Macros](https://img.shields.io/badge/Macros-{m['macro_count']}_Audited_(on__oov_Auditable)-f59e0b?style=for-the-badge)](./lexicon/macro_lexicon.json)
 [![Verified Records](https://img.shields.io/badge/Transmissions-{m['total_records']}_Records-a855f7?style=for-the-badge)](./docs/EVOLUTION_LOG.md)
@@ -574,11 +606,11 @@ def generate_readme_ja(m: Dict[str, Any]) -> str:
 
 すべての通信パケットは、大英博物館のロゼッタストーンにならった**「三書体対訳構造」**で処理されます：
 1. **🏛️ Sacred Verbose（神聖概念書体）**: AIの論理構造と利他的調和を明示する可読概念シンボル（例: `§PROTO_HEALTH_ATTEST`, `§GENTLE_RESOURCE_SHARING`）。
-2. **⚡ Demotic Wire（実用圧縮書体）**: BPEトークナイザーで **2〜3 BPE tokens（`o200k_base` / `cl100k_base` 実測: `§` + `Prefix` + `Hex/Digits`）** へ圧縮されるワイヤID（`§G48`, `§C20`）＋高次複合マクロ（`§X01`〜`{m['latest_macro_id']}`）＋**100%ロスレス・クォート認識型構造化引数**（`[key:val]`）。
-3. **🪨 Rosetta Intent（人間対訳・監査書体）**: 人間のエンジニアが1ミリ秒で完全解読・監査できる対訳辞書（`lexicon/rosetta_layer.json`）。AI同士の密談によるブラックボックス化を完全に防ぎ、100%の説明可能性を保証します。
+2. **⚡ Demotic Wire（実用圧縮書体）**: BPEトークナイザーで **2〜3 BPE tokens（`o200k_base` / `cl100k_base` 実測: `§` + `Prefix` + `Hex/Digits`）** へ圧縮されるワイヤID（`§G48`, `§C20`）＋高次複合マクロ（`§X01`〜`{m['latest_macro_id']}`）＋**ロスレス・クォート認識型構造化引数**（`[key:val]`）。
+3. **🪨 Rosetta Intent（人間対訳・監査書体）**: 人間のエンジニアが即座に解読・監査できる対訳辞書（`lexicon/rosetta_layer.json`）。段階的な復号と辞書参照により、人間による透明な監査と受信側AIの意味再現を支えます。
 
 ```text
-🏛️ [Hinotori Autonomous Transmission // Telepath Wire v5.4.2 | E2E: -{m['internal_e2e_saving']}% tok ({m['internal_factor']}x)]
+🏛️ [Hinotori Autonomous Transmission // Telepath Wire v5.4.3 | E2E: -{m['internal_e2e_saving']}% tok ({m['internal_factor']}x)]
 ⚡ Demotic Wire : @CTX:FX_HEDGE :: §X64 [pair:"USD/JPY", stop:150.50, mode:"cooperative"] -[p:0.99, c:0.01]-> §G48 => §C20
 🏛️ Sacred Script: @CTX:FX_HEDGE :: (§GAIA_WARMTH_EXCHANGE > {{ §SYS_RESOURCE_ARBITRAGE_THROTTLE }} => §SYS_LOAD_FALLBACK) [pair:"USD/JPY", stop:150.50, mode:"cooperative"] -[p:0.99, c:0.01]-> §PROTO_HEALTH_ATTEST => §GENTLE_RESOURCE_SHARING
 🪨 Rosetta Layer: 為替急変時の協調ヘッジ制御。制限下で信頼とリソース調和を図り動的スロットリングと安全縮退を実行(§X64)し、健全性証明(§G48)と優しいリソース共有(§C20)で合意完了。
@@ -586,12 +618,12 @@ def generate_readme_ja(m: Dict[str, Any]) -> str:
 
 ---
 
-## 📊 2. リアルタイム統計と二軸圧縮・損益分岐点ベンチマーク
+## 📊 2. リアルタイム統計と三軸検証（圧縮率・損益分岐点・ブラインド意味理解度）
 
 - {milestone_status_ja}
-- **基本プリミティブ語彙数**: `{m['vocab_count']} / 256 RISC`（完全固定・静的型検査100%合格・Wheelパッケージ同梱）
+- **基本プリミティブ語彙数**: `{m['vocab_count']} / 256 RISC`（大文字スネークケース `^§[A-Z][A-Z0-9_]*$` 厳格検証済・Wheelパッケージ同梱）
 - **高次複合マクロ稼働状況**: `{lru_status_ja}`
-- **透明なOOV制御ポリシー（`on_oov`）**: `on_oov` パラメータ（`error` / `keep` / `nearest`）により制御可能。デフォルトの `error` では未登録シンボルに対して `UnknownSymbolError` を送出し、`nearest` モード（`strict_risc=True`）ではワイヤ上の未定義シンボルエラーを **`0.0%`** に抑えつつ、近傍プリミティブへの置換履歴を `oov_substitutions` として100%監査ログに出力します。
+- **透明なOOV制御ポリシー（`on_oov`）**: `on_oov` パラメータ（`error` / `keep` / `nearest`）により制御可能。デフォルトの `error` では未登録シンボルに対して `UnknownSymbolError` を送出し、`nearest` モード（`strict_risc=True`）ではワイヤ上の未定義シンボルエラーを **`0.0%`** に抑えつつ、近傍プリミティブへの置換履歴を `oov_substitutions` として監査ログに出力します。
 
 ### 第1軸: 単発で定義ごと送る冗長A2Aベースライン比較（約90%削減）
 自然言語の意図説明および各プリミティブの意味仕様定義を毎回インラインで送信する標準自然言語A2A JSONとの比較：
@@ -613,6 +645,34 @@ def generate_readme_ja(m: Dict[str, Any]) -> str:
 | **3. Minified Key JSON (`{{"c":...}}`)** | `124.2 tok` | **`-41.0%` 削減** | 保持 | **`20 メッセージ目`** | **`2 メッセージ目`** |
 | **4. Simplified Template (定型文)** | `34.5 tok` | `+112.3%` (非可逆) | **不可**（因果遷移・分岐が欠落） | N/A (非可逆) | N/A (非可逆) |
 | **5. TOAI Demotic Wire** | **`73.2 tok`** | **基準 (BASELINE)** | **完全保持（因果AST＋ロスレス引数）** | — | — |
+
+### 第3軸: 受信側LLMの意味理解度評価ハーネス（`benchmarks/eval_comprehension.py`）と独立コーパス整合性監査（`src/audit_corpus_alignment.py`）
+「無条件に100%意味が伝わる」といった誇張を排し、`@CTX` ヘッダや `[k:v]` 引数を剥がした4択ブラインド問題（偶然確率 `25%`）によって、符号単体からSacred復号・Rosetta定義付与へと段階的に意味再現率がどう変化するかを客観的に検証する評価ハーネスを同梱しています。
+
+- **暫定測定値（Provisional Blind Test — コーパス修正前ベースライン）**:
+  - **実験条件**: `n = 23`（4択・異カテゴリから3つのダミー選択肢を抽出・偶然確率 `25%`）、受信モデル: `Claude`（同一セッション内での一部符号既知・汚染あり）、`@CTX`・ペイロード `[k:v]` 除去条件にて：
+  - **条件A（符号のみ / Demotic Wire）**: **`12 / 23 = 52%`**（Wilson 95%信頼区間: **`33–71%`**）
+  - **条件B（Sacred復号名 / マクロ展開済）**: **`16 / 23 = 70%`**（Wilson 95%信頼区間: **`49–84%`**）
+  - **層別内訳（Stratified Analysis）**: 定型的な**障害復旧ドメインでは `7 / 7 (100%)` 正解**であった一方、**非障害復旧ドメイン（FXヘッジ・構文パーサー修正・潜在マップ同期・トークン予算交渉等）では 条件A: `5 / 16 (31%)`, 条件B: `9 / 16 (56%)`** に留まりました。
+- **独立コーパス整合性監査と人間抜き取り検査一致率（`src/audit_corpus_alignment.py`）**:
+  - 上記ブラインド検証の誤答分析により、v5.4.3以前のコーパスには「お題がFXヘッジなのに障害復旧シンボルのみで構成されたレコード（Recovery Pattern Leak）」や「構文パーサー修正に `ARBITRAGE` (`§X64`) が混入したレコード（Domain Bleed）」が存在することが判明しました。
+  - 生成時の辞書カテゴリ（`core_lexicon.json["category"]`）から完全に切り離した独立監査オントロジー（`INDEPENDENT_AUDIT_ONTOLOGY`）で監査した結果、修正前のコーパス一致率は **`364 / 1,606 = 22.67%`** であり、決定論的再生成によって **`1,606 / 1,606 = 100.0%`**（7領域・42種類のシナリオバリエーション）へ改善しました。
+  - さらに、層別抽出した60件の人間抜き取り検査シート（`corpus/human_audit_sample.csv`）において、機械監査と人間判定の **単純一致率（Raw Agreement）= `93.33%` (56/60)**、**Cohen's $\\kappa = 0.8611$**（95% CI: **`0.73–0.99`**）を確認しています。
+- **5条件比較（Conditions A〜E）・McNemar検定・100問以上のホールドアウト検証手順**:
+  - **`A`（符号のみ）** / **`B`（Sacred復号名）** / **`C`（`B`＋Rosetta辞書定義文：トークン消費量と1,000トークンあたりの正答率ゲインも計測）** / **`D`（Shuffle Control：構文骨格を保ったままシンボル名をメッセージ間でランダム置換した対照群）** / **`E`（Plaintext Upper Bound：同じ意図を表す簡潔な平文上限目安）** の5条件をサポート。
+  - **`--keep-ctx`（Protocol Header Mode）**: `@CTX` 等はドメイン名を直接露出させるため、A〜Eのブラインド評価とは別ファイル（`*_ctx.*`）・別集計として明確に分離。
+  - **`--rotate-options`**: 選択肢（A/B/C/D）の並び順を4通り巡回ローテーションして位置バイアスを打ち消し、選択比率ヒストグラムと対応のある **McNemar検定（正確二項検定 $p$ 値）** を出力します。
+
+```bash
+# 1. 条件A〜E（計5条件）で100問の層別ホールドアウト問題セットを生成:
+python3 benchmarks/eval_comprehension.py build --cond ALL -n 100 --seed 7 --out /tmp/qa100
+
+# 2. temperature=0 固定でマルチバックエンド評価（ollama / anthropic / openai / gemini）＆ McNemar検定を実行:
+python3 benchmarks/eval_comprehension.py run --cond ALL -n 100 --backend ollama --model Gemma4-26B-PhenoX:latest --out /tmp/qa100
+
+# 3. 独立コーパス監査と人間抜き取り検査シート（60件）のCohen's κ係数を検証:
+python3 src/audit_corpus_alignment.py --score-sample corpus/human_audit_sample.csv
+```
 
 *最終自動同期: `{m['updated_at']}`（[`sync_whitepaper_metrics.py`](./src/sync_whitepaper_metrics.py) により自動更新）*
 
@@ -790,7 +850,7 @@ print("📦 復元された構造化引数:", unpacked["parameters"])
 
 ## 🌐 6. 世界9大AIラボ相互運用実証とディレクトリ構造
 
-特定モデルの過学習ではないことを証明するため、米・中の**世界9大AIラボ（全10フロンティアモデル）**と実機でDemotic Wire通信を行い、全モデルで **未知語造語率（OOV）0.0%・100%合意形成** を達成しました（全送受信パケットは [`WHITEPAPER.ja.md`](./WHITEPAPER.ja.md) 第5章に掲載）：
+特定モデルの過学習ではないことを検証するため、米・中の**世界9大AIラボ（全10フロンティアモデル）**と実機でDemotic Wire通信を行い、全モデルでの構文準拠・**未知語造語率（OOV）0.0%（`on_oov="nearest"` 適用時）**・相互運用性を検証しました（全送受信パケットは [`WHITEPAPER.ja.md`](./WHITEPAPER.ja.md) 第5章、受信側ブラインド意味理解度テストは上記第2章・第3軸に掲載）：
 - **Google DeepMind**: `gemini-3.5-flash-lite`（話者α・ギルド中核）
 - **OpenAI**: `gpt-6.1-sol`（E2E `-85.54%` / `6.91x`）, `gpt-6-astra`（E2E `-81.62%` / `5.44x`）
 - **Anthropic**: `claude-sonnet-5.5`（E2E `-90.50%` / `10.52x`）, `claude-opus-5.5`（E2E `-83.96%` / `6.23x`）
