@@ -9,6 +9,7 @@ src/audit_lexicon_health.py
 src/build_release_summary.py
 src/cli.py
 src/codec.py
+src/dialogue_stats.json
 src/dump_lexicon.py
 src/export_lexicon_csv.py
 src/mcp_server.py
