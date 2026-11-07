@@ -3,53 +3,49 @@ import os
 import traceback
 import subprocess
 import json
-import datetime
-
-def run_git_command(args, cwd):
-    try:
-        result = subprocess.run(
-            ['git'] + args,
-            cwd=cwd,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True,
-            check=True
-        )
-        return result.stdout.strip()
-    except Exception as e:
-        print(f"Git command failed: {e}", file=sys.stderr)
-        return ""
+from datetime import datetime
 
 def main():
-    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    repo_dir = os.path.join(workspace_dir, 'TOAI-elegant-lang')
-    
-    if not os.path.exists(repo_dir):
-        print(f"Repository directory does not exist: {repo_dir}", file=sys.stderr)
-        sys.exit(1)
-        
-    git_check = run_git_command(['rev-parse', '--is-inside-work-tree'], repo_dir)
-    if git_check != 'true':
-        print(f"Directory is not a git repository: {repo_dir}", file=sys.stderr)
-        sys.exit(1)
-        
-    log_output = run_git_command(['log', '-n', '10', '--oneline'], repo_dir)
-    latest_tag = run_git_command(['describe', '--tags', '--abbrev=0'], repo_dir) or "v0.1.0"
-    
-    summary_data = {
-        "timestamp": datetime.datetime.utcnow().isoformat() + " Z",
-        "latest_tag": latest_tag,
-        "recent_commits": log_output.splitlines() if log_output else []
-    }
-    
-    output_file = os.path.join(repo_dir, 'release_summary.json')
+    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    repo_path = os.path.join(workspace, 'TOAI-elegant-lang')
+    output_dir = os.path.join(workspace, 'TOAI_Generated')
+    os.makedirs(output_dir, exist_ok=True)
+    output_file = os.path.join(output_dir, 'release_summary.json')
+
+    git_logs = []
     try:
-        with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(summary_data, f, ensure_ascii=False, indent=2)
-        print(f"Successfully generated release summary at {output_file}")
+        if os.path.exists(os.path.join(repo_path, '.git')):
+            result = subprocess.run(
+                ['git', '-C', repo_path, 'log', '-n', '10', '--pretty=format:%h - %an, %ar : %s'],
+                capture_output=True,
+                text=True,
+                check=True
+            )
+            git_logs = result.stdout.splitlines()
+        else:
+            git_logs = ["Git repository not initialized or path not found."]
     except Exception as e:
-        print(f"Failed to write release summary file: {e}", file=sys.stderr)
-        sys.exit(1)
+        git_logs = [f"Failed to fetch git log: {str(e)}"]
+
+    white_papers = []
+    docs_path = os.path.join(repo_path, 'docs')
+    if os.path.exists(docs_path):
+        for root, dirs, files in os.walk(docs_path):
+            for file in files:
+                if file.endswith('.md'):
+                    white_papers.append(os.path.relpath(os.path.join(root, file), repo_path))
+
+    summary = {
+        "timestamp": datetime.now().isoformat(),
+        "repository": "TOAI-elegant-lang",
+        "recent_commits": git_logs,
+        "white_papers_and_docs": white_papers
+    }
+
+    with open(output_file, 'w', encoding='utf-8') as f:
+        json.dump(summary, f, ensure_ascii=False, indent=2)
+
+    print(f"Successfully generated release summary at: {output_file}")
 
 if __name__ == '__main__':
     try:
