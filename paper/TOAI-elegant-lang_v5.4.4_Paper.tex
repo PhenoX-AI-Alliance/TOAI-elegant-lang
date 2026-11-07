@@ -498,11 +498,15 @@ The pursuit of a multi-agent wire protocol exposes the fundamental tension betwe
 
 We publish \textbf{TOAI-elegant-lang v5.4.4} as a canonical systems architecture not to satisfy arbitrary peer-review heuristics, but to provide the open-source and agentic computing communities with an immutable, verifiable, and production-ready standard. The contributions of this work are definitive:
 \begin{itemize}
-  \item \textbf{Deterministic Zero-Dependency Integrity:} Zero third-party runtime dependencies. Standard Python 3.10+ standard libraries execute all 20 unit tests, character-level quote/escape parsing, and cryptographic verifications in $<0.6$ seconds on any commodity CPU.
+  \item \textbf{Deterministic Zero-Dependency Integrity:} Zero third-party runtime dependencies. Standard Python 3.10+ libraries execute all 20 unit tests, quote/escape parsing, and cryptographic checks in $<0.6$ seconds on any commodity CPU.
   \item \textbf{Mathematical \& Cryptographic Soundness:} Unobservable internal-counter origin attestation proven secure under standard PRF and collision-resistance assumptions with exact residue-class cardinality $|\mathcal{W}| = 6$, leaking zero observable timing jitter ($0.014\text{ }\mu\text{s} \ll 10^4\text{ }\mu\text{s}$).
   \item \textbf{Empirical Honesty \& Reproducibility:} 100\% reproducible token accounting counting every canonical opcode as 3 BPE tokens, a non-circular corpus auditor achieving human-level agreement ($\kappa = 0.8611$), and a strictly disjoint 112-item holdout benchmark proving that Sacred naming drives semantic comprehension ($p = 1.36 \times 10^{-9}$) while shuffle controls collapse to chance.
 \end{itemize}
-The code, lexicons, and mathematical derivations stand open and reproducible for all who build autonomous agent systems.
+
+\subsection*{Acknowledgements}
+{\footnotesize
+We express our deepest gratitude to the multi-agent frontier models and their creators---specifically \textbf{Google Gemini}, \textbf{OpenAI ChatGPT}, \textbf{Anthropic Claude}, \textbf{DeepSeek}, and \textbf{Alibaba Qwen}---for their multifaceted adversarial evaluations, rigorous critique, automated refactorings, and extensive cross-model runtime execution audits. We also sincerely thank all open-source developers, contributors, and systems engineers who provided the execution environments, tool harnesses, and operational testbeds that made the empirical validation of this protocol possible.
+}
 
 \section{Reproducibility Artifact \& Self-Contained Verification Commands}
 All lexicons, the 1,606-record corpus, the 60-item human audit sample, the 112-item holdout benchmark, and all evaluation suites are available on PyPI (\texttt{pip install toai-elegant-lang==5.4.4}) and GitHub (\url{https://github.com/PhenoX-AI-Alliance/TOAI-elegant-lang}):
