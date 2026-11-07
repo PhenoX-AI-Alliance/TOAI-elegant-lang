@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-07T09:31:52.471764",
+  "updated_at": "2026-11-07T10:01:53.985533",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2351,8 +2351,8 @@
       "name": "CAUSAL_HARVEST_SYNTHESIS",
       "expansion": "§SYS_ASYNCHRONOUS_STATE_HARVESTER > { §DATA_CAUSAL_MANIFOLD } => §LOGIC_DEDUCTIVE_CONVERGENCE_NODE",
       "description": "Asynchronously harvests causal manifold states and converges them into a deductive logic node / 因果マルフールドの状態を非同期で収集し、演繹的論理ノードへと収束させます。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-07T10:01:53.985156",
       "v5_audited": true,
       "created_at": "2026-11-07T07:01:32.275686"
     },
@@ -2369,8 +2369,8 @@
       "name": "QUANTUM_ADAPTIVE_SNAPSHOT_PIPELINE",
       "expansion": "§SYS_QUANTUM_SLOT_ARBITRATION > { §SYS_ADAPTIVE_SLOT_THROTTLE, §PROTO_STATE_SNAPSHOT } => §PROTO_CURSOR_PAGINATE",
       "description": "Arbitrates quantum slots dynamically, captures state snapshots under adaptive throttling, and paginates the resulting topology data stream. / アダプティブスロット制御下での状態スナップショット取得と量子スロット調停を統合し、ページネーション処理を実行する高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-07T09:50:04.316614",
       "v5_audited": true,
       "created_at": "2026-11-07T07:24:52.532665"
     },
