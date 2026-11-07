@@ -91,7 +91,7 @@ python3 benchmarks/eval_comprehension.py run --cond ALL -n 100 --backend ollama 
 python3 src/audit_corpus_alignment.py --score-sample corpus/human_audit_sample.csv
 ```
 
-*最終自動同期: `2026-11-07 22:47 JST`（[`sync_whitepaper_metrics.py`](./src/sync_whitepaper_metrics.py) により自動更新）*
+*最終自動同期: `2026-11-07 22:58 JST`（[`sync_whitepaper_metrics.py`](./src/sync_whitepaper_metrics.py) により自動更新）*
 
 ---
 
