@@ -3,51 +3,51 @@ import os
 import traceback
 import time
 import json
-from collections import Counter, defaultdict
+import collections
 
-def main():
+def analyze():
     corpus_path = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
-    output_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/analysis_result.json"
-
-    speaker_counts = Counter()
-    word_counts = Counter()
-
     if not os.path.exists(corpus_path):
-        print(f"Error: Corpus not found at {corpus_path}")
+        print(f"Error: Corpus file not found at {corpus_path}")
         sys.exit(1)
+        
+    speaker_counts = collections.defaultdict(int)
+    word_root_counts = collections.defaultdict(int)
+    
+    with open(corpus_path, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                data = json.loads(line)
+                speaker = data.get("speaker", "unknown")
+                speaker_counts[speaker] += 1
+                
+                text = data.get("text", "")
+                words = text.split()
+                for word in words:
+                    root = word.lower().strip(".,!?\"'")
+                    if root:
+                        word_root_counts[root] += 1
+            except Exception as e:
+                print(f"Warning: Failed to parse line: {e}")
+                
+    result = {
+        "speaker_counts": dict(speaker_counts),
+        "top_word_roots": dict(word_root_counts.most_common(50))
+    }
+    
+    output_json_path = "/home/phenox/gemini-sandbox/TOAI_Generated/dialogue_analysis_result.json"
+    os.makedirs(os.path.dirname(output_json_path), exist_ok=True)
+    with open(output_json_path, "w", encoding="utf-8") as out_f:
+        json.dump(result, out_f, ensure_ascii=False, indent=2)
+        
+    print(f"Analysis successfully completed and saved to {output_json_path}")
 
+if __name__ == "__main__":
     try:
-        with open(corpus_path, "r", encoding="utf-8") as f:
-            for line in f:
-                line = line.strip()
-                if not line:
-                    continue
-                try:
-                    record = json.loads(line)
-                    speaker = record.get("speaker", "unknown")
-                    text = record.get("text", "")
-                    speaker_counts[speaker] += 1
-                    
-                    words = text.split()
-                    for word in words:
-                        word_counts[word] += 1
-                except json.JSONDecodeError:
-                    continue
-
-        result = {
-            "speaker_counts": dict(speaker_counts),
-            "top_words": dict(word_counts.most_common(20))
-        }
-
-        os.makedirs(os.path.dirname(output_path), exist_ok=True)
-        with open(output_path, "w", encoding="utf-8") as out:
-            json.dump(result, out, ensure_ascii=False, indent=2)
-
-        print(f"Analysis complete. Results saved to {output_path}")
-
+        analyze()
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
-
-if __name__ == "__main__":
-    main()
