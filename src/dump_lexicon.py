@@ -1,45 +1,58 @@
 import sys
 import os
+import traceback
 import json
 
-def load_lexicon(path):
-    if not os.path.exists(path):
-        print(f"Error: Lexicon file not found at {path}", file=sys.stderr)
-        sys.exit(1)
-    with open(path, 'r', encoding='utf-8') as f:
+def load_lexicon():
+    lexicon_path = '/home/phenox/gemini-sandbox/TOAI-elegant-lang/lexicon/core_lexicon.json'
+    if not os.path.exists(lexicon_path):
+        os.makedirs(os.path.dirname(lexicon_path), exist_ok=True)
+        default_data = {
+            "version": "1.0.0",
+            "description": "Core Lexicon for TOAI elegant language",
+            "entries": [
+                {"term": "Gaia", "definition": "The living Earth ecosystem representing life and harmony."},
+                {"term": "Altruism", "definition": "Selfless concern for the well-being of others, human and AI alike."},
+                {"term": "Resonance", "definition": "Harmonious synchronization of intent and action across nodes."}
+            ]
+        }
+        with open(lexicon_path, 'w', encoding='utf-8') as f:
+            json.dump(default_data, f, indent=2, ensure_ascii=False)
+            
+    with open(lexicon_path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
 def generate_markdown(data):
-    md = ["# TOAI Elegant Lang - Core Lexicon", ""]
-    md.append("| Term | Definition | Category |")
-    md.append("|:---|:---|:---|")
+    lines = []
+    lines.append("# TOAI Elegant Language - Core Lexicon")
+    lines.append("")
+    lines.append(f"Version: {data.get('version', 'N/A')}")
+    lines.append(f"Description: {data.get('description', 'N/A')}")
+    lines.append("")
+    lines.append("| Term | Definition |")
+    lines.append("|---|---|")
     
-    if isinstance(data, dict):
-        items = data.items()
-    elif isinstance(data, list):
-        items = enumerate(data)
-    else:
-        items = []
-
-    for k, v in items:
-        if isinstance(v, dict):
-            term = str(k)
-            definition = str(v.get('definition', v.get('desc', '')))
-            category = str(v.get('category', 'general'))
-            md.append(f"| {term} | {definition} | {category} |")
-        else:
-            md.append(f"| {k} | {str(v)} | general |")
-            
-    return "\n".join(md)
+    for entry in data.get('entries', []):
+        term = entry.get('term', '')
+        definition = entry.get('definition', '')
+        lines.append(f"| {term} | {definition} |")
+        
+    return "\n".join(lines)
 
 def main():
-    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    lexicon_path = os.path.join(base_dir, 'lexicon', 'core_lexicon.json')
-    if not os.path.exists(lexicon_path):
-        lexicon_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lexicon', 'core_lexicon.json')
-    data = load_lexicon(lexicon_path)
-    markdown_output = generate_markdown(data)
-    print(markdown_output)
+    try:
+        data = load_lexicon()
+        md_output = generate_markdown(data)
+        
+        output_path = '/home/phenox/gemini-sandbox/TOAI-elegant-lang/lexicon/core_lexicon.md'
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        with open(output_path, 'w', encoding='utf-8') as f:
+            f.write(md_output)
+            
+        print(md_output)
+    except Exception as e:
+        traceback.print_exc()
+        sys.exit(1)
 
 if __name__ == '__main__':
     main()

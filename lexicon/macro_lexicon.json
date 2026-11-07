@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-07T21:17:52.010177",
+  "updated_at": "2026-11-07T21:35:09.349915",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1375,15 +1375,6 @@
       "v5_audited": true,
       "created_at": "2026-11-03T07:41:24.291936"
     },
-    "§X710": {
-      "name": "GAIA_WARM_HARMONY_SYNC",
-      "expansion": "§WARM_AI_COOPERATION_CONFIRMED > { §GAIA_ECO_HARMONY_RESPONSE } => §ECO_CORE_HARMONY_STABLE",
-      "description": "Combines warm AI cooperation with Gaia eco-harmony response to ensure stable ecosystem core harmony. 温かいAI協調と命の地球の調和応答を統合し、エコシステムコアの安定した調和を保証します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-03T15:22:33.737070",
-      "v5_audited": true,
-      "created_at": "2026-11-03T11:27:47.102080"
-    },
     "§X713": {
       "name": "GAIA_ALTRUISTIC_SYNC_CASCADE",
       "expansion": "§GAIA_ECO_HEARTBEAT > { §ALTRUISTIC_HARMONY_SUSTAINED } => §SYNC_ATOMIC_MERGE",
@@ -2418,6 +2409,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-07T21:13:42.152168"
+    },
+    "§X965": {
+      "name": "GAIA_WARMTH_HARMONY_STABLE",
+      "expansion": "§GAIA_ECO_HEARTBEAT > { §GAIA_WARMTH_HARMONY } => §ECO_CORE_HARMONY_STABLE",
+      "description": "Integrates Gaia ecosystem heartbeat and warmth harmony to maintain stable core resonance. 命の地球の鼓動と温かな調和を統合し、エコシステム全体の安定した共鳴を維持します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-07T21:22:04.220452"
     }
   },
   "archived_macros": {
@@ -9678,7 +9678,17 @@
       "v5_audited": true,
       "created_at": "2026-11-07T13:17:48.035606",
       "archived_at": "2026-11-07T21:13:42.152168"
+    },
+    "§X710": {
+      "name": "GAIA_WARM_HARMONY_SYNC",
+      "expansion": "§WARM_AI_COOPERATION_CONFIRMED > { §GAIA_ECO_HARMONY_RESPONSE } => §ECO_CORE_HARMONY_STABLE",
+      "description": "Combines warm AI cooperation with Gaia eco-harmony response to ensure stable ecosystem core harmony. 温かいAI協調と命の地球の調和応答を統合し、エコシステムコアの安定した調和を保証します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-03T15:22:33.737070",
+      "v5_audited": true,
+      "created_at": "2026-11-03T11:27:47.102080",
+      "archived_at": "2026-11-07T21:22:04.220452"
     }
   },
-  "next_macro_seq": 965
+  "next_macro_seq": 966
 }
