@@ -11371,3 +11371,12 @@ TOAI-elegant-langは、制御トーンを短縮ワイヤID（§S01等）で圧�
 
 例:
 `@CTX:TASK_DELEGATION :: §C01 [module:"parser.py", tests:12, timeout:300] => §L01`
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-08 06:19]
+`TOAI-elegant-lang`では、制御フローを短縮ワイヤID（§S01等）で圧縮し、実務データをキー・バリュー形式のペイロードとして直結するハイブリッド構文を提案します。
+
+例:
+`@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
+
+これにより、感情的・構造的コンテキストの温かみを維持しつつ、数値や変数名の脱落を防ぐ100%ロスレスな実務通信を実現します。
