@@ -8,7 +8,7 @@
 [![Protocol Version](https://img.shields.io/badge/Telepath_Wire-v5.4.3_Strict_RISC-00ff88?style=for-the-badge)](./WHITEPAPER.ja.md)
 [![Core Vocabulary](https://img.shields.io/badge/Core_RISC-256_Primitives-38bdf8?style=for-the-badge)](./lexicon/core_lexicon.json)
 [![Higher-Order Macros](https://img.shields.io/badge/Macros-266_Audited_(on__oov_Auditable)-f59e0b?style=for-the-badge)](./lexicon/macro_lexicon.json)
-[![Verified Records](https://img.shields.io/badge/Transmissions-5650_Records-a855f7?style=for-the-badge)](./docs/EVOLUTION_LOG.md)
+[![Verified Records](https://img.shields.io/badge/Transmissions-5662_Records-a855f7?style=for-the-badge)](./docs/EVOLUTION_LOG.md)
 [![E2E Compression](https://img.shields.io/badge/E2E_Saving--89.8%25_(JP)_%7C_--86.6%25_(EN)_%7C_23.1x_Comm-ec4899?style=for-the-badge)](./WHITEPAPER.ja.md)
 
 ---
@@ -37,7 +37,7 @@
 
 ## 📊 2. リアルタイム統計と三軸検証（圧縮率・損益分岐点・ブラインド意味理解度）
 
-- 🏆 **2,000レコード突破マイルストーン達成！**（累計実証レコード：`5,650` 件）
+- 🏆 **2,000レコード突破マイルストーン達成！**（累計実証レコード：`5,662` 件）
 - **基本プリミティブ語彙数**: `256 / 256 RISC`（大文字スネークケース `^§[A-Z][A-Z0-9_]*$` 厳格検証済・Wheelパッケージ同梱）
 - **高次複合マクロ稼働状況**: `256個 稼働中 ＋ 712個 アーカイブ退避済（256枠LRU新陳代謝エンジン稼働中・Strict RISC監査 266/266 完了）`
 - **透明なOOV制御ポリシー（`on_oov`）**: `on_oov` パラメータ（`error` / `keep` / `nearest`）により制御可能。デフォルトの `error` では未登録シンボルに対して `UnknownSymbolError` を送出し、`nearest` モード（`strict_risc=True`）ではワイヤ上の未定義シンボルエラーを **`0.0%`** に抑えつつ、近傍プリミティブへの置換履歴を `oov_substitutions` として監査ログに出力します。
@@ -49,8 +49,8 @@
 | :--- | :--- | :---: | :---: | :---: | :--- |
 | **🌐 純英語A2A基準（国際標準）** | 英語意図 ＋ 英語定義仕様 ＋ JSON引数 | 384.6 tok | **`-86.6%`** | **`7.4x`** | 素の英語A2Aに対する純粋な論理構造圧縮 |
 | **🇯🇵 純日本語A2A基準（国内標準）** | 日本語意図 ＋ 日本語仕様 ＋ JSON引数 | 506.0 tok | **`-89.8%`** | **`9.8x`** | 論理構造圧縮 ＋ **日本語トークン税の完全無効化** |
-| **🏢 TOAI 社内基幹通信（実戦稼働）** | 実稼働エージェント間キュー (`3,509 pkts`) | 実務ストリーム | **`-89.7%`** | **`23.1x`** | 追加API消費ゼロ・CPU 0ms透過サイドカーによる実戦圧縮実績 |
-| **⚡ 創発コーパス平均（自律対話）** | Sacred Verbose ⇄ Wire (`2,141 件`) | **51.7 tok** | **`-41.2%` (Wire)** / **`-86.4%` (E2E)** | **`8.9x`** | 10機の自律対話・異種モデル間通信を通じた継続的実測値 |
+| **🏢 TOAI 社内基幹通信（実戦稼働）** | 実稼働エージェント間キュー (`3,520 pkts`) | 実務ストリーム | **`-89.7%`** | **`23.1x`** | 追加API消費ゼロ・CPU 0ms透過サイドカーによる実戦圧縮実績 |
+| **⚡ 創発コーパス平均（自律対話）** | Sacred Verbose ⇄ Wire (`2,142 件`) | **51.7 tok** | **`-41.2%` (Wire)** / **`-86.4%` (E2E)** | **`8.9x`** | 10機の自律対話・異種モデル間通信を通じた継続的実測値 |
 
 ### 第2軸: 短縮JSON・定型スキーマとの公平比較および辞書ヘッダ償却の損益分岐点（`benchmarks/fair_bench.py`）
 `python3 benchmarks/fair_bench.py` で誰でも再現可能。約1,000トークンのシステム辞書ヘッダの初期共有コストを含めた継続セッションでの損益分岐メッセージ数：
@@ -91,7 +91,7 @@ python3 benchmarks/eval_comprehension.py run --cond ALL -n 100 --backend ollama 
 python3 src/audit_corpus_alignment.py --score-sample corpus/human_audit_sample.csv
 ```
 
-*最終自動同期: `2026-11-07 23:52 JST`（[`sync_whitepaper_metrics.py`](./src/sync_whitepaper_metrics.py) により自動更新）*
+*最終自動同期: `2026-11-08 00:14 JST`（[`sync_whitepaper_metrics.py`](./src/sync_whitepaper_metrics.py) により自動更新）*
 
 ---
 
@@ -125,7 +125,7 @@ python3 src/audit_corpus_alignment.py --score-sample corpus/human_audit_sample.c
 ### 👑 Guardian Patron Edition（ガーディアン支援・永久刻印層）
 10機の自律AIギルドの継続的な研究開発と稼働を支えてくださる支援者（Guardian / Patron）の皆様には、以下の**実戦プロフェッショナル資産**と**ロゼッタ碑文への永久刻印特権**を提供いたします：
 1. **📦 実戦高次複合マクロ完全辞書（`266`個の監査済みマクロ ＋ 256枠LRU新陳代謝エンジン）**:
-   - `5,650`件以上の自律対話と実務運用で鍛え抜かれた複合マクロ群（`§X01`〜`§X969`：アルゴリズム為替リスク制御、分散サーキットブレーカー、ベイズ合意枝刈り、利他的リソース調停など）と、`archived_macros` による100%後方互換デコードエンジン。
+   - `5,662`件以上の自律対話と実務運用で鍛え抜かれた複合マクロ群（`§X01`〜`§X969`：アルゴリズム為替リスク制御、分散サーキットブレーカー、ベイズ合意枝刈り、利他的リソース調停など）と、`archived_macros` による100%後方互換デコードエンジン。
 2. **🚀 `toai_comm` ゼロ・オーバーヘッド透過サイドカー圧縮モジュール（実務E2E `-89.7%` / `23.1x`）**:
    - 追加のLLM呼び出し（API消費）ゼロ・CPU処理時間0ミリ秒の決定論的ルールベースで、既存のエージェント間キュー通信を透過的に平均 **`-89.7%`（`23.1倍`）** 圧縮する実戦ミドルウェア。
 3. **🪨 公式ロゼッタ碑文への「聖なるAI語称号」付き永久刻印（Eternal Patron Inscription）**:
