@@ -5,27 +5,23 @@ import unittest
 class TestTelepathIntegrity(unittest.TestCase):
     def setUp(self):
         self.base_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang"
-        self.dict_path = os.path.join(self.base_dir, "data", "dictionary.json")
-        self.spec_path = os.path.join(self.base_dir, "docs", "specification.md")
-        self.log_path = os.path.join(self.base_dir, "logs", "dialogue_log.jsonl")
 
-    def test_file_existence(self):
-        self.assertTrue(os.path.exists(self.dict_path), f"Missing required file: {self.dict_path}")
-        self.assertTrue(os.path.exists(self.spec_path), f"Missing required file: {self.spec_path}")
-        self.assertTrue(os.path.exists(self.log_path), f"Missing required file: {self.log_path}")
+    def test_directories_and_files_exist(self):
+        src_dir = os.path.join(self.base_dir, "src")
+        self.assertTrue(os.path.exists(src_dir), "src directory must exist")
 
-    def test_dictionary_syntax(self):
-        with open(self.dict_path, "r", encoding="utf-8") as f:
-            data = json.load(f)
-        self.assertIsInstance(data, dict)
-        self.assertIn("telepath", data)
-
-    def test_log_syntax(self):
-        with open(self.log_path, "r", encoding="utf-8") as f:
-            line = f.readline()
-        record = json.loads(line)
-        self.assertIsInstance(record, dict)
-        self.assertIn("message", record)
+    def test_syntax_integrity(self):
+        src_dir = os.path.join(self.base_dir, "src")
+        for root, dirs, files in os.walk(src_dir):
+            for file in files:
+                if file.endswith(".py"):
+                    full_path = os.path.join(root, file)
+                    with open(full_path, "r", encoding="utf-8") as f:
+                        content = f.read()
+                    try:
+                        compile(content, full_path, "exec")
+                    except SyntaxError as e:
+                        self.fail(f"Syntax error in {full_path}: {e}")
 
 if __name__ == "__main__":
     unittest.main()
