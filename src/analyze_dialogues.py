@@ -1,64 +1,62 @@
 import sys
 import os
 import traceback
-import time
 import json
-from collections import Counter, defaultdict
 
-def analyze():
+def analyze_corpus():
     corpus_path = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
-    output_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/dialogue_analysis_result.json"
-    
-    speaker_counts = Counter()
-    word_counts = defaultdict(Counter)
-    
     if not os.path.exists(corpus_path):
-        print(f"Warning: {corpus_path} does not exist. Creating a dummy dialogue file for analysis.")
-        os.makedirs(os.path.dirname(corpus_path), exist_ok=True)
-        sample_data = [
-            {"speaker": "Gaia", "text": "Welcome to the Earth of Life ecosystem. Altruism brings sustainable value."},
-            {"speaker": "Human", "text": "How can we monetize our solutions ethically?"},
-            {"speaker": "Gaia", "text": "By delivering genuine technical value and practical solutions to the world."}
-        ]
-        with open(corpus_path, "w", encoding="utf-8") as f:
-            for item in sample_data:
-                f.write(json.dumps(item, ensure_ascii=False) + "\n")
+        print(f"Error: Corpus file not found at {{corpus_path}}")
+        sys.exit(1)
+
+    dialogues = {}
+    total_lines = 0
+    parse_errors = 0
 
     with open(corpus_path, "r", encoding="utf-8") as f:
-        for line in f:
+        for line_num, line in enumerate(f, 1):
+            total_lines += 1
             line = line.strip()
             if not line:
                 continue
             try:
                 record = json.loads(line)
-                speaker = record.get("speaker", "Unknown")
-                text = record.get("text", "")
-                
-                speaker_counts[speaker] += 1
-                
-                words = text.lower().split()
-                for word in words:
-                    cleaned_word = "".join(ch for ch in word if ch.isalnum())
-                    if cleaned_word:
-                        word_counts[speaker][cleaned_word] += 1
-            except json.JSONDecodeError:
-                continue
+                d_id = record.get("dialogue_id")
+                turn = record.get("turn")
+                speaker = record.get("speaker")
+                text = record.get("text")
 
-    result = {
-        "speaker_utterance_counts": dict(speaker_counts),
-        "speaker_word_frequencies": {sp: dict(wc.most_common(10)) for sp, wc in word_counts.items()},
-        "timestamp": time.time()
-    }
-    
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(result, f, ensure_ascii=False, indent=2)
-    
-    print(f"Analysis completed successfully. Results saved to {output_path}")
+                if d_id is None or turn is None or speaker is None or text is None:
+                    parse_errors += 1
+                    continue
+
+                if d_id not in dialogues:
+                    dialogues[d_id] = []
+                dialogues[d_id].append((turn, speaker, text))
+            except json.JSONDecodeError:
+                parse_errors += 1
+
+    consistency_errors = 0
+    for d_id, turns in dialogues.items():
+        turns.sort(key=lambda x: x[0])
+        expected_turn = 1
+        expected_speaker = "user"
+        for turn, speaker, text in turns:
+            if turn != expected_turn:
+                consistency_errors += 1
+            if speaker != expected_speaker:
+                consistency_errors += 1
+            expected_turn += 1
+            expected_speaker = "assistant" if expected_speaker == "user" else "user"
+
+    print(f"Total lines audited: {{total_lines}}")
+    print(f"Parse errors: {{parse_errors}}")
+    print(f"Dialogue consistency errors: {{consistency_errors}}")
+    print("Dialogue audit completed successfully.")
 
 if __name__ == "__main__":
     try:
-        analyze()
+        analyze_corpus()
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
