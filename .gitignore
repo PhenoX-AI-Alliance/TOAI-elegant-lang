@@ -27,5 +27,4 @@ dist/
 .publish_hold
 
 # Large auto-generated fleet logs (kept locally, not published)
-docs/COMM_SECURITY_AUDIT.md
-spec/SPEC_v0.1_DRAFT.md
+logs/
