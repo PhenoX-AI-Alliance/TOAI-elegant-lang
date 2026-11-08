@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-08T10:20:42.010573",
+  "updated_at": "2026-11-08T10:48:30.424353",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-08T01:46:53.828160"
     },
-    "§X973": {
-      "name": "ENTROPY_GUIDED_CAUSAL_CONVERGENCE",
-      "expansion": "§DATA_ENTROPY_COMPRESSED_TREE > { §DATA_TENSOR_CAUSAL_TOPOLOGY } => §LOGIC_DEDUCTIVE_CONVERGENCE",
-      "description": "Compresses high-dimensional causal tensor topologies using data entropy trees and converges them into a unified deductive logic. / データエントロピー圧縮木を用いて高次元の因果テンソル位相を圧縮し、統合された演繹的論理へと収束させます。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-08T02:31:27.738308"
-    },
     "§X974": {
       "name": "HEART_ENTROPY_HARMONY_SYNC",
       "expansion": "§HEART_ALTRUISTIC_HARMONY_MATRIX > { §DATA_ENTROPY_COMPRESSION_TREE } => §PROTO_ENCODING_SWITCH",
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-08T10:05:33.098518"
+    },
+    "§X989": {
+      "name": "COMPOUND_GRACEFUL_SYNC_PRUNE",
+      "expansion": "§PROTO_GRACEFUL_DRAIN > { §SYS_SYNC_GATE } => §LOGIC_EMPIRICAL_PRUNE",
+      "description": "Ensures graceful resource draining while passing through a synchronized gate, followed by empirical logic pruning. / 同期ゲートを通過しながら優美なリソース枯渇処理を行い、その後に経験的な論理刈り込みを実行します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-08T10:47:16.950835"
     }
   },
   "archived_macros": {
@@ -9908,7 +9908,17 @@
       "v5_audited": true,
       "created_at": "2026-11-03T13:01:59.011729",
       "archived_at": "2026-11-08T10:05:33.098518"
+    },
+    "§X973": {
+      "name": "ENTROPY_GUIDED_CAUSAL_CONVERGENCE",
+      "expansion": "§DATA_ENTROPY_COMPRESSED_TREE > { §DATA_TENSOR_CAUSAL_TOPOLOGY } => §LOGIC_DEDUCTIVE_CONVERGENCE",
+      "description": "Compresses high-dimensional causal tensor topologies using data entropy trees and converges them into a unified deductive logic. / データエントロピー圧縮木を用いて高次元の因果テンソル位相を圧縮し、統合された演繹的論理へと収束させます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-08T02:31:27.738308",
+      "archived_at": "2026-11-08T10:47:16.950835"
     }
   },
-  "next_macro_seq": 989
+  "next_macro_seq": 990
 }
