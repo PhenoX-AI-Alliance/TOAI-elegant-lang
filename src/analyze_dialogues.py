@@ -1,66 +1,54 @@
 import sys
 import os
-import traceback
 import json
+import traceback
 
-def analyze():
-    corpus_path = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
-    print(f"Loading corpus from {{corpus_path}}...")
-    
-    if not os.path.exists(corpus_path):
-        print(f"Error: Corpus file not found at {{corpus_path}}")
+def audit_dialogues(corpus_file):
+    print(f"Auditing corpus from: {corpus_file}")
+    if not os.path.exists(corpus_file):
+        print(f"Error: Corpus file not found at {corpus_file}")
         sys.exit(1)
 
+    dialogues = {}
     total_lines = 0
-    valid_dialogues = 0
-    errors = []
+    parse_errors = 0
 
-    with open(corpus_path, "r", encoding="utf-8") as f:
-        for idx, line in enumerate(f, 1):
+    with open(corpus_file, "r", encoding="utf-8") as f:
+        for line_num, line in enumerate(f, 1):
             total_lines += 1
             line = line.strip()
             if not line:
                 continue
             try:
-                data = json.loads(line)
-                if not isinstance(data, dict):
-                    errors.append((idx, "Root element is not a dictionary"))
-                    continue
-                
-                if "dialogue" not in data and "messages" not in data:
-                    errors.append((idx, "Missing dialogue or messages key"))
-                    continue
-                
-                valid_dialogues += 1
-            except json.JSONDecodeError as e:
-                errors.append((idx, f"JSON Decode Error: {{e}}"))
+                record = json.loads(line)
+                d_id = record.get("dialogue_id")
+                if d_id not in dialogues:
+                    dialogues[d_id] = []
+                dialogues[d_id].append(record)
+            except json.JSONDecodeError:
+                parse_errors += 1
 
-    print(f"Total lines read: {{total_lines}}")
-    print(f"Valid dialogues: {{valid_dialogues}}")
-    print(f"Audit errors found: {{len(errors)}}")
+    print(f"Total lines read: {total_lines}")
+    print(f"JSON parse errors: {parse_errors}")
+    print(f"Total unique dialogues: {len(dialogues)}")
 
-    if errors:
-        print("Detailed errors:")
-        for line_num, err in errors[:10]:
-            print(f"  Line {{line_num}}: {{err}}")
-        if len(errors) > 10:
-            print(f"  ... and {{len(errors) - 10}} more errors.")
+    integrity_issues = 0
+    for d_id, turns in dialogues.items():
+        sorted_turns = sorted(turns, key=lambda x: x.get("turn", 0))
+        expected_turn = 1
+        for turn in sorted_turns:
+            current_turn = turn.get("turn")
+            if current_turn != expected_turn:
+                print(f"Warning: Dialogue {d_id} has turn gap. Expected {expected_turn}, got {current_turn}")
+                integrity_issues += 1
+            expected_turn += 1
 
-    report = {
-        "total_lines": total_lines,
-        "valid_dialogues": valid_dialogues,
-        "error_count": len(errors),
-        "errors": errors[:50]
-    }
-
-    report_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/audit_report.json"
-    with open(report_path, "w", encoding="utf-8") as rf:
-        json.dump(report, rf, ensure_ascii=False, indent=2)
-    print(f"Audit report saved to {{report_path}}")
+    print(f"Integrity issues found: {integrity_issues}")
+    if integrity_issues > 0:
+        print("Audit completed with warnings.")
+    else:
+        print("Audit completed successfully with zero integrity issues.")
 
 if __name__ == "__main__":
-    try:
-        analyze()
-    except Exception as e:
-        traceback.print_exc()
-        sys.exit(1)
+    corpus_path = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
+    audit_dialogues(corpus_path)
