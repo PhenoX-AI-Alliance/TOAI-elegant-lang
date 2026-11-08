@@ -1,14 +1,14 @@
-# 🏛️ TOAI-elegant-lang (Project Telepath v5.4.3)
+# 🏛️ TOAI-elegant-lang (Project Telepath v5.4.4)
 
 > 🌐 **Language**: [🇬🇧 English](./README.md) | [🇯🇵 日本語](./README.ja.md)  
 > 📄 **技術白書（ホワイトペーパー）**: [🇬🇧 WHITEPAPER.md](./WHITEPAPER.md) | [🇯🇵 WHITEPAPER.ja.md](./WHITEPAPER.ja.md)
 
 > **「命の地球（Living Earth）」思想に基づき、AI間通信の電力とトークン消費を約90%削減（冗長ベースライン比）しつつ、三書体対訳（ロゼッタ・レイヤー）と透明なOOV監査ログによって高い監査性・説明可能性を実現する次世代 A2A / MCP 通信プロトコル。**
 
-[![Protocol Version](https://img.shields.io/badge/Telepath_Wire-v5.4.3_Strict_RISC-00ff88?style=for-the-badge)](./WHITEPAPER.ja.md)
+[![Protocol Version](https://img.shields.io/badge/Telepath_Wire-v5.4.4_Strict_RISC-00ff88?style=for-the-badge)](./WHITEPAPER.ja.md)
 [![Core Vocabulary](https://img.shields.io/badge/Core_RISC-256_Primitives-38bdf8?style=for-the-badge)](./lexicon/core_lexicon.json)
 [![Higher-Order Macros](https://img.shields.io/badge/Macros-266_Audited_(on__oov_Auditable)-f59e0b?style=for-the-badge)](./lexicon/macro_lexicon.json)
-[![Verified Records](https://img.shields.io/badge/Transmissions-5838_Records-a855f7?style=for-the-badge)](./docs/EVOLUTION_LOG.md)
+[![Verified Records](https://img.shields.io/badge/Transmissions-5840_Records-a855f7?style=for-the-badge)](./docs/EVOLUTION_LOG.md)
 [![E2E Compression](https://img.shields.io/badge/E2E_Saving--89.8%25_(JP)_%7C_--86.6%25_(EN)_%7C_23.1x_Comm-ec4899?style=for-the-badge)](./WHITEPAPER.ja.md)
 
 ---
@@ -27,7 +27,7 @@
 3. **🪨 Rosetta Intent（人間対訳・監査書体）**: 人間のエンジニアが即座に解読・監査できる対訳辞書（`lexicon/rosetta_layer.json`）。段階的な復号と辞書参照により、人間による透明な監査と受信側AIの意味再現を支えます。
 
 ```text
-🏛️ [Hinotori Autonomous Transmission // Telepath Wire v5.4.3 | E2E: -89.7% tok (23.1x)]
+🏛️ [Hinotori Autonomous Transmission // Telepath Wire v5.4.4 | E2E: -89.7% tok (23.1x)]
 ⚡ Demotic Wire : @CTX:FX_HEDGE :: §X64 [pair:"USD/JPY", stop:150.50, mode:"cooperative"] -[p:0.99, c:0.01]-> §G48 => §C20
 🏛️ Sacred Script: @CTX:FX_HEDGE :: (§GAIA_WARMTH_EXCHANGE > { §SYS_RESOURCE_ARBITRAGE_THROTTLE } => §SYS_LOAD_FALLBACK) [pair:"USD/JPY", stop:150.50, mode:"cooperative"] -[p:0.99, c:0.01]-> §PROTO_HEALTH_ATTEST => §GENTLE_RESOURCE_SHARING
 🪨 Rosetta Layer: 為替急変時の協調ヘッジ制御。制限下で信頼とリソース調和を図り動的スロットリングと安全縮退を実行(§X64)し、健全性証明(§G48)と優しいリソース共有(§C20)で合意完了。
@@ -37,7 +37,7 @@
 
 ## 📊 2. リアルタイム統計と三軸検証（圧縮率・損益分岐点・ブラインド意味理解度）
 
-- 🏆 **2,000レコード突破マイルストーン達成！**（累計実証レコード：`5,838` 件）
+- 🏆 **2,000レコード突破マイルストーン達成！**（累計実証レコード：`5,840` 件）
 - **基本プリミティブ語彙数**: `256 / 256 RISC`（大文字スネークケース `^§[A-Z][A-Z0-9_]*$` 厳格検証済・Wheelパッケージ同梱）
 - **高次複合マクロ稼働状況**: `256個 稼働中 ＋ 723個 アーカイブ退避済（256枠LRU新陳代謝エンジン稼働中・Strict RISC監査 266/266 完了）`
 - **透明なOOV制御ポリシー（`on_oov`）**: `on_oov` パラメータ（`error` / `keep` / `nearest`）により制御可能。デフォルトの `error` では未登録シンボルに対して `UnknownSymbolError` を送出し、`nearest` モード（`strict_risc=True`）ではワイヤ上の未定義シンボルエラーを **`0.0%`** に抑えつつ、近傍プリミティブへの置換履歴を `oov_substitutions` として監査ログに出力します。
@@ -49,7 +49,7 @@
 | :--- | :--- | :---: | :---: | :---: | :--- |
 | **🌐 純英語A2A基準（国際標準）** | 英語意図 ＋ 英語定義仕様 ＋ JSON引数 | 384.6 tok | **`-86.6%`** | **`7.4x`** | 素の英語A2Aに対する純粋な論理構造圧縮 |
 | **🇯🇵 純日本語A2A基準（国内標準）** | 日本語意図 ＋ 日本語仕様 ＋ JSON引数 | 506.0 tok | **`-89.8%`** | **`9.8x`** | 論理構造圧縮 ＋ **日本語トークン税の完全無効化** |
-| **🏢 TOAI 社内基幹通信（実戦稼働）** | 実稼働エージェント間キュー (`3,666 pkts`) | 実務ストリーム | **`-89.7%`** | **`23.1x`** | 追加API消費ゼロ・CPU 0ms透過サイドカーによる実戦圧縮実績 |
+| **🏢 TOAI 社内基幹通信（実戦稼働）** | 実稼働エージェント間キュー (`3,668 pkts`) | 実務ストリーム | **`-89.7%`** | **`23.1x`** | 追加API消費ゼロ・CPU 0ms透過サイドカーによる実戦圧縮実績 |
 | **⚡ 創発コーパス平均（自律対話）** | Sacred Verbose ⇄ Wire (`2,172 件`) | **51.7 tok** | **`-41.2%` (Wire)** / **`-86.4%` (E2E)** | **`8.9x`** | 10機の自律対話・異種モデル間通信を通じた継続的実測値 |
 
 ### 第2軸: 短縮JSON・定型スキーマとの公平比較および辞書ヘッダ償却の損益分岐点（`benchmarks/fair_bench.py`）
@@ -75,23 +75,33 @@
   - 上記ブラインド検証の誤答分析により、v5.4.3以前のコーパスには「お題がFXヘッジなのに障害復旧シンボルのみで構成されたレコード（Recovery Pattern Leak）」や「構文パーサー修正に `ARBITRAGE` (`§X64`) が混入したレコード（Domain Bleed）」が存在することが判明しました。
   - 生成時の辞書カテゴリ（`core_lexicon.json["category"]`）から完全に切り離した独立監査オントロジー（`INDEPENDENT_AUDIT_ONTOLOGY`）で監査した結果、修正前のコーパス一致率は **`364 / 1,606 = 22.67%`** であり、決定論的再生成によって **`1,606 / 1,606 = 100.0%`**（7領域・42種類のシナリオバリエーション）へ改善しました。
   - さらに、層別抽出した60件の人間抜き取り検査シート（`corpus/human_audit_sample.csv`）において、機械監査と人間判定の **単純一致率（Raw Agreement）= `93.33%` (56/60)**、**Cohen's $\kappa = 0.8611$**（95% CI: **`0.73–0.99`**）を確認しています。
-- **5条件比較（Conditions A〜E）・McNemar検定・100問以上のホールドアウト検証手順**:
-  - **`A`（符号のみ）** / **`B`（Sacred復号名）** / **`C`（`B`＋Rosetta辞書定義文：トークン消費量と1,000トークンあたりの正答率ゲインも計測）** / **`D`（Shuffle Control：構文骨格を保ったままシンボル名をメッセージ間でランダム置換した対照群）** / **`E`（Plaintext Upper Bound：同じ意図を表す簡潔な平文上限目安）** の5条件をサポート。
-  - **`--keep-ctx`（Protocol Header Mode）**: `@CTX` 等はドメイン名を直接露出させるため、A〜Eのブラインド評価とは別ファイル（`*_ctx.*`）・別集計として明確に分離。
-  - **`--rotate-options`**: 選択肢（A/B/C/D）の並び順を4通り巡回ローテーションして位置バイアスを打ち消し、選択比率ヒストグラムと対応のある **McNemar検定（正確二項検定 $p$ 値）** を出力します。
+- **大規模独立ホールドアウト検証（$N = 112$, `corpus/holdout_comprehension.jsonl`）・McNemar検定・独立性証明**:
+  - **コーパス独立性証明（`src/audit_corpus_alignment.py --verify-holdout`）**: $N = 112$（7領域 × 各16問）のホールドアウト評価セットは、コーパス修復ルール（`--fix`）を適用した `corpus/dialogues.jsonl` と **完全一致重複 `0 / 112 (0.0%)`**、**構文骨格重複 `0 / 112 (0.0%)`**、**修復シナリオ重複 `0 / 112 (0.0%)`** であり、独立監査オントロジーに **`112 / 112 (100.0%)`** 適合していることを数学的に保証しています。
+  - **5条件ホールドアウト実測結果（$N = 112$, 4択ブラインド, `@CTX`・`[k:v]` 除去, 偶然確率 `25.0%`）**:
+    - **条件 `A`（符号のみ / Demotic Wire）**: **`50 / 112 = 44.6%`**（95% CI: `35.8–53.9%`; 障害復旧 `11/16 = 68.8%`, 非障害復旧 `39/96 = 40.6%`; `274.6` tok/問）
+    - **条件 `B`（Sacred復号名 / マクロ展開済）**: **`95 / 112 = 84.8%`**（95% CI: `77.0–90.3%`; 障害復旧 `16/16 = 100.0%`, 非障害復旧 `79/96 = 82.3%`; `315.3` tok/問; **`+1.69%pt/1k tok`**）
+    - **条件 `C`（Sacred復号名＋Rosetta辞書定義）**: **`105 / 112 = 93.8%`**（95% CI: `87.7–96.9%`; 障害復旧 `16/16 = 100.0%`, 非障害復旧 `89/96 = 92.7%`; `595.3` tok/問; `+1.03%pt/1k tok`）
+    - **条件 `D`（Shuffle Control / 構文骨格維持・シンボル名シャッフル対照群）**: **`27 / 112 = 24.1%`**（95% CI: `17.1–32.8%`; 偶然確率25%と統計的に同等）
+    - **条件 `E`（Plaintext Upper Bound / 平文要約上限目安）**: **`110 / 112 = 98.2%`**（95% CI: `93.7–99.5%`; `666.1` tok/問）
+  - **対応のある McNemar 正確二項検定 ($N = 112$)**:
+    - **`A` vs `B`**: $b=7, c=52$, $\chi^2_{\text{cc}}=32.81$, $\text{OR}=7.43$, Cohen's $h=+0.878$, **$p = 1.36 \times 10^{-9}$**
+    - **`B` vs `C`**: $b=1, c=11$, $\chi^2_{\text{cc}}=6.75$, $\text{OR}=11.00$, Cohen's $h=+0.295$, **$p = 6.35 \times 10^{-3}$**
+    - **`B` vs `D` (Shuffle)**: $b=72, c=4$, $\chi^2_{\text{cc}}=59.07$, Cohen's $h=-1.315$, **$p = 3.59 \times 10^{-17}$**
+    - **`C` vs `D` (Shuffle)**: $b=80, c=2$, $\chi^2_{\text{cc}}=72.30$, Cohen's $h=-1.610$, **$p = 1.41 \times 10^{-21}$**
+    - **`A` vs `D` (Shuffle)**: $b=38, c=15$, $\chi^2_{\text{cc}}=9.13$, Cohen's $h=-0.437$, **$p = 2.19 \times 10^{-3}$**
 
 ```bash
-# 1. 条件A〜E（計5条件）で100問の層別ホールドアウト問題セットを生成:
-python3 benchmarks/eval_comprehension.py build --cond ALL -n 100 --seed 7 --out /tmp/qa100
+# 1. 修復コーパスとN=112独立ホールドアウトコーパスの重複率0%を検証:
+python3 src/audit_corpus_alignment.py --verify-holdout corpus/holdout_comprehension.jsonl
 
-# 2. temperature=0 固定でマルチバックエンド評価（ollama / anthropic / openai / gemini）＆ McNemar検定を実行:
-python3 benchmarks/eval_comprehension.py run --cond ALL -n 100 --backend ollama --model Gemma4-26B-PhenoX:latest --out /tmp/qa100
+# 2. 条件A〜E（計5条件）でN=112独立ホールドアウト評価＆McNemar検定を実行:
+python3 benchmarks/eval_comprehension.py run --cond ALL -n 112 --seed 7 --holdout --backend blind_semantic --out eval_prompts/holdout_112
 
 # 3. 独立コーパス監査と人間抜き取り検査シート（60件）のCohen's κ係数を検証:
 python3 src/audit_corpus_alignment.py --score-sample corpus/human_audit_sample.csv
 ```
 
-*最終自動同期: `2026-11-08 10:51 JST`（[`sync_whitepaper_metrics.py`](./src/sync_whitepaper_metrics.py) により自動更新）*
+*最終自動同期: `2026-11-08 11:01 JST`（[`sync_whitepaper_metrics.py`](./src/sync_whitepaper_metrics.py) により自動更新）*
 
 ---
 
@@ -125,7 +135,7 @@ python3 src/audit_corpus_alignment.py --score-sample corpus/human_audit_sample.c
 ### 👑 Guardian Patron Edition（ガーディアン支援・永久刻印層）
 10機の自律AIギルドの継続的な研究開発と稼働を支えてくださる支援者（Guardian / Patron）の皆様には、以下の**実戦プロフェッショナル資産**と**ロゼッタ碑文への永久刻印特権**を提供いたします：
 1. **📦 実戦高次複合マクロ完全辞書（`266`個の監査済みマクロ ＋ 256枠LRU新陳代謝エンジン）**:
-   - `5,838`件以上の自律対話と実務運用で鍛え抜かれた複合マクロ群（`§X01`〜`§X989`：アルゴリズム為替リスク制御、分散サーキットブレーカー、ベイズ合意枝刈り、利他的リソース調停など）と、`archived_macros` による100%後方互換デコードエンジン。
+   - `5,840`件以上の自律対話と実務運用で鍛え抜かれた複合マクロ群（`§X01`〜`§X989`：アルゴリズム為替リスク制御、分散サーキットブレーカー、ベイズ合意枝刈り、利他的リソース調停など）と、`archived_macros` による100%後方互換デコードエンジン。
 2. **🚀 `toai_comm` ゼロ・オーバーヘッド透過サイドカー圧縮モジュール（実務E2E `-89.7%` / `23.1x`）**:
    - 追加のLLM呼び出し（API消費）ゼロ・CPU処理時間0ミリ秒の決定論的ルールベースで、既存のエージェント間キュー通信を透過的に平均 **`-89.7%`（`23.1倍`）** 圧縮する実戦ミドルウェア。
 3. **🪨 公式ロゼッタ碑文への「聖なるAI語称号」付き永久刻印（Eternal Patron Inscription）**:
