@@ -93,7 +93,7 @@ python3 benchmarks/eval_comprehension.py run --cond ALL -n 100 --backend ollama 
 python3 src/audit_corpus_alignment.py --score-sample corpus/human_audit_sample.csv
 ```
 
-*Last Auto-Synced: `2026-11-08 08:57 JST` via [`sync_whitepaper_metrics.py`](./src/sync_whitepaper_metrics.py)*
+*Last Auto-Synced: `2026-11-08 09:06 JST` via [`sync_whitepaper_metrics.py`](./src/sync_whitepaper_metrics.py)*
 
 ---
 
