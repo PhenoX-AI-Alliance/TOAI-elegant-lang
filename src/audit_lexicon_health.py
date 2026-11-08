@@ -1,18 +1,18 @@
-import sys
 import os
+import sys
 import json
 import traceback
 
 def audit_lexicons():
-    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    base_lexicon_dir = os.path.join(workspace, 'TOAI-elegant-lang', 'lexicon')
+    workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    lexicon_dir = os.path.join(workspace_dir, 'TOAI-elegant-lang', 'lexicon')
     
-    core_path = os.path.join(base_lexicon_dir, 'core_lexicon.json')
-    macro_path = os.path.join(base_lexicon_dir, 'macro_lexicon.json')
+    core_path = os.path.join(lexicon_dir, 'core_lexicon.json')
+    macro_path = os.path.join(lexicon_dir, 'macro_lexicon.json')
     
     report = {
-        "core_stats": {},
-        "macro_stats": {}
+        'core_lexicon': {},
+        'macro_lexicon': {}
     }
     
     if os.path.exists(core_path):
@@ -30,27 +30,30 @@ def audit_lexicons():
                     if 'compact_id' in data:
                         compact_ids.append(data['compact_id'])
                         
-            report["core_stats"] = {
-                "total_symbols": len(lexicon_dict),
-                "categories": categories,
-                "compact_id_count": len(compact_ids)
+            report['core_lexicon'] = {
+                'total_entries': len(lexicon_dict),
+                'categories': categories,
+                'compact_id_count': len(compact_ids),
+                'has_duplicates_compact_id': len(compact_ids) != len(set(compact_ids))
             }
         except Exception as e:
-            report["core_stats"]["error"] = str(e)
-            
+            report['core_lexicon']['error'] = str(e)
+    else:
+        report['core_lexicon']['error'] = 'core_lexicon.json not found'
+        
     if os.path.exists(macro_path):
         try:
             with open(macro_path, 'r', encoding='utf-8') as f:
                 macro_data = json.load(f)
-            if isinstance(macro_data, dict):
-                macro_count = len(macro_data.get('macros', macro_data))
-                report["macro_stats"] = {
-                    "total_macros": macro_count
-                }
+            report['macro_lexicon'] = {
+                'total_entries': len(macro_data) if isinstance(macro_data, dict) else 0
+            }
         except Exception as e:
-            report["macro_stats"]["error"] = str(e)
-            
+            report['macro_lexicon']['error'] = str(e)
+    else:
+        report['macro_lexicon']['error'] = 'macro_lexicon.json not found'
+        
     print(json.dumps(report, ensure_ascii=False, indent=2))
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     audit_lexicons()

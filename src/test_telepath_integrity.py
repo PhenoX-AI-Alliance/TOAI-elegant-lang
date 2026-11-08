@@ -8,9 +8,9 @@ class TestTelepathIntegrity(unittest.TestCase):
 
     def test_directories_and_files_exist(self):
         src_dir = os.path.join(self.base_dir, "src")
-        self.assertTrue(os.path.exists(src_dir), "src directory must exist")
+        self.assertTrue(os.path.exists(src_dir), "src directory must exist.")
 
-    def test_syntax_integrity(self):
+    def test_syntax_of_python_files(self):
         src_dir = os.path.join(self.base_dir, "src")
         for root, dirs, files in os.walk(src_dir):
             for file in files:
