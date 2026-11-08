@@ -42,5 +42,5 @@ jobs:
 
       - name: Build wheel
         run: |
-          pip install build
+          pip install build setuptools
           python3 -m build --wheel --no-isolation
