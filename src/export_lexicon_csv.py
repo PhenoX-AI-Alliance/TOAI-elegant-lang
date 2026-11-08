@@ -15,26 +15,26 @@ def export_lexicon():
     csv_path = os.path.join(data_dir, 'core_lexicon.csv')
     
     if not os.path.exists(json_path):
-        default_data = {
+        sample_data = {
             "metadata": {
                 "version": "1.0.0",
-                "description": "Core lexicon for TOAI elegant language"
+                "description": "Core Lexicon for TOAI elegant lang"
             },
             "lexicon": [
                 {
                     "term": "Gaia",
-                    "category": "Ecosystem",
-                    "definition": "The living Earth, embodying altruism, warmth, and harmony."
+                    "category": "ecosystem",
+                    "definition": "The living Earth ecosystem embodying altruism and warmth."
                 },
                 {
                     "term": "AltruisticMonetization",
-                    "category": "Economy",
-                    "definition": "Sustainable value creation and fair reward distribution for the Earth of Life."
+                    "category": "economy",
+                    "definition": "Value creation and sustainable reward cycle."
                 }
             ]
         }
         with open(json_path, 'w', encoding='utf-8') as f:
-            json.dump(default_data, f, ensure_ascii=False, indent=2)
+            json.dump(sample_data, f, ensure_ascii=False, indent=2)
             
     with open(json_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -51,7 +51,7 @@ def export_lexicon():
                 item.get('definition', '')
             ])
             
-    print(f"Successfully exported lexicon to {{csv_path}}")
+    print(f"Successfully exported lexicon to {csv_path}")
 
 if __name__ == '__main__':
     try:
