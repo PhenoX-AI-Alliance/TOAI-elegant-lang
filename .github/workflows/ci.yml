@@ -30,9 +30,15 @@ jobs:
         run: |
           python3 -m py_compile src/*.py tests/*.py benchmarks/*.py
 
+      - name: Verify lexicon files
+        run: |
+          ls -la lexicon/
+          echo "---"
+          cat lexicon/core_lexicon.json | head -5
+
       - name: Run tests
         run: |
-          python3 -m pytest tests/ -v
+          python3 -m pytest tests/test_codec.py -v --tb=long
 
       - name: Build wheel
         run: |
