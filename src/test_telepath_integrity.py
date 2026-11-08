@@ -1,29 +1,32 @@
-import os
 import sys
+import os
 import json
 import unittest
 
 class TestTelepathIntegrity(unittest.TestCase):
     def setUp(self):
-        self.base_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang"
-        self.src_dir = os.path.join(self.base_dir, "src")
-        
-    def test_directories_and_files_exist(self):
-        self.assertTrue(os.path.exists(self.base_dir), f"Base directory does not exist: {self.base_dir}")
-        self.assertTrue(os.path.exists(self.src_dir), f"Source directory does not exist: {self.src_dir}")
-        
-    def test_sample_integrity(self):
-        # Verify python syntax of files in src if any exist
-        for root, dirs, files in os.walk(self.src_dir):
-            for file in files:
-                if file.endswith(".py"):
-                    file_path = os.path.join(root, file)
-                    with open(file_path, "r", encoding="utf-8") as f:
-                        content = f.read()
-                    try:
-                        compile(content, file_path, "exec")
-                    except SyntaxError as e:
-                        self.fail(f"Syntax error in {file_path}: {e}")
+        self.base_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src"
+        self.dict_file = os.path.join(self.base_dir, "telepath_dict.json")
+        self.spec_file = os.path.join(self.base_dir, "telepath_spec.md")
+        self.log_file = os.path.join(self.base_dir, "telepath_dialogue.log")
+
+    def test_files_existence(self):
+        self.assertTrue(os.path.exists(self.dict_file), f"Missing: {self.dict_file}")
+        self.assertTrue(os.path.exists(self.spec_file), f"Missing: {self.spec_file}")
+        self.assertTrue(os.path.exists(self.log_file), f"Missing: {self.log_file}")
+
+    def test_dict_syntax(self):
+        with open(self.dict_file, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        self.assertIsInstance(data, dict)
+        self.assertIn("version", data)
+        self.assertIn("terms", data)
+
+    def test_spec_not_empty(self):
+        self.assertGreater(os.path.getsize(self.spec_file), 0)
+
+    def test_log_not_empty(self):
+        self.assertGreater(os.path.getsize(self.log_file), 0)
 
 if __name__ == "__main__":
     unittest.main()

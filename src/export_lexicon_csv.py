@@ -7,9 +7,9 @@ import csv
 
 def main():
     try:
-        sandbox_dir = '/home/phenox/gemini-sandbox'
-        lexicon_json_path = os.path.join(sandbox_dir, 'TOAI-elegant-lang', 'core_lexicon.json')
-        output_csv_path = os.path.join(sandbox_dir, 'TOAI-elegant-lang', 'core_lexicon.csv')
+        base_dir = '/home/phenox/gemini-sandbox'
+        lexicon_json_path = os.path.join(base_dir, 'TOAI-elegant-lang', 'src', 'core_lexicon.json')
+        output_csv_path = os.path.join(base_dir, 'TOAI-elegant-lang', 'src', 'core_lexicon.csv')
         
         if not os.path.exists(lexicon_json_path):
             print(f"Error: {lexicon_json_path} does not exist.")
@@ -34,25 +34,18 @@ def main():
             sys.exit(1)
             
         if not rows:
-            print("Error: No data found to export.")
-            sys.exit(1)
+            print("Warning: No data to export.")
+            fieldnames = ['key']
+        else:
+            fieldnames = list(set().union(*(d.keys() for d in rows)))
             
-        fieldnames = set()
-        for row in rows:
-            if isinstance(row, dict):
-                fieldnames.update(row.keys())
-                
-        fieldnames_list = sorted(list(fieldnames))
-        
-        os.makedirs(os.path.dirname(output_csv_path), exist_ok=True)
-        with open(output_csv_path, 'w', encoding='utf-8', newline='') as csvfile:
-            writer = csv.DictWriter(csvfile, fieldnames=fieldnames_list)
+        with open(output_csv_path, 'w', encoding='utf-8', newline='') as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
             for row in rows:
-                if isinstance(row, dict):
-                    writer.writerow(row)
-                    
-        print(f"Successfully exported lexicon to {output_csv_path}")
+                writer.writerow(row)
+                
+        print(f"Successfully exported {lexicon_json_path} to {output_csv_path}")
         
     except Exception as e:
         traceback.print_exc()
