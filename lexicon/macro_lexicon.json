@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-09T06:55:20.147139",
+  "updated_at": "2026-11-09T06:58:14.878235",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1928,8 +1928,8 @@
       "name": "CAUSAL_PRUNE_DRAIN",
       "expansion": "§DATA_KL_CAUSAL_PRUNE > { §LOGIC_PROB_BRANCH_GATE } => §PROTO_GRACEFUL_DRAIN",
       "description": "Information entropy reduction macro combining causal pruning, probability branch gating, and graceful system drain. / 因果プルーニング、確率ブランチゲート、およびグレースフルドレインを統合した情報エントロピー削減マクロ。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-07T07:01:07.457880",
+      "usage_count": 3,
+      "last_used_at": "2026-11-09T06:58:11.239198",
       "v5_audited": true,
       "created_at": "2026-11-07T03:00:25.019514"
     },
@@ -2405,8 +2405,8 @@
       "name": "ENTROPY_HARVEST_CONVERGENCE",
       "expansion": "§DATA_ENTROPY_PACK > { §SYS_ASYNCHRONOUS_STATE_HARVESTER } => §LOGIC_DEDUCTIVE_CONVERGENCE_NODE",
       "description": "Asynchronously harvests distributed data entropy packs and converges them into a unified deductive logic node. / 分散したデータエントロピーパックを非同期に収穫し、統合された演繹的論理ノードへと収束させます。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-09T06:55:20.146976",
+      "usage_count": 2,
+      "last_used_at": "2026-11-09T06:58:11.239198",
       "v5_audited": true,
       "created_at": "2026-11-08T23:47:18.677948"
     },
