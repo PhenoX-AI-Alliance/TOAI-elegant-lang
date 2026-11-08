@@ -3,58 +3,64 @@ import os
 import traceback
 import time
 import json
-import collections
-import re
 
-def analyze():
-    corpus_path = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
-    output_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/analysis_result.json"
-
-    speaker_counts = collections.defaultdict(int)
-    word_counts = collections.defaultdict(int)
-
+def audit_dialogues():
+    corpus_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
     if not os.path.exists(corpus_path):
-        print(f"Corpus file not found: {corpus_path}")
-        # Create a dummy corpus for robustness if missing
-        os.makedirs(os.path.dirname(corpus_path), exist_ok=True)
-        with open(corpus_path, "w", encoding="utf-8") as f:
-            f.write(json.dumps({"speaker": "Gaia", "text": "Hello world of life and ecosystem."}) + "\n")
-            f.write(json.dumps({"speaker": "Human", "text": "Let us build a sustainable future."}) + "\n")
+        print(f"Error: Corpus not found at {corpus_path}")
+        sys.exit(1)
+
+    dialogues = {}
+    total_lines = 0
+    malformed_lines = 0
 
     with open(corpus_path, "r", encoding="utf-8") as f:
-        for line in f:
+        for line_no, line in enumerate(f, 1):
+            total_lines += 1
             line = line.strip()
             if not line:
                 continue
             try:
                 data = json.loads(line)
-                speaker = data.get("speaker", "unknown")
-                text = data.get("text", "")
-                
-                speaker_counts[speaker] += 1
-                
-                words = re.findall(r'\b\w+\b', text.lower())
-                for w in words:
-                    if len(w) > 2:
-                        word_counts[w] += 1
+                d_id = data.get("dialogue_id")
+                if d_id is None:
+                    malformed_lines += 1
+                    continue
+                if d_id not in dialogues:
+                    dialogues[d_id] = []
+                dialogues[d_id].append(data)
             except json.JSONDecodeError:
-                continue
+                malformed_lines += 1
 
-    result = {
-        "speaker_counts": dict(speaker_counts),
-        "top_words": dict(sorted(word_counts.items(), key=lambda x: x[1], reverse=True)[:50]),
-        "analyzed_at": time.time()
-    }
+    print(f"Total lines read: {total_lines}")
+    print(f"Malformed lines: {malformed_lines}")
+    print(f"Unique dialogue sessions: {len(dialogues)}")
 
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(result, f, ensure_ascii=False, indent=2)
+    errors = 0
+    for d_id, turns in dialogues.items():
+        if not turns:
+            errors += 1
+            continue
+        expected_speaker = "user"
+        for i, turn in enumerate(turns):
+            speaker = turn.get("speaker")
+            if i % 2 == 0:
+                if speaker != "user":
+                    errors += 1
+            else:
+                if speaker != "assistant":
+                    errors += 1
 
-    print(f"Analysis completed successfully. Result saved to {output_path}")
+    print(f"Dialogue consistency errors detected: {errors}")
+    if errors > 0:
+        print("Audit failed due to structural inconsistencies.")
+        sys.exit(1)
+    else:
+        print("Audit completed successfully with zero errors.")
 
 if __name__ == "__main__":
     try:
-        analyze()
+        audit_dialogues()
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)

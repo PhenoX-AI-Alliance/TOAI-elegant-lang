@@ -324,13 +324,13 @@ Holdout set: `N = 112` items (`corpus/holdout_comprehension.jsonl`), `@CTX` head
 | B | Verbose symbol names | ~315 |
 | C | Verbose names + glossary | ~595 |
 | D | Shuffled symbols (control) | – |
-| E | Plain-language intent (upper bound) | ~666 |
+| E | Concatenated symbol definitions (not a true upper bound) | ~666 |
 
 **Real LLM receivers** (`benchmarks/eval_comprehension.py --backend ollama|gemini`, temperature 0):
 
 {_llm_eval_table("en")}
 
-Observations (Gemma4-26B, local): condition A was **not significantly above the shuffle control** (McNemar A vs D, p = 0.74), so the compact wire alone carried almost no meaning to this receiver. Unexpectedly, plain text (E) scored *below* B and C; the answer options may be worded closer to the symbol names than to the plain-language intent. We report this as measured rather than adjusting the test. Full report: `eval_prompts/holdout_112_llm/report_gemma4.json`.
+Observations (Gemma4-26B, local): condition A was **not significantly above the shuffle control** (McNemar A vs D, p = 0.74), so the compact wire alone carried almost no meaning to this receiver. Plain text (E) scored *below* B and C. Investigation: answer-key positions are balanced (A/B/C/D = 28/28/30/26) and the model's picks are balanced too, so this is not position bias. The likely cause is how condition E is built: its MESSAGE is a concatenation of per-symbol dictionary definitions truncated to ~100 characters, not a fluent statement of the intent, and some definitions are abstract or off-topic. **E is therefore not a true plaintext upper bound**; a fair upper bound would need hand-written intent sentences (planned). We report the numbers as measured rather than adjusting the test. Full report: `eval_prompts/holdout_112_llm/report_gemma4.json`.
 
 <details><summary>Earlier figures from a rule-based heuristic receiver (not an LLM)</summary>
 
@@ -449,13 +449,13 @@ def generate_readme_ja(m: Dict[str, Any]) -> str:
 | B | 冗長シンボル名 | 約315 |
 | C | 冗長名＋対訳辞書 | 約595 |
 | D | シンボルをシャッフル（対照） | – |
-| E | 平文の意図（上限） | 約666 |
+| E | シンボル定義の連結（本当の上限ではない） | 約666 |
 
 **実LLM受信者による結果**（`benchmarks/eval_comprehension.py --backend ollama|gemini`、temperature 0）:
 
 {_llm_eval_table("ja")}
 
-所見（Gemma4-26B、ローカル）: 条件Aは**シャッフル対照と有意差がありませんでした**（McNemar A vs D、p = 0.74）。つまり、この受信者にとってワイヤ単体はほとんど意味を伝えていません。また予想に反し、平文（E）がBやCを下回りました。選択肢の文言が平文の意図よりもシンボル名に近い可能性があります。テストを調整せず、計測結果のまま掲載しています。詳細: `eval_prompts/holdout_112_llm/report_gemma4.json`
+所見（Gemma4-26B、ローカル）: 条件Aは**シャッフル対照と有意差がありませんでした**（McNemar A vs D、p = 0.74）。つまり、この受信者にとってワイヤ単体はほとんど意味を伝えていません。平文（E）はBやCを下回りました。調査の結果、正解位置の偏りはなく（A/B/C/D = 28/28/30/26）、モデルの選択も偏っていないため、位置バイアスではありません。原因はおそらく条件Eの作り方で、MESSAGEが約100文字で切られたシンボルごとの辞書定義の連結であり、意図を自然な文で述べたものではなく、抽象的で的外れな定義も混ざっています。**そのためEは本当の平文上限ではなく**、公平な上限には手書きの意図文が必要です（今後の課題）。テストは調整せず、計測結果のまま掲載しています。詳細: `eval_prompts/holdout_112_llm/report_gemma4.json`
 
 <details><summary>以前掲載していた、ルールベースのヒューリスティック受信者（LLMではない）の数値</summary>
 
