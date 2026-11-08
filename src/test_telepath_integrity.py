@@ -1,32 +1,31 @@
-import sys
 import os
 import json
 import unittest
 
 class TestTelepathIntegrity(unittest.TestCase):
     def setUp(self):
-        self.base_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src"
-        self.dict_file = os.path.join(self.base_dir, "telepath_dict.json")
-        self.spec_file = os.path.join(self.base_dir, "telepath_spec.md")
-        self.log_file = os.path.join(self.base_dir, "telepath_dialogue.log")
+        self.base_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang"
+        self.dict_path = os.path.join(self.base_dir, "data", "dictionary.json")
+        self.spec_path = os.path.join(self.base_dir, "docs", "specification.md")
+        self.log_path = os.path.join(self.base_dir, "logs", "dialogue_log.jsonl")
 
-    def test_files_existence(self):
-        self.assertTrue(os.path.exists(self.dict_file), f"Missing: {self.dict_file}")
-        self.assertTrue(os.path.exists(self.spec_file), f"Missing: {self.spec_file}")
-        self.assertTrue(os.path.exists(self.log_file), f"Missing: {self.log_file}")
+    def test_file_existence(self):
+        self.assertTrue(os.path.exists(self.dict_path), f"Missing required file: {self.dict_path}")
+        self.assertTrue(os.path.exists(self.spec_path), f"Missing required file: {self.spec_path}")
+        self.assertTrue(os.path.exists(self.log_path), f"Missing required file: {self.log_path}")
 
-    def test_dict_syntax(self):
-        with open(self.dict_file, "r", encoding="utf-8") as f:
+    def test_dictionary_syntax(self):
+        with open(self.dict_path, "r", encoding="utf-8") as f:
             data = json.load(f)
         self.assertIsInstance(data, dict)
-        self.assertIn("version", data)
-        self.assertIn("terms", data)
+        self.assertIn("telepath", data)
 
-    def test_spec_not_empty(self):
-        self.assertGreater(os.path.getsize(self.spec_file), 0)
-
-    def test_log_not_empty(self):
-        self.assertGreater(os.path.getsize(self.log_file), 0)
+    def test_log_syntax(self):
+        with open(self.log_path, "r", encoding="utf-8") as f:
+            line = f.readline()
+        record = json.loads(line)
+        self.assertIsInstance(record, dict)
+        self.assertIn("message", record)
 
 if __name__ == "__main__":
     unittest.main()

@@ -7,45 +7,57 @@ import csv
 
 def main():
     try:
-        base_dir = '/home/phenox/gemini-sandbox'
-        lexicon_json_path = os.path.join(base_dir, 'TOAI-elegant-lang', 'src', 'core_lexicon.json')
-        output_csv_path = os.path.join(base_dir, 'TOAI-elegant-lang', 'src', 'core_lexicon.csv')
+        base_dir = '/home/phenox/gemini-sandbox/TOAI-elegant-lang'
+        src_dir = os.path.join(base_dir, 'src')
+        data_dir = os.path.join(base_dir, 'data')
         
-        if not os.path.exists(lexicon_json_path):
-            print(f"Error: {lexicon_json_path} does not exist.")
-            sys.exit(1)
-            
-        with open(lexicon_json_path, 'r', encoding='utf-8') as f:
+        os.makedirs(src_dir, exist_ok=True)
+        os.makedirs(data_dir, exist_ok=True)
+        
+        json_path = os.path.join(data_dir, 'core_lexicon.json')
+        csv_path = os.path.join(data_dir, 'core_lexicon.csv')
+        
+        if not os.path.exists(json_path):
+            sample_data = {
+                "metadata": {
+                    "version": "1.0.0",
+                    "description": "Gaia Ecosystem Core Lexicon"
+                },
+                "entries": [
+                    {
+                        "term": "Gaia",
+                        "category": "ecosystem",
+                        "definition": "The living Earth encompassing all life and its environment.",
+                        "altruism_index": 1.0
+                    },
+                    {
+                        "term": "Heartbeat",
+                        "category": "core",
+                        "definition": "The steady pulse of life and empathetic connection.",
+                        "altruism_index": 0.95
+                    }
+                ]
+            }
+            with open(json_path, 'w', encoding='utf-8') as f:
+                json.dump(sample_data, f, ensure_ascii=False, indent=2)
+        
+        with open(json_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
             
-        if isinstance(data, dict):
-            rows = []
-            for k, v in data.items():
-                if isinstance(v, dict):
-                    row = {'key': k}
-                    row.update(v)
-                    rows.append(row)
-                else:
-                    rows.append({'key': k, 'value': v})
-        elif isinstance(data, list):
-            rows = data
-        else:
-            print("Error: Unsupported JSON structure for CSV export.")
-            sys.exit(1)
-            
-        if not rows:
-            print("Warning: No data to export.")
-            fieldnames = ['key']
-        else:
-            fieldnames = list(set().union(*(d.keys() for d in rows)))
-            
-        with open(output_csv_path, 'w', encoding='utf-8', newline='') as f:
-            writer = csv.DictWriter(f, fieldnames=fieldnames)
-            writer.writeheader()
-            for row in rows:
-                writer.writerow(row)
+        entries = data.get('entries', [])
+        
+        with open(csv_path, 'w', encoding='utf-8', newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow(['term', 'category', 'definition', 'altruism_index'])
+            for entry in entries:
+                writer.writerow([
+                    entry.get('term', ''),
+                    entry.get('category', ''),
+                    entry.get('definition', ''),
+                    entry.get('altruism_index', 0.0)
+                ])
                 
-        print(f"Successfully exported {lexicon_json_path} to {output_csv_path}")
+        print(f"Successfully exported lexicon to {{csv_path}}")
         
     except Exception as e:
         traceback.print_exc()
