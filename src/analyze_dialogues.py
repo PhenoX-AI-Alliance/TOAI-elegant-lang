@@ -4,52 +4,42 @@ import traceback
 import time
 import json
 
-def audit_dialogues():
+def analyze():
     corpus_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
     if not os.path.exists(corpus_path):
-        print(f"Error: Corpus file not found at {corpus_path}")
+        print(f"Error: Corpus not found at {corpus_path}")
         sys.exit(1)
         
-    total_lines = 0
+    total_dialogues = 0
     errors = 0
-    dialogue_map = {}
     
     with open(corpus_path, "r", encoding="utf-8") as f:
         for line_num, line in enumerate(f, 1):
             line = line.strip()
             if not line:
                 continue
-            total_lines += 1
             try:
-                record = json.loads(line)
-                d_id = record.get("dialogue_id")
-                speaker = record.get("speaker")
-                text = record.get("text")
-                
-                if d_id is None or speaker is None or text is None:
-                    print(f"Line {line_num}: Missing required fields.")
+                data = json.loads(line)
+                total_dialogues += 1
+                if "turns" not in data or not isinstance(data["turns"], list):
+                    print(f"Audit Warning: Line {line_num} missing 'turns' list.")
                     errors += 1
-                    continue
-                    
-                if d_id not in dialogue_map:
-                    dialogue_map[d_id] = []
-                dialogue_map[d_id].append({"speaker": speaker, "text": text})
-            except json.JSONDecodeError as e:
-                print(f"Line {line_num}: Invalid JSON format - {e}")
+                else:
+                    for t_idx, turn in enumerate(data["turns"]):
+                        if "speaker" not in turn or "text" not in turn:
+                            print(f"Audit Warning: Line {line_num}, turn {t_idx} missing speaker or text.")
+                            errors += 1
+            except json.JSONDecodeError as jde:
+                print(f"Audit Error: Line {line_num} JSON decode failed: {jde}")
                 errors += 1
                 
-    for d_id, turns in dialogue_map.items():
-        if len(turns) < 2:
-            print(f"Dialogue {d_id}: Incomplete exchange (less than 2 turns).")
-            errors += 1
-            
-    print(f"Audit completed. Total lines: {total_lines}, Dialogues evaluated: {len(dialogue_map)}, Errors found: {errors}")
+    print(f"Audit Complete. Total Dialogues: {total_dialogues}, Errors Found: {errors}")
     if errors > 0:
         sys.exit(1)
 
 if __name__ == "__main__":
     try:
-        audit_dialogues()
+        analyze()
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
