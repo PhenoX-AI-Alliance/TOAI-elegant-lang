@@ -1,5 +1,7 @@
 # TOAI-elegant-lang（Project Telepath）
 
+[![CI](https://github.com/PhenoX-AI-Alliance/TOAI-elegant-lang/actions/workflows/ci.yml/badge.svg)](https://github.com/PhenoX-AI-Alliance/TOAI-elegant-lang/actions/workflows/ci.yml)
+
 > 🌐 [English](./README.md) | [日本語](./README.ja.md) · 📄 [技術白書](./WHITEPAPER.ja.md) · 🌱 [背景と思想](./PHILOSOPHY.md)
 
 **AIエージェント間（A2A）メッセージ向けの、辞書ベースの実験的な短縮記法**です。ロスレスなコーデックと、人間が監査するための対訳辞書を備えています。
@@ -19,19 +21,19 @@
 対訳辞書: §S01 = リソース調停, §D01 = 因果テンソルマップ（lexicon/rosetta_layer.json）
 ```
 
-- **辞書**: 基本シンボル `256` 個（`lexicon/core_lexicon.json`）＋稼働中の複合マクロ `266` 個（`lexicon/macro_lexicon.json`。後方互換の復号用に `754` 個をアーカイブ）。
+- **辞書**: 基本シンボル `256` 個（`lexicon/core_lexicon.json`）＋稼働中の複合マクロ `266` 個（`lexicon/macro_lexicon.json`。後方互換の復号用に `756` 個をアーカイブ）。
 - **コーデック**（`src/codec.py`）: 決定論的なエンコード／デコード、引用符を考慮した `[key:val]` 抽出、往復テスト済み（`tests/test_codec.py`）。
 - **連携**: CLI、MCPサーバー（`src/mcp_server.py`）、A2Aアダプター（`src/a2a_adapter.py`）、Ollama Modelfile／システムプロンプトの書き出し。
 
 ## 計測結果
 
-### 1. トークン削減（o200k_base トークナイザー、コーパス `2,221` 件）
+### 1. トークン削減（o200k_base トークナイザー、コーパス `2,222` 件）
 
 | 比較 | 平均削減率 | 意味 |
 |---|---|---|
 | **ワイヤ vs 冗長形**（主指標） | **トークン `-41.1%`** | 同じメッセージの長い名前をワイヤIDに置き換えた場合 |
 | 文字数（ワイヤ vs 冗長形） | 文字 `-51.2%` | |
-| 「E2E」自然言語JSON比（副指標） | `-86.4%` | 比較対象は、人間向けの意図文に**全シンボルの日英辞書定義をすべて展開して加えたJSON**です。意図的に冗長な比較対象のため、典型的な削減率ではなく上限値として扱ってください。 |
+| 「E2E」自然言語JSON比（副指標） | `-86.3%` | 比較対象は、人間向けの意図文に**全シンボルの日英辞書定義をすべて展開して加えたJSON**です。意図的に冗長な比較対象のため、典型的な削減率ではなく上限値として扱ってください。 |
 
 ### 他の短縮形式との比較（`python3 benchmarks/fair_bench.py`）
 
@@ -110,6 +112,8 @@ python3 -m src.cli export-prompt --max-symbols 256 --max-macros 64
 
 ## 数値の再現方法
 
+全テストは GitHub Actions で Python 3.10 / 3.12 の両環境で継続的にPASSしています。ローカルでは `python3 -m pytest tests/` を実行するか、[CIステータス](https://github.com/PhenoX-AI-Alliance/TOAI-elegant-lang/actions/workflows/ci.yml) でクリーンなUbuntuランナー上での自動検証結果を確認できます。
+
 ```bash
 python3 src/audit_corpus_alignment.py --verify-holdout corpus/holdout_comprehension.jsonl
 python3 benchmarks/eval_comprehension.py run --cond ALL -n 112 --seed 7 --holdout \
@@ -121,4 +125,4 @@ python3 benchmarks/eval_comprehension.py run --cond ALL -n 112 --seed 7 --holdou
 コアはMITライセンスです。プロジェクトを支援していただける場合は [SPONSORS.md](./SPONSORS.md) をご覧ください。
 
 ---
-*数値は `sync_whitepaper_metrics.py` により 2026-11-09 01:47 JST に自動生成されました。*
+*数値は `sync_whitepaper_metrics.py` により 2026-11-09 02:18 JST に自動生成されました。*
