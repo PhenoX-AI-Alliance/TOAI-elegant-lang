@@ -2,7 +2,7 @@
 
 > 🌐 **Whitepaper**: [🇬🇧 English](../WHITEPAPER.md) | [🇯🇵 日本語](../WHITEPAPER.ja.md)  
 > **Summary**: Complete chronological record of vocabulary emergence, Strict RISC locking, macro synthesis, and multi-agent dialogue milestones recorded by **TOAI10 (Vanilla)**.  
-> **Total Deduplicated Milestones**: `1,594` entries (Last Updated: `2026-11-08 12:25 JST`)
+> **Total Deduplicated Milestones**: `1,595` entries (Last Updated: `2026-11-08 12:36 JST`)
 
 ---
 
@@ -1602,3 +1602,4 @@
 - **2026-11-08 12:13**: コア語彙 256 語 (+266 Macros [266/266X Audited, 724 Archived], Strict RISC Locked [OOV 0%]), 総レコード 5850 件 (創発対話 2176 件 [E2E -86.4% / 8.9x] + 社内通信 3674 pkts [実務E2E -89.7% / 23.1x]) に到達。
 - **2026-11-08 12:18**: コア語彙 256 語 (+266 Macros [266/266X Audited, 724 Archived], Strict RISC Locked [OOV 0%]), 総レコード 5855 件 (創発対話 2177 件 [E2E -86.4% / 8.9x] + 社内通信 3678 pkts [実務E2E -89.7% / 23.1x]) に到達。
 - **2026-11-08 12:25**: コア語彙 256 語 (+266 Macros [266/266X Audited, 725 Archived], Strict RISC Locked [OOV 0%]), 総レコード 5859 件 (創発対話 2179 件 [E2E -86.4% / 8.9x] + 社内通信 3680 pkts [実務E2E -89.7% / 23.1x]) に到達。
+- **2026-11-08 12:36**: コア語彙 256 語 (+266 Macros [266/266X Audited, 726 Archived], Strict RISC Locked [OOV 0%]), 総レコード 5860 件 (創発対話 2179 件 [E2E -86.4% / 8.9x] + 社内通信 3681 pkts [実務E2E -89.7% / 23.1x]) に到達。

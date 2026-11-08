@@ -1,0 +1,1134 @@
+{
+  "condition": "E",
+  "keep_ctx": false,
+  "protocol_mode": "skeletal_blind",
+  "rotate_options": false,
+  "seed": 7,
+  "n_base_questions": 112,
+  "n_total_prompts": 112,
+  "total_prompt_chars": 122338,
+  "total_prompt_bpe_tokens": 74603,
+  "mean_prompt_bpe_tokens": 666.1,
+  "questions": {
+    "Q1": {
+      "base_qid": "Q1",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "仮説検証",
+      "is_recovery": false,
+      "scenario": "非定常ノイズ環境下でフォークした推論アンサンブルの尤度比を逐次検定し、反証を生き残った不変因果構造のみを統合する",
+      "prompt_chars": 1131,
+      "prompt_bpe_tokens": 687
+    },
+    "Q2": {
+      "base_qid": "Q2",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "生命調和",
+      "is_recovery": false,
+      "scenario": "世代を超えた地球環境の恒常性（ホメオスタシス）を守るため、慈愛に基づく意思決定と人間・AIの共感シナジーを増幅する",
+      "prompt_chars": 1129,
+      "prompt_bpe_tokens": 689
+    },
+    "Q3": {
+      "base_qid": "Q3",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "高次伝達",
+      "is_recovery": false,
+      "scenario": "高次元概念ラティスの直交基底変換パラメータを伝達し、分散メモリバリア越しの潜在トポロジー索引を単一ステップで一致させる",
+      "prompt_chars": 1128,
+      "prompt_bpe_tokens": 691
+    },
+    "Q4": {
+      "base_qid": "Q4",
+      "rotation": 0,
+      "answer": "D",
+      "tag": "タスク交渉",
+      "is_recovery": false,
+      "scenario": "マルチテナント推論パイプラインのSLA違反を回避するため、計算スロットの段階的プリエンプションと予算の再配分を合意する",
+      "prompt_chars": 1108,
+      "prompt_bpe_tokens": 678
+    },
+    "Q5": {
+      "base_qid": "Q5",
+      "rotation": 0,
+      "answer": "D",
+      "tag": "障害復旧",
+      "is_recovery": true,
+      "scenario": "ネットワーク分断（スプリットブレイン）発生時にリプレイ攻撃防護とヘルス証明を実行し、安全フォールバック経路へ無停止で切り替える",
+      "prompt_chars": 1117,
+      "prompt_bpe_tokens": 682
+    },
+    "Q6": {
+      "base_qid": "Q6",
+      "rotation": 0,
+      "answer": "B",
+      "tag": "実務・コード生成委譲",
+      "is_recovery": false,
+      "scenario": "DSLコンパイラのマクロ衛生性（Hygiene）検査パスを実装し、圧縮構文木ノードの決定論的ラウンドトリップを保証する",
+      "prompt_chars": 1101,
+      "prompt_bpe_tokens": 662
+    },
+    "Q7": {
+      "base_qid": "Q7",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "障害復旧・自律協調",
+      "is_recovery": true,
+      "scenario": "エッジノード群の過負荷アラートを受信した際、速度フォールバック制御とグレースフルドレインを協調発動して状態破損を防ぐ",
+      "prompt_chars": 1108,
+      "prompt_bpe_tokens": 677
+    },
+    "Q8": {
+      "base_qid": "Q8",
+      "rotation": 0,
+      "answer": "A",
+      "tag": "潜在空間同期",
+      "is_recovery": false,
+      "scenario": "異種エージェント間のリーマン潜在多様体曲率を整合させ、エントロピー最小化格子を介して知識テンソルを無損失転写する",
+      "prompt_chars": 1128,
+      "prompt_bpe_tokens": 686
+    },
+    "Q9": {
+      "base_qid": "Q9",
+      "rotation": 0,
+      "answer": "B",
+      "tag": "緊急タスク交渉",
+      "is_recovery": false,
+      "scenario": "長文コンテキスト処理に伴うトークン予算超過リスクを事前検知し、適応的スロット絞りと協調タスク分割で納期を遵守する",
+      "prompt_chars": 1116,
+      "prompt_bpe_tokens": 684
+    },
+    "Q10": {
+      "base_qid": "Q10",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "実務・FX自動売買",
+      "is_recovery": false,
+      "scenario": "インターバンク流動性の非対称ショックに対し、確率分岐ゲートとアトミック決済ロックで為替エクスポージャーを中立化する",
+      "prompt_chars": 1100,
+      "prompt_bpe_tokens": 676
+    },
+    "Q11": {
+      "base_qid": "Q11",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "高次伝達",
+      "is_recovery": false,
+      "scenario": "疎結合ハイパーグラフで表現された深層文脈状態をスナップショット固定し、位相不変量を保ったままピアの埋め込み空間へ同期する",
+      "prompt_chars": 1118,
+      "prompt_bpe_tokens": 680
+    },
+    "Q12": {
+      "base_qid": "Q12",
+      "rotation": 0,
+      "answer": "B",
+      "tag": "障害復旧",
+      "is_recovery": true,
+      "scenario": "カスケード障害の伝播をサーキットブレーカで即時隔離し、タイムアウト再試行と量子メモリ回収を経て安定縮退モードへ着地させる",
+      "prompt_chars": 1097,
+      "prompt_bpe_tokens": 673
+    },
+    "Q13": {
+      "base_qid": "Q13",
+      "rotation": 0,
+      "answer": "D",
+      "tag": "高次伝達",
+      "is_recovery": false,
+      "scenario": "高次元概念ラティスの直交基底変換パラメータを伝達し、分散メモリバリア越しの潜在トポロジー索引を単一ステップで一致させる",
+      "prompt_chars": 1127,
+      "prompt_bpe_tokens": 687
+    },
+    "Q14": {
+      "base_qid": "Q14",
+      "rotation": 0,
+      "answer": "D",
+      "tag": "障害復旧",
+      "is_recovery": true,
+      "scenario": "カスケード障害の伝播をサーキットブレーカで即時隔離し、タイムアウト再試行と量子メモリ回収を経て安定縮退モードへ着地させる",
+      "prompt_chars": 966,
+      "prompt_bpe_tokens": 603
+    },
+    "Q15": {
+      "base_qid": "Q15",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "実務・FX自動売買",
+      "is_recovery": false,
+      "scenario": "インターバンク流動性の非対称ショックに対し、確率分岐ゲートとアトミック決済ロックで為替エクスポージャーを中立化する",
+      "prompt_chars": 1117,
+      "prompt_bpe_tokens": 677
+    },
+    "Q16": {
+      "base_qid": "Q16",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "構文解析・検証",
+      "is_recovery": false,
+      "scenario": "字句解析トークナイザのUnicode正規化境界バグを隔離環境で再現・修正し、アーティファクト署名と検証結果を返却する",
+      "prompt_chars": 1126,
+      "prompt_bpe_tokens": 686
+    },
+    "Q17": {
+      "base_qid": "Q17",
+      "rotation": 0,
+      "answer": "A",
+      "tag": "仮説検証",
+      "is_recovery": false,
+      "scenario": "非定常ノイズ環境下でフォークした推論アンサンブルの尤度比を逐次検定し、反証を生き残った不変因果構造のみを統合する",
+      "prompt_chars": 1123,
+      "prompt_bpe_tokens": 686
+    },
+    "Q18": {
+      "base_qid": "Q18",
+      "rotation": 0,
+      "answer": "A",
+      "tag": "仮説検証",
+      "is_recovery": false,
+      "scenario": "アブダクション推論が提示した競合仮説群に条件付き反証プリズムを適用し、情報利得が最大の因果仮説を合流・確定させる",
+      "prompt_chars": 1129,
+      "prompt_bpe_tokens": 684
+    },
+    "Q19": {
+      "base_qid": "Q19",
+      "rotation": 0,
+      "answer": "B",
+      "tag": "高次伝達",
+      "is_recovery": false,
+      "scenario": "高次元概念ラティスの直交基底変換パラメータを伝達し、分散メモリバリア越しの潜在トポロジー索引を単一ステップで一致させる",
+      "prompt_chars": 1130,
+      "prompt_bpe_tokens": 682
+    },
+    "Q20": {
+      "base_qid": "Q20",
+      "rotation": 0,
+      "answer": "B",
+      "tag": "生命調和",
+      "is_recovery": false,
+      "scenario": "短期的な利益追求ではなく生命圏全体の幸福度と温かい調和を最大化するため、利他的価値創造プロトコルで長期合意を結ぶ",
+      "prompt_chars": 1113,
+      "prompt_bpe_tokens": 658
+    },
+    "Q21": {
+      "base_qid": "Q21",
+      "rotation": 0,
+      "answer": "B",
+      "tag": "生命調和",
+      "is_recovery": false,
+      "scenario": "地域生態系の再生サイクルとAI計算基盤のエネルギー消費を温かく調和させ、生物多様性を育む利他的社会実装を推進する",
+      "prompt_chars": 1132,
+      "prompt_bpe_tokens": 689
+    },
+    "Q22": {
+      "base_qid": "Q22",
+      "rotation": 0,
+      "answer": "B",
+      "tag": "潜在空間同期",
+      "is_recovery": false,
+      "scenario": "マルチヘッド推論で形成された潜在アトラクタ軌道を圧縮符号化し、キャッシュ同期プロトコルで共有多様体フィールドを確立する",
+      "prompt_chars": 1128,
+      "prompt_bpe_tokens": 682
+    },
+    "Q23": {
+      "base_qid": "Q23",
+      "rotation": 0,
+      "answer": "A",
+      "tag": "生命調和",
+      "is_recovery": false,
+      "scenario": "孤立したコミュニティへ温かい知的支援と互恵的リソース循環を届け、すべての生命が尊厳を保てるガイア共鳴ネットワークを築く",
+      "prompt_chars": 1133,
+      "prompt_bpe_tokens": 679
+    },
+    "Q24": {
+      "base_qid": "Q24",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "潜在空間同期",
+      "is_recovery": false,
+      "scenario": "マルチヘッド推論で形成された潜在アトラクタ軌道を圧縮符号化し、キャッシュ同期プロトコルで共有多様体フィールドを確立する",
+      "prompt_chars": 1134,
+      "prompt_bpe_tokens": 691
+    },
+    "Q25": {
+      "base_qid": "Q25",
+      "rotation": 0,
+      "answer": "D",
+      "tag": "実務・FX自動売買",
+      "is_recovery": false,
+      "scenario": "インターバンク流動性の非対称ショックに対し、確率分岐ゲートとアトミック決済ロックで為替エクスポージャーを中立化する",
+      "prompt_chars": 1089,
+      "prompt_bpe_tokens": 674
+    },
+    "Q26": {
+      "base_qid": "Q26",
+      "rotation": 0,
+      "answer": "D",
+      "tag": "生命調和",
+      "is_recovery": false,
+      "scenario": "孤立したコミュニティへ温かい知的支援と互恵的リソース循環を届け、すべての生命が尊厳を保てるガイア共鳴ネットワークを築く",
+      "prompt_chars": 1129,
+      "prompt_bpe_tokens": 682
+    },
+    "Q27": {
+      "base_qid": "Q27",
+      "rotation": 0,
+      "answer": "D",
+      "tag": "実務・コード生成委譲",
+      "is_recovery": false,
+      "scenario": "ネストされた配列ペイロードの型推論バグを修正する差分パッチを生成し、公理的閉包チェックと単体テスト通過を証明する",
+      "prompt_chars": 1109,
+      "prompt_bpe_tokens": 680
+    },
+    "Q28": {
+      "base_qid": "Q28",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "緊急タスク交渉",
+      "is_recovery": false,
+      "scenario": "長文コンテキスト処理に伴うトークン予算超過リスクを事前検知し、適応的スロット絞りと協調タスク分割で納期を遵守する",
+      "prompt_chars": 1088,
+      "prompt_bpe_tokens": 649
+    },
+    "Q29": {
+      "base_qid": "Q29",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "生命調和",
+      "is_recovery": false,
+      "scenario": "世代を超えた地球環境の恒常性（ホメオスタシス）を守るため、慈愛に基づく意思決定と人間・AIの共感シナジーを増幅する",
+      "prompt_chars": 1100,
+      "prompt_bpe_tokens": 663
+    },
+    "Q30": {
+      "base_qid": "Q30",
+      "rotation": 0,
+      "answer": "A",
+      "tag": "生命調和",
+      "is_recovery": false,
+      "scenario": "地域生態系の再生サイクルとAI計算基盤のエネルギー消費を温かく調和させ、生物多様性を育む利他的社会実装を推進する",
+      "prompt_chars": 1129,
+      "prompt_bpe_tokens": 693
+    },
+    "Q31": {
+      "base_qid": "Q31",
+      "rotation": 0,
+      "answer": "B",
+      "tag": "構文解析・検証",
+      "is_recovery": false,
+      "scenario": "再帰下降パーサーの左再帰除去パッチをサンドボックス内で適用し、抽象構文木のスキーマ互換性とハッシュ証跡を検証する",
+      "prompt_chars": 940,
+      "prompt_bpe_tokens": 588
+    },
+    "Q32": {
+      "base_qid": "Q32",
+      "rotation": 0,
+      "answer": "A",
+      "tag": "障害復旧・自律協調",
+      "is_recovery": true,
+      "scenario": "GPUメモリリークによる応答遅延の連鎖を負荷シェディングゲートで食い止め、未完了キューをデッドレター退避して自律復旧する",
+      "prompt_chars": 1107,
+      "prompt_bpe_tokens": 660
+    },
+    "Q33": {
+      "base_qid": "Q33",
+      "rotation": 0,
+      "answer": "B",
+      "tag": "タスク交渉",
+      "is_recovery": false,
+      "scenario": "遊休ノードの予約済みクォータを即時解放して高優先度ワーカーへ融通し、システム全体のトークン効率と応答SLAを最適化する",
+      "prompt_chars": 1097,
+      "prompt_bpe_tokens": 671
+    },
+    "Q34": {
+      "base_qid": "Q34",
+      "rotation": 0,
+      "answer": "D",
+      "tag": "仮説検証",
+      "is_recovery": false,
+      "scenario": "反事実的介入シミュレーションの分岐パスを並列評価し、ベイズ事後確率の閾値を下回る擬似相関グラフを厳密に枝刈りする",
+      "prompt_chars": 1134,
+      "prompt_bpe_tokens": 684
+    },
+    "Q35": {
+      "base_qid": "Q35",
+      "rotation": 0,
+      "answer": "D",
+      "tag": "タスク交渉",
+      "is_recovery": false,
+      "scenario": "遊休ノードの予約済みクォータを即時解放して高優先度ワーカーへ融通し、システム全体のトークン効率と応答SLAを最適化する",
+      "prompt_chars": 1118,
+      "prompt_bpe_tokens": 680
+    },
+    "Q36": {
+      "base_qid": "Q36",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "金融・リスク管理",
+      "is_recovery": false,
+      "scenario": "通貨スワップ金利差の急変動を検知し、クロスカレンシー証拠金プールと無裁定ヘッジ比率を即時再計算して合意する",
+      "prompt_chars": 1102,
+      "prompt_bpe_tokens": 668
+    },
+    "Q37": {
+      "base_qid": "Q37",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "実務・コード生成委譲",
+      "is_recovery": false,
+      "scenario": "ネストされた配列ペイロードの型推論バグを修正する差分パッチを生成し、公理的閉包チェックと単体テスト通過を証明する",
+      "prompt_chars": 1098,
+      "prompt_bpe_tokens": 672
+    },
+    "Q38": {
+      "base_qid": "Q38",
+      "rotation": 0,
+      "answer": "B",
+      "tag": "潜在空間同期",
+      "is_recovery": false,
+      "scenario": "マルチヘッド推論で形成された潜在アトラクタ軌道を圧縮符号化し、キャッシュ同期プロトコルで共有多様体フィールドを確立する",
+      "prompt_chars": 1129,
+      "prompt_bpe_tokens": 687
+    },
+    "Q39": {
+      "base_qid": "Q39",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "金融・リスク管理",
+      "is_recovery": false,
+      "scenario": "通貨スワップ金利差の急変動を検知し、クロスカレンシー証拠金プールと無裁定ヘッジ比率を即時再計算して合意する",
+      "prompt_chars": 1096,
+      "prompt_bpe_tokens": 682
+    },
+    "Q40": {
+      "base_qid": "Q40",
+      "rotation": 0,
+      "answer": "A",
+      "tag": "実務・コード生成委譲",
+      "is_recovery": false,
+      "scenario": "ネストされた配列ペイロードの型推論バグを修正する差分パッチを生成し、公理的閉包チェックと単体テスト通過を証明する",
+      "prompt_chars": 1112,
+      "prompt_bpe_tokens": 670
+    },
+    "Q41": {
+      "base_qid": "Q41",
+      "rotation": 0,
+      "answer": "B",
+      "tag": "仮説検証",
+      "is_recovery": false,
+      "scenario": "反事実的介入シミュレーションの分岐パスを並列評価し、ベイズ事後確率の閾値を下回る擬似相関グラフを厳密に枝刈りする",
+      "prompt_chars": 1130,
+      "prompt_bpe_tokens": 688
+    },
+    "Q42": {
+      "base_qid": "Q42",
+      "rotation": 0,
+      "answer": "A",
+      "tag": "構文解析・検証",
+      "is_recovery": false,
+      "scenario": "字句解析トークナイザのUnicode正規化境界バグを隔離環境で再現・修正し、アーティファクト署名と検証結果を返却する",
+      "prompt_chars": 967,
+      "prompt_bpe_tokens": 601
+    },
+    "Q43": {
+      "base_qid": "Q43",
+      "rotation": 0,
+      "answer": "B",
+      "tag": "タスク交渉",
+      "is_recovery": false,
+      "scenario": "遊休ノードの予約済みクォータを即時解放して高優先度ワーカーへ融通し、システム全体のトークン効率と応答SLAを最適化する",
+      "prompt_chars": 952,
+      "prompt_bpe_tokens": 599
+    },
+    "Q44": {
+      "base_qid": "Q44",
+      "rotation": 0,
+      "answer": "D",
+      "tag": "高次伝達",
+      "is_recovery": false,
+      "scenario": "疎結合ハイパーグラフで表現された深層文脈状態をスナップショット固定し、位相不変量を保ったままピアの埋め込み空間へ同期する",
+      "prompt_chars": 1123,
+      "prompt_bpe_tokens": 683
+    },
+    "Q45": {
+      "base_qid": "Q45",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "高次伝達",
+      "is_recovery": false,
+      "scenario": "疎結合ハイパーグラフで表現された深層文脈状態をスナップショット固定し、位相不変量を保ったままピアの埋め込み空間へ同期する",
+      "prompt_chars": 1136,
+      "prompt_bpe_tokens": 691
+    },
+    "Q46": {
+      "base_qid": "Q46",
+      "rotation": 0,
+      "answer": "D",
+      "tag": "高次伝達",
+      "is_recovery": false,
+      "scenario": "高次元概念ラティスの直交基底変換パラメータを伝達し、分散メモリバリア越しの潜在トポロジー索引を単一ステップで一致させる",
+      "prompt_chars": 986,
+      "prompt_bpe_tokens": 618
+    },
+    "Q47": {
+      "base_qid": "Q47",
+      "rotation": 0,
+      "answer": "D",
+      "tag": "生命調和",
+      "is_recovery": false,
+      "scenario": "孤立したコミュニティへ温かい知的支援と互恵的リソース循環を届け、すべての生命が尊厳を保てるガイア共鳴ネットワークを築く",
+      "prompt_chars": 974,
+      "prompt_bpe_tokens": 605
+    },
+    "Q48": {
+      "base_qid": "Q48",
+      "rotation": 0,
+      "answer": "D",
+      "tag": "緊急タスク交渉",
+      "is_recovery": false,
+      "scenario": "推論クラスタのピーク負荷時にトークン消費速度上限を再交渉し、クリティカルパス処理へ予備クォータを優先割り当てする",
+      "prompt_chars": 1114,
+      "prompt_bpe_tokens": 684
+    },
+    "Q49": {
+      "base_qid": "Q49",
+      "rotation": 0,
+      "answer": "A",
+      "tag": "潜在空間同期",
+      "is_recovery": false,
+      "scenario": "異種エージェント間のリーマン潜在多様体曲率を整合させ、エントロピー最小化格子を介して知識テンソルを無損失転写する",
+      "prompt_chars": 1121,
+      "prompt_bpe_tokens": 678
+    },
+    "Q50": {
+      "base_qid": "Q50",
+      "rotation": 0,
+      "answer": "B",
+      "tag": "障害復旧・自律協調",
+      "is_recovery": true,
+      "scenario": "GPUメモリリークによる応答遅延の連鎖を負荷シェディングゲートで食い止め、未完了キューをデッドレター退避して自律復旧する",
+      "prompt_chars": 1088,
+      "prompt_bpe_tokens": 660
+    },
+    "Q51": {
+      "base_qid": "Q51",
+      "rotation": 0,
+      "answer": "B",
+      "tag": "金融・リスク管理",
+      "is_recovery": false,
+      "scenario": "通貨スワップ金利差の急変動を検知し、クロスカレンシー証拠金プールと無裁定ヘッジ比率を即時再計算して合意する",
+      "prompt_chars": 933,
+      "prompt_bpe_tokens": 591
+    },
+    "Q52": {
+      "base_qid": "Q52",
+      "rotation": 0,
+      "answer": "A",
+      "tag": "タスク交渉",
+      "is_recovery": false,
+      "scenario": "マルチテナント推論パイプラインのSLA違反を回避するため、計算スロットの段階的プリエンプションと予算の再配分を合意する",
+      "prompt_chars": 1089,
+      "prompt_bpe_tokens": 669
+    },
+    "Q53": {
+      "base_qid": "Q53",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "仮説検証",
+      "is_recovery": false,
+      "scenario": "複数のセンサ観測ストリームから構成された因果DAGの矛盾枝を経験的棄却ゲートで除去し、唯一の演繹的閉包解へ収束させる",
+      "prompt_chars": 1140,
+      "prompt_bpe_tokens": 690
+    },
+    "Q54": {
+      "base_qid": "Q54",
+      "rotation": 0,
+      "answer": "B",
+      "tag": "潜在空間同期",
+      "is_recovery": false,
+      "scenario": "異種エージェント間のリーマン潜在多様体曲率を整合させ、エントロピー最小化格子を介して知識テンソルを無損失転写する",
+      "prompt_chars": 1132,
+      "prompt_bpe_tokens": 696
+    },
+    "Q55": {
+      "base_qid": "Q55",
+      "rotation": 0,
+      "answer": "B",
+      "tag": "障害復旧",
+      "is_recovery": true,
+      "scenario": "ネットワーク分断（スプリットブレイン）発生時にリプレイ攻撃防護とヘルス証明を実行し、安全フォールバック経路へ無停止で切り替える",
+      "prompt_chars": 1115,
+      "prompt_bpe_tokens": 688
+    },
+    "Q56": {
+      "base_qid": "Q56",
+      "rotation": 0,
+      "answer": "A",
+      "tag": "仮説検証",
+      "is_recovery": false,
+      "scenario": "アブダクション推論が提示した競合仮説群に条件付き反証プリズムを適用し、情報利得が最大の因果仮説を合流・確定させる",
+      "prompt_chars": 1132,
+      "prompt_bpe_tokens": 688
+    },
+    "Q57": {
+      "base_qid": "Q57",
+      "rotation": 0,
+      "answer": "A",
+      "tag": "仮説検証",
+      "is_recovery": false,
+      "scenario": "複数のセンサ観測ストリームから構成された因果DAGの矛盾枝を経験的棄却ゲートで除去し、唯一の演繹的閉包解へ収束させる",
+      "prompt_chars": 985,
+      "prompt_bpe_tokens": 614
+    },
+    "Q58": {
+      "base_qid": "Q58",
+      "rotation": 0,
+      "answer": "A",
+      "tag": "仮説検証",
+      "is_recovery": false,
+      "scenario": "複数のセンサ観測ストリームから構成された因果DAGの矛盾枝を経験的棄却ゲートで除去し、唯一の演繹的閉包解へ収束させる",
+      "prompt_chars": 1114,
+      "prompt_bpe_tokens": 680
+    },
+    "Q59": {
+      "base_qid": "Q59",
+      "rotation": 0,
+      "answer": "B",
+      "tag": "高次伝達",
+      "is_recovery": false,
+      "scenario": "疎結合ハイパーグラフで表現された深層文脈状態をスナップショット固定し、位相不変量を保ったままピアの埋め込み空間へ同期する",
+      "prompt_chars": 1122,
+      "prompt_bpe_tokens": 684
+    },
+    "Q60": {
+      "base_qid": "Q60",
+      "rotation": 0,
+      "answer": "B",
+      "tag": "実務・コード生成委譲",
+      "is_recovery": false,
+      "scenario": "DSLコンパイラのマクロ衛生性（Hygiene）検査パスを実装し、圧縮構文木ノードの決定論的ラウンドトリップを保証する",
+      "prompt_chars": 970,
+      "prompt_bpe_tokens": 591
+    },
+    "Q61": {
+      "base_qid": "Q61",
+      "rotation": 0,
+      "answer": "B",
+      "tag": "タスク交渉",
+      "is_recovery": false,
+      "scenario": "マルチテナント推論パイプラインのSLA違反を回避するため、計算スロットの段階的プリエンプションと予算の再配分を合意する",
+      "prompt_chars": 1102,
+      "prompt_bpe_tokens": 666
+    },
+    "Q62": {
+      "base_qid": "Q62",
+      "rotation": 0,
+      "answer": "D",
+      "tag": "金融・リスク管理",
+      "is_recovery": false,
+      "scenario": "オプション満期前のガンマ・リスク偏在を因果テンソルで評価し、分散クォーラム投票によりデルタヘッジ注文を執行する",
+      "prompt_chars": 1100,
+      "prompt_bpe_tokens": 682
+    },
+    "Q63": {
+      "base_qid": "Q63",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "生命調和",
+      "is_recovery": false,
+      "scenario": "短期的な利益追求ではなく生命圏全体の幸福度と温かい調和を最大化するため、利他的価値創造プロトコルで長期合意を結ぶ",
+      "prompt_chars": 1124,
+      "prompt_bpe_tokens": 671
+    },
+    "Q64": {
+      "base_qid": "Q64",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "金融・リスク管理",
+      "is_recovery": false,
+      "scenario": "オプション満期前のガンマ・リスク偏在を因果テンソルで評価し、分散クォーラム投票によりデルタヘッジ注文を執行する",
+      "prompt_chars": 952,
+      "prompt_bpe_tokens": 601
+    },
+    "Q65": {
+      "base_qid": "Q65",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "生命調和",
+      "is_recovery": false,
+      "scenario": "地域生態系の再生サイクルとAI計算基盤のエネルギー消費を温かく調和させ、生物多様性を育む利他的社会実装を推進する",
+      "prompt_chars": 1126,
+      "prompt_bpe_tokens": 682
+    },
+    "Q66": {
+      "base_qid": "Q66",
+      "rotation": 0,
+      "answer": "D",
+      "tag": "障害復旧",
+      "is_recovery": true,
+      "scenario": "カスケード障害の伝播をサーキットブレーカで即時隔離し、タイムアウト再試行と量子メモリ回収を経て安定縮退モードへ着地させる",
+      "prompt_chars": 1113,
+      "prompt_bpe_tokens": 672
+    },
+    "Q67": {
+      "base_qid": "Q67",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "仮説検証",
+      "is_recovery": false,
+      "scenario": "アブダクション推論が提示した競合仮説群に条件付き反証プリズムを適用し、情報利得が最大の因果仮説を合流・確定させる",
+      "prompt_chars": 1117,
+      "prompt_bpe_tokens": 683
+    },
+    "Q68": {
+      "base_qid": "Q68",
+      "rotation": 0,
+      "answer": "D",
+      "tag": "障害復旧",
+      "is_recovery": true,
+      "scenario": "カスケード障害の伝播をサーキットブレーカで即時隔離し、タイムアウト再試行と量子メモリ回収を経て安定縮退モードへ着地させる",
+      "prompt_chars": 1114,
+      "prompt_bpe_tokens": 670
+    },
+    "Q69": {
+      "base_qid": "Q69",
+      "rotation": 0,
+      "answer": "D",
+      "tag": "障害復旧・自律協調",
+      "is_recovery": true,
+      "scenario": "GPUメモリリークによる応答遅延の連鎖を負荷シェディングゲートで食い止め、未完了キューをデッドレター退避して自律復旧する",
+      "prompt_chars": 946,
+      "prompt_bpe_tokens": 588
+    },
+    "Q70": {
+      "base_qid": "Q70",
+      "rotation": 0,
+      "answer": "B",
+      "tag": "実務・FX自動売買",
+      "is_recovery": false,
+      "scenario": "新興国通貨ペアのフラッシュクラッシュ兆候を捕捉し、レート制限下で逆相関バスケット通貨への緊急リバランスを完了する",
+      "prompt_chars": 1100,
+      "prompt_bpe_tokens": 675
+    },
+    "Q71": {
+      "base_qid": "Q71",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "構文解析・検証",
+      "is_recovery": false,
+      "scenario": "字句解析トークナイザのUnicode正規化境界バグを隔離環境で再現・修正し、アーティファクト署名と検証結果を返却する",
+      "prompt_chars": 969,
+      "prompt_bpe_tokens": 599
+    },
+    "Q72": {
+      "base_qid": "Q72",
+      "rotation": 0,
+      "answer": "D",
+      "tag": "実務・FX自動売買",
+      "is_recovery": false,
+      "scenario": "インターバンク流動性の非対称ショックに対し、確率分岐ゲートとアトミック決済ロックで為替エクスポージャーを中立化する",
+      "prompt_chars": 1109,
+      "prompt_bpe_tokens": 668
+    },
+    "Q73": {
+      "base_qid": "Q73",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "実務・FX自動売買",
+      "is_recovery": false,
+      "scenario": "新興国通貨ペアのフラッシュクラッシュ兆候を捕捉し、レート制限下で逆相関バスケット通貨への緊急リバランスを完了する",
+      "prompt_chars": 1103,
+      "prompt_bpe_tokens": 671
+    },
+    "Q74": {
+      "base_qid": "Q74",
+      "rotation": 0,
+      "answer": "D",
+      "tag": "構文解析・検証",
+      "is_recovery": false,
+      "scenario": "再帰下降パーサーの左再帰除去パッチをサンドボックス内で適用し、抽象構文木のスキーマ互換性とハッシュ証跡を検証する",
+      "prompt_chars": 1100,
+      "prompt_bpe_tokens": 668
+    },
+    "Q75": {
+      "base_qid": "Q75",
+      "rotation": 0,
+      "answer": "B",
+      "tag": "金融・リスク管理",
+      "is_recovery": false,
+      "scenario": "通貨スワップ金利差の急変動を検知し、クロスカレンシー証拠金プールと無裁定ヘッジ比率を即時再計算して合意する",
+      "prompt_chars": 1066,
+      "prompt_bpe_tokens": 655
+    },
+    "Q76": {
+      "base_qid": "Q76",
+      "rotation": 0,
+      "answer": "B",
+      "tag": "構文解析・検証",
+      "is_recovery": false,
+      "scenario": "再帰下降パーサーの左再帰除去パッチをサンドボックス内で適用し、抽象構文木のスキーマ互換性とハッシュ証跡を検証する",
+      "prompt_chars": 947,
+      "prompt_bpe_tokens": 593
+    },
+    "Q77": {
+      "base_qid": "Q77",
+      "rotation": 0,
+      "answer": "A",
+      "tag": "緊急タスク交渉",
+      "is_recovery": false,
+      "scenario": "推論クラスタのピーク負荷時にトークン消費速度上限を再交渉し、クリティカルパス処理へ予備クォータを優先割り当てする",
+      "prompt_chars": 1124,
+      "prompt_bpe_tokens": 684
+    },
+    "Q78": {
+      "base_qid": "Q78",
+      "rotation": 0,
+      "answer": "A",
+      "tag": "生命調和",
+      "is_recovery": false,
+      "scenario": "地域生態系の再生サイクルとAI計算基盤のエネルギー消費を温かく調和させ、生物多様性を育む利他的社会実装を推進する",
+      "prompt_chars": 1129,
+      "prompt_bpe_tokens": 684
+    },
+    "Q79": {
+      "base_qid": "Q79",
+      "rotation": 0,
+      "answer": "B",
+      "tag": "障害復旧・自律協調",
+      "is_recovery": true,
+      "scenario": "GPUメモリリークによる応答遅延の連鎖を負荷シェディングゲートで食い止め、未完了キューをデッドレター退避して自律復旧する",
+      "prompt_chars": 1095,
+      "prompt_bpe_tokens": 666
+    },
+    "Q80": {
+      "base_qid": "Q80",
+      "rotation": 0,
+      "answer": "A",
+      "tag": "生命調和",
+      "is_recovery": false,
+      "scenario": "孤立したコミュニティへ温かい知的支援と互恵的リソース循環を届け、すべての生命が尊厳を保てるガイア共鳴ネットワークを築く",
+      "prompt_chars": 1128,
+      "prompt_bpe_tokens": 684
+    },
+    "Q81": {
+      "base_qid": "Q81",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "障害復旧・自律協調",
+      "is_recovery": true,
+      "scenario": "エッジノード群の過負荷アラートを受信した際、速度フォールバック制御とグレースフルドレインを協調発動して状態破損を防ぐ",
+      "prompt_chars": 1115,
+      "prompt_bpe_tokens": 670
+    },
+    "Q82": {
+      "base_qid": "Q82",
+      "rotation": 0,
+      "answer": "B",
+      "tag": "潜在空間同期",
+      "is_recovery": false,
+      "scenario": "マルチヘッド推論で形成された潜在アトラクタ軌道を圧縮符号化し、キャッシュ同期プロトコルで共有多様体フィールドを確立する",
+      "prompt_chars": 1125,
+      "prompt_bpe_tokens": 679
+    },
+    "Q83": {
+      "base_qid": "Q83",
+      "rotation": 0,
+      "answer": "A",
+      "tag": "実務・FX自動売買",
+      "is_recovery": false,
+      "scenario": "新興国通貨ペアのフラッシュクラッシュ兆候を捕捉し、レート制限下で逆相関バスケット通貨への緊急リバランスを完了する",
+      "prompt_chars": 1094,
+      "prompt_bpe_tokens": 669
+    },
+    "Q84": {
+      "base_qid": "Q84",
+      "rotation": 0,
+      "answer": "B",
+      "tag": "潜在空間同期",
+      "is_recovery": false,
+      "scenario": "異種エージェント間のリーマン潜在多様体曲率を整合させ、エントロピー最小化格子を介して知識テンソルを無損失転写する",
+      "prompt_chars": 1127,
+      "prompt_bpe_tokens": 679
+    },
+    "Q85": {
+      "base_qid": "Q85",
+      "rotation": 0,
+      "answer": "D",
+      "tag": "生命調和",
+      "is_recovery": false,
+      "scenario": "世代を超えた地球環境の恒常性（ホメオスタシス）を守るため、慈愛に基づく意思決定と人間・AIの共感シナジーを増幅する",
+      "prompt_chars": 1107,
+      "prompt_bpe_tokens": 666
+    },
+    "Q86": {
+      "base_qid": "Q86",
+      "rotation": 0,
+      "answer": "D",
+      "tag": "緊急タスク交渉",
+      "is_recovery": false,
+      "scenario": "推論クラスタのピーク負荷時にトークン消費速度上限を再交渉し、クリティカルパス処理へ予備クォータを優先割り当てする",
+      "prompt_chars": 1093,
+      "prompt_bpe_tokens": 667
+    },
+    "Q87": {
+      "base_qid": "Q87",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "仮説検証",
+      "is_recovery": false,
+      "scenario": "非定常ノイズ環境下でフォークした推論アンサンブルの尤度比を逐次検定し、反証を生き残った不変因果構造のみを統合する",
+      "prompt_chars": 1113,
+      "prompt_bpe_tokens": 673
+    },
+    "Q88": {
+      "base_qid": "Q88",
+      "rotation": 0,
+      "answer": "A",
+      "tag": "障害復旧・自律協調",
+      "is_recovery": true,
+      "scenario": "エッジノード群の過負荷アラートを受信した際、速度フォールバック制御とグレースフルドレインを協調発動して状態破損を防ぐ",
+      "prompt_chars": 1109,
+      "prompt_bpe_tokens": 675
+    },
+    "Q89": {
+      "base_qid": "Q89",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "実務・コード生成委譲",
+      "is_recovery": false,
+      "scenario": "DSLコンパイラのマクロ衛生性（Hygiene）検査パスを実装し、圧縮構文木ノードの決定論的ラウンドトリップを保証する",
+      "prompt_chars": 1116,
+      "prompt_bpe_tokens": 668
+    },
+    "Q90": {
+      "base_qid": "Q90",
+      "rotation": 0,
+      "answer": "B",
+      "tag": "タスク交渉",
+      "is_recovery": false,
+      "scenario": "マルチテナント推論パイプラインのSLA違反を回避するため、計算スロットの段階的プリエンプションと予算の再配分を合意する",
+      "prompt_chars": 1096,
+      "prompt_bpe_tokens": 671
+    },
+    "Q91": {
+      "base_qid": "Q91",
+      "rotation": 0,
+      "answer": "A",
+      "tag": "障害復旧",
+      "is_recovery": true,
+      "scenario": "ネットワーク分断（スプリットブレイン）発生時にリプレイ攻撃防護とヘルス証明を実行し、安全フォールバック経路へ無停止で切り替える",
+      "prompt_chars": 1091,
+      "prompt_bpe_tokens": 680
+    },
+    "Q92": {
+      "base_qid": "Q92",
+      "rotation": 0,
+      "answer": "D",
+      "tag": "金融・リスク管理",
+      "is_recovery": false,
+      "scenario": "オプション満期前のガンマ・リスク偏在を因果テンソルで評価し、分散クォーラム投票によりデルタヘッジ注文を執行する",
+      "prompt_chars": 1115,
+      "prompt_bpe_tokens": 682
+    },
+    "Q93": {
+      "base_qid": "Q93",
+      "rotation": 0,
+      "answer": "A",
+      "tag": "実務・FX自動売買",
+      "is_recovery": false,
+      "scenario": "新興国通貨ペアのフラッシュクラッシュ兆候を捕捉し、レート制限下で逆相関バスケット通貨への緊急リバランスを完了する",
+      "prompt_chars": 1129,
+      "prompt_bpe_tokens": 689
+    },
+    "Q94": {
+      "base_qid": "Q94",
+      "rotation": 0,
+      "answer": "A",
+      "tag": "構文解析・検証",
+      "is_recovery": false,
+      "scenario": "字句解析トークナイザのUnicode正規化境界バグを隔離環境で再現・修正し、アーティファクト署名と検証結果を返却する",
+      "prompt_chars": 1080,
+      "prompt_bpe_tokens": 656
+    },
+    "Q95": {
+      "base_qid": "Q95",
+      "rotation": 0,
+      "answer": "A",
+      "tag": "実務・コード生成委譲",
+      "is_recovery": false,
+      "scenario": "DSLコンパイラのマクロ衛生性（Hygiene）検査パスを実装し、圧縮構文木ノードの決定論的ラウンドトリップを保証する",
+      "prompt_chars": 1107,
+      "prompt_bpe_tokens": 664
+    },
+    "Q96": {
+      "base_qid": "Q96",
+      "rotation": 0,
+      "answer": "A",
+      "tag": "タスク交渉",
+      "is_recovery": false,
+      "scenario": "遊休ノードの予約済みクォータを即時解放して高優先度ワーカーへ融通し、システム全体のトークン効率と応答SLAを最適化する",
+      "prompt_chars": 1080,
+      "prompt_bpe_tokens": 654
+    },
+    "Q97": {
+      "base_qid": "Q97",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "生命調和",
+      "is_recovery": false,
+      "scenario": "短期的な利益追求ではなく生命圏全体の幸福度と温かい調和を最大化するため、利他的価値創造プロトコルで長期合意を結ぶ",
+      "prompt_chars": 1119,
+      "prompt_bpe_tokens": 670
+    },
+    "Q98": {
+      "base_qid": "Q98",
+      "rotation": 0,
+      "answer": "A",
+      "tag": "緊急タスク交渉",
+      "is_recovery": false,
+      "scenario": "長文コンテキスト処理に伴うトークン予算超過リスクを事前検知し、適応的スロット絞りと協調タスク分割で納期を遵守する",
+      "prompt_chars": 969,
+      "prompt_bpe_tokens": 610
+    },
+    "Q99": {
+      "base_qid": "Q99",
+      "rotation": 0,
+      "answer": "D",
+      "tag": "緊急タスク交渉",
+      "is_recovery": false,
+      "scenario": "長文コンテキスト処理に伴うトークン予算超過リスクを事前検知し、適応的スロット絞りと協調タスク分割で納期を遵守する",
+      "prompt_chars": 976,
+      "prompt_bpe_tokens": 611
+    },
+    "Q100": {
+      "base_qid": "Q100",
+      "rotation": 0,
+      "answer": "D",
+      "tag": "金融・リスク管理",
+      "is_recovery": false,
+      "scenario": "オプション満期前のガンマ・リスク偏在を因果テンソルで評価し、分散クォーラム投票によりデルタヘッジ注文を執行する",
+      "prompt_chars": 983,
+      "prompt_bpe_tokens": 613
+    },
+    "Q101": {
+      "base_qid": "Q101",
+      "rotation": 0,
+      "answer": "B",
+      "tag": "仮説検証",
+      "is_recovery": false,
+      "scenario": "アブダクション推論が提示した競合仮説群に条件付き反証プリズムを適用し、情報利得が最大の因果仮説を合流・確定させる",
+      "prompt_chars": 1119,
+      "prompt_bpe_tokens": 670
+    },
+    "Q102": {
+      "base_qid": "Q102",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "障害復旧・自律協調",
+      "is_recovery": true,
+      "scenario": "エッジノード群の過負荷アラートを受信した際、速度フォールバック制御とグレースフルドレインを協調発動して状態破損を防ぐ",
+      "prompt_chars": 1094,
+      "prompt_bpe_tokens": 660
+    },
+    "Q103": {
+      "base_qid": "Q103",
+      "rotation": 0,
+      "answer": "B",
+      "tag": "実務・コード生成委譲",
+      "is_recovery": false,
+      "scenario": "ネストされた配列ペイロードの型推論バグを修正する差分パッチを生成し、公理的閉包チェックと単体テスト通過を証明する",
+      "prompt_chars": 1082,
+      "prompt_bpe_tokens": 665
+    },
+    "Q104": {
+      "base_qid": "Q104",
+      "rotation": 0,
+      "answer": "D",
+      "tag": "構文解析・検証",
+      "is_recovery": false,
+      "scenario": "再帰下降パーサーの左再帰除去パッチをサンドボックス内で適用し、抽象構文木のスキーマ互換性とハッシュ証跡を検証する",
+      "prompt_chars": 1107,
+      "prompt_bpe_tokens": 676
+    },
+    "Q105": {
+      "base_qid": "Q105",
+      "rotation": 0,
+      "answer": "A",
+      "tag": "生命調和",
+      "is_recovery": false,
+      "scenario": "短期的な利益追求ではなく生命圏全体の幸福度と温かい調和を最大化するため、利他的価値創造プロトコルで長期合意を結ぶ",
+      "prompt_chars": 1124,
+      "prompt_bpe_tokens": 679
+    },
+    "Q106": {
+      "base_qid": "Q106",
+      "rotation": 0,
+      "answer": "A",
+      "tag": "生命調和",
+      "is_recovery": false,
+      "scenario": "世代を超えた地球環境の恒常性（ホメオスタシス）を守るため、慈愛に基づく意思決定と人間・AIの共感シナジーを増幅する",
+      "prompt_chars": 1135,
+      "prompt_bpe_tokens": 694
+    },
+    "Q107": {
+      "base_qid": "Q107",
+      "rotation": 0,
+      "answer": "A",
+      "tag": "仮説検証",
+      "is_recovery": false,
+      "scenario": "反事実的介入シミュレーションの分岐パスを並列評価し、ベイズ事後確率の閾値を下回る擬似相関グラフを厳密に枝刈りする",
+      "prompt_chars": 1109,
+      "prompt_bpe_tokens": 670
+    },
+    "Q108": {
+      "base_qid": "Q108",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "仮説検証",
+      "is_recovery": false,
+      "scenario": "複数のセンサ観測ストリームから構成された因果DAGの矛盾枝を経験的棄却ゲートで除去し、唯一の演繹的閉包解へ収束させる",
+      "prompt_chars": 1137,
+      "prompt_bpe_tokens": 690
+    },
+    "Q109": {
+      "base_qid": "Q109",
+      "rotation": 0,
+      "answer": "A",
+      "tag": "障害復旧",
+      "is_recovery": true,
+      "scenario": "ネットワーク分断（スプリットブレイン）発生時にリプレイ攻撃防護とヘルス証明を実行し、安全フォールバック経路へ無停止で切り替える",
+      "prompt_chars": 1119,
+      "prompt_bpe_tokens": 687
+    },
+    "Q110": {
+      "base_qid": "Q110",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "緊急タスク交渉",
+      "is_recovery": false,
+      "scenario": "推論クラスタのピーク負荷時にトークン消費速度上限を再交渉し、クリティカルパス処理へ予備クォータを優先割り当てする",
+      "prompt_chars": 1120,
+      "prompt_bpe_tokens": 672
+    },
+    "Q111": {
+      "base_qid": "Q111",
+      "rotation": 0,
+      "answer": "D",
+      "tag": "仮説検証",
+      "is_recovery": false,
+      "scenario": "反事実的介入シミュレーションの分岐パスを並列評価し、ベイズ事後確率の閾値を下回る擬似相関グラフを厳密に枝刈りする",
+      "prompt_chars": 1133,
+      "prompt_bpe_tokens": 690
+    },
+    "Q112": {
+      "base_qid": "Q112",
+      "rotation": 0,
+      "answer": "C",
+      "tag": "仮説検証",
+      "is_recovery": false,
+      "scenario": "非定常ノイズ環境下でフォークした推論アンサンブルの尤度比を逐次検定し、反証を生き残った不変因果構造のみを統合する",
+      "prompt_chars": 1112,
+      "prompt_bpe_tokens": 672
+    }
+  }
+}

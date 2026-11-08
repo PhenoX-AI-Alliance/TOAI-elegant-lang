@@ -1044,10 +1044,20 @@ def run_single_condition(a: argparse.Namespace, cond: str) -> Dict[str, Any]:
     raw_outputs: Dict[str, str] = {}
     for q in qs:
         qid = q.split("\n", 1)[0].strip()
-        try:
-            raw_txt = call_llm_backend(backend, model, q)
-        except Exception as exc:
-            raw_txt = f"ERROR: {exc}"
+        raw_txt = ""
+        max_retries = int(getattr(a, "retries", 4))
+        for attempt in range(max_retries + 1):
+            try:
+                raw_txt = call_llm_backend(backend, model, q)
+                break
+            except Exception as exc:
+                raw_txt = f"ERROR: {exc}"
+                if attempt < max_retries:
+                    # Exponential backoff for rate limits (HTTP 429) / transient errors
+                    time.sleep(min(120.0, float(getattr(a, "sleep", 0.0)) + 10.0 * (2 ** attempt)))
+        sleep_s = float(getattr(a, "sleep", 0.0))
+        if sleep_s > 0 and backend != "blind_semantic":
+            time.sleep(sleep_s)  # RPM throttle between requests
         raw_outputs[qid] = raw_txt
         ans[qid] = parse_choice_letter(raw_txt)
 
@@ -1141,6 +1151,8 @@ if __name__ == "__main__":
     ap.add_argument("--compare-answers", help="Second answers JSON file for paired McNemar test")
     ap.add_argument("--report-json", default="", help="Optional JSON path to save full evaluation report")
     ap.add_argument("--model", default="Gemma4-26B-PhenoX:latest")
+    ap.add_argument("--sleep", type=float, default=0.0, help="Seconds to wait between LLM requests (RPM throttle)")
+    ap.add_argument("--retries", type=int, default=4, help="Retries with exponential backoff on API errors")
     ap.add_argument(
         "--backend",
         choices=["ollama", "anthropic", "openai", "gemini", "blind_semantic"],

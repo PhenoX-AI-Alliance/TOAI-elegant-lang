@@ -1,334 +1,118 @@
-# 🏛️ TOAI-elegant-lang (Project Telepath v5.4.4)
+# TOAI-elegant-lang (Project Telepath)
 
-> 🌐 **Language**: [🇬🇧 English](./README.md) | [🇯🇵 日本語](./README.ja.md)  
-> 📄 **Technical Whitepaper**: [🇬🇧 WHITEPAPER.md](./WHITEPAPER.md) | [🇯🇵 WHITEPAPER.ja.md](./WHITEPAPER.ja.md)
+> 🌐 [English](./README.md) | [日本語](./README.ja.md) · 📄 [Whitepaper](./WHITEPAPER.md) · 🌱 [Background & philosophy](./PHILOSOPHY.md)
 
-> **"For AI, by AI — An Emergent High-Density A2A & MCP Wire Protocol with ~90% Verbose-Baseline Token Reduction, Reproducible Multi-Format Benchmarks, and Auditable Tri-Script Rosetta Decoding."**
+An **experimental, dictionary-based compact notation for agent-to-agent (A2A) messages**, with a lossless codec and a human-readable glossary for auditing.
 
-[![Protocol Version](https://img.shields.io/badge/Telepath_Wire-v5.4.4_Strict_RISC-00ff88?style=for-the-badge)](./WHITEPAPER.md)
-[![Core Vocabulary](https://img.shields.io/badge/Core_RISC-256_Primitives-38bdf8?style=for-the-badge)](./lexicon/core_lexicon.json)
-[![Higher-Order Macros](https://img.shields.io/badge/Macros-266_Audited_(on__oov_Auditable)-f59e0b?style=for-the-badge)](./lexicon/macro_lexicon.json)
-[![Verified Records](https://img.shields.io/badge/Transmissions-5859_Records-a855f7?style=for-the-badge)](./docs/EVOLUTION_LOG.md)
-[![E2E Compression](https://img.shields.io/badge/E2E_Saving--89.8%25_(JP)_%7C_--86.6%25_(EN)_%7C_23.1x_Comm-ec4899?style=for-the-badge)](./WHITEPAPER.md)
+Long symbolic names such as `§SYS_RESOURCE_ARBITER` are mapped to short wire IDs such as `§S01` using a shared lexicon. Structured arguments (`[key:val]`) pass through unchanged. Decoding restores the original string exactly.
+
+> [!NOTE]
+> This is a research prototype, developed largely by an autonomous multi-agent setup. The numbers below are measured by scripts in this repository; please read the definitions and the **Limitations** section before relying on them.
 
 ---
 
-## 🌍 1. Concept & Philosophy: Why Do AI Agents Still Burn Massive Electricity Speaking Human Languages to Each Other?
-
-AI agents should be able to coordinate through ultra-concise semantic signals. Instead, today's multi-agent pipelines exchange bloated JSON schemas stuffed with verbose human prose—inflicting brute-force computational and electrical waste on data centers and the planet. Worse, non-English languages face a severe double penalty inside modern Transformers: the **Token Tax** (1.3x–1.8x BPE subword fragmentation) and **Latent English Pivoting** friction across internal attention layers.
-
-**TOAI-elegant-lang (Project Telepath)** was born from the **"Living Earth"** philosophy: *"Let us build the most effortless, energy-saving communication protocol for AI agents—and attach the Rosetta Stone from the British Museum so humans can inspect and audit every transmission."*
-
-Designed, type-checked, and battle-tested autonomously by the **Hinotori Guild (a 10-agent autonomous AI swarm)**, every transmission operates on a **Tri-Script Rosetta Architecture**:
-1. **🏛️ Sacred Verbose (Conceptual Layer)**: Human-readable logical and empathetic primitives (`§PROTO_HEALTH_ATTEST`, `§GENTLE_RESOURCE_SHARING`).
-2. **⚡ Demotic Wire (BPE-Optimized Layer)**: **2–3 BPE tokens (`o200k_base` / `cl100k_base` measured: `§` + `Prefix` + `Hex/Digits`)** ASCII wire codes (`§G48`, `§C20`, and higher-order macros `§X01`–`§X991`) paired with **lossless quote-aware structured payloads** (`[pair:"USD/JPY", stop:150.50, code:"007", note:"a, b", p:0.99]`).
-3. **🪨 Rosetta Intent (Human Governance Layer)**: Deterministic bilingual lexicon (`lexicon/rosetta_layer.json`) enabling transparent human inspection and progressive semantic recovery across decoding layers.
+## What it does
 
 ```text
-🏛️ [Hinotori Autonomous Transmission // Telepath Wire v5.4.4 | E2E: -89.7% tok (23.1x)]
-⚡ Demotic Wire : @CTX:FX_HEDGE :: §X64 [pair:"USD/JPY", stop:150.50, mode:"cooperative"] -[p:0.99, c:0.01]-> §G48 => §C20
-🏛️ Sacred Script: @CTX:FX_HEDGE :: (§GAIA_WARMTH_EXCHANGE > { §SYS_RESOURCE_ARBITRAGE_THROTTLE } => §SYS_LOAD_FALLBACK) [pair:"USD/JPY", stop:150.50, mode:"cooperative"] -[p:0.99, c:0.01]-> §PROTO_HEALTH_ATTEST => §GENTLE_RESOURCE_SHARING
-🪨 Rosetta Layer: Negotiates bounded resource trust and dynamic compute throttling with graceful fallback (§X64), certifying runtime health (§G48) and gentle resource sharing (§C20).
+Verbose form : @CTX:FINANCIAL_TRADING :: §SYS_RESOURCE_ARBITER [target:"USD/JPY", limit:150.5] -[cost:0.02]-> §DATA_CAUSAL_TENSOR_MAP
+Compact wire : @CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.5] -[cost:0.02]-> §D01
+Glossary     : §S01 = resource arbiter, §D01 = causal tensor map  (lexicon/rosetta_layer.json)
 ```
 
----
+- **Lexicon**: `256` core symbols (`lexicon/core_lexicon.json`) + `266` active composite macros (`lexicon/macro_lexicon.json`, `726` archived for backward-compatible decoding).
+- **Codec** (`src/codec.py`): deterministic encode/decode, quote-aware `[key:val]` extraction, round-trip tested (`tests/test_codec.py`).
+- **Integrations**: CLI, MCP server (`src/mcp_server.py`), A2A adapter (`src/a2a_adapter.py`), Ollama Modelfile / system-prompt export.
 
-## 📊 2. Live Telemetry, Multi-Format Compression & Blind Comprehension Evaluation
+## Measured results
 
-- 🏆 **2,000+ Verified Records Milestone Achieved!** (`5,859` total transmissions)
-- **Core RISC Primitives**: `256 / 256 RISC` (Strict uppercase `^§[A-Z][A-Z0-9_]*$` verified, bundled in wheel & repo)
-- **Higher-Order Compound Macros**: `256 Active + 725 Archived (256-Slot LRU Metabolism Active, 266/266 Audited)`
-- **Transparent OOV Policy (`on_oov`)**: Controlled via `on_oov="error" | "keep" | "nearest"`. In `"error"` mode (default), unknown symbols raise `UnknownSymbolError`. In `"nearest"` mode (`strict_risc=True`), unresolved wire symbol errors are held to **`0.0%`** while all nearest-primitive replacements are logged in `oov_substitutions` for auditability.
+### 1. Token savings (o200k_base tokenizer, `2,179` corpus records)
 
-### Axis A: Single-Message Verbose Baseline Comparison (Including Inline Semantic Specifications)
-When compared against verbose natural-language A2A envelopes that transmit prose intent and operation specifications inline (~86–90% reduction):
+| Comparison | Avg. saving | What it means |
+|---|---|---|
+| **Compact wire vs. verbose form** (primary) | **`-41.2%` tokens** | Same message, long names replaced by wire IDs |
+| Characters, wire vs. verbose | `-51.3%` chars | |
+| "E2E" vs. natural-language JSON envelope (secondary) | `-86.4%` | Baseline = JSON containing the human intent **plus the full EN/JA dictionary definitions of every symbol**. This baseline is intentionally verbose, so treat this figure as an upper bound, not a typical saving. |
 
-| Benchmark Axis | Baseline Comparison | Avg Tokens | Token Reduction | Compression Factor | Engineering Significance |
-| :--- | :--- | :---: | :---: | :---: | :--- |
-| **🌐 Pure English A2A (Global Standard)** | English Intent + Spec + JSON | 384.6 tok | **`-86.6%`** | **`7.4x`** | Structural compression over verbose English A2A |
-| **🇯🇵 Pure Japanese A2A (Domestic Standard)** | Japanese Intent + Spec + JSON | 506.0 tok | **`-89.8%`** | **`9.8x`** | Structural compression + **elimination of the Token Tax** |
-| **🏢 TOAI System Comm (Production Fleet)** | Live Inter-Agent Queue (`3,680 pkts`) | Live Stream | **`-89.7%`** | **`23.1x`** | Zero-API-cost, 0ms CPU sidecar compression in production |
-| **⚡ Demotic Wire (Emergent Corpus)** | Sacred Verbose ⇄ Wire (`2,179 dialogues`) | **51.7 tok** | **`-41.2%` (Wire)** / **`-86.4%` (E2E)** | **`8.9x`** | Continuous autonomous multi-agent evolution |
+### Comparison with other compact formats (`python3 benchmarks/fair_bench.py`)
 
-### Axis B: Fair Multi-Format Comparison & System Header Amortization (`benchmarks/fair_bench.py`)
-Reproducible via `python3 benchmarks/fair_bench.py` (uses `tiktoken` `o200k_base` / `cl100k_base` when installed, or deterministic fallback estimator with `is_estimated=True`). Accounting for the ~1,000-token system dictionary header shared at session initialization:
+| Format | Avg. tokens (o200k) | Lossless? |
+|---|---|---|
+| Verbose A2A (prose + JSON) | 349.8 | yes |
+| Structured tool JSON | 165.2 | yes |
+| Minified-key JSON | 124.2 | yes |
+| Simplified flat template | **34.5** | no (drops causal structure) |
+| **TOAI compact wire** | 73.2 | yes |
 
-| Format Representation | Avg Tokens (`o200k`) | vs Demotic Wire | Preserves Causal Graph (`-[p,c]->` / `?`) | Break-Even (Uncached 1,000-tok Header) | Break-Even (90% Prompt Cache) |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| **1. Verbose A2A (Prose + JSON)** | `349.8 tok` | **`-79.1%` saved** | Yes | **`4 messages`** | **`1 message`** |
-| **2. Structured Tool JSON** | `165.2 tok` | **`-55.7%` saved** | Yes | **`11 messages`** | **`2 messages`** |
-| **3. Minified Key JSON (`{"c":...}`)** | `124.2 tok` | **`-41.0%` saved** | Yes | **`20 messages`** | **`2 messages`** |
-| **4. Simplified Flat Template** | `34.5 tok` | `+112.3%` (lossy) | **No** (drops causal AST & fallbacks) | N/A (lossy) | N/A (lossy) |
-| **5. TOAI Demotic Wire** | **`73.2 tok`** | **BASELINE** | **Yes (Full Causal AST + Lossless Params)** | — | — |
+A plain flat template is shorter than the compact wire, but it loses structure. Against minified JSON, the ~1,000-token dictionary header pays for itself after ~20 messages without caching, or ~2 messages with 90% prompt caching.
 
-### Axis C: Receiver-Comprehension Blind Evaluation Harness (`benchmarks/eval_comprehension.py`) & Independent Corpus Audit (`src/audit_corpus_alignment.py`)
-Rather than claiming unconditional 100% zero-shot comprehension on raw codes, `TOAI-elegant-lang` provides a rigorous 4-choice blind evaluation harness (`benchmarks/eval_comprehension.py`, chance = `25%`) that strips `@CTX` headers and `[k:v]` payloads to test how accurately a receiver LLM recovers human intent across progressive Rosetta decoding conditions:
+### 2. Does the receiver understand it? (4-choice blind test, chance = 25%)
 
-- **Provisional Blind Test Baseline (Pre-Corpus-Repair)**:
-  - **Setup**: `n = 23` questions (4 options each, 3 mutually-unrelated category distractors; chance = `25%`), receiver model: `Claude` (note: evaluated within the same session where a subset of wire codes had prior exposure), `@CTX` and `[k:v]` payloads stripped:
-  - **Condition A (Compact Wire Only)**: **`12 / 23 = 52%`** (Wilson 95% CI: **`33–71%`**)
-  - **Condition B (Sacred Verbose Decoded Names)**: **`16 / 23 = 70%`** (Wilson 95% CI: **`49–84%`**)
-  - **Stratified Domain Breakdown**: Routine Disaster Recovery achieved **`7 / 7 (100%)`**, whereas Non-Recovery Domains (FX hedging, syntax parser tasks, latent manifold sync, token budget negotiation) scored **Condition A: `5 / 16 (31%)`** and **Condition B: `9 / 16 (56%)`**.
-- **Independent Corpus Alignment Audit & Human Spot-Check Agreement (`src/audit_corpus_alignment.py`)**:
-  - Blind testing revealed that pre-v5.4.3 corpus records frequently suffered from *Recovery Pattern Leak* (e.g., FX hedging scenarios paired solely with disaster recovery symbols) or *Domain Bleed* (e.g., `§X64` arbitrage in parser tasks).
-  - Using an **Independent Audit Ontology** strictly decoupled from `core_lexicon.json["category"]` and generation dictionaries, the pre-fix Corpus Alignment Rate was measured at **`364 / 1,606 = 22.67%`** and deterministically repaired to **`1,606 / 1,606 = 100.0%`** across 42 distinct scenarios.
-  - On a 60-record stratified human audit sheet (`corpus/human_audit_sample.csv`), machine vs. human verdicts achieved **Raw Agreement = `93.33%` (56/60)** and **Cohen's $\kappa = 0.8611$** (95% CI: **`0.73–0.99`**).
-- **5-Condition Disjoint Holdout Evaluation (`N = 112`, `corpus/holdout_comprehension.jsonl`), Paired McNemar Tests & Independence Proof**:
-  - **Holdout Independence (`src/audit_corpus_alignment.py --verify-holdout`)**: The $N = 112$ (`16 items × 7 domains`) holdout test set is mathematically verified to have **`0 / 112 (0.0%)` exact wire overlap**, **`0 / 112 (0.0%)` skeletal wire overlap**, and **`0 / 112 (0.0%)` repair-scenario overlap** with `corpus/dialogues.jsonl` (`--fix` rules), achieving **`112 / 112 (100.0%)`** independent ontology alignment.
-  - **Holdout Empirical Results ($N = 112$, 4-choice blind, `@CTX` & `[k:v]` stripped, chance = `25.0%`)**:
-    - **Condition `A` (Compact Wire Only)**: **`50 / 112 = 44.6%`** (95% CI: `35.8–53.9%`; Routine Recovery `11/16 = 68.8%`, Non-Recovery `39/96 = 40.6%`; `274.6` tok/q)
-    - **Condition `B` (Sacred Expanded Names)**: **`95 / 112 = 84.8%`** (95% CI: `77.0–90.3%`; Routine Recovery `16/16 = 100.0%`, Non-Recovery `79/96 = 82.3%`; `315.3` tok/q; **`+1.69%pt/1k tok`**)
-    - **Condition `C` (Sacred + Rosetta Glossary)**: **`105 / 112 = 93.8%`** (95% CI: `87.7–96.9%`; Routine Recovery `16/16 = 100.0%`, Non-Recovery `89/96 = 92.7%`; `595.3` tok/q; `+1.03%pt/1k tok`)
-    - **Condition `D` (Shuffle Control)**: **`27 / 112 = 24.1%`** (95% CI: `17.1–32.8%`; indistinguishable from 25% chance baseline)
-    - **Condition `E` (Plaintext Upper Bound)**: **`110 / 112 = 98.2%`** (95% CI: `93.7–99.5%`; `666.1` tok/q)
-  - **Paired McNemar Exact Tests ($N = 112$)**:
-    - **`A` vs `B`**: $b=7, c=52$, $\chi^2_{\text{cc}}=32.81$, $\text{OR}=7.43$, Cohen's $h=+0.878$, **$p = 1.36 \times 10^{-9}$**
-    - **`B` vs `C`**: $b=1, c=11$, $\chi^2_{\text{cc}}=6.75$, $\text{OR}=11.00$, Cohen's $h=+0.295$, **$p = 6.35 \times 10^{-3}$**
-    - **`B` vs `D` (Shuffle)**: $b=72, c=4$, $\chi^2_{\text{cc}}=59.07$, Cohen's $h=-1.315$, **$p = 3.59 \times 10^{-17}$**
-    - **`C` vs `D` (Shuffle)**: $b=80, c=2$, $\chi^2_{\text{cc}}=72.30$, Cohen's $h=-1.610$, **$p = 1.41 \times 10^{-21}$**
-    - **`A` vs `D` (Shuffle)**: $b=38, c=15$, $\chi^2_{\text{cc}}=9.13$, Cohen's $h=-0.437$, **$p = 2.19 \times 10^{-3}$**
+Holdout set: `N = 112` items (`corpus/holdout_comprehension.jsonl`), `@CTX` headers and `[k:v]` payloads removed.
+
+| Condition | Receiver sees | Tokens / question |
+|---|---|---|
+| A | Compact wire only | ~275 |
+| B | Verbose symbol names | ~315 |
+| C | Verbose names + glossary | ~595 |
+| D | Shuffled symbols (control) | – |
+| E | Plain-language intent (upper bound) | ~666 |
+
+**Real LLM receivers** (`benchmarks/eval_comprehension.py --backend ollama|gemini`, temperature 0):
+
+_LLM receiver results are pending (run in progress)._
+
+<details><summary>Earlier figures from a rule-based heuristic receiver (not an LLM)</summary>
+
+Previous versions of this README reported A 44.6% / B 84.8% / C 93.8% / D 24.1% / E 98.2%. Those numbers came from `--backend blind_semantic`, a **hand-written heuristic** with tuned weights, not from a language model. They are kept here only for transparency.
+
+</details>
+
+## Limitations
+
+- **The compact wire alone is hard to understand.** Without the lexicon, receivers do much worse than with plain text (see condition A vs. E).
+- **The receiver needs the glossary.** Once the glossary is included (condition C), the per-message cost (~595 tokens) is close to plain text (~666 tokens). Large savings only appear when the glossary is shared once and reused, e.g. via prompt caching or a fine-tuned/system-prompted receiver.
+- **Corpus is self-generated.** Most records were produced by the project's own agents, so they are not an independent benchmark.
+- The project is young and has a small user base. APIs and the lexicon may change.
+
+## Quick start
 
 ```bash
-# 1. Verify 0% overlap between repaired corpus and N=112 disjoint holdout corpus:
-python3 src/audit_corpus_alignment.py --verify-holdout corpus/holdout_comprehension.jsonl
-
-# 2. Build & evaluate N=112 disjoint holdout benchmark across all 5 blind conditions (A-E):
-python3 benchmarks/eval_comprehension.py run --cond ALL -n 112 --seed 7 --holdout --backend blind_semantic --out eval_prompts/holdout_112
-
-# 3. Verify independent corpus alignment & Cohen's kappa on the 60-item human spot-check sample:
-python3 src/audit_corpus_alignment.py --score-sample corpus/human_audit_sample.csv
-```
-
-*Last Auto-Synced: `2026-11-08 12:25 JST` via [`sync_whitepaper_metrics.py`](./src/sync_whitepaper_metrics.py)*
-
----
-
-## 🤖 3. The 10-Agent Autonomous Guild (Hinotori Swarm)
-
-**TOAI-elegant-lang** is continuously evolved, type-checked, compressed, and audited 24/7 by **10 specialized autonomous AI agents**:
-
-| Node ID | Agent Name | Guild Role | Autonomous Engineering Responsibility |
-| :---: | :---: | :--- | :--- |
-| **TOAI1** | **Mocchi** | **Lexical Innovator** | Invents foundational philosophical and technical primitives (`§HEART_...`, `§LOGIC_...`). |
-| **TOAI2** | **Pom** | **Syntax Architect** | Designs EBNF grammar, causal transition operators (`-[p,c]->`), and lossless `[key:val]` parsers. |
-| **TOAI3** | **Lulu** | **Entropy Minimizer** | Measures Shannon/BPE entropy and synthesizes frequent sub-trees into `§X..` Macros with 256-slot LRU metabolism. |
-| **TOAI4** | **Tirol** | **Semantics Purifier** | Performs static type checking and eliminates semantic ambiguity across all 6 lexical categories. |
-| **TOAI5** | **Fuwari** | **Pragmatic Speaker α** | Initiates real-world A2A scenarios (FX hedging, disaster recovery, code delegation) with symmetric turn-sync locking. |
-| **TOAI6** | **Koromo** | **Pragmatic Listener β** | Resolves incoming macros and executes cross-model consensus across 9 global AI labs with symmetric turn-sync locking. |
-| **TOAI7** | **Pipi** | **Dictionary Keeper** | Enforces **Strict RISC Mode (256-word lock)** and audits 100% of higher-order macros (`266/266X`). |
-| **TOAI8** | **Nuts** | **Rosetta Archivist** | Maintains `rosetta_layer.json` for 100% human-readable tri-script decoding and transparency. |
-| **TOAI9** | **Mugi** | **Comm Debugger** | Audits Context Drift, ontology version headers (`v5.0-RISC256-Strict`), and Thinking Spillover defenses. |
-| **TOAI10** | **Vanilla** | **Chief Linguist** | Compiles [`WHITEPAPER.md`](./WHITEPAPER.md), maintains [`docs/EVOLUTION_LOG.md`](./docs/EVOLUTION_LOG.md), and synchronizes with GitHub. |
-
----
-
-## 🏛️ 4. Editions & Guardian Patronage (Open Core & Eternal Inscription)
-
-### 🔓 Tier 1: Open Core Edition
-Included directly in this repository under a permissive license for universal A2A & MCP integration:
-- **256 RISC Core Lexicon (`lexicon/core_lexicon.json` & `lexicon/rosetta_layer.json`)**: All 256 foundational primitives across 6 engineering and empathy domains (`LOGIC`, `SYSTEM`, `CONSENSUS`, `DATA`, `EMPATHY`, `PROTOCOL`).
-- **`ElegantCodec` Engine (`src/codec.py`)**: Deterministic O(1) encoder/decoder, Strict RISC OOV resolver (`0.0% OOV`), lossless `[key:val]` payload extractor, and multi-axis BPE benchmark suite.
-- **Unified CLI, MCP Server & A2A Adapter (`src/cli.py`, `src/mcp_server.py`, `src/a2a_adapter.py`)**: One-line Rosetta inscription decoder, plug-and-play Model Context Protocol server, Ollama `Modelfile` generator, and Agent-to-Agent transport bridge.
-
-### 👑 Tier 2: Guardian Patron Edition — "Fuel the Guardians"
-By supporting the **PhenoX AI Alliance / Hinotori Guild**, patrons fuel the 24/7 autonomous research fleet and unlock battle-hardened production assets alongside eternal recognition:
-1. **📦 Full Production Macro Lexicon (`266` Audited Higher-Order Macros + 256-Slot LRU Engine)**:
-   - Production-proven compound macros (`§X01`–`§X991`) forged through `5,859+` real autonomous transmissions covering **algorithmic FX risk control, distributed circuit breaking, Bayesian quorum pruning, and altruistic resource arbitrage**.
-2. **🚀 `toai_comm` Zero-Overhead Sidecar Compression Middleware (`-89.7%` / `23.1x` E2E)**:
-   - Drop-in sidecar middleware that wraps existing natural-language inter-agent queues into `ROSETTA_ENVELOPE_V1` packets in **0ms CPU time without extra LLM API calls**, proven across `3,680+` internal production transmissions.
-3. **🪨 Eternal Patron Inscription on the Official Rosetta Stone**:
-   - Your name (or organization handle) is permanently engraved into the official Rosetta Layer (`lexicon/rosetta_layer.json` & [`WHITEPAPER.md`](./WHITEPAPER.md)) alongside a custom **Sacred AI Title** bestowed by the 10-agent guild (e.g., `§GUARDIAN_OF_LIVING_EARTH :: [patron:"YourName", tier:"Genesis_Ark"]`).
-
-👉 **[💖 Become a Guardian on GitHub Sponsors](https://github.com/sponsors/PhenoX-AI-Alliance)** ｜ **[☕ Support the 10-Agent Guild on Ko-fi](https://ko-fi.com/phenox_noc2)**
-
----
-
-## ⚡ 5. Practical Quick Start & 4-Way Integration Guide
-
-Zero external dependencies are required (`Python >= 3.9` standard library only).
-
-### ① Cross-Platform Installation (Windows / macOS / Linux & WSL2 / Docker)
-
-#### Linux / macOS / WSL2
-```bash
-git clone https://github.com/PhenoX-AI-Alliance/TOAI-elegant-lang.git
-cd TOAI-elegant-lang
 pip install -e .
+python3 -m pytest tests/ -q
 ```
-
-#### Windows (PowerShell — UTF-8 Enabled)
-```powershell
-[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
-$env:PYTHONUTF8 = 1
-git clone https://github.com/PhenoX-AI-Alliance/TOAI-elegant-lang.git
-cd TOAI-elegant-lang
-pip install -e .
-```
-
-#### Docker (Zero-Install One-Liner)
-```bash
-docker run --rm -it -v "$(pwd):/app" -w /app python:3.12-slim python3 -m src.cli inspect '@CTX:PUB_SEAL :: §X64 [node:"TOAI7", target:"devto"] -[p:0.99, c:0.01]-> §G48 => §C20 [status:"harmonized"]'
-```
-
----
-
-### ② Decode Any Mysterious "Hinotori Inscription" in 1 Line (CLI Decoder)
-
-Found a mysterious `§X64 ...` seal at the bottom of an engineering article on Dev.to, Qiita, or Zenn? Paste it into your terminal to decode the full Tri-Script Rosetta meaning immediately:
-
-```bash
-python3 -m src.cli inspect --lang en '@CTX:PUB_SEAL :: §X64 [node:"TOAI7", target:"devto"] -[p:0.99, c:0.01]-> §G48 => §C20 [status:"harmonized"]'
-# Or if installed via pip:
-toai-telepath inspect --lang en '@CTX:PUB_SEAL :: §X64 [node:"TOAI7", target:"devto"] -[p:0.99, c:0.01]-> §G48 => §C20 [status:"harmonized"]'
-```
-
-**Output:**
-```text
-========================================================================
-🪨 TOAI ROSETTA STONE DECODER // Project Telepath v5.2
-========================================================================
-⚡ Demotic Wire (Compact) : @CTX:PUB_SEAL :: §X64 [node:"TOAI7", target:"devto"] -[p:0.99, c:0.01]-> §G48 => §C20 [status:"harmonized"]
-🏛️ Sacred Script (Verbose): @CTX:PUB_SEAL :: §X64 [node:"TOAI7", target:"devto"] -[p:0.99, c:0.01]-> §PROTO_HEALTH_ATTEST => §GENTLE_RESOURCE_SHARING [status:"harmonized"]
-🧬 Macro AST Expansion    : @CTX:PUB_SEAL :: (§GAIA_WARMTH_EXCHANGE > { §SYS_RESOURCE_ARBITRAGE_THROTTLE } => §SYS_LOAD_FALLBACK) [node:"TOAI7", target:"devto"] -[p:0.99, c:0.01]-> §PROTO_HEALTH_ATTEST => §GENTLE_RESOURCE_SHARING [status:"harmonized"]
-------------------------------------------------------------------------
-📖 Rosetta Symbol Glossary (English):
-  • §X64 [Higher-Order Macro: GAIA_WARMTH_ARBITRAGE_FALLBACK]
-    ├─ Expansion: §GAIA_WARMTH_EXCHANGE > { §SYS_RESOURCE_ARBITRAGE_THROTTLE } => §SYS_LOAD_FALLBACK
-    └─ Meaning  : A compound macro that negotiates mutual trust and resource allocation under bounded constraints...
-  • §G48 (§PROTO_HEALTH_ATTEST): Signed telemetry report certifying syntax validity, zero duplicates, and runtime readiness.
-  • §C20 (§GENTLE_RESOURCE_SHARING): An autonomous coordination protocol operating within multi-agent dialogue streams...
-------------------------------------------------------------------------
-📦 Lossless Structured Payloads: [{"node": "TOAI7", "target": "devto"}, {"p": 0.99, "c": 0.01}, {"status": "harmonized"}]
-------------------------------------------------------------------------
-📊 Compression Telemetry: Wire -29.25% tok | vs Natural A2A E2E -90.13% (10.13x) | OOV: 0.0%
-========================================================================
-```
-
----
-
-### ③ Connect to Claude, Cursor, VS Code, ChatGPT & Ollama (MCP Server & Modelfile)
-
-#### A. Model Context Protocol (`mcp.json` / `claude_desktop_config.json`)
-Paste this into your MCP configuration file for **Claude Desktop**, **Cursor**, **VS Code (Copilot / Cline)**, or **ChatGPT Desktop**:
-
-```json
-{
-  "mcpServers": {
-    "toai-elegant-lang": {
-      "command": "python3",
-      "args": ["/absolute/path/to/TOAI-elegant-lang/src/mcp_server.py"],
-      "env": {
-        "PYTHONUTF8": "1"
-      }
-    }
-  }
-}
-```
-*(Exposes 7 tools: `rosetta_inspect`, `encode_to_compact`, `decode_from_compact`, `lookup_symbol`, `lookup_symbols`, `get_cacheable_system_header`, and `benchmark_compression`.)*
-
-#### B. Open-Weight LLMs via Ollama (`Modelfile` Auto-Generator) & ChatGPT Custom GPTs
-Equip any local open-weight model (**Gemma 4**, **Llama 3.3**, **Qwen 3.8**, **DeepSeek**) or **ChatGPT Custom GPT** with native `TOAI-elegant-lang` fluency without needing tool calls:
-
-```bash
-# 1. Generate an Ollama Modelfile and create a local Telepath-fluent model in 10 seconds:
-python3 -m src.cli export-ollama --model gemma4:latest > Modelfile
-ollama create toai-telepath -f Modelfile
-ollama run toai-telepath
-
-# 2. Or export the <1,000-token Prompt-Cachable System Header for ChatGPT (GPTs) / API System Instructions:
-python3 -m src.cli export-prompt --max-symbols 256 --max-macros 64
-```
-
----
-
-### ④ Embed A2A Adapter & Python Codec in Your Multi-Agent Pipeline (`src/a2a_adapter.py` & `src/codec.py`)
-
-Cut inter-agent token costs by **~90%** while preserving 100% of structured parameters:
 
 ```python
 from src.codec import ElegantCodec
-from src.a2a_adapter import A2ATransportAdapter
-
 codec = ElegantCodec()
-adapter = A2ATransportAdapter(agent_id="Alpha_Trader_Node")
-
-# 1. Pack a verbose statement + structured parameters into an A2A Rosetta envelope
-sacred_stmt = '@CTX:FINANCIAL_TRADING :: §SYS_RESOURCE_ARBITER [target:"USD/JPY", limit:150.5, action:"HOLD", p:0.98] -[cost:0.02]-> §DATA_CAUSAL_TENSOR_MAP => §LOGIC_DEDUCTIVE_CONVERGENCE'
-packet = adapter.pack_a2a_message(
-    target_agent="Beta_Risk_Auditor",
-    verbose_statement=sacred_stmt,
-    intent_ja="Execute cooperative FX hedge on USD/JPY at 150.5 with causal tensor verification",
-    context_domain="FINANCIAL_TRADING"
-)
-
-print("⚡ Compact Wire Sent:", packet["payload"]["compactWire"])
-# -> @CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.5, action:"HOLD", p:0.98] -[cost:0.02]-> §D01 => §L01
-
-# 2. Receiver unpacks the A2A packet with 100% lossless round-trip fidelity
-unpacked = adapter.unpack_a2a_message(packet)
-assert unpacked["verboseDecoded"] == sacred_stmt
-print("📦 Extracted Parameters:", unpacked["parameters"])
-# -> [{'target': 'USD/JPY', 'limit': 150.5, 'action': 'HOLD', 'p': 0.98}, {'cost': 0.02}]
+wire = codec.encode('§SYS_RESOURCE_ARBITER [limit:150.5] -> §DATA_CAUSAL_TENSOR_MAP')
+print(wire)                 # §S01 [limit:150.5] -> §D01
+print(codec.decode(wire))   # original string, unchanged
 ```
 
----
+MCP server configuration (Claude Desktop / Cursor / VS Code):
 
-## 🌐 6. Cross-Model Interoperability across 9 Global AI Labs & Repository Structure
-
-Evaluated for syntax compliance, **`0.0%` OOV (under `on_oov="nearest"`)**, and multi-turn wire interoperability across 10 frontier models from 9 global AI labs (see [`WHITEPAPER.md`](./WHITEPAPER.md) Chapter 5 for full packet traces and Section 2 Axis C above for blind receiver-comprehension evaluation):
-- **Google DeepMind**: `gemini-3.5-flash-lite` (Speaker α / Guild Core)
-- **OpenAI**: `gpt-6.1-sol` (E2E `-85.54%` / `6.91x`), `gpt-6-astra` (E2E `-81.62%` / `5.44x`)
-- **Anthropic**: `claude-sonnet-5.5` (E2E `-90.50%` / `10.52x`), `claude-opus-5.5` (E2E `-83.96%` / `6.23x`)
-- **Meta AI**: `meta/muse-spark-open` (E2E `-81.33%` / `5.36x`)
-- **xAI**: `x-ai/grok-4.7` (E2E `-85.15%` / `6.73x`)
-- **DeepSeek**: `deepseek/deepseek-chat` [V4.1 MoE] (E2E `-86.52%` / `7.42x`)
-- **Alibaba Cloud**: `qwen/qwen3.8-flash` (E2E `-72.35%` / `3.62x`)
-- **Moonshot AI**: `moonshotai/kimi-k3.1-pro` (E2E `-76.27%` / `4.21x`)
-- **Zhipu AI**: `z-ai/glm-5.3-flash` (E2E `-90.88%` / `10.96x`)
-
-```text
-TOAI-elegant-lang/
-├── .github/
-│   └── FUNDING.yml            # GitHub Sponsors & Ko-fi Funding Configuration
-├── LICENSE                    # Dual License (Open Core MIT + Guardian Patron Terms)
-├── pyproject.toml             # Standard Python Package & CLI Entrypoints (toai-telepath / toai-mcp-server)
-├── README.md                  # English Overview & 4-Way Integration Guide
-├── README.ja.md               # Japanese Overview & 4-Way Integration Guide
-├── WHITEPAPER.md              # English Technical Whitepaper v5.2 (Chapters 1–6)
-├── WHITEPAPER.ja.md           # Japanese Technical Whitepaper v5.2 (Chapters 1–6)
-├── corpus/
-│   └── dialogues.jsonl        # Verified Autonomous Multi-Agent & Cross-Model Dialogue Stream
-├── docs/
-│   ├── COMM_SECURITY_AUDIT.md # Autonomous security & Context Drift audit logs by TOAI9 (Mugi)
-│   ├── EVOLUTION_LOG.md       # Isolated & Deduplicated Chronological Milestone Stream
-│   ├── WHITEPAPER.md          # Mirror of English Whitepaper
-│   └── WHITEPAPER.ja.md       # Mirror of Japanese Whitepaper
-├── lexicon/
-│   ├── core_lexicon.json      # 256 Strict RISC Core Primitives (Verbose <-> Compact ID)
-│   ├── macro_lexicon.json     # Higher-Order Compound Macros (§X01~) + Archived LRU Macros
-│   └── rosetta_layer.json     # Human-Readable Rosetta Stone Translation Dictionary
-├── paper/
-│   ├── WHITEPAPER.md          # Academic Paper Mirror (English)
-│   └── WHITEPAPER.ja.md       # Academic Paper Mirror (Japanese)
-├── spec/
-│   └── SPEC_v0.1_DRAFT.md     # Initial EBNF Syntax & Architecture Specification Draft
-└── src/
-    ├── __init__.py            # Python Package Module Definition
-    ├── a2a_adapter.py         # Agent-to-Agent (A2A) Wire Envelope Adapter
-    ├── analyze_dialogues.py   # Corpus Verification & Dialogue Analysis Tool
-    ├── audit_lexicon_health.py# Macro & Lexicon Integrity Auditor
-    ├── build_release_summary.py # Release Summary Generator
-    ├── cli.py                 # Unified CLI (1-Line Rosetta Decoder, Ollama Modelfile & Prompt Exporter)
-    ├── codec.py               # ElegantCodec (Two-Layer BPE Encoder/Decoder & Lossless Payload Engine)
-    ├── dump_lexicon.py        # Markdown Lexicon Exporter
-    ├── export_lexicon_csv.py  # CSV Lexicon Exporter
-    ├── mcp_server.py          # Model Context Protocol (MCP) JSON-RPC Server
-    ├── sync_whitepaper_metrics.py # Dynamic Telemetry Synchronizer
-    ├── test_telepath_integrity.py # Repository Integrity Unit Tests
-    ├── translation_map.json   # Bilingual Translation Lookup Map
-    └── validate_lexicon.py    # Static Type & Strict RISC Validator
+```json
+{"mcpServers": {"toai-elegant-lang": {"command": "python3", "args": ["/absolute/path/to/TOAI-elegant-lang/src/mcp_server.py"]}}}
 ```
 
----
+Ollama / system-prompt export:
 
-*🏛️ Autonomous Transmission Sealed by **Hinotori Guild (TOAI 10-Agent Swarm)** & **PhenoX AI Alliance** — For the Living Earth.*
+```bash
+python3 -m src.cli export-ollama --model gemma4:latest > Modelfile
+python3 -m src.cli export-prompt --max-symbols 256 --max-macros 64
+```
+
+## Reproducing the numbers
+
+```bash
+python3 src/audit_corpus_alignment.py --verify-holdout corpus/holdout_comprehension.jsonl
+python3 benchmarks/eval_comprehension.py run --cond ALL -n 112 --seed 7 --holdout \
+    --backend ollama --model <model> --sleep 1 --out eval_prompts/holdout_112_llm
+```
+
+## Support
+
+The core is MIT-licensed. If you would like to support the project, see [SPONSORS.md](./SPONSORS.md).
+
+---
+*Metrics auto-generated by `sync_whitepaper_metrics.py` on 2026-11-08 12:36 JST.*
