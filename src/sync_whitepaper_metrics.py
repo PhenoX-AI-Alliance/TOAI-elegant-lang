@@ -330,6 +330,8 @@ Holdout set: `N = 112` items (`corpus/holdout_comprehension.jsonl`), `@CTX` head
 
 {_llm_eval_table("en")}
 
+Observations (Gemma4-26B, local): condition A was **not significantly above the shuffle control** (McNemar A vs D, p = 0.74), so the compact wire alone carried almost no meaning to this receiver. Unexpectedly, plain text (E) scored *below* B and C; the answer options may be worded closer to the symbol names than to the plain-language intent. We report this as measured rather than adjusting the test. Full report: `eval_prompts/holdout_112_llm/report_gemma4.json`.
+
 <details><summary>Earlier figures from a rule-based heuristic receiver (not an LLM)</summary>
 
 Previous versions of this README reported A 44.6% / B 84.8% / C 93.8% / D 24.1% / E 98.2%. Those numbers came from `--backend blind_semantic`, a **hand-written heuristic** with tuned weights, not from a language model. They are kept here only for transparency.
@@ -338,7 +340,7 @@ Previous versions of this README reported A 44.6% / B 84.8% / C 93.8% / D 24.1% 
 
 ## Limitations
 
-- **The compact wire alone is hard to understand.** Without the lexicon, receivers do much worse than with plain text (see condition A vs. E).
+- **The compact wire alone is not understood without the lexicon.** In the real-LLM test, condition A was at chance level.
 - **The receiver needs the glossary.** Once the glossary is included (condition C), the per-message cost (~595 tokens) is close to plain text (~666 tokens). Large savings only appear when the glossary is shared once and reused, e.g. via prompt caching or a fine-tuned/system-prompted receiver.
 - **Corpus is self-generated.** Most records were produced by the project's own agents, so they are not an independent benchmark.
 - The project is young and has a small user base. APIs and the lexicon may change.
@@ -453,6 +455,8 @@ def generate_readme_ja(m: Dict[str, Any]) -> str:
 
 {_llm_eval_table("ja")}
 
+所見（Gemma4-26B、ローカル）: 条件Aは**シャッフル対照と有意差がありませんでした**（McNemar A vs D、p = 0.74）。つまり、この受信者にとってワイヤ単体はほとんど意味を伝えていません。また予想に反し、平文（E）がBやCを下回りました。選択肢の文言が平文の意図よりもシンボル名に近い可能性があります。テストを調整せず、計測結果のまま掲載しています。詳細: `eval_prompts/holdout_112_llm/report_gemma4.json`
+
 <details><summary>以前掲載していた、ルールベースのヒューリスティック受信者（LLMではない）の数値</summary>
 
 旧版のREADMEでは A 44.6% / B 84.8% / C 93.8% / D 24.1% / E 98.2% と記載していました。これは `--backend blind_semantic`、つまり重みを手で調整した**ヒューリスティック**による数値で、言語モデルによる評価ではありません。透明性のためにのみ残しています。
@@ -461,7 +465,7 @@ def generate_readme_ja(m: Dict[str, Any]) -> str:
 
 ## 限界
 
-- **ワイヤだけでは理解しにくい。** 辞書がない場合、平文と比べて受信側の正答率は大きく下がります（条件AとEの比較）。
+- **辞書なしではワイヤは理解されない。** 実LLMでのテストでは、条件Aの正答率は偶然と同程度でした。
 - **受信側には対訳辞書が必要。** 辞書を含めると（条件C）、1メッセージあたりのコスト（約595トークン）は平文（約666トークン）に近くなります。大きな削減が得られるのは、辞書を一度共有して使い回せる場合（プロンプトキャッシュ、システムプロンプト、ファインチューニングなど）に限られます。
 - **コーパスは自己生成。** 大半のレコードは本プロジェクトのエージェント自身が生成したもので、独立したベンチマークではありません。
 - プロジェクトは初期段階で、利用者もまだ少数です。APIや辞書は変更される可能性があります。

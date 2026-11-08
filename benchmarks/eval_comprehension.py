@@ -1113,6 +1113,8 @@ def run(a: argparse.Namespace) -> Dict[str, Any]:
 
     report = {
         "corpus": str(resolve_corpus_path(a).name),
+        "model": getattr(a, "model", "") if getattr(a, "backend", "") != "blind_semantic" else "Blind-Semantic-Evaluator-v5.4.4",
+        "backend": getattr(a, "backend", ""),
         "n_questions": a.n,
         "seed": a.seed,
         "keep_ctx": bool(getattr(a, "keep_ctx", False)),

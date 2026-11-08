@@ -1,4 +1,6 @@
 {
+  "model": "Gemma4-26B-PhenoX:latest (local Ollama)",
+  "backend": "ollama",
   "corpus": "holdout_comprehension.jsonl",
   "n_questions": 112,
   "seed": 7,
