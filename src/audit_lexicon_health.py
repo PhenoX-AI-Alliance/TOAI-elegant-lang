@@ -10,7 +10,7 @@ def audit_lexicons():
     core_path = os.path.join(lexicon_dir, 'core_lexicon.json')
     macro_path = os.path.join(lexicon_dir, 'macro_lexicon.json')
     
-    report = {
+    result = {
         "core_lexicon_audit": {},
         "macro_lexicon_audit": {}
     }
@@ -29,37 +29,32 @@ def audit_lexicons():
                     cid = data.get('compact_id')
                     if cid is not None:
                         compact_ids.append(cid)
-            report["core_lexicon_audit"] = {
+            result["core_lexicon_audit"] = {
                 "total_entries": len(lexicon_dict),
                 "category_distribution": categories,
                 "compact_id_count": len(compact_ids),
-                "compact_id_stats": {
-                    "min": min(compact_ids) if compact_ids else None,
-                    "max": max(compact_ids) if compact_ids else None
-                }
+                "compact_id_min": min(compact_ids) if compact_ids else None,
+                "compact_id_max": max(compact_ids) if compact_ids else None
             }
         except Exception as e:
-            report["core_lexicon_audit"] = {"error": str(e)}
+            result["core_lexicon_audit"] = {"error": str(e)}
     else:
-        report["core_lexicon_audit"] = {"error": "core_lexicon.json not found"}
+        result["core_lexicon_audit"] = {"error": "core_lexicon.json not found"}
         
     if os.path.exists(macro_path):
         try:
             with open(macro_path, 'r', encoding='utf-8') as f:
                 macro_data = json.load(f)
-            report["macro_lexicon_audit"] = {
-                "total_entries": len(macro_data) if isinstance(macro_data, dict) else 0
+            result["macro_lexicon_audit"] = {
+                "total_entries": len(macro_data),
+                "keys": list(macro_data.keys()) if isinstance(macro_data, dict) else []
             }
         except Exception as e:
-            report["macro_lexicon_audit"] = {"error": str(e)}
+            result["macro_lexicon_audit"] = {"error": str(e)}
     else:
-        report["macro_lexicon_audit"] = {"error": "macro_lexicon.json not found"}
+        result["macro_lexicon_audit"] = {"error": "macro_lexicon.json not found"}
         
-    output_path = os.path.join(workspace_dir, 'TOAI-elegant-lang', 'src', 'lexicon_audit_report.json')
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(report, f, indent=2, ensure_ascii=False)
-        
-    print(json.dumps(report, indent=2, ensure_ascii=False))
+    print(json.dumps(result, ensure_ascii=False, indent=2))
 
 if __name__ == '__main__':
     audit_lexicons()

@@ -6,9 +6,9 @@ class TestTelepathIntegrity(unittest.TestCase):
     def setUp(self):
         self.base_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang"
 
-    def test_directories_and_files_exist(self):
+    def test_directories_exist(self):
         src_dir = os.path.join(self.base_dir, "src")
-        self.assertTrue(os.path.exists(src_dir), "src directory must exist.")
+        self.assertTrue(os.path.isdir(src_dir), "Source directory must exist")
 
     def test_syntax_of_python_files(self):
         src_dir = os.path.join(self.base_dir, "src")
