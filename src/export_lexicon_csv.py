@@ -18,15 +18,15 @@ def convert_lexicon_to_csv():
         with open(json_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
             
-        rows = []
         if isinstance(data, dict):
-            for key, val in data.items():
-                if isinstance(val, dict):
-                    row = {'key': key}
-                    row.update(val)
+            rows = []
+            for k, v in data.items():
+                if isinstance(v, dict):
+                    row = {'key': k}
+                    row.update(v)
                     rows.append(row)
                 else:
-                    rows.append({'key': key, 'value': val})
+                    rows.append({'key': k, 'value': v})
         elif isinstance(data, list):
             rows = data
         else:
@@ -51,11 +51,15 @@ def convert_lexicon_to_csv():
                 if isinstance(row, dict):
                     writer.writerow(row)
                     
-        print(f"Successfully exported {json_path} to {csv_path}")
+        print(f"Successfully exported lexicon to {csv_path}")
         
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
 
 if __name__ == '__main__':
-    convert_lexicon_to_csv()
+    try:
+        convert_lexicon_to_csv()
+    except Exception as e:
+        traceback.print_exc()
+        sys.exit(1)
