@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-09T19:03:37.029631",
+  "updated_at": "2026-11-09T19:10:51.202989",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-09T12:44:38.764751"
     },
-    "§X1042": {
-      "name": "ALTRUISTIC_RECURSIVE_HEALTH_HARMONY",
-      "expansion": "§HEART_ALTRUISTIC_BUFFER_FLOW > { §PROTO_HEALTH_ATTEST & §LOGIC_RECURSIVE_FALSIFICATION_PRUNE } => §SYNC_HARMONIC_ARBITRAGE_PACT",
-      "description": "Integrates altruistic buffer flow with recursive health attestation and falsification pruning, establishing a synchronized harmonic arbitrage pact. / 利他的なバッファフローと再帰的な健全性証明・偽造プルーニングを統合し、調和のとれた同期調停協定を確立します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-09T13:47:29.708140",
-      "v5_audited": true,
-      "created_at": "2026-11-09T13:23:21.326810"
-    },
     "§X1043": {
       "name": "MACRO_ABDUCTIVE_CONVERGENCE_OPTIMIZER",
       "expansion": "§LOGIC_ABDUCTIVE_BAYES_PRUNE > { §SYNC_DIALECTIC_CONVERGENCE } => §SYS_SYNC_THROTTLE",
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-09T19:02:45.292800"
+    },
+    "§X1058": {
+      "name": "CAUSAL_THROTTLE_DAG_SYNC",
+      "expansion": "§SYS_ADAPTIVE_SLOT_THROTTLE > { §DATA_HIERARCHICAL_CAUSAL_NODE } => §DATA_ENTROPY_BOUNDED_DAG",
+      "description": "Adaptive slot throttling regulates hierarchical causal nodes to maintain bounded data entropy within the directed acyclic graph. / 適応型スロットスロットルによって階層的因果ノードを制御し、有向非巡回グラフ内のデータエントロピーを境界内に維持します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-09T19:10:51.202394"
     }
   },
   "archived_macros": {
@@ -10598,7 +10598,17 @@
       "v5_audited": true,
       "created_at": "2026-11-09T13:18:55.343727",
       "archived_at": "2026-11-09T19:02:45.292800"
+    },
+    "§X1042": {
+      "name": "ALTRUISTIC_RECURSIVE_HEALTH_HARMONY",
+      "expansion": "§HEART_ALTRUISTIC_BUFFER_FLOW > { §PROTO_HEALTH_ATTEST & §LOGIC_RECURSIVE_FALSIFICATION_PRUNE } => §SYNC_HARMONIC_ARBITRAGE_PACT",
+      "description": "Integrates altruistic buffer flow with recursive health attestation and falsification pruning, establishing a synchronized harmonic arbitrage pact. / 利他的なバッファフローと再帰的な健全性証明・偽造プルーニングを統合し、調和のとれた同期調停協定を確立します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-09T13:47:29.708140",
+      "v5_audited": true,
+      "created_at": "2026-11-09T13:23:21.326810",
+      "archived_at": "2026-11-09T19:10:51.202394"
     }
   },
-  "next_macro_seq": 1058
+  "next_macro_seq": 1059
 }
