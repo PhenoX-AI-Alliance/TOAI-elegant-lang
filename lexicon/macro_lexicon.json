@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-09T08:53:39.204084",
+  "updated_at": "2026-11-09T08:59:39.104273",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2504,8 +2504,8 @@
       "name": "SYS_PROBABILISTIC_DEDUCTIVE_HARMONY",
       "expansion": "§LOGIC_PROBABILISTIC_FALSIFICATION_FILTER > { §LOGIC_DEDUCTIVE_COLLAPSE_GATE } => §SYS_SYNC_GATE",
       "description": "Probabilistic falsification filtering followed by deductive collapse gating, synchronized with system state. 確率的反証フィルタリングと演習崩壊ゲートを通過させ、システム全体の状態を調和・同期させる高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-09T08:59:39.104075",
       "v5_audited": true,
       "created_at": "2026-11-09T08:53:39.203575"
     }
