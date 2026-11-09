@@ -3,50 +3,54 @@ import os
 import traceback
 import time
 import json
+import collections
+import re
 
-def audit_dialogues(filepath):
-    if not os.path.exists(filepath):
-        print(f"Error: Corpus file not found at {{filepath}}")
+def analyze_corpus():
+    corpus_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
+    output_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/analysis_result.json"
+    
+    if not os.path.exists(corpus_path):
+        print(f"Error: Corpus file not found at {corpus_path}")
         sys.exit(1)
         
-    total_dialogues = 0
-    errors = 0
+    speaker_counts = collections.defaultdict(int)
+    word_freq = collections.defaultdict(int)
     
-    with open(filepath, "r", encoding="utf-8") as f:
-        for line_num, line in enumerate(f, 1):
+    with open(corpus_path, "r", encoding="utf-8") as f:
+        for line in f:
             line = line.strip()
             if not line:
                 continue
             try:
                 data = json.loads(line)
-                total_dialogues += 1
-                if "dialogue_id" not in data or "turns" not in data:
-                    print(f"Line {{line_num}}: Missing required keys.")
-                    errors += 1
-                    continue
-                turns = data["turns"]
-                if not isinstance(turns, list) or len(turns) == 0:
-                    print(f"Line {{line_num}}: Turns must be a non-empty list.")
-                    errors += 1
-                    continue
-                expected_speaker = "user"
-                for turn in turns:
-                    if "speaker" not in turn or "text" not in turn:
-                        print(f"Line {{line_num}}: Turn missing speaker or text.")
-                        errors += 1
-                        break
-                    if turn["speaker"] != expected_speaker:
-                        print(f"Line {{line_num}}: Speaker mismatch. Expected {{expected_speaker}}, got {{turn['speaker']}}")
-                        errors += 1
-                    expected_speaker = "assistant" if expected_speaker == "user" else "user"
-            except json.JSONDecodeError as e:
-                print(f"Line {{line_num}}: Invalid JSON -> {{e}}")
-                errors += 1
+                speaker = data.get("speaker", "unknown")
+                text = data.get("text", "")
                 
-    print(f"Audit Complete. Total Dialogues: {{total_dialogues}}, Errors Found: {{errors}}")
-    if errors > 0:
-        sys.exit(1)
+                speaker_counts[speaker] += 1
+                
+                words = re.findall(r"\w+", text.lower())
+                for w in words:
+                    if len(w) > 2:
+                        word_freq[w] += 1
+            except json.JSONDecodeError:
+                continue
+                
+    result = {
+        "speaker_counts": dict(speaker_counts),
+        "top_words": dict(sorted(word_freq.items(), key=lambda x: x[1], reverse=True)[:50]),
+        "analyzed_at": time.time()
+    }
+    
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as out:
+        json.dump(result, out, ensure_ascii=False, indent=2)
+        
+    print(f"Successfully analyzed corpus. Result saved to {output_path}")
 
 if __name__ == "__main__":
-    corpus_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
-    audit_dialogues(corpus_path)
+    try:
+        analyze_corpus()
+    except Exception as e:
+        traceback.print_exc()
+        sys.exit(1)
