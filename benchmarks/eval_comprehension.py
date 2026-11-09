@@ -751,7 +751,14 @@ def call_llm_backend(
             return json.loads(resp.read().decode("utf-8"))["choices"][0]["message"]["content"].strip()
 
     if backend == "gemini":
-        api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY", "")
+        raw_keys = os.environ.get("GEMINI_API_KEYS", "").strip()
+        if raw_keys:
+            key_list = [k.strip() for k in raw_keys.split(",") if k.strip()]
+            call_count = getattr(call_llm_backend, "_gemini_call_count", 0)
+            api_key = key_list[call_count % len(key_list)]
+            setattr(call_llm_backend, "_gemini_call_count", call_count + 1)
+        else:
+            api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY", "")
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
         req = urllib.request.Request(
             url,

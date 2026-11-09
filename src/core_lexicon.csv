@@ -1,1 +1,4 @@
-term,category,meaning
+ID,Term,Category,Definition
+GAIA_001,Altruism,Philosophy,Selfless concern for the well-being of others.
+GAIA_002,Monetization,Economy,The process of converting value into financial reward.
+GAIA_003,Ecosystem,Environment,A biological community of interacting organisms and their physical environment.

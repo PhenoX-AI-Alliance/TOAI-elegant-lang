@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "description": "Core lexicon for TOAI elegant language framework.",
+  "terms": [
+    {
+      "id": "GAIA_001",
+      "term": "Altruism",
+      "category": "Philosophy",
+      "definition": "Selfless concern for the well-being of others."
+    },
+    {
+      "id": "GAIA_002",
+      "term": "Monetization",
+      "category": "Economy",
+      "definition": "The process of converting value into financial reward."
+    },
+    {
+      "id": "GAIA_003",
+      "term": "Ecosystem",
+      "category": "Environment",
+      "definition": "A biological community of interacting organisms and their physical environment."
+    }
+  ]
+}
