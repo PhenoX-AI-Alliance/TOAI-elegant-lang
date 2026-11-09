@@ -5,37 +5,37 @@ import time
 import json
 import csv
 
-def convert_json_to_csv():
+def convert_lexicon_to_csv():
     target_dir = '/home/phenox/gemini-sandbox/TOAI-elegant-lang'
     json_path = os.path.join(target_dir, 'core_lexicon.json')
     csv_path = os.path.join(target_dir, 'core_lexicon.csv')
     
+    if not os.path.exists(json_path):
+        print(f"Error: {json_path} does not exist.", file=sys.stderr)
+        sys.exit(1)
+        
     try:
-        if not os.path.exists(json_path):
-            print(f"Error: {json_path} does not exist.")
-            sys.exit(1)
-            
         with open(json_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
             
+        rows = []
         if isinstance(data, dict):
-            rows = []
-            for k, v in data.items():
-                if isinstance(v, dict):
-                    row = {'key': k}
-                    row.update(v)
+            for key, val in data.items():
+                if isinstance(val, dict):
+                    row = {'key': key}
+                    row.update(val)
                     rows.append(row)
                 else:
-                    rows.append({'key': k, 'value': v})
+                    rows.append({'key': key, 'value': val})
         elif isinstance(data, list):
             rows = data
         else:
-            print("Error: Unsupported JSON root structure.")
+            print("Error: Unsupported JSON root structure.", file=sys.stderr)
             sys.exit(1)
             
         if not rows:
-            print("Error: No data found to export.")
-            sys.exit(1)
+            print("Warning: No data to export.", file=sys.stderr)
+            return
             
         fieldnames = set()
         for row in rows:
@@ -51,11 +51,11 @@ def convert_json_to_csv():
                 if isinstance(row, dict):
                     writer.writerow(row)
                     
-        print(f"Successfully exported {csv_path}")
+        print(f"Successfully exported {json_path} to {csv_path}")
         
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
 
 if __name__ == '__main__':
-    convert_json_to_csv()
+    convert_lexicon_to_csv()
