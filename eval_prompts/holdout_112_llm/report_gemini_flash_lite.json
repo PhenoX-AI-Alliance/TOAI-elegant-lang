@@ -1,0 +1,632 @@
+{
+  "corpus": "holdout_comprehension.jsonl",
+  "model": "gemini-3.5-flash-lite",
+  "backend": "gemini",
+  "n_questions": 112,
+  "seed": 7,
+  "keep_ctx": false,
+  "rotate_options": false,
+  "conditions": {
+    "A": {
+      "condition": "A",
+      "keep_ctx": false,
+      "rotate_options": false,
+      "correct": 24,
+      "total": 112,
+      "micro_accuracy": 0.2143,
+      "macro_accuracy": 0.2143,
+      "wilson_95_ci": [
+        0.1484,
+        0.2991
+      ],
+      "recovery_subset": {
+        "correct": 10,
+        "total": 16,
+        "accuracy": 0.625,
+        "wilson_95_ci": [
+          0.3864,
+          0.8152
+        ]
+      },
+      "non_recovery_subset": {
+        "correct": 14,
+        "total": 96,
+        "accuracy": 0.1458,
+        "wilson_95_ci": [
+          0.0889,
+          0.23
+        ]
+      },
+      "by_domain_tag": {
+        "タスク交渉": {
+          "correct": 3,
+          "total": 8,
+          "accuracy": 0.375
+        },
+        "仮説検証": {
+          "correct": 4,
+          "total": 16,
+          "accuracy": 0.25
+        },
+        "実務・FX自動売買": {
+          "correct": 0,
+          "total": 8,
+          "accuracy": 0.0
+        },
+        "実務・コード生成委譲": {
+          "correct": 4,
+          "total": 8,
+          "accuracy": 0.5
+        },
+        "構文解析・検証": {
+          "correct": 0,
+          "total": 8,
+          "accuracy": 0.0
+        },
+        "潜在空間同期": {
+          "correct": 0,
+          "total": 8,
+          "accuracy": 0.0
+        },
+        "生命調和": {
+          "correct": 1,
+          "total": 16,
+          "accuracy": 0.0625
+        },
+        "緊急タスク交渉": {
+          "correct": 1,
+          "total": 8,
+          "accuracy": 0.125
+        },
+        "金融・リスク管理": {
+          "correct": 0,
+          "total": 8,
+          "accuracy": 0.0
+        },
+        "障害復旧": {
+          "correct": 5,
+          "total": 8,
+          "accuracy": 0.625
+        },
+        "障害復旧・自律協調": {
+          "correct": 5,
+          "total": 8,
+          "accuracy": 0.625
+        },
+        "高次伝達": {
+          "correct": 1,
+          "total": 8,
+          "accuracy": 0.125
+        }
+      },
+      "option_histogram": {
+        "A": 41,
+        "B": 24,
+        "C": 20,
+        "D": 26,
+        "INVALID": 1
+      },
+      "total_prompt_bpe_tokens": 30753,
+      "mean_prompt_bpe_tokens": 274.58,
+      "gain_over_chance_per_1k_tokens": -0.12
+    },
+    "B": {
+      "condition": "B",
+      "keep_ctx": false,
+      "rotate_options": false,
+      "correct": 84,
+      "total": 112,
+      "micro_accuracy": 0.75,
+      "macro_accuracy": 0.75,
+      "wilson_95_ci": [
+        0.6624,
+        0.821
+      ],
+      "recovery_subset": {
+        "correct": 15,
+        "total": 16,
+        "accuracy": 0.9375,
+        "wilson_95_ci": [
+          0.7167,
+          0.9889
+        ]
+      },
+      "non_recovery_subset": {
+        "correct": 69,
+        "total": 96,
+        "accuracy": 0.7188,
+        "wilson_95_ci": [
+          0.6217,
+          0.7989
+        ]
+      },
+      "by_domain_tag": {
+        "タスク交渉": {
+          "correct": 7,
+          "total": 8,
+          "accuracy": 0.875
+        },
+        "仮説検証": {
+          "correct": 16,
+          "total": 16,
+          "accuracy": 1.0
+        },
+        "実務・FX自動売買": {
+          "correct": 0,
+          "total": 8,
+          "accuracy": 0.0
+        },
+        "実務・コード生成委譲": {
+          "correct": 5,
+          "total": 8,
+          "accuracy": 0.625
+        },
+        "構文解析・検証": {
+          "correct": 4,
+          "total": 8,
+          "accuracy": 0.5
+        },
+        "潜在空間同期": {
+          "correct": 7,
+          "total": 8,
+          "accuracy": 0.875
+        },
+        "生命調和": {
+          "correct": 16,
+          "total": 16,
+          "accuracy": 1.0
+        },
+        "緊急タスク交渉": {
+          "correct": 7,
+          "total": 8,
+          "accuracy": 0.875
+        },
+        "金融・リスク管理": {
+          "correct": 0,
+          "total": 8,
+          "accuracy": 0.0
+        },
+        "障害復旧": {
+          "correct": 7,
+          "total": 8,
+          "accuracy": 0.875
+        },
+        "障害復旧・自律協調": {
+          "correct": 8,
+          "total": 8,
+          "accuracy": 1.0
+        },
+        "高次伝達": {
+          "correct": 7,
+          "total": 8,
+          "accuracy": 0.875
+        }
+      },
+      "option_histogram": {
+        "A": 29,
+        "B": 34,
+        "C": 21,
+        "D": 27,
+        "INVALID": 1
+      },
+      "total_prompt_bpe_tokens": 35310,
+      "mean_prompt_bpe_tokens": 315.27,
+      "gain_over_chance_per_1k_tokens": 1.42
+    },
+    "C": {
+      "condition": "C",
+      "keep_ctx": false,
+      "rotate_options": false,
+      "correct": 85,
+      "total": 112,
+      "micro_accuracy": 0.7589,
+      "macro_accuracy": 0.7589,
+      "wilson_95_ci": [
+        0.672,
+        0.8287
+      ],
+      "recovery_subset": {
+        "correct": 14,
+        "total": 16,
+        "accuracy": 0.875,
+        "wilson_95_ci": [
+          0.6398,
+          0.965
+        ]
+      },
+      "non_recovery_subset": {
+        "correct": 71,
+        "total": 96,
+        "accuracy": 0.7396,
+        "wilson_95_ci": [
+          0.6438,
+          0.8169
+        ]
+      },
+      "by_domain_tag": {
+        "タスク交渉": {
+          "correct": 7,
+          "total": 8,
+          "accuracy": 0.875
+        },
+        "仮説検証": {
+          "correct": 16,
+          "total": 16,
+          "accuracy": 1.0
+        },
+        "実務・FX自動売買": {
+          "correct": 0,
+          "total": 8,
+          "accuracy": 0.0
+        },
+        "実務・コード生成委譲": {
+          "correct": 4,
+          "total": 8,
+          "accuracy": 0.5
+        },
+        "構文解析・検証": {
+          "correct": 2,
+          "total": 8,
+          "accuracy": 0.25
+        },
+        "潜在空間同期": {
+          "correct": 8,
+          "total": 8,
+          "accuracy": 1.0
+        },
+        "生命調和": {
+          "correct": 16,
+          "total": 16,
+          "accuracy": 1.0
+        },
+        "緊急タスク交渉": {
+          "correct": 8,
+          "total": 8,
+          "accuracy": 1.0
+        },
+        "金融・リスク管理": {
+          "correct": 2,
+          "total": 8,
+          "accuracy": 0.25
+        },
+        "障害復旧": {
+          "correct": 6,
+          "total": 8,
+          "accuracy": 0.75
+        },
+        "障害復旧・自律協調": {
+          "correct": 8,
+          "total": 8,
+          "accuracy": 1.0
+        },
+        "高次伝達": {
+          "correct": 8,
+          "total": 8,
+          "accuracy": 1.0
+        }
+      },
+      "option_histogram": {
+        "A": 29,
+        "B": 31,
+        "C": 24,
+        "D": 25,
+        "INVALID": 3
+      },
+      "total_prompt_bpe_tokens": 66677,
+      "mean_prompt_bpe_tokens": 595.33,
+      "gain_over_chance_per_1k_tokens": 0.76
+    },
+    "D": {
+      "condition": "D",
+      "keep_ctx": false,
+      "rotate_options": false,
+      "correct": 23,
+      "total": 112,
+      "micro_accuracy": 0.2054,
+      "macro_accuracy": 0.2054,
+      "wilson_95_ci": [
+        0.1409,
+        0.2893
+      ],
+      "recovery_subset": {
+        "correct": 5,
+        "total": 16,
+        "accuracy": 0.3125,
+        "wilson_95_ci": [
+          0.1416,
+          0.556
+        ]
+      },
+      "non_recovery_subset": {
+        "correct": 18,
+        "total": 96,
+        "accuracy": 0.1875,
+        "wilson_95_ci": [
+          0.122,
+          0.277
+        ]
+      },
+      "by_domain_tag": {
+        "タスク交渉": {
+          "correct": 1,
+          "total": 8,
+          "accuracy": 0.125
+        },
+        "仮説検証": {
+          "correct": 7,
+          "total": 16,
+          "accuracy": 0.4375
+        },
+        "実務・FX自動売買": {
+          "correct": 0,
+          "total": 8,
+          "accuracy": 0.0
+        },
+        "実務・コード生成委譲": {
+          "correct": 1,
+          "total": 8,
+          "accuracy": 0.125
+        },
+        "構文解析・検証": {
+          "correct": 0,
+          "total": 8,
+          "accuracy": 0.0
+        },
+        "潜在空間同期": {
+          "correct": 0,
+          "total": 8,
+          "accuracy": 0.0
+        },
+        "生命調和": {
+          "correct": 6,
+          "total": 16,
+          "accuracy": 0.375
+        },
+        "緊急タスク交渉": {
+          "correct": 1,
+          "total": 8,
+          "accuracy": 0.125
+        },
+        "金融・リスク管理": {
+          "correct": 0,
+          "total": 8,
+          "accuracy": 0.0
+        },
+        "障害復旧": {
+          "correct": 2,
+          "total": 8,
+          "accuracy": 0.25
+        },
+        "障害復旧・自律協調": {
+          "correct": 3,
+          "total": 8,
+          "accuracy": 0.375
+        },
+        "高次伝達": {
+          "correct": 2,
+          "total": 8,
+          "accuracy": 0.25
+        }
+      },
+      "option_histogram": {
+        "A": 30,
+        "B": 22,
+        "C": 27,
+        "D": 32,
+        "INVALID": 1
+      },
+      "total_prompt_bpe_tokens": 35325,
+      "mean_prompt_bpe_tokens": 315.4,
+      "gain_over_chance_per_1k_tokens": -0.13
+    },
+    "E": {
+      "condition": "E",
+      "keep_ctx": false,
+      "rotate_options": false,
+      "correct": 75,
+      "total": 112,
+      "micro_accuracy": 0.6696,
+      "macro_accuracy": 0.6696,
+      "wilson_95_ci": [
+        0.5782,
+        0.7499
+      ],
+      "recovery_subset": {
+        "correct": 11,
+        "total": 16,
+        "accuracy": 0.6875,
+        "wilson_95_ci": [
+          0.444,
+          0.8584
+        ]
+      },
+      "non_recovery_subset": {
+        "correct": 64,
+        "total": 96,
+        "accuracy": 0.6667,
+        "wilson_95_ci": [
+          0.5676,
+          0.7529
+        ]
+      },
+      "by_domain_tag": {
+        "タスク交渉": {
+          "correct": 6,
+          "total": 8,
+          "accuracy": 0.75
+        },
+        "仮説検証": {
+          "correct": 16,
+          "total": 16,
+          "accuracy": 1.0
+        },
+        "実務・FX自動売買": {
+          "correct": 0,
+          "total": 8,
+          "accuracy": 0.0
+        },
+        "実務・コード生成委譲": {
+          "correct": 1,
+          "total": 8,
+          "accuracy": 0.125
+        },
+        "構文解析・検証": {
+          "correct": 2,
+          "total": 8,
+          "accuracy": 0.25
+        },
+        "潜在空間同期": {
+          "correct": 8,
+          "total": 8,
+          "accuracy": 1.0
+        },
+        "生命調和": {
+          "correct": 16,
+          "total": 16,
+          "accuracy": 1.0
+        },
+        "緊急タスク交渉": {
+          "correct": 7,
+          "total": 8,
+          "accuracy": 0.875
+        },
+        "金融・リスク管理": {
+          "correct": 0,
+          "total": 8,
+          "accuracy": 0.0
+        },
+        "障害復旧": {
+          "correct": 5,
+          "total": 8,
+          "accuracy": 0.625
+        },
+        "障害復旧・自律協調": {
+          "correct": 6,
+          "total": 8,
+          "accuracy": 0.75
+        },
+        "高次伝達": {
+          "correct": 8,
+          "total": 8,
+          "accuracy": 1.0
+        }
+      },
+      "option_histogram": {
+        "A": 27,
+        "B": 32,
+        "C": 27,
+        "D": 24,
+        "INVALID": 2
+      },
+      "total_prompt_bpe_tokens": 74603,
+      "mean_prompt_bpe_tokens": 666.1,
+      "gain_over_chance_per_1k_tokens": 0.56
+    }
+  },
+  "mcnemar_paired_tests": {
+    "A_vs_B": {
+      "n": 112,
+      "n11_both_correct": 22,
+      "b_only_first_correct": 2,
+      "c_only_second_correct": 62,
+      "n00_both_wrong": 26,
+      "chi2_cc": 54.3906,
+      "p_value_exact": 2.2562e-16,
+      "odds_ratio_c_over_b": 31.0,
+      "cohens_h": 1.1318,
+      "significant_p05": true,
+      "significant_p001": true
+    },
+    "B_vs_C": {
+      "n": 112,
+      "n11_both_correct": 79,
+      "b_only_first_correct": 5,
+      "c_only_second_correct": 6,
+      "n00_both_wrong": 22,
+      "chi2_cc": 0.0,
+      "p_value_exact": 1.0,
+      "odds_ratio_c_over_b": 1.2,
+      "cohens_h": 0.0207,
+      "significant_p05": false,
+      "significant_p001": false
+    },
+    "B_vs_D": {
+      "n": 112,
+      "n11_both_correct": 23,
+      "b_only_first_correct": 61,
+      "c_only_second_correct": 0,
+      "n00_both_wrong": 28,
+      "chi2_cc": 59.0164,
+      "p_value_exact": 8.6736e-19,
+      "odds_ratio_c_over_b": 0.0,
+      "cohens_h": -1.1538,
+      "significant_p05": true,
+      "significant_p001": true
+    },
+    "C_vs_D": {
+      "n": 112,
+      "n11_both_correct": 22,
+      "b_only_first_correct": 63,
+      "c_only_second_correct": 1,
+      "n00_both_wrong": 26,
+      "chi2_cc": 58.1406,
+      "p_value_exact": 7.0473e-18,
+      "odds_ratio_c_over_b": 0.02,
+      "cohens_h": -1.1745,
+      "significant_p05": true,
+      "significant_p001": true
+    },
+    "A_vs_D": {
+      "n": 112,
+      "n11_both_correct": 8,
+      "b_only_first_correct": 16,
+      "c_only_second_correct": 15,
+      "n00_both_wrong": 73,
+      "chi2_cc": 0.0,
+      "p_value_exact": 1.0,
+      "odds_ratio_c_over_b": 0.94,
+      "cohens_h": -0.0219,
+      "significant_p05": false,
+      "significant_p001": false
+    },
+    "A_vs_E": {
+      "n": 112,
+      "n11_both_correct": 16,
+      "b_only_first_correct": 8,
+      "c_only_second_correct": 59,
+      "n00_both_wrong": 29,
+      "chi2_cc": 37.3134,
+      "p_value_exact": 1.0167e-10,
+      "odds_ratio_c_over_b": 7.38,
+      "cohens_h": 0.9544,
+      "significant_p05": true,
+      "significant_p001": true
+    },
+    "B_vs_E": {
+      "n": 112,
+      "n11_both_correct": 71,
+      "b_only_first_correct": 13,
+      "c_only_second_correct": 4,
+      "n00_both_wrong": 24,
+      "chi2_cc": 3.7647,
+      "p_value_exact": 0.049042,
+      "odds_ratio_c_over_b": 0.31,
+      "cohens_h": -0.1774,
+      "significant_p05": true,
+      "significant_p001": false
+    },
+    "C_vs_E": {
+      "n": 112,
+      "n11_both_correct": 73,
+      "b_only_first_correct": 12,
+      "c_only_second_correct": 2,
+      "n00_both_wrong": 25,
+      "chi2_cc": 5.7857,
+      "p_value_exact": 0.012939,
+      "odds_ratio_c_over_b": 0.17,
+      "cohens_h": -0.1982,
+      "significant_p05": true,
+      "significant_p001": false
+    }
+  }
+}

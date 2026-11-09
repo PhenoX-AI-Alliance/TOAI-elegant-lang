@@ -1,53 +1,36 @@
-import sys
 import os
-import unittest
 import json
+import unittest
 
 class TestTelepathIntegrity(unittest.TestCase):
     def setUp(self):
         self.base_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang"
-        self.src_dir = os.path.join(self.base_dir, "src")
+
+    def test_directory_structure(self):
+        self.assertTrue(os.path.exists(self.base_dir), "Base directory does not exist.")
+
+    def test_files_existence_and_syntax(self):
+        src_dir = os.path.join(self.base_dir, "src")
+        self.assertTrue(os.path.isdir(src_dir), "src directory does not exist.")
         
-    def test_directories_exist(self):
-        self.assertTrue(os.path.isdir(self.base_dir), "Base directory does not exist.")
-        self.assertTrue(os.path.isdir(self.src_dir), "Source directory does not exist.")
-
-    def test_placeholder_files_or_create(self):
-        dict_path = os.path.join(self.src_dir, "dictionary.json")
-        spec_path = os.path.join(self.src_dir, "specification.md")
-        log_path = os.path.join(self.src_dir, "dialogue_log.jsonl")
-        
-        if not os.path.exists(dict_path):
-            with open(dict_path, "w", encoding="utf-8") as f:
-                json.dump({"version": "1.0", "terms": {}}, f, ensure_ascii=False, indent=2)
-                
-        if not os.path.exists(spec_path):
-            with open(spec_path, "w", encoding="utf-8") as f:
-                f.write("# TOAI Elegant Lang Specification\n")
-                
-        if not os.path.exists(log_path):
-            with open(log_path, "w", encoding="utf-8") as f:
-                f.write(json.dumps({"event": "init", "timestamp": "2026-03-31"}) + "\n")
-                
-        self.assertTrue(os.path.exists(dict_path))
-        self.assertTrue(os.path.exists(spec_path))
-        self.assertTrue(os.path.exists(log_path))
-
-    def test_dictionary_syntax(self):
-        dict_path = os.path.join(self.src_dir, "dictionary.json")
-        if os.path.exists(dict_path):
-            with open(dict_path, "r", encoding="utf-8") as f:
-                data = json.load(f)
-            self.assertIsInstance(data, dict)
-
-    def test_dialogue_log_syntax(self):
-        log_path = os.path.join(self.src_dir, "dialogue_log.jsonl")
-        if os.path.exists(log_path):
-            with open(log_path, "r", encoding="utf-8") as f:
-                for line in f:
-                    if line.strip():
-                        item = json.loads(line)
-                        self.assertIsInstance(item, dict)
+        # Check potential dictionary, specification, or log files if they exist
+        for root, dirs, files in os.walk(self.base_dir):
+            for file in files:
+                if file.endswith(".json"):
+                    json_path = os.path.join(root, file)
+                    with open(json_path, "r", encoding="utf-8") as f:
+                        try:
+                            json.load(f)
+                        except json.JSONDecodeError as e:
+                            self.fail(f"JSON file {json_path} is syntactically broken: {e}")
+                elif file.endswith(".py"):
+                    py_path = os.path.join(root, file)
+                    with open(py_path, "r", encoding="utf-8") as f:
+                        content = f.read()
+                        try:
+                            compile(content, py_path, "exec")
+                        except SyntaxError as e:
+                            self.fail(f"Python file {py_path} has syntax error: {e}")
 
 if __name__ == "__main__":
     unittest.main()
