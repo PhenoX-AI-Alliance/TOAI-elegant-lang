@@ -5,22 +5,20 @@ import time
 import json
 import csv
 
-def export_lexicon():
-    base_dir = '/home/phenox/gemini-sandbox/TOAI-elegant-lang'
-    src_dir = os.path.join(base_dir, 'src')
-    data_dir = os.path.join(base_dir, 'data')
-    os.makedirs(data_dir, exist_ok=True)
-    
-    json_path = os.path.join(data_dir, 'core_lexicon.json')
-    csv_path = os.path.join(data_dir, 'core_lexicon.csv')
+def convert_json_to_csv():
+    target_dir = '/home/phenox/gemini-sandbox/TOAI-elegant-lang'
+    src_dir = os.path.join(target_dir, 'src')
+    json_path = os.path.join(src_dir, 'core_lexicon.json')
+    csv_path = os.path.join(src_dir, 'core_lexicon.csv')
     
     if not os.path.exists(json_path):
         default_data = {
             "lexicon": [
-                {"id": 1, "term": "Gaia", "category": "ecosystem", "description": "The living Earth ecosystem."},
-                {"id": 2, "term": "Altruism", "category": "philosophy", "description": "Selfless concern for the well-being of others."}
+                {"term": "Gaia", "category": "ecosystem", "description": "The living earth ecosystem."},
+                {"term": "Altruism", "category": "philosophy", "description": "Selfless concern for the well-being of others."}
             ]
         }
+        os.makedirs(src_dir, exist_ok=True)
         with open(json_path, 'w', encoding='utf-8') as f:
             json.dump(default_data, f, ensure_ascii=False, indent=2)
             
@@ -28,23 +26,25 @@ def export_lexicon():
         data = json.load(f)
         
     items = data.get('lexicon', [])
-    
+    if not items and isinstance(data, list):
+        items = data
+    elif not items and isinstance(data, dict):
+        items = [data]
+        
     with open(csv_path, 'w', encoding='utf-8', newline='') as f:
         writer = csv.writer(f)
-        writer.writerow(['id', 'term', 'category', 'description'])
+        writer.writerow(['term', 'category', 'description'])
         for item in items:
-            writer.writerow([
-                item.get('id', ''),
-                item.get('term', ''),
-                item.get('category', ''),
-                item.get('description', '')
-            ])
+            term = item.get('term', '')
+            category = item.get('category', '')
+            description = item.get('description', '')
+            writer.writerow([term, category, description])
             
     print(f"Successfully exported lexicon to {csv_path}")
 
 if __name__ == '__main__':
     try:
-        export_lexicon()
+        convert_json_to_csv()
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
