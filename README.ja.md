@@ -125,4 +125,4 @@ python3 benchmarks/eval_comprehension.py run --cond ALL -n 112 --seed 7 --holdou
 コアはMITライセンスです。プロジェクトを支援していただける場合は [SPONSORS.md](./SPONSORS.md) をご覧ください。
 
 ---
-*数値は `sync_whitepaper_metrics.py` により 2026-11-10 08:01 JST に自動生成されました。*
+*数値は `sync_whitepaper_metrics.py` により 2026-11-10 08:17 JST に自動生成されました。*
