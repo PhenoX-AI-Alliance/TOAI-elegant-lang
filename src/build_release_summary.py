@@ -1,40 +1,58 @@
 import sys
 import os
 import traceback
-import subprocess
+import time
 import json
+import subprocess
 import datetime
 
-def get_git_logs():
+def get_git_log():
     try:
-        cmd = ['git', 'log', '-n', '10', '--pretty=format:%h - %an: %s (%ad)', '--date=short']
-        result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=True)
-        return result.stdout.strip().split('\n')
+        result = subprocess.run(
+            ['git', 'log', '-n', '10', '--oneline'],
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        return result.stdout.strip()
     except Exception as e:
-        return [f"Git log unavailable: {str(e)}"]
+        return f"Error fetching git log: {str(e)}"
 
-def scan_workspace():
+def scan_whitepaper():
     workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    white_paper_path = os.path.join(workspace_dir, 'WHITE_PAPER.md')
-    summary = {
-        "timestamp": datetime.datetime.now().isoformat(),
-        "white_paper_exists": os.path.exists(white_paper_path),
-        "git_logs": get_git_logs()
-    }
-    return summary
+    possible_paths = [
+        os.path.join(workspace_dir, 'TOAI-elegant-lang', 'WHITEPAPER.md'),
+        os.path.join(workspace_dir, 'WHITEPAPER.md'),
+    ]
+    for path in possible_paths:
+        if os.path.exists(path):
+            try:
+                with open(path, 'r', encoding='utf-8') as f:
+                    return f.read()[:1000] # Return first 1000 chars as summary
+            except Exception as e:
+                return f"Error reading whitepaper: {str(e)}"
+    return "Whitepaper not found."
 
 def main():
     try:
-        summary = scan_workspace()
         workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
         output_dir = os.path.join(workspace_dir, 'TOAI_Generated')
         os.makedirs(output_dir, exist_ok=True)
         
-        output_path = os.path.join(output_dir, 'release_summary.json')
-        with open(output_path, 'w', encoding='utf-8') as f:
-            json.dump(summary, f, indent=2, ensure_ascii=False)
+        git_log = get_git_log()
+        whitepaper_summary = scan_whitepaper()
+        
+        release_data = {
+            "timestamp": datetime.datetime.now().isoformat(),
+            "git_log": git_log,
+            "whitepaper_summary": whitepaper_summary
+        }
+        
+        output_file = os.path.join(output_dir, 'release_summary.json')
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(release_data, f, ensure_ascii=False, indent=2)
             
-        print(f"Successfully generated release summary at: {output_path}")
+        print(f"Release summary successfully built and saved to {output_file}")
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
