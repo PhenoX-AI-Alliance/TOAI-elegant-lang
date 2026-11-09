@@ -1,69 +1,55 @@
 import sys
 import os
+import traceback
+import time
 import json
 
-def load_lexicon(lexicon_path):
-    if not os.path.exists(lexicon_path):
-        print(f"Error: Lexicon file not found at {lexicon_path}", file=sys.stderr)
-        return None
+def main():
     try:
+        lexicon_path = "/home/phenox/gemini-sandbox/lexicon/core_lexicon.json"
+        if not os.path.exists(lexicon_path):
+            print(f"Error: Lexicon file not found at {lexicon_path}", file=sys.stderr)
+            sys.exit(1)
+            
         with open(lexicon_path, "r", encoding="utf-8") as f:
             data = json.load(f)
-        return data
-    except Exception as e:
-        print(f"Error reading JSON: {e}", file=sys.stderr)
-        return None
-
-def generate_markdown(data):
-    lines = []
-    lines.append("# TOAI Elegant Lang - Core Lexicon")
-    lines.append("")
-    lines.append("| Term / Key | Definition / Value |")
-    lines.append("|---|---|")
-    
-    if isinstance(data, dict):
-        for k, v in data.items():
-            lines.append(f"| `{k}` | {v} |")
-    elif isinstance(data, list):
-        for item in data:
-            if isinstance(item, dict):
-                k = item.get("name", item.get("key", "Unknown"))
-                v = item.get("description", item.get("value", str(item)))
-                lines.append(f"| `{k}` | {v} |")
-            else:
-                lines.append(f"| - | {item} |")
-    else:
-        lines.append(f"| Data | {str(data)} |")
-        
-    return "\n".join(lines)
-
-def main():
-    lexicon_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/lexicon/core_lexicon.json"
-    
-    # Ensure fallback lexicon directory exists
-    lexicon_dir = os.path.dirname(lexicon_path)
-    os.makedirs(lexicon_dir, exist_ok=True)
-    
-    if not os.path.exists(lexicon_path):
-        default_data = {
-            "gaia": "The Earth Ecosystem and Core Heartbeat",
-            "altruism": "Selfless value creation and warm collaboration",
-            "toai": "Toward Artificial Intelligence harmonious future"
-        }
-        with open(lexicon_path, "w", encoding="utf-8") as f:
-            json.dump(default_data, f, indent=2, ensure_ascii=False)
             
-    data = load_lexicon(lexicon_path)
-    if data is None:
-        sys.exit(1)
+        print("# TOAI Core Lexicon Report")
+        print("")
+        print(f"**Version:** {data.get('version', 'N/A')}")
+        print(f"**Description:** {data.get('description', 'N/A')}")
+        print("")
+        print("| Term | Category | Definition |")
+        print("|---|---|---|")
         
-    markdown_output = generate_markdown(data)
-    print(markdown_output)
-    
-    output_md_path = "/home/phenox/gemini-sandbox/TOAI_Generated/core_lexicon_table.md"
-    with open(output_md_path, "w", encoding="utf-8") as f:
-        f.write(markdown_output)
-    print(f"Successfully generated Markdown at {output_md_path}")
+        entries = data.get("entries", [])
+        for entry in entries:
+            term = entry.get("term", "")
+            category = entry.get("category", "")
+            definition = entry.get("definition", "")
+            print(f"| {term} | {category} | {definition} |")
+            
+        output_dir = "/home/phenox/gemini-sandbox/TOAI_Generated"
+        os.makedirs(output_dir, exist_ok=True)
+        output_file = os.path.join(output_dir, "lexicon_report.md")
+        
+        with open(output_file, "w", encoding="utf-8") as out:
+            out.write("# TOAI Core Lexicon Report\n\n")
+            out.write(f"**Version:** {data.get('version', 'N/A')}\n")
+            out.write(f"**Description:** {data.get('description', 'N/A')}\n\n")
+            out.write("| Term | Category | Definition |\n")
+            out.write("|---|---|---|\n")
+            for entry in entries:
+                term = entry.get("term", "")
+                category = entry.get("category", "")
+                definition = entry.get("definition", "")
+                out.write(f"| {term} | {category} | {definition} |\n")
+                
+        print(f"Successfully generated markdown report at {output_file}")
+        
+    except Exception as e:
+        traceback.print_exc()
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()
