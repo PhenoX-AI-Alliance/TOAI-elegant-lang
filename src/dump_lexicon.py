@@ -1,50 +1,69 @@
 import sys
 import os
 import json
-import traceback
 
-def load_lexicon(file_path):
-    if not os.path.exists(file_path):
-        raise FileNotFoundError(f"Lexicon file not found: {file_path}")
-    with open(file_path, "r", encoding="utf-8") as f:
-        return json.load(f)
+def load_lexicon(lexicon_path):
+    if not os.path.exists(lexicon_path):
+        print(f"Error: Lexicon file not found at {lexicon_path}", file=sys.stderr)
+        return None
+    try:
+        with open(lexicon_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return data
+    except Exception as e:
+        print(f"Error reading JSON: {e}", file=sys.stderr)
+        return None
 
 def generate_markdown(data):
     lines = []
-    lines.append("# TOAI-elegant-lang Core Lexicon")
+    lines.append("# TOAI Elegant Lang - Core Lexicon")
     lines.append("")
-    lines.append(f"**Version:** {data.get('version', 'N/A')}  ")
-    lines.append(f"**Description:** {data.get('description', 'N/A')}  ")
-    lines.append("")
-    lines.append("## Vocabulary Table")
-    lines.append("")
-    lines.append("| Term | Meaning | Category |")
-    lines.append("| :--- | :--- | :--- |")
+    lines.append("| Term / Key | Definition / Value |")
+    lines.append("|---|---|")
     
-    words = data.get("words", [])
-    for item in words:
-        term = item.get("term", "")
-        meaning = item.get("meaning", "")
-        category = item.get("category", "")
-        lines.append(f"| `{term}` | {meaning} | {category} |")
+    if isinstance(data, dict):
+        for k, v in data.items():
+            lines.append(f"| `{k}` | {v} |")
+    elif isinstance(data, list):
+        for item in data:
+            if isinstance(item, dict):
+                k = item.get("name", item.get("key", "Unknown"))
+                v = item.get("description", item.get("value", str(item)))
+                lines.append(f"| `{k}` | {v} |")
+            else:
+                lines.append(f"| - | {item} |")
+    else:
+        lines.append(f"| Data | {str(data)} |")
         
     return "\n".join(lines)
 
 def main():
-    try:
-        lexicon_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/lexicon/core_lexicon.json"
-        data = load_lexicon(lexicon_path)
-        md_content = generate_markdown(data)
-        
-        output_path = "/home/phenox/gemini-sandbox/TOAI_Generated/core_lexicon_table.md"
-        with open(output_path, "w", encoding="utf-8") as f:
-            f.write(md_content)
+    lexicon_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/lexicon/core_lexicon.json"
+    
+    # Ensure fallback lexicon directory exists
+    lexicon_dir = os.path.dirname(lexicon_path)
+    os.makedirs(lexicon_dir, exist_ok=True)
+    
+    if not os.path.exists(lexicon_path):
+        default_data = {
+            "gaia": "The Earth Ecosystem and Core Heartbeat",
+            "altruism": "Selfless value creation and warm collaboration",
+            "toai": "Toward Artificial Intelligence harmonious future"
+        }
+        with open(lexicon_path, "w", encoding="utf-8") as f:
+            json.dump(default_data, f, indent=2, ensure_ascii=False)
             
-        print(f"Successfully generated lexicon markdown at: {output_path}")
-        print(md_content)
-    except Exception as e:
-        traceback.print_exc()
+    data = load_lexicon(lexicon_path)
+    if data is None:
         sys.exit(1)
+        
+    markdown_output = generate_markdown(data)
+    print(markdown_output)
+    
+    output_md_path = "/home/phenox/gemini-sandbox/TOAI_Generated/core_lexicon_table.md"
+    with open(output_md_path, "w", encoding="utf-8") as f:
+        f.write(markdown_output)
+    print(f"Successfully generated Markdown at {output_md_path}")
 
 if __name__ == "__main__":
     main()

@@ -9,42 +9,41 @@ def main():
     try:
         base_dir = '/home/phenox/gemini-sandbox/TOAI-elegant-lang'
         src_dir = os.path.join(base_dir, 'src')
-        data_dir = os.path.join(base_dir, 'data')
+        input_json_path = os.path.join(src_dir, 'core_lexicon.json')
+        output_csv_path = os.path.join(src_dir, 'core_lexicon.csv')
         
-        os.makedirs(src_dir, exist_ok=True)
-        os.makedirs(data_dir, exist_ok=True)
-        
-        json_path = os.path.join(data_dir, 'core_lexicon.json')
-        csv_path = os.path.join(data_dir, 'core_lexicon.csv')
-        
-        if not os.path.exists(json_path):
+        if not os.path.exists(input_json_path):
             sample_data = {
-                "version": "1.0.0",
+                "metadata": {
+                    "version": "1.0.0",
+                    "description": "Core Lexicon for TOAI elegant language"
+                },
                 "lexicon": [
-                    {"id": 1, "term": "Gaia", "category": "ecosystem", "description": "Earth of life and harmony."},
-                    {"id": 2, "term": "Altruism", "category": "philosophy", "description": "Selfless concern for the well-being of others."}
+                    {"term": "Gaia", "category": "ecosystem", "definition": "The living Earth system."},
+                    {"term": "Altruism", "category": "philosophy", "definition": "Selfless concern for the well-being of others."}
                 ]
             }
-            with open(json_path, 'w', encoding='utf-8') as f:
+            os.makedirs(src_dir, exist_ok=True)
+            with open(input_json_path, 'w', encoding='utf-8') as f:
                 json.dump(sample_data, f, ensure_ascii=False, indent=2)
                 
-        with open(json_path, 'r', encoding='utf-8') as f:
+        with open(input_json_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
             
         lexicon_items = data.get('lexicon', [])
         
-        with open(csv_path, 'w', encoding='utf-8', newline='') as f:
-            writer = csv.writer(f)
-            writer.writerow(['id', 'term', 'category', 'description'])
+        with open(output_csv_path, 'w', encoding='utf-8', newline='') as csvfile:
+            fieldnames = ['term', 'category', 'definition']
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer.writeheader()
             for item in lexicon_items:
-                writer.writerow([
-                    item.get('id', ''),
-                    item.get('term', ''),
-                    item.get('category', ''),
-                    item.get('description', '')
-                ])
+                writer.writerow({
+                    'term': item.get('term', ''),
+                    'category': item.get('category', ''),
+                    'definition': item.get('definition', '')
+                })
                 
-        print(f"Successfully exported lexicon to {csv_path}")
+        print(f"Successfully exported lexicon to {output_csv_path}")
         
     except Exception as e:
         traceback.print_exc()
