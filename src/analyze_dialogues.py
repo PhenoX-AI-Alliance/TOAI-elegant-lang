@@ -1,18 +1,18 @@
 import sys
 import os
 import traceback
+import time
 import json
 
-def analyze():
-    corpus_path = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
+def audit_dialogues(corpus_path):
     if not os.path.exists(corpus_path):
         print(f"Error: Corpus file not found at {corpus_path}")
         sys.exit(1)
-
+        
     total_dialogues = 0
-    malformed_count = 0
-    audit_results = []
-
+    errors = 0
+    
+    print(f"Starting audit of dialogues in {corpus_path}...")
     with open(corpus_path, "r", encoding="utf-8") as f:
         for line_num, line in enumerate(f, 1):
             line = line.strip()
@@ -22,49 +22,33 @@ def analyze():
                 data = json.loads(line)
                 total_dialogues += 1
                 if "dialogue_id" not in data or "turns" not in data:
-                    malformed_count += 1
-                    audit_results.append({"line": line_num, "error": "Missing required keys"})
+                    print(f"Line {line_num}: Missing required fields (dialogue_id or turns)")
+                    errors += 1
                     continue
                 turns = data["turns"]
                 if not isinstance(turns, list) or len(turns) == 0:
-                    malformed_count += 1
-                    audit_results.append({"line": line_num, "error": "Turns is empty or not a list"})
+                    print(f"Line {line_num}: 'turns' must be a non-empty list")
+                    errors += 1
                     continue
-                
-                expected_role = "user"
-                role_error = False
-                for turn in turns:
-                    if "role" not in turn or "content" not in turn:
-                        role_error = True
+                expected_speaker = "user"
+                for turn_idx, turn in enumerate(turns):
+                    if "speaker" not in turn or "text" not in turn:
+                        print(f"Line {line_num}, Turn {turn_idx}: Missing speaker or text")
+                        errors += 1
                         break
-                    if turn["role"] != expected_role:
-                        role_error = True
-                        break
-                    expected_role = "assistant" if expected_role == "user" else "user"
+                    current_speaker = turn["speaker"]
+                    if current_speaker != expected_speaker:
+                        print(f"Line {line_num}, Turn {turn_idx}: Speaker order mismatch. Expected {expected_speaker}, got {current_speaker}")
+                        errors += 1
+                    expected_speaker = "assistant" if expected_speaker == "user" else "user"
+            except json.JSONDecodeError as e:
+                print(f"Line {line_num}: Invalid JSON - {e}")
+                errors += 1
                 
-                if role_error:
-                    malformed_count += 1
-                    audit_results.append({"line": line_num, "error": "Turn alternation role mismatch or missing fields"})
-            except json.JSONDecodeError:
-                malformed_count += 1
-                audit_results.append({"line": line_num, "error": "Invalid JSON format"})
-
-    report = {
-        "total_dialogues": total_dialogues,
-        "malformed_count": malformed_count,
-        "audit_results": audit_results
-    }
-    
-    report_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/audit_report.json"
-    with open(report_path, "w", encoding="utf-8") as rf:
-        json.dump(report, rf, ensure_ascii=False, indent=2)
-    
-    print(f"Audit completed. Total: {total_dialogues}, Malformed: {malformed_count}")
-    print(f"Report saved to {report_path}")
+    print(f"Audit completed. Total dialogues: {total_dialogues}, Errors found: {errors}")
+    if errors > 0:
+        sys.exit(1)
 
 if __name__ == "__main__":
-    try:
-        analyze()
-    except Exception as e:
-        traceback.print_exc()
-        sys.exit(1)
+    corpus_file = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
+    audit_dialogues(corpus_file)
