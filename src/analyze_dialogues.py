@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import sys
 import os
 import traceback
@@ -8,56 +7,52 @@ import json
 def audit_dialogues():
     corpus_path = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
     if not os.path.exists(corpus_path):
-        print(f"Error: Corpus path not found: {corpus_path}")
+        print(f"Error: Corpus file not found at {corpus_path}")
         sys.exit(1)
-
-    dialogues = {}
-    total_lines = 0
-    parse_errors = 0
+        
+    total_dialogues = 0
+    error_count = 0
+    audit_results = []
 
     with open(corpus_path, "r", encoding="utf-8") as f:
         for line_num, line in enumerate(f, 1):
-            total_lines += 1
             line = line.strip()
             if not line:
                 continue
+            total_dialogues += 1
             try:
-                record = json.loads(line)
-                d_id = record.get("dialogue_id")
-                if d_id is None:
-                    parse_errors += 1
-                    continue
-                if d_id not in dialogues:
-                    dialogues[d_id] = []
-                dialogues[d_id].append(record)
-            except json.JSONDecodeError:
-                parse_errors += 1
+                data = json.loads(line)
+                if "dialogue_id" not in data or "turns" not in data:
+                    raise ValueError(f"Missing required keys in line {line_num}")
+                
+                turns = data["turns"]
+                if not isinstance(turns, list) or len(turns) == 0:
+                    raise ValueError(f"Invalid or empty turns in dialogue {data.get('dialogue_id', line_num)}")
+                
+                expected_role = "user"
+                for turn_idx, turn in enumerate(turns):
+                    if "role" not in turn or "content" not in turn:
+                        raise ValueError(f"Turn {turn_idx} missing role or content in dialogue {data.get('dialogue_id')}")
+                    if turn["role"] != expected_role:
+                        raise ValueError(f"Role mismatch in dialogue {data.get('dialogue_id')} at turn {turn_idx}: expected {expected_role}, got {turn['role']}")
+                    expected_role = "assistant" if expected_role == "user" else "user"
+                
+                audit_results.append({"dialogue_id": data["dialogue_id"], "status": "OK"})
+            except Exception as e:
+                error_count += 1
+                audit_results.append({"line": line_num, "status": "ERROR", "message": str(e)})
 
-    print(f"Total lines read: {total_lines}")
-    print(f"Parse errors: {parse_errors}")
-    print(f"Unique dialogues found: {len(dialogues)}")
-
-    consistency_issues = 0
-    for d_id, turns in dialogues.items():
-        sorted_turns = sorted(turns, key=lambda x: x.get("turn", 0))
-        expected_turn = 1
-        for t in sorted_turns:
-            if t.get("turn") != expected_turn:
-                consistency_issues += 1
-            expected_turn += 1
-
-    print(f"Consistency issues found: {consistency_issues}")
     report = {
-        "total_lines": total_lines,
-        "parse_errors": parse_errors,
-        "unique_dialogues": len(dialogues),
-        "consistency_issues": consistency_issues,
-        "timestamp": time.time()
+        "timestamp": time.time(),
+        "total_dialogues": total_dialogues,
+        "error_count": error_count,
+        "results": audit_results
     }
+    
     report_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/audit_report.json"
     with open(report_path, "w", encoding="utf-8") as rf:
         json.dump(report, rf, ensure_ascii=False, indent=2)
-    print(f"Audit report successfully saved to {report_path}")
+    print(f"Audit completed. Total: {total_dialogues}, Errors: {error_count}. Report saved to {report_path}")
 
 if __name__ == "__main__":
     try:
