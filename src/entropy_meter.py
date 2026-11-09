@@ -1,48 +1,42 @@
 # -*- coding: utf-8 -*-
 import sys
 import os
-import time
-import json
+import math
 import zlib
 
-def benchmark_entropy(japanese_text: str, elegant_text: str) -> dict:
-    jp_bytes = japanese_text.encode('utf-8')
-    el_bytes = elegant_text.encode('utf-8')
+def calculate_entropy_and_metrics(jp_text: str, elegant_text: str) -> dict:
+    jp_bytes = jp_text.encode('utf-8')
+    elegant_bytes = elegant_text.encode('utf-8')
     
-    jp_len = len(jp_bytes)
-    el_len = len(el_bytes)
+    jp_len = len(jp_text)
+    elegant_len = len(elegant_text)
     
-    ratio_length = el_len / jp_len if jp_len > 0 else 0.0
+    char_ratio = (elegant_len / jp_len) if jp_len > 0 else 0.0
     
-    jp_chars = len(japanese_text)
-    el_chars = len(elegant_text)
-    
-    jp_tokens_approx = jp_chars * 1.5
-    el_tokens_approx = el_chars * 1.0
-    
-    ratio_tokens = el_tokens_approx / jp_tokens_approx if jp_tokens_approx > 0 else 0.0
+    jp_tokens_approx = math.ceil(jp_len / 2.0)
+    elegant_tokens_approx = math.ceil(elegant_len / 4.0)
+    token_ratio = (elegant_tokens_approx / jp_tokens_approx) if jp_tokens_approx > 0 else 0.0
     
     jp_compressed = zlib.compress(jp_bytes)
-    el_compressed = zlib.compress(el_bytes)
+    elegant_compressed = zlib.compress(elegant_bytes)
     
-    jp_compression_ratio = len(jp_compressed) / jp_len if jp_len > 0 else 1.0
-    el_compression_ratio = len(el_compressed) / el_len if el_len > 0 else 1.0
+    jp_compression_rate = len(jp_compressed) / len(jp_bytes) if len(jp_bytes) > 0 else 0.0
+    elegant_compression_rate = len(elegant_compressed) / len(elegant_bytes) if len(elegant_bytes) > 0 else 0.0
     
     metrics = {
-        "japanese_byte_length": jp_len,
-        "elegant_byte_length": el_len,
-        "byte_length_ratio": ratio_length,
-        "japanese_approx_tokens": jp_tokens_approx,
-        "elegant_approx_tokens": el_tokens_approx,
-        "token_ratio": ratio_tokens,
-        "japanese_compression_ratio": jp_compression_ratio,
-        "elegant_compression_ratio": el_compression_ratio,
-        "timestamp": time.time()
+        "jp_char_count": jp_len,
+        "elegant_char_count": elegant_len,
+        "char_ratio": char_ratio,
+        "jp_tokens_approx": jp_tokens_approx,
+        "elegant_tokens_approx": elegant_tokens_approx,
+        "token_ratio": token_ratio,
+        "jp_compression_rate": jp_compression_rate,
+        "elegant_compression_rate": elegant_compression_rate
     }
     return metrics
 
 if __name__ == "__main__":
-    sample_jp = "命の地球エコシステムにおいて、利性と温かさを両立させる。"
-    sample_el = "Gaia.eco(altruism=warmth, efficiency=balanced)"
-    result = benchmark_entropy(sample_jp, sample_el)
-    print(json.dumps(result, ensure_ascii=False, indent=2))
+    sample_jp = "命の地球エコシステムにおいて、利他と温かさを大切にしながら効率的なコード生成を行います。"
+    sample_el = "GaiaEco.altruistic().warmth().generate_code(efficiency=HIGH);"
+    result = calculate_entropy_and_metrics(sample_jp, sample_el)
+    print("Entropy Benchmark Result:", result)

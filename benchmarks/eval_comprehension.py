@@ -731,7 +731,7 @@ def call_llm_backend(
 
     if backend == "openai":
         base_url = os.environ.get("OPENAI_BASE_URL", "https://api.openai.com/v1").rstrip("/")
-        max_tok = 350 if "claude" in model.lower() else 10
+        max_tok = 1000 if "claude" in model.lower() else 10
         payload = {
             "model": model,
             "temperature": 0.0,
@@ -750,7 +750,8 @@ def call_llm_backend(
             data=json.dumps(payload).encode("utf-8"),
         )
         with urllib.request.urlopen(req, timeout=timeout) as resp:
-            return json.loads(resp.read().decode("utf-8"))["choices"][0]["message"]["content"].strip()
+            content = json.loads(resp.read().decode("utf-8"))["choices"][0]["message"].get("content")
+        return (content or "").strip()
 
     if backend == "gemini":
         raw_keys = os.environ.get("GEMINI_API_KEYS", "").strip()

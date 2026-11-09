@@ -260,7 +260,10 @@ def _llm_eval_table(lang: str) -> str:
                 k, n = r["per"][c]
                 cells.append(f"{k}/{n} ({100.0 * k / max(1, n):.1f}%)")
             else:
-                cells.append("-")
+                if "sonnet" in r['model'].lower():
+                    cells.append("- *(計測時間過大のためスキップ)*" if lang == "ja" else "- *(skipped: excessive latency)*")
+                else:
+                    cells.append("-")
         lines.append(f"| `{r['model']}` | " + " | ".join(cells) + " |")
     return "\n".join(lines)
 

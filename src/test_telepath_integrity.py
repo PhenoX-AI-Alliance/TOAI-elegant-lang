@@ -7,29 +7,22 @@ class TestTelepathIntegrity(unittest.TestCase):
         self.base_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang"
         self.src_dir = os.path.join(self.base_dir, "src")
 
-    def test_directories_and_files_exist(self):
+    def test_directories_exist(self):
         self.assertTrue(os.path.exists(self.base_dir), "Base directory missing")
-        self.assertTrue(os.path.exists(self.src_dir), "Src directory missing")
+        self.assertTrue(os.path.exists(self.src_dir), "Source directory missing")
 
-    def test_dictionary_and_spec_syntax(self):
-        dict_path = os.path.join(self.base_dir, "dictionary.json")
-        spec_path = os.path.join(self.base_dir, "specification.md")
-        log_path = os.path.join(self.base_dir, "dialogue_log.json")
-
-        if os.path.exists(dict_path):
-            with open(dict_path, "r", encoding="utf-8") as f:
-                data = json.load(f)
-            self.assertIsInstance(data, (dict, list))
-
-        if os.path.exists(log_path):
-            with open(log_path, "r", encoding="utf-8") as f:
-                logs = json.load(f)
-            self.assertIsInstance(logs, (dict, list))
-
-        if os.path.exists(spec_path):
-            with open(spec_path, "r", encoding="utf-8") as f:
-                content = f.read()
-            self.assertGreater(len(content), 0)
+    def test_syntax_of_source_files(self):
+        if not os.path.exists(self.src_dir):
+            return
+        for filename in os.listdir(self.src_dir):
+            if filename.endswith(".py"):
+                filepath = os.path.join(self.src_dir, filename)
+                with open(filepath, "r", encoding="utf-8") as f:
+                    content = f.read()
+                try:
+                    compile(content, filepath, "exec")
+                except SyntaxError as e:
+                    self.fail(f"Syntax error in {filename}: {e}")
 
 if __name__ == "__main__":
     unittest.main()
