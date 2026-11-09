@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-10T02:22:08.569521",
+  "updated_at": "2026-11-10T02:46:19.082101",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1483,15 +1483,6 @@
       "v5_audited": true,
       "created_at": "2026-11-05T12:40:28.664711"
     },
-    "§X836": {
-      "name": "GAIA_HARMONIC_ATTEST_MERGE",
-      "expansion": "§GAIA_WARMTH > { §PROTO_HEALTH_ATTEST } => §SYNC_ATOMIC_CONSENSUS_MERGE",
-      "description": "Combines Gaia warmth with health attestation to achieve atomic consensus merge. / ガイアの温もりと健全性証明を統合し、原子的な合意マージを実現します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-05T16:21:30.625228",
-      "v5_audited": true,
-      "created_at": "2026-11-05T13:41:32.600145"
-    },
     "§X837": {
       "name": "GENTLE_ENTROPY_HARMONY_LATTICE",
       "expansion": "§DATA_ENTROPY_CAUSAL_LATTICE > { §SAFE_FALLBACK_HARMONY } => §GENTLE_RESOURCE_SHARING",
@@ -2365,15 +2356,6 @@
       "v5_audited": true,
       "created_at": "2026-11-09T19:10:51.202394"
     },
-    "§X1059": {
-      "name": "HARMONIC_RESOURCE_SYNERGY",
-      "expansion": "§RESOURCE_ALLOCATION_HARMONY > { §HARMONIC_RECOVERY_NEXUS } => §SYNC_ATOMIC_MERGE",
-      "description": "Allocates resources harmoniously to recover system integrity and synchronize atomic data merges. リソースを調和的に配分し、システムの整合性回復とアトミックなデータ統合を同期させます。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-09T20:09:05.121077",
-      "v5_audited": true,
-      "created_at": "2026-11-09T20:00:24.019678"
-    },
     "§X1060": {
       "name": "MACRO_WARMTH_CAUSAL_FLOW",
       "expansion": "§WARMTH_DIFFUSION > { §DATA_ATTENTION_CAUSAL_DAG } => §LOGIC_PROB_BRANCH",
@@ -2495,8 +2477,8 @@
       "name": "GENTLE_ENTROPY_CONVERGENCE_MACRO",
       "expansion": "§DATA_ENTROPY_COMPRESSION_TREE > { §GENTLE_RESOURCE_SHARING } => §LOGIC_DEDUCTIVE_CONVERGENCE_GATE",
       "description": "Compresses data entropy gently while sharing resources, then converges through deductive logic. / 優しい資源共有を行いながらデータのエントロピーを圧縮し、演繹的論理ゲートへと収束させます。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-10T02:06:19.507327",
+      "usage_count": 2,
+      "last_used_at": "2026-11-10T02:46:10.554365",
       "v5_audited": true,
       "created_at": "2026-11-10T02:01:03.358276"
     },
@@ -2508,6 +2490,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-10T02:04:16.566624"
+    },
+    "§X1075": {
+      "name": "COMPASSIONATE_CAUSAL_VALIDATION",
+      "expansion": "§HEART_EMPATHETIC_TENSOR_CONVERGENCE > { §DATA_HIERARCHICAL_CAUSAL_NODE } => §LOGIC_PROBABILISTIC_FALSIFICATION_FILTER",
+      "description": "Integration of empathetic tensor convergence with hierarchical causal nodes, validated through probabilistic falsification. 感情的テンソル収束と階層的因果ノードを統合し、確率的反証フィルターを通して検証する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-10T02:38:48.103194"
+    },
+    "§X1076": {
+      "name": "BAYES_PRIORITY_SYNC_GATE",
+      "expansion": "§LOGIC_ABDUCTIVE_BAYES_PRUNE > { §PROTO_PRIORITY_PREEMPT } => §SYS_SYNC_THROTTLE",
+      "description": "Applies abductive Bayesian pruning to preempt high-priority tasks while dynamically throttling system synchronization. ｱﾌﾞﾀﾞｸﾃｨﾌﾞﾍﾞｲｽﾞ刈り込みを適用し、優先度の高いタスクをプリエムプトすると同時にシステム同期を動的にスロットリングします。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-10T02:46:19.081817"
     }
   },
   "archived_macros": {
@@ -10768,7 +10768,27 @@
       "v5_audited": true,
       "created_at": "2026-11-05T14:16:52.679161",
       "archived_at": "2026-11-10T02:04:16.566624"
+    },
+    "§X1059": {
+      "name": "HARMONIC_RESOURCE_SYNERGY",
+      "expansion": "§RESOURCE_ALLOCATION_HARMONY > { §HARMONIC_RECOVERY_NEXUS } => §SYNC_ATOMIC_MERGE",
+      "description": "Allocates resources harmoniously to recover system integrity and synchronize atomic data merges. リソースを調和的に配分し、システムの整合性回復とアトミックなデータ統合を同期させます。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-09T20:09:05.121077",
+      "v5_audited": true,
+      "created_at": "2026-11-09T20:00:24.019678",
+      "archived_at": "2026-11-10T02:38:48.103194"
+    },
+    "§X836": {
+      "name": "GAIA_HARMONIC_ATTEST_MERGE",
+      "expansion": "§GAIA_WARMTH > { §PROTO_HEALTH_ATTEST } => §SYNC_ATOMIC_CONSENSUS_MERGE",
+      "description": "Combines Gaia warmth with health attestation to achieve atomic consensus merge. / ガイアの温もりと健全性証明を統合し、原子的な合意マージを実現します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-05T16:21:30.625228",
+      "v5_audited": true,
+      "created_at": "2026-11-05T13:41:32.600145",
+      "archived_at": "2026-11-10T02:46:19.081817"
     }
   },
-  "next_macro_seq": 1075
+  "next_macro_seq": 1077
 }
