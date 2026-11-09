@@ -1,5 +1,5 @@
-import sys
 import os
+import sys
 import json
 import traceback
 
@@ -10,9 +10,13 @@ def audit_lexicons():
     core_path = os.path.join(lexicon_dir, 'core_lexicon.json')
     macro_path = os.path.join(lexicon_dir, 'macro_lexicon.json')
     
-    result = {
-        "core_lexicon": {"status": "missing", "categories": {}, "total": 0},
-        "macro_lexicon": {"status": "missing", "total": 0}
+    report = {
+        "core_lexicon_status": "missing",
+        "macro_lexicon_status": "missing",
+        "core_categories": {},
+        "macro_categories": {},
+        "core_count": 0,
+        "macro_count": 0
     }
     
     if os.path.exists(core_path):
@@ -20,35 +24,36 @@ def audit_lexicons():
             with open(core_path, 'r', encoding='utf-8') as f:
                 core_data = json.load(f)
             lexicon_dict = core_data.get('lexicon', {})
+            report["core_count"] = len(lexicon_dict)
+            report["core_lexicon_status"] = "loaded"
+            
             categories = {}
             for sym, data in lexicon_dict.items():
                 cat = data.get('category', 'unknown') if isinstance(data, dict) else 'unknown'
                 categories[cat] = categories.get(cat, 0) + 1
-            result["core_lexicon"] = {
-                "status": "loaded",
-                "categories": categories,
-                "total": len(lexicon_dict)
-            }
+            report["core_categories"] = categories
         except Exception as e:
-            result["core_lexicon"] = {"status": "error", "message": str(e)}
+            report["core_lexicon_status"] = f"error: {str(e)}"
             
     if os.path.exists(macro_path):
         try:
             with open(macro_path, 'r', encoding='utf-8') as f:
                 macro_data = json.load(f)
-            total_macro = len(macro_data) if isinstance(macro_data, (dict, list)) else 0
-            result["macro_lexicon"] = {
-                "status": "loaded",
-                "total": total_macro
-            }
+            if isinstance(macro_data, dict):
+                report["macro_count"] = len(macro_data)
+                report["macro_lexicon_status"] = "loaded"
+                categories = {}
+                for sym, data in macro_data.items():
+                    cat = data.get('category', 'unknown') if isinstance(data, dict) else 'unknown'
+                    categories[cat] = categories.get(cat, 0) + 1
+                report["macro_categories"] = categories
+            elif isinstance(macro_data, list):
+                report["macro_count"] = len(macro_data)
+                report["macro_lexicon_status"] = "loaded (list format)"
         except Exception as e:
-            result["macro_lexicon"] = {"status": "error", "message": str(e)}
+            report["macro_lexicon_status"] = f"error: {str(e)}"
             
-    print(json.dumps(result, ensure_ascii=False, indent=2))
+    print(json.dumps(report, ensure_ascii=False, indent=2))
 
 if __name__ == '__main__':
-    try:
-        audit_lexicons()
-    except Exception as e:
-        traceback.print_exc()
-        sys.exit(1)
+    audit_lexicons()
