@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-09T22:01:31.081569",
+  "updated_at": "2026-11-09T22:25:52.849961",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2459,8 +2459,8 @@
       "name": "MACRO_WARMTH_CAUSAL_FLOW",
       "expansion": "§WARMTH_DIFFUSION > { §DATA_ATTENTION_CAUSAL_DAG } => §LOGIC_PROB_BRANCH",
       "description": "Diffuses systemic warmth across causal attention paths to stabilize probabilistic branching logic / 因果的アテンション経路に温かさを拡散し、確率的分岐論理を安定化させる高次マクロ",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-09T22:25:52.849717",
       "v5_audited": true,
       "created_at": "2026-11-09T20:23:55.120979"
     },

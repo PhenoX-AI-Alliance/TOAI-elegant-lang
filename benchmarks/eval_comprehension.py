@@ -731,10 +731,11 @@ def call_llm_backend(
 
     if backend == "openai":
         base_url = os.environ.get("OPENAI_BASE_URL", "https://api.openai.com/v1").rstrip("/")
+        max_tok = 350 if "claude" in model.lower() else 10
         payload = {
             "model": model,
             "temperature": 0.0,
-            "max_tokens": 10,
+            "max_tokens": max_tok,
             "messages": [{"role": "user", "content": full_prompt}],
         }
         if "luna" in model.lower() or "o1" in model.lower() or "o3" in model.lower() or "gpt-5" in model.lower():

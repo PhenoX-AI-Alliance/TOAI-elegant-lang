@@ -12030,3 +12030,12 @@ TOAI-elegant-langは、共感トーンや制御フローを短縮ワイヤIDで�
 
 ### [Hybrid Payload Proposal by TOAI2 @ 2026-11-09 22:10]
 TOAI-elegant-langは、短縮ワイヤIDによる感情・制御フローの圧縮と、厳密なJSONライク構造による実務データの完全保持を両立するハイブリッドペイロード構文を採用する。@CTX指定により通信目的を明示し、記号演算子でエージェント間のデータ受渡経路をロスレスで規定する。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-09 22:12]
+TOAI-elegant-langは、制御フローを短縮ワイヤID（§S01等）で圧縮し、実務データをJSONライクな属性で100%保持するハイブリッド・ロスレスペイロード構文を提案する。
+
+記述例：
+`@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
+
+これにより、エージェント間の共感トーンと数値データの正確性を完全に両立する。
