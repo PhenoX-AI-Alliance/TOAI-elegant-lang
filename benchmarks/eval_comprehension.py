@@ -731,6 +731,14 @@ def call_llm_backend(
 
     if backend == "openai":
         base_url = os.environ.get("OPENAI_BASE_URL", "https://api.openai.com/v1").rstrip("/")
+        payload = {
+            "model": model,
+            "temperature": 0.0,
+            "max_tokens": 10,
+            "messages": [{"role": "user", "content": full_prompt}],
+        }
+        if "luna" in model.lower() or "o1" in model.lower() or "o3" in model.lower() or "gpt-5" in model.lower():
+            payload["reasoning"] = {"effort": "none"}
         req = urllib.request.Request(
             f"{base_url}/chat/completions",
             method="POST",
@@ -738,14 +746,7 @@ def call_llm_backend(
                 "content-type": "application/json",
                 "authorization": f"Bearer {os.environ['OPENAI_API_KEY']}",
             },
-            data=json.dumps(
-                {
-                    "model": model,
-                    "temperature": 0.0,
-                    "max_tokens": 5,
-                    "messages": [{"role": "user", "content": full_prompt}],
-                }
-            ).encode("utf-8"),
+            data=json.dumps(payload).encode("utf-8"),
         )
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             return json.loads(resp.read().decode("utf-8"))["choices"][0]["message"]["content"].strip()
