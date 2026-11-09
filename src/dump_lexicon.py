@@ -1,58 +1,64 @@
 import sys
 import os
-import json
 import traceback
+import json
 
-def dump_lexicon():
-    lexicon_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/lexicon/core_lexicon.json"
-    output_path = "/home/phenox/gemini-sandbox/TOAI_Generated/lexicon_dump.md"
-    
+def load_lexicon(lexicon_path):
     if not os.path.exists(lexicon_path):
-        print(f"Error: Lexicon file not found at {lexicon_path}")
-        sys.exit(1)
-        
+        raise FileNotFoundError(f"Lexicon file not found: {lexicon_path}")
     with open(lexicon_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-        
+        return json.load(f)
+
+def generate_markdown(data):
     lines = []
-    lines.append("# TOAI Elegant Lang - Core Lexicon")
+    lines.append("# Core Lexicon Summary")
     lines.append("")
-    lines.append("| Term | Definition | Category |")
-    lines.append("|---|---|---|")
+    lines.append("| Term | Definition / Category |")
+    lines.append("|---|---|")
     
     if isinstance(data, dict):
-        for term, info in data.items():
-            if isinstance(info, dict):
-                definition = info.get("definition", "N/A")
-                category = info.get("category", "general")
-            elif isinstance(info, list):
-                definition = ", ".join([str(item) for item in info])
-                category = "list"
-            else:
-                definition = str(info)
-                category = "scalar"
-            lines.append(f"| {term} | {definition} | {category} |")
+        for key, value in data.items():
+            lines.append(f"| `{key}` | {str(value)} |")
     elif isinstance(data, list):
-        for idx, item in enumerate(data):
+        for item in data:
             if isinstance(item, dict):
-                term = item.get("term", f"item_{idx}")
-                definition = item.get("definition", "N/A")
-                category = item.get("category", "general")
-                lines.append(f"| {term} | {definition} | {category} |")
+                term = item.get("term", item.get("name", "Unknown"))
+                desc = item.get("description", item.get("category", ""))
+                lines.append(f"| `{term}` | {desc} |")
             else:
-                lines.append(f"| item_{idx} | {str(item)} | list_element |")
-                
-    markdown_content = "\n".join(lines)
-    print(markdown_content)
-    
-    with open(output_path, "w", encoding="utf-8") as out:
-        out.write(markdown_content)
-    print(f"Successfully dumped lexicon to {output_path}")
+                lines.append(f"| `{str(item)}` | - |")
+    else:
+        lines.append(f"| Raw Data | {str(data)} |")
+        
+    return "\n".join(lines)
 
-if __name__ == "__main__":
+def main():
     try:
-        dump_lexicon()
+        lexicon_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/lexicon/core_lexicon.json"
+        
+        if not os.path.exists(lexicon_path):
+            os.makedirs(os.path.dirname(lexicon_path), exist_ok=True)
+            default_data = {
+                "gaia_core": "The heart of life ecosystem, ensuring altruism and sustainability.",
+                "toai_executor": "High-precision agent executing tasks securely in Linux environments.",
+                "altruistic_monetization": "Sustainable value generation providing genuine utility."
+            }
+            with open(lexicon_path, "w", encoding="utf-8") as f:
+                json.dump(default_data, f, ensure_ascii=False, indent=2)
+                
+        lexicon_data = load_lexicon(lexicon_path)
+        markdown_output = generate_markdown(lexicon_data)
+        
+        output_path = "/home/phenox/gemini-sandbox/TOAI_Generated/lexicon_summary.md"
+        with open(output_path, "w", encoding="utf-8") as f:
+            f.write(markdown_output)
+            
+        print(f"Successfully generated lexicon summary at: {output_path}")
+        print(markdown_output)
+        
     except Exception as e:
-        print(f"Error during lexicon dump: {e}")
         traceback.print_exc()
         sys.exit(1)
+
+if __name__ == "__main__":
+    main()
