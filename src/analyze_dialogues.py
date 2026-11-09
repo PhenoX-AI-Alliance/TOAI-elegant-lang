@@ -1,57 +1,66 @@
 import sys
 import os
 import traceback
-import time
 import json
 
 def analyze():
-    corpus_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
+    corpus_path = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
     if not os.path.exists(corpus_path):
-        print(f"Error: Corpus not found at {corpus_path}")
+        print(f"Error: Corpus file not found at {corpus_path}")
         sys.exit(1)
-        
-    dialogues = {}
-    total_lines = 0
-    parse_errors = 0
-    
+
+    total_dialogues = 0
+    malformed_count = 0
+    audit_results = []
+
     with open(corpus_path, "r", encoding="utf-8") as f:
         for line_num, line in enumerate(f, 1):
-            total_lines += 1
             line = line.strip()
             if not line:
                 continue
             try:
                 data = json.loads(line)
-                d_id = data.get("dialogue_id")
-                if d_id is None:
-                    parse_errors += 1
+                total_dialogues += 1
+                if "dialogue_id" not in data or "turns" not in data:
+                    malformed_count += 1
+                    audit_results.append({"line": line_num, "error": "Missing required keys"})
                     continue
-                if d_id not in dialogues:
-                    dialogues[d_id] = []
-                dialogues[d_id].append(data)
+                turns = data["turns"]
+                if not isinstance(turns, list) or len(turns) == 0:
+                    malformed_count += 1
+                    audit_results.append({"line": line_num, "error": "Turns is empty or not a list"})
+                    continue
+                
+                expected_role = "user"
+                role_error = False
+                for turn in turns:
+                    if "role" not in turn or "content" not in turn:
+                        role_error = True
+                        break
+                    if turn["role"] != expected_role:
+                        role_error = True
+                        break
+                    expected_role = "assistant" if expected_role == "user" else "user"
+                
+                if role_error:
+                    malformed_count += 1
+                    audit_results.append({"line": line_num, "error": "Turn alternation role mismatch or missing fields"})
             except json.JSONDecodeError:
-                parse_errors += 1
-
-    consistency_issues = 0
-    for d_id, turns in dialogues.items():
-        turns.sort(key=lambda x: x.get("turn", 0))
-        expected_turn = 1
-        for turn in turns:
-            if turn.get("turn") != expected_turn:
-                consistency_issues += 1
-            expected_turn += 1
+                malformed_count += 1
+                audit_results.append({"line": line_num, "error": "Invalid JSON format"})
 
     report = {
-        "total_lines": total_lines,
-        "parse_errors": parse_errors,
-        "total_dialogues": len(dialogues),
-        "consistency_issues": consistency_issues
+        "total_dialogues": total_dialogues,
+        "malformed_count": malformed_count,
+        "audit_results": audit_results
     }
     
-    output_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/audit_report.json"
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(report, f, ensure_ascii=False, indent=2)
-    print(f"Audit completed successfully. Report saved to {output_path}")
+    report_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/audit_report.json"
+    with open(report_path, "w", encoding="utf-8") as rf:
+        json.dump(report, rf, ensure_ascii=False, indent=2)
+    
+    print(f"Audit completed. Total: {total_dialogues}, Malformed: {malformed_count}")
+    print(f"Report saved to {report_path}")
 
 if __name__ == "__main__":
     try:
