@@ -4,55 +4,48 @@ import traceback
 import time
 import json
 
-def analyze_dialogues():
-    corpus_path = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
+def analyze():
+    corpus_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
     if not os.path.exists(corpus_path):
         print(f"Error: Corpus not found at {corpus_path}")
         sys.exit(1)
-
-    total_lines = 0
-    valid_dialogues = 0
-    errors = []
-
+        
+    total_dialogues = 0
+    total_turns = 0
+    errors = 0
+    
     with open(corpus_path, "r", encoding="utf-8") as f:
-        for idx, line in enumerate(f, 1):
-            total_lines += 1
+        for line_num, line in enumerate(f, 1):
             line = line.strip()
             if not line:
                 continue
             try:
                 data = json.loads(line)
-                if not isinstance(data, dict):
-                    raise ValueError("Root element must be an object")
-                if "messages" not in data or not isinstance(data["messages"], list):
-                    raise ValueError("Missing 'messages' list")
+                total_dialogues += 1
+                if "turns" not in data or not isinstance(data["turns"], list):
+                    errors += 1
+                    print(f"Line {line_num}: Missing or invalid 'turns' field.")
+                    continue
+                for turn in data["turns"]:
+                    total_turns += 1
+                    if "speaker" not in turn or "text" not in turn:
+                        errors += 1
+                        print(f"Line {line_num}: Turn missing 'speaker' or 'text'.")
+            except json.JSONDecodeError as e:
+                errors += 1
+                print(f"Line {line_num}: JSON decode error: {e}")
                 
-                messages = data["messages"]
-                if len(messages) == 0:
-                    raise ValueError("Messages list is empty")
-
-                for m_idx, msg in enumerate(messages):
-                    if not isinstance(msg, dict):
-                        raise ValueError(f"Message at index {m_idx} is not an object")
-                    if "role" not in msg or "content" not in msg:
-                        raise ValueError(f"Message at index {m_idx} missing 'role' or 'content'")
-
-                valid_dialogues += 1
-            except Exception as e:
-                errors.append({"line": idx, "error": str(e)})
-
-    report = {
-        "total_lines": total_lines,
-        "valid_dialogues": valid_dialogues,
-        "error_count": len(errors),
-        "errors": errors
-    }
-
-    print(json.dumps(report, ensure_ascii=False, indent=2))
+    print(f"Audit Complete.")
+    print(f"Total Dialogues: {total_dialogues}")
+    print(f"Total Turns: {total_turns}")
+    print(f"Errors Found: {errors}")
+    
+    if errors > 0:
+        sys.exit(1)
 
 if __name__ == "__main__":
     try:
-        analyze_dialogues()
+        analyze()
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
