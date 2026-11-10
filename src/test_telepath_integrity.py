@@ -1,50 +1,35 @@
+import sys
 import os
-import json
 import unittest
+import json
 
 class TestTelepathIntegrity(unittest.TestCase):
     def setUp(self):
         self.base_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang"
         self.src_dir = os.path.join(self.base_dir, "src")
-
+        
     def test_directories_and_files_existence(self):
-        self.assertTrue(os.path.exists(self.base_dir), f"Base directory does not exist: {self.base_dir}")
-        self.assertTrue(os.path.exists(self.src_dir), f"Source directory does not exist: {self.src_dir}")
+        self.assertTrue(os.path.exists(self.base_dir), "Base directory does not exist.")
+        self.assertTrue(os.path.exists(self.src_dir), "Source directory does not exist.")
 
-    def test_dictionary_and_spec_files(self):
-        dict_path = os.path.join(self.src_dir, "dictionary.json")
-        spec_path = os.path.join(self.src_dir, "specification.md")
-        log_path = os.path.join(self.src_dir, "dialogue_log.json")
-
-        if not os.path.exists(dict_path):
-            with open(dict_path, "w", encoding="utf-8") as f:
-                json.dump({"version": "1.0", "terms": {}}, f, ensure_ascii=False, indent=2)
-
-        if not os.path.exists(spec_path):
-            with open(spec_path, "w", encoding="utf-8") as f:
-                f.write("# TOAI-elegant-lang Specification\n")
-
-        if not os.path.exists(log_path):
-            with open(log_path, "w", encoding="utf-8") as f:
-                json.dump([], f, ensure_ascii=False, indent=2)
-
-        self.assertTrue(os.path.exists(dict_path))
-        self.assertTrue(os.path.exists(spec_path))
-        self.assertTrue(os.path.exists(log_path))
-
-    def test_json_syntax_validity(self):
-        dict_path = os.path.join(self.src_dir, "dictionary.json")
-        log_path = os.path.join(self.src_dir, "dialogue_log.json")
-
-        if os.path.exists(dict_path):
-            with open(dict_path, "r", encoding="utf-8") as f:
-                data = json.load(f)
-                self.assertIsInstance(data, (dict, list))
-
-        if os.path.exists(log_path):
-            with open(log_path, "r", encoding="utf-8") as f:
-                data = json.load(f)
-                self.assertIsInstance(data, list)
+    def test_dictionary_and_spec_syntax(self):
+        for root, dirs, files in os.walk(self.base_dir):
+            for file in files:
+                if file.endswith(".json"):
+                    file_path = os.path.join(root, file)
+                    try:
+                        with open(file_path, "r", encoding="utf-8") as f:
+                            json.load(f)
+                    except Exception as e:
+                        self.fail(f"JSON file {file_path} is syntactically broken: {e}")
+                elif file.endswith(".py"):
+                    file_path = os.path.join(root, file)
+                    with open(file_path, "r", encoding="utf-8") as f:
+                        content = f.read()
+                    try:
+                        compile(content, file_path, "exec")
+                    except SyntaxError as se:
+                        self.fail(f"Python file {file_path} has a syntax error: {se}")
 
 if __name__ == "__main__":
     unittest.main()
