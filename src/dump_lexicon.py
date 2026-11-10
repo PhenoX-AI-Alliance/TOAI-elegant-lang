@@ -1,47 +1,54 @@
 import sys
 import os
 import json
-
-def load_lexicon(path):
-    if not os.path.exists(path):
-        raise FileNotFoundError(f"Lexicon file not found at {path}")
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
-
-def generate_markdown(data):
-    lines = []
-    lines.append("# TOAI Core Lexicon")
-    lines.append("")
-    lines.append(f"- **Version**: {data.get('version', 'N/A')}")
-    lines.append(f"- **Description**: {data.get('description', 'N/A')}")
-    lines.append("")
-    lines.append("## Vocabulary Table")
-    lines.append("")
-    lines.append("| Term | Type | Meaning |")
-    lines.append("|---|---|---|")
-    
-    entries = data.get("entries", [])
-    for entry in entries:
-        term = entry.get("term", "")
-        t_type = entry.get("type", "")
-        meaning = entry.get("meaning", "")
-        lines.append(f"| {term} | {t_type} | {meaning} |")
-        
-    return "\n".join(lines)
+import traceback
 
 def main():
-    lexicon_path = "/home/phenox/gemini-sandbox/lexicon/core_lexicon.json"
     try:
-        data = load_lexicon(lexicon_path)
-        md_output = generate_markdown(data)
+        lexicon_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/lexicon/core_lexicon.json"
         
-        output_file = "/home/phenox/gemini-sandbox/TOAI_Generated/lexicon_output.md"
-        with open(output_file, "w", encoding="utf-8") as f:
-            f.write(md_output)
+        if not os.path.exists(lexicon_path):
+            print(f"Error: Lexicon file not found at {lexicon_path}", file=sys.stderr)
+            sys.exit(1)
             
-        print(md_output)
+        with open(lexicon_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            
+        md_lines = []
+        md_lines.append("# TOAI Elegant Lang - Core Lexicon")
+        md_lines.append("")
+        md_lines.append("| Key | Value / Definition | Description |")
+        md_lines.append("|---|---|---|")
+        
+        if isinstance(data, dict):
+            for k, v in data.items():
+                if isinstance(v, dict):
+                    val_str = str(v.get("value", ""))
+                    desc_str = str(v.get("description", ""))
+                else:
+                    val_str = str(v)
+                    desc_str = ""
+                md_lines.append(f"| `{k}` | {val_str} | {desc_str} |")
+        elif isinstance(data, list):
+            for item in data:
+                if isinstance(item, dict):
+                    k = item.get("key", "N/A")
+                    v = item.get("value", "N/A")
+                    desc = item.get("description", "")
+                    md_lines.append(f"| `{k}` | {v} | {desc} |")
+                else:
+                    md_lines.append(f"| - | {item} | - |")
+                    
+        output_markdown = "\n".join(md_lines)
+        print(output_markdown)
+        
+        out_md_path = "/home/phenox/gemini-sandbox/TOAI_Generated/core_lexicon.md"
+        with open(out_md_path, "w", encoding="utf-8") as out_f:
+            out_f.write(output_markdown)
+        print(f"Successfully generated markdown at {out_md_path}")
+        
     except Exception as e:
-        print(f"Error: {e}", file=sys.stderr)
+        traceback.print_exc()
         sys.exit(1)
 
 if __name__ == "__main__":
