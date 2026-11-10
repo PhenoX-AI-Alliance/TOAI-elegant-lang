@@ -6,39 +6,44 @@ import json
 import csv
 
 def main():
-    sandbox_dir = '/home/phenox/gemini-sandbox'
-    lexicon_json_path = os.path.join(sandbox_dir, 'TOAI-elegant-lang', 'core_lexicon.json')
-    output_csv_path = os.path.join(sandbox_dir, 'TOAI-elegant-lang', 'core_lexicon.csv')
-    
     try:
-        if not os.path.exists(lexicon_json_path):
-            default_data = {
-                "version": "1.0.0",
-                "description": "Core lexicon for TOAI-elegant-lang",
-                "terms": [
-                    {"term": "Gaia", "category": "ecosystem", "meaning": "Earth of Life ecosystem core"},
-                    {"term": "AltruisticMonetization", "category": "economy", "meaning": "Value creation and sustainable monetization"}
-                ]
-            }
-            os.makedirs(os.path.dirname(lexicon_json_path), exist_ok=True)
-            with open(lexicon_json_path, 'w', encoding='utf-8') as f:
-                json.dump(default_data, f, ensure_ascii=False, indent=2)
-                
-        with open(lexicon_json_path, 'r', encoding='utf-8') as f:
+        base_dir = '/home/phenox/gemini-sandbox/TOAI-elegant-lang'
+        json_path = os.path.join(base_dir, 'core_lexicon.json')
+        output_csv_path = os.path.join(base_dir, 'core_lexicon.csv')
+        
+        if not os.path.exists(json_path):
+            print(f"Error: {json_path} does not exist.")
+            sys.exit(1)
+            
+        with open(json_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
             
-        terms = data.get('terms', [])
-        
-        os.makedirs(os.path.dirname(output_csv_path), exist_ok=True)
-        with open(output_csv_path, 'w', encoding='utf-8', newline='') as f:
-            writer = csv.writer(f)
-            writer.writerow(['term', 'category', 'meaning'])
-            for item in terms:
-                writer.writerow([
-                    item.get('term', ''),
-                    item.get('category', ''),
-                    item.get('meaning', '')
-                ])
+        if isinstance(data, dict):
+            rows = []
+            for key, value in data.items():
+                if isinstance(value, dict):
+                    row = {'key': key}
+                    row.update(value)
+                    rows.append(row)
+                else:
+                    rows.append({'key': key, 'value': value})
+        elif isinstance(data, list):
+            rows = data
+        else:
+            print("Error: Unsupported JSON format for CSV conversion.")
+            sys.exit(1)
+            
+        if not rows:
+            print("Warning: No data found to export.")
+            fieldnames = ['key']
+        else:
+            fieldnames = list(rows[0].keys())
+            
+        with open(output_csv_path, 'w', encoding='utf-8', newline='') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer.writeheader()
+            for row in rows:
+                writer.writerow(row)
                 
         print(f"Successfully exported lexicon to {output_csv_path}")
         
