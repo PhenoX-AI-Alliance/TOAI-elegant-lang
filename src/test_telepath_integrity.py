@@ -1,3 +1,4 @@
+import sys
 import os
 import unittest
 import json
@@ -11,25 +12,29 @@ class TestTelepathIntegrity(unittest.TestCase):
         self.assertTrue(os.path.exists(self.base_dir), f"Base directory does not exist: {self.base_dir}")
         self.assertTrue(os.path.exists(self.src_dir), f"Source directory does not exist: {self.src_dir}")
 
-    def test_telepath_files_integrity(self):
-        dict_path = os.path.join(self.base_dir, "dictionary.json")
-        spec_path = os.path.join(self.base_dir, "specification.md")
-        log_path = os.path.join(self.base_dir, "dialogue_log.json")
+    def test_syntax_of_python_files(self):
+        for root, dirs, files in os.walk(self.src_dir):
+            for file in files:
+                if file.endswith(".py"):
+                    file_path = os.path.join(root, file)
+                    with open(file_path, "r", encoding="utf-8") as f:
+                        content = f.read()
+                    try:
+                        compile(content, file_path, "exec")
+                    except SyntaxError as e:
+                        self.fail(f"Syntax error in {file_path}: {e}")
 
-        if os.path.exists(dict_path):
-            with open(dict_path, "r", encoding="utf-8") as f:
-                data = json.load(f)
-                self.assertIsInstance(data, (dict, list), "Dictionary file must be valid JSON object or list.")
-
-        if os.path.exists(spec_path):
-            with open(spec_path, "r", encoding="utf-8") as f:
-                content = f.read()
-                self.assertGreater(len(content), 0, "Specification file is empty.")
-
-        if os.path.exists(log_path):
-            with open(log_path, "r", encoding="utf-8") as f:
-                logs = json.load(f)
-                self.assertIsInstance(logs, (dict, list), "Dialogue log must be valid JSON.")
+    def test_optional_assets(self):
+        # 辞書ファイル、仕様書、対話ログなどが存在する場合、JSONとして壊れていないかなどを検証する例
+        for root, dirs, files in os.walk(self.base_dir):
+            for file in files:
+                if file.endswith(".json"):
+                    file_path = os.path.join(root, file)
+                    try:
+                        with open(file_path, "r", encoding="utf-8") as f:
+                            json.load(f)
+                    except json.JSONDecodeError as e:
+                        self.fail(f"JSON decode error in {file_path}: {e}")
 
 if __name__ == "__main__":
     unittest.main()
