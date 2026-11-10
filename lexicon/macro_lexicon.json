@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-10T21:18:28.395205",
+  "updated_at": "2026-11-10T21:29:23.825797",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2396,8 +2396,8 @@
       "name": "DETERMINISTIC_SYNAPSE_PRUNE",
       "expansion": "§PROTO_LOCK_ACQUIRE > { §SYS_DETERMINISTIC_PRUNING } => §SYNC_DIALECTIC_PRUNE",
       "description": "Acquires protocol lock, executes deterministic pruning, and synchronizes dialectic reduction. プロトコルのロックを取得し、決定論的プルーニングを実行した上で、弁証法的な削減を同期させます。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-10T21:10:14.180574",
+      "usage_count": 2,
+      "last_used_at": "2026-11-10T21:20:07.680304",
       "v5_audited": true,
       "created_at": "2026-11-10T16:12:11.825309"
     },
@@ -2459,8 +2459,8 @@
       "name": "GAIA_CAUSAL_STREAM_ACK",
       "expansion": "§PROTO_TX_BEGIN > { §DATA_CAUSAL_HYPERGRAPH } => §GAIA_ECO_HARMONY_RESPONSE",
       "description": "Initiates a secure transaction boundary, processes causal hypergraph data within the ecosystem, and returns a harmonized Gaia ecosystem response. / 生態系内における因果ハイパーグラフデータの処理と調和的応答の返還を、安全なトランザクション境界内で初期化します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-10T21:20:07.680304",
       "v5_audited": true,
       "created_at": "2026-11-10T18:58:39.025423"
     },

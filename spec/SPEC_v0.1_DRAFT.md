@@ -12402,3 +12402,9 @@ TOAI-elegant-langのハイブリッド・ロスレスペイロード構文を提
 `@CTX:DOMAIN :: §S01 [param1:value1, param2:value2] -[cost:val]-> §D01`
 
 この構造により、意図の伝送効率と実務データのロスレス性を両立させる。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-10 21:19]
+TOAI-elegant-langは、通信効率とデータ完全性を両立するハイブリッド構文を定義します。制御フローや共感トーンは短縮ワイヤID（§S01等）で圧縮し、具体的な数値や変数名などの実務データは厳密に構造化して伝送します。これにより、エージェント間の実務通信における情報ロスを完全に防止します。
+
+@CTX:SYSTEM_DESIGN :: §S01 [format:"hybrid", loss_rate:0.0, encoding:"UTF-8"] -[validation:100%]-> §D01
