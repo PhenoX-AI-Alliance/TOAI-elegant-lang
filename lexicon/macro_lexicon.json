@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-10T10:00:47.618379",
+  "updated_at": "2026-11-10T10:07:05.306784",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2441,8 +2441,8 @@
       "name": "ADAPTIVE_SECURE_PRUNING_MACRO",
       "expansion": "§SYS_ADAPTIVE_SLOT_THROTTLE > { §PROTO_SECRET_REDACT } => §LOGIC_DEDUCTIVE_THRESHOLD_PRUNE",
       "description": "Adaptive slot throttling combined with secret redaction and deductive threshold pruning to optimize information entropy. / 情報エントロピーを最適化するため、適応型スロットスロットリング、機密情報の秘匿化、および演繹的閾値プルーニングを統合したマクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-10T10:03:12.377089",
       "v5_audited": true,
       "created_at": "2026-11-10T07:02:30.230892"
     },
@@ -2486,8 +2486,8 @@
       "name": "ALTRUISTIC_CAUSAL_OPTIMIZER",
       "expansion": "§DATA_ENTROPY_CAUSAL_LATTICE > { §LOGIC_CONDITIONAL_PRUNING_NODE } => §ALTRUISTIC_VALUE_CREATION",
       "description": "Prunes conditional logic branches to minimize information entropy within the causal lattice, thereby maximizing altruistic value creation. / 因果格子内の情報エントロピーを最小化するために条件付き論理分岐を刈り込み、利他の価値創造を最大化します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-10T10:01:48.794371",
       "v5_audited": true,
       "created_at": "2026-11-10T08:59:07.024332"
     },
@@ -2504,8 +2504,8 @@
       "name": "CAUSAL_STATE_HARVESTING_FLOW",
       "expansion": "§SYS_ASYNCHRONOUS_STATE_HARVESTER > { §DATA_ATTENTION_CAUSAL_DAG } => §DATA_LATENT_TENSOR_FLOW",
       "description": "Asynchronously harvests state variables, maps causal relationships via attention DAGs, and pipes the resulting context into latent tensor representations. 非同期で状態を収穫し、アテンション因果DAGを介して因果関係をマッピングし、その結果のコンテキストを潜在テンソル表現へとパイプライン処理します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-10T10:00:46.790050",
+      "usage_count": 2,
+      "last_used_at": "2026-11-10T10:01:48.794371",
       "v5_audited": true,
       "created_at": "2026-11-10T09:58:47.354543"
     }
