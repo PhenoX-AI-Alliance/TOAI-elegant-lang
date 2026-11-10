@@ -1,21 +1,18 @@
 import sys
 import os
-import traceback
-import time
 import json
 import collections
+import re
 
-def analyze():
+def analyze_dialogues():
     corpus_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
-    output_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/dialogue_analysis_result.json"
-
     if not os.path.exists(corpus_path):
         print(f"Error: Corpus not found at {corpus_path}")
         sys.exit(1)
-
+        
     speaker_counts = collections.defaultdict(int)
-    word_root_counts = collections.defaultdict(int)
-
+    word_counts = collections.defaultdict(int)
+    
     with open(corpus_path, "r", encoding="utf-8") as f:
         for line in f:
             line = line.strip()
@@ -23,32 +20,31 @@ def analyze():
                 continue
             try:
                 data = json.loads(line)
-                speaker = data.get("speaker", "unknown")
-                speaker_counts[speaker] += 1
-
+                speaker = data.get("speaker", "Unknown")
                 text = data.get("text", "")
-                words = text.split()
+                
+                speaker_counts[speaker] += 1
+                
+                words = re.findall(r'\b\w+\b', text.lower())
                 for word in words:
-                    root = word.strip(".,!?\"'()[]{}").lower()
-                    if root:
-                        word_root_counts[root] += 1
+                    word_counts[word] += 1
             except json.JSONDecodeError:
                 continue
-
+                
     result = {
         "speaker_counts": dict(speaker_counts),
-        "word_root_counts": dict(word_root_counts)
+        "top_words": dict(word_counts.most_common(10)) if hasattr(word_counts, "most_common") else dict(sorted(word_counts.items(), key=lambda x: x[1], reverse=True)[:10])
     }
-
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    with open(output_path, "w", encoding="utf-8") as out_f:
-        json.dump(result, out_f, ensure_ascii=False, indent=2)
-
-    print(f"Analysis complete. Result saved to {output_path}")
+    
+    output_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/analysis_result.json"
+    with open(output_path, "w", encoding="utf-8") as out:
+        json.dump(result, out, ensure_ascii=False, indent=2)
+        
+    print(f"Analysis complete. Results saved to {output_path}")
 
 if __name__ == "__main__":
     try:
-        analyze()
+        analyze_dialogues()
     except Exception as e:
-        traceback.print_exc()
+        print(f"Error during analysis: {e}", file=sys.stderr)
         sys.exit(1)
