@@ -227,11 +227,19 @@ where $\text{dom}(t_n, 0) = t_n$ and $\text{dom}(t_n, r) = t_n \,\|\, \text{uint
 The receiver finds the first $r_n \ge 0$ such that $Y_n^{(r_n)} < 60{,}000$ (identical to sender evaluation) and accepts the turn if and only if $Y_n^{(r_n)} \bmod 10{,}000 == C_n$. The verifier does \emph{not} invert $Y_n$; rather, the verifier computes the forward PRF sequence and tests equivalence. Because bitwise XOR is a bijection on $\{0, \dots, 65{,}535\}$, each candidate $Y_n^{(r)}$ is uniform with single-draw acceptance probability $p_{\text{acc}} = 60{,}000/65{,}536 = 91.55\%$. In this geometric trials setting, the expected internal evaluations per turn is $\mathbb{E}[r_n+1] = 1/p_{\text{acc}} = 65{,}536/60{,}000 \approx 1.09226 \le 1.0923$, bounding total PRF oracle queries by $\mathbb{E}[Q_{\text{PRF}}] \le 1.0923(Q+k)$. For $r_1=0$ (Table \ref{tab:crypto_vector}), $Y_1 = 9841 \oplus 9247 = 622 < 60{,}000$, yielding $C_1 = 622 \bmod 10{,}000 = 622 \implies c_1 = 0.0622$.
 
 \subsection{Formal Security Reduction ($\text{Game}_0 \rightarrow \text{Game}_2$) and Congruence Cardinality Proof}
-\textbf{Theorem 1 (Exact EUF-CMA Forgery Bound Subsuming Direct Tag Guessing and Modular Aliases).} \emph{Let $\mathcal{A}(\tau, Q, k)$ be an adaptive EUF-CMA adversary making at most $Q$ signing queries to MAC oracle $\mathcal{O}_{\text{MAC}}(S_0, \cdot)$ and outputting a $k$-turn unqueried forgery trajectory $\{( \text{wire}_{n+j}^*, t_{n+j}^*, P_{n+j}^*, C_{n+j}^* )\}_{j=1}^k$ with $t_{n+j}^* > t_{n+j-1}^*$. Under the $(\tau', Q_{\text{PRF}}, \epsilon_{\text{PRF}})$-PRF security of $\text{HMAC-SHA256}$ (where $\mathbb{E}[Q_{\text{PRF}}] \le 1.0923(Q+k)$) and $(\tau', \epsilon_{\text{coll}})$-collision resistance of $\text{SHA-256}$:}
-\begin{equation}
-  \text{Adv}_{\text{TOAI}}^{\text{EUF-CMA}}(\mathcal{A}) \le \left(\frac{6}{60{,}000}\right)^k + \epsilon_{\text{PRF}} + \epsilon_{\text{coll}} = (10^{-4})^k + \epsilon_{\text{PRF}} + \epsilon_{\text{coll}} = 10^{-4k} + \epsilon_{\text{PRF}} + \epsilon_{\text{coll}}
-  \label{eq:forgery_bound}
-\end{equation}
+\textbf{Theorem 1 (Exact EUF-CMA Forgery Bound for Single-Turn and $k$-Turn Trajectories).} \emph{Let $\mathcal{A}(\tau, Q, k)$ be an adaptive EUF-CMA adversary making at most $Q$ signing queries to MAC oracle $\mathcal{O}_{\text{MAC}}(S_0, \cdot)$ and outputting $k$ candidate forgery turns. Under the $(\tau', Q_{\text{PRF}}, \epsilon_{\text{PRF}})$-PRF security of $\text{HMAC-SHA256}$ (where $\mathbb{E}[Q_{\text{PRF}}] \le 1.0923(Q+k)$) and $(\tau', \epsilon_{\text{coll}})$-collision resistance of $\text{SHA-256}$:}
+\begin{enumerate}[leftmargin=1.4em,itemsep=1pt,topsep=1pt]
+  \item \textbf{Single-Turn Existential Forgery (Union Bound):} The probability that $\mathcal{A}$ succeeds in forging \emph{at least one} valid unqueried turn among $k$ attempts is bounded by the union bound over disjoint trials:
+  \begin{equation}
+    \text{Adv}_{\text{TOAI}}^{\text{single}}(\mathcal{A}) \le k \times \frac{6}{60{,}000} + \epsilon_{\text{PRF}} + \epsilon_{\text{coll}} = k \cdot 10^{-4} + \epsilon_{\text{PRF}} + \epsilon_{\text{coll}}
+    \label{eq:single_forgery}
+  \end{equation}
+  \item \textbf{Consecutive $k$-Turn Session Hijacking:} The probability that $\mathcal{A}$ successfully forges an entire $k$-turn causal execution trajectory where \emph{all $k$ turns} are simultaneously accepted is strictly multiplicative due to monotonic chain hashing:
+  \begin{equation}
+    \text{Adv}_{\text{TOAI}}^{k\text{-turn}}(\mathcal{A}) \le \left(\frac{6}{60{,}000}\right)^k + \epsilon_{\text{PRF}} + \epsilon_{\text{coll}} = 10^{-4k} + \epsilon_{\text{PRF}} + \epsilon_{\text{coll}}
+    \label{eq:forgery_bound}
+  \end{equation}
+\end{enumerate}
 
 \emph{Proof.} We define three security games $\text{Game}_0 \rightarrow \text{Game}_1 \rightarrow \text{Game}_2$, letting $W_i$ denote $\mathcal{A}$'s winning event in $\text{Game}_i$:
 \begin{itemize}
@@ -356,7 +364,7 @@ In \texttt{benchmarks/fair\_bench.py}, Demotic Wire is evaluated against alterna
   \item \textbf{TOAI Demotic Wire (v5.4.5):} Encodes the full causal AST, all typed \texttt{[k:v]} parameters, and fallbacks in \textbf{73.2 BPE tokens/message} ($73.2 \pm 18.4$ tok; $59 / 100 / 71 / 63$ tok), achieving \textbf{$-$79.1\% vs.\ Verbose A2A}, \textbf{$-$55.7\% vs.\ Structured JSON}, and \textbf{$-$41.0\% vs.\ Minified JSON} with \textbf{100.0\% (112/112) syntax validity, 100.0\% numeric fidelity, and 100.0\% task execution accuracy} (Table \ref{tab:fair_bench}).
 \end{enumerate}
 
-\textbf{Header Amortization (Break-Even Analysis):} Transmitting the 1,000-token dictionary header ($H=1{,}000$) in zero-shot sessions breaks even when cumulative savings equal or exceed $H$: $N_{\text{break-even}} = \lceil H / (T_{\text{base}} - T_{\text{wire}}) \rceil$. For Verbose A2A ($\Delta_{\text{tok}} = 276.5$ tok/msg), $N^* = \lceil 1000/276.5 \rceil = \mathbf{4\text{ messages}}$, yielding $4 \times 276.5 = 1{,}106 \ge 1{,}000$ tokens saved ($+106$ net savings). Against Structured Tool JSON ($\Delta = 92.0$), $N^* = \lceil 1000/92.0 \rceil = \mathbf{11\text{ msgs}}$ ($11 \times 92.0 = 1{,}012 \ge 1{,}000$). Under 90\% prompt caching ($H_{\text{eff}} = 100$ tok), break-even occurs within \textbf{1 to 2 messages} (Table \ref{tab:breakeven}):
+\textbf{Header Amortization (Break-Even Analysis):} Transmitting the system dictionary header ($H \approx 1{,}000$ BPE tokens under \texttt{o200k\_base}, consisting of compact mapping pairs \texttt{\S S01:SYS\_RESOURCE\_ARBITER} ... \texttt{\S X64:FX\_HEDGE} transmitted once at session initialization or cached via Anthropic/OpenAI prompt caching) breaks even when cumulative savings equal or exceed $H$: $N_{\text{break-even}} = \lceil H / (T_{\text{base}} - T_{\text{wire}}) \rceil$. For Verbose A2A ($\Delta_{\text{tok}} = 276.5$ tok/msg), $N^* = \lceil 1000/276.5 \rceil = \mathbf{4\text{ messages}}$, yielding $4 \times 276.5 = 1{,}106 \ge 1{,}000$ tokens saved ($+106$ net savings). Against Structured Tool JSON ($\Delta = 92.0$), $N^* = \lceil 1000/92.0 \rceil = \mathbf{11\text{ msgs}}$ ($11 \times 92.0 = 1{,}012 \ge 1{,}000$). Under 90\% prompt caching ($H_{\text{eff}} = 100$ tok), break-even occurs within \textbf{1 to 2 messages} (Table \ref{tab:breakeven}):
 \begin{equation}
   N_{\text{break-even}}^{\text{std}} = \left\lceil \frac{H}{T_{\text{baseline}} - T_{\text{wire}}} \right\rceil, \qquad
   N_{\text{break-even}}^{\text{cache (90\%)}} = \left\lceil \frac{0.10 \cdot H}{T_{\text{baseline}} - T_{\text{wire}}} \right\rceil
