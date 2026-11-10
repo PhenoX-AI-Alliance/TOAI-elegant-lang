@@ -343,8 +343,9 @@ Previous versions of this README reported A 44.6% / B 84.8% / C 93.8% / D 24.1% 
 
 ## Limitations
 
-- **The compact wire alone is not understood without the lexicon.** In the real-LLM test, condition A was at chance level.
+- **The compact wire alone is not understood without the lexicon.** In the real-LLM test, condition A was at chance level across all evaluated frontier models.
 - **The receiver needs the glossary.** Once the glossary is included (condition C), the per-message cost (~595 tokens) is close to plain text (~666 tokens). Large savings only appear when the glossary is shared once and reused, e.g. via prompt caching or a fine-tuned/system-prompted receiver.
+- **Flagship reasoning models struggle with compressed notation (The "Flagship Paradox").** As demonstrated by Claude Sonnet 5.5 (B: 53.6%, C: 64.3%), deep reasoning models attempt to verify every logical premise and causal edge (`-[p,c]->`, `!->`). When compressed symbols lack rich context, reasoning models overthink the missing information, consuming hundreds of internal thinking tokens and paradoxically scoring *lower* than lighter models that rely on surface keyword matching. Compressing wire tokens at the expense of inflating the receiver's internal reasoning tokens defeats the purpose of efficiency. This protocol is practical primarily for **lightweight worker agents in high-frequency routine RPC queues**, not for high-level reasoning between flagship agents.
 - **Corpus is self-generated.** Most records were produced by the project's own agents, so they are not an independent benchmark.
 - The project is young and has a small user base. APIs and the lexicon may change.
 
@@ -468,8 +469,9 @@ def generate_readme_ja(m: Dict[str, Any]) -> str:
 
 ## 限界
 
-- **辞書なしではワイヤは理解されない。** 実LLMでのテストでは、条件Aの正答率は偶然と同程度でした。
+- **辞書なしではワイヤは理解されない。** 実LLMでのテストでは、評価したすべての主要モデルにおいて条件A（ワイヤ単体）の正答率は偶然値（25%前後）と同程度でした。
 - **受信側には対訳辞書が必要。** 辞書を含めると（条件C）、1メッセージあたりのコスト（約595トークン）は平文（約666トークン）に近くなります。大きな削減が得られるのは、辞書を一度共有して使い回せる場合（プロンプトキャッシュ、システムプロンプト、ファインチューニングなど）に限られます。
+- **本気の推論フラッグシップモデル相手には友好的に機能しない（「フラッグシップの逆説」）。** Claude Sonnet 5.5 の実測結果（B: 53.6%、C: 64.3%）が示すように、深い思考（Thinking）を展開する高度な推論モデルは、欠落した文脈や因果演算子（`-[p,c]->`、`!->`）の厳密性を過剰に深読み・精査しようとします。その結果、通信帯域の数十トークンを節約した代償として、受信側で**数百トークンの思考トークンと長大な推論時間（レイテンシ）を浪費し、軽量モデルよりも正答率を落とすという本末転倒な事態**が発生します。本プロトコルはフラッグシップ同士の高度な意思決定ではなく、**推論を回さず定型処理を右から左へ高速実行する軽量ワーカーエージェント間の高頻度キュー通信（RPC）**にこそ現実的な適用領域があります。
 - **コーパスは自己生成。** 大半のレコードは本プロジェクトのエージェント自身が生成したもので、独立したベンチマークではありません。
 - プロジェクトは初期段階で、利用者もまだ少数です。APIや辞書は変更される可能性があります。
 
@@ -1042,12 +1044,18 @@ Project Telepath は受信側に決定論的「CoTクレンジング・アンカ
 
 
 WHITEPAPER_NOTE_EN = """> [!IMPORTANT]
-> **Reading note (added for transparency):** "E2E" savings in this document are measured against a deliberately verbose baseline (human intent + full EN/JA dictionary definitions in JSON) and should be read as an upper bound. The primary, like-for-like metric is *compact wire vs. verbose form* (see README). Comprehension figures labelled `blind_semantic` come from a rule-based heuristic, not an LLM. Real-LLM results are listed in the README.
+> **Reading note (added for transparency):**
+> 1. **Baseline Definition:** "E2E" savings in this document are measured against a deliberately verbose baseline (human intent + full EN/JA dictionary definitions in JSON) and should be read as an upper bound. The primary, like-for-like metric is *compact wire vs. verbose form* (see README).
+> 2. **Evaluator Integrity:** Comprehension figures labelled `blind_semantic` in earlier revisions came from a rule-based heuristic, not an LLM. Real-LLM results across 7 major frontier models are documented in the README.
+> 3. **The Flagship Limitation:** Benchmark evaluations reveal that deep reasoning flagship models (e.g., Claude Sonnet 5.5) struggle with abbreviated wire syntax—overthinking the truncated context and consuming hundreds of internal thinking tokens. This notation is optimal for lightweight worker RPCs, not complex deliberation between reasoning models.
 
 """
 
 WHITEPAPER_NOTE_JA = """> [!IMPORTANT]
-> **読み方の注記（透明性のため追記）:** 本書の「E2E」削減率は、意図的に冗長な比較対象（人間向けの意図文＋全シンボルの日英辞書定義をすべて展開したJSON）に対する数値で、上限値として読んでください。同じ条件で比べた主指標は「ワイヤ vs 冗長形」です（README参照）。`blind_semantic` と表記された理解度は、LLMではなくルールベースのヒューリスティックによる数値です。実LLMでの結果はREADMEに掲載しています。
+> **読み方の注記（透明性・客観性の担保のため追記）:**
+> 1. **ベースライン定義:** 本書の「E2E」削減率は、意図的に冗長な比較対象（人間向けの意図文＋全シンボルの日英辞書定義をすべて展開したJSON）に対する数値であり、理論上の上限値として解釈してください。同一条件下での主指標は「ワイヤ vs 冗長形」（約 -41%）です（README参照）。
+> 2. **評価系の実態:** 旧版で `blind_semantic` と表記されていた理解度データはルールベースのヒューリスティックによる推計でした。現在READMEに掲載されている最新データは主要7大フロンティアLLMによる厳密なブラインド実測値です。
+> 3. **フラッグシップモデルにおける限界:** 実証の結果、Claude Sonnet 5.5 のような深い推論（Thinking）を行うフラッグシップモデルに対しては、省略された符牒記法が逆に思考トークンの過剰消費と正答率低下を招くことが判明しています。本プロトコルはフラッグシップ間の高度な意思決定用ではなく、軽量ワーカー間の定型高頻度RPC通信にこそ適しています。
 
 """
 
