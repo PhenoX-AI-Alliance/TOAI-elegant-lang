@@ -118,7 +118,15 @@ As Large Language Model (LLM) applications evolve from single-turn assistants in
   \item \textbf{Human Auditability and Cross-Model Portability:} Allowing humans and heterogeneous LLM families (GPT, Claude, Gemini, Llama) to inspect and exchange packets over standard text APIs without opaque binary blobs or model-specific latent adapters.
 \end{enumerate}
 
-Existing approaches sacrifice at least one vertex (Table \ref{tab:arch_comparison}). Perplexity-based prompt compression (LLMLingua [4]) and progressive pruning (e.g., SafeSieve) drop tokens dynamically, but break JSON syntax delimiters and drop numeric thresholds at high compression ratios ($\rho \le 0.35$, Section 5). Conversely, emergent MARL discrete codes [6] or continuous latent vectors [7] sacrifice human auditability and fail across commercial text-only APIs. State-delta diffs reduce payload size on homogeneous repeated states but introduce desynchronization risks under network retries and still pay JSON overhead on multi-domain handoffs; crucially, TOAI-elegant-lang is stateless on the wire and orthogonal to state-delta encoding (deltas can be nested directly within Demotic \texttt{[k:v]} payloads). Flat key-value templates (\texttt{KEY=VAL}) reduce raw tokens but destroy multi-branch causal execution graphs and fault-recovery semantics.
+Existing approaches sacrifice at least one vertex of this trilemma (Table \ref{tab:arch_comparison}). Perplexity-based prompt compression (LLMLingua [4]) drops tokens dynamically but breaks JSON syntax delimiters and distorts numeric thresholds at high compression ratios ($\rho \le 0.35$, Section 5). Emergent discrete MARL codes [6] or continuous latent vectors [7] sacrifice human auditability and fail across commercial black-box APIs. 
+
+Recent structured multi-agent protocols address related aspects but occupy distinct architectural niches:
+\begin{itemize}[leftmargin=1.2em,itemsep=1pt,topsep=1pt]
+  \item \textbf{Graph-Grounded Protocols (G2CP):} Replaces free-form dialogue with explicit knowledge graph operations, achieving $\approx 73\%$ token savings. While G2CP excels in graph traversal tasks, it requires external graph database backends; TOAI-elegant-lang provides general-purpose causal AST exchange without infrastructure dependencies.
+  \item \textbf{KV-Cache Transmission (Q-KVComm / KVComm):} Transmits quantized Key-Value cache activations directly across model layers (5--6$\times$ compression). This requires white-box model weights and homogeneous architectures; TOAI operates strictly at the application-layer text wire across heterogeneous black-box commercial APIs.
+  \item \textbf{Dynamic Topology Pruning (AgentDropout):} Eliminates redundant agent nodes and communication edges. This optimizes workflow topology and is fully orthogonal to wire serialization: AgentDropout reduces \emph{who} talks to \emph{whom}, while TOAI minimizes the wire payload \emph{when} they talk.
+  \item \textbf{State Delta Encoding (SDE):} Transmits attribute diffs rather than full state objects. Because TOAI's typed parameter brackets (\texttt{[key:val]}) are schema-agnostic, state deltas can be nested directly inside Demotic payloads (e.g., \texttt{\S S01[delta:\{+limit:10\}]}), providing synergistic, orthogonal token reduction without serialization overhead.
+\end{itemize}
 
 To address this trilemma, we present \textbf{TOAI-elegant-lang (v5.4.5)}, a zero-dependency Python compiler and wire protocol built on an orthogonal Reduced Instruction Set Computer (RISC) architecture and Tri-Script Rosetta design. Crucially, release \texttt{v5.4.5} incorporates multi-AI adversarial audits (ChatGPT and Claude) and rigorous peer evaluations, replacing provisional estimates with a strictly disjoint $N=112$ holdout benchmark, complete downstream execution accuracy comparisons, and a formal game-based cryptographic reduction.
 
@@ -129,28 +137,27 @@ To address this trilemma, we present \textbf{TOAI-elegant-lang (v5.4.5)}, a zero
 \footnotesize
 \renewcommand{\arraystretch}{0.98}
 \setlength{\tabcolsep}{2.5pt}
-\begin{tabularx}{\textwidth}{L{3.1cm} L{2.2cm} C{1.8cm} C{1.9cm} C{1.9cm} Y}
+\begin{tabularx}{\textwidth}{L{3.2cm} L{2.2cm} C{1.6cm} C{1.8cm} C{1.8cm} Y}
 \toprule
 \rowcolor{navyheader}
 \textbf{\color{white}Communication Paradigm} &
 \textbf{\color{white}Wire Encoding} &
-\textbf{\color{white}Causal AST \& Guards} &
-\textbf{\color{white}Deterministic Round-Trip} &
-\textbf{\color{white}Cross-API Portability} &
-\textbf{\color{white}Human Auditability \& Operational Characteristics} \\
+\textbf{\color{white}Causal AST} &
+\textbf{\color{white}Deterministic} &
+\textbf{\color{white}Portability} &
+\textbf{\color{white}Auditability \& Operational Scope} \\
 \midrule
-Verbose A2A / MCP JSON-RPC [1, 2, 5] & Pretty JSON + NL Prose & Yes (Verbose) & 100.0\% & 100\% (Text API) & High readability; highest token cost (349.8 tok/msg; baseline). \\
+Verbose A2A / MCP JSON [1, 2] & Pretty JSON + Prose & Yes (Verbose) & 100.0\% & 100\% (Text API) & Full readability; highest token overhead (349.8 tok/msg). \\
 \rowcolor{rowalt}
-Structured Tool JSON (\texttt{fair\_bench.py}) & Standard JSON Schema & Yes (JSON Objects) & 100.0\% & 100\% (Text API) & Lossless schema; repeated JSON keys/syntax (165.2 tok/msg). \\
-Minified Key JSON (\texttt{fair\_bench.py}) & Short-Key JSON (\texttt{"c","s"}) & Yes (Abbrev.\ JSON) & 100.0\% & 100\% (Text API) & Abbreviated keys require schema lookup (124.2 tok/msg). \\
+Structured Tool JSON & Standard Schema & Yes (JSON) & 100.0\% & 100\% (Text API) & Lossless schema; repeated key boilerplate (165.2 tok/msg). \\
+G2CP (Graph-Grounded) & Subgraph Ops & Graph Only & 100.0\% & 100\% (Text API) & Task-verifiable; requires dedicated Knowledge Graph backend. \\
 \rowcolor{rowalt}
-Simplified Flat Template (\texttt{KEY=VAL}) & Delimited Flat String & \textbf{No (Lossy)} & Lossy (0\% AST) & 100\% (Text API) & Lowest raw tokens (34.5 tok/msg), but loses causal edges \& 75\% params. \\
-Binary Protobuf [8] (Base64 Text Wire) & Base64-Armored Octets & Schema-Defined & 100.0\% (External) & Requires Tool/Decode & Opaque Base64 string in prompt context; BPE subword fragmentation. \\
+Q-KVComm / KVComm & Quantized KV-Cache & Internal & Lossy (Cosine) & White-Box Only & High compression ($5\times$); cannot span heterogeneous black-box APIs. \\
+AgentDropout & Graph Pruning & Topology & N/A (Topology) & Orthogonal & Prunes inactive communication links; orthogonal to serialization. \\
 \rowcolor{rowalt}
-Perplexity Token Pruning (LLMLingua [4]) & Pruned Natural Text & Unstructured & Lossy ($0\%$ JSON) & 100\% (Text API) & Designed for prose/RAG; breaks JSON syntax; $61.6\%$ task acc at $\rho=0.35$. \\
-Emergent MARL Codes [6, 7] & Learned IDs / Vectors & Implicit in Policy & Model-Dependent & Homogeneous Only & Opaque latent symbols; not directly interpretable by humans. \\
-\rowcolor{rowalt}
-\textbf{TOAI-elegant-lang (v5.4.5 Ours)} & \textbf{Demotic RISC Wire (\texttt{\S ID})} & \textbf{Yes (Native LL(1) AST)} & \textbf{100.0\% Lossless} & \textbf{100\% (Text API)} & \textbf{Tri-Script (Demotic / Sacred / Rosetta); 73.2 tok/msg; 100\% Task Acc.} \\
+State Delta Encoding (SDE) & Attribute Diffs & Diff Objects & 100.0\% & 100\% (Text API) & Efficient for stateful updates; orthogonal to TOAI wire brackets. \\
+\rowcolor{boxbg}
+\textbf{TOAI-elegant-lang (Ours)} & \textbf{Demotic RISC Wire} & \textbf{Yes (LL(1) AST)} & \textbf{100.0\% Lossless} & \textbf{100\% (Text API)} & \textbf{Tri-Script Rosetta; 73.2 tok/msg; zero runtime dependencies.} \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -234,7 +241,7 @@ Because bitwise XOR is a bijection on $\{0, \dots, 65{,}535\}$, each candidate $
     \;\implies\; \Pr\bigl[Y_{n+j} \in \mathcal{W}(C_{n+j}^*)\bigr] = \frac{6}{60{,}000} = 10^{-4}
     \label{eq:congruence_set}
   \end{equation}
-  subsuming Direct Tag Guessing ($m=0$, prob $1/60{,}000$) and Modular Aliases ($m \in \{1,\dots,5\}$, prob $5/60{,}000$). Across $k$ independent turns, $\Pr[W_2] = (6/60{,}000)^k = 10^{-4k}$. Without rejection sampling ($Y_{n+j} \in \{0,\dots,65{,}535\}$), residues $C^* \le 5{,}535$ admit a 7th alias ($m=6$), bounding forgery by $\max |\mathcal{W}_{\text{unrej}}|/65{,}536 = 7/65{,}536 \approx 1.068 \times 10^{-4}$. Non-transmitted $r_n$ adds $\approx 0.014\text{ }\mu\text{s}$ CPU variance, leaking negligible timing side-channel signal ($ \ll 10^4\text{ }\mu\text{s}$ network/LLM jitter). \qed
+  subsuming Direct Tag Guessing ($m=0$, prob $1/60{,}000$) and Modular Aliases ($m \in \{1,\dots,5\}$, prob $5/60{,}000$). Across $k$ independent turns, $\Pr[W_2] = (6/60{,}000)^k = 10^{-4k}$. Without rejection sampling ($Y_{n+j} \in \{0,\dots,65{,}535\}$), residues $C^* \le 5{,}535$ admit a 7th alias ($m=6$), bounding forgery by $\max |\mathcal{W}_{\text{unrej}}|/65{,}536 = 7/65{,}536 \approx 1.068 \times 10^{-4}$. \textbf{Side-Channel Scope and Limitations:} We emphasize that origin attestation is strictly evaluated against remote network adversaries attempting existential forgery over the communication wire. Physical, cache-timing, or co-located kernel side-channel attacks against the rejection-sampling loop are explicitly out of scope; deployment in adversarial co-tenancy environments would require constant-time modular arithmetic or blinding countermeasures. \qed
 \end{itemize}
 
 \begin{table}[h!]
@@ -253,6 +260,8 @@ Because bitwise XOR is a bijection on $\{0, \dots, 65{,}535\}$, each candidate $
 Secret Seed $S_0$ (256-bit hex) & \texttt{7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069} \\
 \rowcolor{rowalt}
 Session Anchor $H_0$ (SHA256) & \texttt{f3c515b25afe4f7ed4ca735b85fbfe50b083c7af4b8ec8c107c0e99438f02998} (\texttt{SHA256(b"TOAI\_TELEPATH\_GENESIS\_V541")}) \\
+\rowcolor{rowalt}
+Timestamp / Counter Format & ISO-8601 UTC ASCII: $X_1 = H_0 \,\|\, \texttt{b"\textbackslash x00"} \,\|\, \texttt{b"2026-11-06T12:00:00Z"} \,\|\, \text{int\_to\_bytes}(r_1, 2)$ \\
 Turn-1 Timestamp $t_1$ (UTF-8, $r_1=0$) & \texttt{2026-11-06T12:00:00Z} ($\text{HMAC-SHA256}(S_0, H_0 \,\|\, \texttt{b"\textbackslash x002026-11-06T12:00:00Z"}) \rightarrow T_1 = \texttt{0x241f} = \mathbf{9247}$) \\
 \rowcolor{rowalt}
 Step 1: 16-Bit Bitwise XOR & Given $p_1 = 0.9841 \implies P_1 = 9841$: $Y_1 = (P_1 \oplus T_1) = (9841 \oplus 9247) = \mathbf{622} < 60{,}000$ ($r_1 = 0$ accepted) \\
@@ -500,15 +509,14 @@ To establish external validity beyond deterministic heuristics, we evaluate the 
 \end{table}
 
 \newpage
-\section{Architectural Epilogue \& Position Statement: Beyond the Reviewer's Gate}
-The pursuit of a multi-agent wire protocol exposes the fundamental tension between mathematical purity and real-world deployment. In conventional academic review cycles, evaluation often devolves into an adversarial game of shifting goalposts: provisional small-scale baselines are dismissed for lack of holdout power, non-circular deterministic evaluators are dismissed for not incurring commercial API charges, and token reductions are faulted for lacking hardware watt-meter probes. 
-
-We publish \textbf{TOAI-elegant-lang v5.4.5} as a canonical systems architecture not to satisfy arbitrary peer-review heuristics, but to provide the open-source and agentic computing communities with an immutable, verifiable, and production-ready standard. The contributions of this work are definitive:
-\begin{itemize}
-  \item \textbf{Deterministic Zero-Dependency Integrity:} Zero third-party runtime dependencies. Standard Python 3.10+ libraries execute all 20 unit tests, quote/escape parsing, and cryptographic checks in $<0.6$ seconds on any commodity CPU.
-  \item \textbf{Mathematical \& Cryptographic Soundness:} Unobservable internal-counter origin attestation proven secure under standard PRF and collision-resistance assumptions with exact residue-class cardinality $|\mathcal{W}| = 6$, leaking zero observable timing jitter ($0.014\text{ }\mu\text{s} \ll 10^4\text{ }\mu\text{s}$).
-  \item \textbf{Empirical Honesty \& Reproducibility:} 100\% reproducible token accounting counting every canonical opcode as 3 BPE tokens, a non-circular corpus auditor achieving human-level agreement ($\kappa = 0.8611$), and a strictly disjoint 112-item holdout benchmark proving that Sacred naming drives semantic comprehension ($p = 1.36 \times 10^{-9}$) while shuffle controls collapse to chance.
-\end{itemize}
+\section{System Boundaries, Limitations, and Practical Scope}
+The empirical results across 7 major frontier language models clearly define the operational boundaries of compressed symbolic wire protocols:
+\begin{enumerate}[leftmargin=1.4em,itemsep=2pt,topsep=2pt]
+  \item \textbf{Inadmissibility for Flagship Reasoning Deliberation:} The \emph{Flagship Reasoning Paradox} demonstrates that highly capable reasoning models (such as Claude Sonnet 5.5) struggle when receiving compressed telegraphic tokens. Because reasoning architectures attempt to verify all causal dependencies and logical premises, abbreviated notation triggers excessive internal thinking iterations (hundreds of reasoning tokens per turn), eroding throughput and lowering comprehension accuracy (53.6\% vs.\ 83.0\% for fast models). Complex cross-model deliberation should therefore remain in structured prose, typed JSON, or code.
+  \item \textbf{Primary Operational Scope in Routine Worker RPCs:} Conversely, for lightweight, non-reasoning worker agents executing high-frequency queue handoffs (e.g., automated CI/CD bots, retrieval-augmented pipelines, batch state synchronization), Demotic Wire reduces communication volume by $55.7\%$--$79.1\%$ without degrading deterministic execution fidelity.
+  \item \textbf{Dependency on Session Header Amortization:} Zero-shot wire comprehension without a shared lexicon collapses to random chance ($25.1\%$). Consequently, significant token savings materialize only when the $\approx 1{,}000$-token dictionary header is amortized across recurring multi-turn sessions (break-even at 1--2 turns under prompt caching).
+  \item \textbf{Benchmark Generalization:} While evaluated on a strictly disjoint holdout ($N=112$) and audited with human verification ($\kappa = 0.8611$), future work must validate downstream execution across external, community-maintained multi-agent benchmark suites (e.g., WebArena, GAIA).
+\end{enumerate}
 
 \subsection*{Acknowledgements}
 {\footnotesize
