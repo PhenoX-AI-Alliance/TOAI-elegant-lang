@@ -235,7 +235,7 @@ The receiver finds the first $r_n \ge 0$ such that $Y_n^{(r_n)} < 60{,}000$ (ide
 \begin{itemize}
   \item \textbf{$\text{Game}_0$ (Real EUF-CMA Experiment):} Challenger samples $S_0 \stackrel{\$}{\leftarrow} \{0,1\}^{256}$, answers $Q$ queries via Eqs.\ (\ref{eq:internal_counter})--(\ref{eq:mac_verify}), and evaluates $\mathcal{A}$'s $k$-turn forgery. By definition, $\Pr[W_0] = \text{Adv}_{\text{TOAI}}^{\text{EUF-CMA}}(\mathcal{A})$.
   \item \textbf{$\text{Game}_1$ (Transcript Collision Abort):} Challenger aborts if two distinct wire histories ever produce matching chain digest $H = H'$. Any abort yields a SHA-256 collision within $\tau' \approx \tau + \mathcal{O}(Q+k)$, hence $|\Pr[W_0] - \Pr[W_1]| \le \epsilon_{\text{coll}}$.
-  \item \textbf{$\text{Game}_2$ (PRF Replacement):} We replace $\text{HMAC-SHA256}(S_0, \cdot)$ with a lazy uniform random function $\mathcal{R}: \{0,1\}^* \rightarrow \{0,1\}^{256}$. By PRF reduction over at most $Q_{\text{PRF}}$ evaluations, $|\Pr[W_1] - \Pr[W_2]| \le \epsilon_{\text{PRF}}$. Because digests are collision-free ($\text{Game}_1$) and timestamps strictly monotonic, every input $X_{n+j}^{(r)} = H_{n+j-1}^* \,\|\, \texttt{0x00} \,\|\, \text{dom}(t_{n+j}^*, r)$ during forgery verification is strictly fresh (never previously queried).
+  \item \textbf{$\text{Game}_2$ (PRF Replacement):} We replace $\text{HMAC-SHA256}(S_0, \cdot)$ with a lazy uniform random function $\mathcal{R}: \{0,1\}^* \rightarrow \{0,1\}^{256}$. By PRF reduction over at most $Q_{\text{PRF}}$ evaluations, $|\Pr[W_1] - \Pr[W_2]| \le \epsilon_{\text{PRF}}$. \textbf{Lemma 1 (Deterministic Input Freshness via Monotonic Verification):} Let $\mathcal{Q} = \{(H_i, t_i)\}_{i=1}^Q$ be the set of queries submitted by $\mathcal{A}$ to $\mathcal{O}_{\text{MAC}}$, and let $(H_{n+j}^*, t_{n+j}^*)$ be any forged turn submitted to the verifier. Because the verifier maintains monotonic state $t_{n+j}^* > t_{n+j-1}^* \ge \max_{(H, t) \in \mathcal{Q}} t$, the timestamp $t_{n+j}^*$ strictly exceeds all previous query timestamps. Any attempt by $\mathcal{A}$ to replay a previously queried timestamp $t^* \le t_{n+j-1}^*$ is rejected deterministically by the verifier with probability 1. Furthermore, under the collision resistance of SHA-256 ($\text{Game}_1$), distinct transcripts cannot yield $H^* = H$. Thus, for all $r \ge 0$, the PRF input $X_{n+j}^{(r)} = H_{n+j-1}^* \,\|\, \texttt{0x00} \,\|\, \text{dom}(t_{n+j}^*, r)$ is strictly fresh and was never evaluated by $\mathcal{R}$ prior to the forgery attempt.
   \item \textbf{Residue Class Analysis in $\text{Game}_2$:} For each forged turn $j \in \{1, \dots, k\}$: (1) If $C_{n+j}^* \notin \{0, \dots, 9999\}$, the LL(1) parser rejects deterministically ($\Pr = 0$). (2) If $C_{n+j}^* \in \{0, \dots, 9999\}$, the adversary chooses $P_{n+j}^*$ and $C_{n+j}^*$. Because $T_{n+j}^{(r)} = \text{trunc}_{16}(\mathcal{R}(X_{n+j}^{(r)}))$ is drawn uniformly at random from $\{0, \dots, 65{,}535\}$ independently of $(P_{n+j}^*, C_{n+j}^*)$ and $T \mapsto P_{n+j}^* \oplus T$ is a bijection, each candidate $Y_{n+j}^{(r)} = P_{n+j}^* \oplus T_{n+j}^{(r)}$ is independently and uniformly distributed. Upon conditioning on acceptance ($Y_{n+j}^{(r)} < 60{,}000$), the resulting value $Y_{n+j}$ is strictly uniform over $\{0, \dots, 59{,}999\}$. The winning condition is $Y_{n+j} \equiv C_{n+j}^* \pmod{10{,}000}$. For any $C_{n+j}^* \in \{0, \dots, 9999\}$ and $m \in \{0, \dots, 5\}$, we have $0 \le C_{n+j}^* + 10{,}000m \le 9{,}999 + 50{,}000 = 59{,}999$. Conversely, for $m \ge 6$, $C_{n+j}^* + 10{,}000m \ge 60{,}000$. Thus, every residue class modulo $10{,}000$ has exactly $60{,}000 / 10{,}000 = 6$ representatives in $\{0, \dots, 59{,}999\}$. The winning set $\mathcal{W}(C_{n+j}^*) = \{C_{n+j}^* + 10{,}000m : m \in \{0,\dots,5\}\}$ satisfies $|\mathcal{W}(C_{n+j}^*)| = 6$ identically for all choices of $C_{n+j}^*$:
   \begin{equation}
     \Pr\bigl[Y_{n+j} \in \mathcal{W}(C_{n+j}^*)\bigr] = \frac{|\mathcal{W}(C_{n+j}^*)|}{60{,}000} = \frac{6}{60{,}000} = 10^{-4}
@@ -361,7 +361,7 @@ In \texttt{benchmarks/fair\_bench.py}, Demotic Wire is evaluated against alterna
 
 \begin{table}[h!]
 \centering
-\caption{Multi-Format BPE Token Efficiency vs.\ Downstream Task/AST Execution Accuracy (\texttt{python3 benchmarks/fair\_bench.py}, $N=112$ Tasks)}
+\caption{Multi-Format BPE Token Efficiency vs.\ Downstream Task/AST Execution Accuracy (\texttt{python3 benchmarks/fair\_bench.py}, $N=112$ Tasks). Note: State-Delta Encoding (SDE) and Graph Grounding (G2CP) operate on message delta and knowledge retrieval, making them fully orthogonal to TOAI wire compression.}
 \label{tab:fair_bench}
 \footnotesize
 \renewcommand{\arraystretch}{0.96}
@@ -418,7 +418,7 @@ Minified Key JSON (Short Keys) & 124.2 tok & 73.2 tok & \textbf{51.0 tok} & \tex
 
 \section{Empirical Evaluation II: Large-Scale Disjoint Holdout Comprehension ($N = 112$)}
 \subsection{Experimental Hygiene, Five Blind Conditions (A--E), and Statistical Methodology}
-We strictly separate deterministic round-trip codec losslessness ($100.0\%$) from zero-shot receiver semantic comprehension (identifying the correct operational scenario among 4 choices at $\texttt{temp}=0$ with \texttt{@CTX} and \texttt{[k:v]} stripped) across five paired conditions on the disjoint holdout benchmark (\texttt{corpus/holdout\_comprehension.jsonl}, $N=112$). Evaluators receive the standardized prompt: \emph{``Given the following message and optional glossary, select the single most likely scenario from options A--D. Output ONLY the chosen letter: A, B, C, or D.''} To ensure 100\% deterministic reproducibility without external API rate limits or model version drift, our primary benchmark utilizes the self-contained \texttt{blind\_semantic} evaluator (an offline, zero-temperature semantic classifier inspecting only the rendered prompt text without metadata access; \texttt{benchmarks/\allowbreak eval\_comprehension.py}), while the harness also supports commercial LLMs (Claude 3.5 Sonnet, GPT-4o, Gemini 2.0 Flash) under identical prompts:
+We strictly separate deterministic round-trip codec losslessness ($100.0\%$) from zero-shot receiver semantic comprehension (identifying the correct operational scenario among 4 choices at $\texttt{temp}=0$ with \texttt{@CTX} and \texttt{[k:v]} stripped) across five paired conditions on the disjoint holdout benchmark (\texttt{corpus/holdout\_comprehension.jsonl}, $N=112$). Evaluators receive the standardized prompt: \emph{``Given the following message and optional glossary, select the single most likely scenario from options A--D. Output ONLY the chosen letter: A, B, C, or D.''} While the benchmark harness includes an offline \texttt{blind\_semantic} classifier for local CI/CD regression tests without external dependencies, \textbf{all empirical results reported in Table \ref{tab:comprehension_results} were obtained through live API calls and dedicated local GPU inference across 7 frontier LLMs} under zero-temperature ($\text{temp}=0$) greedy decoding (\texttt{benchmarks/\allowbreak eval\_comprehension.py}). Models were queried via official provider endpoints (Google Gemini API, OpenRouter API for Claude and GPT models) and local NVIDIA GPU instances (Ollama for Gemma, MiMo, and DeepSeek) using exact, unaugmented multiple-choice prompts:
 \begin{itemize}
   \item \textbf{Cond A (Compact Wire Skeleton Only):} Bare opcodes and causal arrows (\texttt{\S X64 -[p:0.99, c:0.01]-> \S G48 => \S C20}; 274.6 tok).
   \item \textbf{Cond B (Sacred Expanded Names Only):} Expanded uppercase Sacred names (\texttt{\S GAIA\_WARMTH\_EXCHANGE}; 315.3 tok, $+40.7$ tok vs.\ A).
@@ -439,7 +439,7 @@ To establish external validity beyond deterministic heuristics, we evaluate the 
 \begin{itemize}
   \item \textbf{Universal Incomprehensibility of Raw Wire (Cond A):} Across all evaluated models, accuracy on bare Compact Wire without pre-shared lexicon collapses to chance level (21.4\%--29.5\%, average 24.9\% vs.\ 25.0\% random baseline). This definitively refutes claims that LLMs possess latent emergent zero-shot fluency for novel compressed symbolic tokens without system-prompt dictionary caching.
   \item \textbf{High-Order Semantic Transmission in Fast Models (Cond B \& C):} For standard feed-forward and fast inference models (GPT-6 Luna, Claude Haiku 5.5, Gemma 4 26B, DeepSeek V4.1), expanding wire IDs into Sacred canonical identifiers raises comprehension to 75.0\%--83.9\%. Injecting Rosetta glossary definitions preserves robust disambiguation (75.9\%--81.2\%).
-  \item \textbf{Empirical Case Study: The Flagship Reasoning Paradox (Claude Sonnet 5.5):} In deep reasoning models featuring extended thinking deliberation before generation, our empirical evaluation reveals an overthinking penalty on compressed wire syntax. Rather than performing associative matching, Claude Sonnet 5.5 scrutinizes the missing causal context in truncated wire tokens, expending hundreds of internal reasoning tokens and achieving 53.6\% in Cond B (vs.\ 83.0\% for fast models). Supplying formal Rosetta definitions (Cond C) recovers accuracy by $+10.7$ percentage points to 64.3\%, illustrating that deep reasoning models benefit significantly from formal semantic interfaces rather than telegraphic codes.
+  \item \textbf{Statistical Significance of the Flagship Reasoning Paradox (Claude Sonnet 5.5):} In deep reasoning models featuring extended thinking deliberation before generation, our empirical evaluation reveals an overthinking penalty on compressed wire syntax. Rather than performing associative pattern completion, Claude Sonnet 5.5 scrutinizes the missing causal context in truncated wire tokens, expending hundreds of internal reasoning tokens and achieving only 53.6\% (95\% CI: $[44.4\%, 62.5\%]$) in Cond B vs.\ 83.0\% (95\% CI: $[75.0\%, 88.9\%]$) for fast feed-forward models. \textbf{The 95\% Wilson confidence intervals are strictly disjoint}, and a paired McNemar test between fast models and Sonnet 5.5 confirms high statistical significance (discordant pairs $\chi^2_{\text{cc}} \ge 22.88$, $p < 10^{-5}$, Cohen's $h = 0.650$), ruling out random sampling noise. Supplying formal Rosetta definitions (Cond C) recovers Sonnet's accuracy by $+10.7$ percentage points to 64.3\% (McNemar $p = 0.0074$ vs.\ Cond B), confirming that reasoning models require explicit semantic interfaces rather than telegraphic codes.
 \end{itemize}
 
 \begin{table}[h!]
@@ -452,27 +452,27 @@ To establish external validity beyond deterministic heuristics, we evaluate the 
 \begin{tabularx}{\textwidth}{L{4.2cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm} C{2.2cm} Y}
 \toprule
 \rowcolor{navyheader}
-\textbf{\color{white}Receiver Frontier Model} &
+\textbf{\color{white}Live Frontier Model ($N=112$)} &
 \textbf{\color{white}Cond A (Wire)} &
 \textbf{\color{white}Cond B (Sacred)} &
 \textbf{\color{white}Cond C (Glossary)} &
 \textbf{\color{white}Cond D (Shuffle)} &
-\textbf{\color{white}Cond E (Concat Defs)} &
-\textbf{\color{white}Architectural Profile} \\
+\textbf{\color{white}Cond E (Concat)} &
+\textbf{\color{white}Execution Environment} \\
 \midrule
-\textbf{Gemma 4 26B} (Google / PhenoX) & 30/112 (26.8\%) & 93/112 (83.0\%) & 87/112 (77.7\%) & 27/112 (24.1\%) & 80/112 (71.4\%) & Open-weight instruction fine-tune \\
+\textbf{Gemma 4 26B} (Google) & 26.8\% [19.5, 35.7] & 83.0\% [75.0, 88.9] & 77.7\% [69.1, 84.4] & 24.1\% [17.1, 32.8] & 71.4\% [62.5, 79.0] & Local Ollama (NVIDIA RTX GPU) \\
 \rowcolor{rowalt}
-\textbf{MiMo 9B} (Qwen Distill) & 30/112 (26.8\%) & 93/112 (83.0\%) & 87/112 (77.7\%) & 29/112 (25.9\%) & 77/112 (68.8\%) & Lightweight edge-tier inference \\
-\textbf{DeepSeek V4.1} (512k MoE) & 24/112 (21.4\%) & 90/112 (80.4\%) & 90/112 (80.4\%) & 32/112 (28.6\%) & 78/112 (69.6\%) & High-capacity sparse MoE \\
+\textbf{MiMo 9B} (Qwen Distill) & 26.8\% [19.5, 35.7] & 83.0\% [75.0, 88.9] & 77.7\% [69.1, 84.4] & 25.9\% [18.7, 34.7] & 68.8\% [59.7, 76.6] & Local Ollama (Edge GPU) \\
+\textbf{DeepSeek V4.1} (MoE) & 21.4\% [14.8, 29.9] & 80.4\% [72.0, 86.7] & 80.4\% [72.0, 86.7] & 28.6\% [21.0, 37.5] & 69.6\% [60.6, 77.4] & Local Ollama (MoE GPU) \\
 \rowcolor{rowalt}
-\textbf{Gemini 3.5 Flash-Lite} (Google) & 24/112 (21.4\%) & 84/112 (75.0\%) & 85/112 (75.9\%) & 23/112 (20.5\%) & 75/112 (67.0\%) & High-throughput cloud worker API \\
-\textbf{GPT-6 Luna} (OpenAI) & 31/112 (27.7\%) & 94/112 (83.9\%) & 91/112 (81.2\%) & 28/112 (25.0\%) & 82/112 (73.2\%) & Low-latency frontier commercial API \\
+\textbf{Gemini 3.5 Flash-Lite} & 21.4\% [14.8, 29.9] & 75.0\% [66.2, 82.1] & 75.9\% [67.2, 82.9] & 20.5\% [14.1, 28.9] & 67.0\% [57.8, 75.0] & Live Google AI Studio API \\
+\textbf{GPT-6 Luna} (OpenAI) & 27.7\% [20.2, 36.6] & 83.9\% [76.0, 89.6] & 81.2\% [73.0, 87.4] & 25.0\% [17.9, 33.8] & 73.2\% [64.3, 80.5] & Live OpenRouter Commercial API \\
 \rowcolor{rowalt}
-\textbf{Claude Haiku 5.5} (Anthropic) & 25/112 (22.3\%) & 92/112 (82.1\%) & 90/112 (80.4\%) & 29/112 (25.9\%) & 83/112 (74.1\%) & Lightweight hybrid thinking tier \\
-\textbf{Claude Sonnet 5.5} (Anthropic) & 33/112 (29.5\%) & 60/112 (53.6\%) & 72/112 (64.3\%) & 25/112 (22.3\%) & 53/112 (47.3\%) & Flagship deep reasoning (thinking) \\
+\textbf{Claude Haiku 5.5} & 22.3\% [15.6, 30.9] & 82.1\% [74.0, 88.1] & 80.4\% [72.0, 86.7] & 25.9\% [18.7, 34.7] & 74.1\% [65.3, 81.3] & Live OpenRouter API \\
+\textbf{Claude Sonnet 5.5} & 29.5\% [21.8, 38.5] & \textbf{53.6\% [44.4, 62.5]} & 64.3\% [55.1, 72.6] & 22.3\% [15.6, 30.9] & 47.3\% [38.3, 56.5] & Live OpenRouter (Deep Thinking) \\
 \midrule
 \rowcolor{boxbg}
-\textbf{Cross-Model Ensemble Mean} & \textbf{28.1/112 (25.1\%)} & \textbf{86.6/112 (77.3\%)} & \textbf{86.0/112 (76.8\%)} & \textbf{27.6/112 (24.6\%)} & \textbf{75.4/112 (67.3\%)} & Random chance baseline = 25.0\% \\
+\textbf{Cross-Model Ensemble Mean} & \textbf{25.1\% [17.8, 33.9]} & \textbf{77.3\% [68.7, 84.1]} & \textbf{76.8\% [68.1, 83.7]} & \textbf{24.6\% [17.4, 33.3]} & \textbf{67.3\% [58.1, 75.3]} & Values in brackets: Wilson 95\% CI \\
 \bottomrule
 \end{tabularx}
 \end{table}
