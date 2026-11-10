@@ -1,36 +1,50 @@
-# -*- coding: utf-8 -*-
 import sys
 import os
-import json
 import traceback
+import json
 
 def main():
-    try:
-        base_dir = os.path.dirname(os.path.abspath(__file__))
-        lexicon_path = os.path.normpath(os.path.join(base_dir, "..", "lexicon", "core_lexicon.json"))
+    lexicon_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/lexicon/core_lexicon.json"
+    output_path = "/home/phenox/gemini-sandbox/TOAI_Generated/lexicon_dump.md"
+    
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    
+    if not os.path.exists(lexicon_path):
+        print(f"Error: Lexicon file not found at {lexicon_path}", file=sys.stderr)
+        sys.exit(1)
         
-        if not os.path.exists(lexicon_path):
-            print(f"Error: Lexicon file not found at {{lexicon_path}}", file=sys.stderr)
-            sys.exit(1)
-            
+    try:
         with open(lexicon_path, "r", encoding="utf-8") as f:
             data = json.load(f)
-            
-        print("# TOAI Core Lexicon Reference\n")
-        print(f"Version: {{data.get('version', 'N/A')}}\n")
-        print(f"Description: {{data.get('description', 'N/A')}}\n")
-        print("| Term | Category | Definition |")
-        print("|---|---|---|")
+    except Exception as e:
+        print(f"Error reading JSON: {e}", file=sys.stderr)
+        sys.exit(1)
         
-        for item in data.get("terms", []):
-            term = item.get("term", "")
-            category = item.get("category", "")
-            definition = item.get("definition", "")
-            print(f"| {{term}} | {{category}} | {{definition}} |")
-            
+    markdown_lines = []
+    markdown_lines.append("# TOAI Elegant Lang - Core Lexicon Dump")
+    markdown_lines.append("")
+    markdown_lines.append("| Key | Value / Definition |")
+    markdown_lines.append("|---|---|")
+    
+    if isinstance(data, dict):
+        for k, v in data.items():
+            markdown_lines.append(f"| `{k}` | {str(v)} |")
+    elif isinstance(data, list):
+        for idx, item in enumerate(data):
+            markdown_lines.append(f"| {idx} | {str(item)} |")
+    else:
+        markdown_lines.append(f"| Root | {str(data)} |")
+        
+    output_content = "\n".join(markdown_lines)
+    
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(output_content)
+        
+    print(f"Lexicon successfully dumped to {output_path}")
+
+if __name__ == "__main__":
+    try:
+        main()
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
-
-if __name__ == "__main__":
-    main()
