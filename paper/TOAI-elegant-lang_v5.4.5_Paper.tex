@@ -430,7 +430,7 @@ Minified Key JSON (Short Keys) & 124.2 tok & 73.2 tok & \textbf{51.0 tok} & \tex
 
 \textbf{Live Frontier API and Dedicated Local GPU Execution:} All empirical results reported in Table \ref{tab:comprehension_results} were obtained through live API calls and dedicated local GPU inference across 7 frontier LLMs (\texttt{benchmarks/eval\_comprehension.py}): Google Gemini API (\texttt{gemini-2.5-flash}), OpenRouter commercial APIs (\texttt{claude-3-5-sonnet}, \texttt{claude-3-5-haiku}, \texttt{gpt-4o-mini}), and local NVIDIA GPU instances via Ollama (\texttt{Gemma4-26B-PhenoX}, \texttt{deepseek-v3}, \texttt{qwen2.5-coder}). The offline \texttt{blind\_semantic} classifier is retained strictly for local CI/CD regression checks.
 
-\textbf{Human Expert Baseline Calibration:} To calibrate task difficulty against human cognitive competence, an independent gold-standard sample ($n=60$, Section \ref{sec:adversarial_audit}) established a human expert baseline of \textbf{93.3\% accuracy} (56/60, Cohen's $\kappa=0.8611$). Top-performing fast feed-forward models (83.0\%--83.9\%) closely approach this human upper bound.
+\textbf{Human Expert Baseline Calibration:} To calibrate task difficulty against human cognitive competence, an independent gold-standard sample ($n=60$, Section 4.2) established a human expert baseline of \textbf{93.3\% accuracy} (56/60, Cohen's $\kappa=0.8611$). Top-performing fast feed-forward models (83.0\%--83.9\%) closely approach this human upper bound.
 
 \textbf{Five Blind Experimental Conditions (A--E):}
 \begin{itemize}
