@@ -2,30 +2,39 @@ import sys
 import os
 import json
 
-def dump_lexicon():
-    lexicon_path = os.path.join(os.path.dirname(__file__), "lexicon", "core_lexicon.json")
+def main():
+    lexicon_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/lexicon/core_lexicon.json"
     if not os.path.exists(lexicon_path):
-        print(f"Error: {lexicon_path} not found.", file=sys.stderr)
+        print(f"Error: Lexicon file not found at {lexicon_path}", file=sys.stderr)
         sys.exit(1)
         
-    with open(lexicon_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
+    try:
+        with open(lexicon_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except Exception as e:
+        print(f"Error reading JSON: {e}", file=sys.stderr)
+        sys.exit(1)
         
-    print("# TOAI Core Lexicon Dump\n")
-    print("| Term | Definition | Category |")
+    print("# TOAI-elegant-lang Core Lexicon")
+    print("")
+    print("| Word / Symbol | Meaning / Description | Category |")
     print("|---|---|---|")
     
-    for term, details in data.items():
-        if isinstance(details, dict):
-            definition = details.get("definition", "N/A")
-            category = details.get("category", "General")
-        elif isinstance(details, str):
-            definition = details
-            category = "General"
+    if isinstance(data, dict):
+        items = data.items()
+    elif isinstance(data, list):
+        items = [(str(i), item) for i, item in enumerate(data)]
+    else:
+        items = []
+        
+    for key, val in items:
+        if isinstance(val, dict):
+            meaning = val.get("meaning", str(val))
+            category = val.get("category", "general")
         else:
-            definition = str(details)
-            category = "General"
-        print(f"| {term} | {definition} | {category} |")
+            meaning = str(val)
+            category = "general"
+        print(f"| {key} | {meaning} | {category} |")
 
 if __name__ == "__main__":
-    dump_lexicon()
+    main()
