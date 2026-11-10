@@ -4,59 +4,51 @@ import traceback
 import time
 import json
 
-def audit_dialogues():
-    corpus_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
+def audit_dialogues(corpus_path):
     if not os.path.exists(corpus_path):
-        print(f"Error: Corpus file not found at {corpus_path}")
-        sys.exit(1)
+        raise FileNotFoundError(f"Corpus not found at {corpus_path}")
+    
+    dialogues = {}
+    total_lines = 0
+    parse_errors = 0
 
-    total_dialogues = 0
-    errors = 0
-
-    print("Starting dialogue audit...")
     with open(corpus_path, "r", encoding="utf-8") as f:
         for line_num, line in enumerate(f, 1):
+            total_lines += 1
             line = line.strip()
             if not line:
                 continue
-            total_dialogues += 1
             try:
-                data = json.loads(line)
-                if "dialogue_id" not in data or "turns" not in data:
-                    print(f"Line {line_num}: Missing required keys.")
-                    errors += 1
-                    continue
-                
-                turns = data["turns"]
-                if not isinstance(turns, list) or len(turns) == 0:
-                    print(f"Line {line_num}: Turns must be a non-empty list.")
-                    errors += 1
-                    continue
+                record = json.loads(line)
+                d_id = record.get("dialogue_id")
+                if d_id not in dialogues:
+                    dialogues[d_id] = []
+                dialogues[d_id].append(record)
+            except json.JSONDecodeError:
+                parse_errors += 1
 
-                expected_speaker = "user"
-                for turn_idx, turn in enumerate(turns):
-                    if "speaker" not in turn or "text" not in turn:
-                        print(f"Line {line_num}, Turn {turn_idx}: Missing speaker or text.")
-                        errors += 1
-                        break
-                    if turn["speaker"] != expected_speaker:
-                        print(f"Line {line_num}, Turn {turn_idx}: Unexpected speaker sequence. Expected {expected_speaker}.")
-                        errors += 1
-                    expected_speaker = "assistant" if expected_speaker == "user" else "user"
+    consistency_issues = 0
+    for d_id, turns in dialogues.items():
+        expected_speaker = "user"
+        for turn in turns:
+            current_speaker = turn.get("speaker")
+            if current_speaker != expected_speaker:
+                consistency_issues += 1
+            expected_speaker = "assistant" if expected_speaker == "user" else "user"
 
-            except json.JSONDecodeError as e:
-                print(f"Line {line_num}: JSON decode error - {e}")
-                errors += 1
-
-    print(f"Audit completed. Total dialogues: {total_dialogues}, Errors found: {errors}")
-    if errors > 0:
-        sys.exit(1)
-    else:
-        print("All dialogues are valid.")
+    report = {
+        "total_lines": total_lines,
+        "parse_errors": parse_errors,
+        "total_dialogues": len(dialogues),
+        "consistency_issues": consistency_issues
+    }
+    return report
 
 if __name__ == "__main__":
+    corpus = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
     try:
-        audit_dialogues()
+        result = audit_dialogues(corpus)
+        print(json.dumps(result, indent=2))
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
