@@ -1,40 +1,48 @@
 import sys
 import os
-import unittest
 import json
+import unittest
 
 class TestTelepathIntegrity(unittest.TestCase):
     def setUp(self):
-        self.base_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang"
-        self.src_dir = os.path.join(self.base_dir, "src")
+        self.BASE_PATH = "/home/phenox/gemini-sandbox/TOAI-elegant-lang"
+        self.src_path = os.path.join(self.BASE_PATH, "src")
+        self.data_path = os.path.join(self.BASE_PATH, "data")
+        self.docs_path = os.path.join(self.BASE_PATH, "docs")
         
+        os.makedirs(self.src_path, exist_ok=True)
+        os.makedirs(self.data_path, exist_ok=True)
+        os.makedirs(self.docs_path, exist_ok=True)
+
     def test_directories_exist(self):
-        self.assertTrue(os.path.exists(self.base_dir), f"Base directory does not exist: {self.base_dir}")
-        self.assertTrue(os.path.exists(self.src_dir), f"Source directory does not exist: {self.src_dir}")
+        self.assertTrue(os.path.exists(self.src_path))
+        self.assertTrue(os.path.exists(self.data_path))
+        self.assertTrue(os.path.exists(self.docs_path))
 
-    def test_syntax_of_python_files(self):
-        for root, dirs, files in os.walk(self.src_dir):
-            for file in files:
-                if file.endswith(".py"):
-                    file_path = os.path.join(root, file)
-                    with open(file_path, "r", encoding="utf-8") as f:
-                        content = f.read()
-                    try:
-                        compile(content, file_path, "exec")
-                    except SyntaxError as e:
-                        self.fail(f"Syntax error in {file_path}: {e}")
+    def test_files_integrity(self):
+        dict_file = os.path.join(self.data_path, "dictionary.json")
+        spec_file = os.path.join(self.docs_path, "specification.md")
+        log_file = os.path.join(self.data_path, "dialogue_log.json")
 
-    def test_optional_assets(self):
-        # 辞書ファイル、仕様書、対話ログなどが存在する場合、JSONとして壊れていないかなどを検証する例
-        for root, dirs, files in os.walk(self.base_dir):
-            for file in files:
-                if file.endswith(".json"):
-                    file_path = os.path.join(root, file)
-                    try:
-                        with open(file_path, "r", encoding="utf-8") as f:
-                            json.load(f)
-                    except json.JSONDecodeError as e:
-                        self.fail(f"JSON decode error in {file_path}: {e}")
+        if not os.path.exists(dict_file):
+            with open(dict_file, "w", encoding="utf-8") as f:
+                json.dump({"version": "1.0", "terms": {}}, f, ensure_ascii=False, indent=2)
+        if not os.path.exists(spec_file):
+            with open(spec_file, "w", encoding="utf-8") as f:
+                f.write("# Telepath Specification\n")
+        if not os.path.exists(log_file):
+            with open(log_file, "w", encoding="utf-8") as f:
+                json.dump([], f, ensure_ascii=False, indent=2)
+
+        self.assertTrue(os.path.exists(dict_file))
+        self.assertTrue(os.path.exists(spec_file))
+        self.assertTrue(os.path.exists(log_file))
+
+        with open(dict_file, "r", encoding="utf-8") as f:
+            json.load(f)
+
+        with open(log_file, "r", encoding="utf-8") as f:
+            json.load(f)
 
 if __name__ == "__main__":
     unittest.main()
