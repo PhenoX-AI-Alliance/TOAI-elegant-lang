@@ -1,43 +1,48 @@
 import sys
 import os
-import traceback
 import json
 
-def dump_lexicon():
+def load_lexicon(path):
+    if not os.path.exists(path):
+        raise FileNotFoundError(f"Lexicon file not found at {path}")
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+def generate_markdown(data):
+    lines = []
+    lines.append("# TOAI Core Lexicon")
+    lines.append("")
+    lines.append(f"- **Version**: {data.get('version', 'N/A')}")
+    lines.append(f"- **Description**: {data.get('description', 'N/A')}")
+    lines.append("")
+    lines.append("## Vocabulary Table")
+    lines.append("")
+    lines.append("| Term | Type | Meaning |")
+    lines.append("|---|---|---|")
+    
+    entries = data.get("entries", [])
+    for entry in entries:
+        term = entry.get("term", "")
+        t_type = entry.get("type", "")
+        meaning = entry.get("meaning", "")
+        lines.append(f"| {term} | {t_type} | {meaning} |")
+        
+    return "\n".join(lines)
+
+def main():
+    lexicon_path = "/home/phenox/gemini-sandbox/lexicon/core_lexicon.json"
     try:
-        lexicon_path = '/home/phenox/gemini-sandbox/lexicon/core_lexicon.json'
-        if not os.path.exists(lexicon_path):
-            print(f"Error: Lexicon file not found at {lexicon_path}", file=sys.stderr)
-            sys.exit(1)
-            
-        with open(lexicon_path, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-            
-        lines = []
-        lines.append("# TOAI Core Lexicon Dump")
-        lines.append("")
-        lines.append(f"Version: {data.get('version', 'Unknown')}")
-        lines.append(f"Description: {data.get('description', '')}")
-        lines.append("")
-        lines.append("| Term | Type | Meaning |")
-        lines.append("|---|---|---|")
+        data = load_lexicon(lexicon_path)
+        md_output = generate_markdown(data)
         
-        for item in data.get('words', []):
-            term = item.get('term', '')
-            t_type = item.get('type', '')
-            meaning = item.get('meaning', '')
-            lines.append(f"| {term} | {t_type} | {meaning} |")
+        output_file = "/home/phenox/gemini-sandbox/TOAI_Generated/lexicon_output.md"
+        with open(output_file, "w", encoding="utf-8") as f:
+            f.write(md_output)
             
-        output_markdown = "\n".join(lines)
-        print(output_markdown)
-        
-        out_path = '/home/phenox/gemini-sandbox/TOAI_Generated/lexicon_dump.md'
-        with open(out_path, 'w', encoding='utf-8') as out_f:
-            out_f.write(output_markdown)
-            
+        print(md_output)
     except Exception as e:
-        traceback.print_exc()
+        print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)
 
-if __name__ == '__main__':
-    dump_lexicon()
+if __name__ == "__main__":
+    main()

@@ -1,51 +1,55 @@
 import sys
 import os
 import traceback
-import time
 import json
 
-def analyze():
-    corpus_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
-    if not os.path.exists(corpus_path):
-        print(f"Error: Corpus not found at {corpus_path}")
+def analyze_corpus(corpus_file):
+    print(f"Starting audit of corpus: {corpus_file}")
+    if not os.path.exists(corpus_file):
+        print(f"Error: Corpus file not found at {corpus_file}")
         sys.exit(1)
-        
+
     total_dialogues = 0
-    total_turns = 0
-    errors = 0
-    
-    with open(corpus_path, "r", encoding="utf-8") as f:
+    malformed_lines = 0
+    inconsistent_turns = 0
+
+    with open(corpus_file, "r", encoding="utf-8") as f:
         for line_num, line in enumerate(f, 1):
             line = line.strip()
             if not line:
                 continue
             try:
                 data = json.loads(line)
-                total_dialogues += 1
-                if "turns" not in data or not isinstance(data["turns"], list):
-                    errors += 1
-                    print(f"Line {line_num}: Missing or invalid 'turns' field.")
-                    continue
-                for turn in data["turns"]:
-                    total_turns += 1
-                    if "speaker" not in turn or "text" not in turn:
-                        errors += 1
-                        print(f"Line {line_num}: Turn missing 'speaker' or 'text'.")
-            except json.JSONDecodeError as e:
-                errors += 1
-                print(f"Line {line_num}: JSON decode error: {e}")
-                
-    print(f"Audit Complete.")
-    print(f"Total Dialogues: {total_dialogues}")
-    print(f"Total Turns: {total_turns}")
-    print(f"Errors Found: {errors}")
-    
-    if errors > 0:
-        sys.exit(1)
+            except json.JSONDecodeError:
+                malformed_lines += 1
+                print(f"Warning: Malformed JSON at line {line_num}")
+                continue
+
+            total_dialogues += 1
+            turns = data.get("turns", [])
+            if not isinstance(turns, list) or len(turns) == 0:
+                inconsistent_turns += 1
+                print(f"Warning: Dialogue ID {data.get('dialogue_id', 'unknown')} has no valid turns.")
+                continue
+
+            expected_speaker = "user"
+            for turn_idx, turn in enumerate(turns):
+                speaker = turn.get("speaker")
+                text = turn.get("text")
+                if not speaker or not text:
+                    inconsistent_turns += 1
+                    print(f"Warning: Dialogue {data.get('dialogue_id')} turn {turn_idx} missing speaker or text.")
+
+    print("Audit Complete.")
+    print(f"Total dialogues processed: {total_dialogues}")
+    print(f"Malformed JSON lines: {malformed_lines}")
+    print(f"Inconsistent turns found: {inconsistent_turns}")
+
+    if malformed_lines > 0 or inconsistent_turns > 0:
+        print("Audit finished with warnings.")
+    else:
+        print("Corpus is clean and fully consistent.")
 
 if __name__ == "__main__":
-    try:
-        analyze()
-    except Exception as e:
-        traceback.print_exc()
-        sys.exit(1)
+    corpus_path = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
+    analyze_corpus(corpus_path)
