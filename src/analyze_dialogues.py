@@ -3,65 +3,50 @@ import os
 import traceback
 import time
 import json
+import collections
+import re
 
-def audit_dialogues():
+def main():
     corpus_path = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
+    output_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/analysis_result.json"
+    
+    speaker_counts = collections.defaultdict(int)
+    word_counts = collections.defaultdict(int)
+    
     if not os.path.exists(corpus_path):
-        print(f"Error: Corpus file not found at {{corpus_path}}")
+        print(f"Error: Corpus not found at {corpus_path}")
         sys.exit(1)
-
-    dialogues = {}
-    total_lines = 0
-    parse_errors = 0
-
-    with open(corpus_path, "r", encoding="utf-8") as f:
-        for line_num, line in enumerate(f, 1):
-            total_lines += 1
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                record = json.loads(line)
-                d_id = record.get("dialogue_id")
-                speaker = record.get("speaker")
-                text = record.get("text")
-
-                if d_id is None or speaker is None or text is None:
-                    parse_errors += 1
-                    continue
-
-                if d_id not in dialogues:
-                    dialogues[d_id] = []
-                dialogues[d_id].append({"speaker": speaker, "text": text, "line": line_num})
-            except json.JSONDecodeError:
-                parse_errors += 1
-
-    print(f"Total lines read: {{total_lines}}")
-    print(f"Parse errors: {{parse_errors}}")
-    print(f"Total dialogues found: {{len(dialogues)}}")
-
-    consistency_issues = 0
-    for d_id, turns in dialogues.items():
-        expected_speaker = "user"
-        for idx, turn in enumerate(turns):
-            if idx == 0 and turn["speaker"] != "user":
-                consistency_issues += 1
-            elif idx % 2 == 0 and turn["speaker"] != "user":
-                consistency_issues += 1
-            elif idx % 2 == 1 and turn["speaker"] != "assistant":
-                consistency_issues += 1
-
-    print(f"Dialogue consistency issues: {{consistency_issues}}")
-    if consistency_issues > 0 or parse_errors > 0:
-        print("Audit completed with warnings/errors.")
-        sys.exit(0)
-    else:
-        print("Audit completed successfully with zero issues.")
-        sys.exit(0)
-
-if __name__ == "__main__":
+        
     try:
-        audit_dialogues()
+        with open(corpus_path, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                data = json.loads(line)
+                speaker = data.get("speaker", "unknown")
+                text = data.get("text", "")
+                
+                speaker_counts[speaker] += 1
+                
+                words = re.findall(r"\w+", text.lower())
+                for word in words:
+                    word_counts[word] += 1
+                    
+        result = {
+            "speaker_counts": dict(speaker_counts),
+            "top_words": dict(word_counts.most_common(50))
+        }
+        
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(result, f, ensure_ascii=False, indent=2)
+            
+        print(f"Successfully analyzed dialogues. Result saved to {output_path}")
+        
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
+
+if __name__ == "__main__":
+    main()
