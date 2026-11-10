@@ -1,6 +1,6 @@
 \documentclass[9pt,a4paper]{extarticle}
 
-\usepackage[a4paper,top=12mm,bottom=12mm,left=11.5mm,right=11.5mm,headheight=11pt,headsep=3.5mm,footskip=5mm]{geometry}
+\usepackage[a4paper,top=10mm,bottom=10mm,left=11mm,right=11mm,headheight=11pt,headsep=3.5mm,footskip=5mm]{geometry}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{booktabs}
 \usepackage{tabularx}
@@ -63,7 +63,7 @@
 \fancyhead[R]{\footnotesize\sffamily\bfseries\color{tealrule} CANONICAL RELEASE V5.4.5 $\cdot$ ARCHIVAL EDITION}
 \renewcommand{\headrulewidth}{0.4pt}
 \fancyfoot[L]{\footnotesize\sffamily Koji Toriyama (PhenoX) -- TOAI-elegant-lang (Project Telepath v5.4.5)}
-\fancyfoot[R]{\footnotesize\sffamily Page \thepage\ of 6}
+\fancyfoot[R]{\footnotesize\sffamily Page \thepage\ of \pageref{LastPage}}
 \renewcommand{\footrulewidth}{0.3pt}
 
 \lstset{
@@ -508,7 +508,7 @@ To establish external validity beyond deterministic heuristics, we evaluate the 
 \end{tabularx}
 \end{table}
 
-\newpage
+
 \section{System Boundaries and Practical Scope}
 The empirical results across 7 major language models define the operational boundaries of compressed symbolic wire protocols:
 \begin{enumerate}[leftmargin=1.4em,itemsep=2pt,topsep=2pt]
