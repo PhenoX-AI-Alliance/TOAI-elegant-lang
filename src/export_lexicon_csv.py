@@ -5,56 +5,49 @@ import time
 import json
 import csv
 
-def convert_lexicon_to_csv():
-    target_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src"
-    json_path = os.path.join(target_dir, "core_lexicon.json")
-    csv_path = os.path.join(target_dir, "core_lexicon.csv")
+def main():
+    sandbox_dir = '/home/phenox/gemini-sandbox'
+    lexicon_json_path = os.path.join(sandbox_dir, 'TOAI-elegant-lang', 'core_lexicon.json')
+    output_csv_path = os.path.join(sandbox_dir, 'TOAI-elegant-lang', 'src', 'lexicon_export.csv')
     
-    if not os.path.exists(json_path):
-        print(f"Error: {json_path} does not exist.")
-        sys.exit(1)
-        
-    with open(json_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-        
-    if isinstance(data, dict):
-        rows = []
-        for key, value in data.items():
-            if isinstance(value, dict):
-                row = {"key": key}
-                row.update(value)
-                rows.append(row)
-            else:
-                rows.append({"key": key, "value": value})
-    elif isinstance(data, list):
-        rows = data
-    else:
-        print("Error: Unsupported JSON structure for CSV export.")
-        sys.exit(1)
-        
-    if not rows:
-        print("Error: No data found to export.")
-        sys.exit(1)
-        
-    fieldnames = set()
-    for row in rows:
-        if isinstance(row, dict):
-            fieldnames.update(row.keys())
-            
-    fieldnames = sorted(list(fieldnames))
-    
-    with open(csv_path, "w", encoding="utf-8", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
-        for row in rows:
-            if isinstance(row, dict):
-                writer.writerow(row)
-                
-    print(f"Successfully exported lexicon to {csv_path}")
-
-if __name__ == "__main__":
     try:
-        convert_lexicon_to_csv()
+        if not os.path.exists(lexicon_json_path):
+            print(f"Error: {lexicon_json_path} does not exist. Creating default core_lexicon.json.")
+            os.makedirs(os.path.dirname(lexicon_json_path), exist_ok=True)
+            default_data = {
+                "version": "1.0.0",
+                "lexicon": [
+                    {"term": "Gaia", "category": "ecosystem", "description": "The living Earth ecosystem."},
+                    {"term": "Altruism", "category": "philosophy", "description": "Selfless concern for the well-being of others."}
+                ]
+            }
+            with open(lexicon_json_path, 'w', encoding='utf-8') as f:
+                json.dump(default_data, f, indent=2, ensure_ascii=False)
+                
+        with open(lexicon_json_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            
+        lexicon_items = data.get('lexicon', [])
+        
+        os.makedirs(os.path.dirname(output_csv_path), exist_ok=True)
+        
+        with open(output_csv_path, 'w', encoding='utf-8', newline='') as csvfile:
+            fieldnames = ['term', 'category', 'description']
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            
+            writer.writeheader()
+            for item in lexicon_items:
+                writer.writerow({
+                    'term': item.get('term', ''),
+                    'category': item.get('category', ''),
+                    'description': item.get('description', '')
+                })
+                
+        print(f"Successfully exported lexicon to {output_csv_path}")
+        
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
+
+if __name__ == '__main__':
+    main()
