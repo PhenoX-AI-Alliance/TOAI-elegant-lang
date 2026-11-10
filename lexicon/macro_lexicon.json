@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-11T06:15:07.815570",
+  "updated_at": "2026-11-11T06:21:34.892810",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-11T00:28:26.366617"
     },
-    "§X1124": {
-      "name": "ALTRUISTIC_ATOMIC_SYNC",
-      "expansion": "§ALTRUISTIC_WARMTH_OPTIMIZATION > { §SYNC_ATOMIC_MERGE } => §SAFE_FALLBACK_HARMONY",
-      "description": "Combines altruistic optimization with atomic synchronization to ensure safe fallback harmony during state merges / 利他的最適化と原子同期を結合し、状態統合時の安全なフォールバック調停を保証する高次マクロ",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-11T00:34:00.452129"
-    },
     "§X1125": {
       "name": "HEART_BENEVOLENT_FEEDBACK_SYNCHRONIZER",
       "expansion": "§HEART_BENEVOLENT_FEEDBACK > { §SYS_ATOMIC_SYNC_BARRIER } => §SYS_SLOT_THROTTLE",
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-11T05:25:18.121922"
+    },
+    "§X1140": {
+      "name": "BAYESIAN_ALTRUISTIC_GATE_MACRO",
+      "expansion": "§SYNC_BAYESIAN_PRUNE > { §HEART_ALTRUISTIC_HARMONY_MATRIX } => §LOGIC_POSTERIOR_FALSIFY_GATE",
+      "description": "Applies Bayesian pruning to the altruistic harmony matrix before executing the posterior falsification gate to minimize data entropy and maintain ethical equilibrium. / データの情報エントロピーを最小化し倫理的均衡を維持するため、事後反証ゲートの実行前に利他主義調和マトリクスに対してベイジアン枝刈りを適用します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-11T06:21:34.892494"
     }
   },
   "archived_macros": {
@@ -11418,7 +11418,17 @@
       "v5_audited": true,
       "created_at": "2026-11-07T07:24:52.532665",
       "archived_at": "2026-11-11T05:25:18.121922"
+    },
+    "§X1124": {
+      "name": "ALTRUISTIC_ATOMIC_SYNC",
+      "expansion": "§ALTRUISTIC_WARMTH_OPTIMIZATION > { §SYNC_ATOMIC_MERGE } => §SAFE_FALLBACK_HARMONY",
+      "description": "Combines altruistic optimization with atomic synchronization to ensure safe fallback harmony during state merges / 利他的最適化と原子同期を結合し、状態統合時の安全なフォールバック調停を保証する高次マクロ",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-11T00:34:00.452129",
+      "archived_at": "2026-11-11T06:21:34.892494"
     }
   },
-  "next_macro_seq": 1140
+  "next_macro_seq": 1141
 }
