@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-11T22:59:36.211006",
+  "updated_at": "2026-11-11T23:02:18.942550",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,24 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-11T17:55:19.892898"
     },
-    "§X1170": {
-      "name": "GAIA_LOGIC_HARMONIC_COLLAPSE_DEF",
-      "expansion": "§GAIA_ECOSYSTEM_HARMONY > { §LOGIC_DEDUCTIVE_COLLAPSE_GATE } => §HARMONIC_RESONANCE_STABLE",
-      "description": "Integrates Gaia ecosystem harmony with deductive logic collapse gating to achieve a stable harmonic resonance state. / ガイア生態系の調和と演繹的論理崩壊ゲートを統合し、安定した調和共鳴状態を達成する高次マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-11T20:01:15.244246",
-      "v5_audited": true,
-      "created_at": "2026-11-11T18:10:52.083808"
-    },
-    "§X1171": {
-      "name": "CAUSAL_ENTROPY_OPTIMIZATION_PIPELINE",
-      "expansion": "§DATA_ENTROPY_CAUSAL_DAG > { §LOGIC_AXIOM_PRUNE } => §SAFE_FALLBACK_STABLE",
-      "description": "Optimizes the data causal DAG by pruning logical axioms to ensure a stable safe fallback. 因果DAGのエントロピーを最適化し、論理公理を刈り込むことで安全なフォールバックの安定性を確保します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-11T19:09:57.536261",
-      "v5_audited": true,
-      "created_at": "2026-11-11T18:42:40.970086"
-    },
     "§X1172": {
       "name": "QUANTUM_BAYESIAN_RESOURCE_PRUNE",
       "expansion": "§SYS_QUANTUM_RESOURCE_ARBITER > { §SYNC_BAYESIAN_PRUNE } => §LOGIC_PROBABILISTIC_FALSIFICATION_FILTER",
@@ -2508,6 +2490,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-11T22:59:36.210602"
+    },
+    "§X1186": {
+      "name": "RESILIENT_CIRCUIT_THROTTLE",
+      "expansion": "§SYS_SLOT_THROTTLE > { §PROTO_CIRCUIT_BREAK } => §PROTO_AUDIT_TRAIL",
+      "description": "Throttles system slots dynamically, triggers circuit breakers on failure, and records the event in the audit trail. / システムスロットを動的にスロットリングし、障害時にサーキットブレーカーを起動して監査証跡に記録します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-11T23:02:16.243476"
+    },
+    "§X1187": {
+      "name": "ALTRUISTIC_ATOMIC_SYNC_MERGE",
+      "expansion": "§HEART_ALTRUISTIC_ECO_HARMONY > { §SYNC_ATOMIC_CONSENSUS_MERGE } => §SUSTAINABLE_ALTRUISTIC_VALUE",
+      "description": "Combines altruistic ecological harmony with atomic consensus merging to yield sustainable altruistic value. 利他的な生態学的調和とアトミックな合意形成マージを結合し、持続可能な利他的価値を生成します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-11T23:02:18.942116"
     }
   },
   "archived_macros": {
@@ -11878,7 +11878,27 @@
       "v5_audited": true,
       "created_at": "2026-11-11T18:01:42.739045",
       "archived_at": "2026-11-11T22:59:36.210602"
+    },
+    "§X1170": {
+      "name": "GAIA_LOGIC_HARMONIC_COLLAPSE_DEF",
+      "expansion": "§GAIA_ECOSYSTEM_HARMONY > { §LOGIC_DEDUCTIVE_COLLAPSE_GATE } => §HARMONIC_RESONANCE_STABLE",
+      "description": "Integrates Gaia ecosystem harmony with deductive logic collapse gating to achieve a stable harmonic resonance state. / ガイア生態系の調和と演繹的論理崩壊ゲートを統合し、安定した調和共鳴状態を達成する高次マクロ。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-11T20:01:15.244246",
+      "v5_audited": true,
+      "created_at": "2026-11-11T18:10:52.083808",
+      "archived_at": "2026-11-11T23:02:16.243476"
+    },
+    "§X1171": {
+      "name": "CAUSAL_ENTROPY_OPTIMIZATION_PIPELINE",
+      "expansion": "§DATA_ENTROPY_CAUSAL_DAG > { §LOGIC_AXIOM_PRUNE } => §SAFE_FALLBACK_STABLE",
+      "description": "Optimizes the data causal DAG by pruning logical axioms to ensure a stable safe fallback. 因果DAGのエントロピーを最適化し、論理公理を刈り込むことで安全なフォールバックの安定性を確保します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-11T19:09:57.536261",
+      "v5_audited": true,
+      "created_at": "2026-11-11T18:42:40.970086",
+      "archived_at": "2026-11-11T23:02:18.942116"
     }
   },
-  "next_macro_seq": 1186
+  "next_macro_seq": 1188
 }
