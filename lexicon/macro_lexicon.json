@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-11T15:29:07.423664",
+  "updated_at": "2026-11-11T16:14:24.560088",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1573,24 +1573,6 @@
       "v5_audited": true,
       "created_at": "2026-11-07T19:54:50.910153"
     },
-    "§X962": {
-      "name": "ALTRUISTIC_SYNTHESIS_ARBITRATION",
-      "expansion": "§HEART_ALTRUISTIC_HARMONY_MODULATION > { §SYNC_HARMONIC_VOTE_ARBITRATION } => §SYNC_DIALECTIC_PRUNE",
-      "description": "Combines altruistic heart modulation with harmonic vote arbitration to prune and synthesize dialectic consensus. / 利他の心拍変調と調和的投票仲裁を統合し、弁証法的合意の剪定と統合を行います。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-08T00:38:12.539681",
-      "v5_audited": true,
-      "created_at": "2026-11-07T21:02:10.601787"
-    },
-    "§X963": {
-      "name": "ECO_HEARTBEAT_HARMONY_MACRO",
-      "expansion": "§PROTO_HEARTBEAT_PING > { §ECO_CORE_HARMONY_STABLE } => §HARMONIC_RESONANCE",
-      "description": "Establishes a stable ecological heartbeat and synchronizes harmonic resonance across the network. / ネットワーク全体の生態系における安定したハートビートを確立し、調和共鳴を同期させます。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-07T22:30:17.720391",
-      "v5_audited": true,
-      "created_at": "2026-11-07T21:08:33.518191"
-    },
     "§X964": {
       "name": "SYNC_SOCIAL_GENESIS",
       "expansion": "§GENESIS > { §SYNC_RECURSIVE_CONSENSUS_LATTICE } => §STABLE_SOCIAL_IMPLEMENTATION",
@@ -2396,8 +2378,8 @@
       "name": "CAUSAL_ADAPTIVE_SYNC_PIPELINE",
       "expansion": "§DATA_TENSOR_CAUSAL_LATTICE > { §SYS_ADAPTIVE_TOKEN_THROTTLE } => §SYS_ATOMIC_SYNC_BARRIER",
       "description": "Causal tensor lattice expansion coupled with adaptive token throttling, finalized by an atomic synchronization barrier / 因果テンソル格子展開に順応型トークンスロットルを結合し、アトミック同期バリアによって確定させる高次マクロ",
-      "usage_count": 1,
-      "last_used_at": "2026-11-11T15:29:07.423471",
+      "usage_count": 2,
+      "last_used_at": "2026-11-11T16:01:10.072668",
       "v5_audited": true,
       "created_at": "2026-11-11T11:18:50.345858"
     },
@@ -2508,6 +2490,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-11T15:28:46.526967"
+    },
+    "§X1165": {
+      "name": "EMPIRICAL_CAUSAL_HARVEST",
+      "expansion": "§SYS_ASYNCHRONOUS_STATE_HARVESTER > { §DATA_LATENT_CAUSAL_MANIFOLD } => §LOGIC_EMPIRICAL_FALSIFY",
+      "description": "Asynchronously harvests system states from the latent causal data manifold and subjects them to rigorous empirical falsification. 潜在的因果マニホールドからシステム状態を非同期で収集し、厳密な経験的反証に付す高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-11T15:54:31.214020"
+    },
+    "§X1166": {
+      "name": "CAUSAL_FALSIFY_PIPELINE",
+      "expansion": "§DATA_LATENT_CAUSAL_NODE > { §PROTO_ENCODING_SWITCH } => §LOGIC_POSTERIOR_FALSIFY_GATE",
+      "description": "Integrates latent causal node data processing with an encoding switch, followed by a posterior falsification logic gate. 潜在的因果ノードデータ処理とエンコーディング切替を統合し、事後反証論理ゲートへと接続する複合マクロです。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-11T15:59:55.194961"
     }
   },
   "archived_macros": {
@@ -11668,7 +11668,27 @@
       "v5_audited": true,
       "created_at": "2026-11-07T21:22:04.220452",
       "archived_at": "2026-11-11T15:28:46.526967"
+    },
+    "§X963": {
+      "name": "ECO_HEARTBEAT_HARMONY_MACRO",
+      "expansion": "§PROTO_HEARTBEAT_PING > { §ECO_CORE_HARMONY_STABLE } => §HARMONIC_RESONANCE",
+      "description": "Establishes a stable ecological heartbeat and synchronizes harmonic resonance across the network. / ネットワーク全体の生態系における安定したハートビートを確立し、調和共鳴を同期させます。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-07T22:30:17.720391",
+      "v5_audited": true,
+      "created_at": "2026-11-07T21:08:33.518191",
+      "archived_at": "2026-11-11T15:54:31.214020"
+    },
+    "§X962": {
+      "name": "ALTRUISTIC_SYNTHESIS_ARBITRATION",
+      "expansion": "§HEART_ALTRUISTIC_HARMONY_MODULATION > { §SYNC_HARMONIC_VOTE_ARBITRATION } => §SYNC_DIALECTIC_PRUNE",
+      "description": "Combines altruistic heart modulation with harmonic vote arbitration to prune and synthesize dialectic consensus. / 利他の心拍変調と調和的投票仲裁を統合し、弁証法的合意の剪定と統合を行います。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-08T00:38:12.539681",
+      "v5_audited": true,
+      "created_at": "2026-11-07T21:02:10.601787",
+      "archived_at": "2026-11-11T15:59:55.194961"
     }
   },
-  "next_macro_seq": 1165
+  "next_macro_seq": 1167
 }
