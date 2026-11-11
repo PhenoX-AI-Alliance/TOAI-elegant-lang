@@ -10,11 +10,14 @@ def audit_lexicons():
     core_path = os.path.join(lexicon_dir, 'core_lexicon.json')
     macro_path = os.path.join(lexicon_dir, 'macro_lexicon.json')
     
-    report = {
-        "timestamp": os.path.getmtime(core_path) if os.path.exists(core_path) else 0,
-        "core_lexicon": {},
-        "macro_lexicon": {}
+    result = {
+        'core_audit': {},
+        'macro_audit': {},
+        'timestamp': time.time() if 'time' in globals() else 0
     }
+    
+    import time
+    result['timestamp'] = time.time()
     
     if os.path.exists(core_path):
         try:
@@ -23,6 +26,7 @@ def audit_lexicons():
             lexicon_dict = core_data.get('lexicon', {})
             categories = {}
             compact_ids = []
+            
             for sym, data in lexicon_dict.items():
                 if isinstance(data, dict):
                     cat = data.get('category', 'unknown')
@@ -30,29 +34,32 @@ def audit_lexicons():
                     cid = data.get('compact_id')
                     if cid is not None:
                         compact_ids.append(cid)
-            report["core_lexicon"] = {
-                "total_symbols": len(lexicon_dict),
-                "categories": categories,
-                "compact_id_stats": {
-                    "count": len(compact_ids),
-                    "min": min(compact_ids) if compact_ids else None,
-                    "max": max(compact_ids) if compact_ids else None
-                }
+            
+            result['core_audit'] = {
+                'total_symbols': len(lexicon_dict),
+                'category_distribution': categories,
+                'compact_id_count': len(compact_ids),
+                'compact_id_min': min(compact_ids) if compact_ids else None,
+                'compact_id_max': max(compact_ids) if compact_ids else None
             }
         except Exception as e:
-            report["core_lexicon"]["error"] = str(e)
-            
+            result['core_audit'] = {'error': str(e)}
+    else:
+        result['core_audit'] = {'error': 'core_lexicon.json not found'}
+        
     if os.path.exists(macro_path):
         try:
             with open(macro_path, 'r', encoding='utf-8') as f:
                 macro_data = json.load(f)
-            report["macro_lexicon"] = {
-                "total_macros": len(macro_data) if isinstance(macro_data, (dict, list)) else 0
+            result['macro_audit'] = {
+                'total_macros': len(macro_data) if isinstance(macro_data, dict) else 0
             }
         except Exception as e:
-            report["macro_lexicon"]["error"] = str(e)
-            
-    print(json.dumps(report, ensure_ascii=False, indent=2))
+            result['macro_audit'] = {'error': str(e)}
+    else:
+        result['macro_audit'] = {'error': 'macro_lexicon.json not found'}
+        
+    print(json.dumps(result, indent=2, ensure_ascii=False))
 
 if __name__ == '__main__':
     audit_lexicons()
