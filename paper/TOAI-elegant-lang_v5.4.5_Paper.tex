@@ -228,14 +228,14 @@ The receiver finds the first $r_n \ge 0$ such that $Y_n^{(r_n)} < 60{,}000$ (ide
 \subsection{Security Analysis and Modular Congruence Cardinality Proof}
 \textbf{Theorem 1 (Exact Probabilistic Acceptance Bound for Single-Turn and $k$-Turn Blind Tampering).} \emph{Let $\mathcal{A}(\tau, Q, k)$ be an adaptive EUF-CMA adversary making at most $Q$ signing queries to MAC oracle $\mathcal{O}_{\text{MAC}}(S_0, \cdot)$ and outputting $k$ candidate forgery turns. Under the $(\tau', Q_{\text{PRF}}, \epsilon_{\text{PRF}})$-PRF security of $\text{HMAC-SHA256}$ (where $\mathbb{E}[Q_{\text{PRF}}] \le 1.0923(Q+k)$) and $(\tau', \epsilon_{\text{coll}})$-collision resistance of $\text{SHA-256}$:}
 \begin{enumerate}[leftmargin=1.4em,itemsep=1pt,topsep=1pt]
-  \item \textbf{Single-Turn Blind Tampering Acceptance (Union Bound):} The probability that an unauthenticated adversary without knowledge of session key $S_0$ produces a candidate wire payload accepted by the verifier is bounded by the residue acceptance rate:
+  \item \textbf{Single-Turn Blind Tampering Acceptance (Union Bound):} The unconditional probability that an unauthenticated adversary without session key $S_0$ produces a candidate wire payload accepted by the verifier is bounded by the unconditional residue acceptance rate $\Pr[\text{Accept}_{\text{turn}}] = \frac{6}{65{,}536} \approx 9.155 \times 10^{-5} < 10^{-4}$:
   \begin{equation}
-    \Pr[\text{Accept}_{\text{single}}] \le k \times \frac{6}{60{,}000} + \epsilon_{\text{PRF}} + \epsilon_{\text{coll}} = k \cdot 10^{-4} + \epsilon_{\text{PRF}} + \epsilon_{\text{coll}}
+    \Pr[\text{Accept}_{\text{single}}] \le k \times \frac{6}{65{,}536} + \epsilon_{\text{PRF}} + \epsilon_{\text{coll}} < k \cdot 10^{-4} + \epsilon_{\text{PRF}} + \epsilon_{\text{coll}}
     \label{eq:single_forgery}
   \end{equation}
   \item \textbf{Consecutive $k$-Turn Trajectory Hijacking:} The probability that an unauthenticated adversary successfully injects an entire valid $k$-turn causal execution trajectory where \emph{all $k$ turns} are simultaneously accepted decays exponentially:
   \begin{equation}
-    \Pr[\text{Accept}_{k\text{-turn}}] \le \left(\frac{6}{60{,}000}\right)^k + \epsilon_{\text{PRF}} + \epsilon_{\text{coll}} = 10^{-4k} + \epsilon_{\text{PRF}} + \epsilon_{\text{coll}}
+    \Pr[\text{Accept}_{k\text{-turn}}] \le \left(\frac{6}{65{,}536}\right)^k + \epsilon_{\text{PRF}} + \epsilon_{\text{coll}} < 10^{-4k} + \epsilon_{\text{PRF}} + \epsilon_{\text{coll}}
     \label{eq:forgery_bound}
   \end{equation}
 \end{enumerate}
@@ -255,7 +255,7 @@ Consequently, because $t_{n+j}^*$ is strictly unqueried and $H^*$ is collision-f
     \Pr\bigl[\text{Accept}_{\text{turn}}\bigr] = \Pr\bigl[Y < 60{,}000 \land Y \equiv C^* \!\pmod{10{,}000}\bigr] = \frac{6}{65{,}536} \approx 9.155 \times 10^{-5} < 10^{-4}
     \label{eq:congruence_set}
   \end{equation}
-  This bound strictly accounts for both Direct Tag Guessing ($m=0$, probability $1/60{,}000$) and Modular Aliases ($m \in \{1,\dots,5\}$, probability $5/60{,}000$). Because each turn uses a strictly fresh chain hash $H_{n+j-1}^*$ and monotonic timestamp $t_{n+j}^*$, the draws are mutually independent across turns, yielding $\Pr[W_2] = (6/60{,}000)^k = 10^{-4k}$. \textbf{Side-Channel Scope and Limitations:} We emphasize that origin attestation is strictly evaluated against remote network adversaries attempting existential forgery over the communication wire. Physical, cache-timing, or co-located kernel side-channel attacks against the rejection-sampling loop are explicitly out of scope; deployment in adversarial co-tenancy environments would require constant-time modular arithmetic or blinding countermeasures. \qed
+  This bound strictly accounts for both Direct Tag Guessing ($m=0$, probability $1/60{,}000$) and Modular Aliases ($m \in \{1,\dots,5\}$, probability $5/60{,}000$). Because each turn uses a strictly fresh chain hash $H_{n+j-1}^*$ and monotonic timestamp $t_{n+j}^*$, the draws are mutually independent across turns, yielding unconditional $\Pr[W_2] = (6/65{,}536)^k < 10^{-4k}$. \textbf{Side-Channel Scope and Limitations:} We emphasize that origin attestation is strictly evaluated against remote network adversaries attempting existential forgery over the communication wire. Physical, cache-timing, or co-located kernel side-channel attacks against the rejection-sampling loop are explicitly out of scope; deployment in adversarial co-tenancy environments would require constant-time modular arithmetic or blinding countermeasures. \qed
 \end{itemize}
 
 \begin{table}[h!]
