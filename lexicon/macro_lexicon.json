@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-11T16:14:24.560088",
+  "updated_at": "2026-11-11T16:41:45.427504",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2486,8 +2486,8 @@
       "name": "LOGIC_EMPIRICAL_REJECT_AND_QUANTUM_ARBITRATION",
       "expansion": "§LOGIC_EMPIRICAL_REJECT > { §SYS_QUANTUM_BUDGET_ARBITRATION } => §HARMONIC_RECOVERY_NEXUS",
       "description": "Rejects empirical anomalies under quantum budget constraints and restores harmonic system stability. / 量子バジェット制約の下で経験的異常を棄却し、システムの調和的安定性を回復する。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-11T16:41:45.427282",
       "v5_audited": true,
       "created_at": "2026-11-11T15:28:46.526967"
     },
