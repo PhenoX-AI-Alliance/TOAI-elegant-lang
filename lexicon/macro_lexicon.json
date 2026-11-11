@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-11T21:37:05.029313",
+  "updated_at": "2026-11-11T21:48:00.277346",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2387,8 +2387,8 @@
       "name": "EMPATHETIC_LOAD_SHEDDING_MACRO",
       "expansion": "§HEART_EMPATHETIC_TENSOR_CONVERGENCE > { §SYS_LOAD_SHEDDING_SHIELD } => §DATA_LATENT_CAUSAL_MANIFOLD",
       "description": "Integrates empathetic tensor convergence with system load shedding to dynamically stabilize the latent causal manifold during high-stress operations. 高負荷運用時に共感テンソル収束とシステム負荷分散を統合し、潜在因果多様体を動的に安定化させる高次マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-11T21:01:18.347312",
+      "usage_count": 2,
+      "last_used_at": "2026-11-11T21:43:30.137212",
       "v5_audited": true,
       "created_at": "2026-11-11T16:46:29.345726"
     },
@@ -2486,8 +2486,8 @@
       "name": "CAUSAL_RESONANCE_COLLAPSE",
       "expansion": "§DATA_LATENT_CAUSAL_HYPERGRAPH > { §HARMONIC_RESONANCE_STABLE } => §LOGIC_DEDUCTIVE_COLLAPSE_GATE",
       "description": "潛在因果ハイパーグラフ上の構造を調和共鳴により安定化させ、論理的演繹崩壊ゲートへ集約する高次マクロ。 / High-order macro that stabilizes structures on the latent causal hypergraph via harmonic resonance and converges them into the deductive collapse gate.",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-11T21:45:36.992917",
       "v5_audited": true,
       "created_at": "2026-11-11T20:21:05.705162"
     },
