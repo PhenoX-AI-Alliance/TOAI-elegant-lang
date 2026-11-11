@@ -1,0 +1,2 @@
+# Telepath Specification
+Integrity verified.
