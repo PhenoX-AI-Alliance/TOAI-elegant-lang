@@ -1,6 +1,6 @@
 \documentclass[9pt,a4paper]{extarticle}
 
-\usepackage[a4paper,top=9.0mm,bottom=9.0mm,left=10.5mm,right=10.5mm,headheight=10pt,headsep=3.0mm,footskip=4.5mm]{geometry}
+\usepackage[a4paper,top=7.0mm,bottom=7.0mm,left=9.0mm,right=9.0mm,headheight=9pt,headsep=2.5mm,footskip=3.8mm]{geometry}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{booktabs}
 \usepackage{tabularx}
@@ -38,16 +38,16 @@
 
 \Urlmuskip=0mu plus 1mu\relax
 \emergencystretch=3em
-\linespread{0.965}
+\linespread{0.935}
 
 % Compact section formatting
 \titleformat{\section}{\large\bfseries\sffamily\color{navyheader}}{\thesection.}{0.4em}{}[\vspace{0.2pt}\titlerule]
 \titleformat{\subsection}{\normalsize\bfseries\sffamily\color{navyheader}}{\thesubsection}{0.4em}{}
-\titlespacing*{\section}{0pt}{3.2pt plus 0.6pt minus 0.4pt}{1.2pt plus 0.4pt minus 0.2pt}
-\titlespacing*{\subsection}{0pt}{2.4pt plus 0.4pt minus 0.3pt}{0.8pt plus 0.2pt minus 0.2pt}
+\titlespacing*{\section}{0pt}{2.0pt plus 0.4pt minus 0.3pt}{0.6pt plus 0.2pt minus 0.1pt}
+\titlespacing*{\subsection}{0pt}{1.6pt plus 0.3pt minus 0.2pt}{0.5pt plus 0.2pt minus 0.1pt}
 
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{1.2pt plus 0.3pt minus 0.2pt}
+\setlength{\parskip}{0.6pt plus 0.2pt minus 0.1pt}
 \setlength{\abovedisplayskip}{2.2pt plus 0.5pt minus 0.5pt}
 \setlength{\belowdisplayskip}{2.2pt plus 0.5pt minus 0.5pt}
 \setlength{\intextsep}{2.5pt plus 0.5pt minus 0.5pt}
@@ -250,7 +250,7 @@ The receiver finds the first $r_n \ge 0$ such that $Y_n^{(r_n)} < 60{,}000$ (ide
   \item \textbf{Transcript Hash Collision Accounting ($\epsilon_{\text{coll}}$):} Even if $\mathcal{A}$ attempts to match an existing PRF domain input by selecting transcripts yielding $H_{n+j-1}^* \in \{H_1, \dots, H_Q\}$, because distinct wire histories have distinct message pre-images, any occurrence of $H^* = H_i$ implies a pre-image collision on SHA-256. In $\text{Game}_1$, the challenger aborts upon any such collision, bounding this event by $\Pr[\text{abort}_{\text{coll}}] \le \epsilon_{\text{coll}}$.
 \end{enumerate}
 Consequently, because $t_{n+j}^*$ is strictly unqueried and $H^*$ is collision-free, the composite PRF input $X_{n+j}^{(r)} = H_{n+j-1}^* \,\|\, \texttt{0x00} \,\|\, \text{dom}(t_{n+j}^*, r)$ is guaranteed to be strictly fresh (never evaluated by $\mathcal{R}$) for all $r \ge 0$ except with negligible probability $\epsilon_{\text{coll}}$.
-  \item \textbf{Residue Class Analysis in $\text{Game}_2$:} For each forged turn $j \in \{1, \dots, k\}$: (1) If $C_{n+j}^* \notin \{0, \dots, 9999\}$, the LL(1) parser rejects deterministically ($\Pr = 0$). (2) If $C_{n+j}^* \in \{0, \dots, 9999\}$, the adversary chooses $P_{n+j}^*$ and $C_{n+j}^*$. \textbf{Invariance to Adaptive Choice of $(P^*, C^*)$:} An adaptive adversary chooses $P_{n+j}^* \in \{0, \dots, 9999\}$ and $C_{n+j}^* \in \{0, \dots, 9999\}$ to maximize forgery probability. We prove that this probability is strictly invariant to $(P^*, C^*)$. For any fixed $P^*$, the XOR mapping $\phi_{P^*}: T \mapsto P^* \oplus T$ is an exact permutation (bijection) on the entire 16-bit domain $\mathbb{Z}_{2^{16}} = \{0, \dots, 65{,}535\}$. Because $T^{(r)} = \text{trunc}_{16}(\mathcal{R}(X^{(r)}))$ is drawn uniformly at random from $\mathbb{Z}_{2^{16}}$ independently of $P^*$, the preimage set of accepted values $\mathcal{T}_{\text{acc}}(P^*) = \{T \in \mathbb{Z}_{2^{16}} : P^* \oplus T < 60{,}000\} = \phi_{P^*}^{-1}(\{0, \dots, 59{,}999\})$ has cardinality $|\mathcal{T}_{\text{acc}}(P^*)| = 60{,}000$ identically for every $P^*$. Furthermore, for any $C^* \in \{0, \dots, 9999\}$, the winning congruence set $\mathcal{W}(C^*) = \{C^* + 10{,}000m : m \in \{0, \dots, 5\}\}$ consists of exactly 6 elements in $\{0, \dots, 59{,}999\}$ (since $C^* + 50{,}000 \le 59{,}999 < 60{,}000$). By the bijective property of $\phi_{P^*}$, the set of winning PRF draws $\mathcal{T}_{\text{win}}(P^*, C^*) = \phi_{P^*}^{-1}(\mathcal{W}(C^*))$ satisfies $|\mathcal{T}_{\text{win}}(P^*, C^*)| = |\mathcal{W}(C^*)| = 6$ identically for \emph{all} choices of $(P^*, C^*)$. Consequently, conditioning on acceptance yields an exact success probability of $|\mathcal{T}_{\text{win}}| / |\mathcal{T}_{\text{acc}}| = 6 / 60{,}000 = 10^{-4}$ under any adaptive strategy. The winning condition is $Y_{n+j} \equiv C_{n+j}^* \pmod{10{,}000}$. For any $C_{n+j}^* \in \{0, \dots, 9999\}$ and $m \in \{0, \dots, 5\}$, we have $0 \le C_{n+j}^* + 10{,}000m \le 9{,}999 + 50{,}000 = 59{,}999$. Conversely, for $m \ge 6$, $C_{n+j}^* + 10{,}000m \ge 60{,}000$. Thus, every residue class modulo $10{,}000$ has exactly $60{,}000 / 10{,}000 = 6$ representatives in $\{0, \dots, 59{,}999\}$. The winning set $\mathcal{W}(C_{n+j}^*) = \{C_{n+j}^* + 10{,}000m : m \in \{0,\dots,5\}\}$ satisfies $|\mathcal{W}(C_{n+j}^*)| = 6$ identically for all choices of $C_{n+j}^*$:
+  \item \textbf{Residue Class Analysis in $\text{Game}_2$:} For each forged turn $j \in \{1, \dots, k\}$: (1) If $C_{n+j}^* \notin \{0, \dots, 9999\}$, the LL(1) parser rejects deterministically ($\Pr = 0$). (2) If $C_{n+j}^* \in \{0, \dots, 9999\}$, the adversary chooses $P_{n+j}^*$ and $C_{n+j}^*$. \textbf{Invariance to Adaptive $(P^*, C^*)$:} Because $\phi_{P^*}: T \mapsto P^* \oplus T$ is a bijection on $\mathbb{Z}_{2^{16}}$, uniform PRF output $T$ ensures uniform distribution over candidate values. The winning congruence set $\mathcal{W}(C^*) = \{C^* + 10{,}000m : m \in \{0, \dots, 5\}\}$ contains exactly 6 elements in $\{0, \dots, 59{,}999\}$ for any $C^* \in \{0, \dots, 9999\}$. Thus, unconditional acceptance is strictly bounded by $|\mathcal{W}(C^*)| / 65{,}536 = 6 / 65{,}536 \approx 9.155 \times 10^{-5} < 10^{-4}$ for all adaptive choices of $(P^*, C^*)$:
   \begin{equation}
     \Pr\bigl[\text{Accept}_{\text{turn}}\bigr] = \Pr\bigl[Y < 60{,}000 \land Y \equiv C^* \!\pmod{10{,}000}\bigr] = \frac{6}{65{,}536} \approx 9.155 \times 10^{-5} < 10^{-4}
     \label{eq:congruence_set}
@@ -432,7 +432,7 @@ Minified Key JSON (Short Keys) & 124.2 tok & 73.2 tok & \textbf{51.0 tok} & \tex
 \end{tabularx}
 \end{table}
 
-\newpage\section{Empirical Evaluation II: Large-Scale Disjoint Holdout Comprehension ($N = 112$)}
+\section{Empirical Evaluation II: Large-Scale Disjoint Holdout Comprehension ($N = 112$)}
 \subsection{Experimental Hygiene, Five Blind Conditions (A--E), and Statistical Methodology}
 \textbf{Benchmark Separation and Protocol Specification:} We strictly separate deterministic round-trip codec losslessness ($100.0\%$) from zero-shot receiver semantic comprehension across five paired conditions on the disjoint holdout benchmark (\texttt{corpus/holdout\_comprehension.jsonl}, $N=112$). 
 
