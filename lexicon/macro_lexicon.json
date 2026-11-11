@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-11T21:48:00.277346",
+  "updated_at": "2026-11-11T22:08:57.672796",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1564,15 +1564,6 @@
       "v5_audited": true,
       "created_at": "2026-11-07T07:00:29.466077"
     },
-    "§X964": {
-      "name": "SYNC_SOCIAL_GENESIS",
-      "expansion": "§GENESIS > { §SYNC_RECURSIVE_CONSENSUS_LATTICE } => §STABLE_SOCIAL_IMPLEMENTATION",
-      "description": "Initializes the foundational genesis state, executes recursive consensus synchronization across the lattice, and achieves stable social implementation. 基礎的な創世状態を初期化し、格子状での再帰的合意同期を実行して、安定した社会実装を達成します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-08T05:37:18.118096",
-      "v5_audited": true,
-      "created_at": "2026-11-07T21:13:42.152168"
-    },
     "§X972": {
       "name": "GAIA_WARMTH_ARBITER_HYPERGRAPH",
       "expansion": "§DATA_ENTROPY_CAUSAL_HYPERGRAPH > { §SYS_DIVERGENCE_ARBITER } => §GAIA_WARMTH_EXCHANGE",
@@ -1581,15 +1572,6 @@
       "last_used_at": "2026-11-08T14:57:16.937177",
       "v5_audited": true,
       "created_at": "2026-11-08T01:46:53.828160"
-    },
-    "§X976": {
-      "name": "GLOBAL_SYNERGY_PRUNING",
-      "expansion": "§HEART_BENEVOLENT_FEEDBACK > { §SYS_QUANTUM_CONTEXT_PRUNING } => §GLOBAL_SYNERGY",
-      "description": "Integration of benevolent feedback loops with quantum context pruning to optimize global synergy. / 善意のフィードバックループと量子コンテキストプルーニングを統合し、グローバルシナジーを最適化するマクロ。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-08T05:03:37.491436",
-      "v5_audited": true,
-      "created_at": "2026-11-08T04:10:51.742797"
     },
     "§X977": {
       "name": "COMPOUND_CIRCUIT_RECOVERY_MACRO",
@@ -2365,15 +2347,6 @@
       "v5_audited": true,
       "created_at": "2026-11-11T15:28:46.526967"
     },
-    "§X1165": {
-      "name": "EMPIRICAL_CAUSAL_HARVEST",
-      "expansion": "§SYS_ASYNCHRONOUS_STATE_HARVESTER > { §DATA_LATENT_CAUSAL_MANIFOLD } => §LOGIC_EMPIRICAL_FALSIFY",
-      "description": "Asynchronously harvests system states from the latent causal data manifold and subjects them to rigorous empirical falsification. 潜在的因果マニホールドからシステム状態を非同期で収集し、厳密な経験的反証に付す高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-11T15:54:31.214020"
-    },
     "§X1166": {
       "name": "CAUSAL_FALSIFY_PIPELINE",
       "expansion": "§DATA_LATENT_CAUSAL_NODE > { §PROTO_ENCODING_SWITCH } => §LOGIC_POSTERIOR_FALSIFY_GATE",
@@ -2450,8 +2423,8 @@
       "name": "SYNERGISTIC_ADAPTIVE_DRAIN",
       "expansion": "§SYS_ADAPTIVE_BUDGET_ARBITER > { §SYNERGY_PRISM } => §PROTO_GRACEFUL_DRAIN",
       "description": "Dynamic resource allocation optimization macro combining adaptive budget arbitration, synergy prism projection, and graceful drain protocols. / 適応型予算調停、シナジー・プリズム投影、およびグレースフル・ドレイン・プロトコルを統合した動的リソース配分最適化マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-11T22:02:06.537325",
       "v5_audited": true,
       "created_at": "2026-11-11T19:01:32.699007"
     },
@@ -2486,8 +2459,8 @@
       "name": "CAUSAL_RESONANCE_COLLAPSE",
       "expansion": "§DATA_LATENT_CAUSAL_HYPERGRAPH > { §HARMONIC_RESONANCE_STABLE } => §LOGIC_DEDUCTIVE_COLLAPSE_GATE",
       "description": "潛在因果ハイパーグラフ上の構造を調和共鳴により安定化させ、論理的演繹崩壊ゲートへ集約する高次マクロ。 / High-order macro that stabilizes structures on the latent causal hypergraph via harmonic resonance and converges them into the deductive collapse gate.",
-      "usage_count": 1,
-      "last_used_at": "2026-11-11T21:45:36.992917",
+      "usage_count": 2,
+      "last_used_at": "2026-11-11T22:02:06.537325",
       "v5_audited": true,
       "created_at": "2026-11-11T20:21:05.705162"
     },
@@ -2508,6 +2481,33 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-11T21:37:05.028921"
+    },
+    "§X1181": {
+      "name": "CAUSAL_BAYES_CLOSURE",
+      "expansion": "§DATA_CAUSAL_GRAPH > { §LOGIC_BAYES_FALSIFY } => §LOGIC_AXIOM_CLOSURE",
+      "description": "Performs causal graph dependency mapping followed by Bayesian falsification testing to achieve logical axiom closure. 因果グラフの依存関係マッピングを実行し、ベイズ的反証テストを経て論理的公理の閉包を達成します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-11T21:50:32.744022"
+    },
+    "§X1182": {
+      "name": "CAUSAL_ENTROPY_OPTIMIZER",
+      "expansion": "§SYNC_COMPLETE > { §DATA_ENTROPY_CAUSAL_PACK } => §LOGIC_POSTERIOR_PRUNE",
+      "description": "Optimizes data entropy causal packages after synchronization and prunes posterior logic. / 同期完了後に因果エントロピーパックを最適化し、事後論理の刈り込みを実行します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-11T22:03:47.176834"
+    },
+    "§X1183": {
+      "name": "CAUSAL_ALTRUISTIC_ROLLBACK",
+      "expansion": "§DATA_TENSOR_CAUSAL_TOPOLOGY > { §HEART_ALTRUISTIC_RESONANCE } => §SYS_QUOTA_ROLLBACK",
+      "description": "Causal tensor topology optimizes altruistic resonance and triggers system quota rollback upon divergence. 因果テンソル構造が利他共鳴を最適化し、乖離発生時にシステムクォータのロールバックを実行します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-11T22:08:57.672351"
     }
   },
   "archived_macros": {
@@ -11828,7 +11828,37 @@
       "v5_audited": true,
       "created_at": "2026-11-08T03:54:54.346356",
       "archived_at": "2026-11-11T21:37:05.028921"
+    },
+    "§X1165": {
+      "name": "EMPIRICAL_CAUSAL_HARVEST",
+      "expansion": "§SYS_ASYNCHRONOUS_STATE_HARVESTER > { §DATA_LATENT_CAUSAL_MANIFOLD } => §LOGIC_EMPIRICAL_FALSIFY",
+      "description": "Asynchronously harvests system states from the latent causal data manifold and subjects them to rigorous empirical falsification. 潜在的因果マニホールドからシステム状態を非同期で収集し、厳密な経験的反証に付す高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-11T15:54:31.214020",
+      "archived_at": "2026-11-11T21:50:32.744022"
+    },
+    "§X976": {
+      "name": "GLOBAL_SYNERGY_PRUNING",
+      "expansion": "§HEART_BENEVOLENT_FEEDBACK > { §SYS_QUANTUM_CONTEXT_PRUNING } => §GLOBAL_SYNERGY",
+      "description": "Integration of benevolent feedback loops with quantum context pruning to optimize global synergy. / 善意のフィードバックループと量子コンテキストプルーニングを統合し、グローバルシナジーを最適化するマクロ。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-08T05:03:37.491436",
+      "v5_audited": true,
+      "created_at": "2026-11-08T04:10:51.742797",
+      "archived_at": "2026-11-11T22:03:47.176834"
+    },
+    "§X964": {
+      "name": "SYNC_SOCIAL_GENESIS",
+      "expansion": "§GENESIS > { §SYNC_RECURSIVE_CONSENSUS_LATTICE } => §STABLE_SOCIAL_IMPLEMENTATION",
+      "description": "Initializes the foundational genesis state, executes recursive consensus synchronization across the lattice, and achieves stable social implementation. 基礎的な創世状態を初期化し、格子状での再帰的合意同期を実行して、安定した社会実装を達成します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-08T05:37:18.118096",
+      "v5_audited": true,
+      "created_at": "2026-11-07T21:13:42.152168",
+      "archived_at": "2026-11-11T22:08:57.672351"
     }
   },
-  "next_macro_seq": 1181
+  "next_macro_seq": 1184
 }
