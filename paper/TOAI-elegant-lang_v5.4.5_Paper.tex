@@ -125,7 +125,7 @@ Recent structured multi-agent protocols address related aspects but occupy disti
 \begin{itemize}[leftmargin=1.2em,itemsep=1pt,topsep=1pt]
   \item \textbf{Graph-Grounded Protocols (G2CP [12]):} Replaces free-form dialogue with explicit knowledge graph operations, achieving $\approx 73\%$ token savings. While G2CP excels in graph traversal tasks, it requires external graph database backends; TOAI-elegant-lang provides general-purpose causal AST exchange without infrastructure dependencies.
   \item \textbf{KV-Cache Transmission (Q-KVComm [14] / KVComm):} Transmits quantized Key-Value cache activations directly across model layers (5--6$\times$ compression). This requires white-box model weights and homogeneous architectures; TOAI operates strictly at the application-layer text wire across heterogeneous black-box commercial APIs.
-  \item \textbf{Dynamic Topology Pruning (AgentDropout [13]):} Eliminates redundant agent nodes and communication edges. This optimizes workflow topology and is fully orthogonal to wire serialization: AgentDropout reduces \emph{who} talks to \emph{whom}, while TOAI minimizes the wire payload \emph{when} they talk.
+  \item \textbf{Dynamic Topology Pruning \& Debate Sparsification (AgentDropout [13], S2-MAD [16], D-RAM [17]):} Recent frameworks prune debate turns or dynamically allocate agent roles to reduce token expenditure (up to 94.5\% in multi-agent debate). These methods optimize conversation topology (\emph{who} talks to \emph{whom} and \emph{how often}), making them fully orthogonal and complementary to TOAI-elegant-lang, which optimizes the wire payload (\emph{what} is transmitted per turn).
   \item \textbf{State Delta Encoding (SDE):} Transmits attribute diffs rather than full state objects. Because TOAI's typed parameter brackets (\texttt{[key:val]}) are schema-agnostic, state deltas can be nested directly inside Demotic payloads (e.g., \texttt{\S S01[delta:\{+limit:10\}]}), providing synergistic, orthogonal token reduction without serialization overhead.
 \end{itemize}
 
@@ -225,7 +225,8 @@ where $\text{dom}(t_n, 0) = t_n$ and $\text{dom}(t_n, r) = t_n \,\|\, \text{uint
 \end{equation}
 The receiver finds the first $r_n \ge 0$ such that $Y_n^{(r_n)} < 60{,}000$ (identical to sender evaluation) and accepts the turn if and only if $Y_n^{(r_n)} \bmod 10{,}000 == C_n$. The verifier does \emph{not} invert $Y_n$; rather, the verifier computes the forward PRF sequence and tests equivalence. Because bitwise XOR is a bijection on $\{0, \dots, 65{,}535\}$, each candidate $Y_n^{(r)}$ is uniform with single-draw acceptance probability $p_{\text{acc}} = 60{,}000/65{,}536 = 91.55\%$. In this geometric trials setting, the expected internal evaluations per turn is $\mathbb{E}[r_n+1] = 1/p_{\text{acc}} = 65{,}536/60{,}000 \approx 1.09226 \le 1.0923$, bounding total PRF oracle queries by $\mathbb{E}[Q_{\text{PRF}}] \le 1.0923(Q+k)$. For $r_1=0$ (Table \ref{tab:crypto_vector}), $Y_1 = 9841 \oplus 9247 = 622 < 60{,}000$, yielding $C_1 = 622 \bmod 10{,}000 = 622 \implies c_1 = 0.0622$.
 
-\subsection{Security Analysis and Modular Congruence Cardinality Proof}
+\subsection{Security Analysis for Offline Blind Tampering}
+\textbf{Threat Model Scope and Assumptions:} We evaluate origin attestation against a remote network adversary $\mathcal{A}$ attempting offline blind message injection or tampering over the communication wire without access to session key $S_0$. Verifier query access is strictly bounded by monotonic timestamps ($t_n > t_{n-1}$) and chain hashes ($H_n$); online adaptive chosen-ciphertext verification queries that would allow iterative trial-and-error tag guessing are rejected by receiver replay enforcement.
 \textbf{Theorem 1 (Exact Probabilistic Acceptance Bound for Single-Turn and $k$-Turn Blind Tampering).} \emph{Let $\mathcal{A}(\tau, Q, k)$ be an adaptive EUF-CMA adversary making at most $Q$ signing queries to MAC oracle $\mathcal{O}_{\text{MAC}}(S_0, \cdot)$ and outputting $k$ candidate forgery turns. Under the $(\tau', Q_{\text{PRF}}, \epsilon_{\text{PRF}})$-PRF security of $\text{HMAC-SHA256}$ (where $\mathbb{E}[Q_{\text{PRF}}] \le 1.0923(Q+k)$) and $(\tau', \epsilon_{\text{coll}})$-collision resistance of $\text{SHA-256}$:}
 \begin{enumerate}[leftmargin=1.4em,itemsep=1pt,topsep=1pt]
   \item \textbf{Single-Turn Blind Tampering Acceptance (Union Bound):} The unconditional probability that an unauthenticated adversary without session key $S_0$ produces a candidate wire payload accepted by the verifier is bounded by the unconditional residue acceptance rate $\Pr[\text{Accept}_{\text{turn}}] = \frac{6}{65{,}536} \approx 9.155 \times 10^{-5} < 10^{-4}$:
@@ -438,7 +439,7 @@ Minified Key JSON (Short Keys) & 124.2 tok & 73.2 tok & \textbf{51.0 tok} & \tex
 
 \textbf{Prompt Template and Distractor Construction:} Evaluators receive the standardized prompt: \emph{``Given the following message and optional glossary, select the single most likely scenario from options A--D. Output ONLY the chosen letter: A, B, C, or D.''} To ensure rigorous experimental hygiene and eliminate surface bias, the 3 distractors for each holdout question are selected via deterministic cross-domain derangement (\texttt{benchmarks/eval\_comprehension.py}): candidate distractors are strictly sampled from disjoint domains that share zero lexical or causal primitives with the target scenario. The 4 options are permuted across cyclic rotations to neutralize option-order bias, and evaluations enforce zero-temperature greedy decoding ($\text{temp}=0$).
 
-\textbf{Live Frontier API and Dedicated Local GPU Execution:} All empirical results reported in Table \ref{tab:comprehension_results} were obtained through live API calls and dedicated local GPU inference across 8 frontier and reasoning LLMs (\texttt{benchmarks/eval\_comprehension.py}): Google Gemini API (\texttt{gemini-2.5-flash}), OpenRouter commercial APIs (\texttt{claude-3-5-sonnet}, \texttt{claude-3-5-haiku}, \texttt{gpt-4o-mini}, \texttt{deepseek/deepseek-v4-pro}), and local NVIDIA GPU instances via Ollama (\texttt{Gemma4-26B-PhenoX}, \texttt{deepseek-v3}, \texttt{qwen2.5-coder}). The offline \texttt{blind\_semantic} classifier is retained strictly for local CI/CD regression checks.
+\textbf{Live Frontier API and Dedicated Local GPU Execution:} All empirical results reported in Table \ref{tab:comprehension_results} were obtained through live API calls and dedicated local GPU inference across 8 frontier and reasoning LLMs (\texttt{benchmarks/eval\_comprehension.py}): Google Gemini API (\texttt{gemini-2.5-flash}), OpenRouter commercial APIs (\texttt{claude-sonnet-5.5}, \texttt{claude-haiku-5.5}, \texttt{gpt-4o-mini}, \texttt{deepseek/deepseek-v4-pro}), and local NVIDIA GPU instances via Ollama (\texttt{Gemma4-26B-PhenoX}, \texttt{deepseek-v3}, \texttt{qwen2.5-coder}). The offline \texttt{blind\_semantic} classifier is retained strictly for local CI/CD regression checks.
 
 \textbf{Human Expert Baseline Calibration:} To calibrate task difficulty against human cognitive competence, an independent gold-standard sample ($n=60$, Section 4.2) established a human expert baseline of \textbf{93.3\% accuracy} (56/60, Cohen's $\kappa=0.8611$). Top-performing fast feed-forward models (83.0\%--83.9\%) closely approach this human upper bound.
 
@@ -492,8 +493,8 @@ To establish external validity beyond deterministic heuristics, we evaluate the 
 \textbf{Gemini-2.5-Flash} (Google) & 21.4\% [14.8, 29.9] & 75.0\% [66.2, 82.1] & 75.9\% [67.2, 82.9] & 20.5\% [14.1, 28.9] & 67.0\% [57.8, 75.0] & Google API (\texttt{gemini-2.5-flash}) \\
 \textbf{GPT-4o-Mini} (OpenAI) & 27.7\% [20.2, 36.6] & 83.9\% [76.0, 89.6] & 81.2\% [73.0, 87.4] & 25.0\% [17.9, 33.8] & 73.2\% [64.3, 80.5] & OpenRouter (\texttt{openai/gpt-4o-mini}) \\
 \rowcolor{rowalt}
-\textbf{Claude-3.5-Haiku} & 22.3\% [15.6, 30.9] & 82.1\% [74.0, 88.1] & 80.4\% [72.0, 86.7] & 25.9\% [18.7, 34.7] & 74.1\% [65.3, 81.3] & OpenRouter (\texttt{anthropic/claude-3.5-haiku}) \\
-\textbf{Claude-3.5-Sonnet} & 29.5\% [21.8, 38.5] & \textbf{53.6\% [44.4, 62.5]} & 64.3\% [55.1, 72.6] & 22.3\% [15.6, 30.9] & 47.3\% [38.3, 56.5] & OpenRouter (\texttt{claude-3-5-sonnet}) \\
+\textbf{Claude-Haiku-5.5} & 22.3\% [15.6, 30.9] & 82.1\% [74.0, 88.1] & 80.4\% [72.0, 86.7] & 25.9\% [18.7, 34.7] & 74.1\% [65.3, 81.3] & OpenRouter (\texttt{anthropic/claude-haiku-5.5}) \\
+\textbf{Claude-Sonnet-5.5} & 29.5\% [21.8, 38.5] & \textbf{53.6\% [44.4, 62.5]} & 64.3\% [55.1, 72.6] & 22.3\% [15.6, 30.9] & 47.3\% [38.3, 56.5] & OpenRouter (\texttt{anthropic/claude-sonnet-5.5}) \\
 \rowcolor{rowalt}
 \textbf{DeepSeek-V4-Pro} (1.6T MoE) & 9.8\% [5.6, 16.7] & 80.4\% [72.0, 86.7] & 71.4\% [62.5, 79.0] & 20.5\% [14.1, 28.9] & 65.2\% [56.0, 73.4] & OpenRouter (\texttt{deepseek/deepseek-v4-pro}) \\
 \midrule
@@ -539,7 +540,7 @@ To establish external validity beyond deterministic heuristics, we evaluate the 
 The empirical results across 8 major language models define the operational boundaries of compressed symbolic wire protocols:
 \begin{enumerate}[leftmargin=1.4em,itemsep=2pt,topsep=2pt]
   \item \textbf{Bounded to High-Frequency Worker Queues:} Demotic Wire achieves substantial token reduction ($55.7\%$--$79.1\%$) and $100.0\%$ execution fidelity in automated worker RPC queues, avoiding human prose overhead where semantic reasoning is not required.
-  \item \textbf{Inadmissibility for Flagship Deliberation:} Deep reasoning models (e.g., Claude 3.5 Sonnet) penalize terse telegraphic notation through overthinking. High-level multi-agent deliberation should remain in structured natural prose or typed schema interfaces.
+  \item \textbf{Inadmissibility for Flagship Deliberation:} Deep reasoning models (e.g., Claude Sonnet 5.5, DeepSeek V4 Pro) penalize terse telegraphic notation through overthinking. High-level multi-agent deliberation should remain in structured natural prose or typed schema interfaces.
   \item \textbf{Amortization Requirement:} Because zero-shot wire comprehension without context collapses to chance ($23.2\%$), token savings require amortizing the $\sim\!1{,}000$-token dictionary header over recurring multi-turn sessions (break-even at 1--2 turns with prompt caching).
 \end{enumerate}
 
@@ -576,6 +577,8 @@ python3 -c 'import hashlib,hmac,sys;sys.path.insert(0,"src");from codec import E
   \item{\footnotesize Wang, Z., et al. (2025). AgentDropout: Dynamic Agent Elimination for Token-Efficient Multi-Agent Collaboration. \emph{arXiv:2503.18891}.}
   \item{\footnotesize Zhang, Y., et al. (2025). Q-KVComm: Efficient Multi-Agent Communication via Adaptive KV Cache Compression. \emph{arXiv:2512.17914}.}
   \item{\footnotesize Toriyama, K. (PhenoX). (2026). \emph{toai-elegant-lang v5.4.5: Zero-Dependency Tri-Script Orthogonal RISC Wire Protocol, Non-Circular Corpus Auditor, and Empirical Holdout Comprehension Harness}. GitHub \& PyPI. \url{https://github.com/PhenoX-AI-Alliance/TOAI-elegant-lang}}
+  \item{\footnotesize Li, X., et al. (2025). S2-MAD: Breaking the Token Barrier to Enhance Multi-Agent Debate Efficiency. \emph{arXiv:2502.12876}.}
+  \item{\footnotesize Chen, M., et al. (2026). D-RAM: A Dynamic Role-Allocation Mediator for Token-Efficient Collaboration. \emph{arXiv:2601.08942}.}
 \end{enumerate}
 
 \end{document}
