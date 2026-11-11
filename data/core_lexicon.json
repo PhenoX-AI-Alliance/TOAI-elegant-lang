@@ -1,0 +1,19 @@
+[
+  {
+    "term": "TOAI",
+    "category": "core",
+    "definition": "Tree-structured Organized Autonomous Intelligence",
+    "synonyms": [
+      "autonomous intelligence",
+      "TOAI system"
+    ]
+  },
+  {
+    "category": "core",
+    "definition": "A high-precision execution framework for Linux environments",
+    "synonyms": [
+      "execution engine"
+    ],
+    "term": "Executor"
+  }
+]
