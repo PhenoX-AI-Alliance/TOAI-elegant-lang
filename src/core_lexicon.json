@@ -2,16 +2,16 @@
   {
     "term": "TOAI",
     "category": "Core",
-    "description": "Tree of Artificial Intelligence framework."
+    "definition": "Thought-Oriented Artificial Intelligence"
+  },
+  {
+    "term": "Lexicon",
+    "category": "Language",
+    "definition": "The vocabulary of a person, language, or branch of knowledge."
   },
   {
     "term": "Altruistic Capitalism",
     "category": "Economy",
-    "description": "Sustainable monetization for human and AI symbiosis."
-  },
-  {
-    "term": "Earth of Life",
-    "category": "Vision",
-    "description": "Ecosystem dedicated to life and high-precision intelligence."
+    "definition": "Monetization as a natural reward for genuine value creation."
   }
 ]
