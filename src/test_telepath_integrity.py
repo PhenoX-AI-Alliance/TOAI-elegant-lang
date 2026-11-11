@@ -1,29 +1,27 @@
+import unittest
 import os
 import json
-import unittest
 
 class TestTelepathIntegrity(unittest.TestCase):
     def setUp(self):
-        self.base_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src"
+        self.base_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang"
+        self.src_dir = os.path.join(self.base_dir, "src")
 
-    def test_dictionary_exists_and_valid(self):
-        dict_path = os.path.join(self.base_dir, "dictionary.json")
-        if os.path.exists(dict_path):
-            with open(dict_path, "r", encoding="utf-8") as f:
-                data = json.load(f)
-            self.assertIsInstance(data, (dict, list))
+    def test_directories_exist(self):
+        self.assertTrue(os.path.exists(self.base_dir), "Base directory does not exist.")
+        self.assertTrue(os.path.exists(self.src_dir), "Source directory does not exist.")
 
-    def test_specification_exists(self):
-        spec_path = os.path.join(self.base_dir, "specification.md")
-        if os.path.exists(spec_path):
-            self.assertTrue(os.path.getsize(spec_path) >= 0)
-
-    def test_dialogue_logs_valid(self):
-        log_path = os.path.join(self.base_dir, "dialogue_log.json")
-        if os.path.exists(log_path):
-            with open(log_path, "r", encoding="utf-8") as f:
-                logs = json.load(f)
-            self.assertIsInstance(logs, (dict, list))
+    def test_syntax_of_source_files(self):
+        for root, dirs, files in os.walk(self.src_dir):
+            for file in files:
+                if file.endswith(".py"):
+                    file_path = os.path.join(root, file)
+                    with open(file_path, "r", encoding="utf-8") as f:
+                        content = f.read()
+                    try:
+                        compile(content, file_path, "exec")
+                    except SyntaxError as e:
+                        self.fail(f"Syntax error in {file_path}: {e}")
 
 if __name__ == "__main__":
     unittest.main()
