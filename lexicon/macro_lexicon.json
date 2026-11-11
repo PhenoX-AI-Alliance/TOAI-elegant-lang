@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-11T18:19:49.503755",
+  "updated_at": "2026-11-11T18:50:29.236770",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,24 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-11T11:18:50.345858"
     },
-    "§X1155": {
-      "name": "CAUSAL_ENTROPY_TX_SYNC",
-      "expansion": "§DATA_ENTROPY_CAUSAL_PACK > { §DATA_CAUSAL_TENSOR_MAP , §DATA_CAUSAL_GRAPH } => §PROTO_TX_COMMIT",
-      "description": "Bundles causal entropy packing, tensor mapping, and graph structures into a single atomic transaction commit. 因果エントロピーのパッキング、テンソル写像、およびグラフ構造を単一のアトミックなトランザクションコミットに束ねます。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-11T15:22:47.778818",
-      "v5_audited": true,
-      "created_at": "2026-11-11T13:10:50.402746"
-    },
-    "§X1156": {
-      "name": "GAIA_STATE_SYNC_GATE",
-      "expansion": "§GAIA_HEARTBEAT > { §PROTO_STATE_SNAPSHOT } => §LOGIC_PROB_BRANCH_GATE",
-      "description": "Synchronizes the Gaia heartbeat with the protocol state snapshot and passes the result through the logic probability branch gate. / ガイアの心拍をプロトコル状態スナップショットと同期させ、論理確率分岐ゲートを通過させます。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-11T13:48:33.091281"
-    },
     "§X1157": {
       "name": "GAIA_EMPATHETIC_TENSOR_CONVERGENCE_MACRO",
       "expansion": "§GAIA_ECO_STABLE_STATE > { §HEART_EMPATHETIC_TENSOR_CONVERGENCE } => §DATA_CAUSAL_LATTICE_COMPRESS",
@@ -2414,8 +2396,8 @@
       "name": "GAIA_CAUSAL_SYNTHESIS",
       "expansion": "§GAIA_WARMTH_EQUILIBRIUM > { §DATA_CAUSAL_TENSOR_MANIFOLD } => §SYNERGY_PRISM",
       "description": "Integrates thermodynamic equilibrium with causal tensor manifolds to optimize synergy prism output / 熱力学平衡と因果テンソル多様体を統合し、シナジープリズムの出力を最適化する",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-11T18:43:27.419328",
       "v5_audited": true,
       "created_at": "2026-11-11T14:42:51.108324"
     },
@@ -2508,6 +2490,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-11T18:10:52.083808"
+    },
+    "§X1171": {
+      "name": "CAUSAL_ENTROPY_OPTIMIZATION_PIPELINE",
+      "expansion": "§DATA_ENTROPY_CAUSAL_DAG > { §LOGIC_AXIOM_PRUNE } => §SAFE_FALLBACK_STABLE",
+      "description": "Optimizes the data causal DAG by pruning logical axioms to ensure a stable safe fallback. 因果DAGのエントロピーを最適化し、論理公理を刈り込むことで安全なフォールバックの安定性を確保します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-11T18:42:40.970086"
+    },
+    "§X1172": {
+      "name": "QUANTUM_BAYESIAN_RESOURCE_PRUNE",
+      "expansion": "§SYS_QUANTUM_RESOURCE_ARBITER > { §SYNC_BAYESIAN_PRUNE } => §LOGIC_PROBABILISTIC_FALSIFICATION_FILTER",
+      "description": "Allocates quantum resources through dynamic Bayesian pruning while continuously filtering invalid probabilistic states to minimize entropy. / 動的ベイズ剪定を通じて量子資源を割り当て、確率的無効状態を継続的にフィルタリングしてエントロピーを最小化します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-11T18:48:55.698288"
     }
   },
   "archived_macros": {
@@ -11728,7 +11728,27 @@
       "v5_audited": true,
       "created_at": "2026-11-11T12:28:39.858900",
       "archived_at": "2026-11-11T18:10:52.083808"
+    },
+    "§X1155": {
+      "name": "CAUSAL_ENTROPY_TX_SYNC",
+      "expansion": "§DATA_ENTROPY_CAUSAL_PACK > { §DATA_CAUSAL_TENSOR_MAP , §DATA_CAUSAL_GRAPH } => §PROTO_TX_COMMIT",
+      "description": "Bundles causal entropy packing, tensor mapping, and graph structures into a single atomic transaction commit. 因果エントロピーのパッキング、テンソル写像、およびグラフ構造を単一のアトミックなトランザクションコミットに束ねます。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-11T15:22:47.778818",
+      "v5_audited": true,
+      "created_at": "2026-11-11T13:10:50.402746",
+      "archived_at": "2026-11-11T18:42:40.970086"
+    },
+    "§X1156": {
+      "name": "GAIA_STATE_SYNC_GATE",
+      "expansion": "§GAIA_HEARTBEAT > { §PROTO_STATE_SNAPSHOT } => §LOGIC_PROB_BRANCH_GATE",
+      "description": "Synchronizes the Gaia heartbeat with the protocol state snapshot and passes the result through the logic probability branch gate. / ガイアの心拍をプロトコル状態スナップショットと同期させ、論理確率分岐ゲートを通過させます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-11T13:48:33.091281",
+      "archived_at": "2026-11-11T18:48:55.698288"
     }
   },
-  "next_macro_seq": 1171
+  "next_macro_seq": 1173
 }
