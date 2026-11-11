@@ -3,61 +3,60 @@ import os
 import traceback
 import time
 import json
-import collections
 
-def analyze():
-    corpus_path = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
-    output_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/analysis_result.json"
-    
-    speaker_counts = collections.defaultdict(int)
-    word_counts = collections.defaultdict(int)
-    
+def audit_dialogues():
+    corpus_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
     if not os.path.exists(corpus_path):
-        print(f"Corpus not found at {corpus_path}. Creating a dummy corpus for pipeline continuity.")
-        os.makedirs(os.path.dirname(corpus_path), exist_ok=True)
-        sample_data = [
-            {"speaker": "Alice", "text": "Hello, how are you today?"},
-            {"speaker": "Bob", "text": "I am fine, thank you. Let us analyze the dialogues."},
-            {"speaker": "Alice", "text": "That sounds like a wonderful plan."}
-        ]
-        with open(corpus_path, "w", encoding="utf-8") as f:
-            for item in sample_data:
-                f.write(json.dumps(item, ensure_ascii=False) + "\n")
-                
+        print(f"Error: Corpus file not found at {corpus_path}")
+        sys.exit(1)
+        
+    total_dialogues = 0
+    errors = 0
+    
     with open(corpus_path, "r", encoding="utf-8") as f:
-        for line in f:
+        for line_num, line in enumerate(f, 1):
             line = line.strip()
             if not line:
                 continue
             try:
                 data = json.loads(line)
-                speaker = data.get("speaker", "unknown")
-                text = data.get("text", "")
+                total_dialogues += 1
+                if "dialogue_id" not in data or "turns" not in data:
+                    print(f"Line {line_num}: Missing required fields ('dialogue_id' or 'turns')")
+                    errors += 1
+                    continue
                 
-                speaker_counts[speaker] += 1
+                turns = data["turns"]
+                if not isinstance(turns, list) or len(turns) == 0:
+                    print(f"Dialogue {data.get('dialogue_id')}: 'turns' must be a non-empty list")
+                    errors += 1
+                    continue
                 
-                words = text.lower().split()
-                for word in words:
-                    cleaned_word = "".join([c for c in word if c.isalnum()])
-                    if cleaned_word:
-                        word_counts[cleaned_word] += 1
+                expected_speaker = "user"
+                for t_idx, turn in enumerate(turns):
+                    if "speaker" not in turn or "text" not in turn:
+                        print(f"Dialogue {data.get('dialogue_id')}, turn {t_idx}: Missing 'speaker' or 'text'")
+                        errors += 1
+                        break
+                    
+                    if turn["speaker"] != expected_speaker:
+                        print(f"Dialogue {data.get('dialogue_id')}, turn {t_idx}: Unexpected speaker sequence. Expected {expected_speaker}, got {turn['speaker']}")
+                        errors += 1
+                    
+                    expected_speaker = "assistant" if expected_speaker == "user" else "user"
+                    
+            except json.JSONDecodeError as e:
+                print(f"Line {line_num}: JSON decode error - {e}")
+                errors += 1
             except Exception as e:
-                print(f"Error parsing line: {e}")
+                print(f"Line {line_num}: Unexpected error - {e}")
+                errors += 1
                 
-    result = {
-        "speaker_counts": dict(speaker_counts),
-        "word_frequencies": dict(word_counts.most_common(50))
-    }
-    
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(result, f, ensure_ascii=False, indent=2)
-        
-    print(f"Analysis successfully completed and saved to {output_path}")
+    print(f"Audit complete. Total dialogues: {total_dialogues}, Errors found: {errors}")
+    if errors > 0:
+        sys.exit(1)
+    else:
+        sys.exit(0)
 
 if __name__ == "__main__":
-    try:
-        analyze()
-    except Exception as e:
-        traceback.print_exc()
-        sys.exit(1)
+    audit_dialogues()
