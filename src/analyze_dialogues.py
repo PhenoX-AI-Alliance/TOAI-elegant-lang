@@ -3,53 +3,44 @@ import os
 import traceback
 import time
 import json
-import collections
 
-def analyze():
-    corpus_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
-    output_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/dialogue_analysis_result.json"
-    
+def audit_dialogues(corpus_path):
+    print(f"Starting dialogue audit for: {corpus_path}")
     if not os.path.exists(corpus_path):
-        print(f"Error: Corpus file not found at {corpus_path}", file=sys.stderr)
+        print(f"Error: Corpus file not found at {corpus_path}")
         sys.exit(1)
         
-    speaker_counts = collections.defaultdict(int)
-    word_counts = collections.defaultdict(int)
+    total_lines = 0
+    valid_lines = 0
+    errors = []
     
     with open(corpus_path, "r", encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
+        for idx, line in enumerate(f, start=1):
+            total_lines += 1
+            line_str = line.strip()
+            if not line_str:
                 continue
             try:
-                data = json.loads(line)
-                speaker = data.get("speaker", "unknown")
-                text = data.get("text", "")
+                data = json.loads(line_str)
+                if not isinstance(data, dict):
+                    raise ValueError("JSON root must be an object")
+                if "dialogue" not in data and "messages" not in data:
+                    raise KeyError("Missing dialogue or messages key")
+                valid_lines += 1
+            except Exception as e:
+                errors.append({"line": idx, "error": str(e)})
                 
-                speaker_counts[speaker] += 1
-                
-                words = text.split()
-                for w in words:
-                    cleaned = "".join(ch for ch in w if ch.isalnum()).lower()
-                    if cleaned:
-                        word_counts[cleaned] += 1
-            except json.JSONDecodeError:
-                continue
-                
-    result = {
-        "speaker_counts": dict(speaker_counts),
-        "top_words": dict(sorted(word_counts.items(), key=lambda item: item[1], reverse=True)[:100])
-    }
-    
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(result, f, ensure_ascii=False, indent=2)
-        
-    print(f"Analysis successfully completed. Result saved to {output_path}")
+    print(f"Audit complete. Total lines: {total_lines}, Valid: {valid_lines}, Errors: {len(errors)}")
+    if errors:
+        print("Encountered errors during audit:")
+        for err in errors[:10]:
+            print(f"Line {err['line']}: {err['error']}")
+    return {"total": total_lines, "valid": valid_lines, "errors": len(errors)}
 
 if __name__ == "__main__":
     try:
-        analyze()
+        corpus = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
+        audit_dialogues(corpus)
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)

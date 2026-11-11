@@ -1,17 +1,18 @@
-import unittest
 import os
+import sys
 import json
+import unittest
 
 class TestTelepathIntegrity(unittest.TestCase):
     def setUp(self):
         self.base_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang"
         self.src_dir = os.path.join(self.base_dir, "src")
 
-    def test_directories_exist(self):
-        self.assertTrue(os.path.exists(self.base_dir), "Base directory does not exist.")
-        self.assertTrue(os.path.exists(self.src_dir), "Source directory does not exist.")
+    def test_directories_and_files_existence(self):
+        self.assertTrue(os.path.isdir(self.base_dir), "Base directory does not exist.")
+        self.assertTrue(os.path.isdir(self.src_dir), "Src directory does not exist.")
 
-    def test_syntax_of_source_files(self):
+    def test_syntax_of_python_files(self):
         for root, dirs, files in os.walk(self.src_dir):
             for file in files:
                 if file.endswith(".py"):
