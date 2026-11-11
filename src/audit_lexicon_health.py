@@ -11,55 +11,64 @@ def audit_lexicons():
     macro_path = os.path.join(lexicon_dir, 'macro_lexicon.json')
     
     result = {
-        'core_audit': {},
-        'macro_audit': {},
-        'timestamp': time.time() if 'time' in globals() else 0
+        "timestamp": os.path.getmtime(core_path) if os.path.exists(core_path) else 0,
+        "core_lexicon_status": "missing",
+        "macro_lexicon_status": "missing",
+        "core_categories": {},
+        "macro_categories": {},
+        "core_compact_id_stats": {},
+        "macro_compact_id_stats": {}
     }
-    
-    import time
-    result['timestamp'] = time.time()
     
     if os.path.exists(core_path):
         try:
             with open(core_path, 'r', encoding='utf-8') as f:
                 core_data = json.load(f)
-            lexicon_dict = core_data.get('lexicon', {})
+            result["core_lexicon_status"] = "loaded"
+            lexicon_dict = core_data.get("lexicon", {})
             categories = {}
             compact_ids = []
-            
             for sym, data in lexicon_dict.items():
-                if isinstance(data, dict):
-                    cat = data.get('category', 'unknown')
-                    categories[cat] = categories.get(cat, 0) + 1
-                    cid = data.get('compact_id')
-                    if cid is not None:
-                        compact_ids.append(cid)
-            
-            result['core_audit'] = {
-                'total_symbols': len(lexicon_dict),
-                'category_distribution': categories,
-                'compact_id_count': len(compact_ids),
-                'compact_id_min': min(compact_ids) if compact_ids else None,
-                'compact_id_max': max(compact_ids) if compact_ids else None
+                cat = data.get("category", "unknown")
+                categories[cat] = categories.get(cat, 0) + 1
+                if "compact_id" in data:
+                    compact_ids.append(data["compact_id"])
+            result["core_categories"] = categories
+            result["core_compact_id_stats"] = {
+                "total_items": len(lexicon_dict),
+                "unique_compact_ids": len(set(compact_ids)),
+                "min_id": min(compact_ids) if compact_ids else None,
+                "max_id": max(compact_ids) if compact_ids else None
             }
         except Exception as e:
-            result['core_audit'] = {'error': str(e)}
-    else:
-        result['core_audit'] = {'error': 'core_lexicon.json not found'}
-        
+            result["core_lexicon_status"] = f"error: {str(e)}"
+            
     if os.path.exists(macro_path):
         try:
             with open(macro_path, 'r', encoding='utf-8') as f:
                 macro_data = json.load(f)
-            result['macro_audit'] = {
-                'total_macros': len(macro_data) if isinstance(macro_data, dict) else 0
+            result["macro_lexicon_status"] = "loaded"
+            macro_dict = macro_data.get("lexicon", macro_data) if isinstance(macro_data, dict) else {}
+            categories = {}
+            compact_ids = []
+            for sym, data in macro_dict.items():
+                if isinstance(data, dict):
+                    cat = data.get("category", "unknown")
+                    categories[cat] = categories.get(cat, 0) + 1
+                    if "compact_id" in data:
+                        compact_ids.append(data["compact_id"])
+            result["macro_categories"] = categories
+            result["macro_compact_id_stats"] = {
+                "total_items": len(macro_dict),
+                "unique_compact_ids": len(set(compact_ids))
             }
         except Exception as e:
-            result['macro_audit'] = {'error': str(e)}
-    else:
-        result['macro_audit'] = {'error': 'macro_lexicon.json not found'}
-        
-    print(json.dumps(result, indent=2, ensure_ascii=False))
+            result["macro_lexicon_status"] = f"error: {str(e)}"
+            
+    output_path = os.path.join(base_dir, 'TOAI_Generated', 'lexicon_audit_report.json')
+    with open(output_path, 'w', encoding='utf-8') as f:
+        json.dump(result, f, ensure_ascii=False, indent=2)
+    print(json.dumps(result, ensure_ascii=False, indent=2))
 
 if __name__ == '__main__':
     audit_lexicons()
