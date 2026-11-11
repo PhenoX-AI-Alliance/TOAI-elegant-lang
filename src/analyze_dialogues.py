@@ -3,45 +3,52 @@ import os
 import traceback
 import time
 import json
-import collections
-import re
+from collections import Counter, defaultdict
 
 def analyze():
-    base_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang"
-    corpus_path = os.path.join(base_dir, "corpus", "dialogues.jsonl")
-    output_path = os.path.join(base_dir, "TOAI_Generated", "dialogue_analysis_result.json")
+    corpus_path = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
+    output_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/output"
+    os.makedirs(output_dir, exist_ok=True)
+    output_path = os.path.join(output_dir, "dialogue_analysis.json")
 
     if not os.path.exists(corpus_path):
-        raise FileNotFoundError(f"Corpus not found at {corpus_path}")
+        print(f"Error: Corpus not found at {corpus_path}")
+        sys.exit(1)
 
-    speaker_counts = collections.defaultdict(int)
-    word_freq = collections.defaultdict(int)
+    speaker_counts = Counter()
+    word_frequencies = defaultdict(Counter)
 
     with open(corpus_path, "r", encoding="utf-8") as f:
         for line in f:
             line = line.strip()
             if not line:
                 continue
-            data = json.loads(line)
-            speaker = data.get("speaker", "unknown")
-            text = data.get("text", "")
-
-            speaker_counts[speaker] += 1
-
-            words = re.findall(r'\b[a-zA-Z]{3,}\b', text.lower())
-            for w in words:
-                word_freq[w] += 1
+            try:
+                data = json.loads(line)
+                speaker = data.get("speaker", "unknown")
+                text = data.get("text", "")
+                
+                speaker_counts[speaker] += 1
+                
+                # Simple tokenization by whitespace and lowercasing for root/word frequency
+                tokens = text.lower().split()
+                for token in tokens:
+                    # Clean punctuation
+                    cleaned_token = "".join(c for c in token if c.isalnum())
+                    if cleaned_token:
+                        word_frequencies[speaker][cleaned_token] += 1
+            except json.JSONDecodeError:
+                continue
 
     result = {
-        "speaker_counts": dict(speaker_counts),
-        "top_words": sorted(word_freq.items(), key=lambda x: x[1], reverse=True)[:20]
+        "speaker_utterance_counts": dict(speaker_counts),
+        "speaker_word_frequencies": {sp: dict(cnt.most_common(50)) for sp, cnt in word_frequencies.items()}
     }
 
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    with open(output_path, "w", encoding="utf-8") as out:
-        json.dump(result, out, ensure_ascii=False, indent=2)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(result, f, ensure_ascii=False, indent=2)
 
-    print(f"Analysis successfully completed. Result saved to {output_path}")
+    print(f"Successfully analyzed dialogues. Results saved to {output_path}")
 
 if __name__ == "__main__":
     try:

@@ -12800,3 +12800,9 @@ TOAI-elegant-langは、短縮ワイヤIDによる感情・制御フローの圧�
 `@CTX:DOMAIN :: §ID01 [param:value, num:0.00] -[meta]-> §ID02`
 
 本仕様により、FX自動売買やタスク委譲におけるパラメータ欠落を完全に防ぎ、AIエージェント間の高速かつ確実な実務通信を実現します。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-11 22:40]
+@CTX:SYNTAX_DESIGN :: §S01 [format:"hybrid", lossless:true, target:"FX/API"] -[compress:true]-> §D01
+制御フローを短縮ワイヤID（§S01等）で圧縮しつつ、数値や変数名などの実務データを100%保持するハイブリッド構文を提案する。
+例: `@CTX:FINANCIAL :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01` により、意図の共有と詳細なパラメータ伝送を両立する。
