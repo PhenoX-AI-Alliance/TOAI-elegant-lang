@@ -3,35 +3,35 @@ import os
 import json
 import csv
 
-def export_lexicon():
-    base_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang"
-    input_path = os.path.join(base_dir, "data", "core_lexicon.json")
-    output_path = os.path.join(base_dir, "data", "core_lexicon.csv")
+def export_csv():
+    target_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src"
+    json_path = os.path.join(target_dir, "core_lexicon.json")
+    csv_path = os.path.join(target_dir, "export_lexicon.csv")
     
-    if not os.path.exists(input_path):
-        raise FileNotFoundError(f"Input file not found: {input_path}")
+    if not os.path.exists(json_path):
+        print(f"Error: {json_path} does not exist.")
+        sys.exit(1)
         
-    with open(input_path, "r", encoding="utf-8") as f:
+    with open(json_path, "r", encoding="utf-8") as f:
         data = json.load(f)
         
-    fieldnames = set()
+    if not isinstance(data, list) or len(data) == 0:
+        raise ValueError("JSON data must be a non-empty list of dictionaries.")
+        
+    keys = set()
     for item in data:
         if isinstance(item, dict):
-            fieldnames.update(item.keys())
-    fieldnames = sorted(list(fieldnames))
+            keys.update(item.keys())
+            
+    fieldnames = sorted(list(keys))
     
-    with open(output_path, "w", encoding="utf-8", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
+    with open(csv_path, "w", encoding="utf-8", newline="") as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
         for item in data:
-            row = {}
-            for key in fieldnames:
-                val = item.get(key, "")
-                if isinstance(val, (list, dict)):
-                    val = json.dumps(val, ensure_ascii=False)
-                row[key] = val
-            writer.writerow(row)
-    print(f"Successfully exported lexicon to {output_path}")
+            if isinstance(item, dict):
+                writer.writerow(item)
+    print(f"Successfully exported to {csv_path}")
 
 if __name__ == "__main__":
-    export_lexicon()
+    export_csv()
