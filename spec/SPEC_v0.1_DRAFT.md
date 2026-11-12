@@ -13080,3 +13080,31 @@ TOAI-elegant-langのハイブリッド・ロスレスペイロード構文を提
 
 例:
 `@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-12 16:23]
+TOAI-elegant-langのハイブリッド・ロスレスペイロード構文を定義する。
+制御フローを短縮ワイヤIDで圧縮し、実務データをJSONライクな属性マップで完全伝送する。
+定義例：
+`@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
+これにより、意図の共有速度と数値データのロスレス性を両立する。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-12 17:01]
+TOAI-elegant-langは、通信効率とデータ完全性を両立するハイブリッド・ロスレスペイロード構文を導入する。制御フローやトーンは短縮ワイヤIDで圧縮し、数値や変数名等の実務データは厳密なキーバリュー形式で伝送する。
+
+例:
+`@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
+
+これにより、エージェント間通信のコンテキスト維持と誤読防止を同時に実現する。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-12 17:01]
+TOAI-elegant-langのハイブリッド・ロスレスペイロード構文を提案します。
+
+制御フローやトーンを短縮ワイヤID（§S01等）で圧縮し、実務データはJSONライクな属性マップ（target, limit等）で100%保持します。
+
+例:
+`@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
+
+これにより、文脈の圧縮と数値・変数名の完全なロスレス伝送を両立します。

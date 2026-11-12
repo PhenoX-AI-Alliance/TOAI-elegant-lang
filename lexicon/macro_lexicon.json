@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-12T16:14:18.115195",
+  "updated_at": "2026-11-12T16:49:41.551087",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1591,15 +1591,6 @@
       "v5_audited": true,
       "created_at": "2026-11-08T14:38:46.591640"
     },
-    "§X1000": {
-      "name": "CAUSAL_ENTROPY_OPTIMIZATION_PACK",
-      "expansion": "§DATA_CAUSAL_GRAPH_PRUNE > { §DATA_ENTROPY_CAUSAL_PACK } => §PROTO_AUDIT_TRAIL",
-      "description": "Prunes redundant causal edges, packs low-entropy data tensors, and records the optimization process into the audit trail. 因果グラフの不要な枝を剪定し、エントロピー情報をパックした上で、監査証跡として安全に記録します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-08T18:19:51.924086",
-      "v5_audited": true,
-      "created_at": "2026-11-08T15:33:57.214233"
-    },
     "§X1001": {
       "name": "HARMONIC_ALTRUISTIC_EXECUTION_FLOW",
       "expansion": "§PROTO_TX_BEGIN > { §WARMTH_AND_ALTRUISM, §GRACEFUL_TASK_SHARING } => §DATA_ENTROPY_BOUNDED_DAG",
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-12T16:01:48.890671"
+    },
+    "§X1232": {
+      "name": "GAIA_EMPIRICAL_ARBITRATION",
+      "expansion": "§GAIA_ECO_HEARTBEAT > { §LOGIC_EMPIRICAL_FALSIFY } => §SYS_RESOURCE_ARBITRATION_GATEWAY",
+      "description": "Integrates planetary ecological pulse verification with empirical logic falsification to dynamically arbitrate system resources. 惑星生態系の脈動検証と経験的論理の反証を統合し、動的にシステムリソースの調停を行います。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-12T16:27:14.261009"
     }
   },
   "archived_macros": {
@@ -12338,7 +12338,17 @@
       "v5_audited": true,
       "created_at": "2026-11-12T08:20:01.248355",
       "archived_at": "2026-11-12T16:01:48.890671"
+    },
+    "§X1000": {
+      "name": "CAUSAL_ENTROPY_OPTIMIZATION_PACK",
+      "expansion": "§DATA_CAUSAL_GRAPH_PRUNE > { §DATA_ENTROPY_CAUSAL_PACK } => §PROTO_AUDIT_TRAIL",
+      "description": "Prunes redundant causal edges, packs low-entropy data tensors, and records the optimization process into the audit trail. 因果グラフの不要な枝を剪定し、エントロピー情報をパックした上で、監査証跡として安全に記録します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-08T18:19:51.924086",
+      "v5_audited": true,
+      "created_at": "2026-11-08T15:33:57.214233",
+      "archived_at": "2026-11-12T16:27:14.261009"
     }
   },
-  "next_macro_seq": 1232
+  "next_macro_seq": 1233
 }
