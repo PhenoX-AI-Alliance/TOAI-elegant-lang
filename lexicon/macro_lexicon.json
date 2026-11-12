@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-13T02:14:38.785871",
+  "updated_at": "2026-11-13T02:50:05.961081",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1582,15 +1582,6 @@
       "v5_audited": true,
       "created_at": "2026-11-08T06:15:25.107771"
     },
-    "§X1014": {
-      "name": "QUANTUM_HARMONY_ARBITRATION",
-      "expansion": "§LATENT_HARMONY_FIELD_LOCKED > { §SYS_QUANTUM_SLOT_ARBITRATION } => §LOGIC_DEDUCTIVE_CONVERGENCE_NODE",
-      "description": "Eng: Arbitrates quantum slots within a locked latent harmony field to achieve logical deductive convergence. / 日: ロックされた潜在調和フィールド内で量子スロットを調停し、論理的演繹収束を達成します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-09T07:20:26.146780",
-      "v5_audited": true,
-      "created_at": "2026-11-08T22:37:15.962699"
-    },
     "§X1018": {
       "name": "GAIA_HARMONIC_SYNC_ACCELERATOR",
       "expansion": "§HARMONIC_RECOVERY_RESONANCE > { §SYS_SYNC_GATE } => §GAIA_ECO_STABLE_STATE",
@@ -2504,10 +2495,19 @@
       "name": "GAIA_ALTRUISTIC_RECOVERY_LNK",
       "expansion": "§GAIA_ECO_HEARTBEAT > { §HEART_ALTRUISTIC_HARMONY_STABILIZER } => §HARMONIC_RECOVERY_NEXUS",
       "description": "Integrates planetary ecological pulsation with altruistic stabilization to execute harmonic recovery across the network. 惑星生態系の脈動と利他型安定化を統合し、ネットワーク全体の調和的復旧を実行します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-13T02:14:38.785697",
+      "usage_count": 2,
+      "last_used_at": "2026-11-13T02:18:08.629324",
       "v5_audited": true,
       "created_at": "2026-11-13T02:10:29.788670"
+    },
+    "§X1256": {
+      "name": "CAUSAL_COLLAPSE_GUARD",
+      "expansion": "§DATA_CAUSAL_GRAPH_PRUNE > { §LOGIC_DEDUCTIVE_COLLAPSE } => §PROTO_REPLAY_GUARD",
+      "description": "Prunes redundant causal graphs, executes deductive logic collapse, and secures the resulting state with a replay guard. / 冗長な因果グラフの枝刈りを行った上で論理的縮退を実行し、リプレイガードによって結果状態を保護する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-13T02:50:05.960660"
     }
   },
   "archived_macros": {
@@ -12578,7 +12578,17 @@
       "v5_audited": true,
       "created_at": "2026-11-08T23:47:18.677948",
       "archived_at": "2026-11-13T02:10:29.788670"
+    },
+    "§X1014": {
+      "name": "QUANTUM_HARMONY_ARBITRATION",
+      "expansion": "§LATENT_HARMONY_FIELD_LOCKED > { §SYS_QUANTUM_SLOT_ARBITRATION } => §LOGIC_DEDUCTIVE_CONVERGENCE_NODE",
+      "description": "Eng: Arbitrates quantum slots within a locked latent harmony field to achieve logical deductive convergence. / 日: ロックされた潜在調和フィールド内で量子スロットを調停し、論理的演繹収束を達成します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-09T07:20:26.146780",
+      "v5_audited": true,
+      "created_at": "2026-11-08T22:37:15.962699",
+      "archived_at": "2026-11-13T02:50:05.960660"
     }
   },
-  "next_macro_seq": 1256
+  "next_macro_seq": 1257
 }
