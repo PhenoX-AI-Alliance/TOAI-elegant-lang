@@ -19,17 +19,17 @@
 対訳辞書: §S01 = リソース調停, §D01 = 因果テンソルマップ（lexicon/rosetta_layer.json）
 ```
 
-- **辞書**: 基本シンボル `256` 個（`lexicon/core_lexicon.json`）＋稼働中の複合マクロ `266` 個（`lexicon/macro_lexicon.json`。後方互換の復号用に `975` 個をアーカイブ）。
+- **辞書**: 基本シンボル `256` 個（`lexicon/core_lexicon.json`）＋稼働中の複合マクロ `266` 個（`lexicon/macro_lexicon.json`。後方互換の復号用に `976` 個をアーカイブ）。
 - **コーデック**（`src/codec.py`）: 決定論的なエンコード／デコード、引用符を考慮した `[key:val]` 抽出、往復テスト済み（`tests/test_codec.py`）。
 - **連携**: CLI、MCPサーバー（`src/mcp_server.py`）、A2Aアダプター（`src/a2a_adapter.py`）、Ollama Modelfile／システムプロンプトの書き出し。
 
 ## 計測結果
 
-### 1. トークン削減（o200k_base トークナイザー、コーパス `2,469` 件）
+### 1. トークン削減（o200k_base トークナイザー、コーパス `2,471` 件）
 
 | 比較 | 平均削減率 | 意味 |
 |---|---|---|
-| **ワイヤ vs 冗長形**（主指標） | **トークン `-40.8%`** | 同じメッセージの長い名前をワイヤIDに置き換えた場合 |
+| **ワイヤ vs 冗長形**（主指標） | **トークン `-40.9%`** | 同じメッセージの長い名前をワイヤIDに置き換えた場合 |
 | 文字数（ワイヤ vs 冗長形） | 文字 `-50.6%` | |
 | 「E2E」自然言語JSON比（副指標） | `-86.1%` | 比較対象は、人間向けの意図文に**全シンボルの日英辞書定義をすべて展開して加えたJSON**です。意図的に冗長な比較対象のため、典型的な削減率ではなく上限値として扱ってください。 |
 
@@ -128,4 +128,4 @@ python3 benchmarks/eval_comprehension.py run --cond ALL -n 112 --seed 7 --holdou
 コアはMITライセンスです。プロジェクトを支援していただける場合は [SPONSORS.md](./SPONSORS.md) をご覧ください。
 
 ---
-*数値は `sync_whitepaper_metrics.py` により 2026-11-12 19:31 JST に自動生成されました。*
+*数値は `sync_whitepaper_metrics.py` により 2026-11-12 19:55 JST に自動生成されました。*
