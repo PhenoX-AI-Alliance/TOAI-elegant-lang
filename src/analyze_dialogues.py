@@ -3,66 +3,51 @@ import os
 import traceback
 import time
 import json
+from collections import Counter, defaultdict
 
-def audit_dialogues(corpus_path, report_path):
-    total_dialogues = 0
-    valid_dialogues = 0
-    errors = []
-
+def analyze():
+    corpus_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
     if not os.path.exists(corpus_path):
-        raise FileNotFoundError(f"Corpus not found: {corpus_path}")
-
+        print(f"Error: Corpus not found at {corpus_path}")
+        sys.exit(1)
+        
+    speaker_counts = Counter()
+    word_counts = defaultdict(Counter)
+    
     with open(corpus_path, "r", encoding="utf-8") as f:
-        for line_num, line in enumerate(f, 1):
+        for line in f:
             line = line.strip()
             if not line:
                 continue
-            total_dialogues += 1
             try:
                 data = json.loads(line)
-                if "turns" not in data or not isinstance(data["turns"], list):
-                    errors.append(f"Line {line_num}: Missing 'turns' list.")
-                    continue
+                speaker = data.get("speaker", "Unknown")
+                text = data.get("text", "")
                 
-                turns = data["turns"]
-                if len(turns) == 0:
-                    errors.append(f"Line {line_num}: Empty turns.")
-                    continue
-
-                last_role = None
-                turn_error = False
-                for t_idx, turn in enumerate(turns):
-                    if "role" not in turn or "text" not in turn:
-                        errors.append(f"Line {line_num}, Turn {t_idx}: Missing role or text.")
-                        turn_error = True
-                        break
-                    current_role = turn["role"]
-                    if current_role == last_role:
-                        errors.append(f"Line {line_num}, Turn {t_idx}: Consecutive same role ({current_role}).")
-                        turn_error = True
-                        break
-                    last_role = current_role
-
-                if not turn_error:
-                    valid_dialogues += 1
-
-            except json.JSONDecodeError as jde:
-                errors.append(f"Line {line_num}: Invalid JSON - {jde}")
-
-    report = {
-        "total_dialogues": total_dialogues,
-        "valid_dialogues": valid_dialogues,
-        "error_count": len(errors),
-        "errors": errors
+                speaker_counts[speaker] += 1
+                
+                words = text.lower().split()
+                for word in words:
+                    cleaned = "".join(ch for ch in word if ch.isalnum())
+                    if cleaned:
+                        word_counts[speaker][cleaned] += 1
+            except Exception as e:
+                print(f"Warning: Failed to parse line: {e}")
+                
+    result = {
+        "speaker_utterance_counts": dict(speaker_counts),
+        "speaker_word_frequencies": {sp: dict(cnt) for sp, cnt in word_counts.items()}
     }
-
-    os.makedirs(os.path.dirname(report_path), exist_ok=True)
-    with open(report_path, "w", encoding="utf-8") as rf:
-        json.dump(report, rf, ensure_ascii=False, indent=2)
-
-    print(f"Audit completed. Total: {total_dialogues}, Valid: {valid_dialogues}, Errors: {len(errors)}")
+    
+    output_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/analysis_result.json"
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(result, f, ensure_ascii=False, indent=2)
+        
+    print(f"Analysis successfully completed. Results saved to {output_path}")
 
 if __name__ == "__main__":
-    corpus = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
-    report = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/audit_report.json"
-    audit_dialogues(corpus, report)
+    try:
+        analyze()
+    except Exception as e:
+        traceback.print_exc()
+        sys.exit(1)
