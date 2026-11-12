@@ -4,10 +4,9 @@ import traceback
 import time
 import json
 import collections
-import re
 
 def analyze():
-    corpus_path = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
+    corpus_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
     output_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/analysis_result.json"
     
     if not os.path.exists(corpus_path):
@@ -25,13 +24,14 @@ def analyze():
             try:
                 data = json.loads(line)
                 speaker = data.get("speaker", "unknown")
-                text = data.get("text", "")
-                
                 speaker_counts[speaker] += 1
                 
-                words = re.findall(r"\w+", text.lower())
+                text = data.get("text", "")
+                words = text.split()
                 for w in words:
-                    word_counts[w] += 1
+                    cleaned = w.strip(".,!?\"'()[]{}").lower()
+                    if cleaned:
+                        word_counts[cleaned] += 1
             except json.JSONDecodeError:
                 continue
                 
@@ -44,7 +44,7 @@ def analyze():
     with open(output_path, "w", encoding="utf-8") as out:
         json.dump(result, out, ensure_ascii=False, indent=2)
         
-    print(f"Analysis successfully completed. Result saved to {output_path}")
+    print(f"Analysis successfully saved to {output_path}")
 
 if __name__ == "__main__":
     try:

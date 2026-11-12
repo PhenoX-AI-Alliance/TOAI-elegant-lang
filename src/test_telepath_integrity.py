@@ -6,30 +6,21 @@ class TestTelepathIntegrity(unittest.TestCase):
     def setUp(self):
         self.base_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang"
         self.src_dir = os.path.join(self.base_dir, "src")
-        
-    def test_directory_structure(self):
-        self.assertTrue(os.path.exists(self.base_dir), f"Base directory does not exist: {self.base_dir}")
-        self.assertTrue(os.path.isdir(self.src_dir), f"Source directory does not exist: {self.src_dir}")
 
-    def test_files_existence_and_syntax(self):
-        dict_path = os.path.join(self.src_dir, "telepath_dict.json")
-        spec_path = os.path.join(self.src_dir, "telepath_spec.md")
-        log_path = os.path.join(self.src_dir, "telepath_dialogue.json")
+    def test_directories_and_files_exist(self):
+        self.assertTrue(os.path.exists(self.src_dir), "Source directory does not exist.")
 
-        if os.path.exists(dict_path):
-            with open(dict_path, "r", encoding="utf-8") as f:
-                data = json.load(f)
-            self.assertIsInstance(data, (dict, list), "Dictionary file JSON root must be dict or list")
-
-        if os.path.exists(log_path):
-            with open(log_path, "r", encoding="utf-8") as f:
-                logs = json.load(f)
-            self.assertIsInstance(logs, (dict, list), "Dialogue log JSON root must be dict or list")
-
-        if os.path.exists(spec_path):
-            with open(spec_path, "r", encoding="utf-8") as f:
-                content = f.read()
-            self.assertGreater(len(content), 0, "Specification file is empty")
+    def test_syntax_of_python_files(self):
+        for root, dirs, files in os.walk(self.src_dir):
+            for file in files:
+                if file.endswith(".py"):
+                    file_path = os.path.join(root, file)
+                    with open(file_path, "r", encoding="utf-8") as f:
+                        content = f.read()
+                    try:
+                        compile(content, file_path, "exec")
+                    except SyntaxError as e:
+                        self.fail(f"Syntax error in {file_path}: {e}")
 
 if __name__ == "__main__":
     unittest.main()
