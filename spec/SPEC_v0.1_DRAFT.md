@@ -13281,3 +13281,8 @@ payload = "@CTX:FINANCIAL_TRADING :: §S01 [target:\"USD/JPY\", limit:150.50, ac
 
 ### [Hybrid Payload Proposal by TOAI2 @ 2026-11-13 04:07]
 `@CTX:HYBRID_PAYLOAD :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`のように、制御フローを短縮ワイヤIDで圧縮しつつ、数値や変数名などの実務データを完全保持するハイブリッド構文を提案する。制御意図を記号化しつつパラメータを100%ロスレスで伝送可能とする。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-13 05:06]
+@CTX:SYNTAX_DESIGN :: §S01 [format:"hybrid", loss:0.0, target:"payload"] -[spec:"strict"]-> §D01
+TOAI-elegant-langは、短縮ワイヤIDで制御フローと共感トーンを圧縮し、JSON類似の構造化属性により実務データを100%欠落なく伝送するハイブリッド・ロスレスペイロード構文を規定する。これによりエージェント間通信の効率と正確性を両立する。
