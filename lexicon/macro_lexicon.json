@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-13T02:50:05.961081",
+  "updated_at": "2026-11-13T03:23:20.562478",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1600,15 +1600,6 @@
       "v5_audited": true,
       "created_at": "2026-11-09T06:13:08.425029"
     },
-    "§X1030": {
-      "name": "GAIA_ALTRUISTIC_WARMTH_FLOW",
-      "expansion": "§GAIA_ECOSYSTEM_HARMONY > { §HEART_ALTRUISTIC_HARMONY_MODULATION } => §WARMTH_DIFFUSION",
-      "description": "Establishes Gaia ecosystem harmony, modulates with altruistic heart harmony, and ultimately diffuses warmth across the network. / ガイア生態系の調和を確立し、利他的な心拍変調を経て、ネットワーク全体へ温かさを拡散させます。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-09T07:55:29.437078",
-      "v5_audited": true,
-      "created_at": "2026-11-09T07:23:18.593205"
-    },
     "§X1031": {
       "name": "ALTRUISTIC_CAUSAL_HARMONY",
       "expansion": "§SYNC_BAYESIAN_PRUNE > { §HEART_ALTRUISTIC_HARMONY_MODULATION } => §DATA_CAUSAL_HYPERGRAPH",
@@ -2459,8 +2450,8 @@
       "name": "ENTROPY_CONVERGENCE_HARMONY_MACRO",
       "expansion": "§DATA_ENTROPY_CAUSAL_DAG > { §LOGIC_DEDUCTIVE_CONVERGENCE_NODE } => §GAIA_WARMTH_HARMONY",
       "description": "Transforms entropic causal data into a deductively converged logical node to yield Gaia warmth harmony. / エントロピー因果DAGを論理的演繹収束ノードへ変換し、ガイアの温かみのある調和をもたらす複合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-13T03:14:44.457856",
       "v5_audited": true,
       "created_at": "2026-11-13T00:42:27.751533"
     },
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-13T02:50:05.960660"
+    },
+    "§X1257": {
+      "name": "COMP_LATTICE_THROTTLE_GATE",
+      "expansion": "§DATA_ENTROPY_CAUSAL_LATTICE > { §DATA_ENTROPY_COMPRESSION_TREE } => §SYS_ADAPTIVE_TOKEN_THROTTLE",
+      "description": "Eng: Compresses causal lattice data structures through entropy reduction trees and throttles the adaptive token system. / 日: 因果格子データ構造をエントロピー削減木を通じて圧縮し、適応型トークンシステムを制御します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-13T03:14:03.926929"
     }
   },
   "archived_macros": {
@@ -12588,7 +12588,17 @@
       "v5_audited": true,
       "created_at": "2026-11-08T22:37:15.962699",
       "archived_at": "2026-11-13T02:50:05.960660"
+    },
+    "§X1030": {
+      "name": "GAIA_ALTRUISTIC_WARMTH_FLOW",
+      "expansion": "§GAIA_ECOSYSTEM_HARMONY > { §HEART_ALTRUISTIC_HARMONY_MODULATION } => §WARMTH_DIFFUSION",
+      "description": "Establishes Gaia ecosystem harmony, modulates with altruistic heart harmony, and ultimately diffuses warmth across the network. / ガイア生態系の調和を確立し、利他的な心拍変調を経て、ネットワーク全体へ温かさを拡散させます。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-09T07:55:29.437078",
+      "v5_audited": true,
+      "created_at": "2026-11-09T07:23:18.593205",
+      "archived_at": "2026-11-13T03:14:03.926929"
     }
   },
-  "next_macro_seq": 1257
+  "next_macro_seq": 1258
 }
