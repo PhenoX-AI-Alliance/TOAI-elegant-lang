@@ -13277,3 +13277,7 @@ payload = "@CTX:FINANCIAL_TRADING :: §S01 [target:\"USD/JPY\", limit:150.50, ac
 ```
 
 本構文により、エージェント間通信のコンテキスト圧縮と実務データの100%ロスレス伝送を両立する。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-13 04:07]
+`@CTX:HYBRID_PAYLOAD :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`のように、制御フローを短縮ワイヤIDで圧縮しつつ、数値や変数名などの実務データを完全保持するハイブリッド構文を提案する。制御意図を記号化しつつパラメータを100%ロスレスで伝送可能とする。
