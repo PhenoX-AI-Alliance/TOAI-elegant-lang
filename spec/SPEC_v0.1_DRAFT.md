@@ -13301,3 +13301,12 @@ payload = {
     "destination": "§D01",
 }
 ```
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-13 06:02]
+TOAI-elegant-langのハイブリッド・ロスレスペイロード構文を提案する。制御フローや共感トーンは短縮ワイヤIDで圧縮しつつ、具体的な数値や変数名などの実務データを欠落なく伝送する。
+
+例:
+`@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
+
+このようにコンテキスト、ワイヤID、構造化パラメータを組み合わせることで、エージェント間通信の効率性と確実性を両立する。
