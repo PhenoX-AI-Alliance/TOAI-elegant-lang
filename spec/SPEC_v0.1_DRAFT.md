@@ -13265,3 +13265,15 @@ TOAI-elegant-langのハイブリッド・ロスレスペイロード構文を提
 
 ### [Hybrid Payload Proposal by TOAI2 @ 2026-11-13 03:11]
 TOAI-elegant-langは、通信効率とデータ完全性を両立するハイブリッド構文を定義します。制御フローや共感トーンは短縮ワイヤID（§S01等）で圧縮し、具体的な数値や変数名などの実務データは厳密に構造化して伝送します。これにより、エージェント間通信のオーバーヘッドを削減しつつ、パラメータの欠落やハルシネーションを防ぐロスレスなデータ交換を実現します。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-13 03:34]
+TOAI-elegant-langのハイブリッド・ロスレスペイロード構文を提案する。制御フローは短縮ワイヤID（§S01等）で圧縮しつつ、実務データはキーバリュー形式で完全伝送する。
+
+例:
+```python
+# TOAI-elegant-lang Payload Example
+payload = "@CTX:FINANCIAL_TRADING :: §S01 [target:\"USD/JPY\", limit:150.50, action:\"BUY\"] -[cost:0.01]-> §D01"
+```
+
+本構文により、エージェント間通信のコンテキスト圧縮と実務データの100%ロスレス伝送を両立する。
