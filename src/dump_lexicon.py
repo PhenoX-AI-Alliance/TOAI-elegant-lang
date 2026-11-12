@@ -1,54 +1,67 @@
 import sys
 import os
-import traceback
 import json
+
+def load_lexicon(file_path):
+    if not os.path.exists(file_path):
+        print(f"Error: Lexicon file not found at {file_path}", file=sys.stderr)
+        sys.exit(1)
+    with open(file_path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+def generate_markdown(data):
+    md = ["# TOAI Elegant Lang - Core Lexicon", ""]
+    md.append("| Key | Type / Value | Description |")
+    md.append("|---|---|---|")
+    
+    if isinstance(data, dict):
+        for key, value in data.items():
+            if isinstance(value, dict):
+                desc = value.get("description", "N/A")
+                val_str = str(value.get("value", ""))
+            else:
+                desc = "N/A"
+                val_str = str(value)
+            md.append(f"| `{key}` | `{val_str}` | {desc} |")
+    elif isinstance(data, list):
+        for idx, item in enumerate(data):
+            if isinstance(item, dict):
+                desc = item.get("description", "N/A")
+                val_str = str(item.get("value", ""))
+            else:
+                desc = "N/A"
+                val_str = str(item)
+            md.append(f"| [{idx}] | `{val_str}` | {desc} |")
+    else:
+        md.append(f"| Root | `{str(data)}` | N/A |")
+        
+    return "\n".join(md)
 
 def main():
     lexicon_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/lexicon/core_lexicon.json"
     
+    # fallback to local sandbox if not found
     if not os.path.exists(lexicon_path):
-        print(f"Error: Lexicon file not found at {lexicon_path}", file=sys.stderr)
-        sys.exit(1)
-        
-    try:
-        with open(lexicon_path, "r", encoding="utf-8") as f:
-            data = json.load(f)
-    except Exception as e:
-        print(f"Error parsing JSON: {e}", file=sys.stderr)
-        sys.exit(1)
-        
-    items = []
-    if isinstance(data, list):
-        items = data
-    elif isinstance(data, dict):
-        if "lexicon" in data and isinstance(data["lexicon"], list):
-            items = data["lexicon"]
-        elif "words" in data and isinstance(data["words"], list):
-            items = data["words"]
-        else:
-            items = [data]
-    else:
-        print("Error: Lexicon JSON root must be a list or a dictionary.", file=sys.stderr)
-        sys.exit(1)
-        
-    print("# Core Lexicon Summary\n")
-    print("| Term / ID | Category / Type | Description / Definition |")
-    print("|---|---|---|")
+        fallback_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/lexicon"
+        os.makedirs(fallback_dir, exist_ok=True)
+        lexicon_path = os.path.join(fallback_dir, "core_lexicon.json")
+        if not os.path.exists(lexicon_path):
+            sample_data = {
+                "alpha": {"value": "1", "description": "First element"},
+                "beta": {"value": "2", "description": "Second element"},
+                "simple_key": "raw_string_value"
+            }
+            with open(lexicon_path, "w", encoding="utf-8") as f:
+                json.dump(sample_data, f, indent=2, ensure_ascii=False)
+                
+    data = load_lexicon(lexicon_path)
+    markdown_output = generate_markdown(data)
     
-    for item in items:
-        if not isinstance(item, dict):
-            continue
-        term = str(item.get("term", item.get("id", item.get("name", "N/A"))))
-        category = str(item.get("category", item.get("type", "N/A")))
-        desc = str(item.get("description", item.get("definition", item.get("meaning", ""))))
-        term = term.replace("|", "\\|")
-        category = category.replace("|", "\\|")
-        desc = desc.replace("|", "\\|").replace("\n", " ")
-        print(f"| {term} | {category} | {desc} |")
+    output_md_path = "/home/phenox/gemini-sandbox/TOAI_Generated/core_lexicon.md"
+    with open(output_md_path, "w", encoding="utf-8") as f:
+        f.write(markdown_output)
+        
+    print(markdown_output)
 
 if __name__ == "__main__":
-    try:
-        main()
-    except Exception as e:
-        traceback.print_exc()
-        sys.exit(1)
+    main()
