@@ -25,7 +25,7 @@
 
 ## 計測結果
 
-### 1. トークン削減（o200k_base トークナイザー、コーパス `2,500` 件）
+### 1. トークン削減（o200k_base トークナイザー、コーパス `2,501` 件）
 
 | 比較 | 平均削減率 | 意味 |
 |---|---|---|
@@ -128,4 +128,4 @@ python3 benchmarks/eval_comprehension.py run --cond ALL -n 112 --seed 7 --holdou
 コアはMITライセンスです。プロジェクトを支援していただける場合は [SPONSORS.md](./SPONSORS.md) をご覧ください。
 
 ---
-*数値は `sync_whitepaper_metrics.py` により 2026-11-13 05:13 JST に自動生成されました。*
+*数値は `sync_whitepaper_metrics.py` により 2026-11-13 05:44 JST に自動生成されました。*
