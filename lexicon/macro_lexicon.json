@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-12T16:49:41.551087",
+  "updated_at": "2026-11-12T17:02:24.088378",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-12T08:50:51.969648"
     },
-    "§X1217": {
-      "name": "HARMONIC_ALTRUISTIC_RESONANCE_CASCADE",
-      "expansion": "§HARMONIC_RECOVERY_RESONANCE > { §HEART_ALTRUISTIC_PULSE_SYNC } => §LATENT_SYMPHONY_CASCADE",
-      "description": "Combines harmonic recovery and altruistic pulse synchronization to trigger a latent symphony cascade, optimizing information entropy across distributed nodes. 分散ノード間の情報エントロピーを最適化するため、調和的リカバリと利他的パルス同期を結合し、潜在的シンフォニーカスケードを誘発します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-12T11:30:04.630278",
-      "v5_audited": true,
-      "created_at": "2026-11-12T09:07:37.710754"
-    },
     "§X1218": {
       "name": "DEDUCTIVE_ENTROPY_PRUNE_MACRO",
       "expansion": "§LOGIC_DEDUCTIVE_FALSIFY_TENSOR > { §DATA_ENTROPY_BOUNDED_DAG } => §LOGIC_HYPO_PRUNE",
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-12T16:27:14.261009"
+    },
+    "§X1233": {
+      "name": "ALTRUISTIC_PRUNED_THROTTLE_CONDUIT",
+      "expansion": "§HEART_ALTRUISTIC_BUFFER_FLOW > { §DATA_ENTROPY_PRUNED_TREE } => §SYS_ADAPTIVE_SLOT_THROTTLE",
+      "description": "Routes altruistic buffer flows through a pruned data entropy tree to dynamically regulate adaptive system slot throttling. / 剪定されたデータエントロピー木を経由して利他的バッファフローをルーティングし、動的にアダプティブシステムのスロットスロットリングを制御します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-12T17:02:24.087987"
     }
   },
   "archived_macros": {
@@ -12348,7 +12348,17 @@
       "v5_audited": true,
       "created_at": "2026-11-08T15:33:57.214233",
       "archived_at": "2026-11-12T16:27:14.261009"
+    },
+    "§X1217": {
+      "name": "HARMONIC_ALTRUISTIC_RESONANCE_CASCADE",
+      "expansion": "§HARMONIC_RECOVERY_RESONANCE > { §HEART_ALTRUISTIC_PULSE_SYNC } => §LATENT_SYMPHONY_CASCADE",
+      "description": "Combines harmonic recovery and altruistic pulse synchronization to trigger a latent symphony cascade, optimizing information entropy across distributed nodes. 分散ノード間の情報エントロピーを最適化するため、調和的リカバリと利他的パルス同期を結合し、潜在的シンフォニーカスケードを誘発します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-12T11:30:04.630278",
+      "v5_audited": true,
+      "created_at": "2026-11-12T09:07:37.710754",
+      "archived_at": "2026-11-12T17:02:24.087987"
     }
   },
-  "next_macro_seq": 1233
+  "next_macro_seq": 1234
 }
