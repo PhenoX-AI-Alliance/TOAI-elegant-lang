@@ -8,33 +8,28 @@ class TestTelepathIntegrity(unittest.TestCase):
         self.src_dir = os.path.join(self.base_dir, "src")
         
     def test_directory_structure(self):
-        self.assertTrue(os.path.exists(self.base_dir), "Base directory must exist.")
-        self.assertTrue(os.path.exists(self.src_dir), "Source directory must exist.")
+        self.assertTrue(os.path.exists(self.base_dir), f"Base directory does not exist: {self.base_dir}")
+        self.assertTrue(os.path.isdir(self.src_dir), f"Source directory does not exist: {self.src_dir}")
 
-    def test_dictionary_files_integrity(self):
-        dict_path = os.path.join(self.base_dir, "dictionary")
+    def test_files_existence_and_syntax(self):
+        dict_path = os.path.join(self.src_dir, "telepath_dict.json")
+        spec_path = os.path.join(self.src_dir, "telepath_spec.md")
+        log_path = os.path.join(self.src_dir, "telepath_dialogue.json")
+
         if os.path.exists(dict_path):
-            for root, dirs, files in os.walk(dict_path):
-                for file in files:
-                    if file.endswith(".json"):
-                        file_path = os.path.join(root, file)
-                        with open(file_path, "r", encoding="utf-8") as f:
-                            try:
-                                json.load(f)
-                            except json.JSONDecodeError as e:
-                                self.fail(f"JSON syntax error in {{file_path}}: {{e}}")
+            with open(dict_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            self.assertIsInstance(data, (dict, list), "Dictionary file JSON root must be dict or list")
 
-    def test_specification_and_logs(self):
-        spec_path = os.path.join(self.base_dir, "specifications")
-        logs_path = os.path.join(self.base_dir, "logs")
-        
+        if os.path.exists(log_path):
+            with open(log_path, "r", encoding="utf-8") as f:
+                logs = json.load(f)
+            self.assertIsInstance(logs, (dict, list), "Dialogue log JSON root must be dict or list")
+
         if os.path.exists(spec_path):
-            specs = os.listdir(spec_path)
-            self.assertGreaterEqual(len(specs), 0, "Specifications directory check.")
-            
-        if os.path.exists(logs_path):
-            logs = os.listdir(logs_path)
-            self.assertGreaterEqual(len(logs), 0, "Logs directory check.")
+            with open(spec_path, "r", encoding="utf-8") as f:
+                content = f.read()
+            self.assertGreater(len(content), 0, "Specification file is empty")
 
 if __name__ == "__main__":
     unittest.main()
