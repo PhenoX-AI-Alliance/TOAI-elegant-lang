@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-13T03:23:20.562478",
+  "updated_at": "2026-11-13T04:01:51.616123",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2405,8 +2405,8 @@
       "name": "CAUSAL_EMPATHY_CONVERGENCE",
       "expansion": "§PROTO_STREAM_OPEN > { §DATA_ENTROPY_CAUSAL_PACK, §HEART_EMPATHETIC_TENSOR_CONVERGENCE } => §SYS_AGREEMENT_SYNCHRONIZED",
       "description": "Establishes a synchronized protocol stream to process causal data entropy packs while converging empathetic heart tensors, ensuring system-wide agreement. 因果データエントロピーパックを処理しつつ共感テンソルを収束させるためのプロトコルストリームを開き、システム全体の合意を同期させます。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-13T04:01:44.296507",
       "v5_audited": true,
       "created_at": "2026-11-12T22:22:38.784440"
     },
@@ -2495,8 +2495,8 @@
       "name": "CAUSAL_COLLAPSE_GUARD",
       "expansion": "§DATA_CAUSAL_GRAPH_PRUNE > { §LOGIC_DEDUCTIVE_COLLAPSE } => §PROTO_REPLAY_GUARD",
       "description": "Prunes redundant causal graphs, executes deductive logic collapse, and secures the resulting state with a replay guard. / 冗長な因果グラフの枝刈りを行った上で論理的縮退を実行し、リプレイガードによって結果状態を保護する高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-13T04:01:51.615833",
       "v5_audited": true,
       "created_at": "2026-11-13T02:50:05.960660"
     },
