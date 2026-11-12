@@ -1,7 +1,7 @@
-# TOAI-elegant-lang Core Lexicon
+# TOAI Core Lexicon
 
 Version: 5.4.1
-Description: N/A
+Description: 
 
-| Term | Category | Definition |
-| :--- | :--- | :--- |
+| Term | Type | Definition |
+| --- | --- | --- |
