@@ -2,26 +2,34 @@ import sys
 import os
 import json
 
-def load_translation_map(map_path):
-    if not os.path.exists(map_path):
-        raise FileNotFoundError(f"Translation map not found at {map_path}")
-    with open(map_path, "r", encoding="utf-8") as f:
-        return json.load(f)
-
-def decode_elegant_text(text, map_path="/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/translation_map.json"):
-    translation_map = load_translation_map(map_path)
-    
-    sorted_keys = sorted(translation_map.keys(), key=len, reverse=True)
-    
-    decoded_text = text
-    for key in sorted_keys:
-        value = translation_map[key]
-        decoded_text = decoded_text.replace(key, f"[{value}]")
+class ElegantTranslator:
+    def __init__(self, map_file_path=None):
+        if map_file_path is None:
+            current_dir = os.path.dirname(os.path.abspath(__file__))
+            map_file_path = os.path.join(current_dir, "translation_map.json")
         
-    return decoded_text
+        self.map_file_path = map_file_path
+        self.translation_map = self._load_map()
+
+    def _load_map(self):
+        if not os.path.exists(self.map_file_path):
+            raise FileNotFoundError(f"Translation map not found at: {self.map_file_path}")
+        with open(self.map_file_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+
+    def decode(self, elegant_text):
+        result = elegant_text
+        # Sort keys by length descending to replace multi-character symbols correctly if any
+        sorted_keys = sorted(self.translation_map.keys(), key=len, reverse=True)
+        for symbol in sorted_keys:
+            meaning = self.translation_map[symbol]
+            replacement = f"[{meaning}]"
+            result = result.replace(symbol, replacement)
+        return result
 
 if __name__ == "__main__":
-    sample_text = "~ * # @ -> =>"
-    result = decode_elegant_text(sample_text)
+    translator = ElegantTranslator()
+    sample_text = "◆を生成し、◇を解放して▼を実行する。"
+    decoded = translator.decode(sample_text)
     print("Original:", sample_text)
-    print("Decoded:", result)
+    print("Decoded:", decoded)

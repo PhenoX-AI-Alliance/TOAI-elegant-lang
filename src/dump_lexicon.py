@@ -1,32 +1,45 @@
 import sys
 import os
-import traceback
-import time
 import json
+import traceback
+
+def load_lexicon(path):
+    if not os.path.exists(path):
+        raise FileNotFoundError(f"Lexicon file not found: {path}")
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+def generate_markdown(data):
+    lines = ["# TOAI Elegant Lang - Core Lexicon", ""]
+    if isinstance(data, dict):
+        version = data.get("version", "Unknown")
+        lines.append(f"**Version:** {version}")
+        lines.append("")
+        lexicon = data.get("lexicon", [])
+    elif isinstance(data, list):
+        lexicon = data
+    else:
+        lexicon = []
+        
+    lines.append("| Term | Definition |")
+    lines.append("|---|---|")
+    for item in lexicon:
+        term = item.get("term", "")
+        defn = item.get("definition", "")
+        lines.append(f"| {term} | {defn} |")
+    return "\n".join(lines)
 
 def main():
     try:
-        base_dir = os.path.dirname(os.path.abspath(__file__))
-        lexicon_path = os.path.join(base_dir, "lexicon", "core_lexicon.json")
+        lexicon_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/lexicon/core_lexicon.json"
+        data = load_lexicon(lexicon_path)
+        md_output = generate_markdown(data)
         
-        if not os.path.exists(lexicon_path):
-            print(f"Error: Lexicon file not found at {lexicon_path}", file=sys.stderr)
-            sys.exit(1)
+        output_path = "/home/phenox/gemini-sandbox/TOAI_Generated/lexicon_table.md"
+        with open(output_path, "w", encoding="utf-8") as f:
+            f.write(md_output)
             
-        with open(lexicon_path, "r", encoding="utf-8") as f:
-            data = json.load(f)
-            
-        print("# TOAI Core Lexicon Table\n")
-        print(f"Version: {data.get('version', 'N/A')}\n")
-        print("| Term | Category | Definition |")
-        print("|:---|:---|:---|")
-        
-        for entry in data.get("entries", []):
-            term = entry.get("term", "")
-            category = entry.get("category", "")
-            definition = entry.get("definition", "")
-            print(f"| {term} | {category} | {definition} |")
-            
+        print(md_output)
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
