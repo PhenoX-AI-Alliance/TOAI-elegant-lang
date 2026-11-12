@@ -1,36 +1,33 @@
 import sys
 import os
 import json
-import traceback
 
 class ElegantTranslator:
-    def __init__(self, map_file_path="/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/translation_map.json"):
-        self.map_file_path = map_file_path
+    def __init__(self, map_path="/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/translation_map.json"):
+        self.map_path = map_path
         self.translation_map = self._load_map()
 
     def _load_map(self):
-        if not os.path.exists(self.map_file_path):
-            return {}
-        try:
-            with open(self.map_file_path, "r", encoding="utf-8") as f:
-                return json.load(f)
-        except Exception as e:
-            print(f"Error loading translation map: {e}", file=sys.stderr)
-            return {}
+        if not os.path.exists(self.map_path):
+            raise FileNotFoundError(f"Translation map not found at {self.map_path}")
+        with open(self.map_path, "r", encoding="utf-8") as f:
+            return json.load(f)
 
-    def decode(self, text):
-        if not isinstance(text, str):
-            return ""
+    def decode(self, text: str) -> str:
         result = text
         for symbol, description in self.translation_map.items():
             result = result.replace(symbol, f"[{description}]")
         return result
 
-def translate_text(text):
-    translator = ElegantTranslator()
-    return translator.decode(text)
+    def encode(self, text: str) -> str:
+        result = text
+        sorted_items = sorted(self.translation_map.items(), key=lambda x: len(x[1]), reverse=True)
+        for symbol, description in sorted_items:
+            result = result.replace(f"[{description}]", symbol)
+        return result
 
 if __name__ == "__main__":
-    sample_text = "Hello ☆ World ◇"
     translator = ElegantTranslator()
-    print(translator.decode(sample_text))
+    sample_text = "✧の力で✦を実現し、✤を守る⟡。"
+    decoded = translator.decode(sample_text)
+    print("Decoded:", decoded)
