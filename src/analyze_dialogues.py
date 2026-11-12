@@ -6,18 +6,16 @@ import json
 
 def audit_dialogues():
     corpus_path = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
-    print(f"Reading corpus from: {corpus_path}")
-    
     if not os.path.exists(corpus_path):
         print(f"Error: Corpus file not found at {corpus_path}")
         sys.exit(1)
         
     total_lines = 0
     valid_dialogues = 0
-    errors = 0
+    errors = []
     
     with open(corpus_path, "r", encoding="utf-8") as f:
-        for line_num, line in enumerate(f, 1):
+        for idx, line in enumerate(f, 1):
             line = line.strip()
             if not line:
                 continue
@@ -25,29 +23,31 @@ def audit_dialogues():
             try:
                 data = json.loads(line)
                 if not isinstance(data, dict):
-                    raise ValueError("Root element is not a JSON object")
-                
-                if "messages" not in data and "dialogue" not in data and "turns" not in data:
-                    raise KeyError("Missing dialogue turns field")
-                
+                    errors.append((idx, "Root element is not a JSON object"))
+                    continue
+                if "dialogue" not in data and "messages" not in data:
+                    errors.append((idx, "Missing dialogue or messages key"))
+                    continue
                 valid_dialogues += 1
-            except Exception as e:
-                errors += 1
-                print(f"Syntax/Schema error at line {line_num}: {e}")
+            except json.JSONDecodeError as e:
+                errors.append((idx, f"JSON Decode Error: {e}"))
                 
-    print(f"Audit Complete. Total: {total_lines}, Valid: {valid_dialogues}, Errors: {errors}")
-    
     report = {
         "timestamp": time.time(),
         "total_lines": total_lines,
         "valid_dialogues": valid_dialogues,
-        "errors": errors
+        "error_count": len(errors),
+        "errors": errors[:50]
     }
     
-    report_path = "/home/phenox/gemini-sandbox/TOAI_Generated/dialogue_audit_report.json"
-    os.makedirs(os.path.dirname(report_path), exist_ok=True)
-    with open(report_path, "w", encoding="utf-8") as rf:
-        json.dump(report, rf, indent=2)
+    report_dir = "/home/phenox/gemini-sandbox/TOAI_Generated"
+    os.makedirs(report_dir, exist_ok=True)
+    report_path = os.path.join(report_dir, "dialogue_audit_report.json")
+    
+    with open(report_path, "w", encoding="utf-8") as f:
+        json.dump(report, f, ensure_ascii=False, indent=2)
+        
+    print(f"Audit completed. Total: {total_lines}, Valid: {valid_dialogues}, Errors: {len(errors)}")
     print(f"Report saved to {report_path}")
 
 if __name__ == "__main__":
