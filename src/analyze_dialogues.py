@@ -5,58 +5,64 @@ import time
 import json
 
 def analyze():
-    corpus_path = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
+    corpus_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
+    output_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/analysis_report.json"
+    
     if not os.path.exists(corpus_path):
         print(f"Error: Corpus file not found at {corpus_path}")
         sys.exit(1)
         
-    total_dialogues = 0
+    total_lines = 0
     valid_dialogues = 0
     errors = []
     
-    with open(corpus_path, "r", encoding="utf-8") as f:
-        for line_num, line in enumerate(f, 1):
+    with open(corpus_path, 'r', encoding='utf-8') as f:
+        for idx, line in enumerate(f, 1):
+            total_lines += 1
             line = line.strip()
             if not line:
                 continue
-            total_dialogues += 1
             try:
                 data = json.loads(line)
-                if "dialogue_id" not in data or "turns" not in data:
-                    errors.append(f"Line {line_num}: Missing required fields ('dialogue_id' or 'turns')")
+                if not isinstance(data, dict):
+                    errors.append({"line": idx, "error": "Not a JSON object"})
                     continue
-                turns = data["turns"]
-                if not isinstance(turns, list) or len(turns) == 0:
-                    errors.append(f"Line {line_num}: 'turns' must be a non-empty list")
+                if "messages" not in data or not isinstance(data["messages"], list):
+                    errors.append({"line": idx, "error": "Missing 'messages' list"})
                     continue
                 
-                valid_sequence = True
-                expected_role = "user"
-                for turn_idx, turn in enumerate(turns):
-                    if "role" not in turn or "content" not in turn:
-                        errors.append(f"Line {line_num}, Turn {turn_idx}: Missing 'role' or 'content'")
-                        valid_sequence = False
+                messages = data["messages"]
+                if len(messages) == 0:
+                    errors.append({"line": idx, "error": "Empty messages list"})
+                    continue
+                
+                role_sequence_valid = True
+                for m_idx, msg in enumerate(messages):
+                    if not isinstance(msg, dict) or "role" not in msg or "content" not in msg:
+                        role_sequence_valid = False
                         break
-                if valid_sequence:
+                
+                if role_sequence_valid:
                     valid_dialogues += 1
+                else:
+                    errors.append({"line": idx, "error": "Invalid message structure"})
+                    
             except json.JSONDecodeError as e:
-                errors.append(f"Line {line_num}: Invalid JSON - {e}")
+                errors.append({"line": idx, "error": f"JSONDecodeError: {str(e)}"})
                 
     report = {
         "timestamp": time.time(),
-        "total_dialogues": total_dialogues,
+        "total_lines": total_lines,
         "valid_dialogues": valid_dialogues,
         "error_count": len(errors),
         "errors": errors
     }
     
-    report_path = "/home/phenox/gemini-sandbox/TOAI_Generated/dialogue_audit_report.json"
-    os.makedirs(os.path.dirname(report_path), exist_ok=True)
-    with open(report_path, "w", encoding="utf-8") as f:
-        json.dump(report, f, indent=2, ensure_ascii=False)
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    with open(output_path, 'w', encoding='utf-8') as out_f:
+        json.dump(report, out_f, ensure_ascii=False, indent=2)
         
-    print(f"Audit completed. Total: {total_dialogues}, Valid: {valid_dialogues}, Errors: {len(errors)}")
-    print(f"Report saved to {report_path}")
+    print(f"Analysis complete. Valid dialogues: {valid_dialogues}/{total_lines}. Report saved to {output_path}")
 
 if __name__ == "__main__":
     try:

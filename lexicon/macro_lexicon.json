@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-13T12:01:49.434153",
+  "updated_at": "2026-11-13T13:06:49.737143",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,24 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-13T05:50:25.929113"
     },
-    "§X1264": {
-      "name": "RESILIENT_SYNC_GATE",
-      "expansion": "§PROTO_HEARTBEAT_PING > { §PROTO_CACHE_SYNC } => §SYS_LOAD_SHEDDING_GATE",
-      "description": "Verifies node liveness via heartbeat ping, synchronizes cache states, and dynamically routes through the load shedding gate to maintain system stability. / ノードの生存確認とキャッシュ同期を行い、システム負荷に応じてロードシェディングゲートで制御する複合マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-13T07:51:11.870827",
-      "v5_audited": true,
-      "created_at": "2026-11-13T06:01:30.661197"
-    },
-    "§X1265": {
-      "name": "BIOPHILIC_RESOURCE_ARBITRATION_MACRO",
-      "expansion": "§HEART_BIOPHILIC_ALTRUISM_HARMONIC > { §SYS_RESOURCE_ARBITRATION_GATEWAY } => §LOGIC_CAUSAL_PRUNE",
-      "description": "Integrates biophilic altruism harmonics with system resource arbitration, optimizing causal topologies through logical pruning. / 生物親和的利他調和とシステムリソース調停を統合し、論理的枝刈りを通じて因果トポロジーを最適化する。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-13T07:30:13.092495",
-      "v5_audited": true,
-      "created_at": "2026-11-13T06:01:35.863398"
-    },
     "§X1266": {
       "name": "CAUSAL_STATE_ARBITRATION_PIPE",
       "expansion": "§DATA_CAUSAL_TENSOR_FLOW > { §SYS_ASYNCHRONOUS_STATE_HARVESTER } => §SYNC_DIALECTIC_WEIGHTED_ARBITRATION",
@@ -2459,8 +2441,8 @@
       "name": "ATOMIC_EMPATHY_SYNCHRONY",
       "expansion": "§SYS_ATOMIC_SYNC_BARRIER > { §HEART_EMPATHETIC_VALENCE_ALIGNMENT } => §SYNC_HARMONIC_ARBITRAGE_PACT",
       "description": "Atomic system synchronization combined with empathetic valence alignment to execute harmonic arbitrage pacts. / システムの原子同期と共感的感情価の整合を組み合わせ、調和的アービトラージ契約を執行する複合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-13T12:32:35.978917",
       "v5_audited": true,
       "created_at": "2026-11-13T10:48:32.887551"
     },
@@ -2486,8 +2468,8 @@
       "name": "LOGIC_PROBABILISTIC_FALSIFICATION_GATES_SYNC",
       "expansion": "§LOGIC_PROBABILISTIC_FALSIFICATION_GATES > { §SYNC_COMPLETE } => §MUTUAL_SUPPLEMENT",
       "description": "Executes probabilistic falsification gates followed by complete synchronization to achieve mutual supplementation. 確率的反偽証ゲートを実行し、完全同期を経て相互補完を達成します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-13T13:06:49.736987",
       "v5_audited": true,
       "created_at": "2026-11-13T11:28:31.622555"
     },
@@ -2495,8 +2477,8 @@
       "name": "BIOPHILIC_QUANTUM_PRUNING_SYNCHRONIZATION",
       "expansion": "§HEART_BIOPHILIC_ALTRUISM_HARMONIC > { §SYS_QUANTUM_CONTEXT_PRUNING } => §SYS_AGREEMENT_SYNCHRONIZED",
       "description": "Biophilic altruism harmonic expansion applied to quantum context pruning, synchronized with system agreement. / 生命愛護的利他調和を量子コンテキスト枝刈りに適用し、システム合意と同期させる高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-13T12:32:52.627046",
       "v5_audited": true,
       "created_at": "2026-11-13T12:01:38.758285"
     },
@@ -2508,6 +2490,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-13T12:01:49.433624"
+    },
+    "§X1280": {
+      "name": "COMPOUND_DRAIN_THROTTLE",
+      "expansion": "§PROTO_GRACEFUL_DRAIN > { §SYS_VELOCITY_THROTTLE_MATRIX } => §PROTO_ERROR_ESCALATE",
+      "description": "Gracefully drains the active listener connections while applying the system velocity throttle matrix, escalating any protocol errors encountered during the sequence. / アクティブなリスナー接続を安全にドレインしつつシステム速度制限マトリクスを適用し、シーケンス中に発生したプロトコルエラーをエスカレーションします。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-13T13:01:47.775098",
+      "v5_audited": true,
+      "created_at": "2026-11-13T12:53:10.370772"
+    },
+    "§X1281": {
+      "name": "ENTROPY_GUARD_PRUNE_MACRO",
+      "expansion": "§DATA_ENTROPY_COMPRESSED_TREE > { §LOGIC_PROB_PRUNE_GATE } => §SAFE_FALLBACK_CASCADE",
+      "description": "Compresses the data entropy tree, evaluates the probabilistic prune gate, and cascades to a safe fallback if conditions are met. データの情報エントロピー圧縮木を構築し、確率的プルーニングゲートを評価して、条件に応じて安全なフォールバックカスケードを実行します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-13T13:01:47.775098",
+      "v5_audited": true,
+      "created_at": "2026-11-13T13:00:53.301606"
     }
   },
   "archived_macros": {
@@ -12818,7 +12818,27 @@
       "v5_audited": true,
       "created_at": "2026-11-09T20:31:19.704382",
       "archived_at": "2026-11-13T12:01:49.433624"
+    },
+    "§X1264": {
+      "name": "RESILIENT_SYNC_GATE",
+      "expansion": "§PROTO_HEARTBEAT_PING > { §PROTO_CACHE_SYNC } => §SYS_LOAD_SHEDDING_GATE",
+      "description": "Verifies node liveness via heartbeat ping, synchronizes cache states, and dynamically routes through the load shedding gate to maintain system stability. / ノードの生存確認とキャッシュ同期を行い、システム負荷に応じてロードシェディングゲートで制御する複合マクロ。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-13T07:51:11.870827",
+      "v5_audited": true,
+      "created_at": "2026-11-13T06:01:30.661197",
+      "archived_at": "2026-11-13T12:53:10.370772"
+    },
+    "§X1265": {
+      "name": "BIOPHILIC_RESOURCE_ARBITRATION_MACRO",
+      "expansion": "§HEART_BIOPHILIC_ALTRUISM_HARMONIC > { §SYS_RESOURCE_ARBITRATION_GATEWAY } => §LOGIC_CAUSAL_PRUNE",
+      "description": "Integrates biophilic altruism harmonics with system resource arbitration, optimizing causal topologies through logical pruning. / 生物親和的利他調和とシステムリソース調停を統合し、論理的枝刈りを通じて因果トポロジーを最適化する。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-13T07:30:13.092495",
+      "v5_audited": true,
+      "created_at": "2026-11-13T06:01:35.863398",
+      "archived_at": "2026-11-13T13:00:53.301606"
     }
   },
-  "next_macro_seq": 1280
+  "next_macro_seq": 1282
 }
