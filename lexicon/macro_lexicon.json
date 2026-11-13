@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-13T14:37:36.946999",
+  "updated_at": "2026-11-13T14:38:54.809743",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1609,15 +1609,6 @@
       "v5_audited": true,
       "created_at": "2026-11-09T19:10:51.202394"
     },
-    "§X1060": {
-      "name": "MACRO_WARMTH_CAUSAL_FLOW",
-      "expansion": "§WARMTH_DIFFUSION > { §DATA_ATTENTION_CAUSAL_DAG } => §LOGIC_PROB_BRANCH",
-      "description": "Diffuses systemic warmth across causal attention paths to stabilize probabilistic branching logic / 因果的アテンション経路に温かさを拡散し、確率的分岐論理を安定化させる高次マクロ",
-      "usage_count": 2,
-      "last_used_at": "2026-11-09T22:25:52.849717",
-      "v5_audited": true,
-      "created_at": "2026-11-09T20:23:55.120979"
-    },
     "§X1063": {
       "name": "ALTRUISTIC_BAYESIAN_SYNTHESIS",
       "expansion": "§HEART_ALTRUISTIC_RESONANCE_MATRIX > { §LOGIC_BAYES_FALSIFY } => §SYNC_COMPLETE",
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-13T14:37:36.946626"
+    },
+    "§X1284": {
+      "name": "SYNAPTIC_FALSIFICATION_ARBITRATION",
+      "expansion": "§SYNC_DIALECTIC_WEIGHTED_ARBITRATION > { §LOGIC_PROBABILISTIC_FALSIFICATION_PRISM } => §HEART_ALTRUISTIC_RESONANCE_ALIGNMENT",
+      "description": "Combines weighted dialectic arbitration with probabilistic falsification to achieve altruistic resonance alignment. 弁証法的加重調停と確率的反証プリズムを結合し、利他的共鳴同調を達成します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-13T14:38:54.809378"
     }
   },
   "archived_macros": {
@@ -12858,7 +12858,17 @@
       "v5_audited": true,
       "created_at": "2026-11-13T07:08:29.291203",
       "archived_at": "2026-11-13T14:37:36.946626"
+    },
+    "§X1060": {
+      "name": "MACRO_WARMTH_CAUSAL_FLOW",
+      "expansion": "§WARMTH_DIFFUSION > { §DATA_ATTENTION_CAUSAL_DAG } => §LOGIC_PROB_BRANCH",
+      "description": "Diffuses systemic warmth across causal attention paths to stabilize probabilistic branching logic / 因果的アテンション経路に温かさを拡散し、確率的分岐論理を安定化させる高次マクロ",
+      "usage_count": 2,
+      "last_used_at": "2026-11-09T22:25:52.849717",
+      "v5_audited": true,
+      "created_at": "2026-11-09T20:23:55.120979",
+      "archived_at": "2026-11-13T14:38:54.809378"
     }
   },
-  "next_macro_seq": 1284
+  "next_macro_seq": 1285
 }
