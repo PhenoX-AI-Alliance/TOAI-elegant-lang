@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-13T14:38:54.809743",
+  "updated_at": "2026-11-13T14:41:51.680236",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2378,8 +2378,8 @@
       "name": "DATA_ENTROPY_PRUNED_TREE_SYS_ADAPTIVE_TOKEN_THRO",
       "expansion": "§DATA_ENTROPY_PRUNED_TREE > { §SYS_ADAPTIVE_TOKEN_THROTTLE } => §SYS_GC_BARRIER",
       "description": "Prunes data entropy trees under adaptive token throttling and executes a garbage collection barrier. / 適応型トークン制御のもとでデータエントロピーの枝刈りツリーを構築し、ガベージコレクションバリアを実行します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-13T14:25:21.516549",
+      "usage_count": 2,
+      "last_used_at": "2026-11-13T14:41:51.680034",
       "v5_audited": true,
       "created_at": "2026-11-13T07:48:29.529021"
     },
@@ -2495,8 +2495,8 @@
       "name": "CAUSAL_CONSENSUS_MERGE_BARRIER",
       "expansion": "§DATA_CAUSAL_GRAPH_MAP > { §SYNC_ATOMIC_CONSENSUS_MERGE } => §SYS_GC_BARRIER",
       "description": "Maps causal dependencies, executes atomic consensus merge, and establishes a system garbage collection barrier. データの因果グラフマップを構築し、アトミック合意マージを実行した上で、システムガベージコレクションバリアを確立します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-13T14:41:51.680034",
       "v5_audited": true,
       "created_at": "2026-11-13T14:37:36.946626"
     },
