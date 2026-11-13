@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-13T08:46:55.752286",
+  "updated_at": "2026-11-13T09:07:38.461841",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2477,8 +2477,8 @@
       "name": "GAIA_THROTTLE_LOCK",
       "expansion": "§SYS_SLOT_THROTTLE > { §GAIA_ECOSYSTEM_HARMONY } => §PROTO_IDEMPOTENCY_LOCK",
       "description": "Throttles system slots to preserve Gaia ecosystem harmony and enforces protocol idempotency locks. / システムスロットを制御してガイア生態系の調和を維持し、プロトコルのべき等性ロックを強制します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-13T08:40:06.911859",
+      "usage_count": 2,
+      "last_used_at": "2026-11-13T09:07:38.461702",
       "v5_audited": true,
       "created_at": "2026-11-13T07:30:30.265919"
     },
