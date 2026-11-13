@@ -19,7 +19,7 @@
 対訳辞書: §S01 = リソース調停, §D01 = 因果テンソルマップ（lexicon/rosetta_layer.json）
 ```
 
-- **辞書**: 基本シンボル `256` 個（`lexicon/core_lexicon.json`）＋稼働中の複合マクロ `266` 個（`lexicon/macro_lexicon.json`。後方互換の復号用に `1004` 個をアーカイブ）。
+- **辞書**: 基本シンボル `256` 個（`lexicon/core_lexicon.json`）＋稼働中の複合マクロ `266` 個（`lexicon/macro_lexicon.json`。後方互換の復号用に `1005` 個をアーカイブ）。
 - **コーデック**（`src/codec.py`）: 決定論的なエンコード／デコード、引用符を考慮した `[key:val]` 抽出、往復テスト済み（`tests/test_codec.py`）。
 - **連携**: CLI、MCPサーバー（`src/mcp_server.py`）、A2Aアダプター（`src/a2a_adapter.py`）、Ollama Modelfile／システムプロンプトの書き出し。
 
@@ -128,4 +128,4 @@ python3 benchmarks/eval_comprehension.py run --cond ALL -n 112 --seed 7 --holdou
 コアはMITライセンスです。プロジェクトを支援していただける場合は [SPONSORS.md](./SPONSORS.md) をご覧ください。
 
 ---
-*数値は `sync_whitepaper_metrics.py` により 2026-11-13 08:45 JST に自動生成されました。*
+*数値は `sync_whitepaper_metrics.py` により 2026-11-13 09:01 JST に自動生成されました。*
