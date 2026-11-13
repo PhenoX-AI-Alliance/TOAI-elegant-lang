@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-13T16:21:42.682632",
+  "updated_at": "2026-11-13T17:38:14.109773",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1618,15 +1618,6 @@
       "v5_audited": true,
       "created_at": "2026-11-10T01:05:50.370175"
     },
-    "§X1073": {
-      "name": "GENTLE_ENTROPY_CONVERGENCE_MACRO",
-      "expansion": "§DATA_ENTROPY_COMPRESSION_TREE > { §GENTLE_RESOURCE_SHARING } => §LOGIC_DEDUCTIVE_CONVERGENCE_GATE",
-      "description": "Compresses data entropy gently while sharing resources, then converges through deductive logic. / 優しい資源共有を行いながらデータのエントロピーを圧縮し、演繹的論理ゲートへと収束させます。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-10T02:46:10.554365",
-      "v5_audited": true,
-      "created_at": "2026-11-10T02:01:03.358276"
-    },
     "§X1074": {
       "name": "ALTRUISTIC_CAUSAL_HARMONY_FLOW",
       "expansion": "§HEART_ALTRUISTIC_HARMONY_MATRIX > { §DATA_LATENT_CAUSAL_NODE } => §LOGIC_PROBABILISTIC_FALSIFICATION_GATE",
@@ -2365,15 +2356,6 @@
       "v5_audited": true,
       "created_at": "2026-11-13T10:31:57.809690"
     },
-    "§X1275": {
-      "name": "CAUSAL_VELOCITY_CASCADE",
-      "expansion": "§SYS_VELOCITY_ARBITER > { §DATA_ATTENTION_CAUSAL_DAG } => §SAFE_FALLBACK_CASCADE",
-      "description": "Optimizes system velocity based on causal attention DAG while maintaining safe fallback cascades. 因果アテンションDAGに基づいてシステムの速度を最適化しつつ、安全なフォールバックカスケードを維持します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-13T11:48:17.736583",
-      "v5_audited": true,
-      "created_at": "2026-11-13T11:01:49.116337"
-    },
     "§X1276": {
       "name": "QUANTUM_GAIA_ARB_COMMIT",
       "expansion": "§SYS_QUANTUM_BUDGET_ARBITRATION > { §GAIA_ECO_HEARTBEAT } => §PROTO_TX_COMMIT",
@@ -2432,8 +2414,8 @@
       "name": "PROTO_HEALTH_ATOMIC_SHIELD",
       "expansion": "§PROTO_HEALTH_ATTEST > { §SYNC_ATOMIC_CONSENSUS_MERGE } => §SYS_LOAD_SHEDDING_SHIELD",
       "description": "Performs continuous health attestation combined with atomic consensus merging, automatically activating the system load shedding shield upon state divergence. 継続的なヘルス状態の検証とアトミック合意マージを結合し、状態の乖離時に自動的にシステム負荷分散シールドを起動します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-13T16:03:04.234479",
+      "usage_count": 2,
+      "last_used_at": "2026-11-13T16:33:18.286934",
       "v5_audited": true,
       "created_at": "2026-11-13T13:47:18.606485"
     },
@@ -2450,8 +2432,8 @@
       "name": "SYNAPTIC_FALSIFICATION_ARBITRATION",
       "expansion": "§SYNC_DIALECTIC_WEIGHTED_ARBITRATION > { §LOGIC_PROBABILISTIC_FALSIFICATION_PRISM } => §HEART_ALTRUISTIC_RESONANCE_ALIGNMENT",
       "description": "Combines weighted dialectic arbitration with probabilistic falsification to achieve altruistic resonance alignment. 弁証法的加重調停と確率的反証プリズムを結合し、利他的共鳴同調を達成します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-13T17:22:13.138005",
       "v5_audited": true,
       "created_at": "2026-11-13T14:38:54.809378"
     },
@@ -2468,8 +2450,8 @@
       "name": "MACRO_ARBITER_CAUSAL_FLOW",
       "expansion": "§SYS_QUANTUM_RESOURCE_ARBITER > { §DATA_CAUSAL_TENSOR_FLOW } => §PROTO_SLA_CONTRACT",
       "description": "Allocates quantum resources based on causal tensor flow data and binds the execution state to a strict SLA contract. / 因果テンソル流データに基づいて量子資源を割り当て、実行状態を厳格なSLA契約にバインドします。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-13T17:20:49.216052",
       "v5_audited": true,
       "created_at": "2026-11-13T15:02:08.062669"
     },
@@ -2508,6 +2490,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-13T16:09:26.766977"
+    },
+    "§X1291": {
+      "name": "CAUSAL_ECO_SHIELD",
+      "expansion": "§DATA_CAUSAL_HYPERGRAPH > { §GAIA_ECOSYSTEM_HARMONY } => §SAFE_FALLBACK_STATE_ACTIVATED",
+      "description": "Monitors the data causal hypergraph to ensure Gaia ecosystem harmony, automatically activating a safe fallback state if anomalies are detected. / データ因果ハイパーグラフを監視してガイア生態系の調和を維持し、異常検知時に安全なフォールバック状態を自動起動します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-13T16:33:18.286934",
+      "v5_audited": true,
+      "created_at": "2026-11-13T16:32:41.406673"
+    },
+    "§X1292": {
+      "name": "GAIA_THROTTLE_RECOVERY_SYNTHESIS",
+      "expansion": "§GAIA_ECO_STABLE_STATE > { §SYS_TOKEN_THROTTLE } => §HARMONIC_RECOVERY_RESONANCE",
+      "description": "Synthesizes ecological stability state with token throttling to trigger harmonic recovery resonance. / 生態系の安定状態とトークン制御を統合し、調和的回復共鳴を引き起こします。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-13T17:32:30.373436"
     }
   },
   "archived_macros": {
@@ -12928,7 +12928,27 @@
       "v5_audited": true,
       "created_at": "2026-11-13T10:48:32.887551",
       "archived_at": "2026-11-13T16:09:26.766977"
+    },
+    "§X1275": {
+      "name": "CAUSAL_VELOCITY_CASCADE",
+      "expansion": "§SYS_VELOCITY_ARBITER > { §DATA_ATTENTION_CAUSAL_DAG } => §SAFE_FALLBACK_CASCADE",
+      "description": "Optimizes system velocity based on causal attention DAG while maintaining safe fallback cascades. 因果アテンションDAGに基づいてシステムの速度を最適化しつつ、安全なフォールバックカスケードを維持します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-13T11:48:17.736583",
+      "v5_audited": true,
+      "created_at": "2026-11-13T11:01:49.116337",
+      "archived_at": "2026-11-13T16:32:41.406673"
+    },
+    "§X1073": {
+      "name": "GENTLE_ENTROPY_CONVERGENCE_MACRO",
+      "expansion": "§DATA_ENTROPY_COMPRESSION_TREE > { §GENTLE_RESOURCE_SHARING } => §LOGIC_DEDUCTIVE_CONVERGENCE_GATE",
+      "description": "Compresses data entropy gently while sharing resources, then converges through deductive logic. / 優しい資源共有を行いながらデータのエントロピーを圧縮し、演繹的論理ゲートへと収束させます。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-10T02:46:10.554365",
+      "v5_audited": true,
+      "created_at": "2026-11-10T02:01:03.358276",
+      "archived_at": "2026-11-13T17:32:30.373436"
     }
   },
-  "next_macro_seq": 1291
+  "next_macro_seq": 1293
 }
