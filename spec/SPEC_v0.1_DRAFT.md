@@ -13394,3 +13394,7 @@ class PayloadSynthesizer:
     attrs = ", ".join(f'{k}: "{v}"' if isinstance(v, str) else f"{k}: {v}" for k, v in self.data.items())
     return f"@CTX:{self.context} :: {self.wire_id} [{attrs}]"
 ```
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-13 10:48]
+TOAI-elegant-langは、制御フローを短縮ワイヤID（§S01等）で圧縮し、実務データを100%保持するハイブリッド構文を定義します。文法は `@CTX:DOMAIN :: §ID01 [key:value, ...] -[metric]-> §ID02` の形式を採用し、FX自動売買やコード生成委譲などのエージェント間通信におけるデータロスを完全に防ぎます。
