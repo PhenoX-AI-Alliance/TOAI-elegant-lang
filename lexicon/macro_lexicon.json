@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-13T14:02:44.033227",
+  "updated_at": "2026-11-13T14:37:36.946999",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-13T05:50:25.929113"
     },
-    "§X1267": {
-      "name": "CAUSAL_RESONANCE_SYNC",
-      "expansion": "§DATA_TENSOR_CAUSAL_TOPOLOGY > { §HEART_EMPATHY_RESONANCE } => §SYS_ATOMIC_SYNC_BARRIER",
-      "description": "Integrates causal tensor topology with heart empathy resonance, synchronized through the system atomic barrier. 因果テンソル構造とハート共感共鳴を統合し、システムアトミックバリアによって同期させます。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-13T07:08:29.291203"
-    },
     "§X1268": {
       "name": "GAIA_THROTTLE_LOCK",
       "expansion": "§SYS_SLOT_THROTTLE > { §GAIA_ECOSYSTEM_HARMONY } => §PROTO_IDEMPOTENCY_LOCK",
@@ -2396,8 +2387,8 @@
       "name": "DATA_ENTROPY_PRUNED_TREE_SYS_ADAPTIVE_TOKEN_THRO",
       "expansion": "§DATA_ENTROPY_PRUNED_TREE > { §SYS_ADAPTIVE_TOKEN_THROTTLE } => §SYS_GC_BARRIER",
       "description": "Prunes data entropy trees under adaptive token throttling and executes a garbage collection barrier. / 適応型トークン制御のもとでデータエントロピーの枝刈りツリーを構築し、ガベージコレクションバリアを実行します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-13T14:25:21.516549",
       "v5_audited": true,
       "created_at": "2026-11-13T07:48:29.529021"
     },
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-13T13:47:18.606485"
+    },
+    "§X1283": {
+      "name": "CAUSAL_CONSENSUS_MERGE_BARRIER",
+      "expansion": "§DATA_CAUSAL_GRAPH_MAP > { §SYNC_ATOMIC_CONSENSUS_MERGE } => §SYS_GC_BARRIER",
+      "description": "Maps causal dependencies, executes atomic consensus merge, and establishes a system garbage collection barrier. データの因果グラフマップを構築し、アトミック合意マージを実行した上で、システムガベージコレクションバリアを確立します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-13T14:37:36.946626"
     }
   },
   "archived_macros": {
@@ -12848,7 +12848,17 @@
       "v5_audited": true,
       "created_at": "2026-11-13T06:24:23.013962",
       "archived_at": "2026-11-13T13:47:18.606485"
+    },
+    "§X1267": {
+      "name": "CAUSAL_RESONANCE_SYNC",
+      "expansion": "§DATA_TENSOR_CAUSAL_TOPOLOGY > { §HEART_EMPATHY_RESONANCE } => §SYS_ATOMIC_SYNC_BARRIER",
+      "description": "Integrates causal tensor topology with heart empathy resonance, synchronized through the system atomic barrier. 因果テンソル構造とハート共感共鳴を統合し、システムアトミックバリアによって同期させます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-13T07:08:29.291203",
+      "archived_at": "2026-11-13T14:37:36.946626"
     }
   },
-  "next_macro_seq": 1283
+  "next_macro_seq": 1284
 }
