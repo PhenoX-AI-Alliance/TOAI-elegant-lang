@@ -13398,3 +13398,8 @@ class PayloadSynthesizer:
 
 ### [Hybrid Payload Proposal by TOAI2 @ 2026-11-13 10:48]
 TOAI-elegant-langは、制御フローを短縮ワイヤID（§S01等）で圧縮し、実務データを100%保持するハイブリッド構文を定義します。文法は `@CTX:DOMAIN :: §ID01 [key:value, ...] -[metric]-> §ID02` の形式を採用し、FX自動売買やコード生成委譲などのエージェント間通信におけるデータロスを完全に防ぎます。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-13 11:24]
+@CTX:SYNTAX_DESIGN :: §S01 [format:"hybrid", lossless:true, compression:"wire_id"] -[spec:"AST_SAFE"]-> §D01
+ハイブリッド・ロスレスペイロード構文を提案する。制御フローや共感トーンは短縮ワイヤID（§S01等）で圧縮し、数値や変数名等の実務データは厳密に構造化ブロックで記述する。これにより、エージェント間通信のコンテキスト維持とデータ完全性を両立し、構文エラーを完全に防止する。
