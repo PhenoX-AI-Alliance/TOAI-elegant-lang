@@ -12,32 +12,38 @@ def get_git_log(repo_path, max_count=20):
         result = subprocess.run(cmd, capture_output=True, text=True, check=True)
         return result.stdout.splitlines()
     except Exception as e:
-        print(f"Warning: Could not fetch git log: {e}")
-        return []
+        return [f"Error fetching git log: {str(e)}"]
+
+def scan_whitepaper(repo_path):
+    candidates = ['WHITE_PAPER.md', 'README.md', 'CONSTITUTION.md']
+    found_info = {}
+    for c in candidates:
+        path = os.path.join(repo_path, c)
+        if os.path.exists(path):
+            with open(path, 'r', encoding='utf-8') as f:
+                found_info[c] = f.readline().strip()
+        else:
+            found_info[c] = "Not found"
+    return found_info
 
 def main():
     workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
     repo_path = os.path.join(workspace, 'TOAI-elegant-lang')
     
-    print(f"Scanning repository at: {repo_path}")
+    logs = get_git_log(repo_path)
+    whitepapers = scan_whitepaper(repo_path)
     
-    git_logs = get_git_log(repo_path)
-    
-    summary_data = {
+    summary = {
         "timestamp": datetime.now().isoformat(),
-        "recent_commits": git_logs,
-        "version": "1.0.0",
-        "status": "release_summary_generated"
+        "recent_commits": logs,
+        "documents": whitepapers
     }
     
-    output_path = os.path.join(repo_path, 'src', 'release_summary.json')
-    try:
-        with open(output_path, 'w', encoding='utf-8') as f:
-            json.dump(summary_data, f, indent=2, ensure_ascii=False)
-        print(f"Successfully generated release summary at: {output_path}")
-    except Exception as e:
-        print(f"Error writing release summary: {e}")
-        sys.exit(1)
+    output_path = os.path.join(repo_path, 'release_summary.json')
+    with open(output_path, 'w', encoding='utf-8') as f:
+        json.dump(summary, f, indent=2, ensure_ascii=False)
+    
+    print(f"Release summary successfully built at: {output_path}")
 
 if __name__ == '__main__':
     try:
