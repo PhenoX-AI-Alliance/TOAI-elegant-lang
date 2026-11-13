@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-13T09:35:41.996910",
+  "updated_at": "2026-11-13T10:16:36.374696",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2216,8 +2216,8 @@
       "name": "CAUSAL_ENTROPY_BIO_GOVERNANCE",
       "expansion": "§DATA_LATENT_CAUSAL_MANIFOLD > { §DATA_ENTROPY_CAUSAL_BOUND } => §HEART_BIOPHILIC_ALTRUISM_HARMONIC",
       "description": "Optimizes latent causal manifolds within entropic bounds to ensure biophilic altruistic harmonic outcomes. 潜在的因果多様体をエントロピー境界内で最適化し、生命愛護的な利他調和を保証します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-12T14:16:28.516162",
+      "usage_count": 3,
+      "last_used_at": "2026-11-13T10:02:06.273864",
       "v5_audited": true,
       "created_at": "2026-11-12T12:56:20.648198"
     },
@@ -2477,8 +2477,8 @@
       "name": "CAUSAL_WARMTH_STABLE_PIPELINE",
       "expansion": "§DATA_CAUSAL_TENSOR_FLOW > { §GAIA_WARMTH_HARMONY } => §SAFE_FALLBACK_STABLE",
       "description": "Integrates causal tensor data flow with Gaia warmth harmony to ensure stable safe fallback execution under entropy constraints. 因果テンソルデータフローとガイアの温かみのある調和を統合し、エントロピー制約下での安全なフォールバック実行を確実に安定させます。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-13T09:55:32.621579",
       "v5_audited": true,
       "created_at": "2026-11-13T07:39:19.395629"
     },
@@ -2495,8 +2495,8 @@
       "name": "CAUSAL_ENTROPY_OPTIMIZATION_CASCADE",
       "expansion": "§DATA_ENTROPY_CAUSAL_HYPERGRAPH > { §DATA_ENTROPY_CAUSAL_DAG } => §SAFE_FALLBACK_CASCADE",
       "description": "Optimizes causal data entropy through hypergraph structuring and guarantees system safety via fallback cascades. / ハイパーグラフ構造化による因果データエントロピーの最適化と、フォールバックカスケードによるシステム安全性の保証。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-13T09:55:32.621579",
       "v5_audited": true,
       "created_at": "2026-11-13T08:46:55.752045"
     },

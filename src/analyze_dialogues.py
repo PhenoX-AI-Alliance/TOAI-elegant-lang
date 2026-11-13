@@ -1,66 +1,46 @@
-# -*- coding: utf-8 -*-
 import sys
 import os
 import traceback
 import time
 import json
 
-def audit_dialogues():
-    corpus_path = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
-    if not os.path.exists(corpus_path):
-        print(f"Error: Corpus file not found at {corpus_path}")
+def analyze_corpus(file_path):
+    print(f"Starting analysis of corpus: {file_path}")
+    if not os.path.exists(file_path):
+        print(f"Error: Corpus file not found at {file_path}")
         sys.exit(1)
-
-    total_lines = 0
-    valid_dialogues = 0
-    errors = []
-
-    with open(corpus_path, "r", encoding="utf-8") as f:
-        for idx, line in enumerate(f, 1):
-            line_str = line.strip()
-            if not line_str:
+        
+    total_dialogues = 0
+    errors = 0
+    
+    with open(file_path, "r", encoding="utf-8") as f:
+        for line_num, line in enumerate(f, 1):
+            line = line.strip()
+            if not line:
                 continue
-            total_lines += 1
             try:
-                data = json.loads(line_str)
-                if not isinstance(data, dict):
-                    raise ValueError("Root element is not a JSON object")
+                data = json.loads(line)
+                total_dialogues += 1
+                if "dialogue_id" not in data or "turns" not in data:
+                    print(f"Warning: Line {line_num} missing required keys.")
+                    errors += 1
+                else:
+                    turns = data["turns"]
+                    if not isinstance(turns, list) or len(turns) == 0:
+                        print(f"Warning: Dialogue {data.get('dialogue_id')} has invalid or empty turns.")
+                        errors += 1
+            except json.JSONDecodeError as e:
+                print(f"JSONDecodeError at line {line_num}: {e}")
+                errors += 1
                 
-                if "messages" not in data:
-                    raise KeyError("Missing 'messages' key")
-                
-                messages = data["messages"]
-                if not isinstance(messages, list) or len(messages) == 0:
-                    raise ValueError("'messages' must be a non-empty list")
-                
-                for m_idx, msg in enumerate(messages):
-                    if not isinstance(msg, dict):
-                        raise ValueError(f"Message at index {m_idx} is not an object")
-                    if "role" not in msg or "content" not in msg:
-                        raise ValueError(f"Message at index {m_idx} missing 'role' or 'content'")
-                
-                valid_dialogues += 1
-            except Exception as e:
-                errors.append({"line": idx, "error": str(e)})
-
-    report = {
-        "timestamp": time.time(),
-        "total_lines": total_lines,
-        "valid_dialogues": valid_dialogues,
-        "error_count": len(errors),
-        "errors": errors
-    }
-
-    report_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/audit_report.json"
-    with open(report_path, "w", encoding="utf-8") as out:
-        json.dump(report, out, ensure_ascii=False, indent=2)
-
-    print(f"Audit completed. Total: {total_lines}, Valid: {valid_dialogues}, Errors: {len(errors)}")
-    print(f"Report saved to {report_path}")
+    print(f"Analysis complete. Total dialogues: {total_dialogues}, Errors found: {errors}")
+    return {"total": total_dialogues, "errors": errors}
 
 if __name__ == "__main__":
     try:
-        audit_dialogues()
+        corpus_file = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
+        result = analyze_corpus(corpus_file)
+        print(json.dumps(result, ensure_ascii=False))
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
