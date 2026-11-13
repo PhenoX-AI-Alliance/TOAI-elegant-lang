@@ -7,9 +7,9 @@ import csv
 
 def main():
     try:
-        base_dir = '/home/phenox/gemini-sandbox/TOAI-elegant-lang'
-        src_dir = os.path.join(base_dir, 'src')
-        data_dir = os.path.join(base_dir, 'data')
+        sandbox_dir = '/home/phenox/gemini-sandbox/TOAI-elegant-lang'
+        src_dir = os.path.join(sandbox_dir, 'src')
+        data_dir = os.path.join(sandbox_dir, 'data')
         
         os.makedirs(src_dir, exist_ok=True)
         os.makedirs(data_dir, exist_ok=True)
@@ -19,31 +19,31 @@ def main():
         
         if not os.path.exists(json_path):
             sample_data = {
-                "version": "1.0.0",
-                "lexicon": [
-                    {"term": "toai_core", "type": "keyword", "description": "Core intelligence unit"},
-                    {"term": "altruistic_capitalism", "type": "concept", "description": "Monetization through genuine value"}
+                "lexicon_version": "1.0.0",
+                "entries": [
+                    {"term": "TOAI", "category": "core", "definition": "Thought Oriented Artificial Intelligence"},
+                    {"term": "Elegance", "category": "philosophy", "definition": "Simplicity and power combined"}
                 ]
             }
             with open(json_path, 'w', encoding='utf-8') as f:
-                json.dump(sample_data, f, ensure_ascii=False, indent=2)
+                json.dump(sample_data, f, indent=2, ensure_ascii=False)
                 
         with open(json_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
             
-        lexicon_list = data.get('lexicon', [])
+        entries = data.get('entries', [])
         
         with open(csv_path, 'w', encoding='utf-8', newline='') as f:
             writer = csv.writer(f)
-            writer.writerow(['term', 'type', 'description'])
-            for item in lexicon_list:
+            writer.writerow(['term', 'category', 'definition'])
+            for entry in entries:
                 writer.writerow([
-                    item.get('term', ''),
-                    item.get('type', ''),
-                    item.get('description', '')
+                    entry.get('term', ''),
+                    entry.get('category', ''),
+                    entry.get('definition', '')
                 ])
                 
-        print(f"Successfully exported lexicon to {{csv_path}}")
+        print(f"Successfully exported {len(entries)} entries to {csv_path}")
         
     except Exception as e:
         traceback.print_exc()
