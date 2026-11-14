@@ -6,8 +6,13 @@ from pathlib import Path
 
 def validate_lexicon(lexicon_path=None):
     if lexicon_path is None:
-        workspace = os.environ.get('TOAI_WORKSPACE_DIR', '.')
-        lexicon_path = os.path.join(workspace, 'TOAI-elegant-lang', 'lexicon', 'core_lexicon.json')
+        # 1. 自身のファイル配置位置からの相対パス解決（最優先）
+        self_repo_lex = Path(__file__).resolve().parent.parent / "lexicon" / "core_lexicon.json"
+        if self_repo_lex.exists():
+            lexicon_path = str(self_repo_lex)
+        else:
+            workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox')
+            lexicon_path = os.path.join(workspace, 'TOAI-elegant-lang', 'lexicon', 'core_lexicon.json')
     
     if not os.path.exists(lexicon_path):
         raise FileNotFoundError(f"Required lexicon file not found: {lexicon_path}")
