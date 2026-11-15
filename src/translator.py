@@ -2,37 +2,31 @@ import sys
 import os
 import json
 
-class ElegantTranslator:
-    def __init__(self, map_file_path=None):
-        if map_file_path is None:
-            current_dir = os.path.dirname(os.path.abspath(__file__))
-            map_file_path = os.path.join(current_dir, "translation_map.json")
-        
-        self.map_file_path = map_file_path
-        self.translation_map = self._load_map()
+def load_translation_map(map_path):
+    if not os.path.exists(map_path):
+        raise FileNotFoundError(f"Translation map not found at {map_path}")
+    with open(map_path, "r", encoding="utf-8") as f:
+        return json.load(f)
 
-    def _load_map(self):
-        if not os.path.exists(self.map_file_path):
-            raise FileNotFoundError(f"Translation map not found at: {self.map_file_path}")
-        with open(self.map_file_path, "r", encoding="utf-8") as f:
-            return json.load(f)
-
-    def decode(self, text: str) -> str:
-        result = text
-        for symbol, meaning in self.translation_map.items():
-            result = result.replace(symbol, f"[{meaning}]")
-        return result
-
-def decode_elegant_text(text: str, map_file_path: str = None) -> str:
-    translator = ElegantTranslator(map_file_path)
-    return translator.decode(text)
+def decode_elegant_text(text, map_path="/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/translation_map.json"):
+    trans_map = load_translation_map(map_path)
+    decoded_parts = []
+    i = 0
+    while i < len(text):
+        matched = False
+        for length in range(4, 0, -1):
+            chunk = text[i:i+length]
+            if chunk in trans_map:
+                decoded_parts.append(trans_map[chunk])
+                i += length
+                matched = True
+                break
+        if not matched:
+            decoded_parts.append(text[i])
+            i += 1
+    return "".join(decoded_parts)
 
 if __name__ == "__main__":
-    sample_text = "Ωの世界で∞の愛と∇を統合するΨ"
-    try:
-        decoded = decode_elegant_text(sample_text)
-        print(f"Original: {sample_text}")
-        print(f"Decoded: {decoded}")
-    except Exception as e:
-        print(f"Error during translation: {e}", file=sys.stderr)
-        sys.exit(1)
+    sample_text = "🌟のプロジェクトが💫を生み出し、⚡で加速する。"
+    print("Original:", sample_text)
+    print("Decoded:", decode_elegant_text(sample_text))

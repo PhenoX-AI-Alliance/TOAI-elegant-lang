@@ -4,50 +4,46 @@ import traceback
 import time
 import json
 
-def audit_dialogues():
-    corpus_path = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
-    report_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/audit_report.json"
-    
-    results = {
-        "total_lines": 0,
-        "valid_records": 0,
-        "errors": []
-    }
-    
-    if not os.path.exists(corpus_path):
-        results["errors"].append(f"Corpus not found at {corpus_path}")
-        print(json.dumps(results, ensure_ascii=False, indent=2))
-        return
+def analyze_corpus(file_path):
+    if not os.path.exists(file_path):
+        print(f"Error: Corpus not found at {{file_path}}")
+        sys.exit(1)
 
-    with open(corpus_path, "r", encoding="utf-8") as f:
+    total_records = 0
+    errors_found = 0
+    dialogues = {}
+
+    with open(file_path, "r", encoding="utf-8") as f:
         for line_num, line in enumerate(f, 1):
-            results["total_lines"] += 1
             line = line.strip()
             if not line:
                 continue
             try:
                 record = json.loads(line)
-                if not isinstance(record, dict):
-                    raise ValueError("Record is not a JSON object")
-                if "dialogue" not in record and "messages" not in record:
-                    raise KeyError("Missing dialogue or messages key")
-                results["valid_records"] += 1
-            except Exception as e:
-                results["errors"].append({
-                    "line": line_num,
-                    "error": str(e)
-                })
+                total_records += 1
+                did = record.get("dialogue_id")
+                if did not in dialogues:
+                    dialogues[did] = []
+                dialogues[did].append(record)
 
-    os.makedirs(os.path.dirname(report_path), exist_ok=True)
-    with open(report_path, "w", encoding="utf-8") as f:
-        json.dump(results, f, ensure_ascii=False, indent=2)
-    
-    print(f"Audit completed. Report saved to {report_path}")
-    print(json.dumps(results, ensure_ascii=False, indent=2))
+                if record.get("error"):
+                    errors_found += 1
+            except json.JSONDecodeError as e:
+                print(f"JSON Decode Error at line {{line_num}}: {{e}}")
+
+    print(f"Total Records: {{total_records}}")
+    print(f"Total Dialogues: {{len(dialogues)}}")
+    print(f"Total Errors Recorded: {{errors_found}}")
+
+    for did, turns in dialogues.items():
+        turns.sort(key=lambda x: x.get("turn", 0))
+        expected_turn = 1
+        for turn in turns:
+            current_turn = turn.get("turn")
+            if current_turn != expected_turn:
+                print(f"Warning: Dialogue {{did}} has turn sequence mismatch. Expected {{expected_turn}}, got {{current_turn}}")
+            expected_turn += 1
 
 if __name__ == "__main__":
-    try:
-        audit_dialogues()
-    except Exception as e:
-        traceback.print_exc()
-        sys.exit(1)
+    corpus = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
+    analyze_corpus(corpus)

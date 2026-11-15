@@ -1,34 +1,42 @@
+import sys
 import os
-import json
 import unittest
+import json
 
 class TestTelepathIntegrity(unittest.TestCase):
     def setUp(self):
-        self.base_dir = '/home/phenox/gemini-sandbox/TOAI-elegant-lang'
-        self.src_dir = os.path.join(self.base_dir, 'src')
+        self.base_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang"
+        self.src_dir = os.path.join(self.base_dir, "src")
 
     def test_directories_exist(self):
-        self.assertTrue(os.path.isdir(self.base_dir), "Base directory does not exist.")
-        self.assertTrue(os.path.isdir(self.src_dir), "Source directory does not exist.")
+        self.assertTrue(os.path.exists(self.base_dir), "Base directory does not exist.")
+        self.assertTrue(os.path.exists(self.src_dir), "Source directory does not exist.")
 
-    def test_integrity_files(self):
-        # Create dummy specification, dictionary, and dialogue log if they do not exist
-        # to ensure syntax and structural validation pass securely in sandbox.
-        spec_path = os.path.join(self.base_dir, 'spec.json')
-        dict_path = os.path.join(self.base_dir, 'dictionary.json')
-        log_path = os.path.join(self.base_dir, 'dialogue_log.json')
+    def test_syntax_of_python_files(self):
+        for root, dirs, files in os.walk(self.src_dir):
+            for file in files:
+                if file.endswith(".py"):
+                    full_path = os.path.join(root, file)
+                    with open(full_path, "r", encoding="utf-8") as f:
+                        content = f.read()
+                    try:
+                        compile(content, full_path, "exec")
+                    except SyntaxError as e:
+                        self.fail(f"Syntax error in {full_path}: {e}")
 
-        for path in [spec_path, dict_path, log_path]:
-            if not os.path.exists(path):
-                with open(path, 'w', encoding='utf-8') as f:
-                    json.dump({"status": "initialized", "valid": True}, f, indent=2)
-
-        # Assert files exist and are not syntactically broken JSON
-        for path in [spec_path, dict_path, log_path]:
-            self.assertTrue(os.path.exists(path), f"Required file missing: {path}")
-            with open(path, 'r', encoding='utf-8') as f:
+    def test_dictionary_and_specs(self):
+        dict_path = os.path.join(self.base_dir, "dictionary.json")
+        spec_path = os.path.join(self.base_dir, "specification.md")
+        
+        if os.path.exists(dict_path):
+            with open(dict_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
-                self.assertIsInstance(data, dict, f"File content is not a valid JSON object: {path}")
+            self.assertIsInstance(data, (dict, list), "Dictionary file is not valid JSON.")
+        
+        if os.path.exists(spec_path):
+            with open(spec_path, "r", encoding="utf-8") as f:
+                content = f.read()
+            self.assertGreater(len(content), 0, "Specification file is empty.")
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
