@@ -3,53 +3,51 @@ import os
 import traceback
 import time
 import json
-import collections
 
-def analyze():
-    corpus_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
-    output_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/dialogue_analysis_result.json"
+def audit_dialogues():
+    corpus_path = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
+    report_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/audit_report.json"
+    
+    results = {
+        "total_lines": 0,
+        "valid_records": 0,
+        "errors": []
+    }
     
     if not os.path.exists(corpus_path):
-        print(f"Error: Corpus file not found at {corpus_path}")
-        sys.exit(1)
-        
-    speaker_counts = collections.defaultdict(int)
-    word_counts = collections.defaultdict(int)
-    
+        results["errors"].append(f"Corpus not found at {corpus_path}")
+        print(json.dumps(results, ensure_ascii=False, indent=2))
+        return
+
     with open(corpus_path, "r", encoding="utf-8") as f:
-        for line in f:
+        for line_num, line in enumerate(f, 1):
+            results["total_lines"] += 1
             line = line.strip()
             if not line:
                 continue
             try:
-                data = json.loads(line)
-                speaker = data.get("speaker", "unknown")
-                text = data.get("text", "")
-                
-                speaker_counts[speaker] += 1
-                
-                words = text.split()
-                for w in words:
-                    cleaned = w.strip(".,!?\"'()[]{}").lower()
-                    if cleaned:
-                        word_counts[cleaned] += 1
-            except json.JSONDecodeError:
-                continue
-                
-    result = {
-        "speaker_counts": dict(speaker_counts),
-        "top_words": dict(sorted(word_counts.items(), key=lambda x: x[1], reverse=True)[:50])
-    }
+                record = json.loads(line)
+                if not isinstance(record, dict):
+                    raise ValueError("Record is not a JSON object")
+                if "dialogue" not in record and "messages" not in record:
+                    raise KeyError("Missing dialogue or messages key")
+                results["valid_records"] += 1
+            except Exception as e:
+                results["errors"].append({
+                    "line": line_num,
+                    "error": str(e)
+                })
+
+    os.makedirs(os.path.dirname(report_path), exist_ok=True)
+    with open(report_path, "w", encoding="utf-8") as f:
+        json.dump(results, f, ensure_ascii=False, indent=2)
     
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    with open(output_path, "w", encoding="utf-8") as out:
-        json.dump(result, out, ensure_ascii=False, indent=2)
-        
-    print(f"Successfully analyzed dialogues. Results saved to {output_path}")
+    print(f"Audit completed. Report saved to {report_path}")
+    print(json.dumps(results, ensure_ascii=False, indent=2))
 
 if __name__ == "__main__":
     try:
-        analyze()
+        audit_dialogues()
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)
