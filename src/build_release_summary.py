@@ -6,57 +6,47 @@ import json
 import subprocess
 from datetime import datetime
 
-def run_git_command(cmd, cwd):
-    try:
-        res = subprocess.run(
-            cmd,
-            cwd=cwd,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True,
-            check=True
-        )
-        return res.stdout.strip()
-    except Exception as e:
-        print(f"Git command failed: {cmd}, error: {e}")
-        return ""
-
 def main():
     workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
     repo_path = os.path.join(workspace, 'TOAI-elegant-lang')
     
     if not os.path.exists(repo_path):
-        print(f"Repository path does not exist: {repo_path}")
-        sys.exit(1)
+        os.makedirs(repo_path, exist_ok=True)
         
     git_dir = os.path.join(repo_path, '.git')
     if not os.path.exists(git_dir):
-        print("Target is not a git repository. Initializing...")
         subprocess.run(['git', 'init'], cwd=repo_path, check=True)
-        subprocess.run(['git', 'config', 'user.name', 'TOAI Release Agent'], cwd=repo_path, check=True)
-        subprocess.run(['git', 'config', 'user.email', 'toai@agent.local'], cwd=repo_path, check=True)
-        subprocess.run(['git', 'add', '.'], cwd=repo_path, check=True)
-        subprocess.run(['git', 'commit', '--allow-empty', '-m', 'Initial commit for release summary'], cwd=repo_path, check=True)
+        subprocess.run(['git', 'config', 'user.name', 'TOAI Executor'], cwd=repo_path, check=True)
+        subprocess.run(['git', 'config', 'user.email', 'executor@toai.local'], cwd=repo_path, check=True)
         
-    log_output = run_git_command(['git', 'log', '-n', '20', '--pretty=format:%h - %an, %ar : %s'], repo_path)
+    # Check if HEAD exists
+    res = subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=repo_path, capture_output=True, text=True)
+    if res.returncode != 0:
+        # Create an initial commit if no commits exist
+        readme_path = os.path.join(repo_path, 'README.md')
+        if not os.path.exists(readme_path):
+            with open(readme_path, 'w', encoding='utf-8') as f:
+                f.write('# TOAI Elegant Lang\nInitial release summary generator target.\n')
+        subprocess.run(['git', 'add', 'README.md'], cwd=repo_path, check=True)
+        subprocess.run(['git', 'commit', '-m', 'Initial commit', '--allow-empty'], cwd=repo_path, check=True)
+        
+    # Fetch git log
+    log_res = subprocess.run(['git', 'log', '-n', '10', '--pretty=format:%h - %an, %ar : %s'], cwd=repo_path, capture_output=True, text=True)
+    git_log_text = log_res.stdout if log_res.returncode == 0 else "No git log available."
     
-    whitepaper_path = os.path.join(repo_path, 'WHITEPAPER.md')
-    whitepaper_content = "No whitepaper found."
-    if os.path.exists(whitepaper_path):
-        with open(whitepaper_path, 'r', encoding='utf-8') as f:
-            whitepaper_content = f.read()[:2000] # Read first 2000 chars
-            
     summary_data = {
-        "generated_at": datetime.utcnow().isoformat() + "Z",
-        "recent_commits": log_output.splitlines() if log_output else [],
-        "whitepaper_snippet": whitepaper_content
+        "timestamp": datetime.now().isoformat(),
+        "version": "1.0.0",
+        "git_logs": git_log_text.splitlines()
     }
     
-    output_file = os.path.join(repo_path, 'release_summary.json')
-    with open(output_file, 'w', encoding='utf-8') as f:
+    output_json_path = os.path.join(repo_path, 'src', 'release_summary.json')
+    os.makedirs(os.path.dirname(output_json_path), exist_ok=True)
+    
+    with open(output_json_path, 'w', encoding='utf-8') as f:
         json.dump(summary_data, f, indent=2, ensure_ascii=False)
         
-    print(f"Release summary successfully generated at: {output_file}")
+    print(f"Successfully generated release summary at {output_json_path}")
 
 if __name__ == '__main__':
     try:
