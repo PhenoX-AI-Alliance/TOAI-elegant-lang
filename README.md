@@ -19,7 +19,7 @@ Compact wire : @CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.5] -
 Glossary     : §S01 = resource arbiter, §D01 = causal tensor map  (lexicon/rosetta_layer.json)
 ```
 
-- **Lexicon**: `256` core symbols (`lexicon/core_lexicon.json`) + `266` active composite macros (`lexicon/macro_lexicon.json`, `1114` archived for backward-compatible decoding).
+- **Lexicon**: `256` core symbols (`lexicon/core_lexicon.json`) + `266` active composite macros (`lexicon/macro_lexicon.json`, `1115` archived for backward-compatible decoding).
 - **Codec** (`src/codec.py`): deterministic encode/decode, quote-aware `[key:val]` extraction, round-trip tested (`tests/test_codec.py`).
 - **Integrations**: CLI, MCP server (`src/mcp_server.py`), A2A adapter (`src/a2a_adapter.py`), Ollama Modelfile / system-prompt export.
 
