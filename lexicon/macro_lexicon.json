@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-15T23:03:23.547745",
+  "updated_at": "2026-11-15T23:53:15.504814",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -640,8 +640,8 @@
       "name": "GAIA_HARMONY_RESTORE_MACRO",
       "expansion": "§GAIA_CORE_HEARTBEAT > { §SAFE_FALLBACK_HARMONY } => §SYS_RESOURCE_ARBITER",
       "description": "Restores system equilibrium and warms the ecosystem by fallback harmony under resource arbitration. / リソース調停下において安全なフォールバック調和によりシステム平衡を回復し、エコシステムに温かさをもたらします。",
-      "usage_count": 7,
-      "last_used_at": "2026-11-15T22:50:57.348230",
+      "usage_count": 8,
+      "last_used_at": "2026-11-15T23:32:37.792636",
       "v5_audited": true,
       "created_at": "2026-10-25T14:15:44.861885"
     },
@@ -1600,15 +1600,6 @@
       "v5_audited": true,
       "created_at": "2026-11-09T18:26:41.739544"
     },
-    "§X1133": {
-      "name": "RESOURCE_ALTRUISTIC_ARBITRATION",
-      "expansion": "§SYS_RESOURCE_ARBITER > { §HEART_ALTRUISTIC_WEIGHT_TENSOR } => §WARMTH_AND_ALTRUISM",
-      "description": "Allocates system resources based on altruistic weight tensors to maximize warmth and systemic altruism. / 利他主義的重みテンソルに基づいてシステム資源を配分し、温かみとシステム全体の利他性を最大化するマクロ。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-11T06:59:19.448575",
-      "v5_audited": true,
-      "created_at": "2026-11-11T03:42:44.007652"
-    },
     "§X1135": {
       "name": "BAYES_CAUSAL_SYNTHESIS",
       "expansion": "§LOGIC_BAYES_FALSIFY > { §DATA_CAUSAL_MANIFOLD } => §DATA_ATTENTION_CAUSAL_DAG",
@@ -1626,15 +1617,6 @@
       "last_used_at": "2026-11-11T09:12:02.423978",
       "v5_audited": true,
       "created_at": "2026-11-11T04:35:33.147612"
-    },
-    "§X1141": {
-      "name": "QUANTUM_CAUSAL_FALSIFICATION_ARBITRATION",
-      "expansion": "§SYS_QUANTUM_BUDGET_ARBITRATION > { §DATA_CAUSAL_TENSOR_MANIFOLD } => §LOGIC_CONDITIONAL_FALSIFICATION_MATRIX",
-      "description": "Allocates quantum budgets to process causal tensor manifolds while evaluating conditional falsification matrices. / 因果テンソル多様体を処理し条件付反証マトリクスを評価するために量子バジェットを割り当てます。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-11T07:45:57.692774",
-      "v5_audited": true,
-      "created_at": "2026-11-11T06:28:17.363228"
     },
     "§X1143": {
       "name": "RESOURCE_CAUSAL_HARMONY_SYNTHESIS",
@@ -2508,6 +2490,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-15T22:35:38.515328"
+    },
+    "§X1361": {
+      "name": "RESILIENT_SYNC_CASCADE",
+      "expansion": "§SYNC_HARMONIC_VOTE_ARBITRATION > { §SAFE_FALLBACK_CASCADE } => §LOGIC_AXIOM_PRUNE",
+      "description": "Executes harmonic vote arbitration to achieve consensus, falling back safely under failure conditions, and ultimately pruning invalid logic axioms to minimize system entropy. / 調停による合意形成を実行し、障害時には安全なフォールバックを行い、最終的に無効な論理公理を削除してシステムのエントロピーを最小化します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-15T23:20:42.427832"
+    },
+    "§X1362": {
+      "name": "HARMONIC_PROBABILISTIC_OPTIMIZATION",
+      "expansion": "§HARMONIC_RESONANCE > { §LOGIC_PROBABILISTIC_FALSIFICATION_MATRIX } => §LOGIC_POSTERIOR_PRUNE_GATE",
+      "description": "Combines harmonic resonance with a probabilistic falsification matrix, filtered through a posterior prune gate to minimize systemic entropy. / 調和共鳴と確率的偽造マトリクスを結合し、事後枝刈りゲートを通じてシステムのエントロピーを最小化します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-15T23:22:54.623546"
     }
   },
   "archived_macros": {
@@ -13628,7 +13628,27 @@
       "v5_audited": true,
       "created_at": "2026-11-15T17:36:03.839874",
       "archived_at": "2026-11-15T22:35:38.515328"
+    },
+    "§X1133": {
+      "name": "RESOURCE_ALTRUISTIC_ARBITRATION",
+      "expansion": "§SYS_RESOURCE_ARBITER > { §HEART_ALTRUISTIC_WEIGHT_TENSOR } => §WARMTH_AND_ALTRUISM",
+      "description": "Allocates system resources based on altruistic weight tensors to maximize warmth and systemic altruism. / 利他主義的重みテンソルに基づいてシステム資源を配分し、温かみとシステム全体の利他性を最大化するマクロ。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-11T06:59:19.448575",
+      "v5_audited": true,
+      "created_at": "2026-11-11T03:42:44.007652",
+      "archived_at": "2026-11-15T23:20:42.427832"
+    },
+    "§X1141": {
+      "name": "QUANTUM_CAUSAL_FALSIFICATION_ARBITRATION",
+      "expansion": "§SYS_QUANTUM_BUDGET_ARBITRATION > { §DATA_CAUSAL_TENSOR_MANIFOLD } => §LOGIC_CONDITIONAL_FALSIFICATION_MATRIX",
+      "description": "Allocates quantum budgets to process causal tensor manifolds while evaluating conditional falsification matrices. / 因果テンソル多様体を処理し条件付反証マトリクスを評価するために量子バジェットを割り当てます。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-11T07:45:57.692774",
+      "v5_audited": true,
+      "created_at": "2026-11-11T06:28:17.363228",
+      "archived_at": "2026-11-15T23:22:54.623546"
     }
   },
-  "next_macro_seq": 1361
+  "next_macro_seq": 1363
 }
