@@ -1,27 +1,27 @@
-import sys
 import os
 import json
 
-def load_translation_map(map_path):
-    if not os.path.exists(map_path):
-        raise FileNotFoundError(f"Translation map not found at {map_path}")
-    with open(map_path, "r", encoding="utf-8") as f:
-        return json.load(f)
-
-def decode_elegant_text(text, map_path=None):
-    if map_path is None:
-        current_dir = os.path.dirname(os.path.abspath(__file__))
-        map_path = os.path.join(current_dir, "translation_map.json")
-    
-    translation_map = load_translation_map(map_path)
-    decoded_text = text
-    
-    for symbol, meaning in translation_map.items():
-        decoded_text = decoded_text.replace(symbol, f"[{meaning}]")
+class ElegantTranslator:
+    def __init__(self, map_file_path=None):
+        if map_file_path is None:
+            base_dir = os.path.dirname(os.path.abspath(__file__))
+            map_file_path = os.path.join(base_dir, "translation_map.json")
         
-    return decoded_text
+        with open(map_file_path, "r", encoding="utf-8") as f:
+            self.translation_map = json.load(f)
 
-if __name__ == "__main__":
-    sample_text = "Ω のもとで ∞ の Ψ を生み出す Φ のプロセス"
-    print("Original:", sample_text)
-    print("Decoded:", decode_elegant_text(sample_text))
+    def decode(self, text):
+        decoded_text = text
+        for symbol, description in self.translation_map.items():
+            decoded_text = decoded_text.replace(symbol, f"[{description}]")
+        return decoded_text
+
+    def encode(self, text):
+        encoded_text = text
+        for symbol, description in self.translation_map.items():
+            encoded_text = encoded_text.replace(f"[{description}]", symbol)
+        return encoded_text
+
+def translate_elegant_code(text):
+    translator = ElegantTranslator()
+    return translator.decode(text)

@@ -5,40 +5,36 @@ import time
 import json
 
 def dump_lexicon():
-    lexicon_path = "/home/phenox/gemini-sandbox/lexicon/core_lexicon.json"
+    lexicon_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/lexicon/core_lexicon.json"
     if not os.path.exists(lexicon_path):
-        print(f"Error: Lexicon file not found at {{lexicon_path}}", file=sys.stderr)
+        print(f"Error: Lexicon file not found at {lexicon_path}", file=sys.stderr)
         sys.exit(1)
         
-    try:
-        with open(lexicon_path, "r", encoding="utf-8") as f:
-            data = json.load(f)
-    except Exception as e:
-        print(f"Error reading JSON: {{e}}", file=sys.stderr)
-        sys.exit(1)
+    with open(lexicon_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
         
-    version = data.get("version", "unknown")
-    entries = data.get("entries", [])
+    print("# TOAI Core Lexicon Table\n")
+    print("| Term | Definition | Category |")
+    print("|---|---|---|")
     
-    md_lines = []
-    md_lines.append(f"# TOAI Core Lexicon (Version: {{version}})")
-    md_lines.append("")
-    md_lines.append("| Term | Category | Definition |")
-    md_lines.append("|---|---|---|")
-    
-    for entry in entries:
-        term = entry.get("term", "")
-        category = entry.get("category", "")
-        definition = entry.get("definition", "")
-        md_lines.append(f"| {{term}} | {{category}} | {{definition}} |")
-        
-    output_md = "\n".join(md_lines)
-    print(output_md)
-    
-    output_path = "/home/phenox/gemini-sandbox/TOAI_Generated/lexicon_table.md"
-    with open(output_path, "w", encoding="utf-8") as f:
-        f.write(output_md)
-    print(f"Successfully dumped lexicon to {{output_path}}")
+    if isinstance(data, dict):
+        for key, value in data.items():
+            if isinstance(value, dict):
+                definition = str(value.get("definition", "N/A"))
+                category = str(value.get("category", "N/A"))
+            else:
+                definition = str(value)
+                category = "N/A"
+            print(f"| {key} | {definition} | {category} |")
+    elif isinstance(data, list):
+        for item in data:
+            if isinstance(item, dict):
+                term = str(item.get("term", item.get("name", "N/A")))
+                definition = str(item.get("definition", "N/A"))
+                category = str(item.get("category", "N/A"))
+                print(f"| {term} | {definition} | {category} |")
+            else:
+                print(f"| {str(item)} | N/A | N/A |")
 
 if __name__ == "__main__":
     try:
