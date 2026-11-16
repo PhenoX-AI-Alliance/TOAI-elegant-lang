@@ -4,67 +4,57 @@ import traceback
 import time
 import json
 
-def audit_dialogues(corpus_path):
-    print(f"Starting audit of corpus: {corpus_path}")
+def analyze_corpus():
+    corpus_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
     if not os.path.exists(corpus_path):
-        print(f"Error: Corpus path not found: {corpus_path}")
+        print(f"Error: Corpus file not found at {corpus_path}")
         sys.exit(1)
-
-    total_records = 0
-    valid_records = 0
+        
+    total_lines = 0
+    valid_lines = 0
     errors = []
-
+    
     with open(corpus_path, "r", encoding="utf-8") as f:
-        for line_num, line in enumerate(f, 1):
+        for idx, line in enumerate(f, start=1):
+            total_lines += 1
             line = line.strip()
             if not line:
                 continue
-            total_records += 1
             try:
                 data = json.loads(line)
-                if "dialogue_id" not in data:
-                    errors.append(f"Line {line_num}: Missing 'dialogue_id'")
+                if not isinstance(data, dict):
+                    errors.append({"line": idx, "error": "Root element is not a JSON object"})
                     continue
-                if "turns" not in data or not isinstance(data["turns"], list):
-                    errors.append(f"Line {line_num}: Missing or invalid 'turns' field")
+                if "messages" not in data and "dialogue" not in data and "turns" not in data:
+                    errors.append({"line": idx, "error": "Missing dialogue key (messages, dialogue, or turns)"})
                     continue
-                
-                turns = data["turns"]
-                if len(turns) == 0:
-                    errors.append(f"Line {line_num}: Empty turns list")
-                    continue
-
-                turn_error = False
-                for t_idx, turn in enumerate(turns):
-                    if "role" not in turn or "content" not in turn:
-                        errors.append(f"Line {line_num}, Turn {t_idx}: Missing 'role' or 'content'")
-                        turn_error = True
-                        break
-                if turn_error:
-                    continue
-
-                valid_records += 1
-            except json.JSONDecodeError as jde:
-                errors.append(f"Line {line_num}: JSONDecodeError - {str(jde)}")
+                valid_lines += 1
+            except json.JSONDecodeError as e:
+                errors.append({"line": idx, "error": f"JSONDecodeError: {str(e)}"})
             except Exception as e:
-                errors.append(f"Line {line_num}: Unexpected error - {str(e)}")
-
-    print(f"Audit completed.")
-    print(f"Total records processed: {total_records}")
-    print(f"Valid records: {valid_records}")
-    print(f"Error count: {len(errors)}")
-
-    if errors:
-        print("Encountered errors:")
-        for err in errors[:10]:
-            print(f" - {err}")
-        if len(errors) > 10:
-            print(f" ... and {len(errors) - 10} more errors.")
-        sys.exit(1)
-    else:
-        print("All dialogues are structurally valid.")
-        sys.exit(0)
+                errors.append({"line": idx, "error": f"Unexpected error: {str(e)}"})
+                
+    report = {
+        "timestamp": time.time(),
+        "total_lines": total_lines,
+        "valid_lines": valid_lines,
+        "error_count": len(errors),
+        "errors": errors
+    }
+    
+    report_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/reports"
+    os.makedirs(report_dir, exist_ok=True)
+    report_path = os.path.join(report_dir, "dialogue_audit_report.json")
+    
+    with open(report_path, "w", encoding="utf-8") as f:
+        json.dump(report, f, ensure_ascii=False, indent=2)
+        
+    print(f"Analysis complete. Total: {total_lines}, Valid: {valid_lines}, Errors: {len(errors)}")
+    print(f"Report saved to {report_path}")
 
 if __name__ == "__main__":
-    corpus = "/home/phenox/gemini-sandbox/corpus/dialogues.jsonl"
-    audit_dialogues(corpus)
+    try:
+        analyze_corpus()
+    except Exception as e:
+        traceback.print_exc()
+        sys.exit(1)
