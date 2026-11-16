@@ -10,49 +10,49 @@ def audit_lexicons():
     core_path = os.path.join(lexicon_dir, 'core_lexicon.json')
     macro_path = os.path.join(lexicon_dir, 'macro_lexicon.json')
     
-    results = {}
+    report = {
+        'timestamp': os.path.getmtime(core_path) if os.path.exists(core_path) else 0,
+        'core_lexicon': {},
+        'macro_lexicon': {}
+    }
     
-    for name, path in [('core_lexicon', core_path), ('macro_lexicon', macro_path)]:
-        if not os.path.exists(path):
-            print(f"Warning: {path} does not exist.", file=sys.stderr)
-            results[name] = {"error": "file not found"}
-            continue
-            
+    if os.path.exists(core_path):
         try:
-            with open(path, 'r', encoding='utf-8') as f:
-                data = json.load(f)
-        except Exception as e:
-            print(f"Error reading {path}: {e}", file=sys.stderr)
-            results[name] = {"error": str(e)}
-            continue
-            
-        lexicon_dict = data.get('lexicon', data)
-        if not isinstance(lexicon_dict, dict):
-            lexicon_dict = {}
-            
-        category_counts = {}
-        compact_ids = []
-        
-        for sym, item in lexicon_dict.items():
-            if isinstance(item, dict):
-                cat = item.get('category', 'unknown')
-                category_counts[cat] = category_counts.get(cat, 0) + 1
-                
-                cid = item.get('compact_id')
-                if cid is not None:
-                    compact_ids.append(cid)
-                    
-        results[name] = {
-            "total_entries": len(lexicon_dict),
-            "category_distribution": category_counts,
-            "compact_id_stats": {
-                "count": len(compact_ids),
-                "min": min(compact_ids) if compact_ids else None,
-                "max": max(compact_ids) if compact_ids else None
+            with open(core_path, 'r', encoding='utf-8') as f:
+                core_data = json.load(f)
+            lexicon_dict = core_data.get('lexicon', {})
+            categories = {}
+            compact_ids = []
+            for sym, data in lexicon_dict.items():
+                cat = data.get('category', 'unknown')
+                categories[cat] = categories.get(cat, 0) + 1
+                if 'compact_id' in data:
+                    compact_ids.append(data['compact_id'])
+            report['core_lexicon'] = {
+                'total_symbols': len(lexicon_dict),
+                'categories': categories,
+                'compact_id_count': len(compact_ids)
             }
-        }
-        
-    print(json.dumps(results, ensure_ascii=False, indent=2))
+        except Exception as e:
+            report['core_lexicon'] = {'error': str(e)}
+            
+    if os.path.exists(macro_path):
+        try:
+            with open(macro_path, 'r', encoding='utf-8') as f:
+                macro_data = json.load(f)
+            if isinstance(macro_data, dict):
+                report['macro_lexicon'] = {
+                    'total_entries': len(macro_data),
+                    'keys': list(macro_data.keys())
+                }
+            elif isinstance(macro_data, list):
+                report['macro_lexicon'] = {
+                    'total_entries': len(macro_data)
+                }
+        except Exception as e:
+            report['macro_lexicon'] = {'error': str(e)}
+            
+    print(json.dumps(report, ensure_ascii=False, indent=2))
 
 if __name__ == '__main__':
     try:

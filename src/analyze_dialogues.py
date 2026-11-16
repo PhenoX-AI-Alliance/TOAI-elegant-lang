@@ -6,55 +6,50 @@ import json
 
 def audit_dialogues():
     corpus_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
+    report_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/audit_report.json"
+    
     if not os.path.exists(corpus_path):
         print(f"Error: Corpus not found at {{corpus_path}}", file=sys.stderr)
         sys.exit(1)
-
-    dialogues = {}
+        
     total_lines = 0
-    parse_errors = 0
-
+    valid_lines = 0
+    errors = []
+    
     with open(corpus_path, "r", encoding="utf-8") as f:
         for line_num, line in enumerate(f, 1):
             total_lines += 1
-            line = line.strip()
-            if not line:
+            line_stripped = line.strip()
+            if not line_stripped:
                 continue
             try:
-                record = json.loads(line)
-                d_id = record.get("dialogue_id")
-                turn = record.get("turn")
-                speaker = record.get("speaker")
-                text = record.get("text")
-
-                if d_id is None or turn is None or speaker is None or text is None:
-                    parse_errors += 1
-                    continue
-
-                if d_id not in dialogues:
-                    dialogues[d_id] = []
-                dialogues[d_id].append({"turn": turn, "speaker": speaker, "text": text})
-            except json.JSONDecodeError:
-                parse_errors += 1
-
-    consistency_issues = 0
-    for d_id, turns in dialogues.items():
-        turns.sort(key=lambda x: x["turn"])
-        expected_turn = 1
-        for t in turns:
-            if t["turn"] != expected_turn:
-                consistency_issues += 1
-            expected_turn += 1
-
+                data = json.loads(line_stripped)
+                if not isinstance(data, dict):
+                    raise ValueError("Root element is not a JSON object")
+                if "dialogue" not in data and "messages" not in data:
+                    raise KeyError("Missing 'dialogue' or 'messages' key in JSON object")
+                valid_lines += 1
+            except Exception as e:
+                errors.append({
+                    "line": line_num,
+                    "error": str(e),
+                    "content": line_stripped[:100]
+                })
+                
     report = {
+        "timestamp": time.time(),
         "total_lines": total_lines,
-        "parse_errors": parse_errors,
-        "total_dialogues": len(dialogues),
-        "consistency_issues": consistency_issues,
-        "status": "success" if parse_errors == 0 and consistency_issues == 0 else "warning"
+        "valid_lines": valid_lines,
+        "error_count": len(errors),
+        "errors": errors
     }
-
-    print(json.dumps(report, ensure_ascii=False, indent=2))
+    
+    os.makedirs(os.path.dirname(report_path), exist_ok=True)
+    with open(report_path, "w", encoding="utf-8") as out:
+        json.dump(report, out, ensure_ascii=False, indent=2)
+        
+    print(f"Audit completed. Total: {{total_lines}}, Valid: {{valid_lines}}, Errors: {{len(errors)}}")
+    print(f"Report saved to {{report_path}}")
 
 if __name__ == "__main__":
     try:
