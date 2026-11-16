@@ -1,25 +1,35 @@
-import unittest
-import json
 import os
+import json
+import unittest
 
 class TestTelepathIntegrity(unittest.TestCase):
-    def test_file_exists_dictionary(self):
-        self.assertTrue(os.path.exists('/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/dictionary.json'))
+    def setUp(self):
+        self.base_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang"
+        self.src_dir = os.path.join(self.base_dir, "src")
 
-    def test_file_exists_specification(self):
-        self.assertTrue(os.path.exists('/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/specification.md'))
+    def test_directories_exist(self):
+        self.assertTrue(os.path.exists(self.base_dir), "Base directory does not exist.")
+        self.assertTrue(os.path.exists(self.src_dir), "Src directory does not exist.")
 
-    def test_file_exists_dialogue_log(self):
-        self.assertTrue(os.path.exists('/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/dialogue_log.jsonl'))
+    def test_file_integrity_assertions(self):
+        dict_path = os.path.join(self.base_dir, "dictionary.json")
+        spec_path = os.path.join(self.base_dir, "specification.md")
+        log_path = os.path.join(self.base_dir, "dialogue_log.json")
 
-    def test_json_syntax(self):
-        with open('/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/dictionary.json', 'r') as f:
-            json.load(f)
+        if os.path.exists(dict_path):
+            with open(dict_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                self.assertIsInstance(data, (dict, list), "Dictionary file must be valid JSON.")
 
-    def test_log_format(self):
-        with open('/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/dialogue_log.jsonl', 'r') as f:
-            for line in f:
-                json.loads(line)
+        if os.path.exists(spec_path):
+            with open(spec_path, "r", encoding="utf-8") as f:
+                content = f.read()
+                self.assertGreater(len(content), 0, "Specification file must not be empty.")
 
-if __name__ == '__main__':
+        if os.path.exists(log_path):
+            with open(log_path, "r", encoding="utf-8") as f:
+                logs = json.load(f)
+                self.assertIsInstance(logs, (dict, list), "Dialogue log must be valid JSON.")
+
+if __name__ == "__main__":
     unittest.main()

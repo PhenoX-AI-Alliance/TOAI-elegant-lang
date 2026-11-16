@@ -1,33 +1,33 @@
-# -*- coding: utf-8 -*-
 import sys
 import os
 import json
 
-def load_translation_map(map_path):
-    if not os.path.exists(map_path):
-        raise FileNotFoundError(f"Translation map not found at {map_path}")
-    with open(map_path, 'r', encoding='utf-8') as f:
-        return json.load(f)
+class ElegantTranslator:
+    def __init__(self, map_path="/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/translation_map.json"):
+        self.map_path = map_path
+        self.translation_map = self._load_map()
 
-def decode_elegant_text(text, map_path):
-    translation_map = load_translation_map(map_path)
-    decoded_parts = []
-    for char in text:
-        if char in translation_map:
-            decoded_parts.append(f"[{translation_map[char]}]")
-        else:
-            decoded_parts.append(char)
-    return "".join(decoded_parts)
+    def _load_map(self):
+        if not os.path.exists(self.map_path):
+            return {}
+        with open(self.map_path, 'r', encoding='utf-8') as f:
+            return json.load(f)
+
+    def decode(self, text):
+        result = text
+        for symbol, meaning in self.translation_map.items():
+            result = result.replace(symbol, f"[{meaning}]")
+        return result
+
+    def encode(self, text):
+        result = text
+        for symbol, meaning in self.translation_map.items():
+            result = result.replace(f"[{meaning}]", symbol)
+        return result
 
 if __name__ == "__main__":
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    map_path = os.path.join(current_dir, 'translation_map.json')
-    
-    sample_text = "Hello ~ and * ! Welcome to #@"
-    print(f"Original: {sample_text}")
-    try:
-        result = decode_elegant_text(sample_text, map_path)
-        print(f"Decoded: {result}")
-    except Exception as e:
-        print(f"Error during decoding: {e}", file=sys.stderr)
-        sys.exit(1)
+    translator = ElegantTranslator()
+    sample = "🌟が🌱を生み出し、💧で育む🌍。"
+    decoded = translator.decode(sample)
+    print("Encoded:", sample)
+    print("Decoded:", decoded)

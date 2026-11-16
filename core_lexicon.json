@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "key": "alpha",
+      "category": "core",
+      "definition": "First element of TOAI lexicon"
+    },
+    {
+      "key": "beta",
+      "category": "core",
+      "definition": "Second element of TOAI lexicon"
+    }
+  ]
+}
