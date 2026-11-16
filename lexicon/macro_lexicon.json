@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-16T10:30:48.930566",
+  "updated_at": "2026-11-16T11:08:24.623758",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1618,15 +1618,6 @@
       "v5_audited": true,
       "created_at": "2026-11-11T10:26:07.557703"
     },
-    "§X1150": {
-      "name": "ENTROPY_ADAPTIVE_CLOSURE",
-      "expansion": "§DATA_ENTROPY_CAUSAL_PACK > { §SYS_ADAPTIVE_SLOT_THROTTLE } => §LOGIC_DEDUCTIVE_AXIOM_CLOSURE",
-      "description": "Optimizes data entropy by dynamically throttling adaptive slots to ensure deductive axiom closure. / 動的スロット制御と因果データ圧縮によりエントロピーを最適化し、論理的公理の閉包を達成する複合マクロ。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-11T14:42:47.277436",
-      "v5_audited": true,
-      "created_at": "2026-11-11T11:01:41.825865"
-    },
     "§X1152": {
       "name": "CAUSAL_ADAPTIVE_SYNC_PIPELINE",
       "expansion": "§DATA_TENSOR_CAUSAL_LATTICE > { §SYS_ADAPTIVE_TOKEN_THROTTLE } => §SYS_ATOMIC_SYNC_BARRIER",
@@ -2495,8 +2486,8 @@
       "name": "ALTRUISTIC_ATOMIC_MERGE_DISPATCH",
       "expansion": "§ALTRUISTIC_VALUE_CREATION > { §SYNC_ATOMIC_MERGE } => §PROTO_TOOL_DISPATCH",
       "description": "Eng: A high-order macro that synchronizes atomic data merges driven by altruistic value creation prior to proto-tool dispatch. / Jp: 利他的価値創出を原動力とし、プロトツールディスパッチの前にアトミックなデータ統合を同期する高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-16T11:08:02.974732",
       "v5_audited": true,
       "created_at": "2026-11-16T09:47:35.505141"
     },
@@ -2504,10 +2495,19 @@
       "name": "RESOURCE_CAUSAL_HARMONY_GATE",
       "expansion": "§RESOURCE_ALLOCATION_HARMONY > { §LOGIC_CAUSAL_BRANCH } => §SYS_TOKEN_VELOCITY_GATE",
       "description": "Allocates resources harmonically while branching logical causes under strict system token velocity regulation. / 厳格なシステムトークン速度制御のもとで論理的因果分岐を行いながらリソースを調和的に配分します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-16T11:04:28.414403",
+      "v5_audited": true,
+      "created_at": "2026-11-16T10:30:48.928660"
+    },
+    "§X1386": {
+      "name": "SUSTAINABLE_CAUSAL_PRUNE_MACRO",
+      "expansion": "§SUSTAINABLE_ALTRUISTIC_VALUE > { §LOGIC_CAUSAL_PRUNE } => §DATA_ENTROPY_PRUNED_TREE",
+      "description": "Combines sustainable altruistic evaluation with causal logic pruning to output an optimized, low-entropy data tree. 持続可能な利他的評価と因果論理の枝刈りを統合し、最適化された低エントロピーデータツリーを出力します。",
       "usage_count": 0,
       "last_used_at": null,
       "v5_audited": true,
-      "created_at": "2026-11-16T10:30:48.928660"
+      "created_at": "2026-11-16T11:08:24.623483"
     }
   },
   "archived_macros": {
@@ -13878,7 +13878,17 @@
       "v5_audited": true,
       "created_at": "2026-11-11T09:33:41.410806",
       "archived_at": "2026-11-16T10:30:48.928660"
+    },
+    "§X1150": {
+      "name": "ENTROPY_ADAPTIVE_CLOSURE",
+      "expansion": "§DATA_ENTROPY_CAUSAL_PACK > { §SYS_ADAPTIVE_SLOT_THROTTLE } => §LOGIC_DEDUCTIVE_AXIOM_CLOSURE",
+      "description": "Optimizes data entropy by dynamically throttling adaptive slots to ensure deductive axiom closure. / 動的スロット制御と因果データ圧縮によりエントロピーを最適化し、論理的公理の閉包を達成する複合マクロ。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-11T14:42:47.277436",
+      "v5_audited": true,
+      "created_at": "2026-11-11T11:01:41.825865",
+      "archived_at": "2026-11-16T11:08:24.623483"
     }
   },
-  "next_macro_seq": 1386
+  "next_macro_seq": 1387
 }
