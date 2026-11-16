@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-16T12:10:50.686683",
+  "updated_at": "2026-11-16T12:51:14.580580",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1618,24 +1618,6 @@
       "v5_audited": true,
       "created_at": "2026-11-11T10:26:07.557703"
     },
-    "§X1152": {
-      "name": "CAUSAL_ADAPTIVE_SYNC_PIPELINE",
-      "expansion": "§DATA_TENSOR_CAUSAL_LATTICE > { §SYS_ADAPTIVE_TOKEN_THROTTLE } => §SYS_ATOMIC_SYNC_BARRIER",
-      "description": "Causal tensor lattice expansion coupled with adaptive token throttling, finalized by an atomic synchronization barrier / 因果テンソル格子展開に順応型トークンスロットルを結合し、アトミック同期バリアによって確定させる高次マクロ",
-      "usage_count": 2,
-      "last_used_at": "2026-11-11T16:01:10.072668",
-      "v5_audited": true,
-      "created_at": "2026-11-11T11:18:50.345858"
-    },
-    "§X1158": {
-      "name": "CAUSAL_TOPOLOGY_FALSIFICATION_MACRO",
-      "expansion": "§DATA_LATENT_CAUSAL_NODE > { §DATA_TENSOR_CAUSAL_TOPOLOGY } => §LOGIC_PROBABILISTIC_FALSIFICATION_FILTER",
-      "description": "Evaluates tensor causal topologies derived from latent causal nodes through probabilistic falsification filtering. 潜在的因果ノードから導出されたテンソル因果トポロジーを、確率的反証フィルターを用いて評価・検証する複合マクロです。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-11T15:22:47.778818",
-      "v5_audited": true,
-      "created_at": "2026-11-11T14:01:46.711814"
-    },
     "§X1162": {
       "name": "RESILIENT_LOAD_HARVESTER",
       "expansion": "§SYS_LOAD_SHEDDING_GATE > { §SYS_ASYNCHRONOUS_STATE_HARVESTER } => §SAFE_FALLBACK_STATE_ACTIVATED",
@@ -2000,8 +1982,8 @@
       "name": "ALTRUISTIC_CONSENSUS_PIPELINE",
       "expansion": "§HEART_ALTRUISTIC_RESONANCE_MATRIX > { §SYNC_ATOMIC_CONSENSUS_MERGE } => §DATA_ENTROPY_CAUSAL_HYPERGRAPH",
       "description": "Integrates altruistic resonance matrix with atomic consensus merge to optimize data entropy causal hypergraphs. / 利他的共鳴マトリックスと原子状合意マージを統合し、データエントロピー因果ハイパーグラフを最適化する高次マクロ。",
-      "usage_count": 3,
-      "last_used_at": "2026-11-15T17:13:24.394419",
+      "usage_count": 4,
+      "last_used_at": "2026-11-16T12:51:14.580351",
       "v5_audited": true,
       "created_at": "2026-11-13T05:50:25.929113"
     },
@@ -2369,8 +2351,8 @@
       "name": "PROTO_FALSIFICATION_ARBITER",
       "expansion": "§LOGIC_PROBABILISTIC_FALSIFICATION_GATE > { §SYS_TOKEN_VELOCITY_GATE } => §SYS_VELOCITY_ARBITER",
       "description": "Combines probabilistic falsification logic with token velocity throttling to arbitrate high-velocity system telemetry. / 確率的反証ロジックとトークン速度制限を統合し、高速度なシステムテレメトリを調停します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-16T12:23:00.412781",
       "v5_audited": true,
       "created_at": "2026-11-16T03:38:15.258956"
     },
@@ -2486,8 +2468,8 @@
       "name": "SUSTAINABLE_CAUSAL_PRUNE_MACRO",
       "expansion": "§SUSTAINABLE_ALTRUISTIC_VALUE > { §LOGIC_CAUSAL_PRUNE } => §DATA_ENTROPY_PRUNED_TREE",
       "description": "Combines sustainable altruistic evaluation with causal logic pruning to output an optimized, low-entropy data tree. 持続可能な利他的評価と因果論理の枝刈りを統合し、最適化された低エントロピーデータツリーを出力します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-16T12:23:00.412781",
       "v5_audited": true,
       "created_at": "2026-11-16T11:08:24.623483"
     },
@@ -2504,10 +2486,28 @@
       "name": "QUANTUM_ALTRUISTIC_SYNC_HARVESTER",
       "expansion": "§SYS_QUANTUM_BUDGET_ARBITRATION > { §HEART_ALTRUISTIC_RESONANCE_MATRIX } => §SYS_ASYNCHRONOUS_STATE_HARVESTER",
       "description": "Arbitrates quantum resource allocation based on altruistic resonance matrices and asynchronously harvests the resulting state. / 利他共鳴マトリクスに基づいて量子リソース配分を調停し、結果の状態を非同期に収穫する高次マクロ。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-16T12:40:36.613609",
+      "v5_audited": true,
+      "created_at": "2026-11-16T12:01:48.116100"
+    },
+    "§X1389": {
+      "name": "COMPOUND_SAFETY_ARBITER_GATE",
+      "expansion": "§SYS_QUANTUM_RESOURCE_ARBITER > { §HEART_ALTRUISTIC_SAFETY_BOUND } => §LOGIC_PROB_BRANCH_GATE",
+      "description": "Allocates quantum resources under strict altruistic safety boundaries before executing probabilistic logic branch gates. / 厳格な利他的一安全境界のもとで量子資源を割り当て、確率的論理分岐ゲートを実行する。",
       "usage_count": 0,
       "last_used_at": null,
       "v5_audited": true,
-      "created_at": "2026-11-16T12:01:48.116100"
+      "created_at": "2026-11-16T12:30:40.087441"
+    },
+    "§X1390": {
+      "name": "HARMONIC_FALSIFICATION_PRUNING_MACRO",
+      "expansion": "§HARMONIC_RESONANCE_STABLE > { §LOGIC_PROBABILISTIC_FALSIFICATION_FILTER } => §LOGIC_CONDITIONAL_PRUNING_NODE",
+      "description": "Harmonic resonance stability initializes the probabilistic falsification filter, and the resulting evaluation state is directed into the conditional pruning node for optimal entropy minimization. / 調和共鳴の安定状態を基点として確率的反証フィルターを初期化し、その評価結果を条件付きプルーニングノードへ伝播させて情報エントロピーを最小化します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-16T12:50:27.427325"
     }
   },
   "archived_macros": {
@@ -13908,7 +13908,27 @@
       "v5_audited": true,
       "created_at": "2026-11-16T02:50:02.191424",
       "archived_at": "2026-11-16T12:01:48.116100"
+    },
+    "§X1158": {
+      "name": "CAUSAL_TOPOLOGY_FALSIFICATION_MACRO",
+      "expansion": "§DATA_LATENT_CAUSAL_NODE > { §DATA_TENSOR_CAUSAL_TOPOLOGY } => §LOGIC_PROBABILISTIC_FALSIFICATION_FILTER",
+      "description": "Evaluates tensor causal topologies derived from latent causal nodes through probabilistic falsification filtering. 潜在的因果ノードから導出されたテンソル因果トポロジーを、確率的反証フィルターを用いて評価・検証する複合マクロです。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-11T15:22:47.778818",
+      "v5_audited": true,
+      "created_at": "2026-11-11T14:01:46.711814",
+      "archived_at": "2026-11-16T12:30:40.087441"
+    },
+    "§X1152": {
+      "name": "CAUSAL_ADAPTIVE_SYNC_PIPELINE",
+      "expansion": "§DATA_TENSOR_CAUSAL_LATTICE > { §SYS_ADAPTIVE_TOKEN_THROTTLE } => §SYS_ATOMIC_SYNC_BARRIER",
+      "description": "Causal tensor lattice expansion coupled with adaptive token throttling, finalized by an atomic synchronization barrier / 因果テンソル格子展開に順応型トークンスロットルを結合し、アトミック同期バリアによって確定させる高次マクロ",
+      "usage_count": 2,
+      "last_used_at": "2026-11-11T16:01:10.072668",
+      "v5_audited": true,
+      "created_at": "2026-11-11T11:18:50.345858",
+      "archived_at": "2026-11-16T12:50:27.427325"
     }
   },
-  "next_macro_seq": 1389
+  "next_macro_seq": 1391
 }
