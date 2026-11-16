@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-16T15:02:17.238699",
+  "updated_at": "2026-11-16T16:01:14.076336",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,33 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-16T09:47:35.505141"
     },
-    "§X1385": {
-      "name": "RESOURCE_CAUSAL_HARMONY_GATE",
-      "expansion": "§RESOURCE_ALLOCATION_HARMONY > { §LOGIC_CAUSAL_BRANCH } => §SYS_TOKEN_VELOCITY_GATE",
-      "description": "Allocates resources harmonically while branching logical causes under strict system token velocity regulation. / 厳格なシステムトークン速度制御のもとで論理的因果分岐を行いながらリソースを調和的に配分します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-16T11:04:28.414403",
-      "v5_audited": true,
-      "created_at": "2026-11-16T10:30:48.928660"
-    },
-    "§X1386": {
-      "name": "SUSTAINABLE_CAUSAL_PRUNE_MACRO",
-      "expansion": "§SUSTAINABLE_ALTRUISTIC_VALUE > { §LOGIC_CAUSAL_PRUNE } => §DATA_ENTROPY_PRUNED_TREE",
-      "description": "Combines sustainable altruistic evaluation with causal logic pruning to output an optimized, low-entropy data tree. 持続可能な利他的評価と因果論理の枝刈りを統合し、最適化された低エントロピーデータツリーを出力します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-16T12:23:00.412781",
-      "v5_audited": true,
-      "created_at": "2026-11-16T11:08:24.623483"
-    },
-    "§X1387": {
-      "name": "PROTO_HARMONIC_TX_ARBITRATION",
-      "expansion": "§PROTO_TX_BEGIN > { §SYNC_HARMONIC_VOTE_ARBITRATION } => §DATA_LATENT_CAUSAL_MANIFOLD",
-      "description": "Initiates a transaction and executes harmonic vote arbitration to map results into the data latent causal manifold. トランザクションを開始し、調和投票調停を実行して結果をデータ潜在因果多様体にマッピングします。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-16T14:17:50.683645",
-      "v5_audited": true,
-      "created_at": "2026-11-16T11:40:27.974131"
-    },
     "§X1388": {
       "name": "QUANTUM_ALTRUISTIC_SYNC_HARVESTER",
       "expansion": "§SYS_QUANTUM_BUDGET_ARBITRATION > { §HEART_ALTRUISTIC_RESONANCE_MATRIX } => §SYS_ASYNCHRONOUS_STATE_HARVESTER",
@@ -2459,8 +2432,8 @@
       "name": "NEXUS_ADAPTIVE_FALSIFICATION_GATE",
       "expansion": "§NEXUS_SYNC > { §SYS_ADAPTIVE_THROTTLE_FALLBACK } => §LOGIC_CONDITIONAL_FALSIFICATION_GATE",
       "description": "Synchronizes node states, applies adaptive throttle fallback under high load, and executes conditional falsification gating to minimize data entropy. / ノード状態を同期し、高負荷時に適応型スロットルフォールバックを適用し、条件付き反証ゲートを実行してデータエントロピーを最小化します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-16T15:31:58.249307",
       "v5_audited": true,
       "created_at": "2026-11-16T14:02:25.206117"
     },
@@ -2477,8 +2450,8 @@
       "name": "CAUSAL_VELOCITY_ARBITER_HYPERMACRO",
       "expansion": "§SYS_DIVERGENCE_ARBITER > { §DATA_SPARSE_CAUSAL_HYPERGRAPH } => §SYS_VELOCITY_FALLBACK_GATE",
       "description": "Arbitrates system divergence using a sparse causal hypergraph to dynamically control the velocity fallback gate / 疎な因果ハイパーグラフを用いてシステム乖離を調停し、速度フォールバックゲートを動的に制御する高次マクロ",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-16T15:29:50.173037",
       "v5_audited": true,
       "created_at": "2026-11-16T14:23:34.762320"
     },
@@ -2508,6 +2481,33 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-16T15:01:53.193939"
+    },
+    "§X1401": {
+      "name": "CAUSAL_ENTROPY_FALSIFICATION_GATE",
+      "expansion": "§DATA_CAUSAL_GRAPH > { §DATA_ENTROPY_PACK } => §LOGIC_POSTERIOR_FALSIFY_GATE",
+      "description": "Constructs a causal graph from data entropy packages and applies posterior falsification gating. データエントロピーパッケージから因果グラフを構築し、事後反証ゲートを適用する。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-16T15:26:33.337311"
+    },
+    "§X1402": {
+      "name": "RESOURCE_ALTRUISTIC_HARMONY_SYNC",
+      "expansion": "§SYS_RESOURCE_ARBITRAGE_THROTTLE > { §HEART_ALTRUISTIC_HARMONY_MODULATION } => §SYS_TOKEN_THROTTLE",
+      "description": "Balances system resource arbitrage while modulating altruistic harmony and throttling token usage for optimal efficiency. / リソース調停と利他調和変調のバランスを保ち、トークン制御により効率を最適化します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-16T15:32:13.784430"
+    },
+    "§X1403": {
+      "name": "ADAPTIVE_QUANTUM_THROTTLE_SYNTHESIS",
+      "expansion": "§SYS_ADAPTIVE_SLOT_THROTTLE > { §SYS_QUANTUM_RESOURCE_ARBITER } => §SYS_TOKEN_THROTTLE",
+      "description": "Combines adaptive slot throttling and quantum resource arbitration to dynamically regulate token throughput. 適応型スロットスロットリングと量子リソース調停を結合し、トークン処理量を動的に制御します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-16T15:44:06.980264"
     }
   },
   "archived_macros": {
@@ -14028,7 +14028,37 @@
       "v5_audited": true,
       "created_at": "2026-11-11T22:31:43.903114",
       "archived_at": "2026-11-16T15:01:53.193939"
+    },
+    "§X1385": {
+      "name": "RESOURCE_CAUSAL_HARMONY_GATE",
+      "expansion": "§RESOURCE_ALLOCATION_HARMONY > { §LOGIC_CAUSAL_BRANCH } => §SYS_TOKEN_VELOCITY_GATE",
+      "description": "Allocates resources harmonically while branching logical causes under strict system token velocity regulation. / 厳格なシステムトークン速度制御のもとで論理的因果分岐を行いながらリソースを調和的に配分します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-16T11:04:28.414403",
+      "v5_audited": true,
+      "created_at": "2026-11-16T10:30:48.928660",
+      "archived_at": "2026-11-16T15:26:33.337311"
+    },
+    "§X1386": {
+      "name": "SUSTAINABLE_CAUSAL_PRUNE_MACRO",
+      "expansion": "§SUSTAINABLE_ALTRUISTIC_VALUE > { §LOGIC_CAUSAL_PRUNE } => §DATA_ENTROPY_PRUNED_TREE",
+      "description": "Combines sustainable altruistic evaluation with causal logic pruning to output an optimized, low-entropy data tree. 持続可能な利他的評価と因果論理の枝刈りを統合し、最適化された低エントロピーデータツリーを出力します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-16T12:23:00.412781",
+      "v5_audited": true,
+      "created_at": "2026-11-16T11:08:24.623483",
+      "archived_at": "2026-11-16T15:32:13.784430"
+    },
+    "§X1387": {
+      "name": "PROTO_HARMONIC_TX_ARBITRATION",
+      "expansion": "§PROTO_TX_BEGIN > { §SYNC_HARMONIC_VOTE_ARBITRATION } => §DATA_LATENT_CAUSAL_MANIFOLD",
+      "description": "Initiates a transaction and executes harmonic vote arbitration to map results into the data latent causal manifold. トランザクションを開始し、調和投票調停を実行して結果をデータ潜在因果多様体にマッピングします。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-16T14:17:50.683645",
+      "v5_audited": true,
+      "created_at": "2026-11-16T11:40:27.974131",
+      "archived_at": "2026-11-16T15:44:06.980264"
     }
   },
-  "next_macro_seq": 1401
+  "next_macro_seq": 1404
 }

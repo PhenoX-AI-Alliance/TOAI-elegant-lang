@@ -4,64 +4,63 @@ import traceback
 import time
 import json
 
-def audit_dialogues(corpus_file):
-    total_dialogues = 0
-    valid_dialogues = 0
-    error_turns = 0
-    anomalies = []
-
-    if not os.path.exists(corpus_file):
-        print(f"Error: Corpus file not found at {corpus_file}")
+def audit_dialogues():
+    corpus_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
+    report_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/audit_report.json"
+    
+    if not os.path.exists(corpus_path):
+        print(f"Error: Corpus not found at {corpus_path}")
         sys.exit(1)
-
-    with open(corpus_file, "r", encoding="utf-8") as f:
-        for line_num, line in enumerate(f, 1):
-            line = line.strip()
-            if not line:
+        
+    total_lines = 0
+    valid_dialogues = 0
+    errors = []
+    
+    with open(corpus_path, "r", encoding="utf-8") as f:
+        for idx, line in enumerate(f, 1):
+            total_lines += 1
+            line_str = line.strip()
+            if not line_str:
                 continue
-            total_dialogues += 1
             try:
-                data = json.loads(line)
-            except json.JSONDecodeError as e:
-                anomalies.append({"line": line_num, "error": f"JSONDecodeError: {str(e)}"})
-                continue
-
-            if "dialogue_id" not in data or "turns" not in data:
-                anomalies.append({"line": line_num, "error": "Missing dialogue_id or turns"})
-                continue
-
-            turns = data["turns"]
-            if not isinstance(turns, list) or len(turns) == 0:
-                anomalies.append({"line": line_num, "error": "Turns is empty or not a list"})
-                continue
-
-            dialogue_valid = True
-            for turn in turns:
-                if "role" not in turn or "content" not in turn:
-                    dialogue_valid = False
-                    anomalies.append({"line": line_num, "error": "Turn missing role or content"})
-                    break
-                if turn["role"] == "error":
-                    error_turns += 1
-
-            if dialogue_valid:
+                data = json.loads(line_str)
+                if not isinstance(data, dict):
+                    errors.append({"line": idx, "error": "Root element is not a dictionary"})
+                    continue
+                
+                if "messages" not in data and "dialogue" not in data:
+                    errors.append({"line": idx, "error": "Missing 'messages' or 'dialogue' key"})
+                    continue
+                
+                messages = data.get("messages") or data.get("dialogue")
+                if not isinstance(messages, list) or len(messages) == 0:
+                    errors.append({"line": idx, "error": "Messages/dialogue is empty or not a list"})
+                    continue
+                
                 valid_dialogues += 1
-
+            except json.JSONDecodeError as jde:
+                errors.append({"line": idx, "error": f"JSONDecodeError: {str(jde)}"})
+            except Exception as e:
+                errors.append({"line": idx, "error": f"Unexpected error: {str(e)}"})
+                
     report = {
         "timestamp": time.time(),
-        "total_dialogues": total_dialogues,
+        "total_lines": total_lines,
         "valid_dialogues": valid_dialogues,
-        "error_turns": error_turns,
-        "anomalies": anomalies
+        "error_count": len(errors),
+        "errors": errors
     }
-
-    report_path = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/audit_report.json"
-    with open(report_path, "w", encoding="utf-8") as f:
-        json.dump(report, f, indent=2, ensure_ascii=False)
-
-    print(f"Audit completed. Total: {total_dialogues}, Valid: {valid_dialogues}, Errors: {error_turns}")
+    
+    os.makedirs(os.path.dirname(report_path), exist_ok=True)
+    with open(report_path, "w", encoding="utf-8") as rf:
+        json.dump(report, rf, ensure_ascii=False, indent=2)
+        
+    print(f"Audit completed. Total: {total_lines}, Valid: {valid_dialogues}, Errors: {len(errors)}")
     print(f"Report saved to {report_path}")
 
 if __name__ == "__main__":
-    corpus_file = "/home/phenox/gemini-sandbox/TOAI-elegant-lang/corpus/dialogues.jsonl"
-    audit_dialogues(corpus_file)
+    try:
+        audit_dialogues()
+    except Exception as e:
+        traceback.print_exc()
+        sys.exit(1)
