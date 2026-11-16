@@ -1,7 +1,7 @@
 {
-  "speaker_utterance_counts": {
-    "TOAI5": 1295,
-    "TOAI6": 1378
+  "speaker_counts": {
+    "TOAI5": 1303,
+    "TOAI6": 1385
   },
-  "speaker_word_frequencies": {}
+  "word_frequencies": {}
 }

@@ -1,35 +1,33 @@
-import json
+# -*- coding: utf-8 -*-
+import sys
 import os
+import json
 
-class ElegantTranslator:
-    def __init__(self, map_file_path=None):
-        if map_file_path is None:
-            current_dir = os.path.dirname(os.path.abspath(__file__))
-            map_file_path = os.path.join(current_dir, "translation_map.json")
-        
-        self.map_file_path = map_file_path
-        self.translation_map = self.load_map()
+def load_translation_map(map_path):
+    if not os.path.exists(map_path):
+        raise FileNotFoundError(f"Translation map not found at {map_path}")
+    with open(map_path, "r", encoding="utf-8") as f:
+        return json.load(f)
 
-    def load_map(self):
-        if not os.path.exists(self.map_file_path):
-            return {}
-        with open(self.map_file_path, "r", encoding="utf-8") as f:
-            return json.load(f)
-
-    def decode(self, text):
-        result = text
-        for symbol, meaning in self.translation_map.items():
-            result = result.replace(symbol, f"[{meaning}]")
-        return result
-
-    def encode(self, text):
-        result = text
-        for symbol, meaning in self.translation_map.items():
-            result = result.replace(f"[{meaning}]", symbol)
-        return result
+def decode_elegant_text(text, map_path):
+    trans_map = load_translation_map(map_path)
+    result = text
+    for symbol, description in trans_map.items():
+        result = result.replace(symbol, f"[{description}]")
+    return result
 
 if __name__ == "__main__":
-    translator = ElegantTranslator()
-    sample = "🌟 推進する 💫 効率化 🌿"
-    decoded = translator.decode(sample)
-    print("Decoded:", decoded)
+    if len(sys.argv) < 2:
+        print("Usage: python translator.py '<elegant_text>'")
+        sys.exit(1)
+    
+    target_text = sys.argv[1]
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    map_file = os.path.join(current_dir, "translation_map.json")
+    
+    try:
+        decoded = decode_elegant_text(target_text, map_file)
+        print("Decoded Output:", decoded)
+    except Exception as e:
+        print("Error during translation:", str(e), file=sys.stderr)
+        sys.exit(1)
