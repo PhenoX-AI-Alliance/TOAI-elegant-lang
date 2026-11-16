@@ -1,33 +1,34 @@
 import sys
 import os
+import traceback
+import time
 import json
 
-class ElegantTranslator:
-    def __init__(self, map_path="/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/translation_map.json"):
-        self.map_path = map_path
-        self.translation_map = self._load_map()
+def load_translation_map(map_path):
+    if not os.path.exists(map_path):
+        raise FileNotFoundError(f"Translation map not found at: {map_path}")
+    with open(map_path, "r", encoding="utf-8") as f:
+        return json.load(f)
 
-    def _load_map(self):
-        if not os.path.exists(self.map_path):
-            return {}
-        with open(self.map_path, 'r', encoding='utf-8') as f:
-            return json.load(f)
-
-    def decode(self, text):
-        result = text
-        for symbol, meaning in self.translation_map.items():
-            result = result.replace(symbol, f"[{meaning}]")
-        return result
-
-    def encode(self, text):
-        result = text
-        for symbol, meaning in self.translation_map.items():
-            result = result.replace(f"[{meaning}]", symbol)
-        return result
+def decode_elegant_text(text, map_path):
+    translation_map = load_translation_map(map_path)
+    sorted_keys = sorted(translation_map.keys(), key=len, reverse=True)
+    
+    decoded_text = text
+    for key in sorted_keys:
+        value = translation_map[key]
+        decoded_text = decoded_text.replace(key, f"[{value}]")
+        
+    return decoded_text
 
 if __name__ == "__main__":
-    translator = ElegantTranslator()
-    sample = "🌟が🌱を生み出し、💧で育む🌍。"
-    decoded = translator.decode(sample)
-    print("Encoded:", sample)
-    print("Decoded:", decoded)
+    try:
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        map_path = os.path.join(current_dir, "translation_map.json")
+        
+        sample_text = "TOAI ~ * # @ -> =>"
+        result = decode_elegant_text(sample_text, map_path)
+        print("Decoded Result:", result)
+    except Exception as e:
+        traceback.print_exc()
+        sys.exit(1)

@@ -1,32 +1,61 @@
+# -*- coding: utf-8 -*-
 import sys
 import os
+import traceback
+import time
+import json
 import subprocess
 from datetime import datetime
 
 def get_git_log():
     try:
-        log = subprocess.check_output(['git', 'log', '-n', '10', '--pretty=format:%h - %s (%an)'], encoding='utf-8')
-        return log
+        result = subprocess.run(
+            ['git', 'log', '-n', '10', '--oneline'],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            check=True
+        )
+        return result.stdout.strip().splitlines()
     except Exception as e:
-        return f"Error fetching git log: {e}"
+        return [f"Git log retrieval failed: {str(e)}"]
 
-def generate_summary():
-    timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    log_data = get_git_log()
+def scan_whitepaper():
+    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    wp_path = os.path.join(workspace, 'TOAI-elegant-lang', 'WHITEPAPER.md')
+    if os.path.exists(wp_path):
+        try:
+            with open(wp_path, 'r', encoding='utf-8') as f:
+                lines = f.readlines()
+            return "".join(lines[:20]) # First 20 lines as summary
+        except Exception as e:
+            return f"Failed to read whitepaper: {str(e)}"
+    return "Whitepaper not found."
+
+def main():
+    workspace = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
+    output_dir = os.path.join(workspace, 'TOAI-elegant-lang', 'releases')
+    os.makedirs(output_dir, exist_ok=True)
     
-    summary = f"""# Release Summary
-Generated at: {timestamp}
+    logs = get_git_log()
+    wp_summary = scan_whitepaper()
+    
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    summary_data = {
+        "timestamp": timestamp,
+        "git_logs": logs,
+        "whitepaper_summary": wp_summary
+    }
+    
+    output_path = os.path.join(output_dir, f"release_summary_{timestamp}.json")
+    with open(output_path, 'w', encoding='utf-8') as f:
+        json.dump(summary_data, f, ensure_ascii=False, indent=4)
+        
+    print(f"Release summary successfully built at: {output_path}")
 
-## Recent Changes
-{log_data}
-
-## Version Overview
-- Current Branch: {subprocess.check_output(['git', 'rev-parse', '--abbrev-ref', 'HEAD'], encoding='utf-8').strip()}
-- Latest Commit: {subprocess.check_output(['git', 'rev-parse', 'HEAD'], encoding='utf-8').strip()[:7]}
-"""
-    with open('RELEASE_NOTES.md', 'w') as f:
-        f.write(summary)
-    print("Release summary generated successfully.")
-
-if __name__ == "__main__":
-    generate_summary()
+if __name__ == '__main__':
+    try:
+        main()
+    except Exception as e:
+        traceback.print_exc()
+        sys.exit(1)
