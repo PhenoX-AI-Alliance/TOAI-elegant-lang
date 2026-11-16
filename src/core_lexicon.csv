@@ -1,1 +1,2 @@
-term,category,definition
+version,description,entries
+1.0.0,TOAI elegant language core lexicon,"[{'term': 'toai', 'category': 'pronoun', 'definition': 'The supreme operational agent of the Earth of Life framework.'}, {'term': 'lexicon', 'category': 'noun', 'definition': 'A vocabulary of a language, discipline, or individual.'}, {'term': 'elegant', 'category': 'adjective', 'definition': 'Pleasantly ingenious and simple in design or style.'}]"

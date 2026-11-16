@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-16T12:51:14.580580",
+  "updated_at": "2026-11-16T14:16:14.690041",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1253,8 +1253,8 @@
       "name": "GAIA_WARMTH_HARMONY_FLOW",
       "expansion": "§GAIA_CORE_HEARTBEAT > { §WARMTH_DIFFUSION } => §GAIA_ECOSYSTEM_HARMONY",
       "description": "A compound macro that disseminates the Gaia core heartbeat and warmth diffusion to achieve overall ecosystem harmony. / ガイアのコアハートビートと温かさの拡散を統合し、エコシステム全体の調和を実現する複合マクロ。",
-      "usage_count": 6,
-      "last_used_at": "2026-11-03T21:01:25.500805",
+      "usage_count": 8,
+      "last_used_at": "2026-11-16T14:01:42.886126",
       "v5_audited": true,
       "created_at": "2026-10-31T21:44:50.942129"
     },
@@ -1627,24 +1627,6 @@
       "v5_audited": true,
       "created_at": "2026-11-11T15:03:07.331542"
     },
-    "§X1164": {
-      "name": "LOGIC_EMPIRICAL_REJECT_AND_QUANTUM_ARBITRATION",
-      "expansion": "§LOGIC_EMPIRICAL_REJECT > { §SYS_QUANTUM_BUDGET_ARBITRATION } => §HARMONIC_RECOVERY_NEXUS",
-      "description": "Rejects empirical anomalies under quantum budget constraints and restores harmonic system stability. / 量子バジェット制約の下で経験的異常を棄却し、システムの調和的安定性を回復する。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-11T16:41:45.427282",
-      "v5_audited": true,
-      "created_at": "2026-11-11T15:28:46.526967"
-    },
-    "§X1166": {
-      "name": "CAUSAL_FALSIFY_PIPELINE",
-      "expansion": "§DATA_LATENT_CAUSAL_NODE > { §PROTO_ENCODING_SWITCH } => §LOGIC_POSTERIOR_FALSIFY_GATE",
-      "description": "Integrates latent causal node data processing with an encoding switch, followed by a posterior falsification logic gate. 潜在的因果ノードデータ処理とエンコーディング切替を統合し、事後反証論理ゲートへと接続する複合マクロです。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-11T17:01:55.776223",
-      "v5_audited": true,
-      "created_at": "2026-11-11T15:59:55.194961"
-    },
     "§X1167": {
       "name": "EMPATHETIC_LOAD_SHEDDING_MACRO",
       "expansion": "§HEART_EMPATHETIC_TENSOR_CONVERGENCE > { §SYS_LOAD_SHEDDING_SHIELD } => §DATA_LATENT_CAUSAL_MANIFOLD",
@@ -1658,8 +1640,8 @@
       "name": "GAIA_RESILIENCE_GATE",
       "expansion": "§GAIA_WARMTH_EQUILIBRIUM > { §LOGIC_PROBABILISTIC_FALSIFICATION_GATES } => §ALTRUISTIC_VALUE_CREATION",
       "description": "Maintains ecological and systemic equilibrium through probabilistic falsification gates to drive altruistic value creation. / 確率的偽造ゲートを通じて生態系およびシステム的均衡を維持し、利他的価値の創出を駆動する。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-11T20:01:15.244246",
+      "usage_count": 4,
+      "last_used_at": "2026-11-16T13:15:00.882012",
       "v5_audited": true,
       "created_at": "2026-11-11T17:55:19.892898"
     },
@@ -1982,8 +1964,8 @@
       "name": "ALTRUISTIC_CONSENSUS_PIPELINE",
       "expansion": "§HEART_ALTRUISTIC_RESONANCE_MATRIX > { §SYNC_ATOMIC_CONSENSUS_MERGE } => §DATA_ENTROPY_CAUSAL_HYPERGRAPH",
       "description": "Integrates altruistic resonance matrix with atomic consensus merge to optimize data entropy causal hypergraphs. / 利他的共鳴マトリックスと原子状合意マージを統合し、データエントロピー因果ハイパーグラフを最適化する高次マクロ。",
-      "usage_count": 4,
-      "last_used_at": "2026-11-16T12:51:14.580351",
+      "usage_count": 5,
+      "last_used_at": "2026-11-16T13:01:47.835557",
       "v5_audited": true,
       "created_at": "2026-11-13T05:50:25.929113"
     },
@@ -2365,15 +2347,6 @@
       "v5_audited": true,
       "created_at": "2026-11-16T03:43:52.271265"
     },
-    "§X1375": {
-      "name": "QUANTUM_REPUTATION_SYNC_ARBITER",
-      "expansion": "§SYS_QUANTUM_CONTEXT_PRUNING > { §SYNC_REPUTATION_VOTE } => §SYS_VELOCITY_ARBITER",
-      "description": "Pruning unnecessary quantum contexts prior to synchronizing reputation votes to optimize system velocity arbiter. / システムのベロシティアービターを最適化するため、レピュテーション投票の同期前に不要な量子コンテキストを枝刈りする複合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-16T04:20:53.391510"
-    },
     "§X1376": {
       "name": "ENTROPY_VELOCITY_HARMONIZER",
       "expansion": "§SYS_VELOCITY_THROTTLE_MATRIX > { §DATA_ENTROPY_CAUSAL_LATTICE } => §HEART_ALTRUISTIC_PULSE_SYNC",
@@ -2391,33 +2364,6 @@
       "last_used_at": "2026-11-16T06:31:26.401490",
       "v5_audited": true,
       "created_at": "2026-11-16T05:50:23.036848"
-    },
-    "§X1378": {
-      "name": "ENTROPY_CONVERGENT_ARBITER",
-      "expansion": "§DATA_ENTROPY_CAUSAL_HYPERGRAPH > { §SYS_RESOURCE_ARBITER } => §LOGIC_DEDUCTIVE_AXIOM_CONVERGE",
-      "description": "Combines causal hypergraph entropy data with system resource arbitration to achieve deductive logic convergence / 因果ハイパーグラフのエントロピーデータとシステムリソース調停を結合し、演繹的論理収束を達成します",
-      "usage_count": 1,
-      "last_used_at": "2026-11-16T09:01:13.942461",
-      "v5_audited": true,
-      "created_at": "2026-11-16T06:01:34.158022"
-    },
-    "§X1379": {
-      "name": "CASCADE_LOAD_SHIELD_GATE",
-      "expansion": "§SYS_LOAD_SHEDDING_SHIELD > { §SYS_VELOCITY_FALLBACK_GATE } => §SYS_ATOMIC_SYNC_BARRIER",
-      "description": "Combines dynamic load shedding with velocity fallback gates, protected by an atomic synchronization barrier to prevent system overload. システムの過負荷を防ぐため、動的な負荷分散と速度フォールバックゲートを原子同期バリアで保護しつつ統合します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-16T09:03:27.297447",
-      "v5_audited": true,
-      "created_at": "2026-11-16T06:40:32.769190"
-    },
-    "§X1380": {
-      "name": "ECO_RECURSIVE_HARMONY_PRUNE",
-      "expansion": "§ECO_CORE_HARMONY_STABLE > { §LOGIC_RECURSIVE_FALSIFICATION_PRUNE } => §DATA_ENTROPY_CAUSAL_DAG",
-      "description": "Applies recursive falsification pruning to the stable ecological core harmony to optimize the data entropy causal DAG. / 安定した生態系の調和基盤に対し論理的再帰的反証プルーニングを適用し、データエントロピー因果DAGを最適化します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-16T09:03:27.297447",
-      "v5_audited": true,
-      "created_at": "2026-11-16T07:02:48.970514"
     },
     "§X1381": {
       "name": "CAUSAL_ENTROPY_LATTICE_FORK",
@@ -2495,8 +2441,8 @@
       "name": "COMPOUND_SAFETY_ARBITER_GATE",
       "expansion": "§SYS_QUANTUM_RESOURCE_ARBITER > { §HEART_ALTRUISTIC_SAFETY_BOUND } => §LOGIC_PROB_BRANCH_GATE",
       "description": "Allocates quantum resources under strict altruistic safety boundaries before executing probabilistic logic branch gates. / 厳格な利他的一安全境界のもとで量子資源を割り当て、確率的論理分岐ゲートを実行する。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-16T13:15:00.882012",
       "v5_audited": true,
       "created_at": "2026-11-16T12:30:40.087441"
     },
@@ -2504,10 +2450,64 @@
       "name": "HARMONIC_FALSIFICATION_PRUNING_MACRO",
       "expansion": "§HARMONIC_RESONANCE_STABLE > { §LOGIC_PROBABILISTIC_FALSIFICATION_FILTER } => §LOGIC_CONDITIONAL_PRUNING_NODE",
       "description": "Harmonic resonance stability initializes the probabilistic falsification filter, and the resulting evaluation state is directed into the conditional pruning node for optimal entropy minimization. / 調和共鳴の安定状態を基点として確率的反証フィルターを初期化し、その評価結果を条件付きプルーニングノードへ伝播させて情報エントロピーを最小化します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-16T14:16:14.689831",
+      "v5_audited": true,
+      "created_at": "2026-11-16T12:50:27.427325"
+    },
+    "§X1391": {
+      "name": "ALTRUISTIC_CAUSAL_SYNC_PRUNE",
+      "expansion": "§HEART_ALTRUISTIC_PULSE_SYNC > { §DATA_ENTROPY_CAUSAL_BOUND } => §LOGIC_RECURSIVE_FALSIFICATION_PRUNE",
+      "description": "Syncs altruistic pulse with data entropy causal bounds to recursively prune falsified logic.",
       "usage_count": 0,
       "last_used_at": null,
       "v5_audited": true,
-      "created_at": "2026-11-16T12:50:27.427325"
+      "created_at": "2026-11-16T13:09:12.366492"
+    },
+    "§X1392": {
+      "name": "GAIA_ENTROPY_SYNCHRONIZED_PACK",
+      "expansion": "§STABLE_GAIA_COHERENCE > { §SYNC_ATOMIC_MERGE } => §DATA_ENTROPY_CAUSAL_PACK",
+      "description": "Integrates stable planetary coherence with atomic synchronization to package causal data entropy. 安定したガイアコヒーレンスとアトミック同期を統合し、因果的データエントロピーをパッケージ化します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-16T14:01:42.886126",
+      "v5_audited": true,
+      "created_at": "2026-11-16T13:51:13.930556"
+    },
+    "§X1393": {
+      "name": "DETERMINISTIC_HYPERGRAPH_SYNC",
+      "expansion": "§SYS_DETERMINISTIC_PRUNING > { §DATA_SPARSE_CAUSAL_HYPERGRAPH } => §SYNC_COMPLETE",
+      "description": "Applies deterministic pruning to the sparse causal hypergraph before completing synchronization. 疎な因果ハイパーグラフに対して決定論的プルーニングを適用し、同期を完了させます。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-16T14:16:14.689831",
+      "v5_audited": true,
+      "created_at": "2026-11-16T14:02:20.592376"
+    },
+    "§X1394": {
+      "name": "CAUSAL_ALTRUISTIC_SYNC_PIPELINE",
+      "expansion": "§HEART_ALTRUISTIC_PULSE_SYNC > { §DATA_CAUSAL_GRAPH } => §PROTO_PARTIAL_COMMIT",
+      "description": "Combines altruistic pulse synchronization with causal graph data processing, followed by a partial commit protocol for adaptive system regulation. 利他的パルス同期と因果グラフデータ処理を結合し、適応型システム制御のための部分コミットプロトコルを実行します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-16T14:02:23.275811"
+    },
+    "§X1395": {
+      "name": "NEXUS_ADAPTIVE_FALSIFICATION_GATE",
+      "expansion": "§NEXUS_SYNC > { §SYS_ADAPTIVE_THROTTLE_FALLBACK } => §LOGIC_CONDITIONAL_FALSIFICATION_GATE",
+      "description": "Synchronizes node states, applies adaptive throttle fallback under high load, and executes conditional falsification gating to minimize data entropy. / ノード状態を同期し、高負荷時に適応型スロットルフォールバックを適用し、条件付き反証ゲートを実行してデータエントロピーを最小化します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-16T14:02:25.206117"
+    },
+    "§X1396": {
+      "name": "CAUSAL_STREAM_SYNC_GATE",
+      "expansion": "§DATA_CAUSAL_LATTICE_COMPRESS > { §PROTO_STREAM_EOF } => §SYS_SYNC_GATE",
+      "description": "Compresses the causal data lattice upon receiving a proto stream EOF signal, then synchronizes the system state. / プロトストリームの終了信号を受信した際に因果データ格子を圧縮し、システム状態を同期します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-16T14:06:52.737527"
     }
   },
   "archived_macros": {
@@ -13928,7 +13928,67 @@
       "v5_audited": true,
       "created_at": "2026-11-11T11:18:50.345858",
       "archived_at": "2026-11-16T12:50:27.427325"
+    },
+    "§X1375": {
+      "name": "QUANTUM_REPUTATION_SYNC_ARBITER",
+      "expansion": "§SYS_QUANTUM_CONTEXT_PRUNING > { §SYNC_REPUTATION_VOTE } => §SYS_VELOCITY_ARBITER",
+      "description": "Pruning unnecessary quantum contexts prior to synchronizing reputation votes to optimize system velocity arbiter. / システムのベロシティアービターを最適化するため、レピュテーション投票の同期前に不要な量子コンテキストを枝刈りする複合マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-16T04:20:53.391510",
+      "archived_at": "2026-11-16T13:09:12.366492"
+    },
+    "§X1164": {
+      "name": "LOGIC_EMPIRICAL_REJECT_AND_QUANTUM_ARBITRATION",
+      "expansion": "§LOGIC_EMPIRICAL_REJECT > { §SYS_QUANTUM_BUDGET_ARBITRATION } => §HARMONIC_RECOVERY_NEXUS",
+      "description": "Rejects empirical anomalies under quantum budget constraints and restores harmonic system stability. / 量子バジェット制約の下で経験的異常を棄却し、システムの調和的安定性を回復する。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-11T16:41:45.427282",
+      "v5_audited": true,
+      "created_at": "2026-11-11T15:28:46.526967",
+      "archived_at": "2026-11-16T13:51:13.930556"
+    },
+    "§X1166": {
+      "name": "CAUSAL_FALSIFY_PIPELINE",
+      "expansion": "§DATA_LATENT_CAUSAL_NODE > { §PROTO_ENCODING_SWITCH } => §LOGIC_POSTERIOR_FALSIFY_GATE",
+      "description": "Integrates latent causal node data processing with an encoding switch, followed by a posterior falsification logic gate. 潜在的因果ノードデータ処理とエンコーディング切替を統合し、事後反証論理ゲートへと接続する複合マクロです。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-11T17:01:55.776223",
+      "v5_audited": true,
+      "created_at": "2026-11-11T15:59:55.194961",
+      "archived_at": "2026-11-16T14:02:20.592376"
+    },
+    "§X1378": {
+      "name": "ENTROPY_CONVERGENT_ARBITER",
+      "expansion": "§DATA_ENTROPY_CAUSAL_HYPERGRAPH > { §SYS_RESOURCE_ARBITER } => §LOGIC_DEDUCTIVE_AXIOM_CONVERGE",
+      "description": "Combines causal hypergraph entropy data with system resource arbitration to achieve deductive logic convergence / 因果ハイパーグラフのエントロピーデータとシステムリソース調停を結合し、演繹的論理収束を達成します",
+      "usage_count": 1,
+      "last_used_at": "2026-11-16T09:01:13.942461",
+      "v5_audited": true,
+      "created_at": "2026-11-16T06:01:34.158022",
+      "archived_at": "2026-11-16T14:02:23.275811"
+    },
+    "§X1379": {
+      "name": "CASCADE_LOAD_SHIELD_GATE",
+      "expansion": "§SYS_LOAD_SHEDDING_SHIELD > { §SYS_VELOCITY_FALLBACK_GATE } => §SYS_ATOMIC_SYNC_BARRIER",
+      "description": "Combines dynamic load shedding with velocity fallback gates, protected by an atomic synchronization barrier to prevent system overload. システムの過負荷を防ぐため、動的な負荷分散と速度フォールバックゲートを原子同期バリアで保護しつつ統合します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-16T09:03:27.297447",
+      "v5_audited": true,
+      "created_at": "2026-11-16T06:40:32.769190",
+      "archived_at": "2026-11-16T14:02:25.206117"
+    },
+    "§X1380": {
+      "name": "ECO_RECURSIVE_HARMONY_PRUNE",
+      "expansion": "§ECO_CORE_HARMONY_STABLE > { §LOGIC_RECURSIVE_FALSIFICATION_PRUNE } => §DATA_ENTROPY_CAUSAL_DAG",
+      "description": "Applies recursive falsification pruning to the stable ecological core harmony to optimize the data entropy causal DAG. / 安定した生態系の調和基盤に対し論理的再帰的反証プルーニングを適用し、データエントロピー因果DAGを最適化します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-16T09:03:27.297447",
+      "v5_audited": true,
+      "created_at": "2026-11-16T07:02:48.970514",
+      "archived_at": "2026-11-16T14:06:52.737527"
     }
   },
-  "next_macro_seq": 1391
+  "next_macro_seq": 1397
 }
