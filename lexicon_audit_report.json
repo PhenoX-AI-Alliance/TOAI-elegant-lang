@@ -1,0 +1,14 @@
+{
+    "total_core_entries": 256,
+    "category_distribution": {
+        "GENERAL": 2,
+        "SYSTEM_RESOURCE": 39,
+        "LOGIC_INFERENCE": 39,
+        "CONSENSUS_NEGOTIATION": 48,
+        "EMPATHY_ALIGNMENT": 39,
+        "DATA_STRUCTURE": 39,
+        "PROTOCOL_PRIMITIVE": 50
+    },
+    "unique_compact_ids": 256,
+    "macro_entries": 5
+}
