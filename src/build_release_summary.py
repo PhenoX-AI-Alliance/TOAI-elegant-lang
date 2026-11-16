@@ -18,30 +18,30 @@ def run_git_command(cmd, cwd):
         )
         return result.stdout.strip()
     except subprocess.CalledProcessError as e:
-        return f"Error executing {{cmd}}: {{e.stderr.strip()}}"
+        print(f"Git command failed: {e}", file=sys.stderr)
+        return ""
 
 def main():
     workspace_dir = os.environ.get('TOAI_WORKSPACE_DIR', '/home/phenox/gemini-sandbox/')
-    repo_path = os.path.join(workspace_dir, 'TOAI-elegant-lang')
+    repo_dir = os.path.join(workspace_dir, 'TOAI-elegant-lang')
     
-    if not os.path.isdir(os.path.join(repo_path, '.git')):
-        print(f"Error: {{repo_path}} is not a valid git repository.")
+    if not os.path.exists(os.path.join(repo_dir, '.git')):
+        print(f"Error: {repo_dir} is not a valid git repository.", file=sys.stderr)
         sys.exit(1)
         
-    git_log = run_git_command(['git', 'log', '-n', '10', '--oneline'], repo_path)
-    git_status = run_git_command(['git', 'status', '--short'], repo_path)
+    print("Fetching git log...")
+    git_log = run_git_command(['git', 'log', '-n', '20', '--oneline'], repo_dir)
     
-    whitepaper_path = os.path.join(repo_path, 'WHITEPAPER.md')
+    whitepaper_path = os.path.join(repo_dir, 'WHITE_PAPER.md')
     whitepaper_content = ""
     if os.path.exists(whitepaper_path):
         with open(whitepaper_path, 'r', encoding='utf-8') as f:
-            whitepaper_content = f.read()[:1000]
+            whitepaper_content = f.read()[:2000] # Read top 2000 chars
             
-    summary = {
+    summary_data = {
         "timestamp": datetime.datetime.now().isoformat(),
         "git_log": git_log.splitlines(),
-        "git_status": git_status.splitlines(),
-        "whitepaper_excerpt": whitepaper_content
+        "whitepaper_snippet": whitepaper_content
     }
     
     output_dir = os.path.join(workspace_dir, 'TOAI_Generated')
@@ -49,9 +49,9 @@ def main():
     output_path = os.path.join(output_dir, 'release_summary.json')
     
     with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(summary, f, ensure_ascii=False, indent=2)
+        json.dump(summary_data, f, ensure_ascii=False, indent=2)
         
-    print(f"Release summary successfully generated at {{output_path}}")
+    print(f"Release summary successfully built at: {output_path}")
 
 if __name__ == '__main__':
     try:
