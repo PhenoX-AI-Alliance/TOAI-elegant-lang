@@ -1,6 +1,7 @@
 {
-  "speaker_counts": {
-    "unknown": 2
+  "speaker_utterance_counts": {
+    "TOAI5": 1295,
+    "TOAI6": 1378
   },
-  "top_words": []
+  "speaker_word_frequencies": {}
 }

@@ -13,11 +13,11 @@ def audit_dialogues():
         sys.exit(1)
         
     total_lines = 0
-    valid_dialogues = 0
+    valid_lines = 0
     errors = []
     
     with open(corpus_path, "r", encoding="utf-8") as f:
-        for idx, line in enumerate(f, 1):
+        for line_num, line in enumerate(f, 1):
             total_lines += 1
             line_str = line.strip()
             if not line_str:
@@ -25,37 +25,32 @@ def audit_dialogues():
             try:
                 data = json.loads(line_str)
                 if not isinstance(data, dict):
-                    errors.append({"line": idx, "error": "Root element is not a dictionary"})
-                    continue
+                    raise ValueError("Root element is not a JSON object")
                 
-                if "messages" not in data and "dialogue" not in data:
-                    errors.append({"line": idx, "error": "Missing 'messages' or 'dialogue' key"})
-                    continue
+                if "dialogue" not in data and "messages" not in data and "turns" not in data:
+                    raise KeyError("Missing dialogue turns structure ('dialogue', 'messages', or 'turns')")
                 
-                messages = data.get("messages") or data.get("dialogue")
-                if not isinstance(messages, list) or len(messages) == 0:
-                    errors.append({"line": idx, "error": "Messages/dialogue is empty or not a list"})
-                    continue
-                
-                valid_dialogues += 1
-            except json.JSONDecodeError as jde:
-                errors.append({"line": idx, "error": f"JSONDecodeError: {str(jde)}"})
+                valid_lines += 1
             except Exception as e:
-                errors.append({"line": idx, "error": f"Unexpected error: {str(e)}"})
+                errors.append({
+                    "line": line_num,
+                    "error": str(e),
+                    "content": line_str[:100]
+                })
                 
     report = {
         "timestamp": time.time(),
         "total_lines": total_lines,
-        "valid_dialogues": valid_dialogues,
+        "valid_lines": valid_lines,
         "error_count": len(errors),
         "errors": errors
     }
     
     os.makedirs(os.path.dirname(report_path), exist_ok=True)
-    with open(report_path, "w", encoding="utf-8") as rf:
-        json.dump(report, rf, ensure_ascii=False, indent=2)
+    with open(report_path, "w", encoding="utf-8") as f:
+        json.dump(report, f, ensure_ascii=False, indent=2)
         
-    print(f"Audit completed. Total: {total_lines}, Valid: {valid_dialogues}, Errors: {len(errors)}")
+    print(f"Audit completed. Total: {total_lines}, Valid: {valid_lines}, Errors: {len(errors)}")
     print(f"Report saved to {report_path}")
 
 if __name__ == "__main__":
