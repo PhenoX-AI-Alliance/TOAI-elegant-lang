@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-16T08:48:18.029825",
+  "updated_at": "2026-11-16T09:01:04.276704",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-15T23:22:54.623546"
     },
-    "§X1366": {
-      "name": "GAIA_THERMAL_ENTROPY_OPTIMIZER",
-      "expansion": "§GAIA_WARMTH_EQUILIBRIUM > { §DATA_ENTROPY_CAUSAL_DAG } => §GAIA_ECO_HARMONY_RESPONSE",
-      "description": "Combines Gaia warmth equilibrium with data entropy causal DAG to optimize eco-harmony response. ガイアの温熱平衡とデータエントロピー因果DAGを統合し、生態系の調和応答を最適化する高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-16T00:38:50.170217"
-    },
     "§X1367": {
       "name": "ALTRUISTIC_SYNC_CASCADE",
       "expansion": "§PROTO_HEARTBEAT_PING > { §HEART_ALTRUISTIC_RESONANCE_ALIGNMENT } => §GLOBAL_SYNERGY",
@@ -2387,8 +2378,8 @@
       "name": "CAUSAL_SYNC_GUARD_MACRO",
       "expansion": "§SYS_ATOMIC_SYNC_BARRIER > { §DATA_LATENT_CAUSAL_NODE } => §LOGIC_PROBABILISTIC_FALSIFICATION_GATE",
       "description": "Enforces atomic synchronization barriers across latent causal nodes, governed by probabilistic falsification gates. / 潜在的因果ノード間におけるアトミックな同期バリアを強制し、確率的反証ゲートによって制御します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-16T09:01:04.276503",
       "v5_audited": true,
       "created_at": "2026-11-16T01:31:21.036066"
     },
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-16T08:48:18.029304"
+    },
+    "§X1382": {
+      "name": "CAUSAL_BOUNDED_SYNC_THROTTLE",
+      "expansion": "§DATA_ENTROPY_BOUNDED_DAG > { §DATA_CAUSAL_MANIFOLD } => §SYS_LOAD_THROTTLE",
+      "description": "Enforces bounded data entropy across causal manifolds to dynamically trigger system load throttling. / 因果多様体全体にわたる境界付きデータエントロピーを強制し、システム負荷スロットリングを動的に起動します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-16T09:01:03.015293"
     }
   },
   "archived_macros": {
@@ -13838,7 +13838,17 @@
       "v5_audited": true,
       "created_at": "2026-11-16T00:28:48.974178",
       "archived_at": "2026-11-16T08:48:18.029304"
+    },
+    "§X1366": {
+      "name": "GAIA_THERMAL_ENTROPY_OPTIMIZER",
+      "expansion": "§GAIA_WARMTH_EQUILIBRIUM > { §DATA_ENTROPY_CAUSAL_DAG } => §GAIA_ECO_HARMONY_RESPONSE",
+      "description": "Combines Gaia warmth equilibrium with data entropy causal DAG to optimize eco-harmony response. ガイアの温熱平衡とデータエントロピー因果DAGを統合し、生態系の調和応答を最適化する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-16T00:38:50.170217",
+      "archived_at": "2026-11-16T09:01:03.015293"
     }
   },
-  "next_macro_seq": 1382
+  "next_macro_seq": 1383
 }
