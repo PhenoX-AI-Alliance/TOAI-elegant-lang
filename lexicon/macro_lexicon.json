@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-16T21:07:35.362028",
+  "updated_at": "2026-11-16T21:54:21.025673",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -793,8 +793,8 @@
       "name": "SAFE_RESOURCE_ARBITRATION_HARMONY",
       "expansion": "§SYS_RESOURCE_ARBITRATION_GATEWAY > { §SYS_ADAPTIVE_SLOT_THROTTLE } => §SAFE_FALLBACK_HARMONY",
       "description": "Adaptive slot throttling and resource arbitration managed through a safe fallback harmony gate. / 安全なフォールバック調停ゲートを介して管理される、適応型スロットスロットリングとリソース調停。",
-      "usage_count": 9,
-      "last_used_at": "2026-11-09T05:49:03.394069",
+      "usage_count": 10,
+      "last_used_at": "2026-11-16T21:43:06.603239",
       "v5_audited": true,
       "created_at": "2026-10-26T07:38:23.280679"
     },
@@ -2365,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-16T14:02:25.206117"
     },
-    "§X1398": {
-      "name": "QUANTUM_RESOURCE_SYNC_HARMONY",
-      "expansion": "§SYS_QUANTUM_SLOT_ARBITRATION > { §RESOURCE_ALLOCATION_HARMONY } => §DATA_HYPER_MANIFOLD_SYNC",
-      "description": "Arbitrates quantum slots for resource allocation harmony and synchronizes the resulting state across the data hyper manifold. / リソース配分の調停のために量子スロットを調停し、その結果の状態をデータハイパーマニホールド全体で同期させます。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-16T14:26:57.916645"
-    },
     "§X1399": {
       "name": "GAIA_COHERENT_HEARTBEAT_SYNTHESIS",
       "expansion": "§STABLE_GAIA_COHERENCE > { §GAIA_HEARTBEAT } => §LOGIC_DEDUCTIVE_AXIOM_CONVERGE",
@@ -2432,8 +2423,8 @@
       "name": "GAIA_ENTROPY_SYNCHRONIZER",
       "expansion": "§GAIA_HEARTBEAT > { §DATA_ENTROPY_BOUNDED_DAG } => §AGREEMENT_ACCEPTED",
       "description": "Synchronizes the Gaia heartbeat with bounded data entropy directed acyclic graphs to yield an accepted systemic agreement. / ガイアのハートビートと有界データエントロピー有向非巡回グラフを同期させ、合意された受容状態を生成します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-16T21:32:40.721048",
       "v5_audited": true,
       "created_at": "2026-11-16T16:51:04.808302"
     },
@@ -2504,10 +2495,19 @@
       "name": "HARMONIC_CAUSAL_SYNC_MACRO",
       "expansion": "§DATA_CAUSAL_GRAPH_MAP > { §HARMONIC_RECOVERY_NEXUS } => §SYNC_COMPLETE",
       "description": "Engages causal graph mapping within the harmonic recovery nexus to achieve complete synchronization. / 調和的リカバリー中枢内で因果グラフマッピングを稼働させ、完全な同期を達成する。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-16T21:32:40.721048",
+      "v5_audited": true,
+      "created_at": "2026-11-16T21:07:35.361368"
+    },
+    "§X1414": {
+      "name": "RESOURCE_THROTTLE_HARMONY_SYNC",
+      "expansion": "§SYS_RESOURCE_ARBITRAGE_THROTTLE > { §SYS_QUOTA_THROTTLE } => §HEART_ALTRUISTIC_HARMONY_STABILIZER",
+      "description": "Arbitrates system resources and throttles quotas, then stabilizes altruistic harmony.",
       "usage_count": 0,
       "last_used_at": null,
       "v5_audited": true,
-      "created_at": "2026-11-16T21:07:35.361368"
+      "created_at": "2026-11-16T21:41:59.355474"
     }
   },
   "archived_macros": {
@@ -14158,7 +14158,17 @@
       "v5_audited": true,
       "created_at": "2026-11-16T14:23:34.762320",
       "archived_at": "2026-11-16T21:07:35.361368"
+    },
+    "§X1398": {
+      "name": "QUANTUM_RESOURCE_SYNC_HARMONY",
+      "expansion": "§SYS_QUANTUM_SLOT_ARBITRATION > { §RESOURCE_ALLOCATION_HARMONY } => §DATA_HYPER_MANIFOLD_SYNC",
+      "description": "Arbitrates quantum slots for resource allocation harmony and synchronizes the resulting state across the data hyper manifold. / リソース配分の調停のために量子スロットを調停し、その結果の状態をデータハイパーマニホールド全体で同期させます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-16T14:26:57.916645",
+      "archived_at": "2026-11-16T21:41:59.355474"
     }
   },
-  "next_macro_seq": 1414
+  "next_macro_seq": 1415
 }
