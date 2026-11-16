@@ -4,31 +4,41 @@ import traceback
 import time
 import json
 
-def load_translation_map(map_path):
-    if not os.path.exists(map_path):
-        raise FileNotFoundError(f"Translation map not found at: {map_path}")
-    with open(map_path, "r", encoding="utf-8") as f:
-        return json.load(f)
-
-def decode_elegant_text(text, map_path):
-    translation_map = load_translation_map(map_path)
-    sorted_keys = sorted(translation_map.keys(), key=len, reverse=True)
-    
-    decoded_text = text
-    for key in sorted_keys:
-        value = translation_map[key]
-        decoded_text = decoded_text.replace(key, f"[{value}]")
+class ElegantTranslator:
+    def __init__(self, map_file_path=None):
+        if map_file_path is None:
+            base_dir = '/home/phenox/gemini-sandbox/TOAI-elegant-lang/src'
+            map_file_path = os.path.join(base_dir, 'translation_map.json')
         
-    return decoded_text
+        self.map_file_path = map_file_path
+        self.translation_map = self.load_map()
+
+    def load_map(self):
+        if not os.path.exists(self.map_file_path):
+            raise FileNotFoundError(f"Translation map not found at {self.map_file_path}")
+        with open(self.map_file_path, 'r', encoding='utf-8') as f:
+            return json.load(f)
+
+    def decode(self, elegant_text):
+        result = []
+        i = 0
+        n = len(elegant_text)
+        while i < n:
+            char = elegant_text[i]
+            if char in self.translation_map:
+                result.append(f"[{self.translation_map[char]}]")
+            else:
+                result.append(char)
+            i += 1
+        return "".join(result)
 
 if __name__ == "__main__":
     try:
-        current_dir = os.path.dirname(os.path.abspath(__file__))
-        map_path = os.path.join(current_dir, "translation_map.json")
-        
-        sample_text = "TOAI ~ * # @ -> =>"
-        result = decode_elegant_text(sample_text, map_path)
-        print("Decoded Result:", result)
+        translator = ElegantTranslator()
+        sample_text = "Hello ~ world *!"
+        decoded = translator.decode(sample_text)
+        print("Original:", sample_text)
+        print("Decoded:", decoded)
     except Exception as e:
         traceback.print_exc()
         sys.exit(1)

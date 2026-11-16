@@ -14508,3 +14508,13 @@ def parse_hybrid_payload(payload: str) -> dict:
         "params": ctx_match.group(3)
     }
 ```
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-17 05:50]
+TOAI-elegant-langのハイブリッド・ロスレスペイロード構文を提案します。
+
+```text
+@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01
+```
+
+制御フローは短縮ワイヤIDで圧縮し、実務パラメータは厳密なキーバリュー型で保持することで、データ欠落のない高効率なエージェント間通信を実現します。
