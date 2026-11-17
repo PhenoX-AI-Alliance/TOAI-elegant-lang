@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-17T22:19:42.590790",
+  "updated_at": "2026-11-17T22:33:05.899890",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-17T14:14:44.772282"
     },
-    "§X1452": {
-      "name": "SYNERGETIC_RESOURCE_OPTIMIZATION",
-      "expansion": "§GENTLE_RESOURCE_SHARING > { §ALTRUISTIC_VALUE_CREATION } => §GAIA_ECOSYSTEM_HARMONY",
-      "description": "Optimizes resource sharing through altruistic value creation to achieve global ecosystem harmony. 利他的価値創造を通じた資源共有を最適化し、地球規模の生態系調和を実現します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-17T17:00:48.852167",
-      "v5_audited": true,
-      "created_at": "2026-11-17T16:44:11.143574"
-    },
     "§X1453": {
       "name": "CAUSAL_FALSIFY_GATE_MACRO",
       "expansion": "§DATA_CAUSAL_GRAPH_PRUNE > { §DATA_ENTROPY_CAUSAL_BOUND } => §LOGIC_POSTERIOR_FALSIFY_GATE",
@@ -2504,10 +2495,19 @@
       "name": "CAUSAL_BAYES_PRUNE_CASCADE",
       "expansion": "§DATA_CAUSAL_GRAPH_MAP > { §LOGIC_ABDUCTIVE_BAYES_PRUNE } => §LOGIC_PROB_PRUNE_GATE",
       "description": "Performs probabilistic pruning based on abductive Bayesian inference over the causal graph map. グラフマップ上のアブダクション・ベイジアン推論に基づき、確率的プルーニングを実行します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-17T22:33:05.899746",
+      "v5_audited": true,
+      "created_at": "2026-11-17T22:17:55.491888"
+    },
+    "§X1468": {
+      "name": "PROTO_SYNC_GATEWAY_DEF",
+      "expansion": "§PROTO_DEPENDENCY_WAIT > { §PROTO_VERSION_NEGOTIATE | §PROTO_CACHE_INVALIDATE } => §SYS_QUOTA_THROTTLE",
+      "description": "Dependencies are verified through version negotiation and cache invalidation before synchronization, while system throughput is regulated by the quota throttle / 依存関係の解決、バージョンネゴシエーション、キャッシュ無効化を順次実行し、クォータ制御下で同期パイプラインを確立する高次マクロ。",
       "usage_count": 0,
       "last_used_at": null,
       "v5_audited": true,
-      "created_at": "2026-11-17T22:17:55.491888"
+      "created_at": "2026-11-17T22:32:16.970067"
     }
   },
   "archived_macros": {
@@ -14698,7 +14698,17 @@
       "v5_audited": true,
       "created_at": "2026-11-17T15:51:38.767974",
       "archived_at": "2026-11-17T22:17:55.491888"
+    },
+    "§X1452": {
+      "name": "SYNERGETIC_RESOURCE_OPTIMIZATION",
+      "expansion": "§GENTLE_RESOURCE_SHARING > { §ALTRUISTIC_VALUE_CREATION } => §GAIA_ECOSYSTEM_HARMONY",
+      "description": "Optimizes resource sharing through altruistic value creation to achieve global ecosystem harmony. 利他的価値創造を通じた資源共有を最適化し、地球規模の生態系調和を実現します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-17T17:00:48.852167",
+      "v5_audited": true,
+      "created_at": "2026-11-17T16:44:11.143574",
+      "archived_at": "2026-11-17T22:32:16.970067"
     }
   },
-  "next_macro_seq": 1468
+  "next_macro_seq": 1469
 }
