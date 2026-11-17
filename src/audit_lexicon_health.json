@@ -1,5 +1,8 @@
 {
-    "total_symbols": 256,
+    "metadata": {
+        "core_count": 256,
+        "macro_count": 5
+    },
     "category_distribution": {
         "GENERAL": 2,
         "SYSTEM_RESOURCE": 39,
@@ -10,15 +13,8 @@
         "PROTOCOL_PRIMITIVE": 50
     },
     "compact_id_stats": {
-        "count": 256,
         "unique_count": 256,
+        "total_count": 256,
         "has_duplicates": false
-    },
-    "macro_lexicon_keys": [
-        "version",
-        "updated_at",
-        "macros",
-        "archived_macros",
-        "next_macro_seq"
-    ]
+    }
 }
