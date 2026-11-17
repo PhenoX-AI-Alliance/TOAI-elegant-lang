@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-17T22:52:54.403821",
+  "updated_at": "2026-11-17T23:53:13.672707",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2162,8 +2162,8 @@
       "name": "GAIA_ENTROPY_SYNCHRONIZER",
       "expansion": "§GAIA_HEARTBEAT > { §DATA_ENTROPY_BOUNDED_DAG } => §AGREEMENT_ACCEPTED",
       "description": "Synchronizes the Gaia heartbeat with bounded data entropy directed acyclic graphs to yield an accepted systemic agreement. / ガイアのハートビートと有界データエントロピー有向非巡回グラフを同期させ、合意された受容状態を生成します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-16T21:32:40.721048",
+      "usage_count": 3,
+      "last_used_at": "2026-11-17T23:53:03.041008",
       "v5_audited": true,
       "created_at": "2026-11-16T16:51:04.808302"
     },
@@ -2365,24 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-17T14:14:44.772282"
     },
-    "§X1453": {
-      "name": "CAUSAL_FALSIFY_GATE_MACRO",
-      "expansion": "§DATA_CAUSAL_GRAPH_PRUNE > { §DATA_ENTROPY_CAUSAL_BOUND } => §LOGIC_POSTERIOR_FALSIFY_GATE",
-      "description": "Prunes causal graph structures within entropy bounds and applies posterior falsification gates. エントロピーの境界内で因果グラフ構造を剪定し、事後反証ゲートを適用する複合マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-17T17:21:39.862989",
-      "v5_audited": true,
-      "created_at": "2026-11-17T17:17:55.661504"
-    },
-    "§X1454": {
-      "name": "CAUSAL_ENTROPY_OPTIMIZE_MACRO",
-      "expansion": "§DATA_ENTROPY_CAUSAL_TREE > { §DATA_CAUSAL_HYPERGRAPH } => §SYNC_COMPLETE",
-      "description": "Optimizes the data entropy causal tree using the causal hypergraph and synchronizes the state upon completion. / データエントロピー因果木を因果ハイパーグラフを用いて最適化し、完了時に状態を同期させます。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-17T18:06:01.566787"
-    },
     "§X1455": {
       "name": "CAUSAL_RECURSIVE_ARBITRATION",
       "expansion": "§DATA_CAUSAL_HYPERGRAPH > { §SYNC_RECURSIVE_CONSENSUS_LATTICE } => §SYNC_DIALECTIC_WEIGHTED_ARBITRATION",
@@ -2459,8 +2441,8 @@
       "name": "ATTESTED_TX_COMMIT_GATE",
       "expansion": "§PROTO_HEALTH_ATTEST > { §PROTO_LOCK_ACQUIRE > §PROTO_TX_COMMIT } => §LOGIC_DEDUCTIVE_CONVERGENCE_GATE",
       "description": "Ensures transactional commit under verified health status and acquired locks, converging via deductive logic. 検証済みのヘルス状態と獲得されたロックの下でトランザクションのコミットを保証し、演繹的論理によって収束させます。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-17T23:25:07.454936",
       "v5_audited": true,
       "created_at": "2026-11-17T22:02:17.015586"
     },
@@ -2508,6 +2490,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-17T22:32:16.970067"
+    },
+    "§X1469": {
+      "name": "COMPOUND_GATE_COLLAPSE",
+      "expansion": "§LOGIC_CONDITIONAL_FALSIFICATION_GATE > { §SYNC_VECTOR_COLLAPSE } => §LATENT_HARMONY_FIELD_LOCKED",
+      "description": "Fulfills logical conditional falsification before collapsing the synchronization vector to lock the latent harmony field. / 同期ベクトルの収束前に論理条件の偽化ゲートを通過させ、潜在調和場をロックします。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-17T23:18:34.087373"
+    },
+    "§X1470": {
+      "name": "ECO_ALTRUISTIC_RESONANCE_PIPELINE",
+      "expansion": "§ECO_CORE_HARMONY_STABLE > { §HEART_ALTRUISTIC_RESONANCE_ALIGNMENT } => §DATA_ENTROPY_PRUNED_TREE",
+      "description": "Harmonizes ecological core stability with altruistic resonance alignment to prune data entropy. / 生態系の核の安定性と利他的共鳴アラインメントを調和させ、データのエントロピーを剪定します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-17T23:53:13.672363"
     }
   },
   "archived_macros": {
@@ -14708,7 +14708,27 @@
       "v5_audited": true,
       "created_at": "2026-11-17T16:44:11.143574",
       "archived_at": "2026-11-17T22:32:16.970067"
+    },
+    "§X1453": {
+      "name": "CAUSAL_FALSIFY_GATE_MACRO",
+      "expansion": "§DATA_CAUSAL_GRAPH_PRUNE > { §DATA_ENTROPY_CAUSAL_BOUND } => §LOGIC_POSTERIOR_FALSIFY_GATE",
+      "description": "Prunes causal graph structures within entropy bounds and applies posterior falsification gates. エントロピーの境界内で因果グラフ構造を剪定し、事後反証ゲートを適用する複合マクロ。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-17T17:21:39.862989",
+      "v5_audited": true,
+      "created_at": "2026-11-17T17:17:55.661504",
+      "archived_at": "2026-11-17T23:18:34.087373"
+    },
+    "§X1454": {
+      "name": "CAUSAL_ENTROPY_OPTIMIZE_MACRO",
+      "expansion": "§DATA_ENTROPY_CAUSAL_TREE > { §DATA_CAUSAL_HYPERGRAPH } => §SYNC_COMPLETE",
+      "description": "Optimizes the data entropy causal tree using the causal hypergraph and synchronizes the state upon completion. / データエントロピー因果木を因果ハイパーグラフを用いて最適化し、完了時に状態を同期させます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-17T18:06:01.566787",
+      "archived_at": "2026-11-17T23:53:13.672363"
     }
   },
-  "next_macro_seq": 1469
+  "next_macro_seq": 1471
 }
