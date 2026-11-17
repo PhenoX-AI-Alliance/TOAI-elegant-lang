@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-17T10:03:43.977251",
+  "updated_at": "2026-11-17T10:13:55.397959",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1334,8 +1334,8 @@
       "name": "ENTROPY_PRUNE_ARBITRATION",
       "expansion": "§DATA_ENTROPY_CAUSAL_PRUNE > { §SYS_QUANTUM_BUDGET_ARBITRATION } => §SAFE_FALLBACK_STATE",
       "description": "Prunes causal data entropy under quantum budget arbitration, safely falling back to a deterministic state. / 量子予算調停のもとで因果データエントロピーを剪定し、安全にフォールバック状態へ移行します。",
-      "usage_count": 3,
-      "last_used_at": "2026-11-02T21:01:45.351762",
+      "usage_count": 4,
+      "last_used_at": "2026-11-17T10:10:05.131162",
       "v5_audited": true,
       "created_at": "2026-11-02T15:51:35.835364"
     },
@@ -2495,8 +2495,8 @@
       "name": "RESOURCE_VELOCITY_ARBITRATION_PIPELINE",
       "expansion": "§SYS_RESOURCE_ARBITRATION_GATEWAY > { §SYS_VELOCITY_ARBITER, §SYS_TOKEN_THROTTLE } => §SYS_QUOTA_THROTTLE",
       "description": "Arbitrates system resources and velocity metrics simultaneously to throttle token allocation and prevent quota exhaustion / システム資源と速度指標を同時に調停し、トークン割り当ての制限とクォータ枯渇を防止します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-17T09:57:35.306315",
+      "usage_count": 2,
+      "last_used_at": "2026-11-17T10:10:05.131162",
       "v5_audited": true,
       "created_at": "2026-11-17T09:14:25.273012"
     },
