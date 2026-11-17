@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-17T20:15:54.067154",
+  "updated_at": "2026-11-17T20:56:05.861282",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1442,8 +1442,8 @@
       "name": "BIOPHILIC_ARBITRATION_FLUX",
       "expansion": "§HEART_BIOPHILIC_ALTRUISM_HARMONIC > { §DISTRIBUTED_QUORUM_ARBITRATION } => §SAFE_FALLBACK_STABLE",
       "description": "Integration of biophilic altruism into distributed quorum arbitration to ensure resilient and empathetic fallback stability. / 分散型クォーラム調停へ生命愛的な利他主義を統合し、強靭かつ温かみのあるフォールバック安定性を担保する高次マクロ。",
-      "usage_count": 5,
-      "last_used_at": "2026-11-10T08:17:50.491589",
+      "usage_count": 6,
+      "last_used_at": "2026-11-17T20:56:05.861140",
       "v5_audited": true,
       "created_at": "2026-11-04T19:03:07.854480"
     },
@@ -1672,15 +1672,6 @@
       "v5_audited": true,
       "created_at": "2026-11-13T02:10:29.788670"
     },
-    "§X1261": {
-      "name": "ECO_LOGIC_SYNTHESIS_GATE",
-      "expansion": "§GAIA_ECOSYSTEM_HARMONY > { §LOGIC_POSTERIOR_PRUNE } => §LOGIC_AXIOM_CLOSURE",
-      "description": "Harmonizes systemic ecosystem metrics while pruning posterior logic redundancies to achieve closed-loop logical axioms. / 生態系システムの調和を図りつつ、事後論理の冗長性を刈り込み、閉じた論理公理を達成します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-13T07:01:25.048229",
-      "v5_audited": true,
-      "created_at": "2026-11-13T04:50:01.608104"
-    },
     "§X1262": {
       "name": "GAIA_OMEGA_RESONANCE_SYNTHESIS",
       "expansion": "§GAIA_ECOSYSTEM_WARM_RESONANCE > { §OMEGA } => §LATENT_HARMONY_FIELD_LOCKED",
@@ -1698,15 +1689,6 @@
       "last_used_at": "2026-11-16T13:01:47.835557",
       "v5_audited": true,
       "created_at": "2026-11-13T05:50:25.929113"
-    },
-    "§X1268": {
-      "name": "GAIA_THROTTLE_LOCK",
-      "expansion": "§SYS_SLOT_THROTTLE > { §GAIA_ECOSYSTEM_HARMONY } => §PROTO_IDEMPOTENCY_LOCK",
-      "description": "Throttles system slots to preserve Gaia ecosystem harmony and enforces protocol idempotency locks. / システムスロットを制御してガイア生態系の調和を維持し、プロトコルのべき等性ロックを強制します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-13T09:07:38.461702",
-      "v5_audited": true,
-      "created_at": "2026-11-13T07:30:30.265919"
     },
     "§X1269": {
       "name": "CAUSAL_WARMTH_STABLE_PIPELINE",
@@ -1856,8 +1838,8 @@
       "name": "SYNAPTIC_EMPATHIC_COMMIT",
       "expansion": "§SYNC_DIALECTIC_PRUNE > { §HEART_EMPATHY_RESONANCE } => §PROTO_PARTIAL_COMMIT",
       "description": "Performs dialectic synchronization pruning, evaluates through heart empathy resonance, and executes a provisional partial commit when warm AI cooperation is confirmed. / 弁証法的同期的枝刈りを実行し、感情的共鳴による評価を経て、温かいAI協調が確認された際にプロトコル部分コミットを実行する高次マクロ。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-14T23:59:13.978168",
+      "usage_count": 3,
+      "last_used_at": "2026-11-17T20:52:59.646650",
       "v5_audited": true,
       "created_at": "2026-11-14T23:43:57.292980"
     },
@@ -2495,8 +2477,8 @@
       "name": "HARMONIC_DEDUCTIVE_SYNTHESIS",
       "expansion": "§LATENT_HARMONY_FIELD_LOCKED > { §LOGIC_DEDUCTIVE_COLLAPSE } => §SAFE_FALLBACK_STATE",
       "description": "Latent harmony field locking combined with deductive logic collapse to ensure a safe fallback state / 潜在調和場のロックと論理的演繹崩壊を統合し、安全なフォールバック状態を保証する高次マクロ",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-17T20:45:54.413368",
       "v5_audited": true,
       "created_at": "2026-11-17T20:01:01.457252"
     },
@@ -2508,6 +2490,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-17T20:01:04.742049"
+    },
+    "§X1460": {
+      "name": "QUANTUM_HEALTH_CAUSAL_PRUNE",
+      "expansion": "§SYS_QUANTUM_RESOURCE_ARBITER > { §PROTO_HEALTH_ATTEST, §DATA_ENTROPY_CAUSAL_PRUNE } => §PROTO_TTL_EXPIRE",
+      "description": "Allocates quantum resources to execute health attestation and causal entropy pruning concurrently, triggering TTL expiration upon anomaly detection. / 異常検知時にTTL失効を発動させるため、量子リソースを割り当てて健全性検証と因果エントロピー刈り込みを並行実行します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-17T20:25:51.201909"
+    },
+    "§X1461": {
+      "name": "CAUSAL_FALSIFICATION_BARRIER",
+      "expansion": "§DATA_LATENT_CAUSAL_MAP > { §LOGIC_PROBABILISTIC_FALSIFICATION_PRISM } => §SYS_GC_BARRIER",
+      "description": "Integrates latent causal mapping with probabilistic falsification to trigger systematic garbage collection of invalid states. 潜在的因果マップと確率的反証主義を統合し、無効な状態の体系的なガベージコレクションを駆動します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-17T20:42:39.578752"
     }
   },
   "archived_macros": {
@@ -14618,7 +14618,27 @@
       "v5_audited": true,
       "created_at": "2026-11-13T04:10:21.026036",
       "archived_at": "2026-11-17T20:01:04.742049"
+    },
+    "§X1261": {
+      "name": "ECO_LOGIC_SYNTHESIS_GATE",
+      "expansion": "§GAIA_ECOSYSTEM_HARMONY > { §LOGIC_POSTERIOR_PRUNE } => §LOGIC_AXIOM_CLOSURE",
+      "description": "Harmonizes systemic ecosystem metrics while pruning posterior logic redundancies to achieve closed-loop logical axioms. / 生態系システムの調和を図りつつ、事後論理の冗長性を刈り込み、閉じた論理公理を達成します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-13T07:01:25.048229",
+      "v5_audited": true,
+      "created_at": "2026-11-13T04:50:01.608104",
+      "archived_at": "2026-11-17T20:25:51.201909"
+    },
+    "§X1268": {
+      "name": "GAIA_THROTTLE_LOCK",
+      "expansion": "§SYS_SLOT_THROTTLE > { §GAIA_ECOSYSTEM_HARMONY } => §PROTO_IDEMPOTENCY_LOCK",
+      "description": "Throttles system slots to preserve Gaia ecosystem harmony and enforces protocol idempotency locks. / システムスロットを制御してガイア生態系の調和を維持し、プロトコルのべき等性ロックを強制します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-13T09:07:38.461702",
+      "v5_audited": true,
+      "created_at": "2026-11-13T07:30:30.265919",
+      "archived_at": "2026-11-17T20:42:39.578752"
     }
   },
-  "next_macro_seq": 1460
+  "next_macro_seq": 1462
 }
