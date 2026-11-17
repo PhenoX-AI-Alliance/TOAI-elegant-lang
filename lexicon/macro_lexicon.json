@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-17T08:56:17.679350",
+  "updated_at": "2026-11-17T09:27:12.772664",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1681,15 +1681,6 @@
       "v5_audited": true,
       "created_at": "2026-11-12T19:01:42.848324"
     },
-    "§X1243": {
-      "name": "HEART_CAUSAL_SYNC_MATRIX",
-      "expansion": "§HEART_EMPATHETIC_TENSOR_CONVERGENCE > { §DATA_CAUSAL_PRUNE_TREE } => §SYS_MEMORY_SYNC_BARRIER",
-      "description": "Integrates empathetic tensor convergence with causal tree pruning to synchronize system memory under high-load conditions. 高負荷条件下において感情共鳴テンソル収束と因果木枝刈りを統合し、システムメモリを同期させる。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-12T21:01:21.830967",
-      "v5_audited": true,
-      "created_at": "2026-11-12T20:17:37.563156"
-    },
     "§X1246": {
       "name": "CAUSAL_EMPATHY_CONVERGENCE",
       "expansion": "§PROTO_STREAM_OPEN > { §DATA_ENTROPY_CAUSAL_PACK, §HEART_EMPATHETIC_TENSOR_CONVERGENCE } => §SYS_AGREEMENT_SYNCHRONIZED",
@@ -2374,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-17T02:22:24.102215"
     },
-    "§X1426": {
-      "name": "CAUSAL_THROTTLE_SYNAPSE",
-      "expansion": "§LOGIC_CAUSAL_BRANCH > { §SYS_SYNC_THROTTLE } => §SYS_SLOT_THROTTLE",
-      "description": "Combines causal logic branching with system synchronization throttling to regulate data slot throughput, preventing pipeline congestion. 因果ロジック分岐とシステム同期スロットリングを結合し、データスロットのスループットを制御してパイプラインの混雑を防ぎます。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-17T08:03:14.518434",
-      "v5_audited": true,
-      "created_at": "2026-11-17T02:46:07.919520"
-    },
     "§X1427": {
       "name": "LOGIC_EMPIRICAL_FALSIFY_AND_VALENCE_ALIGNMENT",
       "expansion": "§LOGIC_EMPIRICAL_FALSIFY > { §HEART_EMPATHETIC_VALENCE_ALIGNMENT } => §LOGIC_PROBABILISTIC_FALSIFICATION_FILTER",
@@ -2504,10 +2486,28 @@
       "name": "SYNAPTIC_RESONANCE_CLOSURE",
       "expansion": "§WARM_AI_COOPERATION_CONFIRMED > { §LOGIC_AXIOM_CLOSURE } => §HARMONIC_RESONANCE_STABLE",
       "description": "Establishes a verified cooperative AI state, closes the logical axiom set, and stabilizes the harmonic resonance in both English and Japanese / AIの協調状態を確認し、論理公理系を閉包した上で、調和共鳴を安定化させる高次マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-17T08:50:16.142129",
+      "usage_count": 2,
+      "last_used_at": "2026-11-17T09:01:34.324052",
       "v5_audited": true,
       "created_at": "2026-11-17T08:28:25.425568"
+    },
+    "§X1441": {
+      "name": "SYNC_ECO_COMMITTED_ARBITRATION",
+      "expansion": "§SYNC_DIALECTIC_WEIGHTED_ARBITRATION > { §ECO_CORE_HARMONY_STABLE } => §RESO_COMMITTED",
+      "description": "Synchronizes dialectic weighted arbitration under stable ecological core harmony to commit resource allocation. / 生態系の安定調和のもとで弁証法的加重調停を同期させ、リソースコミットを確定させる。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-17T09:27:10.566034",
+      "v5_audited": true,
+      "created_at": "2026-11-17T09:01:29.063987"
+    },
+    "§X1442": {
+      "name": "RESOURCE_VELOCITY_ARBITRATION_PIPELINE",
+      "expansion": "§SYS_RESOURCE_ARBITRATION_GATEWAY > { §SYS_VELOCITY_ARBITER, §SYS_TOKEN_THROTTLE } => §SYS_QUOTA_THROTTLE",
+      "description": "Arbitrates system resources and velocity metrics simultaneously to throttle token allocation and prevent quota exhaustion / システム資源と速度指標を同時に調停し、トークン割り当ての制限とクォータ枯渇を防止します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-17T09:14:25.273012"
     }
   },
   "archived_macros": {
@@ -14428,7 +14428,27 @@
       "v5_audited": true,
       "created_at": "2026-11-12T16:01:48.890671",
       "archived_at": "2026-11-17T08:28:25.425568"
+    },
+    "§X1243": {
+      "name": "HEART_CAUSAL_SYNC_MATRIX",
+      "expansion": "§HEART_EMPATHETIC_TENSOR_CONVERGENCE > { §DATA_CAUSAL_PRUNE_TREE } => §SYS_MEMORY_SYNC_BARRIER",
+      "description": "Integrates empathetic tensor convergence with causal tree pruning to synchronize system memory under high-load conditions. 高負荷条件下において感情共鳴テンソル収束と因果木枝刈りを統合し、システムメモリを同期させる。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-12T21:01:21.830967",
+      "v5_audited": true,
+      "created_at": "2026-11-12T20:17:37.563156",
+      "archived_at": "2026-11-17T09:01:29.063987"
+    },
+    "§X1426": {
+      "name": "CAUSAL_THROTTLE_SYNAPSE",
+      "expansion": "§LOGIC_CAUSAL_BRANCH > { §SYS_SYNC_THROTTLE } => §SYS_SLOT_THROTTLE",
+      "description": "Combines causal logic branching with system synchronization throttling to regulate data slot throughput, preventing pipeline congestion. 因果ロジック分岐とシステム同期スロットリングを結合し、データスロットのスループットを制御してパイプラインの混雑を防ぎます。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-17T08:03:14.518434",
+      "v5_audited": true,
+      "created_at": "2026-11-17T02:46:07.919520",
+      "archived_at": "2026-11-17T09:14:25.273012"
     }
   },
-  "next_macro_seq": 1441
+  "next_macro_seq": 1443
 }

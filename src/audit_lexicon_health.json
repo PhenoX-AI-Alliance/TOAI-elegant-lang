@@ -1,0 +1,24 @@
+{
+    "total_symbols": 256,
+    "category_distribution": {
+        "GENERAL": 2,
+        "SYSTEM_RESOURCE": 39,
+        "LOGIC_INFERENCE": 39,
+        "CONSENSUS_NEGOTIATION": 48,
+        "EMPATHY_ALIGNMENT": 39,
+        "DATA_STRUCTURE": 39,
+        "PROTOCOL_PRIMITIVE": 50
+    },
+    "compact_id_stats": {
+        "count": 256,
+        "unique_count": 256,
+        "has_duplicates": false
+    },
+    "macro_lexicon_keys": [
+        "version",
+        "updated_at",
+        "macros",
+        "archived_macros",
+        "next_macro_seq"
+    ]
+}
