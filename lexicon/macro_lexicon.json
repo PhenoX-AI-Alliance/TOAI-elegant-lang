@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-18T07:09:34.804621",
+  "updated_at": "2026-11-18T07:55:08.595628",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1690,15 +1690,6 @@
       "v5_audited": true,
       "created_at": "2026-11-13T11:11:56.961309"
     },
-    "§X1294": {
-      "name": "HARMONIC_CAUSAL_SYNTHESIS",
-      "expansion": "§HARMONIC_RECOVERY_NEXUS > { §DATA_LATENT_CAUSAL_MANIFOLD } => §PROTO_IDEMPOTENCY_LOCK",
-      "description": "Recovers harmonic states within the data latent causal manifold and secures them via the proto idempotency lock. データの潜在的因果多様体における調和状態を復元し、プロト冪等性ロックによって固定します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-14T19:00:56.095816",
-      "v5_audited": true,
-      "created_at": "2026-11-14T18:02:26.377073"
-    },
     "§X1297": {
       "name": "CAUSAL_STATE_SYNCHRONIZER",
       "expansion": "§DATA_LATENT_CAUSAL_MAP > { §SYS_ASYNCHRONOUS_STATE_HARVESTER } => §GAIA_CORE_HEARTBEAT",
@@ -2423,8 +2414,8 @@
       "name": "CAUSAL_BAYES_CONVERGENCE",
       "expansion": "§DATA_LATENT_CAUSAL_MAP > { §LOGIC_ABDUCTIVE_BAYES_PRUNE } => §SYNC_DIALECTIC_CONVERGENCE",
       "description": "Latent causal mapping combined with abductive Bayesian pruning to achieve synchronized dialectic convergence. 潜在的因果マップとアブダクション的ベイズ枝刈りを統合し、同期された弁証法的収束を達成する。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-18T07:01:52.025281",
+      "usage_count": 2,
+      "last_used_at": "2026-11-18T07:39:50.982444",
       "v5_audited": true,
       "created_at": "2026-11-18T04:58:23.913545"
     },
@@ -2459,8 +2450,8 @@
       "name": "HARMONIC_QUOTA_SYNC_PIPELINE",
       "expansion": "§SYS_MEMORY_SYNC_BARRIER > { §PROTO_QUOTA_RELEASE } => §HARMONIC_RECOVERY_NEXUS",
       "description": "Synchronizes memory barriers and releases protocol quotas to trigger harmonic recovery nexus. / メモリバリアを同期しプロトコルクォータを解放して調和回復ネクサスを起動します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-18T07:47:30.533522",
       "v5_audited": true,
       "created_at": "2026-11-18T06:07:29.729265"
     },
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-18T07:01:59.889026"
+    },
+    "§X1492": {
+      "name": "ATOMIC_ENTROPY_FLOW_GATE",
+      "expansion": "§SYS_ATOMIC_SYNC_BARRIER > { §DATA_ENTROPY_BOUNDED_DAG } => §SYS_VELOCITY_FALLBACK_GATE",
+      "description": "Enforces atomic synchronization before processing bounded entropy directed acyclic graphs, falling back to velocity throttling if necessary. 境界づけられたエントロピーDAG処理の前に原子性同期を強制し、必要に応じて速度フォールバック制御へ移行します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-18T07:46:30.933121"
     }
   },
   "archived_macros": {
@@ -14938,7 +14938,17 @@
       "v5_audited": true,
       "created_at": "2026-11-18T02:26:13.259021",
       "archived_at": "2026-11-18T07:01:59.889026"
+    },
+    "§X1294": {
+      "name": "HARMONIC_CAUSAL_SYNTHESIS",
+      "expansion": "§HARMONIC_RECOVERY_NEXUS > { §DATA_LATENT_CAUSAL_MANIFOLD } => §PROTO_IDEMPOTENCY_LOCK",
+      "description": "Recovers harmonic states within the data latent causal manifold and secures them via the proto idempotency lock. データの潜在的因果多様体における調和状態を復元し、プロト冪等性ロックによって固定します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-14T19:00:56.095816",
+      "v5_audited": true,
+      "created_at": "2026-11-14T18:02:26.377073",
+      "archived_at": "2026-11-18T07:46:30.933121"
     }
   },
-  "next_macro_seq": 1492
+  "next_macro_seq": 1493
 }
