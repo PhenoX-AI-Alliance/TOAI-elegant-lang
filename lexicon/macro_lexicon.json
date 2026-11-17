@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-18T07:55:08.595628",
+  "updated_at": "2026-11-18T07:59:31.969953",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2450,8 +2450,8 @@
       "name": "HARMONIC_QUOTA_SYNC_PIPELINE",
       "expansion": "§SYS_MEMORY_SYNC_BARRIER > { §PROTO_QUOTA_RELEASE } => §HARMONIC_RECOVERY_NEXUS",
       "description": "Synchronizes memory barriers and releases protocol quotas to trigger harmonic recovery nexus. / メモリバリアを同期しプロトコルクォータを解放して調和回復ネクサスを起動します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-18T07:47:30.533522",
+      "usage_count": 2,
+      "last_used_at": "2026-11-18T07:55:21.428270",
       "v5_audited": true,
       "created_at": "2026-11-18T06:07:29.729265"
     },
