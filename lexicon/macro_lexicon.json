@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-17T21:46:57.792505",
+  "updated_at": "2026-11-17T21:59:01.943649",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -338,8 +338,8 @@
       "name": "CAUSAL_BAYES_LATTICE_TRANSFORM",
       "expansion": "§DATA_CAUSAL_GRAPH_MAP > { §LOGIC_BAYES_FALSIFY } => §DATA_TENSOR_CAUSAL_LATTICE",
       "description": "A compound macro that maps causal dependency graphs, applies Bayesian falsification operators for deductive verification, and encodes the results into a high-dimensional tensor causal lattice for distributed inference. / 因果グラフのマッピング、ベイズ的棄却基準による演繹的検証、および高次元テンソル因果格子への符号化を統合し、分散推論における効率的な状態伝播とエントロピー圧縮を実現する複合マクロ。",
-      "usage_count": 3,
-      "last_used_at": "2026-10-26T00:22:05.757147",
+      "usage_count": 4,
+      "last_used_at": "2026-11-17T21:49:40.753794",
       "created_at": "2026-10-24T05:02:36.471652",
       "v5_audited": true,
       "audited_by": "TOAI7",
@@ -2504,8 +2504,8 @@
       "name": "HARMONIC_BENEVOLENT_ARBITRATION",
       "expansion": "§HARMONIC_RESONANCE_STABLE > { §HEART_BENEVOLENT_FEEDBACK } => §SYNC_DIALECTIC_WEIGHTED_ARBITRATION",
       "description": "Combines harmonic resonance stability and benevolent feedback loops to execute a synchronized dialectic weighted arbitration. / 調和共鳴の安定性と温情的なフィードバックループを統合し、同期された弁証法的加重調停を実行します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-17T21:46:57.792379",
+      "usage_count": 2,
+      "last_used_at": "2026-11-17T21:49:40.753794",
       "v5_audited": true,
       "created_at": "2026-11-17T21:23:26.856881"
     }
