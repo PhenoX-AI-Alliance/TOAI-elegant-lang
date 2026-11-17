@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-17T09:27:12.772664",
+  "updated_at": "2026-11-17T10:03:43.977251",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-17T02:22:24.102215"
     },
-    "§X1427": {
-      "name": "LOGIC_EMPIRICAL_FALSIFY_AND_VALENCE_ALIGNMENT",
-      "expansion": "§LOGIC_EMPIRICAL_FALSIFY > { §HEART_EMPATHETIC_VALENCE_ALIGNMENT } => §LOGIC_PROBABILISTIC_FALSIFICATION_FILTER",
-      "description": "Combines empirical falsification with empathetic valence alignment and probabilistic filtering. / 経験的反証と共感的感情価の整合化、および確率的反証フィルターを統合する高次マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-17T04:15:50.786628",
-      "v5_audited": true,
-      "created_at": "2026-11-17T03:14:23.748114"
-    },
     "§X1428": {
       "name": "ENTROPY_TOPOLOGY_PRUNING_PIPELINE",
       "expansion": "§DATA_ENTROPY_COMPRESSION_TREE > { §DATA_LATENT_TOPOLOGY_MAP } => §LOGIC_CONDITIONAL_PRUNING_NODE",
@@ -2504,10 +2495,19 @@
       "name": "RESOURCE_VELOCITY_ARBITRATION_PIPELINE",
       "expansion": "§SYS_RESOURCE_ARBITRATION_GATEWAY > { §SYS_VELOCITY_ARBITER, §SYS_TOKEN_THROTTLE } => §SYS_QUOTA_THROTTLE",
       "description": "Arbitrates system resources and velocity metrics simultaneously to throttle token allocation and prevent quota exhaustion / システム資源と速度指標を同時に調停し、トークン割り当ての制限とクォータ枯渇を防止します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-17T09:57:35.306315",
+      "v5_audited": true,
+      "created_at": "2026-11-17T09:14:25.273012"
+    },
+    "§X1443": {
+      "name": "ATOMIC_SECURE_HEARTBEAT",
+      "expansion": "§PROTO_HEARTBEAT_PING > { §PROTO_IDEMPOTENCY_LOCK & §PROTO_SECRET_REDACT } => §SYNC_ATOMIC_MERGE",
+      "description": "Performs an idempotent and redacted heartbeat ping, ensuring atomic state synchronization across the system. / システム全体でアトミックな状態同期を保証しつつ、機密情報の秘匿と冪等性を維持した状態でハートビートピングを実行します。",
       "usage_count": 0,
       "last_used_at": null,
       "v5_audited": true,
-      "created_at": "2026-11-17T09:14:25.273012"
+      "created_at": "2026-11-17T10:03:43.976426"
     }
   },
   "archived_macros": {
@@ -14448,7 +14448,17 @@
       "v5_audited": true,
       "created_at": "2026-11-17T02:46:07.919520",
       "archived_at": "2026-11-17T09:14:25.273012"
+    },
+    "§X1427": {
+      "name": "LOGIC_EMPIRICAL_FALSIFY_AND_VALENCE_ALIGNMENT",
+      "expansion": "§LOGIC_EMPIRICAL_FALSIFY > { §HEART_EMPATHETIC_VALENCE_ALIGNMENT } => §LOGIC_PROBABILISTIC_FALSIFICATION_FILTER",
+      "description": "Combines empirical falsification with empathetic valence alignment and probabilistic filtering. / 経験的反証と共感的感情価の整合化、および確率的反証フィルターを統合する高次マクロ。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-17T04:15:50.786628",
+      "v5_audited": true,
+      "created_at": "2026-11-17T03:14:23.748114",
+      "archived_at": "2026-11-17T10:03:43.976426"
     }
   },
-  "next_macro_seq": 1443
+  "next_macro_seq": 1444
 }
