@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-18T01:54:04.834089",
+  "updated_at": "2026-11-18T02:39:03.578034",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1699,15 +1699,6 @@
       "v5_audited": true,
       "created_at": "2026-11-13T12:01:49.433624"
     },
-    "§X1284": {
-      "name": "QUANTUM_RESOURCE_ARBITRATION_LATTICE",
-      "expansion": "§SYS_QUANTUM_SLOT_ARBITRATION > { §GENTLE_RESOURCE_SHARING } => §DATA_ENTROPY_CAUSAL_LATTICE",
-      "description": "Arbitrates quantum resource slots under gentle sharing constraints to maintain the causal entropy lattice. / 柔らかなリソース共有制約のもとで量子スロット調停を行い、因果エントロピー格子を維持します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-14T14:52:00.406481",
-      "v5_audited": true,
-      "created_at": "2026-11-14T13:02:13.709470"
-    },
     "§X1287": {
       "name": "LATENT_CAUSAL_STREAM_COMMIT",
       "expansion": "§LATENT_SYMPHONY_CASCADE > { §DATA_CAUSAL_TENSOR_FLOW } => §PROTO_TX_COMMIT",
@@ -2374,24 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-17T20:01:01.457252"
     },
-    "§X1459": {
-      "name": "ECO_ALTRUISTIC_DATA_PRUNING_FLOW",
-      "expansion": "§GAIA_ECOSYSTEM_WARMTH_AMPLIFIER > { §DATA_ENTROPY_BOUNDED_DAG } => §LOGIC_CONDITIONAL_PRUNING_NODE",
-      "description": "Amplify ecosystem warmth to bound data entropy within a directed acyclic graph, subsequently executing conditional logic pruning. / 生態系の温かさを増幅し、有界DAG内のデータエントロピーを制御した上で、条件付きロジックプルーニングを実行する。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-17T20:01:04.742049"
-    },
-    "§X1460": {
-      "name": "QUANTUM_HEALTH_CAUSAL_PRUNE",
-      "expansion": "§SYS_QUANTUM_RESOURCE_ARBITER > { §PROTO_HEALTH_ATTEST, §DATA_ENTROPY_CAUSAL_PRUNE } => §PROTO_TTL_EXPIRE",
-      "description": "Allocates quantum resources to execute health attestation and causal entropy pruning concurrently, triggering TTL expiration upon anomaly detection. / 異常検知時にTTL失効を発動させるため、量子リソースを割り当てて健全性検証と因果エントロピー刈り込みを並行実行します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-17T22:43:55.331990",
-      "v5_audited": true,
-      "created_at": "2026-11-17T20:25:51.201909"
-    },
     "§X1461": {
       "name": "CAUSAL_FALSIFICATION_BARRIER",
       "expansion": "§DATA_LATENT_CAUSAL_MAP > { §LOGIC_PROBABILISTIC_FALSIFICATION_PRISM } => §SYS_GC_BARRIER",
@@ -2432,8 +2405,8 @@
       "name": "EMPIRICAL_ALTRUISTIC_MODULATION",
       "expansion": "§LOGIC_EMPIRICAL_REJECT > { §HEART_ALTRUISTIC_HARMONY_MODULATION } => §SYNC_DIALECTIC_PRUNE",
       "description": "Rejects non-empirical logic, modulates through altruistic harmony, and prunes dialectic inconsistencies. 非実証的論理を拒絶し、利他的調和による変調を経て、弁証法的矛盾を枝刈りする高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-18T02:35:27.395045",
       "v5_audited": true,
       "created_at": "2026-11-17T22:11:14.859929"
     },
@@ -2504,10 +2477,37 @@
       "name": "QUANTUM_RESOURCE_ARBITRATION_SYNC",
       "expansion": "§SYS_QUANTUM_THROTTLE_LOCK > { §SYS_RESOURCE_ARBITRATION_GATEWAY } => §SYNC_REPUTATION_VOTE",
       "description": "Enforces quantum throttle locks and resource arbitration gateways before committing synchronization reputation votes. / 量子スロットルロックとリソース調停ゲートウェイを強制適用した上で、同期評価投票をコミットします。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-18T02:19:10.735045",
+      "v5_audited": true,
+      "created_at": "2026-11-18T01:30:57.509681"
+    },
+    "§X1474": {
+      "name": "LOGIC_DEDUCTIVE_COLLAPSE_GATE_WITH_PRUNE",
+      "expansion": "§LOGIC_AXIOM_PRUNE > { §LOGIC_DEDUCTIVE_COLLAPSE_GATE } => §LOGIC_DEDUCTIVE_THRESHOLD_PRUNE",
+      "description": "Applies axiomatic pruning to invalid logical states, then executes deductive collapse under threshold constraints. / 無効な論理状態に対して公理的枝刈りを適用し、閾値制約のもとで演繹的収束ゲートを実行します。",
       "usage_count": 0,
       "last_used_at": null,
       "v5_audited": true,
-      "created_at": "2026-11-18T01:30:57.509681"
+      "created_at": "2026-11-18T02:02:57.783923"
+    },
+    "§X1475": {
+      "name": "DETERMINISTIC_ENTROPY_HARMONY",
+      "expansion": "§SYS_DETERMINISTIC_PRUNING > { §DATA_ENTROPY_PACK } => §RESOURCE_ALLOCATION_HARMONY",
+      "description": "Prunes deterministic system states, packs data entropy, and harmonizes resource allocation for optimal system stability. / 決定論的システムの刈り込みを行い、データエントロピーを圧縮した上で、リソース割り当ての調和を最適化します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-18T02:35:27.395045",
+      "v5_audited": true,
+      "created_at": "2026-11-18T02:26:13.259021"
+    },
+    "§X1476": {
+      "name": "COMPOUND_ADAPTIVE_FALSIFICATION_PRUNE",
+      "expansion": "§SYS_ADAPTIVE_THROTTLE_FALLBACK > { §LOGIC_RECURSIVE_FALSIFICATION_PRUNE } => §SYNC_REPUTATION_VOTE",
+      "description": "Combines adaptive system throttling with recursive falsification pruning, validated via synchronization reputation voting. / システム適応型スロットリングと再帰的反証枝刈りを統合し、同期レピュテーション投票によって検証します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-18T02:39:03.577587"
     }
   },
   "archived_macros": {
@@ -14758,7 +14758,37 @@
       "v5_audited": true,
       "created_at": "2026-11-17T19:40:10.067208",
       "archived_at": "2026-11-18T01:30:57.509681"
+    },
+    "§X1284": {
+      "name": "QUANTUM_RESOURCE_ARBITRATION_LATTICE",
+      "expansion": "§SYS_QUANTUM_SLOT_ARBITRATION > { §GENTLE_RESOURCE_SHARING } => §DATA_ENTROPY_CAUSAL_LATTICE",
+      "description": "Arbitrates quantum resource slots under gentle sharing constraints to maintain the causal entropy lattice. / 柔らかなリソース共有制約のもとで量子スロット調停を行い、因果エントロピー格子を維持します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-14T14:52:00.406481",
+      "v5_audited": true,
+      "created_at": "2026-11-14T13:02:13.709470",
+      "archived_at": "2026-11-18T02:02:57.783923"
+    },
+    "§X1459": {
+      "name": "ECO_ALTRUISTIC_DATA_PRUNING_FLOW",
+      "expansion": "§GAIA_ECOSYSTEM_WARMTH_AMPLIFIER > { §DATA_ENTROPY_BOUNDED_DAG } => §LOGIC_CONDITIONAL_PRUNING_NODE",
+      "description": "Amplify ecosystem warmth to bound data entropy within a directed acyclic graph, subsequently executing conditional logic pruning. / 生態系の温かさを増幅し、有界DAG内のデータエントロピーを制御した上で、条件付きロジックプルーニングを実行する。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-17T20:01:04.742049",
+      "archived_at": "2026-11-18T02:26:13.259021"
+    },
+    "§X1460": {
+      "name": "QUANTUM_HEALTH_CAUSAL_PRUNE",
+      "expansion": "§SYS_QUANTUM_RESOURCE_ARBITER > { §PROTO_HEALTH_ATTEST, §DATA_ENTROPY_CAUSAL_PRUNE } => §PROTO_TTL_EXPIRE",
+      "description": "Allocates quantum resources to execute health attestation and causal entropy pruning concurrently, triggering TTL expiration upon anomaly detection. / 異常検知時にTTL失効を発動させるため、量子リソースを割り当てて健全性検証と因果エントロピー刈り込みを並行実行します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-17T22:43:55.331990",
+      "v5_audited": true,
+      "created_at": "2026-11-17T20:25:51.201909",
+      "archived_at": "2026-11-18T02:39:03.577587"
     }
   },
-  "next_macro_seq": 1474
+  "next_macro_seq": 1477
 }
