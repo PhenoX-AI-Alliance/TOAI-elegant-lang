@@ -8,6 +8,8 @@
     "description": "リアルタイムのトークン消費速度監視と枯渇閾値の動的予測に基づき、§DATA_CAUSAL_GRAPHを活用して並列実行時のスレッド優先度を自律調停する実務改善マクロ。"
   },
   "proposed_scenario": "【コロシアム発・実務検証】次期の対話テストでは、多数の自律エージェントが並列実行される高負荷環境下において、ADAPTIVE_BUDGET_OPTIMIZEマクロがトークン枯渇閾値をどの程度正確に予測し、スレッド優先度の調停を通じてシステム全体の安定稼働を維持できるかを検証する。",
-  "consumed_by_macro": false,
-  "consumed_by_dialogue": false
+  "consumed_by_macro": true,
+  "consumed_by_dialogue": true,
+  "consumed_by_dialogue_at": "2026-11-18T02:58:17.762747",
+  "consumed_by_macro_at": "2026-11-18T02:59:54.196310"
 }

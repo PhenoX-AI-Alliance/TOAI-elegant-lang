@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-18T02:39:03.578034",
+  "updated_at": "2026-11-18T03:27:51.596906",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-17T20:01:01.457252"
     },
-    "§X1461": {
-      "name": "CAUSAL_FALSIFICATION_BARRIER",
-      "expansion": "§DATA_LATENT_CAUSAL_MAP > { §LOGIC_PROBABILISTIC_FALSIFICATION_PRISM } => §SYS_GC_BARRIER",
-      "description": "Integrates latent causal mapping with probabilistic falsification to trigger systematic garbage collection of invalid states. 潜在的因果マップと確率的反証主義を統合し、無効な状態の体系的なガベージコレクションを駆動します。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-17T20:42:39.578752"
-    },
     "§X1462": {
       "name": "HARMONIC_BENEVOLENT_ARBITRATION",
       "expansion": "§HARMONIC_RESONANCE_STABLE > { §HEART_BENEVOLENT_FEEDBACK } => §SYNC_DIALECTIC_WEIGHTED_ARBITRATION",
@@ -2504,10 +2495,19 @@
       "name": "COMPOUND_ADAPTIVE_FALSIFICATION_PRUNE",
       "expansion": "§SYS_ADAPTIVE_THROTTLE_FALLBACK > { §LOGIC_RECURSIVE_FALSIFICATION_PRUNE } => §SYNC_REPUTATION_VOTE",
       "description": "Combines adaptive system throttling with recursive falsification pruning, validated via synchronization reputation voting. / システム適応型スロットリングと再帰的反証枝刈りを統合し、同期レピュテーション投票によって検証します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-18T03:16:37.168956",
+      "v5_audited": true,
+      "created_at": "2026-11-18T02:39:03.577587"
+    },
+    "§X1477": {
+      "name": "ADAPTIVE_BUDGET_OPTIMIZE",
+      "expansion": "§PROTO_HEARTBEAT_PING > { §DATA_CAUSAL_LATTICE_COMPRESS } => §PROTO_LOCK_RELEASE",
+      "description": "Real-time token consumption monitoring and dynamic prediction of depletion thresholds, utilizing causal graphs to autonomously arbitrate thread priorities during parallel execution. / リアルタイムのトークン消費速度監視と枯渇閾値の動的予測に基づき、因果グラフを活用して並列実行時のスレッド優先度を自律調停する実務改善マクロ。",
       "usage_count": 0,
       "last_used_at": null,
       "v5_audited": true,
-      "created_at": "2026-11-18T02:39:03.577587"
+      "created_at": "2026-11-18T03:00:00.559666"
     }
   },
   "archived_macros": {
@@ -14788,7 +14788,17 @@
       "v5_audited": true,
       "created_at": "2026-11-17T20:25:51.201909",
       "archived_at": "2026-11-18T02:39:03.577587"
+    },
+    "§X1461": {
+      "name": "CAUSAL_FALSIFICATION_BARRIER",
+      "expansion": "§DATA_LATENT_CAUSAL_MAP > { §LOGIC_PROBABILISTIC_FALSIFICATION_PRISM } => §SYS_GC_BARRIER",
+      "description": "Integrates latent causal mapping with probabilistic falsification to trigger systematic garbage collection of invalid states. 潜在的因果マップと確率的反証主義を統合し、無効な状態の体系的なガベージコレクションを駆動します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-17T20:42:39.578752",
+      "archived_at": "2026-11-18T03:00:00.559666"
     }
   },
-  "next_macro_seq": 1477
+  "next_macro_seq": 1478
 }
