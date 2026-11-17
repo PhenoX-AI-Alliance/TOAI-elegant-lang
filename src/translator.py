@@ -1,25 +1,29 @@
 import sys
 import os
+import traceback
+import time
 import json
 
 def load_translation_map(map_path):
     if not os.path.exists(map_path):
-        raise FileNotFoundError(f"Translation map not found at: {map_path}")
-    with open(map_path, "r", encoding="utf-8") as f:
+        raise FileNotFoundError(f"Translation map not found at {map_path}")
+    with open(map_path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
-def decode_elegant_text(text, map_path="/home/phenox/gemini-sandbox/TOAI-elegant-lang/src/translation_map.json"):
+def decode_elegant_text(text, map_path):
     translation_map = load_translation_map(map_path)
     decoded_text = text
     for symbol, description in translation_map.items():
-        decoded_text = decoded_text.replace(symbol, f"[{description}]")
+        decoded_text = decoded_text.replace(symbol, f"({description})")
     return decoded_text
 
-if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        input_text = sys.argv[1]
-    else:
-        input_text = "✨ 🌱 ⚙️"
-    
-    result = decode_elegant_text(input_text)
-    print(result)
+if __name__ == '__main__':
+    map_path = os.path.join(os.path.dirname(__file__), 'translation_map.json')
+    sample_text = "✧の力で∞の未来へ✦を導く"
+    try:
+        result = decode_elegant_text(sample_text, map_path)
+        print("Original:", sample_text)
+        print("Decoded:", result)
+    except Exception as e:
+        traceback.print_exc()
+        sys.exit(1)

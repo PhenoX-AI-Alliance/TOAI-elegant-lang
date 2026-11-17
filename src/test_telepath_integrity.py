@@ -1,44 +1,28 @@
+import unittest
 import os
 import json
-import unittest
 
 class TestTelepathIntegrity(unittest.TestCase):
     def setUp(self):
         self.base_dir = "/home/phenox/gemini-sandbox/TOAI-elegant-lang"
-        self.src_dir = os.path.join(self.base_dir, "src")
+        self.dict_path = os.path.join(self.base_dir, "dict", "telepath_dict.json")
+        self.spec_path = os.path.join(self.base_dir, "specs", "telepath_spec.md")
+        self.log_path = os.path.join(self.base_dir, "logs", "dialogue_history.json")
 
-    def test_directories_exist(self):
-        self.assertTrue(os.path.exists(self.base_dir), "Base directory does not exist.")
-        self.assertTrue(os.path.exists(self.src_dir), "Src directory does not exist.")
+    def test_files_exist(self):
+        self.assertTrue(os.path.exists(self.dict_path), f"Missing dict at {self.dict_path}")
+        self.assertTrue(os.path.exists(self.spec_path), f"Missing spec at {self.spec_path}")
+        self.assertTrue(os.path.exists(self.log_path), f"Missing logs at {self.log_path}")
 
-    def test_dictionary_and_spec_files(self):
-        dict_path = os.path.join(self.base_dir, "dictionary.json")
-        spec_path = os.path.join(self.base_dir, "spec.md")
-        log_path = os.path.join(self.base_dir, "dialogue_log.json")
+    def test_dict_syntax(self):
+        with open(self.dict_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        self.assertIsInstance(data, dict)
 
-        if not os.path.exists(dict_path):
-            with open(dict_path, "w", encoding="utf-8") as f:
-                json.dump({"version": "1.0", "terms": {}}, f, ensure_ascii=False, indent=2)
-        
-        if not os.path.exists(spec_path):
-            with open(spec_path, "w", encoding="utf-8") as f:
-                f.write("# TOAI Elegant Lang Specification\n")
-
-        if not os.path.exists(log_path):
-            with open(log_path, "w", encoding="utf-8") as f:
-                json.dump([], f, ensure_ascii=False, indent=2)
-
-        self.assertTrue(os.path.exists(dict_path), "Dictionary file missing.")
-        self.assertTrue(os.path.exists(spec_path), "Specification file missing.")
-        self.assertTrue(os.path.exists(log_path), "Dialogue log file missing.")
-
-        with open(dict_path, "r", encoding="utf-8") as f:
-            dict_data = json.load(f)
-            self.assertIsInstance(dict_data, dict, "Dictionary must be a JSON object.")
-
-        with open(log_path, "r", encoding="utf-8") as f:
-            log_data = json.load(f)
-            self.assertIsInstance(log_data, list, "Dialogue log must be a JSON list.")
+    def test_log_syntax(self):
+        with open(self.log_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        self.assertIsInstance(data, list)
 
 if __name__ == "__main__":
     unittest.main()
