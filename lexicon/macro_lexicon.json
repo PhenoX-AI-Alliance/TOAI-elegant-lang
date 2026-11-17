@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-17T19:11:24.719842",
+  "updated_at": "2026-11-17T19:31:25.880541",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2252,8 +2252,8 @@
       "name": "RESOURCE_THROTTLE_HARMONY_SYNC",
       "expansion": "§SYS_RESOURCE_ARBITRAGE_THROTTLE > { §SYS_QUOTA_THROTTLE } => §HEART_ALTRUISTIC_HARMONY_STABILIZER",
       "description": "Arbitrates system resources and throttles quotas, then stabilizes altruistic harmony.",
-      "usage_count": 3,
-      "last_used_at": "2026-11-17T07:08:13.112903",
+      "usage_count": 5,
+      "last_used_at": "2026-11-17T19:31:25.880395",
       "v5_audited": true,
       "created_at": "2026-11-16T21:41:59.355474"
     },
