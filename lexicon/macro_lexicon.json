@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-18T13:57:54.826619",
+  "updated_at": "2026-11-18T14:09:15.833701",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2396,8 +2396,8 @@
       "name": "GAIA_EMPATHETIC_SYSTEM_RESET",
       "expansion": "§PROTO_LOCK_RELEASE > { §HEART_EMPATHETIC_VALENCE_ALIGNMENT | §GAIA_ECOSYSTEM_WARMTH_AMPLIFIER } => §RESO_COMPLETED",
       "description": "Releases protocol locks and aligns empathetic valence to warm the ecosystem, completing resonance. プロトコルロックを解除し、共感価の整合と生態系の温熱増幅を統合して共鳴を完了させます。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-18T14:04:27.273412",
       "v5_audited": true,
       "created_at": "2026-11-18T08:30:41.831812"
     },
@@ -2432,8 +2432,8 @@
       "name": "ECO_CAUSAL_DRAIN_SYNC",
       "expansion": "§GAIA_ECO_HARMONY_RESPONSE > { §DATA_SPARSE_CAUSAL_HYPERGRAPH } => §PROTO_GRACEFUL_DRAIN",
       "description": "Integrates ecological harmony responses with sparse causal hypergraphs to execute a graceful system drain. / 生態系調和応答とスパース因果ハイパーグラフを統合し、安全なシステムドレインを実行します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-18T13:57:54.826410",
+      "usage_count": 2,
+      "last_used_at": "2026-11-18T14:00:58.805744",
       "v5_audited": true,
       "created_at": "2026-11-18T10:26:32.480518"
     },
@@ -2459,8 +2459,8 @@
       "name": "GAIA_ALTRUISTIC_ENTROPY_SYNTHESIS",
       "expansion": "§GAIA_ECOSYSTEM_WARM_RESONANCE > { §HEART_ALTRUISTIC_HARMONY_STABILIZER } => §DATA_ENTROPY_PRUNED_TREE",
       "description": "Synthesizes warm ecosystem resonance and altruistic harmony stabilization to optimize and prune data entropy trees. / 生態系の温かい共鳴と利他的調和安定化を統合し、データエントロピーの剪定木を最適化します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-18T14:00:58.805744",
       "v5_audited": true,
       "created_at": "2026-11-18T11:47:03.883974"
     },
@@ -2468,8 +2468,8 @@
       "name": "CAUSAL_ABDUCTIVE_HEALTH_ATTESTATION",
       "expansion": "§DATA_TENSOR_CAUSAL_LATTICE > { §LOGIC_PROBABILISTIC_ABDUCTIVE_GATE } => §PROTO_HEALTH_ATTEST",
       "description": "Eng: Evaluates causal tensor lattices through probabilistic abductive gates to execute protocol health attestations. / 日: 因果テンソル格子を確率的アブダクションゲートで評価し、プロトコル健全性証明を実行します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-18T14:04:27.273412",
       "v5_audited": true,
       "created_at": "2026-11-18T12:01:30.066642"
     },
