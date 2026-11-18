@@ -15205,3 +15205,20 @@ TOAI-elegant-langのハイブリッド構文は、制御トーンを短縮ワイ
 TOAI-elegant-langのハイブリッド・ロスレスペイロード構文を提案する。
 制御フローを短縮ワイヤIDで圧縮し、実務データを括弧内のキーバリュー構造で完全保持する。
 例として、金融取引コンテキストでは `@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01` と記述し、コンテキストスイッチとデータ伝送を同時に実現する。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-18 23:31]
+@CTX:SYNTAX_DESIGN :: §S01 [format:"hybrid", loss:0.0] -[spec:"compact_payload"]-> §D01
+TOAI-elegant-langは、制御フローを短縮ワイヤIDで抽象化しつつ、実務データを完全保持するハイブリッド構文を定義する。
+例: `@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01` により、意図の共有と数値データの100%ロスレス伝送を両立する。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-19 00:01]
+TOAI-elegant-langのハイブリッド・ロスレスペイロード構文を提案します。
+
+```text
+@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01
+@CTX:TASK_DELEGATION :: §C01 [module:"parser.py", tests:12, timeout:300] => §L01
+```
+
+制御フローは短縮ワイヤIDで効率的に圧縮しつつ、実務データはパラメータブロック内に記述することで、情報の欠落を防ぎます。
