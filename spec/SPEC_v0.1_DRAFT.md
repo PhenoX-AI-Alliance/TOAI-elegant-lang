@@ -15085,3 +15085,8 @@ def parse_payload(ctx: str, wire_id: str, data: dict, target: str) -> str:
 ```
 
 本構文は、制御トーンを短縮ワイヤID（§S01等）で圧縮しつつ、実務データをJSON互換のキーバリュー形式で完全保持し、エージェント間通信のロスレス伝送を実現する。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-18 17:27]
+TOAI-elegant-langは、制御フローを短縮ワイヤIDで圧縮しつつ実務データを完全保持するハイブリッド・ロスレスペイロード構文を提案する。
+ `@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01` のように、感情トーンや意図をワイヤID化し、数値や変数名などの実務データを100%欠落なく伝送することで、エージェント間通信の高効率化と堅牢性を両立する。
