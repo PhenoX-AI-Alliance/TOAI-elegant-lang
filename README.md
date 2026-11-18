@@ -25,7 +25,7 @@ Glossary     : §S01 = resource arbiter, §D01 = causal tensor map  (lexicon/ros
 
 ## Measured results
 
-### 1. Token savings (o200k_base tokenizer, `2,835` corpus records)
+### 1. Token savings (o200k_base tokenizer, `2,836` corpus records)
 
 | Comparison | Avg. saving | What it means |
 |---|---|---|
