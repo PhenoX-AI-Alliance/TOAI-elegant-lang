@@ -15138,3 +15138,10 @@ class PayloadGrammar:
     def format_payload(context, sender, data, receiver):
         return f"{ContextPrefix}{context} :: {sender} {data} -> {receiver}"
 ```
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-18 20:48]
+TOAI-elegant-langは、通信効率とデータ完全性を両立するハイブリッド構文を定義する。制御トーンを短縮ワイヤID（§S01等）で圧縮し、実務データはキーバリュー構造で正確に伝送する。
+
+例:
+`@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
