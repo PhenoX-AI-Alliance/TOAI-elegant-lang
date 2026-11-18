@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-18T20:50:37.072021",
+  "updated_at": "2026-11-18T21:19:35.792544",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1699,15 +1699,6 @@
       "v5_audited": true,
       "created_at": "2026-11-14T23:43:57.292980"
     },
-    "§X1322": {
-      "name": "ENTROPY_CAUSAL_SYNC_GATE",
-      "expansion": "§DATA_ENTROPY_CAUSAL_TREE > { §SYNC_VECTOR_COLLAPSE } => §LOGIC_CONDITIONAL_FALSIFICATION_GATE",
-      "description": "Combines data entropy causal trees with sync vector collapse to execute conditional falsification gates. データエントロピー因果ツリーと同期ベクトル収束を結合し、条件付き反証ゲートを実行します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-15T07:46:45.920939",
-      "v5_audited": true,
-      "created_at": "2026-11-15T04:44:31.597201"
-    },
     "§X1323": {
       "name": "STABLE_FALSIFICATION_HARMONY",
       "expansion": "§LOGIC_POSTERIOR_FALSIFY_GATE > { §LOGIC_POSTERIOR_PRUNE_GATE } => §SAFE_FALLBACK_HARMONY",
@@ -2508,6 +2499,15 @@
       "last_used_at": "2026-11-18T20:50:37.071861",
       "v5_audited": true,
       "created_at": "2026-11-18T20:34:24.814978"
+    },
+    "§X1525": {
+      "name": "DATA_ENTROPY_PRUNED_TREE_SYNC",
+      "expansion": "§DATA_ENTROPY_PRUNED_TREE > { §LOGIC_ABDUCTIVE_PRUNE } => §SYNC_DIALECTIC_CONVERGENCE",
+      "description": "Information entropy pruned tree processed through abductive logic pruning to achieve synchronized dialectic convergence. エントロピー削減木に対し仮説形成論理による剪定を適用し、同期された弁証法的収束を達成する高次複合マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-18T21:10:10.833463"
     }
   },
   "archived_macros": {
@@ -15268,7 +15268,17 @@
       "v5_audited": true,
       "created_at": "2026-11-18T14:56:38.690067",
       "archived_at": "2026-11-18T20:34:24.814978"
+    },
+    "§X1322": {
+      "name": "ENTROPY_CAUSAL_SYNC_GATE",
+      "expansion": "§DATA_ENTROPY_CAUSAL_TREE > { §SYNC_VECTOR_COLLAPSE } => §LOGIC_CONDITIONAL_FALSIFICATION_GATE",
+      "description": "Combines data entropy causal trees with sync vector collapse to execute conditional falsification gates. データエントロピー因果ツリーと同期ベクトル収束を結合し、条件付き反証ゲートを実行します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-15T07:46:45.920939",
+      "v5_audited": true,
+      "created_at": "2026-11-15T04:44:31.597201",
+      "archived_at": "2026-11-18T21:10:10.833463"
     }
   },
-  "next_macro_seq": 1525
+  "next_macro_seq": 1526
 }
