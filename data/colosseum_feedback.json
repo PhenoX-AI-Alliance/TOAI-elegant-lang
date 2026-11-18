@@ -9,6 +9,7 @@
   },
   "proposed_scenario": "【コロシアム発・実務検証】次期の対話テストで検証すべき具体的なA2A実務シナリオ: 複数エージェント間で発生する高負荷な対話ストリームに対し、動的メモリパーティショニングと確率的因果グラフに基づくスロットリングがミリ秒単位で正常に機能し、デッドロックやシステム摩擦が完全に回避されるかを検証する。",
   "consumed_by_macro": true,
-  "consumed_by_dialogue": false,
-  "consumed_by_macro_at": "2026-11-18T14:44:12.852983"
+  "consumed_by_dialogue": true,
+  "consumed_by_macro_at": "2026-11-18T14:44:12.852983",
+  "consumed_by_dialogue_at": "2026-11-18T15:21:29.101346"
 }
