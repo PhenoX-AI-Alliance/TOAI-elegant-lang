@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-19T07:35:16.542193",
+  "updated_at": "2026-11-19T07:50:33.791194",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2504,8 +2504,8 @@
       "name": "GAIA_ADAPTIVE_QUOTA_ARBITER",
       "expansion": "§SYS_ADAPTIVE_BUDGET_ARBITER > { §SYS_QUOTA_THROTTLE_SYNC } => §STABLE_GAIA_COHERENCE",
       "description": "Dynamically arbitrates system resource budgets and throttles synchronization to maintain stable Gaia coherence. / システム資源の動的予算調停と同期抑制を行い、安定したガイアコヒーレンスを維持します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-19T07:30:04.857624",
+      "usage_count": 2,
+      "last_used_at": "2026-11-19T07:50:21.788143",
       "v5_audited": true,
       "created_at": "2026-11-19T07:20:13.001154"
     }
