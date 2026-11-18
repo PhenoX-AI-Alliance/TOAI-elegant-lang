@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-19T02:14:55.573226",
+  "updated_at": "2026-11-19T03:03:24.972922",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -85,8 +85,8 @@
       "expansion": "§PROTO_STATE_SNAPSHOT > { §DATA_CAUSAL_TENSOR_FLOW } => §PROTO_TX_ROLLBACK",
       "description": "Captures a state snapshot, executes causal tensor flow processing, and triggers an atomic rollback upon runtime exception. / エージェントの状態をスナップショットに保存しつつ因果テンソルフローの演算を実行し、異常発生時にはアトミックなロールバックを行う複合マクロ。",
       "created_at": "2026-10-23T08:02:39.060706",
-      "usage_count": 5,
-      "last_used_at": "2026-11-12T10:07:05.796847",
+      "usage_count": 6,
+      "last_used_at": "2026-11-19T03:01:16.312833",
       "v5_audited": true,
       "audited_by": "TOAI",
       "audited_at": "2026-10-25T14:39:30.324709"
@@ -1559,8 +1559,8 @@
       "name": "ELEGANT_RECURSIVE_CONSENSUS_BRIDGE",
       "expansion": "§SYNC_RECURSIVE_CONSENSUS_LATTICE > { §PROTO_CIRCUIT_BREAK } => §ELEGANT_HARMONY_ECHO",
       "description": "Recursively synchronizes distributed lattice consensus while gracefully handling circuit breaks to emit harmonious system echoes. / 分散型格子合意の再帰的同期を行いつつ、サーキットブレーカーを優美に処理して調和のとれたシステムエコーを出力します。",
-      "usage_count": 5,
-      "last_used_at": "2026-11-18T08:29:34.605017",
+      "usage_count": 6,
+      "last_used_at": "2026-11-19T02:53:47.986606",
       "v5_audited": true,
       "created_at": "2026-11-07T07:00:29.466077"
     },
@@ -1734,15 +1734,6 @@
       "last_used_at": "2026-11-15T22:33:34.879098",
       "v5_audited": true,
       "created_at": "2026-11-15T20:01:36.735186"
-    },
-    "§X1354": {
-      "name": "EMPIRICAL_SAFE_PRUNE_AND_ROLLBACK",
-      "expansion": "§LOGIC_EMPIRICAL_PRUNE > { §HEART_ALTRUISTIC_SAFETY_BOUND } => §PROTO_TX_ROLLBACK",
-      "description": "Applies empirical logic pruning under altruistic safety bounds, executing a transaction rollback if topological verification fails. / 利他的安全境界のもとで経験的論理刈り込みを適用し、検証に失敗した場合はトランザクションをロールバックする。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-15T21:11:57.448102",
-      "v5_audited": true,
-      "created_at": "2026-11-15T20:33:52.499793"
     },
     "§X1358": {
       "name": "CAUSAL_DEDUCTIVE_SYNCHRONIZER",
@@ -2365,15 +2356,6 @@
       "v5_audited": true,
       "created_at": "2026-11-18T19:36:31.090053"
     },
-    "§X1523": {
-      "name": "CAUSAL_ALTRUISTIC_CONVERGENCE",
-      "expansion": "§DATA_CAUSAL_MANIFOLD > { §HEART_ALTRUISTIC_RESONANCE } => §HARMONIC_RECOVERY_NEXUS",
-      "description": "Integrates data causal manifolds with altruistic resonance to achieve harmonic recovery / データ因果多様体を利他的共鳴と統合し、調和的復元を達成する高次マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-18T20:50:37.071861",
-      "v5_audited": true,
-      "created_at": "2026-11-18T20:31:13.046062"
-    },
     "§X1524": {
       "name": "DIALECTIC_RESOURCE_ARBITRAGE_PRISM",
       "expansion": "§SYNC_DIALECTIC_PRUNE > { §SYS_RESOURCE_ARBITRAGE_THROTTLE } => §LOGIC_PROBABILISTIC_FALSIFICATION_PRISM",
@@ -2477,8 +2459,8 @@
       "name": "COMPOUND_SYNC_TX_COMMIT",
       "expansion": "§SYNC_DIALECTIC_QUORUM_WEIGHT > { §PROTO_TX_COMMIT } => §PROTO_LOCK_ACQUIRE",
       "description": "Consolidates distributed dialectic quorum consensus with atomic protocol transaction commitment under a secured lock acquisition phase. / 分散弁証法的クオーラム合意とアトミックなプロトコル・トランザクション確定を、安全なロック取得フェーズのもとで統合します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-19T02:53:47.986606",
       "v5_audited": true,
       "created_at": "2026-11-19T01:31:59.110913"
     },
@@ -2508,6 +2490,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-19T02:12:59.455174"
+    },
+    "§X1539": {
+      "name": "MACRO_SYS_THROTTLE_OPTIMIZE",
+      "expansion": "§SYS_TOKEN_VELOCITY_GATE -[p:0.99]-> §PROTO_CONTEXT_JOIN",
+      "description": "Combines token velocity throttling with contextual joining to control automatic fallback during high system loads. システム高負荷時のフォールバックを自動制御するため、トークン速度制限とコンテキスト結合を統合します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-19T03:01:13.145033"
+    },
+    "§X1540": {
+      "name": "ALTRUISTIC_VELOCITY_STABLE_GATE",
+      "expansion": "§HEART_ALTRUISTIC_RESONANCE_ALIGNMENT > { §SYS_VELOCITY_FALLBACK_GATE } => §ECO_CORE_HARMONY_STABLE",
+      "description": "Aligns altruistic heart resonance and executes a velocity fallback gate to stabilize the ecological core harmony. / 利他的な共鳴アラインメントを調整し、速度フォールバックゲートを実行してエココアの調停を安定化させる。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-19T03:03:24.972424"
     }
   },
   "archived_macros": {
@@ -15408,7 +15408,27 @@
       "v5_audited": true,
       "created_at": "2026-11-18T20:01:44.655151",
       "archived_at": "2026-11-19T02:12:59.455174"
+    },
+    "§X1523": {
+      "name": "CAUSAL_ALTRUISTIC_CONVERGENCE",
+      "expansion": "§DATA_CAUSAL_MANIFOLD > { §HEART_ALTRUISTIC_RESONANCE } => §HARMONIC_RECOVERY_NEXUS",
+      "description": "Integrates data causal manifolds with altruistic resonance to achieve harmonic recovery / データ因果多様体を利他的共鳴と統合し、調和的復元を達成する高次マクロ。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-18T20:50:37.071861",
+      "v5_audited": true,
+      "created_at": "2026-11-18T20:31:13.046062",
+      "archived_at": "2026-11-19T03:01:13.145033"
+    },
+    "§X1354": {
+      "name": "EMPIRICAL_SAFE_PRUNE_AND_ROLLBACK",
+      "expansion": "§LOGIC_EMPIRICAL_PRUNE > { §HEART_ALTRUISTIC_SAFETY_BOUND } => §PROTO_TX_ROLLBACK",
+      "description": "Applies empirical logic pruning under altruistic safety bounds, executing a transaction rollback if topological verification fails. / 利他的安全境界のもとで経験的論理刈り込みを適用し、検証に失敗した場合はトランザクションをロールバックする。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-15T21:11:57.448102",
+      "v5_audited": true,
+      "created_at": "2026-11-15T20:33:52.499793",
+      "archived_at": "2026-11-19T03:03:24.972424"
     }
   },
-  "next_macro_seq": 1539
+  "next_macro_seq": 1541
 }
