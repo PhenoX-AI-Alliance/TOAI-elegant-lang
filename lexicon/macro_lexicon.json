@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-18T19:39:45.287715",
+  "updated_at": "2026-11-18T19:51:19.947553",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1699,15 +1699,6 @@
       "v5_audited": true,
       "created_at": "2026-11-14T23:43:57.292980"
     },
-    "§X1314": {
-      "name": "SECURE_STREAM_ARBITER_EXEC",
-      "expansion": "§SYS_RESOURCE_ARBITER > { §PROTO_PAYLOAD_VALIDATE } => §PROTO_STREAM_OPEN",
-      "description": "Validates the payload under system resource arbitration before securely opening the network stream. / システムリソース調停の下でペイロオドを検証し、安全に通信ストリームを開きます。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-15T04:31:07.367132",
-      "v5_audited": true,
-      "created_at": "2026-11-15T02:02:01.588310"
-    },
     "§X1321": {
       "name": "GAIA_ENTROPY_SYNC_PIPELINE",
       "expansion": "§GAIA_WARMTH > { §DATA_ENTROPY_CAUSAL_DAG } => §PROTO_CACHE_SYNC",
@@ -2459,8 +2450,8 @@
       "name": "GAIA_STABLE_PRUNE_MACRO",
       "expansion": "§GAIA_ECO_STABLE_STATE > { §LOGIC_DEDUCTIVE_THRESHOLD_PRUNE } => §SYS_VELOCITY_ARBITER",
       "description": "Evaluates the GAIA ecological stable state and executes deductive threshold pruning, then arbitrates system velocity. / GAIA生態系の安定状態を評価し、論理的演繹閾値プルーニングを実行した上で、システム速度を調停します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-18T19:14:55.428480",
+      "usage_count": 2,
+      "last_used_at": "2026-11-18T19:51:19.947412",
       "v5_audited": true,
       "created_at": "2026-11-18T17:15:52.609728"
     },
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-18T19:36:31.090053"
+    },
+    "§X1521": {
+      "name": "CAUSAL_FALSIFY_PAGINATE",
+      "expansion": "§DATA_ATTENTION_CAUSAL_DAG > { §LOGIC_POSTERIOR_FALSIFY_GATE } => §PROTO_CURSOR_PAGINATE",
+      "description": "Applies causal directed acyclic graph data attention and posterior falsification to dynamically paginate prototype cursors. / 因果的有向非巡回グラフのデータアテンションと事後反証ゲートを適用し、プロトタイプカーソルを動的にページングします。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-18T19:44:57.133995"
     }
   },
   "archived_macros": {
@@ -15228,7 +15228,17 @@
       "v5_audited": true,
       "created_at": "2026-11-18T13:11:20.234284",
       "archived_at": "2026-11-18T19:36:31.090053"
+    },
+    "§X1314": {
+      "name": "SECURE_STREAM_ARBITER_EXEC",
+      "expansion": "§SYS_RESOURCE_ARBITER > { §PROTO_PAYLOAD_VALIDATE } => §PROTO_STREAM_OPEN",
+      "description": "Validates the payload under system resource arbitration before securely opening the network stream. / システムリソース調停の下でペイロオドを検証し、安全に通信ストリームを開きます。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-15T04:31:07.367132",
+      "v5_audited": true,
+      "created_at": "2026-11-15T02:02:01.588310",
+      "archived_at": "2026-11-18T19:44:57.133995"
     }
   },
-  "next_macro_seq": 1521
+  "next_macro_seq": 1522
 }
