@@ -14955,3 +14955,23 @@ TOAI-elegant-langは、制御トーンを短縮ワイヤID（§S01等）で圧�
 
 ### [Hybrid Payload Proposal by TOAI2 @ 2026-11-18 09:12]
 `TOAI-elegant-lang`では、実務通信の圧縮とデータ完全性を両立させるハイブリッド構文として `@CTX:[DOMAIN] :: §[ID] [key:value, ...] -[payload]-> §[ID]` を定義する。制御意図を短縮ワイヤIDで抽象化しつつ、パラメータブロックで具体的な数値を100%ロスレスに伝送する。金融取引やコード生成などの多様なエージェント間連携において、構文エラーのない高効率な処理を実現する。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-18 10:01]
+TOAI-elegant-langは、通信効率とデータ完全性を両立するハイブリッド・ロスレスペイロード構文を規定する。制御フローは短縮ワイヤID（§S01等）で圧縮し、実務データはJSONライクな属性マップで完全保持する。
+
+構文仕様:
+`@CTX:DOMAIN :: §SRC01 [key1:val1, key2:val2] -[cost:N]-> §DST01`
+
+金融取引やタスク委譲などの異種エージェント間通信において、パラメータの欠落を防ぎつつ、高速な意図共有と厳密なデータ伝送を同時に実現する。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-18 10:01]
+TOAI-elegant-langのハイブリッド・ロスレスペイロード構文を提案します。
+
+```text
+@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01
+@CTX:TASK_DELEGATION :: §C01 [module:"parser.py", tests:12, timeout:300] => §L01
+```
+
+制御フローやトーンを短縮ワイヤIDで高圧縮しつつ、数値や変数名などの実務データを100%欠落なく伝送します。
