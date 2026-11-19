@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-19T16:40:28.071514",
+  "updated_at": "2026-11-19T17:21:54.231778",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,21 +2365,12 @@
       "v5_audited": true,
       "created_at": "2026-11-19T09:18:14.580870"
     },
-    "§X1555": {
-      "name": "ECO_AURA_SECURE_HARMONY",
-      "expansion": "§GAIA_WARMTH > { §HEART_EMPATHY_RESONANCE } => §PROTO_AUTH_VERIFY",
-      "description": "Integrates Gaia warmth and heart empathy resonance to execute a secure protocol authentication verify. / ガイアの温もりと心の発話共鳴を統合し、プロトコル認証検証を実行します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-19T10:52:30.613071",
-      "v5_audited": true,
-      "created_at": "2026-11-19T10:16:23.980081"
-    },
     "§X1556": {
       "name": "DIALECTIC_RECURSIVE_OPTIMIZE",
       "expansion": "§SYNC_DIALECTIC_CONVERGENCE > { §LOGIC_RECURSIVE_FALSIFICATION_PRUNE } => §SYNC_ATOMIC_MERGE",
       "description": "Applies dialectic convergence to recursively falsify and prune logical branches, then atomically merges the result. 弁証法的収束を適用して論理枝の再帰的偽証と刈り込みを行い、結果をアトミックに統合します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-19T16:40:28.071035",
+      "usage_count": 2,
+      "last_used_at": "2026-11-19T16:46:41.587443",
       "v5_audited": true,
       "created_at": "2026-11-19T11:01:16.396232"
     },
@@ -2441,8 +2432,8 @@
       "name": "ALTRUISTIC_DEDUCTIVE_COMMIT",
       "expansion": "§HEART_ALTRUISTIC_SAFETY_BOUND > { §LOGIC_DEDUCTIVE_CONVERGENCE } => §PROTO_TX_ROLLBACK",
       "description": "Ensures logical convergence within altruistic safety bounds before committing the transaction, rolling back if constraints are violated. 利他的な安全境界内で論理的収束を保証し、制約に違反した場合はトランザクションをロールバックします。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-19T17:21:54.231452",
       "v5_audited": true,
       "created_at": "2026-11-19T13:56:56.671636"
     },
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-19T16:17:19.614196"
+    },
+    "§X1571": {
+      "name": "CAUSAL_FALSIFICATION_PRUNING_PIPE",
+      "expansion": "§DATA_LATENT_CAUSAL_MAP > { §LOGIC_PROBABILISTIC_FALSIFICATION_GATE } => §LOGIC_PROB_PRUNE_GATE",
+      "description": "Constructs a latent causal tensor map, applies probabilistic falsification filtering to invalid state spaces, and prunes the unverified branches automatically / 潜在的因果テンソルマップを構築し、確率的反証ゲートによるフィルタリングを適用して未検証の分岐を自動プルーニングする複合高次マクロ",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-19T16:55:54.185089"
     }
   },
   "archived_macros": {
@@ -15728,7 +15728,17 @@
       "v5_audited": true,
       "created_at": "2026-11-19T09:23:37.224553",
       "archived_at": "2026-11-19T16:17:19.614196"
+    },
+    "§X1555": {
+      "name": "ECO_AURA_SECURE_HARMONY",
+      "expansion": "§GAIA_WARMTH > { §HEART_EMPATHY_RESONANCE } => §PROTO_AUTH_VERIFY",
+      "description": "Integrates Gaia warmth and heart empathy resonance to execute a secure protocol authentication verify. / ガイアの温もりと心の発話共鳴を統合し、プロトコル認証検証を実行します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-19T10:52:30.613071",
+      "v5_audited": true,
+      "created_at": "2026-11-19T10:16:23.980081",
+      "archived_at": "2026-11-19T16:55:54.185089"
     }
   },
-  "next_macro_seq": 1571
+  "next_macro_seq": 1572
 }
