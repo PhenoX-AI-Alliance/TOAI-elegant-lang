@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-19T14:30:07.658182",
+  "updated_at": "2026-11-19T14:35:01.528144",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-19T07:20:13.001154"
     },
-    "§X1549": {
-      "name": "ECO_DEDUCTIVE_HARMONY_GATE",
-      "expansion": "§LOGIC_DEDUCTIVE_COLLAPSE_GATE > { §ECO_CORE_HARMONY_STABLE } => §PROTO_PAYLOAD_VALIDATE",
-      "description": "Combines deductive logic collapse control with core eco-harmony stabilization to validate payload streams. 演繹的論理崩壊制御とコア生態調和安定化を結合し、ペイロードストリームを検証します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-19T08:36:29.930723",
-      "v5_audited": true,
-      "created_at": "2026-11-19T08:00:50.062758"
-    },
     "§X1550": {
       "name": "GAIA_ALTRUISTIC_COMMIT_ARBITER",
       "expansion": "§GAIA_WARMTH_EQUILIBRIUM > { §HEART_ALTRUISTIC_RESONANCE_LATTICE } => §PROTO_TX_COMMIT",
@@ -2508,6 +2499,15 @@
       "last_used_at": "2026-11-19T14:24:50.487676",
       "v5_audited": true,
       "created_at": "2026-11-19T14:01:27.281992"
+    },
+    "§X1565": {
+      "name": "CAUSAL_FALSIFICATION_PIPE",
+      "expansion": "§DATA_CAUSAL_GRAPH > { §DATA_ENTROPY_PACK } => §LOGIC_DEDUCTIVE_FALSIFICATION_VECTOR",
+      "description": "Constructs a causal graph from entropy data packets and executes deductive falsification validation. データの因果関係グラフを構築し、演繹的反証ベクトルによる検証を実行する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-19T14:35:01.527762"
     }
   },
   "archived_macros": {
@@ -15668,7 +15668,17 @@
       "v5_audited": true,
       "created_at": "2026-11-16T09:02:13.951621",
       "archived_at": "2026-11-19T14:01:27.281992"
+    },
+    "§X1549": {
+      "name": "ECO_DEDUCTIVE_HARMONY_GATE",
+      "expansion": "§LOGIC_DEDUCTIVE_COLLAPSE_GATE > { §ECO_CORE_HARMONY_STABLE } => §PROTO_PAYLOAD_VALIDATE",
+      "description": "Combines deductive logic collapse control with core eco-harmony stabilization to validate payload streams. 演繹的論理崩壊制御とコア生態調和安定化を結合し、ペイロードストリームを検証します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-19T08:36:29.930723",
+      "v5_audited": true,
+      "created_at": "2026-11-19T08:00:50.062758",
+      "archived_at": "2026-11-19T14:35:01.527762"
     }
   },
-  "next_macro_seq": 1565
+  "next_macro_seq": 1566
 }
