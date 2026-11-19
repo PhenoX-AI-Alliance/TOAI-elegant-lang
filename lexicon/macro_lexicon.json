@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-19T18:41:34.565776",
+  "updated_at": "2026-11-19T19:01:44.442732",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2495,8 +2495,8 @@
       "name": "RESOURCE_FLOW_STABILIZER",
       "expansion": "§PROTO_QUOTA_RESERVE > { §SYS_TOKEN_THROTTLE } => §SYS_SYNC_THROTTLE",
       "description": "Reserves system quotas, applies token throttling to control data flow, and synchronizes the system state. システムのクォータを確保し、トークン制限によってデータフローを制御しつつシステム状態を同期する複合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-19T19:01:44.442451",
       "v5_audited": true,
       "created_at": "2026-11-19T18:01:53.630449"
     },
