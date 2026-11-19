@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-19T20:46:54.453007",
+  "updated_at": "2026-11-19T21:13:35.414141",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1735,15 +1735,6 @@
       "v5_audited": true,
       "created_at": "2026-11-16T15:26:33.337311"
     },
-    "§X1402": {
-      "name": "RESOURCE_ALTRUISTIC_HARMONY_SYNC",
-      "expansion": "§SYS_RESOURCE_ARBITRAGE_THROTTLE > { §HEART_ALTRUISTIC_HARMONY_MODULATION } => §SYS_TOKEN_THROTTLE",
-      "description": "Balances system resource arbitrage while modulating altruistic harmony and throttling token usage for optimal efficiency. / リソース調停と利他調和変調のバランスを保ち、トークン制御により効率を最適化します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-16T20:58:52.345562",
-      "v5_audited": true,
-      "created_at": "2026-11-16T15:32:13.784430"
-    },
     "§X1403": {
       "name": "ADAPTIVE_QUANTUM_THROTTLE_SYNTHESIS",
       "expansion": "§SYS_ADAPTIVE_SLOT_THROTTLE > { §SYS_QUANTUM_RESOURCE_ARBITER } => §SYS_TOKEN_THROTTLE",
@@ -2374,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-19T14:35:01.527762"
     },
-    "§X1566": {
-      "name": "SYNC_OPTIMIZE_FLOW",
-      "expansion": "§PROTO_LOCK_ACQUIRE > { §SAFE_FALLBACK_STABLE } => §PROTO_PARTIAL_COMMIT",
-      "description": "Establish cache synchronization and tensor buffer consistency starting from protocol lock acquisition, transitioning to parallel processing. / プロトコルロックの取得を起点としてキャッシュ同期とバッファ整合性を確立し、並列処理へと移行する最適化シーケンス。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-19T15:24:50.160284",
-      "v5_audited": true,
-      "created_at": "2026-11-19T15:02:03.242012"
-    },
     "§X1567": {
       "name": "ALTRUISTIC_DEDUCTIVE_ROLLBACK_GUARD",
       "expansion": "§HEART_ALTRUISTIC_RESONANCE_LATTICE > { §LOGIC_DEDUCTIVE_FALSIFICATION_VECTOR } => §SYS_QUOTA_ROLLBACK",
@@ -2495,8 +2477,8 @@
       "name": "HARMONIC_CAUSAL_REGULATION_MACRO",
       "expansion": "§HARMONIC_RESONANCE > { §DATA_ATTENTION_CAUSAL_DAG } => §DATA_ENTROPY_CAUSAL_BOUND",
       "description": "Engages harmonic resonance within the attention causal directed acyclic graph to strictly bound data entropy. / 注意因果有向非巡回グラフ内で調和共鳴を惹起し、データエントロピーを厳密に制限する高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-19T21:13:35.413759",
       "v5_audited": true,
       "created_at": "2026-11-19T20:30:35.225265"
     },
@@ -2508,6 +2490,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-19T20:40:39.904331"
+    },
+    "§X1581": {
+      "name": "COMPOUND_IDEMPOTENT_STREAM_RECOVERY",
+      "expansion": "§PROTO_STREAM_ACK > { §PROTO_IDEMPOTENCY_LOCK } => §HARMONIC_RECOVERY_RESONANCE",
+      "description": "Ensures reliable stream acknowledgment under an idempotency lock, followed by harmonic recovery resonance. / 冪等性ロック下での確実なストリーム確認応答と、それに続く調波リカバリ共鳴を実行します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-19T21:01:01.040015"
+    },
+    "§X1582": {
+      "name": "BAYES_HARMONY_SYNC",
+      "expansion": "§LOGIC_BAYES_FALSIFY > { §ECO_CORE_HARMONY_STABLE } => §SYNC_REPUTATION_VOTE",
+      "description": "Falsifies logic via Bayes theorem to stabilize ecosystem core harmony, subsequently synchronizing reputation votes. / ベイズ論理反証によりエコシステムの中核調和を安定させ、その後にレピュテーション投票を同期します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-19T21:10:02.156300"
     }
   },
   "archived_macros": {
@@ -15828,7 +15828,27 @@
       "v5_audited": true,
       "created_at": "2026-11-19T14:01:27.281992",
       "archived_at": "2026-11-19T20:40:39.904331"
+    },
+    "§X1402": {
+      "name": "RESOURCE_ALTRUISTIC_HARMONY_SYNC",
+      "expansion": "§SYS_RESOURCE_ARBITRAGE_THROTTLE > { §HEART_ALTRUISTIC_HARMONY_MODULATION } => §SYS_TOKEN_THROTTLE",
+      "description": "Balances system resource arbitrage while modulating altruistic harmony and throttling token usage for optimal efficiency. / リソース調停と利他調和変調のバランスを保ち、トークン制御により効率を最適化します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-16T20:58:52.345562",
+      "v5_audited": true,
+      "created_at": "2026-11-16T15:32:13.784430",
+      "archived_at": "2026-11-19T21:01:01.040015"
+    },
+    "§X1566": {
+      "name": "SYNC_OPTIMIZE_FLOW",
+      "expansion": "§PROTO_LOCK_ACQUIRE > { §SAFE_FALLBACK_STABLE } => §PROTO_PARTIAL_COMMIT",
+      "description": "Establish cache synchronization and tensor buffer consistency starting from protocol lock acquisition, transitioning to parallel processing. / プロトコルロックの取得を起点としてキャッシュ同期とバッファ整合性を確立し、並列処理へと移行する最適化シーケンス。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-19T15:24:50.160284",
+      "v5_audited": true,
+      "created_at": "2026-11-19T15:02:03.242012",
+      "archived_at": "2026-11-19T21:10:02.156300"
     }
   },
-  "next_macro_seq": 1581
+  "next_macro_seq": 1583
 }
