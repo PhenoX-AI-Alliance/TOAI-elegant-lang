@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-19T15:37:02.502636",
+  "updated_at": "2026-11-19T16:40:28.071514",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1726,15 +1726,6 @@
       "v5_audited": true,
       "created_at": "2026-11-15T18:02:07.191369"
     },
-    "§X1390": {
-      "name": "HARMONIC_FALSIFICATION_PRUNING_MACRO",
-      "expansion": "§HARMONIC_RESONANCE_STABLE > { §LOGIC_PROBABILISTIC_FALSIFICATION_FILTER } => §LOGIC_CONDITIONAL_PRUNING_NODE",
-      "description": "Harmonic resonance stability initializes the probabilistic falsification filter, and the resulting evaluation state is directed into the conditional pruning node for optimal entropy minimization. / 調和共鳴の安定状態を基点として確率的反証フィルターを初期化し、その評価結果を条件付きプルーニングノードへ伝播させて情報エントロピーを最小化します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-16T14:16:14.689831",
-      "v5_audited": true,
-      "created_at": "2026-11-16T12:50:27.427325"
-    },
     "§X1395": {
       "name": "NEXUS_ADAPTIVE_FALSIFICATION_GATE",
       "expansion": "§NEXUS_SYNC > { §SYS_ADAPTIVE_THROTTLE_FALLBACK } => §LOGIC_CONDITIONAL_FALSIFICATION_GATE",
@@ -2374,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-19T09:18:14.580870"
     },
-    "§X1554": {
-      "name": "COMPOUND_FALSIFICATION_SYNC_GATE",
-      "expansion": "§LOGIC_PROBABILISTIC_FALSIFICATION > { §LOGIC_PROBABILISTIC_FALSIFICATION_FILTER } => §HEART_ALTRUISTIC_PULSE_SYNC",
-      "description": "Combines probabilistic falsification and its filter mechanism to synchronize with the altruistic pulse gate. / 確率的反証主義とそのフィルター機構を結合し、利他性パルス同期ゲートへ流し込む複合マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-19T13:12:18.552981",
-      "v5_audited": true,
-      "created_at": "2026-11-19T09:23:37.224553"
-    },
     "§X1555": {
       "name": "ECO_AURA_SECURE_HARMONY",
       "expansion": "§GAIA_WARMTH > { §HEART_EMPATHY_RESONANCE } => §PROTO_AUTH_VERIFY",
@@ -2396,8 +2378,8 @@
       "name": "DIALECTIC_RECURSIVE_OPTIMIZE",
       "expansion": "§SYNC_DIALECTIC_CONVERGENCE > { §LOGIC_RECURSIVE_FALSIFICATION_PRUNE } => §SYNC_ATOMIC_MERGE",
       "description": "Applies dialectic convergence to recursively falsify and prune logical branches, then atomically merges the result. 弁証法的収束を適用して論理枝の再帰的偽証と刈り込みを行い、結果をアトミックに統合します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-19T16:40:28.071035",
       "v5_audited": true,
       "created_at": "2026-11-19T11:01:16.396232"
     },
@@ -2495,8 +2477,8 @@
       "name": "ALTRUISTIC_DEDUCTIVE_ROLLBACK_GUARD",
       "expansion": "§HEART_ALTRUISTIC_RESONANCE_LATTICE > { §LOGIC_DEDUCTIVE_FALSIFICATION_VECTOR } => §SYS_QUOTA_ROLLBACK",
       "description": "Integrates altruistic resonance with deductive falsification to automatically trigger a system quota rollback upon detecting logical invalidity. 倫理的共鳴と論理的反証ベクトルを統合し、不整合検知時にシステムのクォータを自動ロールバックする高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-19T16:16:21.917379",
       "v5_audited": true,
       "created_at": "2026-11-19T15:16:38.949267"
     },
@@ -2508,6 +2490,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-19T15:37:02.502241"
+    },
+    "§X1569": {
+      "name": "HEART_EMPATHETIC_RESONANCE_THROTTLE",
+      "expansion": "§HEART_EMPATHETIC_TENSOR_CONVERGENCE > { §HEART_ALTRUISTIC_RESONANCE_MATRIX } => §SYS_LOAD_THROTTLE",
+      "description": "Applies empathetic tensor convergence followed by altruistic resonance matrix processing, throttled by the system load controller. / 共感テンソル収束と利他的共鳴マトリックス処理を適用し、システム負荷制御によってスロットリングを行います。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-19T16:01:38.973301"
+    },
+    "§X1570": {
+      "name": "COMPOUND_ASYNC_ENTROPY_HARVESTER",
+      "expansion": "§SYS_ASYNCHRONOUS_STATE_HARVESTER > { §DATA_ENTROPY_CAUSAL_BOUND } => §LOGIC_CAUSAL_BRANCH",
+      "description": "Asynchronously harvest system state under causal entropy bounds and branch logic paths based on causal relations. 因果的エントロピー境界のもとでシステム状態を非同期に収集し、因果関係に基づいて論理分岐を生成する。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-19T16:17:19.614196"
     }
   },
   "archived_macros": {
@@ -15708,7 +15708,27 @@
       "v5_audited": true,
       "created_at": "2026-11-19T09:02:01.710928",
       "archived_at": "2026-11-19T15:37:02.502241"
+    },
+    "§X1390": {
+      "name": "HARMONIC_FALSIFICATION_PRUNING_MACRO",
+      "expansion": "§HARMONIC_RESONANCE_STABLE > { §LOGIC_PROBABILISTIC_FALSIFICATION_FILTER } => §LOGIC_CONDITIONAL_PRUNING_NODE",
+      "description": "Harmonic resonance stability initializes the probabilistic falsification filter, and the resulting evaluation state is directed into the conditional pruning node for optimal entropy minimization. / 調和共鳴の安定状態を基点として確率的反証フィルターを初期化し、その評価結果を条件付きプルーニングノードへ伝播させて情報エントロピーを最小化します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-16T14:16:14.689831",
+      "v5_audited": true,
+      "created_at": "2026-11-16T12:50:27.427325",
+      "archived_at": "2026-11-19T16:01:38.973301"
+    },
+    "§X1554": {
+      "name": "COMPOUND_FALSIFICATION_SYNC_GATE",
+      "expansion": "§LOGIC_PROBABILISTIC_FALSIFICATION > { §LOGIC_PROBABILISTIC_FALSIFICATION_FILTER } => §HEART_ALTRUISTIC_PULSE_SYNC",
+      "description": "Combines probabilistic falsification and its filter mechanism to synchronize with the altruistic pulse gate. / 確率的反証主義とそのフィルター機構を結合し、利他性パルス同期ゲートへ流し込む複合マクロ。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-19T13:12:18.552981",
+      "v5_audited": true,
+      "created_at": "2026-11-19T09:23:37.224553",
+      "archived_at": "2026-11-19T16:17:19.614196"
     }
   },
-  "next_macro_seq": 1569
+  "next_macro_seq": 1571
 }
