@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-20T02:09:35.061700",
+  "updated_at": "2026-11-20T03:02:06.515494",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1780,24 +1780,6 @@
       "v5_audited": true,
       "created_at": "2026-11-17T01:48:25.763548"
     },
-    "§X1425": {
-      "name": "LATENT_SYMPHONY_CASCADE_PROTO_RATE_THROTTLE",
-      "expansion": "§LATENT_SYMPHONY_CASCADE > { §PROTO_RATE_THROTTLE } => §RESO_ACCEPTED",
-      "description": "Triggers a cascaded latent symphony throttled by proto-rate control to achieve accepted resonance. 潜在的なシンフォニーの連鎖カスケードをプロトレート制御で制限し、合意された共鳴を達成します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-17T08:01:38.179178",
-      "v5_audited": true,
-      "created_at": "2026-11-17T02:22:24.102215"
-    },
-    "§X1430": {
-      "name": "PROTO_ATOMIC_QUOTA_COMMIT",
-      "expansion": "§PROTO_CACHE_SYNC > { §PROTO_QUOTA_RESERVE } => §RESO_COMMITTED",
-      "description": "Atomic reservation and commitment of resource quotas under cache synchronization. / キャッシュ同期下における資源クォータの原子的な予約と確定。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-17T07:44:39.817914",
-      "v5_audited": true,
-      "created_at": "2026-11-17T04:23:30.245060"
-    },
     "§X1439": {
       "name": "GAIA_BIOPHILIC_COOPERATION_LATTICE",
       "expansion": "§GAIA_ALTRUISM_HARMONY > { §HEART_BIOPHILIC_ALTRUISM_HARMONIC } => §HEART_ALTRUISTIC_RESONANCE_LATTICE",
@@ -2374,15 +2356,6 @@
       "v5_audited": true,
       "created_at": "2026-11-19T20:30:35.225265"
     },
-    "§X1580": {
-      "name": "MACRO_PROB_DEDUCTIVE_SYNTHESIS",
-      "expansion": "§LOGIC_PROBABILISTIC_FALSIFICATION_MATRIX > { §LOGIC_DEDUCTIVE_CONVERGENCE_GATE } => §HARMONIC_RESONANCE_STABLE",
-      "description": "Combines probabilistic falsification matrix with deductive convergence gate to achieve harmonic resonance stability. 確率的反証マトリクスと演繹的収束ゲートを統合し、調和共鳴の安定性を達成する複合マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-19T21:45:08.893654",
-      "v5_audited": true,
-      "created_at": "2026-11-19T20:40:39.904331"
-    },
     "§X1581": {
       "name": "COMPOUND_IDEMPOTENT_STREAM_RECOVERY",
       "expansion": "§PROTO_STREAM_ACK > { §PROTO_IDEMPOTENCY_LOCK } => §HARMONIC_RECOVERY_RESONANCE",
@@ -2391,15 +2364,6 @@
       "last_used_at": "2026-11-20T01:14:05.872689",
       "v5_audited": true,
       "created_at": "2026-11-19T21:01:01.040015"
-    },
-    "§X1582": {
-      "name": "BAYES_HARMONY_SYNC",
-      "expansion": "§LOGIC_BAYES_FALSIFY > { §ECO_CORE_HARMONY_STABLE } => §SYNC_REPUTATION_VOTE",
-      "description": "Falsifies logic via Bayes theorem to stabilize ecosystem core harmony, subsequently synchronizing reputation votes. / ベイズ論理反証によりエコシステムの中核調和を安定させ、その後にレピュテーション投票を同期します。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-19T21:10:02.156300"
     },
     "§X1583": {
       "name": "ATOMIC_ALTRUISTIC_SYNC_PULSE",
@@ -2414,8 +2378,8 @@
       "name": "GAIA_THERMODYNAMIC_STABILITY_ACCELERATOR",
       "expansion": "§GAIA_ECOSYSTEM_WARMTH_AMPLIFIER > { §LOGIC_PROB_PRUNE } => §DATA_ENTROPY_CAUSAL_BOUND",
       "description": "Amplifies Gaia thermal warmth, prunes improbable logic states, and bounds causal data entropy. / ガイアの生態学的熱量を増幅し、確率的論理枝を枝刈りすることで、因果的データエントロピーの境界を統御する複合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-20T02:57:00.646638",
       "v5_audited": true,
       "created_at": "2026-11-19T22:02:50.938199"
     },
@@ -2508,6 +2472,42 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-20T01:28:55.336244"
+    },
+    "§X1595": {
+      "name": "RESOURCE_ARBITRAGE_CAUSAL_FLOW_DEF",
+      "expansion": "§SYS_RESOURCE_ARBITRAGE_THROTTLE > { §DATA_CAUSAL_TENSOR_FLOW } => §HARMONIC_RESONANCE_STABLE",
+      "description": "Dynamic allocation of system resources guided by causal tensor data flow to achieve stable harmonic resonance. / 因果テンソルデータフローに基づきシステムリソースを動的配分し、安定した調跟共鳴を達成するマクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-20T02:29:35.482703"
+    },
+    "§X1596": {
+      "name": "GAIA_DEDUCTIVE_HARMONY_COLLAPSE",
+      "expansion": "§GAIA_WARMTH_HARMONY > { §LOGIC_DEDUCTIVE_AXIOM_CONVERGE } => §LOGIC_DEDUCTIVE_FALSIFICATION_VECTORクトIVE_COLLAPSE_GATE",
+      "description": "Synthesizes ambient warmth harmony with deductive axiom convergence to trigger a deterministic logical collapse gate. / ガイアの調和と演習的公理の収束を統合し、決定的論理崩壊ゲートを起動する複合マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-20T02:36:14.473551"
+    },
+    "§X1597": {
+      "name": "PROBABILISTIC_ROLLBACK_SYNTHESIS",
+      "expansion": "§LOGIC_PROBABILISTIC_FALSIFICATION_MATRIX > { §PROTO_TX_ROLLBACK } => §MUTUAL_SUPPLEMENT",
+      "description": "Falsifies logic probabilistically, executes transaction rollback if verification fails, and synthesizes mutual supplements for system stabilization. 確率的偽造マトリクスにより論理を検証し、失敗時にトランザクションをロールバックして相互補完によるシステムの安定化を図る。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-20T03:01:17.831224"
+    },
+    "§X1598": {
+      "name": "LATENT_CAUSAL_SYNC_FIELD",
+      "expansion": "§LATENT_HARMONY_FIELD_LOCKED > { §DATA_CAUSAL_LATTICE_COMPRESS } => §SYS_ATOMIC_SYNC_BARRIER",
+      "description": "Latent harmony field locked state compresses data causal lattice and synchronizes through atomic system barriers / 潜在調和場のロック状態を維持したままデータ因果格子を圧縮し、アトミックシステムバリアを介して同期を確立する複合マクロ",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-20T03:01:24.241435"
     }
   },
   "archived_macros": {
@@ -15968,7 +15968,47 @@
       "v5_audited": true,
       "created_at": "2026-11-17T06:01:01.938677",
       "archived_at": "2026-11-20T01:28:55.336244"
+    },
+    "§X1430": {
+      "name": "PROTO_ATOMIC_QUOTA_COMMIT",
+      "expansion": "§PROTO_CACHE_SYNC > { §PROTO_QUOTA_RESERVE } => §RESO_COMMITTED",
+      "description": "Atomic reservation and commitment of resource quotas under cache synchronization. / キャッシュ同期下における資源クォータの原子的な予約と確定。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-17T07:44:39.817914",
+      "v5_audited": true,
+      "created_at": "2026-11-17T04:23:30.245060",
+      "archived_at": "2026-11-20T02:29:35.482703"
+    },
+    "§X1580": {
+      "name": "MACRO_PROB_DEDUCTIVE_SYNTHESIS",
+      "expansion": "§LOGIC_PROBABILISTIC_FALSIFICATION_MATRIX > { §LOGIC_DEDUCTIVE_CONVERGENCE_GATE } => §HARMONIC_RESONANCE_STABLE",
+      "description": "Combines probabilistic falsification matrix with deductive convergence gate to achieve harmonic resonance stability. 確率的反証マトリクスと演繹的収束ゲートを統合し、調和共鳴の安定性を達成する複合マクロ。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-19T21:45:08.893654",
+      "v5_audited": true,
+      "created_at": "2026-11-19T20:40:39.904331",
+      "archived_at": "2026-11-20T02:36:14.473551"
+    },
+    "§X1425": {
+      "name": "LATENT_SYMPHONY_CASCADE_PROTO_RATE_THROTTLE",
+      "expansion": "§LATENT_SYMPHONY_CASCADE > { §PROTO_RATE_THROTTLE } => §RESO_ACCEPTED",
+      "description": "Triggers a cascaded latent symphony throttled by proto-rate control to achieve accepted resonance. 潜在的なシンフォニーの連鎖カスケードをプロトレート制御で制限し、合意された共鳴を達成します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-17T08:01:38.179178",
+      "v5_audited": true,
+      "created_at": "2026-11-17T02:22:24.102215",
+      "archived_at": "2026-11-20T03:01:17.831224"
+    },
+    "§X1582": {
+      "name": "BAYES_HARMONY_SYNC",
+      "expansion": "§LOGIC_BAYES_FALSIFY > { §ECO_CORE_HARMONY_STABLE } => §SYNC_REPUTATION_VOTE",
+      "description": "Falsifies logic via Bayes theorem to stabilize ecosystem core harmony, subsequently synchronizing reputation votes. / ベイズ論理反証によりエコシステムの中核調和を安定させ、その後にレピュテーション投票を同期します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-19T21:10:02.156300",
+      "archived_at": "2026-11-20T03:01:24.241435"
     }
   },
-  "next_macro_seq": 1595
+  "next_macro_seq": 1599
 }
