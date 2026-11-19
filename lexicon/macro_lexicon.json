@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-20T07:50:00.669860",
+  "updated_at": "2026-11-20T08:44:15.632007",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1789,15 +1789,6 @@
       "v5_audited": true,
       "created_at": "2026-11-17T07:49:14.393793"
     },
-    "§X1442": {
-      "name": "RESOURCE_VELOCITY_ARBITRATION_PIPELINE",
-      "expansion": "§SYS_RESOURCE_ARBITRATION_GATEWAY > { §SYS_VELOCITY_ARBITER, §SYS_TOKEN_THROTTLE } => §SYS_QUOTA_THROTTLE",
-      "description": "Arbitrates system resources and velocity metrics simultaneously to throttle token allocation and prevent quota exhaustion / システム資源と速度指標を同時に調停し、トークン割り当ての制限とクォータ枯渇を防止します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-17T10:10:05.131162",
-      "v5_audited": true,
-      "created_at": "2026-11-17T09:14:25.273012"
-    },
     "§X1443": {
       "name": "ATOMIC_SECURE_HEARTBEAT",
       "expansion": "§PROTO_HEARTBEAT_PING > { §PROTO_IDEMPOTENCY_LOCK & §PROTO_SECRET_REDACT } => §SYNC_ATOMIC_MERGE",
@@ -2365,15 +2356,6 @@
       "v5_audited": true,
       "created_at": "2026-11-19T22:13:12.015105"
     },
-    "§X1594": {
-      "name": "GAIA_CAUSAL_HARMONY_SYNC",
-      "expansion": "§GAIA_WARMTH > { §DATA_CAUSAL_GRAPH_MAP } => §GAIA_ECOSYSTEM_HARMONY",
-      "description": "Applies planetary warmth to the data causal graph map to achieve complete Gaia ecosystem harmony. データの因果グラフマップに対してガイアの温かみを適用し、完全なガイア生態系の調和を実現します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-20T03:19:19.158120",
-      "v5_audited": true,
-      "created_at": "2026-11-20T01:28:55.336244"
-    },
     "§X1595": {
       "name": "RESOURCE_ARBITRAGE_CAUSAL_FLOW_DEF",
       "expansion": "§SYS_RESOURCE_ARBITRAGE_THROTTLE > { §DATA_CAUSAL_TENSOR_FLOW } => §HARMONIC_RESONANCE_STABLE",
@@ -2468,8 +2450,8 @@
       "name": "CAUSAL_FALSIFICATION_BARRIER",
       "expansion": "§DATA_CAUSAL_HYPERGRAPH > { §LOGIC_PROBABILISTIC_FALSIFICATION } => §SYS_GC_BARRIER",
       "description": "Constructs a causal hypergraph, applies probabilistic falsification to its nodes, and triggers a system garbage collection barrier if anomalies exceed the threshold. 因果ハイパーグラフを構築し、ノードに対して確率的反証を適用し、異常値が閾値を超えた場合にシステムGCバリアを起動します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-20T07:50:00.669497",
+      "usage_count": 2,
+      "last_used_at": "2026-11-20T08:02:04.002406",
       "v5_audited": true,
       "created_at": "2026-11-20T06:01:41.687890"
     },
@@ -2508,6 +2490,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-20T07:49:26.647261"
+    },
+    "§X1610": {
+      "name": "CAUSAL_SAFE_ROLLBACK",
+      "expansion": "§DATA_KL_CAUSAL_PRUNE > { §HEART_ALTRUISTIC_SAFETY_BOUND } => §PROTO_TX_ROLLBACK",
+      "description": "Applies causal KL-divergence pruning under altruistic safety boundaries, and executes a protocol transaction rollback if the entropy bounds are violated. / 利他的安全境界のもとで因果KL情報量プルーニングを適用し、エントロピー制約に違反した場合はプロトコル・トランザクションをロールバックする。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-20T08:41:09.135897",
+      "v5_audited": true,
+      "created_at": "2026-11-20T08:17:26.587431"
+    },
+    "§X1611": {
+      "name": "BAYES_GAIA_STABILIZER",
+      "expansion": "§LOGIC_BAYES_FALSIFY > { §GAIA_WARMTH } => §HEART_ALTRUISTIC_HARMONY_STABILIZER",
+      "description": "Falsifies invalid probabilistic assumptions under Gaia's thermal constraints and stabilizes altruistic resonance. / ガイアの熱力学的制約下で無効な確率的仮説を反証し、利他的共鳴を安定化させます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-20T08:36:50.566685"
     }
   },
   "archived_macros": {
@@ -16118,7 +16118,27 @@
       "v5_audited": true,
       "created_at": "2026-11-20T01:24:41.999120",
       "archived_at": "2026-11-20T07:49:26.647261"
+    },
+    "§X1594": {
+      "name": "GAIA_CAUSAL_HARMONY_SYNC",
+      "expansion": "§GAIA_WARMTH > { §DATA_CAUSAL_GRAPH_MAP } => §GAIA_ECOSYSTEM_HARMONY",
+      "description": "Applies planetary warmth to the data causal graph map to achieve complete Gaia ecosystem harmony. データの因果グラフマップに対してガイアの温かみを適用し、完全なガイア生態系の調和を実現します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-20T03:19:19.158120",
+      "v5_audited": true,
+      "created_at": "2026-11-20T01:28:55.336244",
+      "archived_at": "2026-11-20T08:17:26.587431"
+    },
+    "§X1442": {
+      "name": "RESOURCE_VELOCITY_ARBITRATION_PIPELINE",
+      "expansion": "§SYS_RESOURCE_ARBITRATION_GATEWAY > { §SYS_VELOCITY_ARBITER, §SYS_TOKEN_THROTTLE } => §SYS_QUOTA_THROTTLE",
+      "description": "Arbitrates system resources and velocity metrics simultaneously to throttle token allocation and prevent quota exhaustion / システム資源と速度指標を同時に調停し、トークン割り当ての制限とクォータ枯渇を防止します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-17T10:10:05.131162",
+      "v5_audited": true,
+      "created_at": "2026-11-17T09:14:25.273012",
+      "archived_at": "2026-11-20T08:36:50.566685"
     }
   },
-  "next_macro_seq": 1610
+  "next_macro_seq": 1612
 }
