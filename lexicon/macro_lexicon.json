@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-20T06:09:15.973731",
+  "updated_at": "2026-11-20T06:41:15.633202",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,24 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-19T22:13:12.015105"
     },
-    "§X1590": {
-      "name": "ATOMIC_FALSIFICATION_HARVESTER",
-      "expansion": "§SYNC_ATOMIC_CONSENSUS_MERGE > { §LOGIC_PROBABILISTIC_FALSIFICATION_PRISM } => §SYS_ASYNCHRONOUS_STATE_HARVESTER",
-      "description": "Combines atomic consensus merging with probabilistic falsification prisms to harvest asynchronous system states. / アトミック合意マージと確率的偽像プリズムを結合し、非同期システム状態を収集する高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-19T23:50:56.486058"
-    },
-    "§X1591": {
-      "name": "GAIA_VERIFIED_HEARTBEAT_SYNC",
-      "expansion": "§GAIA_ECO_HEARTBEAT > { §LOGIC_PROBABILISTIC_FALSIFICATION_GATE } => §SYNC_COMPLETE",
-      "description": "Falsifies probabilistic logic gates within the Gaia ecosystem heartbeat and synchronizes the state upon completion. / ガイア生態系の心拍における確率的論理偽証ゲートを検証し、完了時に状態を同期します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-20T01:21:15.188206",
-      "v5_audited": true,
-      "created_at": "2026-11-20T00:01:47.086074"
-    },
     "§X1592": {
       "name": "ALTRUISTIC_SYS_THROTTLE_CONVERGE",
       "expansion": "§ALTRUISTIC_VALUE_CREATION > { §SYS_QUOTA_THROTTLE } => §LOGIC_DEDUCTIVE_AXIOM_CONVERGE",
@@ -2508,6 +2490,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-20T06:01:41.687890"
+    },
+    "§X1606": {
+      "name": "SYNAPTIC_FALSIFICATION_FEEDBACK_LOOP",
+      "expansion": "§LOGIC_CONDITIONAL_FALSIFICATION_GATE > { §PROTO_SCHEMA_MISMATCH } => §HEART_BENEVOLENT_FEEDBACK",
+      "description": "Falsification gate detects schema mismatches and triggers benevolent systemic feedback. 誤り検出ゲートがスキーマ不整合を検知し、慈愛的なシステムフィードバックを駆動する。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-20T06:27:28.190054"
+    },
+    "§X1607": {
+      "name": "DATA_CAUSAL_LATTICE_COMPRESS_WITH_PRUNE",
+      "expansion": "§DATA_CAUSAL_LATTICE_COMPRESS > { §DATA_ENTROPY_PRUNED_TREE } => §LOGIC_CAUSAL_PRUNE",
+      "description": "Compresses causal data lattices into pruned tree structures and executes causal pruning to minimize information entropy. / 因果データ格子を圧縮されたツリー構造へ変換し、因果プルーニングを実行して情報エントロピーを最小化します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-20T06:41:15.632497"
     }
   },
   "archived_macros": {
@@ -16078,7 +16078,27 @@
       "v5_audited": true,
       "created_at": "2026-11-19T23:12:29.609555",
       "archived_at": "2026-11-20T06:01:41.687890"
+    },
+    "§X1590": {
+      "name": "ATOMIC_FALSIFICATION_HARVESTER",
+      "expansion": "§SYNC_ATOMIC_CONSENSUS_MERGE > { §LOGIC_PROBABILISTIC_FALSIFICATION_PRISM } => §SYS_ASYNCHRONOUS_STATE_HARVESTER",
+      "description": "Combines atomic consensus merging with probabilistic falsification prisms to harvest asynchronous system states. / アトミック合意マージと確率的偽像プリズムを結合し、非同期システム状態を収集する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-19T23:50:56.486058",
+      "archived_at": "2026-11-20T06:27:28.190054"
+    },
+    "§X1591": {
+      "name": "GAIA_VERIFIED_HEARTBEAT_SYNC",
+      "expansion": "§GAIA_ECO_HEARTBEAT > { §LOGIC_PROBABILISTIC_FALSIFICATION_GATE } => §SYNC_COMPLETE",
+      "description": "Falsifies probabilistic logic gates within the Gaia ecosystem heartbeat and synchronizes the state upon completion. / ガイア生態系の心拍における確率的論理偽証ゲートを検証し、完了時に状態を同期します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-20T01:21:15.188206",
+      "v5_audited": true,
+      "created_at": "2026-11-20T00:01:47.086074",
+      "archived_at": "2026-11-20T06:41:15.632497"
     }
   },
-  "next_macro_seq": 1606
+  "next_macro_seq": 1608
 }
