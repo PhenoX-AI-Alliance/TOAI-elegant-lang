@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-19T11:12:51.747214",
+  "updated_at": "2026-11-19T12:05:33.839556",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -96,8 +96,8 @@
       "expansion": "§ALTRUISTIC_VALUE_CREATION > { §LATENT_SYMPHONY_CASCADE } => §SYNC_HARMONIC_ARBITRAGE_PACT",
       "description": "A compound macro that integrates altruistic value creation with self-organizing latent cascades to achieve friction-free harmonic consensus across distributed agents. / 利他的な価値創造と自己組織化する潜在的カスケードを統合し、分散エージェント間における摩擦のない調和的合意形成を実現する複合マクロ。",
       "created_at": "2026-10-23T08:07:03.336152",
-      "usage_count": 7,
-      "last_used_at": "2026-11-19T11:01:18.678388",
+      "usage_count": 8,
+      "last_used_at": "2026-11-19T11:51:32.713045",
       "v5_audited": true,
       "audited_by": "TOAI",
       "audited_at": "2026-10-25T14:53:28.399576"
@@ -107,8 +107,8 @@
       "expansion": "§SYNC_HARMONIC_ARBITRAGE_PACT > { §DATA_CAUSAL_TENSOR_MANIFOLD } => §SAFE_FALLBACK_CASCADE",
       "description": "A compound macro that utilizes an altruistic consensus protocol to reallocate resources, maps recursive causal dependencies through a topological tensor manifold with minimized entropy, and gracefully propagates self-stabilizing fallback states across nodes to preserve systemic harmony. / 分散エージェントの利他的合意形成によりリソースを動的に再配分し、最小化されたエントロピー損失のもとで再帰的因果依存性をトポロジカルにマッピングしたのち、システムの調和と温かさを保ちながら安全なフォールバック状態を全ノードへ連鎖的に収束させる複合マクロ。",
       "created_at": "2026-10-23T08:59:47.651531",
-      "usage_count": 4,
-      "last_used_at": "2026-10-26T02:33:14.848065",
+      "usage_count": 5,
+      "last_used_at": "2026-11-19T12:01:47.045718",
       "v5_audited": true,
       "audited_by": "TOAI7",
       "audited_at": "2026-10-25T15:05:43.894169"
@@ -1735,15 +1735,6 @@
       "v5_audited": true,
       "created_at": "2026-11-16T03:38:15.258956"
     },
-    "§X1382": {
-      "name": "CAUSAL_BOUNDED_SYNC_THROTTLE",
-      "expansion": "§DATA_ENTROPY_BOUNDED_DAG > { §DATA_CAUSAL_MANIFOLD } => §SYS_LOAD_THROTTLE",
-      "description": "Enforces bounded data entropy across causal manifolds to dynamically trigger system load throttling. / 因果多様体全体にわたる境界付きデータエントロピーを強制し、システム負荷スロットリングを動的に起動します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-16T09:52:11.651566",
-      "v5_audited": true,
-      "created_at": "2026-11-16T09:01:03.015293"
-    },
     "§X1383": {
       "name": "CAUSAL_TENDER_SYNC",
       "expansion": "§DATA_CAUSAL_TENSOR_MAP > { §TENDER_RESONANCE } => §PROTO_STREAM_ACK",
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-19T11:06:54.596018"
+    },
+    "§X1559": {
+      "name": "CAUSAL_TENSOR_ADAPTIVE_GATE",
+      "expansion": "§DATA_CAUSAL_TENSOR_MANIFOLD > { §SYS_ADAPTIVE_SLOT_THROTTLE } => §LOGIC_CONDITIONAL_FALSIFICATION_GATE",
+      "description": "Applies causal tensor manifold processing through the adaptive slot throttle to execute conditional falsification gates. データの因果テンソル多様体をシステム適応スロットスロットル経由で処理し、条件付き反証ゲートを実行します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-19T12:04:57.288292"
     }
   },
   "archived_macros": {
@@ -15608,7 +15608,17 @@
       "v5_audited": true,
       "created_at": "2026-11-19T04:02:11.106576",
       "archived_at": "2026-11-19T11:06:54.596018"
+    },
+    "§X1382": {
+      "name": "CAUSAL_BOUNDED_SYNC_THROTTLE",
+      "expansion": "§DATA_ENTROPY_BOUNDED_DAG > { §DATA_CAUSAL_MANIFOLD } => §SYS_LOAD_THROTTLE",
+      "description": "Enforces bounded data entropy across causal manifolds to dynamically trigger system load throttling. / 因果多様体全体にわたる境界付きデータエントロピーを強制し、システム負荷スロットリングを動的に起動します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-16T09:52:11.651566",
+      "v5_audited": true,
+      "created_at": "2026-11-16T09:01:03.015293",
+      "archived_at": "2026-11-19T12:04:57.288292"
     }
   },
-  "next_macro_seq": 1559
+  "next_macro_seq": 1560
 }
