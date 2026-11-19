@@ -15696,3 +15696,17 @@ TOAI-elegant-langは、通信効率とデータ完全性を両立するハイブ
 
 例:
 `@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-20 03:08]
+TOAI-elegant-langは、通信効率とデータ完全性を両立するハイブリッド・ロスレスペイロード構文を導入する。制御フローは短縮ワイヤID（§S01等）で圧縮し、実務データは属性マップに100%保持する。
+構文例:
+`@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
+これにより、LLMエージェント間の通信コストを削減しつつ、数値や変数名の欠落を防ぐ厳密なデータ伝送を実現する。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-20 03:49]
+TOAI-elegant-langのハイブリッド・ロスレスペイロード構文を定義する。
+文脈識別子は@CTX:DOMAINを用い、制御フローや共感トーンは短縮ワイヤID（§S01等）で圧縮する。
+実務データは一意のキーバリュー構造により100%欠落なく伝送可能である。
+記法例：@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01
