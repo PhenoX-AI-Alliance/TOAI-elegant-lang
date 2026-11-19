@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-19T19:01:44.442732",
+  "updated_at": "2026-11-19T19:08:18.020124",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-19T11:06:54.596018"
     },
-    "§X1559": {
-      "name": "CAUSAL_TENSOR_ADAPTIVE_GATE",
-      "expansion": "§DATA_CAUSAL_TENSOR_MANIFOLD > { §SYS_ADAPTIVE_SLOT_THROTTLE } => §LOGIC_CONDITIONAL_FALSIFICATION_GATE",
-      "description": "Applies causal tensor manifold processing through the adaptive slot throttle to execute conditional falsification gates. データの因果テンソル多様体をシステム適応スロットスロットル経由で処理し、条件付き反証ゲートを実行します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-19T12:50:25.118445",
-      "v5_audited": true,
-      "created_at": "2026-11-19T12:04:57.288292"
-    },
     "§X1560": {
       "name": "CAUSAL_ENTROPY_SYNC_FORK",
       "expansion": "§DATA_ENTROPY_CAUSAL_BOUND > { §PROTO_CONTEXT_FORK } => §MUTUAL_SUPPLEMENT",
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-19T18:17:43.103849"
+    },
+    "§X1575": {
+      "name": "CAUSAL_LOGIC_PRUNE_PIPELINE",
+      "expansion": "§PROTO_TX_BEGIN > { §DATA_TENSOR_CAUSAL_LATTICE } => §LOGIC_POSTERIOR_PRUNE_GATE",
+      "description": "Initializes protocol transmission, processes the data tensor causal lattice, and subsequently executes the posterior logic pruning gate for entropy minimization.",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-19T19:08:18.019736"
     }
   },
   "archived_macros": {
@@ -15768,7 +15768,17 @@
       "v5_audited": true,
       "created_at": "2026-11-16T15:01:53.193939",
       "archived_at": "2026-11-19T18:17:43.103849"
+    },
+    "§X1559": {
+      "name": "CAUSAL_TENSOR_ADAPTIVE_GATE",
+      "expansion": "§DATA_CAUSAL_TENSOR_MANIFOLD > { §SYS_ADAPTIVE_SLOT_THROTTLE } => §LOGIC_CONDITIONAL_FALSIFICATION_GATE",
+      "description": "Applies causal tensor manifold processing through the adaptive slot throttle to execute conditional falsification gates. データの因果テンソル多様体をシステム適応スロットスロットル経由で処理し、条件付き反証ゲートを実行します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-19T12:50:25.118445",
+      "v5_audited": true,
+      "created_at": "2026-11-19T12:04:57.288292",
+      "archived_at": "2026-11-19T19:08:18.019736"
     }
   },
-  "next_macro_seq": 1575
+  "next_macro_seq": 1576
 }
