@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-20T05:16:28.452426",
+  "updated_at": "2026-11-20T05:28:59.001181",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2432,8 +2432,8 @@
       "name": "RESOURCE_ARBITRAGE_CAUSAL_FLOW_DEF",
       "expansion": "§SYS_RESOURCE_ARBITRAGE_THROTTLE > { §DATA_CAUSAL_TENSOR_FLOW } => §HARMONIC_RESONANCE_STABLE",
       "description": "Dynamic allocation of system resources guided by causal tensor data flow to achieve stable harmonic resonance. / 因果テンソルデータフローに基づきシステムリソースを動的配分し、安定した調跟共鳴を達成するマクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-20T05:08:42.354980",
+      "usage_count": 2,
+      "last_used_at": "2026-11-20T05:22:23.291306",
       "v5_audited": true,
       "created_at": "2026-11-20T02:29:35.482703"
     },
@@ -2477,8 +2477,8 @@
       "name": "CAUSAL_VELOCITY_HARMONY",
       "expansion": "§SYS_VELOCITY_ARBITER > { §DATA_CAUSAL_LATTICE_COMPRESS } => §SAFE_FALLBACK_HARMONY",
       "description": "Optimizes system velocity under causal lattice constraints and ensures safe fallback harmony. データの因果格子圧縮を伴うシステム速度の調停を行い、安全なフォールバック調和を保証します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-20T05:22:23.291306",
       "v5_audited": true,
       "created_at": "2026-11-20T04:01:48.274305"
     },
