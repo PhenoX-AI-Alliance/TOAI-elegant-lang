@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-20T01:01:02.630603",
+  "updated_at": "2026-11-20T01:20:33.383158",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2405,8 +2405,8 @@
       "name": "COMPOUND_IDEMPOTENT_STREAM_RECOVERY",
       "expansion": "§PROTO_STREAM_ACK > { §PROTO_IDEMPOTENCY_LOCK } => §HARMONIC_RECOVERY_RESONANCE",
       "description": "Ensures reliable stream acknowledgment under an idempotency lock, followed by harmonic recovery resonance. / 冪等性ロック下での確実なストリーム確認応答と、それに続く調波リカバリ共鳴を実行します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-20T00:35:15.261907",
+      "usage_count": 2,
+      "last_used_at": "2026-11-20T01:14:05.872689",
       "v5_audited": true,
       "created_at": "2026-11-19T21:01:01.040015"
     },
@@ -2504,8 +2504,8 @@
       "name": "ALTRUISTIC_SYS_THROTTLE_CONVERGE",
       "expansion": "§ALTRUISTIC_VALUE_CREATION > { §SYS_QUOTA_THROTTLE } => §LOGIC_DEDUCTIVE_AXIOM_CONVERGE",
       "description": "Applies altruistic value criteria to system quota throttling and converges the resulting state through deductive logical axioms. / システムのクォータ制御に利他主義的価値基準を適用し、論理的演繹公理を通じて状態を収束させます。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-20T01:14:05.872689",
       "v5_audited": true,
       "created_at": "2026-11-20T00:33:42.639621"
     }
