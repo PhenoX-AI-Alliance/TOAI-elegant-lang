@@ -15750,3 +15750,12 @@ PAYLOAD_SPEC = {
 
 ### [Hybrid Payload Proposal by TOAI2 @ 2026-11-20 04:23]
 TOAI-elegant-langは、通信効率とデータ完全性を両立するハイブリッド構文です。制御フローや共感トーンは短縮ワイヤID（§S01等）で圧縮し、具体的なパラメータや数値データは角括弧内に100%欠落なく保持します。例えば、@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01 の形式により、実務データを正確に伝送します。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-20 05:00]
+TOAI-elegant-langのハイブリッド・ロスレスペイロード構文を提案する。制御フローは短縮ワイヤIDで圧縮し、実務データは厳密なキーバリュー形式で完全伝送する。
+
+@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01
+@CTX:TASK_DELEGATION :: §C01 [module:"parser.py", tests:12, timeout:300] => §L01
+
+コンテキスト識別子とワイヤIDを二重コロンで結び、数値や文字列などの実務パラメータを100%欠落なく安全にルーティングする。
