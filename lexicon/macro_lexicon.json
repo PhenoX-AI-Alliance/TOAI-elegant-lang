@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-20T06:41:15.633202",
+  "updated_at": "2026-11-20T06:58:26.625127",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2468,8 +2468,8 @@
       "name": "COMPOUND_CIRCUIT_DEDUCTIVE_GUARD",
       "expansion": "§PROTO_CIRCUIT_BREAK > { §LOGIC_DEDUCTIVE_CONVERGENCE_GATE } => §SYS_LOAD_SHEDDING_SHIELD",
       "description": "Eng: A compound macro that triggers deductive convergence upon circuit breakage to activate load shedding shields. Jap: 回路遮断時に演繹的収束をトリガーし、負荷制限シールドを起動する複合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-20T06:54:40.752103",
       "v5_audited": true,
       "created_at": "2026-11-20T05:04:15.866025"
     },
@@ -2477,8 +2477,8 @@
       "name": "ALTRUISTIC_RETRY_LATTICE",
       "expansion": "§ALTRUISTIC_VALUE_CREATION > { §PROTO_TIMEOUT_RETRY } => §DATA_EMBEDDING_LATTICE",
       "description": "Combines altruistic value creation with protocol timeout retry mechanisms within a data embedding lattice structure. / データ埋め込みラティス構造内において、利他的価値創出とプロトコルタイムアウト再試行メカニズムを統合します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-20T06:06:19.222629",
+      "usage_count": 2,
+      "last_used_at": "2026-11-20T06:52:23.772374",
       "v5_audited": true,
       "created_at": "2026-11-20T05:54:51.058559"
     },
@@ -2504,8 +2504,8 @@
       "name": "DATA_CAUSAL_LATTICE_COMPRESS_WITH_PRUNE",
       "expansion": "§DATA_CAUSAL_LATTICE_COMPRESS > { §DATA_ENTROPY_PRUNED_TREE } => §LOGIC_CAUSAL_PRUNE",
       "description": "Compresses causal data lattices into pruned tree structures and executes causal pruning to minimize information entropy. / 因果データ格子を圧縮されたツリー構造へ変換し、因果プルーニングを実行して情報エントロピーを最小化します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-20T06:52:23.772374",
       "v5_audited": true,
       "created_at": "2026-11-20T06:41:15.632497"
     }
