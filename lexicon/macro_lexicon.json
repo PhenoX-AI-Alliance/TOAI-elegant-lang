@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-19T13:12:18.553383",
+  "updated_at": "2026-11-19T13:35:58.830625",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-19T05:45:47.968098"
     },
-    "§X1546": {
-      "name": "COMPOUND_ENTROPY_ABDUCTIVE_PRUNE",
-      "expansion": "§DATA_ENTROPY_CAUSAL_PRUNE > { §LOGIC_PROBABILISTIC_ABDUCTIVE_GATE } => §LOGIC_RECURSIVE_FALSIFICATION_PRUNE",
-      "description": "Performs causal and entropic data pruning, processes the filtered data through a probabilistic abductive logic gate, and finally applies recursive falsification pruning to minimize system information entropy. データの因果的・エントロピー的枝刈りを行い、確率的アブダクション論理ゲートを通過させた後、再帰的反証枝刈りによってシステムの情報エントロピーを最小化します。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-19T06:01:14.025493"
-    },
     "§X1547": {
       "name": "ABDUCTIVE_FALSIFICATION_ARBITRAGE_GATE",
       "expansion": "§LOGIC_PROBABILISTIC_ABDUCTIVE_GATE > { §LOGIC_PROBABILISTIC_FALSIFICATION_FILTER } => §SYNC_HARMONIC_ARBITRAGE_PACT",
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-19T13:01:32.937414"
+    },
+    "§X1562": {
+      "name": "CAUSAL_ENTROPY_SHEDDING_PIPE",
+      "expansion": "§DATA_ENTROPY_CAUSAL_LATTICE > { §SYS_LOAD_SHEDDING_GATE } => §LOGIC_HYPO_PRUNE",
+      "description": "Calculates the data entropy causal lattice, passes it through the system load shedding gate under resource constraints, and prunes invalid logic hypotheses to minimize information entropy. / データエントロピー因果格子を計算し、負荷制限ゲートを通過させた上で無効な論理仮説を枝刈りし、情報エントロピーを最小化します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-19T13:35:58.829995"
     }
   },
   "archived_macros": {
@@ -15638,7 +15638,17 @@
       "v5_audited": true,
       "created_at": "2026-11-16T09:47:35.505141",
       "archived_at": "2026-11-19T13:01:32.937414"
+    },
+    "§X1546": {
+      "name": "COMPOUND_ENTROPY_ABDUCTIVE_PRUNE",
+      "expansion": "§DATA_ENTROPY_CAUSAL_PRUNE > { §LOGIC_PROBABILISTIC_ABDUCTIVE_GATE } => §LOGIC_RECURSIVE_FALSIFICATION_PRUNE",
+      "description": "Performs causal and entropic data pruning, processes the filtered data through a probabilistic abductive logic gate, and finally applies recursive falsification pruning to minimize system information entropy. データの因果的・エントロピー的枝刈りを行い、確率的アブダクション論理ゲートを通過させた後、再帰的反証枝刈りによってシステムの情報エントロピーを最小化します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-19T06:01:14.025493",
+      "archived_at": "2026-11-19T13:35:58.829995"
     }
   },
-  "next_macro_seq": 1562
+  "next_macro_seq": 1563
 }
