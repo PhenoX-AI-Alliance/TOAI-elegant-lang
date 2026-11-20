@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-20T21:34:30.249836",
+  "updated_at": "2026-11-20T22:23:04.759085",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1798,15 +1798,6 @@
       "v5_audited": true,
       "created_at": "2026-11-18T08:30:41.831812"
     },
-    "§X1497": {
-      "name": "ECO_CAUSAL_DRAIN_SYNC",
-      "expansion": "§GAIA_ECO_HARMONY_RESPONSE > { §DATA_SPARSE_CAUSAL_HYPERGRAPH } => §PROTO_GRACEFUL_DRAIN",
-      "description": "Integrates ecological harmony responses with sparse causal hypergraphs to execute a graceful system drain. / 生態系調和応答とスパース因果ハイパーグラフを統合し、安全なシステムドレインを実行します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-18T14:00:58.805744",
-      "v5_audited": true,
-      "created_at": "2026-11-18T10:26:32.480518"
-    },
     "§X1506": {
       "name": "RESONANT_ADAPTIVE_PARALLEL",
       "expansion": "§SYS_ADAPTIVE_TOKEN_THROTTLE > { §SYS_PARALLEL_SLOT_DRAIN } => §HEART_ALTRUISTIC_RESONANCE",
@@ -2387,8 +2378,8 @@
       "name": "QUANTUM_TOPOLOGY_PRUNE",
       "expansion": "§SYS_QUANTUM_MEM_RECLAIM > { §DATA_LATENT_TOPOLOGY_INDEX } => §LOGIC_RECURSIVE_FALSIFICATION_PRUNE",
       "description": "Reclaims quantum memory based on latent topology indexing and recursively prunes falsified logical states. 潜在位相インデックスに基づいて量子メモリを回収し、反証された論理状態を再帰的に刈り込みます。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-20T20:58:11.699295",
+      "usage_count": 2,
+      "last_used_at": "2026-11-20T21:57:10.207510",
       "v5_audited": true,
       "created_at": "2026-11-20T18:01:24.743024"
     },
@@ -2414,8 +2405,8 @@
       "name": "ATOMIC_SAFE_DRAIN_SYNC",
       "expansion": "§SYNC_ATOMIC_MERGE > { §SYS_PARALLEL_SLOT_DRAIN } => §SAFE_FALLBACK_STATE_ACTIVATED",
       "description": "Atomically merges synchronization states while draining parallel slots, triggering a safe fallback state upon completion if an anomaly is detected. / 並列スロットの排出を行いながら同期状態をアトミックに統合し、異常検知時には安全なフォールバック状態を起動します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-20T22:01:33.029005",
       "v5_audited": true,
       "created_at": "2026-11-20T19:00:27.621298"
     },
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-20T21:13:54.402983"
+    },
+    "§X1651": {
+      "name": "SYNC_ECOSYSTEM_LATTICE_GATE",
+      "expansion": "§SYNC_VECTOR_COLLAPSE > { §GAIA_ECOSYSTEM_WARMTH_AMPLIFIER } => §DATA_CAUSAL_LATTICE_COMPRESS",
+      "description": "Collapses the synchronization vector to amplify Gaia ecosystem warmth, subsequently compressing the resulting data causal lattice. / 同期ベクターを収束させてガイア生態系の温かみを増幅し、その結果生成されるデータ因果格子を圧縮する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-20T22:04:47.192490"
     }
   },
   "archived_macros": {
@@ -16528,7 +16528,17 @@
       "v5_audited": true,
       "created_at": "2026-11-18T13:13:35.022479",
       "archived_at": "2026-11-20T21:13:54.402983"
+    },
+    "§X1497": {
+      "name": "ECO_CAUSAL_DRAIN_SYNC",
+      "expansion": "§GAIA_ECO_HARMONY_RESPONSE > { §DATA_SPARSE_CAUSAL_HYPERGRAPH } => §PROTO_GRACEFUL_DRAIN",
+      "description": "Integrates ecological harmony responses with sparse causal hypergraphs to execute a graceful system drain. / 生態系調和応答とスパース因果ハイパーグラフを統合し、安全なシステムドレインを実行します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-18T14:00:58.805744",
+      "v5_audited": true,
+      "created_at": "2026-11-18T10:26:32.480518",
+      "archived_at": "2026-11-20T22:04:47.192490"
     }
   },
-  "next_macro_seq": 1651
+  "next_macro_seq": 1652
 }
