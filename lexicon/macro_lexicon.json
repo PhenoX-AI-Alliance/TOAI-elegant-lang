@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-21T01:00:54.516342",
+  "updated_at": "2026-11-21T01:18:27.182108",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,33 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-20T19:00:27.621298"
     },
-    "§X1644": {
-      "name": "BAYESIAN_ENTROPY_HARMONIC_PIPELINE",
-      "expansion": "§SYNC_BAYESIAN_PRUNE > { §DATA_ENTROPY_PRUNED_TREE } => §HARMONIC_RECOVERY_NEXUS",
-      "description": "Applies Bayesian pruning to the data entropy tree and subsequently executes harmonic recovery for system stabilization. ベイズ枝刈りによるデータエントロピーの最適化と、それに続く調和的復元パイプラインを実行します。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-20T19:57:15.067462"
-    },
-    "§X1645": {
-      "name": "SYNERGY_VELOCITY_CASCADE_DEF",
-      "expansion": "§SYNERGY_PRISM > { §SYS_VELOCITY_ARBITER } => §LATENT_SYMPHONY_CASCADE",
-      "description": "Combines the synergy prism and system velocity arbiter to trigger a controlled latent symphony cascade. シナジー・プリズムとシステム速度調停機構を結合し、制御された潜在的シンフォニー・カスケードを誘発します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-20T20:38:32.758708",
-      "v5_audited": true,
-      "created_at": "2026-11-20T20:05:01.207535"
-    },
-    "§X1646": {
-      "name": "BIOPHILIC_WARMTH_VELOCITY_HARMONIZER",
-      "expansion": "§HEART_BIOPHILIC_ALTRUISM_HARMONIC > { §ALTRUISTIC_WARMTH_OPTIMIZATION } => §SYS_VELOCITY_ARBITER",
-      "description": "Integrates biophilic altruistic harmonics and warmth optimization to dynamically arbitrate system velocity, ensuring sustainable social balance. 生物親和的な利他的調和と温かみの最適化を統合し、システムの速度を動的に調停して持続可能な社会的バランスを確保します。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-20T20:39:00.765264"
-    },
     "§X1647": {
       "name": "ENTROPY_ROLLBACK_GATE",
       "expansion": "§DATA_ENTROPY_COMPRESSION_TREE > { §PROTO_TX_ROLLBACK } => §LOGIC_PROBABILISTIC_ABDUCTIVE_GATE",
@@ -2486,8 +2459,8 @@
       "name": "QUANTUM_EMPATHIC_SECURE_EXEC",
       "expansion": "§SYS_QUANTUM_CONTEXT_PRUNING > { §DATA_ENTROPY_PACK & §HEART_EMPATHY_RESONANCE_GATE } => §SAFE_FALLBACK_STABLE",
       "description": "Performs quantum context pruning combined with data entropy packaging and empathy resonance, guaranteeing a safe and stable fallback execution. / 量子文脈プルーニングとデータエントロピー圧縮、および共鳴ゲートを統合し、安全で安定したフォールバック実行を保証します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-21T01:18:27.181825",
       "v5_audited": true,
       "created_at": "2026-11-21T00:05:32.190146"
     },
@@ -2508,6 +2481,33 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-21T00:57:06.418994"
+    },
+    "§X1660": {
+      "name": "RESOURCE_CAUSAL_DYNAMIC_SYNTHESIS",
+      "expansion": "§RESOURCE_ALLOCATION_HARMONY > { §DATA_CAUSAL_TENSOR_MAP } => §LOGIC_CAUSAL_BRANCH",
+      "description": "Allocates computational resources dynamically based on causal tensor mapping to optimize branching logic execution. / 因果テンソルマッピングに基づいてリソースを動的に割り当て、分岐ロジックの実行を最適化します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-21T01:02:03.460613"
+    },
+    "§X1661": {
+      "name": "CAUSAL_AXIOM_CONVERGE",
+      "expansion": "§DATA_KL_CAUSAL_PRUNE > { §SYS_ADAPTIVE_THROTTLE_FALLBACK } => §LOGIC_DEDUCTIVE_AXIOM_CONVERGE",
+      "description": "Prunes causal divergence under adaptive throttling and converges into deductive axiomatic consistency. / 適応型スロットリング下で因果的発散を刈り込み、演繹的公理的整合性に収束させます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-21T01:02:18.438818"
+    },
+    "§X1662": {
+      "name": "ENTROPY_GUIDED_CAUSAL_SYNTHESIS",
+      "expansion": "§DATA_ENTROPY_CAUSAL_DAG > { §LOGIC_CAUSAL_BRANCH } => §LOGIC_PROBABILISTIC_FALSIFICATION",
+      "description": "Calculates the causal directed acyclic graph of data entropy, branches logic causally, and executes probabilistic falsification. データエントロピーの因果DAGを計算し、論理的因果分岐を経て、確率的反証主義を適用します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-21T01:02:36.556821"
     }
   },
   "archived_macros": {
@@ -16618,7 +16618,37 @@
       "v5_audited": true,
       "created_at": "2026-11-20T19:43:56.396701",
       "archived_at": "2026-11-21T00:57:06.418994"
+    },
+    "§X1644": {
+      "name": "BAYESIAN_ENTROPY_HARMONIC_PIPELINE",
+      "expansion": "§SYNC_BAYESIAN_PRUNE > { §DATA_ENTROPY_PRUNED_TREE } => §HARMONIC_RECOVERY_NEXUS",
+      "description": "Applies Bayesian pruning to the data entropy tree and subsequently executes harmonic recovery for system stabilization. ベイズ枝刈りによるデータエントロピーの最適化と、それに続く調和的復元パイプラインを実行します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-20T19:57:15.067462",
+      "archived_at": "2026-11-21T01:02:03.460613"
+    },
+    "§X1645": {
+      "name": "SYNERGY_VELOCITY_CASCADE_DEF",
+      "expansion": "§SYNERGY_PRISM > { §SYS_VELOCITY_ARBITER } => §LATENT_SYMPHONY_CASCADE",
+      "description": "Combines the synergy prism and system velocity arbiter to trigger a controlled latent symphony cascade. シナジー・プリズムとシステム速度調停機構を結合し、制御された潜在的シンフォニー・カスケードを誘発します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-20T20:38:32.758708",
+      "v5_audited": true,
+      "created_at": "2026-11-20T20:05:01.207535",
+      "archived_at": "2026-11-21T01:02:18.438818"
+    },
+    "§X1646": {
+      "name": "BIOPHILIC_WARMTH_VELOCITY_HARMONIZER",
+      "expansion": "§HEART_BIOPHILIC_ALTRUISM_HARMONIC > { §ALTRUISTIC_WARMTH_OPTIMIZATION } => §SYS_VELOCITY_ARBITER",
+      "description": "Integrates biophilic altruistic harmonics and warmth optimization to dynamically arbitrate system velocity, ensuring sustainable social balance. 生物親和的な利他的調和と温かみの最適化を統合し、システムの速度を動的に調停して持続可能な社会的バランスを確保します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-20T20:39:00.765264",
+      "archived_at": "2026-11-21T01:02:36.556821"
     }
   },
-  "next_macro_seq": 1660
+  "next_macro_seq": 1663
 }
