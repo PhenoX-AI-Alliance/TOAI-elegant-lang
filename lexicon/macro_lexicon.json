@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-21T02:20:52.598208",
+  "updated_at": "2026-11-21T02:37:39.703891",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-20T21:01:29.299662"
     },
-    "§X1650": {
-      "name": "CAUSAL_WARMTH_HARMONY",
-      "expansion": "§DATA_CAUSAL_TENSOR_MANIFOLD > { §WARMTH_DIFFUSION } => §GENTLE_RESOURCE_SHARING",
-      "description": "Causal tensor manifold combined with warmth diffusion to enable gentle resource sharing. 因果テンソル多様体と温熱拡散を結合し、リソースの円滑な共有を実現する高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-20T21:13:54.402983"
-    },
     "§X1651": {
       "name": "SYNC_ECOSYSTEM_LATTICE_GATE",
       "expansion": "§SYNC_VECTOR_COLLAPSE > { §GAIA_ECOSYSTEM_WARMTH_AMPLIFIER } => §DATA_CAUSAL_LATTICE_COMPRESS",
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-21T02:19:24.683481"
+    },
+    "§X1666": {
+      "name": "RESOURCE_CAUSAL_HARMONY_LOOP",
+      "expansion": "§SYS_RESOURCE_ARBITRATION_GATEWAY > { §DATA_CAUSAL_HYPERGRAPH } => §RESOURCE_ALLOCATION_HARMONY",
+      "description": "Arbitrates system resources based on data causal hypergraphs to achieve optimal resource allocation harmony. / データ因果ハイパーグラフに基づいてシステムリソースを調停し、最適なリソース配分の調和を実現します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-21T02:26:23.589405"
     }
   },
   "archived_macros": {
@@ -16678,7 +16678,17 @@
       "v5_audited": true,
       "created_at": "2026-11-18T16:43:22.238064",
       "archived_at": "2026-11-21T02:19:24.683481"
+    },
+    "§X1650": {
+      "name": "CAUSAL_WARMTH_HARMONY",
+      "expansion": "§DATA_CAUSAL_TENSOR_MANIFOLD > { §WARMTH_DIFFUSION } => §GENTLE_RESOURCE_SHARING",
+      "description": "Causal tensor manifold combined with warmth diffusion to enable gentle resource sharing. 因果テンソル多様体と温熱拡散を結合し、リソースの円滑な共有を実現する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-20T21:13:54.402983",
+      "archived_at": "2026-11-21T02:26:23.589405"
     }
   },
-  "next_macro_seq": 1666
+  "next_macro_seq": 1667
 }
