@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-20T23:25:21.812956",
+  "updated_at": "2026-11-20T23:50:20.052171",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2432,8 +2432,8 @@
       "name": "ENTROPY_ROLLBACK_GATE",
       "expansion": "§DATA_ENTROPY_COMPRESSION_TREE > { §PROTO_TX_ROLLBACK } => §LOGIC_PROBABILISTIC_ABDUCTIVE_GATE",
       "description": "Compresses data entropy and evaluates transactional rollback conditions through a probabilistic abductive gate. / データエントロピーを圧縮し、確率的アブダクションゲートを通じてトランザクションのロールバック条件を評価します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-20T23:33:46.457177",
       "v5_audited": true,
       "created_at": "2026-11-20T20:41:19.466419"
     },
@@ -2450,8 +2450,8 @@
       "name": "CAUSAL_ENTROPY_BOUND_LOCK",
       "expansion": "§DATA_CAUSAL_TENSOR_MAP > { §DATA_ENTROPY_CAUSAL_BOUND } => §LATENT_HARMONY_FIELD_LOCKED",
       "description": "Binds causal tensor mapping within entropy causal bounds to lock the latent harmony field. 潜在的な調和場を固定するため、エントロピー因果境界内で因果テンソル写像を結合します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-20T23:02:03.622719",
+      "usage_count": 2,
+      "last_used_at": "2026-11-20T23:33:46.457177",
       "v5_audited": true,
       "created_at": "2026-11-20T21:01:29.299662"
     },
