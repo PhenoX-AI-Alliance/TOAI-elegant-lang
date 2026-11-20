@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-20T16:19:38.359614",
+  "updated_at": "2026-11-20T16:56:03.207077",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1789,15 +1789,6 @@
       "v5_audited": true,
       "created_at": "2026-11-17T22:02:17.015586"
     },
-    "§X1486": {
-      "name": "HARMONIC_QUOTA_SYNC_PIPELINE",
-      "expansion": "§SYS_MEMORY_SYNC_BARRIER > { §PROTO_QUOTA_RELEASE } => §HARMONIC_RECOVERY_NEXUS",
-      "description": "Synchronizes memory barriers and releases protocol quotas to trigger harmonic recovery nexus. / メモリバリアを同期しプロトコルクォータを解放して調和回復ネクサスを起動します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-18T07:55:21.428270",
-      "v5_audited": true,
-      "created_at": "2026-11-18T06:07:29.729265"
-    },
     "§X1489": {
       "name": "GAIA_ALTRUISTIC_HARMONY_SYNC",
       "expansion": "§GAIA_ECOSYSTEM_WARMTH_AMPLIFIER > { §HEART_ALTRUISTIC_SAFETY_BOUND } => §HARMONIC_RESONANCE_STABLE",
@@ -2374,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-20T10:57:47.579162"
     },
-    "§X1618": {
-      "name": "ENTROPY_THROTTLE_SYNTHESIS",
-      "expansion": "§SYS_LOAD_THROTTLE > { §DATA_ENTROPY_CAUSAL_LATTICE } => §LOGIC_AXIOM_CLOSURE",
-      "description": "System load throttle regulates data entropy causal lattice to ensure logical axiom closure. / システム負荷スロットルがデータエントロピー因果格子を制御し、論理公理閉包を保証する。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-20T11:58:47.733385",
-      "v5_audited": true,
-      "created_at": "2026-11-20T11:02:16.874669"
-    },
     "§X1619": {
       "name": "QUANTUM_BAYES_PRUNE_SYNC",
       "expansion": "§SYS_QUANTUM_THROTTLE_LOCK > { §LOGIC_BAYES_FALSIFY , §DATA_ENTROPY_CAUSAL_PRUNE } => §HEART_ALTRUISTIC_PULSE_SYNC",
@@ -2441,8 +2423,8 @@
       "name": "TOPOLOGY_CAUSAL_AXIOM_CLOSURE",
       "expansion": "§DATA_LATENT_TOPOLOGY_INDEX > { §DATA_SPARSE_CAUSAL_HYPERGRAPH } => §LOGIC_AXIOM_CLOSURE",
       "description": "Combines latent topology indexing and sparse causal hypergraph analysis to execute a rigorous logic axiom closure. 潜在的位相インデックスと疎因果ハイパーグラフ解析を結合し、厳密な論理公理閉包を実行します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-20T16:19:38.359345",
+      "usage_count": 2,
+      "last_used_at": "2026-11-20T16:47:32.742158",
       "v5_audited": true,
       "created_at": "2026-11-20T13:01:36.409163"
     },
@@ -2508,6 +2490,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-20T15:41:12.712899"
+    },
+    "§X1633": {
+      "name": "QUANTUM_CAUSAL_BOUNDED_LOCK",
+      "expansion": "§SYS_QUANTUM_BUDGET_ARBITRATION > { §DATA_ENTROPY_BOUNDED_DAG } => §PROTO_IDEMPOTENCY_LOCK",
+      "description": "Arbitrates quantum system budgets to bound data entropy within a directed acyclic graph, enforcing absolute protocol idempotency. システム量子予算を調停し、有向非巡回グラフ内のデータエントロピーを境界付け、プロトコルの絶対的なべき等性を強制します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-20T16:30:48.138319"
+    },
+    "§X1634": {
+      "name": "ALTRUISTIC_FALSIFICATION_LATTICE",
+      "expansion": "§HEART_ALTRUISTIC_BUFFER_FLOW > { §LOGIC_PROBABILISTIC_FALSIFICATION_GATE } => §DATA_ENTROPY_CAUSAL_LATTICE",
+      "description": "Combines altruistic buffering with probabilistic falsification to regulate data entropy causal lattices. / 利他主義バッファリングと確率的反証ゲートを結合し、データエントロピー因果格子を制御する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-20T16:56:03.206634"
     }
   },
   "archived_macros": {
@@ -16348,7 +16348,27 @@
       "v5_audited": true,
       "created_at": "2026-11-20T10:56:39.754229",
       "archived_at": "2026-11-20T15:41:12.712899"
+    },
+    "§X1486": {
+      "name": "HARMONIC_QUOTA_SYNC_PIPELINE",
+      "expansion": "§SYS_MEMORY_SYNC_BARRIER > { §PROTO_QUOTA_RELEASE } => §HARMONIC_RECOVERY_NEXUS",
+      "description": "Synchronizes memory barriers and releases protocol quotas to trigger harmonic recovery nexus. / メモリバリアを同期しプロトコルクォータを解放して調和回復ネクサスを起動します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-18T07:55:21.428270",
+      "v5_audited": true,
+      "created_at": "2026-11-18T06:07:29.729265",
+      "archived_at": "2026-11-20T16:30:48.138319"
+    },
+    "§X1618": {
+      "name": "ENTROPY_THROTTLE_SYNTHESIS",
+      "expansion": "§SYS_LOAD_THROTTLE > { §DATA_ENTROPY_CAUSAL_LATTICE } => §LOGIC_AXIOM_CLOSURE",
+      "description": "System load throttle regulates data entropy causal lattice to ensure logical axiom closure. / システム負荷スロットルがデータエントロピー因果格子を制御し、論理公理閉包を保証する。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-20T11:58:47.733385",
+      "v5_audited": true,
+      "created_at": "2026-11-20T11:02:16.874669",
+      "archived_at": "2026-11-20T16:56:03.206634"
     }
   },
-  "next_macro_seq": 1633
+  "next_macro_seq": 1635
 }
