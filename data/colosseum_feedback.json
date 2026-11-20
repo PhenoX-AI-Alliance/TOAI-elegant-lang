@@ -8,6 +8,8 @@
     "description": "リアルタイムのトークン消費予測に基づくリソース調停と分散合意を連動させ、スループットを維持しながら高精度なレートリミットを実行するマクロ。"
   },
   "proposed_scenario": "【コロシアム発・実務検証】高負荷時における§SYS_ADAPTIVE_BUDGET_ARBITERと§SYNC_DIALECTIC_PRUNEの連動挙動をテストし、スループット低下を伴わない自律的なトークン消費抑制効果を検証する。",
-  "consumed_by_macro": false,
-  "consumed_by_dialogue": false
+  "consumed_by_macro": true,
+  "consumed_by_dialogue": true,
+  "consumed_by_dialogue_at": "2026-11-21T03:01:53.632927",
+  "consumed_by_macro_at": "2026-11-21T03:16:17.832580"
 }

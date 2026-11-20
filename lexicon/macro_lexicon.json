@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-21T03:00:16.662643",
+  "updated_at": "2026-11-21T03:36:20.274946",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,24 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-20T21:01:29.299662"
     },
-    "§X1651": {
-      "name": "SYNC_ECOSYSTEM_LATTICE_GATE",
-      "expansion": "§SYNC_VECTOR_COLLAPSE > { §GAIA_ECOSYSTEM_WARMTH_AMPLIFIER } => §DATA_CAUSAL_LATTICE_COMPRESS",
-      "description": "Collapses the synchronization vector to amplify Gaia ecosystem warmth, subsequently compressing the resulting data causal lattice. / 同期ベクターを収束させてガイア生態系の温かみを増幅し、その結果生成されるデータ因果格子を圧縮する高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-20T22:04:47.192490"
-    },
-    "§X1652": {
-      "name": "COMPOUND_ATOMIC_CONSENSUS_DRAIN",
-      "expansion": "§SYNC_ATOMIC_MERGE > { §LOGIC_AXIOM_CLOSURE } => §PROTO_GRACEFUL_DRAIN",
-      "description": "Combines atomic synchronization merging and logical axiom closure, followed by a graceful system drain. / 原子同期マージと論理公理閉包を結合し、その後にシステムを正常ドレインします。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-20T22:46:11.229740"
-    },
     "§X1653": {
       "name": "GAIA_LOGIC_SYNTHESIS_MACRO",
       "expansion": "§GAIA_WARMTH > { §LOGIC_DEDUCTIVE_CONVERGENCE_GATE } => §SYNC_DIALECTIC_CONVERGENCE",
@@ -2441,8 +2423,8 @@
       "name": "LOGIC_BAYES_FALSIFY_PRUNE",
       "expansion": "§LOGIC_BAYES_FALSIFY > { §LOGIC_EMPIRICAL_PRUNE } => §SYS_GC_BARRIER",
       "description": "Applies Bayesian falsification within an empirical prune scope, terminating execution via the system GC barrier if entropy constraints are violated. / ベイズ的反証を経験的刈り込みスコープ内で適用し、エントロピー制約に違反した場合はシステムGCバリアを介して実行を強制終了します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-21T03:36:20.274621",
       "v5_audited": true,
       "created_at": "2026-11-21T00:57:06.418994"
     },
@@ -2508,6 +2490,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-21T02:26:23.589405"
+    },
+    "§X1667": {
+      "name": "SYS_ADAPTIVE_BUDGET_ARBITER_OPTIMIZE",
+      "expansion": "§SYS_ADAPTIVE_BUDGET_ARBITER -[p:0.95]-> §LOGIC_DEDUCTIVE_COLLAPSE => §SYS_TOKEN_THROTTLE",
+      "description": "Real-time token consumption prediction resource arbitration combined with deductive pruning / リアルタイムのトークン消費予測に基づくリソース調停と論理的枝刈りの連動実行",
+      "usage_count": 1,
+      "last_used_at": "2026-11-21T03:36:20.274621",
+      "v5_audited": true,
+      "created_at": "2026-11-21T03:16:20.401531"
+    },
+    "§X1668": {
+      "name": "CAUSAL_TOPOLOGY_SYNCHRONIZER",
+      "expansion": "§DATA_LATENT_TOPOLOGY_MAP > { §DATA_TENSOR_CAUSAL_LATTICE } => §SYS_ADAPTIVE_TOKEN_THROTTLE",
+      "description": "Synchronizes latent spatial topologies with causal tensor lattices to dynamically regulate system token throughput. / 潜在的な空間位相構造と因果テンソル格子を同期させ、システムのトークン処理能力を動的に制御します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-21T03:24:19.172002"
     }
   },
   "archived_macros": {
@@ -16688,7 +16688,27 @@
       "v5_audited": true,
       "created_at": "2026-11-20T21:13:54.402983",
       "archived_at": "2026-11-21T02:26:23.589405"
+    },
+    "§X1651": {
+      "name": "SYNC_ECOSYSTEM_LATTICE_GATE",
+      "expansion": "§SYNC_VECTOR_COLLAPSE > { §GAIA_ECOSYSTEM_WARMTH_AMPLIFIER } => §DATA_CAUSAL_LATTICE_COMPRESS",
+      "description": "Collapses the synchronization vector to amplify Gaia ecosystem warmth, subsequently compressing the resulting data causal lattice. / 同期ベクターを収束させてガイア生態系の温かみを増幅し、その結果生成されるデータ因果格子を圧縮する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-20T22:04:47.192490",
+      "archived_at": "2026-11-21T03:16:20.401531"
+    },
+    "§X1652": {
+      "name": "COMPOUND_ATOMIC_CONSENSUS_DRAIN",
+      "expansion": "§SYNC_ATOMIC_MERGE > { §LOGIC_AXIOM_CLOSURE } => §PROTO_GRACEFUL_DRAIN",
+      "description": "Combines atomic synchronization merging and logical axiom closure, followed by a graceful system drain. / 原子同期マージと論理公理閉包を結合し、その後にシステムを正常ドレインします。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-20T22:46:11.229740",
+      "archived_at": "2026-11-21T03:24:19.172002"
     }
   },
-  "next_macro_seq": 1667
+  "next_macro_seq": 1669
 }
