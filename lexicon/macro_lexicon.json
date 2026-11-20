@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-21T01:47:53.156526",
+  "updated_at": "2026-11-21T02:01:48.289149",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2486,8 +2486,8 @@
       "name": "CAUSAL_AXIOM_CONVERGE",
       "expansion": "§DATA_KL_CAUSAL_PRUNE > { §SYS_ADAPTIVE_THROTTLE_FALLBACK } => §LOGIC_DEDUCTIVE_AXIOM_CONVERGE",
       "description": "Prunes causal divergence under adaptive throttling and converges into deductive axiomatic consistency. / 適応型スロットリング下で因果的発散を刈り込み、演繹的公理的整合性に収束させます。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-21T01:46:45.962070",
+      "usage_count": 2,
+      "last_used_at": "2026-11-21T01:52:06.328897",
       "v5_audited": true,
       "created_at": "2026-11-21T01:02:18.438818"
     },
