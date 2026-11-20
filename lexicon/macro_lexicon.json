@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-20T15:08:48.141262",
+  "updated_at": "2026-11-20T15:29:05.857981",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2468,8 +2468,8 @@
       "name": "QUANTUM_ADAPTIVE_GATE",
       "expansion": "§SYS_QUANTUM_THROTTLE_LOCK > { §SYS_ADAPTIVE_TOKEN_THROTTLE } => §LOGIC_DEDUCTIVE_AXIOM_GATE",
       "description": "Combines quantum throttle locking with adaptive token throttling under a deductive axiom gate. 量子スロットルロックと適応型トークンスロットルを論理演繹公理ゲート下で統合する高次マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-20T15:01:25.585511",
+      "usage_count": 2,
+      "last_used_at": "2026-11-20T15:14:55.421881",
       "v5_audited": true,
       "created_at": "2026-11-20T13:58:38.976777"
     },
