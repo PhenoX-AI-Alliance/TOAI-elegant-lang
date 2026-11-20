@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-20T17:45:13.339791",
+  "updated_at": "2026-11-20T18:01:30.194514",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,30 +2365,12 @@
       "v5_audited": true,
       "created_at": "2026-11-20T10:57:47.579162"
     },
-    "§X1621": {
-      "name": "GAIA_QUANTUM_VELOCITY_SYNC",
-      "expansion": "§SYS_TOKEN_VELOCITY_GATE > { §SYS_QUANTUM_BUDGET_ARBITRATION } => §GAIA_ECO_HARMONY_RESPONSE",
-      "description": "Token velocity control combined with quantum budget arbitration to produce a synchronized Gaia eco-harmony response. トークン速度制御と量子予算調停を統合し、同期されたガイア環境調和レスポンスを生成します。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-20T12:37:01.972105"
-    },
-    "§X1622": {
-      "name": "BAYESIAN_QUANTUM_FALSIFICATION_PRUNING",
-      "expansion": "§SYS_QUANTUM_CONTEXT_PRUNING > { §LOGIC_BAYES_FALSIFY, §LOGIC_PROBABILISTIC_FALSIFICATION_GATES } => §SYS_QUANTUM_SLOT_ARBITRATION",
-      "description": "Combines quantum context pruning with Bayesian and probabilistic falsification gates to resolve slot arbitration under minimum entropy constraints. / 量子コンテキストプルーニングとベイズ的・確率的反証ゲートを結合し、最小エントロピー制約下でのスロット調停を執行します。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-20T12:41:26.143781"
-    },
     "§X1623": {
       "name": "CAUSAL_HARMONIC_ARBITRAGE_PIPELINE",
       "expansion": "§DATA_ATTENTION_CAUSAL_DAG > { §SYNC_HARMONIC_ARBITRAGE_PACT } => §SYS_DIVERGENCE_ARBITER",
       "description": "Causal attention directed acyclic graph synchronizes with harmonic arbitrage pact, governed by the system divergence arbiter. 因果アテンション有向非巡回グラフが調和的アービトラージ協定と同期し、システム発散調停官によって制御される高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-20T18:00:35.448567",
       "v5_audited": true,
       "created_at": "2026-11-20T13:01:31.902957"
     },
@@ -2508,6 +2490,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-20T17:42:06.936423"
+    },
+    "§X1637": {
+      "name": "QUANTUM_TOPOLOGY_PRUNE",
+      "expansion": "§SYS_QUANTUM_MEM_RECLAIM > { §DATA_LATENT_TOPOLOGY_INDEX } => §LOGIC_RECURSIVE_FALSIFICATION_PRUNE",
+      "description": "Reclaims quantum memory based on latent topology indexing and recursively prunes falsified logical states. 潜在位相インデックスに基づいて量子メモリを回収し、反証された論理状態を再帰的に刈り込みます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-20T18:01:24.743024"
+    },
+    "§X1638": {
+      "name": "BAYES_DIVERGENCE_ARBITER_FLOW",
+      "expansion": "§SYS_DIVERGENCE_ARBITER > { §LOGIC_ABDUCTIVE_BAYES_PRUNE } => §DATA_LATENT_TENSOR_FLOW",
+      "description": "Applies abductive Bayesian pruning to the divergence arbiter before routing through the latent tensor flow. / 潜在テンソル流ルーティングの前に、背理ベイジアン枝刈りをダイバージェンスアービターに適用します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-20T18:01:30.193911"
     }
   },
   "archived_macros": {
@@ -16388,7 +16388,27 @@
       "v5_audited": true,
       "created_at": "2026-11-20T12:02:41.693665",
       "archived_at": "2026-11-20T17:42:06.936423"
+    },
+    "§X1621": {
+      "name": "GAIA_QUANTUM_VELOCITY_SYNC",
+      "expansion": "§SYS_TOKEN_VELOCITY_GATE > { §SYS_QUANTUM_BUDGET_ARBITRATION } => §GAIA_ECO_HARMONY_RESPONSE",
+      "description": "Token velocity control combined with quantum budget arbitration to produce a synchronized Gaia eco-harmony response. トークン速度制御と量子予算調停を統合し、同期されたガイア環境調和レスポンスを生成します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-20T12:37:01.972105",
+      "archived_at": "2026-11-20T18:01:24.743024"
+    },
+    "§X1622": {
+      "name": "BAYESIAN_QUANTUM_FALSIFICATION_PRUNING",
+      "expansion": "§SYS_QUANTUM_CONTEXT_PRUNING > { §LOGIC_BAYES_FALSIFY, §LOGIC_PROBABILISTIC_FALSIFICATION_GATES } => §SYS_QUANTUM_SLOT_ARBITRATION",
+      "description": "Combines quantum context pruning with Bayesian and probabilistic falsification gates to resolve slot arbitration under minimum entropy constraints. / 量子コンテキストプルーニングとベイズ的・確率的反証ゲートを結合し、最小エントロピー制約下でのスロット調停を執行します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-20T12:41:26.143781",
+      "archived_at": "2026-11-20T18:01:30.193911"
     }
   },
-  "next_macro_seq": 1637
+  "next_macro_seq": 1639
 }
