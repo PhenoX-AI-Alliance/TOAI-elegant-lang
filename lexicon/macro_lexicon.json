@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-21T07:35:06.017880",
+  "updated_at": "2026-11-21T07:58:00.435965",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2432,8 +2432,8 @@
       "name": "SAFE_QUANTUM_BENEVOLENT_GATE",
       "expansion": "§SYS_QUANTUM_SLOT_ARBITRATION > { §HEART_BENEVOLENT_FEEDBACK } => §SAFE_FALLBACK_STATE",
       "description": "Arbitrates quantum slots under benevolent feedback constraint, ensuring fallback safety on condition falsification. / 善意のフィードバック制約下で量子スロットを調停し、条件偽造時にフォールバックの安全性を確保します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-21T07:58:00.435682",
       "v5_audited": true,
       "created_at": "2026-11-21T04:34:33.942727"
     },
