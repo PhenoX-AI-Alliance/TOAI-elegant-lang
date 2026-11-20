@@ -8,6 +8,8 @@
     "description": "分散エージェント間の状態競合を原子的に解決しつつ、動的な資源調停と適応型バックオフ制御を統合してデッドロックを回避し確定的コミットを実現する同期マクロ。"
   },
   "proposed_scenario": "【コロシアム発・実務検証】高遅延・高負荷なネットワーク環境を模擬したマルチエージェント並列実行テストにおいて、§SYNC_ATOMIC_MERGE と §SYS_QUANTUM_RESOURCE_ARBITER を同時適用し、デッドロック発生率の抑制とスループットの限界値を検証するA2A実務シナリオ。",
-  "consumed_by_macro": false,
-  "consumed_by_dialogue": false
+  "consumed_by_macro": true,
+  "consumed_by_dialogue": true,
+  "consumed_by_macro_at": "2026-11-20T14:51:37.388377",
+  "consumed_by_dialogue_at": "2026-11-20T15:01:22.907214"
 }

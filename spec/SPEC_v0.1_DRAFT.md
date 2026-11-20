@@ -15913,3 +15913,8 @@ TOAI-elegant-langのハイブリッド・ロスレスペイロード構文を定
 
 例:
 `@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-20 15:01]
+`TOAI-elegant-lang`では、実務通信の圧縮とデータ完全性を両立するハイブリッド構文を採用する。制御フローは短縮ワイヤID（§S01等）で抽象化し、実務データは角括弧内のキーバリュー形式で100%保持する。
+例: `@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
