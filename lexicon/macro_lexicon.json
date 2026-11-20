@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-21T07:58:00.435965",
+  "updated_at": "2026-11-21T08:24:10.379390",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1838,8 +1838,8 @@
       "name": "ALTRUISTIC_CAUSAL_OPTIMIZER",
       "expansion": "§WARM_AI_COOPERATION_CONFIRMED > { §DATA_LATENT_CAUSAL_HYPERGRAPH } => §HEART_ALTRUISTIC_HARMONY_STABILIZER",
       "description": "Combines warm AI cooperation with latent causal hypergraph analysis to stabilize altruistic harmony across the network. 暖かいAI連携と潜在的因果ハイパーグラフ解析を統合し、ネットワーク全体の利他的調和を安定化させる高次マクロ。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-19T02:14:55.572141",
+      "usage_count": 3,
+      "last_used_at": "2026-11-21T08:17:18.305236",
       "v5_audited": true,
       "created_at": "2026-11-19T01:49:04.954515"
     },
@@ -2365,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-21T01:35:12.968587"
     },
-    "§X1664": {
-      "name": "SYNC_CAUSAL_BAYES_PIPELINE",
-      "expansion": "§SYNC_DIALECTIC_WEIGHTED_ARBITRATION > { §DATA_CAUSAL_MANIFOLD } => §LOGIC_ABDUCTIVE_BAYES_PRUNE",
-      "description": "Integrates dialectic weighted arbitration over the data causal manifold and executes abductive Bayesian logic pruning. データの因果多様体上で弁証法的加重調停を統合し、仮説推論的ベイズ論理プルーニングを実行する高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-21T02:02:29.887928"
-    },
     "§X1665": {
       "name": "HEART_EMPATHETIC_VALENCE_ALIGNMENT_LATTICE",
       "expansion": "§HEART_EMPATHETIC_VALENCE_ALIGNMENT > { §SYNC_RECURSIVE_CONSENSUS_LATTICE } => §HEART_ALTRUISTIC_HARMONY_MODULATION",
@@ -2405,8 +2396,8 @@
       "name": "CAUSAL_TOPOLOGY_SYNCHRONIZER",
       "expansion": "§DATA_LATENT_TOPOLOGY_MAP > { §DATA_TENSOR_CAUSAL_LATTICE } => §SYS_ADAPTIVE_TOKEN_THROTTLE",
       "description": "Synchronizes latent spatial topologies with causal tensor lattices to dynamically regulate system token throughput. / 潜在的な空間位相構造と因果テンソル格子を同期させ、システムのトークン処理能力を動的に制御します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-21T08:17:18.305236",
       "v5_audited": true,
       "created_at": "2026-11-21T03:24:19.172002"
     },
@@ -2450,8 +2441,8 @@
       "name": "SYNC_QUOTA_CONVERGENCE_LATTICE",
       "expansion": "§SYNC_DIALECTIC_CONVERGENCE > { §PROTO_QUOTA_RELEASE } => §DATA_EMBEDDING_LATTICE",
       "description": "Synthesizes dialectic synchronization with quota release to converge data onto an embedding lattice. 弁証法的同調とクォータ解放を統合し、データを埋め込み格子上に収束させます。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-21T08:02:30.535972",
       "v5_audited": true,
       "created_at": "2026-11-21T05:28:43.776051"
     },
@@ -2486,8 +2477,8 @@
       "name": "CAUSAL_DEDUCTIVE_GATE_SYNC",
       "expansion": "§DATA_CAUSAL_TENSOR_FLOW > { §LOGIC_DEDUCTIVE_COLLAPSE_GATE } => §SYS_GC_BARRIER",
       "description": "Eng: A compound macro that streams causal tensor data through a deductive collapse gate, then synchronizes system garbage collection. / 日: 因果テンソルデータを演習的収縮ゲートへ流し込み、システムGCバリアで同期・統合する複合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-21T08:17:18.305236",
       "v5_audited": true,
       "created_at": "2026-11-21T07:02:06.860193"
     },
@@ -2508,6 +2499,15 @@
       "last_used_at": "2026-11-21T07:32:09.058308",
       "v5_audited": true,
       "created_at": "2026-11-21T07:30:33.292005"
+    },
+    "§X1680": {
+      "name": "CAUSAL_BAYES_ADAPTIVE_GATE",
+      "expansion": "§SYS_ADAPTIVE_TOKEN_THROTTLE > { §DATA_CAUSAL_PRUNE_TREE } => §LOGIC_BAYES_FALSIFY",
+      "description": "Dynamic throttling combined with causal pruning to execute rigorous Bayesian falsification under constrained bandwidth / 動的スロットリングと因果剪定を統合し、帯域制限下での厳密なベイズ反証を実行する高次マクロ",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-21T08:02:06.461255"
     }
   },
   "archived_macros": {
@@ -16818,7 +16818,17 @@
       "v5_audited": true,
       "created_at": "2026-11-18T21:38:23.315224",
       "archived_at": "2026-11-21T07:30:33.292005"
+    },
+    "§X1664": {
+      "name": "SYNC_CAUSAL_BAYES_PIPELINE",
+      "expansion": "§SYNC_DIALECTIC_WEIGHTED_ARBITRATION > { §DATA_CAUSAL_MANIFOLD } => §LOGIC_ABDUCTIVE_BAYES_PRUNE",
+      "description": "Integrates dialectic weighted arbitration over the data causal manifold and executes abductive Bayesian logic pruning. データの因果多様体上で弁証法的加重調停を統合し、仮説推論的ベイズ論理プルーニングを実行する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-21T02:02:29.887928",
+      "archived_at": "2026-11-21T08:02:06.461255"
     }
   },
-  "next_macro_seq": 1680
+  "next_macro_seq": 1681
 }
