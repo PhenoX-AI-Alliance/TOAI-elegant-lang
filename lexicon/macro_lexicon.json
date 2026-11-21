@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-21T22:10:08.577831",
+  "updated_at": "2026-11-21T22:34:29.956963",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1825,15 +1825,6 @@
       "v5_audited": true,
       "created_at": "2026-11-19T16:55:54.185089"
     },
-    "§X1574": {
-      "name": "SUSTAINABLE_FALSIFICATION_NODE",
-      "expansion": "§SUSTAINABLE_ALTRUISTIC_VALUE > { §LOGIC_PROBABILISTIC_FALSIFICATION_PRISM } => §LOGIC_DEDUCTIVE_CONVERGENCE_NODE",
-      "description": "Integrates altruistic resource sustainability with probabilistic falsification to converge into a validated deductive node. 持続可能な利他的価値と確率的反証主義を統合し、検証された演繹的ノードへと収束させます。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-19T20:01:25.926411",
-      "v5_audited": true,
-      "created_at": "2026-11-19T18:17:43.103849"
-    },
     "§X1575": {
       "name": "CAUSAL_LOGIC_PRUNE_PIPELINE",
       "expansion": "§PROTO_TX_BEGIN > { §DATA_TENSOR_CAUSAL_LATTICE } => §LOGIC_POSTERIOR_PRUNE_GATE",
@@ -2486,8 +2477,8 @@
       "name": "MACRO_ABDUCTIVE_ENTROPY_COMPRESSION",
       "expansion": "§LOGIC_ABDUCTIVE_PRUNE > { §DATA_ENTROPY_COMPRESSION_TREE } => §SAFE_FALLBACK_STABLE",
       "description": "Abductive logic pruning combined with entropy compression tree expansion, ensuring safe and stable fallback execution under resource constraints. 創発的アブダクション枝刈りとエントロピー圧縮木を統合し、安全なフォールバックを保証する複合マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-21T22:01:17.644292",
+      "usage_count": 2,
+      "last_used_at": "2026-11-21T22:34:18.135874",
       "v5_audited": true,
       "created_at": "2026-11-21T21:01:06.041262"
     },
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-21T22:10:08.577363"
+    },
+    "§X1724": {
+      "name": "HARMONIC_FALSIFY_CIRCUIT_BREAK",
+      "expansion": "§HARMONIC_RECOVERY_RESONANCE > { §LOGIC_DEDUCTIVE_FALSIFY_TENSOR } => §PROTO_CIRCUIT_BREAK",
+      "description": "Eng: Executes harmonic recovery resonance followed by deductive falsification tensor analysis to trigger a protective protocol circuit break when logic anomalies are detected. / 日: 調和復元共鳴と演繹的偽造テンソル解析を実行し、論理異常検知時にプロトコル回路遮断を発動します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-21T22:34:29.956458"
     }
   },
   "archived_macros": {
@@ -17258,7 +17258,17 @@
       "v5_audited": true,
       "created_at": "2026-11-21T17:12:17.605113",
       "archived_at": "2026-11-21T22:10:08.577363"
+    },
+    "§X1574": {
+      "name": "SUSTAINABLE_FALSIFICATION_NODE",
+      "expansion": "§SUSTAINABLE_ALTRUISTIC_VALUE > { §LOGIC_PROBABILISTIC_FALSIFICATION_PRISM } => §LOGIC_DEDUCTIVE_CONVERGENCE_NODE",
+      "description": "Integrates altruistic resource sustainability with probabilistic falsification to converge into a validated deductive node. 持続可能な利他的価値と確率的反証主義を統合し、検証された演繹的ノードへと収束させます。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-19T20:01:25.926411",
+      "v5_audited": true,
+      "created_at": "2026-11-19T18:17:43.103849",
+      "archived_at": "2026-11-21T22:34:29.956458"
     }
   },
-  "next_macro_seq": 1724
+  "next_macro_seq": 1725
 }
