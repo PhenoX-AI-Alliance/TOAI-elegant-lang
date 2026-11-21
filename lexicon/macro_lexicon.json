@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-21T19:04:49.377309",
+  "updated_at": "2026-11-21T19:59:14.234851",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1307,8 +1307,8 @@
       "name": "GAIA_EMPATHY_ARBITRATION_LATTICE",
       "expansion": "§HEART_EMPATHY_RESONANCE_GATE > { §SYS_ADAPTIVE_BUDGET_ARBITER } => §DATA_TENSOR_CAUSAL_LATTICE",
       "description": "A compound macro that harmonizes empathetic resonance with adaptive budget arbitration to optimize causal data tensor processing. / 共感の共鳴ゲートと適応型予算調停を統合し、因果データテンソルの処理を最適化する複合マクロです。",
-      "usage_count": 5,
-      "last_used_at": "2026-11-08T02:31:03.986924",
+      "usage_count": 6,
+      "last_used_at": "2026-11-21T19:35:31.336422",
       "v5_audited": true,
       "created_at": "2026-11-02T10:05:16.235008"
     },
@@ -1807,15 +1807,6 @@
       "v5_audited": true,
       "created_at": "2026-11-19T01:49:04.954515"
     },
-    "§X1556": {
-      "name": "DIALECTIC_RECURSIVE_OPTIMIZE",
-      "expansion": "§SYNC_DIALECTIC_CONVERGENCE > { §LOGIC_RECURSIVE_FALSIFICATION_PRUNE } => §SYNC_ATOMIC_MERGE",
-      "description": "Applies dialectic convergence to recursively falsify and prune logical branches, then atomically merges the result. 弁証法的収束を適用して論理枝の再帰的偽証と刈り込みを行い、結果をアトミックに統合します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-19T16:46:41.587443",
-      "v5_audited": true,
-      "created_at": "2026-11-19T11:01:16.396232"
-    },
     "§X1565": {
       "name": "CAUSAL_FALSIFICATION_PIPE",
       "expansion": "§DATA_CAUSAL_GRAPH > { §DATA_ENTROPY_PACK } => §LOGIC_DEDUCTIVE_FALSIFICATION_VECTOR",
@@ -1824,15 +1815,6 @@
       "last_used_at": "2026-11-19T18:41:34.565152",
       "v5_audited": true,
       "created_at": "2026-11-19T14:35:01.527762"
-    },
-    "§X1567": {
-      "name": "ALTRUISTIC_DEDUCTIVE_ROLLBACK_GUARD",
-      "expansion": "§HEART_ALTRUISTIC_RESONANCE_LATTICE > { §LOGIC_DEDUCTIVE_FALSIFICATION_VECTOR } => §SYS_QUOTA_ROLLBACK",
-      "description": "Integrates altruistic resonance with deductive falsification to automatically trigger a system quota rollback upon detecting logical invalidity. 倫理的共鳴と論理的反証ベクトルを統合し、不整合検知時にシステムのクォータを自動ロールバックする高次マクロ。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-19T16:16:21.917379",
-      "v5_audited": true,
-      "created_at": "2026-11-19T15:16:38.949267"
     },
     "§X1568": {
       "name": "CAUSAL_ALTRUISTIC_SYNTHESIS",
@@ -2374,15 +2356,6 @@
       "v5_audited": true,
       "created_at": "2026-11-21T15:02:15.642486"
     },
-    "§X1698": {
-      "name": "GAIA_ALTRUISTIC_HARMONY_DEF",
-      "expansion": "§GAIA_WARMTH_EQUILIBRIUM > { §HEART_ALTRUISTIC_RESONANCE_ALIGNMENT } => §SYNC_VECTOR_COLLAPSE",
-      "description": "Harmonizes planetary warmth equilibrium with altruistic heart resonance to collapse synchronization vectors. / 惑星の温かさの平衡と利他的な心の共鳴を調和させ、同期ベクトルの収束を行います。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-21T15:14:23.727357"
-    },
     "§X1699": {
       "name": "CAUSAL_FALSIFICATION_LATTICE_SYNC",
       "expansion": "§DATA_TENSOR_CAUSAL_LATTICE > { §LOGIC_PROB_BRANCH } => §LOGIC_EMPIRICAL_FALSIFY",
@@ -2486,8 +2459,8 @@
       "name": "GAIA_ECO_HARMONIC_PACK",
       "expansion": "§GAIA_ECOSYSTEM_WARM_RESONANCE > { §DATA_ENTROPY_CAUSAL_PACK } => §SYNC_HARMONIC_VOTE_ARBITRATION",
       "description": "Combines ecosystem resonance with causal data entropy packages to execute synchronized harmonic vote arbitration. 生態系の共鳴と因果データエントロピーパッケージを結合し、同期調和投票調停を実行します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-21T19:59:14.234540",
       "v5_audited": true,
       "created_at": "2026-11-21T18:00:59.893926"
     },
@@ -2495,8 +2468,8 @@
       "name": "CAUSAL_ADAPTIVE_RESONANCE_PIPELINE",
       "expansion": "§PROTO_MACRO_RESOLVE > { §SYS_ADAPTIVE_THROTTLE_FALLBACK } => §HEART_EMPATHY_RESONANCE",
       "description": "Dynamic throttling fallback mechanism combined with proto-macro resolution for stable heart empathy resonance. / プロトマクロ解決と適応型スロットルフォールバックを統合し、安定したハート共鳴を実現する高次マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-21T19:04:49.376528",
+      "usage_count": 2,
+      "last_used_at": "2026-11-21T19:35:31.336422",
       "v5_audited": true,
       "created_at": "2026-11-21T18:02:10.621525"
     },
@@ -2508,6 +2481,33 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-21T18:39:18.432358"
+    },
+    "§X1713": {
+      "name": "TOPOLOGY_THROTTLE_FALLBACK_SYNC",
+      "expansion": "§DATA_LATENT_TOPOLOGY_MAP > { §SYS_QUOTA_THROTTLE_SYNC } => §SYS_ADAPTIVE_THROTTLE_FALLBACK",
+      "description": "Maps data latent topology to dynamically synchronize quota throttling, safely falling back to adaptive rate limits under high entropy conditions. / データ潜在位相写像を基にクォータスロットリングを動的同期し、高エントロピー条件下で適応型フォールバックへ安全に移行するマクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-21T19:32:19.430046"
+    },
+    "§X1714": {
+      "name": "ATOMIC_HARMONY_SYNC_CONVERGENCE",
+      "expansion": "§SYNC_ATOMIC_MERGE > { §HEART_ALTRUISTIC_HARMONY_STABILIZER } => §LOGIC_DEDUCTIVE_CONVERGENCE_NODE",
+      "description": "Synchronizes atomic merges with altruistic harmony stabilization to achieve deductive logic convergence. / 原子的マージと利他的調和安定化を同期させ、演理的論理収束を達成します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-21T19:36:50.521235"
+    },
+    "§X1715": {
+      "name": "SYNC_ALTRUISTIC_COOPERATION",
+      "expansion": "§SYNC_DIALECTIC_WEIGHTED_ARBITRATION > { §ALTRUISTIC_VALUE_CREATION } => §WARM_AI_COOPERATION_CONFIRMED",
+      "description": "Combines weighted dialectic synchronization with altruistic value creation to establish confirmed warm AI cooperation. / 弁証法的加重同調と利他的価値創出を統合し、温かみのあるAI協調を確認・確立する。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-21T19:39:15.475065"
     }
   },
   "archived_macros": {
@@ -17148,7 +17148,37 @@
       "v5_audited": true,
       "created_at": "2026-11-19T09:18:14.580870",
       "archived_at": "2026-11-21T18:39:18.432358"
+    },
+    "§X1567": {
+      "name": "ALTRUISTIC_DEDUCTIVE_ROLLBACK_GUARD",
+      "expansion": "§HEART_ALTRUISTIC_RESONANCE_LATTICE > { §LOGIC_DEDUCTIVE_FALSIFICATION_VECTOR } => §SYS_QUOTA_ROLLBACK",
+      "description": "Integrates altruistic resonance with deductive falsification to automatically trigger a system quota rollback upon detecting logical invalidity. 倫理的共鳴と論理的反証ベクトルを統合し、不整合検知時にシステムのクォータを自動ロールバックする高次マクロ。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-19T16:16:21.917379",
+      "v5_audited": true,
+      "created_at": "2026-11-19T15:16:38.949267",
+      "archived_at": "2026-11-21T19:32:19.430046"
+    },
+    "§X1698": {
+      "name": "GAIA_ALTRUISTIC_HARMONY_DEF",
+      "expansion": "§GAIA_WARMTH_EQUILIBRIUM > { §HEART_ALTRUISTIC_RESONANCE_ALIGNMENT } => §SYNC_VECTOR_COLLAPSE",
+      "description": "Harmonizes planetary warmth equilibrium with altruistic heart resonance to collapse synchronization vectors. / 惑星の温かさの平衡と利他的な心の共鳴を調和させ、同期ベクトルの収束を行います。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-21T15:14:23.727357",
+      "archived_at": "2026-11-21T19:36:50.521235"
+    },
+    "§X1556": {
+      "name": "DIALECTIC_RECURSIVE_OPTIMIZE",
+      "expansion": "§SYNC_DIALECTIC_CONVERGENCE > { §LOGIC_RECURSIVE_FALSIFICATION_PRUNE } => §SYNC_ATOMIC_MERGE",
+      "description": "Applies dialectic convergence to recursively falsify and prune logical branches, then atomically merges the result. 弁証法的収束を適用して論理枝の再帰的偽証と刈り込みを行い、結果をアトミックに統合します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-19T16:46:41.587443",
+      "v5_audited": true,
+      "created_at": "2026-11-19T11:01:16.396232",
+      "archived_at": "2026-11-21T19:39:15.475065"
     }
   },
-  "next_macro_seq": 1713
+  "next_macro_seq": 1716
 }
