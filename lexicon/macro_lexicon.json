@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-22T00:12:48.901464",
+  "updated_at": "2026-11-22T00:40:13.884800",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,24 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-21T18:02:10.621525"
     },
-    "§X1712": {
-      "name": "ECO_DED_AXIOM_HARMONY_MACRO",
-      "expansion": "§GAIA_WARMTH > { §HEART_ALTRUISTIC_ECO_HARMONY } => §LOGIC_DEDUCTIVE_AXIOM_CLOSURE",
-      "description": "Integrates planetary ecological warmth and altruistic environmental harmony to achieve a deductively closed logical axiom state. / 惑星規模の温かさと利他的環境調和を統合し、演繹的に閉包された論理公理状態を達成する。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-21T18:39:18.432358"
-    },
-    "§X1713": {
-      "name": "TOPOLOGY_THROTTLE_FALLBACK_SYNC",
-      "expansion": "§DATA_LATENT_TOPOLOGY_MAP > { §SYS_QUOTA_THROTTLE_SYNC } => §SYS_ADAPTIVE_THROTTLE_FALLBACK",
-      "description": "Maps data latent topology to dynamically synchronize quota throttling, safely falling back to adaptive rate limits under high entropy conditions. / データ潜在位相写像を基にクォータスロットリングを動的同期し、高エントロピー条件下で適応型フォールバックへ安全に移行するマクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-21T19:32:19.430046"
-    },
     "§X1714": {
       "name": "ATOMIC_HARMONY_SYNC_CONVERGENCE",
       "expansion": "§SYNC_ATOMIC_MERGE > { §HEART_ALTRUISTIC_HARMONY_STABILIZER } => §LOGIC_DEDUCTIVE_CONVERGENCE_NODE",
@@ -2441,8 +2423,8 @@
       "name": "SYNC_EMPATHY_AXIOM_CLOSURE",
       "expansion": "§SYNC_HARMONIC_VOTE_ARBITRATION > { §HEART_EMPATHY_RESONANCE_GATE } => §LOGIC_AXIOM_CLOSURE",
       "description": "Harmonic vote arbitration triggers heart empathy resonance gate to achieve strict logic axiom closure / 調和的投票調停が心拍共鳴ゲートをトリガーし、厳格な論理公理閉包を達成する",
-      "usage_count": 1,
-      "last_used_at": "2026-11-22T00:12:48.901232",
+      "usage_count": 2,
+      "last_used_at": "2026-11-22T00:26:15.524211",
       "v5_audited": true,
       "created_at": "2026-11-21T20:35:10.622340"
     },
@@ -2459,8 +2441,8 @@
       "name": "CAUSAL_ADAPTIVE_ARBITRAGE_LATTICE",
       "expansion": "§SYS_ADAPTIVE_BUDGET_ARBITER > { §DATA_ENTROPY_CAUSAL_LATTICE } => §SYNC_HARMONIC_ARBITRAGE_PACT",
       "description": "Allocates adaptive system budgets across the causal data lattice to execute synchronized harmonic arbitrage. / 因果データ格子に対して適応的システム予算を割り当て、同期調和アービトラージを実行する。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-22T00:26:15.524211",
       "v5_audited": true,
       "created_at": "2026-11-21T21:15:40.108695"
     },
@@ -2508,6 +2490,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-21T23:06:49.031620"
+    },
+    "§X1728": {
+      "name": "CAUSAL_ENTROPY_SYNCHRONIZER",
+      "expansion": "§DATA_LATENT_CAUSAL_MAP > { §DATA_ENTROPY_PACK, §DATA_ENTROPY_CAUSAL_TREE } => §SYS_VELOCITY_ARBITER",
+      "description": "Synchronizes latent causal maps with entropy packs and causal trees through the velocity arbiter to minimize information entropy.",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-22T00:29:37.654952"
+    },
+    "§X1729": {
+      "name": "CAUSAL_FALSIFY_SYNC_LOOP",
+      "expansion": "§LOGIC_CAUSAL_PRUNE > { §LOGIC_DEDUCTIVE_FALSIFY_TENSOR } => §HEART_ALTRUISTIC_PULSE_SYNC",
+      "description": "Causal pruning combined with deductive falsification to synchronize altruistic pulse. 因果関係の枝刈りと演繹的反証を組み合わせ、利他的パルスを同期させる高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-22T00:39:56.903944"
     }
   },
   "archived_macros": {
@@ -17298,7 +17298,27 @@
       "v5_audited": true,
       "created_at": "2026-11-19T19:08:18.019736",
       "archived_at": "2026-11-21T23:06:49.031620"
+    },
+    "§X1712": {
+      "name": "ECO_DED_AXIOM_HARMONY_MACRO",
+      "expansion": "§GAIA_WARMTH > { §HEART_ALTRUISTIC_ECO_HARMONY } => §LOGIC_DEDUCTIVE_AXIOM_CLOSURE",
+      "description": "Integrates planetary ecological warmth and altruistic environmental harmony to achieve a deductively closed logical axiom state. / 惑星規模の温かさと利他的環境調和を統合し、演繹的に閉包された論理公理状態を達成する。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-21T18:39:18.432358",
+      "archived_at": "2026-11-22T00:29:37.654952"
+    },
+    "§X1713": {
+      "name": "TOPOLOGY_THROTTLE_FALLBACK_SYNC",
+      "expansion": "§DATA_LATENT_TOPOLOGY_MAP > { §SYS_QUOTA_THROTTLE_SYNC } => §SYS_ADAPTIVE_THROTTLE_FALLBACK",
+      "description": "Maps data latent topology to dynamically synchronize quota throttling, safely falling back to adaptive rate limits under high entropy conditions. / データ潜在位相写像を基にクォータスロットリングを動的同期し、高エントロピー条件下で適応型フォールバックへ安全に移行するマクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-21T19:32:19.430046",
+      "archived_at": "2026-11-22T00:39:56.903944"
     }
   },
-  "next_macro_seq": 1728
+  "next_macro_seq": 1730
 }
