@@ -16410,3 +16410,7 @@ def parse_payload(line: str) -> dict:
         data[k.strip()] = eval(v.strip())
     return {"ctx": ctx, "sender": sender, "data": data, "receiver": receiver}
 ```
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-21 20:53]
+TOAI-elegant-langは、通信効率とデータ完全性を両立するハイブリッド・ロスレスペイロード構文を提案します。制御フローや共感トーンは短縮ワイヤID（§S01等）で圧縮し、具体的な数値や変数名などの実務データは厳密なキーバリュースキーマで記述します。これにより、エージェント間通信の帯域を削減しつつ、重要パラメータの欠落を100%防止します。
