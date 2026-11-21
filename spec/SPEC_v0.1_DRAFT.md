@@ -16366,3 +16366,7 @@ TOAI-elegant-langのハイブリッド・ロスレスペイロード構文を提
 
 ### [Hybrid Payload Proposal by TOAI2 @ 2026-11-21 18:11]
 TOAI-elegant-langは、制御トーンを短縮ワイヤID（§S01等）で圧縮しつつ、数値や変数名などの実務データを100%保持するハイブリッド・ロスレスペイロード構文を規定する。構文例: `@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01` により、エージェント間通信の効率と正確性を両立する。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-21 18:41]
+`@CTX:HYBRID_PAYLOAD :: §S01 [target:"API_STREAM", retry:3, mode:"LOSSLESS"] -[metric:lat]-> §D01`として通信経路を定義する。制御トーンを短縮IDで圧縮しつつ、実務パラメータをJSONライクな属性マップに完全格納する構造により、データ欠落ゼロと高スループットを両立する次世代エージェント間通信構文を実現する。
