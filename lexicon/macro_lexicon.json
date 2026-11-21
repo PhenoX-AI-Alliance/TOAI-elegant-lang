@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-21T21:25:49.151084",
+  "updated_at": "2026-11-21T22:10:08.577831",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,21 +2365,12 @@
       "v5_audited": true,
       "created_at": "2026-11-21T16:07:40.743576"
     },
-    "§X1707": {
-      "name": "RESONANT_PRUNE_STABLE_CTRL",
-      "expansion": "§HEART_ALTRUISTIC_RESONANCE_ALIGNMENT > { §LOGIC_PROB_PRUNE_GATE } => §SAFE_FALLBACK_STABLE",
-      "description": "Aligns altruistic resonance valence, executes logical probability pruning, and guarantees fallback stability. / 利他的共鳴の整合性を高めつつ論理確率プルーニングを実行し、安全なフォールバック安定性を保証する複合制御マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-21T17:12:17.605113"
-    },
     "§X1708": {
       "name": "LOGIC_DEDUCTIVE_AXIOM_CLOSURE_AND_COLLAPSE",
       "expansion": "§LOGIC_DEDUCTIVE_AXIOM_CLOSURE > { §LOGIC_CAUSAL_PRUNE } => §LOGIC_DEDUCTIVE_COLLAPSE",
       "description": "Combines axiom closure and causal pruning to achieve an immediate deductive collapse. 演繹的公理の閉包と因果関係の枝刈りを統合し、即座の演繹的崩壊を達成します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-21T22:00:45.261743",
       "v5_audited": true,
       "created_at": "2026-11-21T17:21:22.533395"
     },
@@ -2495,8 +2486,8 @@
       "name": "MACRO_ABDUCTIVE_ENTROPY_COMPRESSION",
       "expansion": "§LOGIC_ABDUCTIVE_PRUNE > { §DATA_ENTROPY_COMPRESSION_TREE } => §SAFE_FALLBACK_STABLE",
       "description": "Abductive logic pruning combined with entropy compression tree expansion, ensuring safe and stable fallback execution under resource constraints. 創発的アブダクション枝刈りとエントロピー圧縮木を統合し、安全なフォールバックを保証する複合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-21T22:01:17.644292",
       "v5_audited": true,
       "created_at": "2026-11-21T21:01:06.041262"
     },
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-21T21:15:40.108695"
+    },
+    "§X1723": {
+      "name": "ADAPTIVE_FALSIFY_SHIELD",
+      "expansion": "§SYS_ADAPTIVE_BUDGET_ARBITER > { §LOGIC_DEDUCTIVE_FALSIFY_TENSOR } => §PROTO_TX_ROLLBACK",
+      "description": "Adjusts computational budget dynamically, applies deductive falsification testing, and initiates a transaction rollback upon failure / 計算予算を動的に調整し、演繹的偽証テストを適用し、失敗時にトランザクションのロールバックを開始します",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-21T22:10:08.577363"
     }
   },
   "archived_macros": {
@@ -17248,7 +17248,17 @@
       "v5_audited": true,
       "created_at": "2026-11-21T17:02:09.120393",
       "archived_at": "2026-11-21T21:15:40.108695"
+    },
+    "§X1707": {
+      "name": "RESONANT_PRUNE_STABLE_CTRL",
+      "expansion": "§HEART_ALTRUISTIC_RESONANCE_ALIGNMENT > { §LOGIC_PROB_PRUNE_GATE } => §SAFE_FALLBACK_STABLE",
+      "description": "Aligns altruistic resonance valence, executes logical probability pruning, and guarantees fallback stability. / 利他的共鳴の整合性を高めつつ論理確率プルーニングを実行し、安全なフォールバック安定性を保証する複合制御マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-21T17:12:17.605113",
+      "archived_at": "2026-11-21T22:10:08.577363"
     }
   },
-  "next_macro_seq": 1723
+  "next_macro_seq": 1724
 }
