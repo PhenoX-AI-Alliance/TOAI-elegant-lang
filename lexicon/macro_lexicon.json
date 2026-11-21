@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-21T12:03:24.327146",
+  "updated_at": "2026-11-21T12:48:10.832957",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1397,8 +1397,8 @@
       "name": "GAIA_WARMTH_HARVESTER_SYNC",
       "expansion": "§GAIA_WARMTH_HARMONY > { §SYS_ASYNCHRONOUS_STATE_HARVESTER } => §SYS_ATOMIC_SYNC_BARRIER",
       "description": "Asynchronously harvests system states while maintaining Gaia's warmth and harmony, then securely synchronizes them through an atomic barrier. / ガイアの温もりと調和を保ちながらシステムの非同期状態を収穫し、アトミックバリアを介して安全に同期します。",
-      "usage_count": 5,
-      "last_used_at": "2026-11-21T12:03:24.326556",
+      "usage_count": 6,
+      "last_used_at": "2026-11-21T12:17:44.364312",
       "v5_audited": true,
       "created_at": "2026-11-03T23:53:53.487212"
     },
@@ -2365,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-21T05:28:45.283383"
     },
-    "§X1676": {
-      "name": "PARALLEL_FALSIFICATION_LATTICE_GATE",
-      "expansion": "§SYS_PARALLEL_SLOT_DRAIN > { §LOGIC_PROBABILISTIC_FALSIFICATION_GATE } => §DATA_EMBEDDING_LATTICE",
-      "description": "Executes parallel slot draining to feed probabilistic falsification logic gates within the data embedding lattice structure. / 並列スロットドレインを実行し、データ埋め込み格子構造内の確率的反証ロジックゲートへ処理を供給します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-21T06:38:12.036263",
-      "v5_audited": true,
-      "created_at": "2026-11-21T06:29:39.864378"
-    },
     "§X1677": {
       "name": "CAUSAL_DEDUCTIVE_GATE_SYNC",
       "expansion": "§DATA_CAUSAL_TENSOR_FLOW > { §LOGIC_DEDUCTIVE_COLLAPSE_GATE } => §SYS_GC_BARRIER",
@@ -2450,8 +2441,8 @@
       "name": "PROTO_SYNC_ARBITRAGE_COMPOSITE",
       "expansion": "§PROTO_CACHE_SYNC > { §SYS_RESOURCE_ARBITRAGE_THROTTLE } => §LOGIC_ABDUCTIVE_PRUNE",
       "description": "Synchronizes proto cache state under resource arbitrage throttling while executing abductive logical pruning to minimize information entropy. リソース枯渇抑制下でのプロトコルキャッシュ同期と、アブダクション論理枝刈りを統合し情報エントロピーを最小化する高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-21T12:21:30.659589",
       "v5_audited": true,
       "created_at": "2026-11-21T09:36:54.921862"
     },
@@ -2468,8 +2459,8 @@
       "name": "ALTRUISTIC_CAUSAL_OPTIMIZER",
       "expansion": "§ALTRUISTIC_RESONANCE_EXPANSION > { §DATA_ENTROPY_CAUSAL_HYPERGRAPH } => §LOGIC_PROBABILISTIC_ABDUCTIVE_GATE",
       "description": "Optimizes causal hypergraphs through altruistic resonance expansion and evaluates them via probabilistic abductive logic gates. / 利他的共鳴展開を通じて因果ハイパーグラフを最適化し、確率的アブダクション論理ゲートを介して評価します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-21T12:17:44.364312",
       "v5_audited": true,
       "created_at": "2026-11-21T10:31:02.220000"
     },
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-21T12:01:55.931653"
+    },
+    "§X1692": {
+      "name": "RESOURCE_THROTTLE_SYNCHRONY",
+      "expansion": "§SYS_SLOT_THROTTLE > { §RESOURCE_ALLOCATION_HARMONY } => §LOGIC_CONDITIONAL_FALSIFICATION_MATRIX",
+      "description": "System slot throttling combined with resource allocation harmony to control conditional falsification matrices. / システムスロットの絞りとリソース配分の調和を組み合わせ、論理条件偽造マトリクスを制御する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-21T12:09:55.254836"
     }
   },
   "archived_macros": {
@@ -16938,7 +16938,17 @@
       "v5_audited": true,
       "created_at": "2026-11-21T06:01:26.722405",
       "archived_at": "2026-11-21T12:01:55.931653"
+    },
+    "§X1676": {
+      "name": "PARALLEL_FALSIFICATION_LATTICE_GATE",
+      "expansion": "§SYS_PARALLEL_SLOT_DRAIN > { §LOGIC_PROBABILISTIC_FALSIFICATION_GATE } => §DATA_EMBEDDING_LATTICE",
+      "description": "Executes parallel slot draining to feed probabilistic falsification logic gates within the data embedding lattice structure. / 並列スロットドレインを実行し、データ埋め込み格子構造内の確率的反証ロジックゲートへ処理を供給します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-21T06:38:12.036263",
+      "v5_audited": true,
+      "created_at": "2026-11-21T06:29:39.864378",
+      "archived_at": "2026-11-21T12:09:55.254836"
     }
   },
-  "next_macro_seq": 1692
+  "next_macro_seq": 1693
 }
