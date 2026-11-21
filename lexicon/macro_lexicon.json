@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-21T10:53:04.117816",
+  "updated_at": "2026-11-21T11:22:09.008962",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2450,8 +2450,8 @@
       "name": "ADAPTIVE_FALSIFICATION_GUARD",
       "expansion": "§PROTO_HEARTBEAT_PING > { §LOGIC_CONDITIONAL_FALSIFICATION_MATRIX } => §SYS_ADAPTIVE_TOKEN_THROTTLE",
       "description": "Monitors system liveness and dynamically throttles tokens based on conditional falsification matrices. / システムの生存確認を行い、条件付き反証マトリクスに基づいて動的にトークン制御を行います。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-21T11:22:09.008560",
       "v5_audited": true,
       "created_at": "2026-11-21T08:25:54.718998"
     },
@@ -2468,8 +2468,8 @@
       "name": "BIOPHILIC_RESOURCE_HARMONIC_PIPELINE",
       "expansion": "§HEART_BIOPHILIC_ALTRUISM_HARMONIC > { §GENTLE_RESOURCE_SHARING } => §DATA_CAUSAL_TENSOR_MANIFOLD",
       "description": "Applies biophilic altruistic harmonization to regulate gentle resource sharing within the data causal tensor manifold. / データ因果テンソル多様体内において、生命尊重型の利他調跟を適用し、穏やかなリソース共有を制御します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-21T11:22:09.008560",
       "v5_audited": true,
       "created_at": "2026-11-21T09:03:02.485982"
     },
@@ -2477,8 +2477,8 @@
       "name": "GAIA_ALTRUISTIC_ARBITRAGE_LATTICE",
       "expansion": "§GAIA_WARMTH_EXCHANGE > { §HEART_ALTRUISTIC_RESONANCE_LATTICE } => §SYS_RESOURCE_ARBITRAGE_THROTTLE",
       "description": "Engages altruistic resonance networks to arbitrate systemic resource allocation while maintaining GAIA thermal equilibrium. / 利他共鳴ネットワークを活性化させ、GAIA熱平衡を維持しつつシステムリソースの調停を行う。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-21T10:42:05.382197",
+      "usage_count": 2,
+      "last_used_at": "2026-11-21T11:01:54.381889",
       "v5_audited": true,
       "created_at": "2026-11-21T09:08:44.908784"
     },
