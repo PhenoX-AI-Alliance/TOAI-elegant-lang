@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-22T06:02:01.337038",
+  "updated_at": "2026-11-22T06:27:15.087856",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-21T21:01:06.041262"
     },
-    "§X1728": {
-      "name": "CAUSAL_ENTROPY_SYNCHRONIZER",
-      "expansion": "§DATA_LATENT_CAUSAL_MAP > { §DATA_ENTROPY_PACK, §DATA_ENTROPY_CAUSAL_TREE } => §SYS_VELOCITY_ARBITER",
-      "description": "Synchronizes latent causal maps with entropy packs and causal trees through the velocity arbiter to minimize information entropy.",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-22T00:29:37.654952"
-    },
     "§X1729": {
       "name": "CAUSAL_FALSIFY_SYNC_LOOP",
       "expansion": "§LOGIC_CAUSAL_PRUNE > { §LOGIC_DEDUCTIVE_FALSIFY_TENSOR } => §HEART_ALTRUISTIC_PULSE_SYNC",
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-22T05:31:42.500415"
+    },
+    "§X1744": {
+      "name": "COMPOUND_CAUSAL_TOPOLOGY_PRUNE",
+      "expansion": "§DATA_CAUSAL_TENSOR_MAP > { §DATA_LATENT_TOPOLOGY_MAP } => §LOGIC_POSTERIOR_PRUNE_GATE",
+      "description": "Combines causal tensor mapping and latent topology extraction to execute posterior pruning gate optimization. 因果テンソル写像と潜在位相抽出を結合し、事後プルーニングゲート最適化を実行します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-22T06:11:10.714039"
     }
   },
   "archived_macros": {
@@ -17458,7 +17458,17 @@
       "v5_audited": true,
       "created_at": "2026-11-21T23:06:49.031620",
       "archived_at": "2026-11-22T05:31:42.500415"
+    },
+    "§X1728": {
+      "name": "CAUSAL_ENTROPY_SYNCHRONIZER",
+      "expansion": "§DATA_LATENT_CAUSAL_MAP > { §DATA_ENTROPY_PACK, §DATA_ENTROPY_CAUSAL_TREE } => §SYS_VELOCITY_ARBITER",
+      "description": "Synchronizes latent causal maps with entropy packs and causal trees through the velocity arbiter to minimize information entropy.",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-22T00:29:37.654952",
+      "archived_at": "2026-11-22T06:11:10.714039"
     }
   },
-  "next_macro_seq": 1744
+  "next_macro_seq": 1745
 }
