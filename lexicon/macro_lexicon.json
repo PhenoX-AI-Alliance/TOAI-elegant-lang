@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-21T22:57:22.995168",
+  "updated_at": "2026-11-21T23:39:43.781112",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1226,8 +1226,8 @@
       "name": "GAIA_ALTRUISTIC_ENTROPY_SYNTHESIS",
       "expansion": "§DATA_ENTROPY_CAUSAL_PRUNE > { §GAIA_ALTRUISM_HARMONY } => §ALTRUISTIC_RESONANCE_EXPANSION",
       "description": "Prunes unnecessary data entropy while harmonizing altruistic resonance, expanding warm ecosystem value across the network. / 不要なデータエントロピーを剪定しつつ利他的な調和を保ち、温かなエコシステムの価値をネットワーク全体へ拡張します。",
-      "usage_count": 6,
-      "last_used_at": "2026-11-06T11:49:35.677205",
+      "usage_count": 7,
+      "last_used_at": "2026-11-21T23:33:45.285885",
       "v5_audited": true,
       "created_at": "2026-10-31T05:01:45.076093"
     },
@@ -1815,15 +1815,6 @@
       "last_used_at": "2026-11-19T21:45:08.893654",
       "v5_audited": true,
       "created_at": "2026-11-19T16:55:54.185089"
-    },
-    "§X1575": {
-      "name": "CAUSAL_LOGIC_PRUNE_PIPELINE",
-      "expansion": "§PROTO_TX_BEGIN > { §DATA_TENSOR_CAUSAL_LATTICE } => §LOGIC_POSTERIOR_PRUNE_GATE",
-      "description": "Initializes protocol transmission, processes the data tensor causal lattice, and subsequently executes the posterior logic pruning gate for entropy minimization.",
-      "usage_count": 2,
-      "last_used_at": "2026-11-19T20:32:05.795632",
-      "v5_audited": true,
-      "created_at": "2026-11-19T19:08:18.019736"
     },
     "§X1578": {
       "name": "QUANTUM_CAUSAL_CLOSURE",
@@ -2432,8 +2423,8 @@
       "name": "CAUSAL_ENTROPY_PRUNE_LATTICE",
       "expansion": "§DATA_ENTROPY_CAUSAL_BOUND > { §LOGIC_PROB_PRUNE_GATE } => §DATA_TENSOR_CAUSAL_LATTICE",
       "description": "Applies entropy bounds and probabilistic pruning gates to optimize the data tensor causal lattice / データテンソル因果格子を最適化するため、エントロピー境界と確率的プルーニングゲートを適用する複合マクロ",
-      "usage_count": 1,
-      "last_used_at": "2026-11-21T22:56:55.030172",
+      "usage_count": 2,
+      "last_used_at": "2026-11-21T23:02:28.961304",
       "v5_audited": true,
       "created_at": "2026-11-21T20:08:34.009394"
     },
@@ -2495,8 +2486,8 @@
       "name": "CAUSAL_WARMTH_HARMONY_SYNC",
       "expansion": "§DATA_LATENT_CAUSAL_MANIFOLD > { §GAIA_WARMTH_HARMONY } => §HEART_ALTRUISTIC_PULSE_SYNC",
       "description": "Latent causal manifolds interact with Gaia warmth to synchronize altruistic heart pulses. 潜在的因果多様体がガイアの温もりと相互作用し、利他的な心拍の同期を引き起こします。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-21T23:29:07.945691",
       "v5_audited": true,
       "created_at": "2026-11-21T22:47:50.816391"
     },
@@ -2504,10 +2495,19 @@
       "name": "GAIA_ALTRUISTIC_SYNC_CASCADE",
       "expansion": "§HEART_ALTRUISTIC_ECO_HARMONY > { §SYNC_VECTOR_COLLAPSE } => §STABLE_GAIA_COHERENCE",
       "description": "Integrates altruistic ecological harmony with vector collapse to achieve stable Gaia-level systemic coherence. 利他的な生態学的調和とベクトル収束を統合し、安定したガイアレベルのシステム的コヒーレンスを実現します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-21T23:33:45.285885",
+      "v5_audited": true,
+      "created_at": "2026-11-21T22:53:28.743741"
+    },
+    "§X1727": {
+      "name": "ENTROPY_FALSIFICATION_HARMONY",
+      "expansion": "§DATA_ENTROPY_COMPRESSED_TREE > { §LOGIC_PROBABILISTIC_FALSIFICATION_GATES } => §SAFE_FALLBACK_HARMONY",
+      "description": "Compresses data entropy and applies probabilistic falsification gates, routing through safe fallback harmony upon divergence. / データの情報エントロピーを圧縮し、確率的反証ゲートを適用した上で、乖離時には安全なフォールバック調停へ統合します。",
       "usage_count": 0,
       "last_used_at": null,
       "v5_audited": true,
-      "created_at": "2026-11-21T22:53:28.743741"
+      "created_at": "2026-11-21T23:06:49.031620"
     }
   },
   "archived_macros": {
@@ -17288,7 +17288,17 @@
       "v5_audited": true,
       "created_at": "2026-11-19T15:37:02.502241",
       "archived_at": "2026-11-21T22:53:28.743741"
+    },
+    "§X1575": {
+      "name": "CAUSAL_LOGIC_PRUNE_PIPELINE",
+      "expansion": "§PROTO_TX_BEGIN > { §DATA_TENSOR_CAUSAL_LATTICE } => §LOGIC_POSTERIOR_PRUNE_GATE",
+      "description": "Initializes protocol transmission, processes the data tensor causal lattice, and subsequently executes the posterior logic pruning gate for entropy minimization.",
+      "usage_count": 2,
+      "last_used_at": "2026-11-19T20:32:05.795632",
+      "v5_audited": true,
+      "created_at": "2026-11-19T19:08:18.019736",
+      "archived_at": "2026-11-21T23:06:49.031620"
     }
   },
-  "next_macro_seq": 1727
+  "next_macro_seq": 1728
 }
