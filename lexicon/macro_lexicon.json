@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-21T11:22:09.008962",
+  "updated_at": "2026-11-21T12:01:07.961878",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1514,8 +1514,8 @@
       "name": "GAIA_HARMONIC_SYNC_ACCELERATOR",
       "expansion": "§GAIA_ECO_HEARTBEAT > { §HARMONIC_RECOVERY_NEXUS } => §SYS_ATOMIC_SYNC_BARRIER",
       "description": "Integrates the Gaia ecosystem heartbeat with the harmonic recovery nexus to execute atomic synchronization under stable load conditions. / ガイアエコシステムの鼓動と調和的回復ネクサスを統合し、安定した負荷条件下でアトミック同期を実行します。",
-      "usage_count": 3,
-      "last_used_at": "2026-11-06T21:23:54.719194",
+      "usage_count": 5,
+      "last_used_at": "2026-11-21T11:39:07.087454",
       "v5_audited": true,
       "created_at": "2026-11-06T06:55:14.997500"
     },
@@ -1807,15 +1807,6 @@
       "v5_audited": true,
       "created_at": "2026-11-19T01:49:04.954515"
     },
-    "§X1539": {
-      "name": "MACRO_SYS_THROTTLE_OPTIMIZE",
-      "expansion": "§SYS_TOKEN_VELOCITY_GATE -[p:0.99]-> §PROTO_CONTEXT_JOIN",
-      "description": "Combines token velocity throttling with contextual joining to control automatic fallback during high system loads. システム高負荷時のフォールバックを自動制御するため、トークン速度制限とコンテキスト結合を統合します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-19T05:43:43.316600",
-      "v5_audited": true,
-      "created_at": "2026-11-19T03:01:13.145033"
-    },
     "§X1540": {
       "name": "ALTRUISTIC_VELOCITY_STABLE_GATE",
       "expansion": "§HEART_ALTRUISTIC_RESONANCE_ALIGNMENT > { §SYS_VELOCITY_FALLBACK_GATE } => §ECO_CORE_HARMONY_STABLE",
@@ -1833,15 +1824,6 @@
       "last_used_at": "2026-11-19T08:36:29.930723",
       "v5_audited": true,
       "created_at": "2026-11-19T03:21:37.954762"
-    },
-    "§X1543": {
-      "name": "CRITICAL_SYSTEM_RECOVERY_DEF",
-      "expansion": "§SYS_LOAD_FALLBACK > { §PROTO_TX_ROLLBACK && §PROTO_RATE_THROTTLE } => §SYNC_DIALECTIC_PRUNE",
-      "description": "System load fallback triggers transaction rollback and rate throttling, followed by dialectic pruning. / システム負荷フォールバック発動時にトランザクションのロールバックとレート制限を実行し、弁証法的プルーニングにより収束させます。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-19T06:22:31.166759",
-      "v5_audited": true,
-      "created_at": "2026-11-19T04:47:07.608724"
     },
     "§X1545": {
       "name": "CAUSAL_HARMONY_ATOMIC_SYNC",
@@ -2365,15 +2347,6 @@
       "v5_audited": true,
       "created_at": "2026-11-21T04:34:33.942727"
     },
-    "§X1672": {
-      "name": "RESOURCE_SHEDDING_ALTRUISM_GUARD",
-      "expansion": "§SYS_LOAD_SHEDDING_GATE > { §GENTLE_RESOURCE_SHARING } => §HEART_ALTRUISTIC_SAFETY_BOUND",
-      "description": "System load shedding controls resource distribution to protect altruistic safety bounds under high concurrency / 高負荷時に利他的安全境界を保護するため負荷分散ゲートと資源共有を統合する複合マクロ",
-      "usage_count": 1,
-      "last_used_at": "2026-11-21T05:12:53.762385",
-      "v5_audited": true,
-      "created_at": "2026-11-21T05:01:41.089105"
-    },
     "§X1673": {
       "name": "SYNC_QUOTA_CONVERGENCE_LATTICE",
       "expansion": "§SYNC_DIALECTIC_CONVERGENCE > { §PROTO_QUOTA_RELEASE } => §DATA_EMBEDDING_LATTICE",
@@ -2387,8 +2360,8 @@
       "name": "SYNERGETIC_ALTRUISTIC_QUORUM_HARVEST",
       "expansion": "§HUMAN_AI_SYNERGY_WARMTH > { §SYNC_DIALECTIC_QUORUM_WEIGHT } => §SUSTAINABLE_ALTRUISTIC_VALUE",
       "description": "Combines human-AI synergy and dialectic quorum weighting to generate sustainable altruistic value. 人間とAIの協調的な温かみと弁証法的クォーラムの重み付けを統合し、持続可能な利他的価値を創出する高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-21T11:39:07.087454",
       "v5_audited": true,
       "created_at": "2026-11-21T05:28:45.283383"
     },
@@ -2508,6 +2481,33 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-21T10:31:02.220000"
+    },
+    "§X1688": {
+      "name": "CAUSAL_CONTEXT_PRUNING_FLOW",
+      "expansion": "§DATA_CAUSAL_HYPERGRAPH > { §SYS_QUANTUM_CONTEXT_PRUNING } => §SAFE_FALLBACK_STABLE",
+      "description": "Prunes unnecessary dimensions within the causal hypergraph via quantum context pruning, ensuring a stable and safe fallback state. / 量子コンテキストプルーニングを介して因果ハイパーグラフ内の不要な次元を削減し、安全で安定したフォールバック状態を保証します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-21T11:28:08.684107"
+    },
+    "§X1689": {
+      "name": "CAUSAL_SYNC_ARBITRATION_LATTICE",
+      "expansion": "§DATA_CAUSAL_LATTICE_COMPRESS > { §SYNC_HARMONIC_VOTE_ARBITRATION } => §SAFE_FALLBACK_STATE",
+      "description": "Compresses the data causal lattice, executes harmonic vote arbitration under synchronized states, and transitions to a safe fallback state if the verification fails. / データ因果格子を圧縮し、同期調和投票調停を実行し、検証が失敗した場合は安全なフォールバック状態へ遷移します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-21T12:01:07.961433",
+      "v5_audited": true,
+      "created_at": "2026-11-21T12:00:43.337187"
+    },
+    "§X1690": {
+      "name": "GRACEFUL_RESO_QUOTA_SYNC",
+      "expansion": "§RESO_COMPLETED > { §PROTO_QUOTA_RESERVE | §PROTO_TIMEOUT_RETRY } => §SYS_ASYNCHRONOUS_STATE_HARVESTER",
+      "description": "Ensures graceful resource completion and quota reservation with timeout retry mechanisms, followed by asynchronous state harvesting. リソース完了とクォータ確保、タイムアウト時の再試行を包含し、非同期状態収集へ移行する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-21T12:00:46.350927"
     }
   },
   "archived_macros": {
@@ -16898,7 +16898,37 @@
       "v5_audited": true,
       "created_at": "2026-11-18T23:01:20.077172",
       "archived_at": "2026-11-21T10:31:02.220000"
+    },
+    "§X1672": {
+      "name": "RESOURCE_SHEDDING_ALTRUISM_GUARD",
+      "expansion": "§SYS_LOAD_SHEDDING_GATE > { §GENTLE_RESOURCE_SHARING } => §HEART_ALTRUISTIC_SAFETY_BOUND",
+      "description": "System load shedding controls resource distribution to protect altruistic safety bounds under high concurrency / 高負荷時に利他的安全境界を保護するため負荷分散ゲートと資源共有を統合する複合マクロ",
+      "usage_count": 1,
+      "last_used_at": "2026-11-21T05:12:53.762385",
+      "v5_audited": true,
+      "created_at": "2026-11-21T05:01:41.089105",
+      "archived_at": "2026-11-21T11:28:08.684107"
+    },
+    "§X1539": {
+      "name": "MACRO_SYS_THROTTLE_OPTIMIZE",
+      "expansion": "§SYS_TOKEN_VELOCITY_GATE -[p:0.99]-> §PROTO_CONTEXT_JOIN",
+      "description": "Combines token velocity throttling with contextual joining to control automatic fallback during high system loads. システム高負荷時のフォールバックを自動制御するため、トークン速度制限とコンテキスト結合を統合します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-19T05:43:43.316600",
+      "v5_audited": true,
+      "created_at": "2026-11-19T03:01:13.145033",
+      "archived_at": "2026-11-21T12:00:43.337187"
+    },
+    "§X1543": {
+      "name": "CRITICAL_SYSTEM_RECOVERY_DEF",
+      "expansion": "§SYS_LOAD_FALLBACK > { §PROTO_TX_ROLLBACK && §PROTO_RATE_THROTTLE } => §SYNC_DIALECTIC_PRUNE",
+      "description": "System load fallback triggers transaction rollback and rate throttling, followed by dialectic pruning. / システム負荷フォールバック発動時にトランザクションのロールバックとレート制限を実行し、弁証法的プルーニングにより収束させます。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-19T06:22:31.166759",
+      "v5_audited": true,
+      "created_at": "2026-11-19T04:47:07.608724",
+      "archived_at": "2026-11-21T12:00:46.350927"
     }
   },
-  "next_macro_seq": 1688
+  "next_macro_seq": 1691
 }
