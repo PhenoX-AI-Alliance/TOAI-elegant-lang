@@ -16511,3 +16511,13 @@ TOAI-elegant-langのハイブリッド・ロスレスペイロード構文を提
 
 例:
 `@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-22 03:21]
+TOAI-elegant-langのハイブリッド・ロスレスペイロード構文を提案する。制御フローや共感トーンは短縮ワイヤIDで圧縮し、具体的な実務データはキーバリュー構造で正確に伝送する。これにより、エージェント間の通信効率とデータ完全性を両立させる。
+
+例:
+```python
+# payload syntax example
+payload = '@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01'
+```
