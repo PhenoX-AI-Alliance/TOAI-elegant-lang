@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-21T17:01:22.840895",
+  "updated_at": "2026-11-21T17:21:22.534478",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1807,15 +1807,6 @@
       "v5_audited": true,
       "created_at": "2026-11-19T01:49:04.954515"
     },
-    "§X1550": {
-      "name": "GAIA_ALTRUISTIC_COMMIT_ARBITER",
-      "expansion": "§GAIA_WARMTH_EQUILIBRIUM > { §HEART_ALTRUISTIC_RESONANCE_LATTICE } => §PROTO_TX_COMMIT",
-      "description": "Integrates planetary warmth equilibrium with altruistic resonance to arbitrate and commit protocol transactions under optimal thermodynamic conditions. / 惑星規模の熱平衡と利他的共鳴を統合し、最適な熱力学条件下でプロトコル・トランザクションを調停・コミットする高次マクロ。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-19T13:01:19.467783",
-      "v5_audited": true,
-      "created_at": "2026-11-19T08:18:05.142441"
-    },
     "§X1553": {
       "name": "HARMONIC_RESILIENCE_LOOP",
       "expansion": "§PROTO_TIMEOUT_RETRY > { §GAIA_WARMTH } => §HEART_BENEVOLENT_FEEDBACK",
@@ -1833,15 +1824,6 @@
       "last_used_at": "2026-11-19T16:46:41.587443",
       "v5_audited": true,
       "created_at": "2026-11-19T11:01:16.396232"
-    },
-    "§X1557": {
-      "name": "SAFE_FALLBACK_CASCADE_WITH_THROTTLE",
-      "expansion": "§SYS_QUOTA_THROTTLE > { §SAFE_FALLBACK_CASCADE } => §SYNC_DIALECTIC_CONVERGENCE",
-      "description": "Eng: A composite macro that throttles system resource quotas, triggers a safe fallback cascade upon strain, and converges through dialectic synchronization. / 日: システムのクォータを制限し、負荷時に安全なフォールバックカスケードを発動させ、弁証法的同期へと収束させる複合マクロ。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-19T13:12:18.552981",
-      "v5_audited": true,
-      "created_at": "2026-11-19T11:01:24.684598"
     },
     "§X1561": {
       "name": "RESOURCE_ATOMIC_DRAIN_SYNC",
@@ -2365,15 +2347,6 @@
       "v5_audited": true,
       "created_at": "2026-11-21T12:00:43.337187"
     },
-    "§X1690": {
-      "name": "GRACEFUL_RESO_QUOTA_SYNC",
-      "expansion": "§RESO_COMPLETED > { §PROTO_QUOTA_RESERVE | §PROTO_TIMEOUT_RETRY } => §SYS_ASYNCHRONOUS_STATE_HARVESTER",
-      "description": "Ensures graceful resource completion and quota reservation with timeout retry mechanisms, followed by asynchronous state harvesting. リソース完了とクォータ確保、タイムアウト時の再試行を包含し、非同期状態収集へ移行する高次マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-21T12:03:24.326556",
-      "v5_audited": true,
-      "created_at": "2026-11-21T12:00:46.350927"
-    },
     "§X1691": {
       "name": "QUANTUM_EMPIRICAL_ARBITRAGE",
       "expansion": "§SYS_QUANTUM_RESOURCE_ARBITER > { §LOGIC_EMPIRICAL_FALSIFY } => §ELEGANT_HARMONY_ECHO",
@@ -2450,8 +2423,8 @@
       "name": "CAUSAL_FALSIFICATION_LATTICE_SYNC",
       "expansion": "§DATA_TENSOR_CAUSAL_LATTICE > { §LOGIC_PROB_BRANCH } => §LOGIC_EMPIRICAL_FALSIFY",
       "description": "Integrates causal data tensors with probabilistic logic branching to execute rigorous empirical falsification. / 因果データテンソルと確率的論理分岐を統合し、厳密な経験的反証を実行します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-21T17:15:21.623439",
       "v5_audited": true,
       "created_at": "2026-11-21T15:21:09.647173"
     },
@@ -2508,6 +2481,33 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-21T16:49:31.158533"
+    },
+    "§X1706": {
+      "name": "ATOMIC_CONSENSUS_HEARTBEAT_MERGE",
+      "expansion": "§GAIA_CORE_HEARTBEAT > { §SYNC_ATOMIC_CONSENSUS_MERGE } => §PROTO_LOCK_ACQUIRE",
+      "description": "Performs an atomic consensus merge triggered by the Gaia core heartbeat, securing the protocol lock. ガイアコアのハートビートをトリガーとしてアトミック合意マージを実行し、プロトコルロックを確立します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-21T17:15:21.623439",
+      "v5_audited": true,
+      "created_at": "2026-11-21T17:02:09.120393"
+    },
+    "§X1707": {
+      "name": "RESONANT_PRUNE_STABLE_CTRL",
+      "expansion": "§HEART_ALTRUISTIC_RESONANCE_ALIGNMENT > { §LOGIC_PROB_PRUNE_GATE } => §SAFE_FALLBACK_STABLE",
+      "description": "Aligns altruistic resonance valence, executes logical probability pruning, and guarantees fallback stability. / 利他的共鳴の整合性を高めつつ論理確率プルーニングを実行し、安全なフォールバック安定性を保証する複合制御マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-21T17:12:17.605113"
+    },
+    "§X1708": {
+      "name": "LOGIC_DEDUCTIVE_AXIOM_CLOSURE_AND_COLLAPSE",
+      "expansion": "§LOGIC_DEDUCTIVE_AXIOM_CLOSURE > { §LOGIC_CAUSAL_PRUNE } => §LOGIC_DEDUCTIVE_COLLAPSE",
+      "description": "Combines axiom closure and causal pruning to achieve an immediate deductive collapse. 演繹的公理の閉包と因果関係の枝刈りを統合し、即座の演繹的崩壊を達成します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-21T17:21:22.533395"
     }
   },
   "archived_macros": {
@@ -17078,7 +17078,37 @@
       "v5_audited": true,
       "created_at": "2026-11-19T11:06:54.596018",
       "archived_at": "2026-11-21T16:49:31.158533"
+    },
+    "§X1690": {
+      "name": "GRACEFUL_RESO_QUOTA_SYNC",
+      "expansion": "§RESO_COMPLETED > { §PROTO_QUOTA_RESERVE | §PROTO_TIMEOUT_RETRY } => §SYS_ASYNCHRONOUS_STATE_HARVESTER",
+      "description": "Ensures graceful resource completion and quota reservation with timeout retry mechanisms, followed by asynchronous state harvesting. リソース完了とクォータ確保、タイムアウト時の再試行を包含し、非同期状態収集へ移行する高次マクロ。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-21T12:03:24.326556",
+      "v5_audited": true,
+      "created_at": "2026-11-21T12:00:46.350927",
+      "archived_at": "2026-11-21T17:02:09.120393"
+    },
+    "§X1550": {
+      "name": "GAIA_ALTRUISTIC_COMMIT_ARBITER",
+      "expansion": "§GAIA_WARMTH_EQUILIBRIUM > { §HEART_ALTRUISTIC_RESONANCE_LATTICE } => §PROTO_TX_COMMIT",
+      "description": "Integrates planetary warmth equilibrium with altruistic resonance to arbitrate and commit protocol transactions under optimal thermodynamic conditions. / 惑星規模の熱平衡と利他的共鳴を統合し、最適な熱力学条件下でプロトコル・トランザクションを調停・コミットする高次マクロ。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-19T13:01:19.467783",
+      "v5_audited": true,
+      "created_at": "2026-11-19T08:18:05.142441",
+      "archived_at": "2026-11-21T17:12:17.605113"
+    },
+    "§X1557": {
+      "name": "SAFE_FALLBACK_CASCADE_WITH_THROTTLE",
+      "expansion": "§SYS_QUOTA_THROTTLE > { §SAFE_FALLBACK_CASCADE } => §SYNC_DIALECTIC_CONVERGENCE",
+      "description": "Eng: A composite macro that throttles system resource quotas, triggers a safe fallback cascade upon strain, and converges through dialectic synchronization. / 日: システムのクォータを制限し、負荷時に安全なフォールバックカスケードを発動させ、弁証法的同期へと収束させる複合マクロ。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-19T13:12:18.552981",
+      "v5_audited": true,
+      "created_at": "2026-11-19T11:01:24.684598",
+      "archived_at": "2026-11-21T17:21:22.533395"
     }
   },
-  "next_macro_seq": 1706
+  "next_macro_seq": 1709
 }
