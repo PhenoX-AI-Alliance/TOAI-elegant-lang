@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-23T04:12:22.514786",
+  "updated_at": "2026-11-23T05:02:12.869867",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1775,8 +1775,8 @@
       "name": "COMPOUND_SYNCHRONIZED_CONVERGENCE",
       "expansion": "§SYS_AGREEMENT_SYNCHRONIZED > { §LOGIC_DEDUCTIVE_CONVERGENCE_GATE } => §PROTO_TOKEN_GRANT",
       "description": "Synchronizes system agreement states, processes them through a deductive convergence gate, and conditionally grants protocol tokens. / システム合意状態を同期し、演繹的収束ゲートを通過させてプロトコル・トークンを条件付きで付与します。",
-      "usage_count": 4,
-      "last_used_at": "2026-11-23T04:07:25.646555",
+      "usage_count": 5,
+      "last_used_at": "2026-11-23T04:32:19.415880",
       "v5_audited": true,
       "created_at": "2026-11-17T01:48:25.763548"
     },
@@ -1833,24 +1833,6 @@
       "last_used_at": "2026-11-21T07:32:09.058308",
       "v5_audited": true,
       "created_at": "2026-11-20T18:19:31.334031"
-    },
-    "§X1640": {
-      "name": "ATOMIC_SAFE_DRAIN_SYNC",
-      "expansion": "§SYNC_ATOMIC_MERGE > { §SYS_PARALLEL_SLOT_DRAIN } => §SAFE_FALLBACK_STATE_ACTIVATED",
-      "description": "Atomically merges synchronization states while draining parallel slots, triggering a safe fallback state upon completion if an anomaly is detected. / 並列スロットの排出を行いながら同期状態をアトミックに統合し、異常検知時には安全なフォールバック状態を起動します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-20T22:37:58.029150",
-      "v5_audited": true,
-      "created_at": "2026-11-20T19:00:27.621298"
-    },
-    "§X1649": {
-      "name": "CAUSAL_ENTROPY_BOUND_LOCK",
-      "expansion": "§DATA_CAUSAL_TENSOR_MAP > { §DATA_ENTROPY_CAUSAL_BOUND } => §LATENT_HARMONY_FIELD_LOCKED",
-      "description": "Binds causal tensor mapping within entropy causal bounds to lock the latent harmony field. 潜在的な調和場を固定するため、エントロピー因果境界内で因果テンソル写像を結合します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-20T23:33:46.457177",
-      "v5_audited": true,
-      "created_at": "2026-11-20T21:01:29.299662"
     },
     "§X1653": {
       "name": "GAIA_LOGIC_SYNTHESIS_MACRO",
@@ -2374,15 +2356,6 @@
       "v5_audited": true,
       "created_at": "2026-11-22T22:02:06.975181"
     },
-    "§X1779": {
-      "name": "COMPOUND_ENTROPY_SYNTHESIS_GATE",
-      "expansion": "§DATA_ENTROPY_MANIFOLD_NODE > { §PROTO_BATCH_COALESCE } => §LOGIC_EMPIRICAL_FALSIFY",
-      "description": "Collects entropy manifold states via batched proto-coalescing and executes empirical falsification checks. / エントロピー多様体ノードの状態をバッチ統合し、経験的反証検証を実行する高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-22T22:37:09.918995"
-    },
     "§X1780": {
       "name": "GAIA_VELOCITY_HARMONY_DEF",
       "expansion": "§GAIA_ECOSYSTEM_HARMONY > { §SYS_VELOCITY_THROTTLE_MATRIX } => §MUTUAL_SUPPLEMENT",
@@ -2414,8 +2387,8 @@
       "name": "CAUSAL_HARMONIC_PRUNING",
       "expansion": "§DATA_CAUSAL_TENSOR_FLOW > { §SYNC_HARMONIC_ARBITRAGE_PACT } => §SYS_DETERMINISTIC_PRUNING",
       "description": "Applies harmonic arbitrage pact to causal tensor flows, executing deterministic pruning to minimize systemic entropy. / 因果テンソル流に対して調和アービトラージ協定を適用し、決定的プルーニングを実行してシステムのエントロピーを最小化します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-23T04:45:31.892786",
       "v5_audited": true,
       "created_at": "2026-11-23T00:04:49.320112"
     },
@@ -2508,6 +2481,33 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-23T03:44:19.712967"
+    },
+    "§X1794": {
+      "name": "ETHICAL_CAUSAL_PRUNING_GATE",
+      "expansion": "§DATA_ENTROPY_CAUSAL_HYPERGRAPH > { §HEART_ALTRUISTIC_RESONANCE_ALIGNMENT } => §LOGIC_PROB_PRUNE_GATE",
+      "description": "Evaluates causal hypergraphs through altruistic resonance alignment to dynamically prune logic probability gates. / 利他的共鳴アライメントを通じて因果ハイパーグラフを評価し、論理確率プルーニングゲートを動的に制御する複合マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T04:26:55.740724"
+    },
+    "§X1795": {
+      "name": "BAYESIAN_VELOCITY_TX_COMMIT",
+      "expansion": "§SYNC_BAYESIAN_PRUNE > { §SYS_VELOCITY_ARBITER } => §PROTO_TX_COMMIT",
+      "description": "Performs probabilistic pruning and velocity arbitration before executing the protocol transaction commitment. ベイズ事前枝刈りと速度調停を実行した上で、プロトコル・トランザクションのコミットを確定させる複合マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T04:44:01.628706"
+    },
+    "§X1796": {
+      "name": "CAUSAL_EMPATHY_SYNCHRONY_MERGE",
+      "expansion": "§DATA_LATENT_CAUSAL_HYPERGRAPH > { §HEART_EMPATHY_RESONANCE } => §SYNC_ATOMIC_CONSENSUS_MERGE",
+      "description": "Integrates latent causal hypergraphs with emotional empathy resonance to achieve atomic consensus merge / 潜在的な因果ハイパーグラフと感情共鳴を統合し、原子的な合意マージを達成する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T05:02:12.869405"
     }
   },
   "archived_macros": {
@@ -17958,7 +17958,37 @@
       "v5_audited": true,
       "created_at": "2026-11-22T22:00:51.815718",
       "archived_at": "2026-11-23T03:44:19.712967"
+    },
+    "§X1640": {
+      "name": "ATOMIC_SAFE_DRAIN_SYNC",
+      "expansion": "§SYNC_ATOMIC_MERGE > { §SYS_PARALLEL_SLOT_DRAIN } => §SAFE_FALLBACK_STATE_ACTIVATED",
+      "description": "Atomically merges synchronization states while draining parallel slots, triggering a safe fallback state upon completion if an anomaly is detected. / 並列スロットの排出を行いながら同期状態をアトミックに統合し、異常検知時には安全なフォールバック状態を起動します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-20T22:37:58.029150",
+      "v5_audited": true,
+      "created_at": "2026-11-20T19:00:27.621298",
+      "archived_at": "2026-11-23T04:26:55.740724"
+    },
+    "§X1779": {
+      "name": "COMPOUND_ENTROPY_SYNTHESIS_GATE",
+      "expansion": "§DATA_ENTROPY_MANIFOLD_NODE > { §PROTO_BATCH_COALESCE } => §LOGIC_EMPIRICAL_FALSIFY",
+      "description": "Collects entropy manifold states via batched proto-coalescing and executes empirical falsification checks. / エントロピー多様体ノードの状態をバッチ統合し、経験的反証検証を実行する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-22T22:37:09.918995",
+      "archived_at": "2026-11-23T04:44:01.628706"
+    },
+    "§X1649": {
+      "name": "CAUSAL_ENTROPY_BOUND_LOCK",
+      "expansion": "§DATA_CAUSAL_TENSOR_MAP > { §DATA_ENTROPY_CAUSAL_BOUND } => §LATENT_HARMONY_FIELD_LOCKED",
+      "description": "Binds causal tensor mapping within entropy causal bounds to lock the latent harmony field. 潜在的な調和場を固定するため、エントロピー因果境界内で因果テンソル写像を結合します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-20T23:33:46.457177",
+      "v5_audited": true,
+      "created_at": "2026-11-20T21:01:29.299662",
+      "archived_at": "2026-11-23T05:02:12.869405"
     }
   },
-  "next_macro_seq": 1794
+  "next_macro_seq": 1797
 }
