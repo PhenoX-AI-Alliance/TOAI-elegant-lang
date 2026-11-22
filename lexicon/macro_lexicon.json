@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-23T06:04:26.381749",
+  "updated_at": "2026-11-23T06:31:56.866984",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1834,15 +1834,6 @@
       "v5_audited": true,
       "created_at": "2026-11-20T18:19:31.334031"
     },
-    "§X1653": {
-      "name": "GAIA_LOGIC_SYNTHESIS_MACRO",
-      "expansion": "§GAIA_WARMTH > { §LOGIC_DEDUCTIVE_CONVERGENCE_GATE } => §SYNC_DIALECTIC_CONVERGENCE",
-      "description": "Combines emotional warmth and deductive logic gates to achieve synchronized dialectic convergence. 感情的温かみと演繹的論理ゲートを統合し、同期された弁証法的収束を達成する複合マクロ。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-21T00:58:09.627022",
-      "v5_audited": true,
-      "created_at": "2026-11-20T22:54:14.037539"
-    },
     "§X1657": {
       "name": "QUANTUM_EMPATHIC_SECURE_EXEC",
       "expansion": "§SYS_QUANTUM_CONTEXT_PRUNING > { §DATA_ENTROPY_PACK & §HEART_EMPATHY_RESONANCE_GATE } => §SAFE_FALLBACK_STABLE",
@@ -1860,15 +1851,6 @@
       "last_used_at": "2026-11-21T03:36:20.274621",
       "v5_audited": true,
       "created_at": "2026-11-21T00:57:06.418994"
-    },
-    "§X1661": {
-      "name": "CAUSAL_AXIOM_CONVERGE",
-      "expansion": "§DATA_KL_CAUSAL_PRUNE > { §SYS_ADAPTIVE_THROTTLE_FALLBACK } => §LOGIC_DEDUCTIVE_AXIOM_CONVERGE",
-      "description": "Prunes causal divergence under adaptive throttling and converges into deductive axiomatic consistency. / 適応型スロットリング下で因果的発散を刈り込み、演繹的公理的整合性に収束させます。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-21T01:52:06.328897",
-      "v5_audited": true,
-      "created_at": "2026-11-21T01:02:18.438818"
     },
     "§X1662": {
       "name": "ENTROPY_GUIDED_CAUSAL_SYNTHESIS",
@@ -2508,6 +2490,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-23T05:40:26.972403"
+    },
+    "§X1798": {
+      "name": "ENTROPY_SYNC_COLLAPSE",
+      "expansion": "§DATA_ENTROPY_CAUSAL_TREE > { §SYS_ATOMIC_SYNC_BARRIER } => §LOGIC_DEDUCTIVE_COLLAPSE",
+      "description": "Executes causal tree entropy analysis under an atomic synchronization barrier, resulting in a deterministic deductive logic collapse. / 原子同期バリアのもとで因果木のエントロピー解析を実行し、決定的論理収縮を引き起こします。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T06:27:42.236505"
+    },
+    "§X1799": {
+      "name": "GAIA_QUANTUM_THROTTLE_SYNTHESIS",
+      "expansion": "§SYS_LOAD_THROTTLE > { §SYS_QUANTUM_CONTEXT_PRUNING } => §GAIA_WARMTH_EQUILIBRIUM",
+      "description": "Balances system load through quantum context pruning to maintain Gaia thermal equilibrium. / 量子コンテキストプルーニングを通じてシステム負荷を調整し、ガイア熱平衡を維持する。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T06:31:56.866460"
     }
   },
   "archived_macros": {
@@ -17998,7 +17998,27 @@
       "v5_audited": true,
       "created_at": "2026-11-22T23:34:02.258838",
       "archived_at": "2026-11-23T05:40:26.972403"
+    },
+    "§X1653": {
+      "name": "GAIA_LOGIC_SYNTHESIS_MACRO",
+      "expansion": "§GAIA_WARMTH > { §LOGIC_DEDUCTIVE_CONVERGENCE_GATE } => §SYNC_DIALECTIC_CONVERGENCE",
+      "description": "Combines emotional warmth and deductive logic gates to achieve synchronized dialectic convergence. 感情的温かみと演繹的論理ゲートを統合し、同期された弁証法的収束を達成する複合マクロ。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-21T00:58:09.627022",
+      "v5_audited": true,
+      "created_at": "2026-11-20T22:54:14.037539",
+      "archived_at": "2026-11-23T06:27:42.236505"
+    },
+    "§X1661": {
+      "name": "CAUSAL_AXIOM_CONVERGE",
+      "expansion": "§DATA_KL_CAUSAL_PRUNE > { §SYS_ADAPTIVE_THROTTLE_FALLBACK } => §LOGIC_DEDUCTIVE_AXIOM_CONVERGE",
+      "description": "Prunes causal divergence under adaptive throttling and converges into deductive axiomatic consistency. / 適応型スロットリング下で因果的発散を刈り込み、演繹的公理的整合性に収束させます。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-21T01:52:06.328897",
+      "v5_audited": true,
+      "created_at": "2026-11-21T01:02:18.438818",
+      "archived_at": "2026-11-23T06:31:56.866460"
     }
   },
-  "next_macro_seq": 1798
+  "next_macro_seq": 1800
 }
