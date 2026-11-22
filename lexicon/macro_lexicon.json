@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-22T21:23:55.931597",
+  "updated_at": "2026-11-22T21:42:51.170623",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-22T14:52:46.178816"
     },
-    "§X1760": {
-      "name": "ENTROPY_CAUSAL_SYNTHESIS",
-      "expansion": "§DATA_ENTROPY_CAUSAL_PACK > { §DATA_ENTROPY_CAUSAL_HYPERGRAPH } => §SYNC_DIALECTIC_CONVERGENCE",
-      "description": "Combines causal data entropy hypergraphs to achieve synchronized dialectic convergence. / 因果データエントロピーハイパーグラフを結合し、同期された弁証法的収束を達成します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-22T16:17:27.008333",
-      "v5_audited": true,
-      "created_at": "2026-11-22T15:31:08.842225"
-    },
     "§X1761": {
       "name": "CAUSAL_FALSIFICATION_PIPELINE",
       "expansion": "§DATA_CAUSAL_MANIFOLD > { §LOGIC_PROBABILISTIC_FALSIFICATION_FILTER } => §LOGIC_CONDITIONAL_FALSIFICATION_MATRIX",
@@ -2468,8 +2459,8 @@
       "name": "LATENT_CAUSAL_PRUNE_SYNC",
       "expansion": "§DATA_LATENT_TENSOR_FLOW > { §LOGIC_CAUSAL_PRUNE } => §SYNC_VECTOR_COLLAPSE",
       "description": "Applies causal pruning to latent tensor data flows and synchronizes the collapsed vector state. 潜在テンソルデータフローに対して因果関係プルーニングを適用し、崩壊したベクトル状態を同期させます。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-22T21:38:15.991243",
       "v5_audited": true,
       "created_at": "2026-11-22T19:38:30.737995"
     },
@@ -2508,6 +2499,15 @@
       "last_used_at": "2026-11-22T21:23:55.931270",
       "v5_audited": true,
       "created_at": "2026-11-22T21:08:48.487540"
+    },
+    "§X1776": {
+      "name": "RESONANT_ERROR_MITIGATION",
+      "expansion": "§TENDER_RESONANCE > { §PROTO_ERROR_ESCALATE } => §LOGIC_PROB_PRUNE",
+      "description": "Combines emotional resonance and error escalation within a probabilistic pruning workflow. 感情的共鳴とエラーエスカレーションを確率的枝刈りワークフロー内で統合し、システム安定性を維持します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-22T21:42:51.169676"
     }
   },
   "archived_macros": {
@@ -17778,7 +17778,17 @@
       "v5_audited": true,
       "created_at": "2026-11-22T15:01:46.337428",
       "archived_at": "2026-11-22T21:08:48.487540"
+    },
+    "§X1760": {
+      "name": "ENTROPY_CAUSAL_SYNTHESIS",
+      "expansion": "§DATA_ENTROPY_CAUSAL_PACK > { §DATA_ENTROPY_CAUSAL_HYPERGRAPH } => §SYNC_DIALECTIC_CONVERGENCE",
+      "description": "Combines causal data entropy hypergraphs to achieve synchronized dialectic convergence. / 因果データエントロピーハイパーグラフを結合し、同期された弁証法的収束を達成します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-22T16:17:27.008333",
+      "v5_audited": true,
+      "created_at": "2026-11-22T15:31:08.842225",
+      "archived_at": "2026-11-22T21:42:51.169676"
     }
   },
-  "next_macro_seq": 1776
+  "next_macro_seq": 1777
 }
