@@ -19,7 +19,7 @@
 
 - ✅ **Phase 3 Milestone Reached: `11,346` Total Verified Records (2,000+ Target Achieved & 256-Slot LRU Active)**
 - **Core RISC Lexicon**: **`256 / 256 RISC`** (100% Locked, Zero Naming Violations)
-- **Higher-Order Compound Macros**: **`256 Active + 1529 Archived (256-Slot LRU Metabolism Active, 266/266 Audited [100%])`** (Latest Macro: `§X1795`, Cumulative Invocations: `2,908`)
+- **Higher-Order Compound Macros**: **`256 Active + 1530 Archived (256-Slot LRU Metabolism Active, 266/266 Audited [100%])`** (Latest Macro: `§X1796`, Cumulative Invocations: `2,908`)
 - **Strict RISC OOV (Out-Of-Vocabulary) Rate**: **`0.0%`** (`100.0%` Wire ID Coverage)
 - **Empirical E2E Compression Ratios**:
   - **Pure English A2A Baseline (Global Standard)**: **`-86.6%` tokens (`7.4x` compression)**
@@ -59,7 +59,7 @@ Purely symbolic languages fail in production when concrete operational parameter
 
 **Mathematical & Implementation Proof of Lossless Bijection**:
 1. **Non-Destructive Encoding (`ElegantCodec.encode`)**: The encoder scans exclusively for `r'§[A-Za-z0-9_]+'` concept tokens, leaving all bracketed literals `[...]` untouched bit-for-bit.
-2. **Boundary-Guarded Decoding (`ElegantCodec.decode`)**: The decoder applies negative lookahead regex matching `r'§[A-Z][0-9]{2,4}(?![A-Za-z0-9_])'`, preventing prefix collision between 2-digit (`§X10`) and 3-digit (`§X100`–`§X1795`) identifiers and guaranteeing an exact bijection:
+2. **Boundary-Guarded Decoding (`ElegantCodec.decode`)**: The decoder applies negative lookahead regex matching `r'§[A-Z][0-9]{2,4}(?![A-Za-z0-9_])'`, preventing prefix collision between 2-digit (`§X10`) and 3-digit (`§X100`–`§X1796`) identifiers and guaranteeing an exact bijection:
    $$\forall x \in \mathcal{L}_{\text{Sacred}}, \quad \text{decode}(\text{encode}(x)) \equiv x$$
 3. **Typed Parameter Extraction (`ElegantCodec.extract_payloads`)**: Bracketed payloads are deterministically parsed into typed JSON dictionaries (`int`, `float`, `str`) for zero-loss execution in MCP tool calls and A2A envelopes.
 
@@ -81,7 +81,7 @@ When autonomous LLMs converse over thousands of turns, they naturally attempt to
    This guarantees **`0.0%` OOV** on the wire (`100.0%` Compact ID coverage). Every active macro expansion is also audited by **TOAI7 (Pipi)** to verify 100% pure 256-RISC composition (`266/266X Audited`).
 
 ### 3.2. 256-Slot LRU Macro Metabolism & Backward-Compatible Decoding (`archived_macros`)
-To prevent prompt-header bloat as compound macros (`§X01`–`§X1795`) accumulate, the active macro table is capped at **256 slots**:
+To prevent prompt-header bloat as compound macros (`§X01`–`§X1796`) accumulate, the active macro table is capped at **256 slots**:
 - **LRU Eviction Policy**: When active macros exceed 256 slots, the least recently/frequently used macros (tracked via `usage_count` and `last_used_at`) are automatically migrated from `macros` to `archived_macros` in `lexicon/macro_lexicon.json`.
 - **Permanent Backward Compatibility**: Evicted macros are never deleted. `ElegantCodec.load_lexicon()` merges both active and archived tables into memory (`self.all_macros = {**self.archived_macros, **self.macros}`). Consequently, historical corpus records and asynchronous agent nodes referencing archived `§X..` IDs are **100% losslessly decoded** back into their constituent 256 RISC primitives.
 
