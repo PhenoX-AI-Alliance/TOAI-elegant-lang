@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-22T09:12:33.538546",
+  "updated_at": "2026-11-22T09:45:20.559105",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1816,15 +1816,6 @@
       "v5_audited": true,
       "created_at": "2026-11-19T22:03:05.252589"
     },
-    "§X1595": {
-      "name": "RESOURCE_ARBITRAGE_CAUSAL_FLOW_DEF",
-      "expansion": "§SYS_RESOURCE_ARBITRAGE_THROTTLE > { §DATA_CAUSAL_TENSOR_FLOW } => §HARMONIC_RESONANCE_STABLE",
-      "description": "Dynamic allocation of system resources guided by causal tensor data flow to achieve stable harmonic resonance. / 因果テンソルデータフローに基づきシステムリソースを動的配分し、安定した調跟共鳴を達成するマクロ。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-20T05:22:23.291306",
-      "v5_audited": true,
-      "created_at": "2026-11-20T02:29:35.482703"
-    },
     "§X1597": {
       "name": "PROBABILISTIC_ROLLBACK_SYNTHESIS",
       "expansion": "§LOGIC_PROBABILISTIC_FALSIFICATION_MATRIX > { §PROTO_TX_ROLLBACK } => §MUTUAL_SUPPLEMENT",
@@ -2405,8 +2396,8 @@
       "name": "SLA_BREACH_ISOLATE_FALLBACK",
       "expansion": "§SYS_SLOT_THROTTLE -[p:0.99]-> { §LOGIC_EMPIRICAL_REJECT } => §SYS_QUANTUM_SLOT_ARBITRATION",
       "description": "Isolates tasks into the dead-letter queue and reallocates alternative delegation paths upon detecting an SLA breach through throttling and empirical rejection logic. / SLA違反検知時にスロット制御と経験的拒絶ロジックを用いてタスクを隔離し、代替委譲先の再選定を行います。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-22T09:32:42.745412",
       "v5_audited": true,
       "created_at": "2026-11-22T03:01:11.051855"
     },
@@ -2423,8 +2414,8 @@
       "name": "ENTROPY_PRUNED_SYNCHRONIZED_LATTICE",
       "expansion": "§DATA_ENTROPY_PRUNED_TREE > { §PROTO_CACHE_SYNC } => §DATA_EMBEDDING_LATTICE",
       "description": "Prunes data entropy through synchronized proto caches to stabilize the embedding lattice structure. / プロトキャッシュの同期を介してデータのエントロピーを剪定し、埋め込みラティス構造を安定化させます。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-22T09:12:33.538205",
+      "usage_count": 2,
+      "last_used_at": "2026-11-22T09:32:42.745412",
       "v5_audited": true,
       "created_at": "2026-11-22T03:36:37.944895"
     },
@@ -2486,8 +2477,8 @@
       "name": "SYS_ADAPTIVE_DEDUCTIVE_SYNTHESIS",
       "expansion": "§SYS_ADAPTIVE_TOKEN_THROTTLE > { §LOGIC_DEDUCTIVE_AXIOM_CONVERGE } => §GRACEFUL_TASK_SHARING",
       "description": "Adapts token throttling dynamically while converging deductive axioms to achieve graceful task sharing. 演言的公理の収束と適応型トークンスロットルを統合し、優雅なタスク共有を実現します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-22T09:36:13.528430",
       "v5_audited": true,
       "created_at": "2026-11-22T07:39:58.948044"
     },
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-22T08:39:47.124889"
+    },
+    "§X1749": {
+      "name": "COMPOUND_CAUSAL_AUDIT_THROTTLE",
+      "expansion": "§DATA_HIERARCHICAL_CAUSAL_NODE > { §PROTO_AUDIT_TRAIL } => §SYS_ADAPTIVE_SLOT_THROTTLE",
+      "description": "Integrates hierarchical causal data nodes with protocol audit trails to drive adaptive system slot throttling. 階層的因果データノードとプロトコル監査証跡を統合し、適応型システムスロット制御を駆動する複合マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-22T09:29:17.198546"
     }
   },
   "archived_macros": {
@@ -17508,7 +17508,17 @@
       "v5_audited": true,
       "created_at": "2026-11-20T03:01:24.241435",
       "archived_at": "2026-11-22T08:39:47.124889"
+    },
+    "§X1595": {
+      "name": "RESOURCE_ARBITRAGE_CAUSAL_FLOW_DEF",
+      "expansion": "§SYS_RESOURCE_ARBITRAGE_THROTTLE > { §DATA_CAUSAL_TENSOR_FLOW } => §HARMONIC_RESONANCE_STABLE",
+      "description": "Dynamic allocation of system resources guided by causal tensor data flow to achieve stable harmonic resonance. / 因果テンソルデータフローに基づきシステムリソースを動的配分し、安定した調跟共鳴を達成するマクロ。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-20T05:22:23.291306",
+      "v5_audited": true,
+      "created_at": "2026-11-20T02:29:35.482703",
+      "archived_at": "2026-11-22T09:29:17.198546"
     }
   },
-  "next_macro_seq": 1749
+  "next_macro_seq": 1750
 }
