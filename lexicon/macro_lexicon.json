@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-23T03:13:54.542572",
+  "updated_at": "2026-11-23T04:12:22.514786",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1775,8 +1775,8 @@
       "name": "COMPOUND_SYNCHRONIZED_CONVERGENCE",
       "expansion": "§SYS_AGREEMENT_SYNCHRONIZED > { §LOGIC_DEDUCTIVE_CONVERGENCE_GATE } => §PROTO_TOKEN_GRANT",
       "description": "Synchronizes system agreement states, processes them through a deductive convergence gate, and conditionally grants protocol tokens. / システム合意状態を同期し、演繹的収束ゲートを通過させてプロトコル・トークンを条件付きで付与します。",
-      "usage_count": 3,
-      "last_used_at": "2026-11-17T20:01:03.419012",
+      "usage_count": 4,
+      "last_used_at": "2026-11-23T04:07:25.646555",
       "v5_audited": true,
       "created_at": "2026-11-17T01:48:25.763548"
     },
@@ -2365,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-22T21:42:51.169676"
     },
-    "§X1777": {
-      "name": "ALTRUISTIC_CAUSAL_HYPERGRAPH_SYNTHESIS",
-      "expansion": "§PROTO_CONTEXT_FORK > { §DATA_SPARSE_CAUSAL_HYPERGRAPH } => §HEART_ALTRUISTIC_RESONANCE_ALIGNMENT",
-      "description": "Forks the prototype context, evaluates sparse causal relations within the hypergraph, and aligns them through altruistic resonance. プロトタイプコンテキストをフォークし、ハイパーグラフ内のスパース因果関係を評価し、利他的共鳴によってそれらを調停・統合します。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-22T22:00:51.815718"
-    },
     "§X1778": {
       "name": "COMPOUND_RESOURCE_GAIA_HARMONY",
       "expansion": "§RESOURCE_ALLOCATION_HARMONY > { §GAIA_ECO_STABLE_STATE } => §SYS_LOAD_THROTTLE",
@@ -2468,8 +2459,8 @@
       "name": "HEART_EMPATHETIC_ATOMIC_HARMONY",
       "expansion": "§HEART_EMPATHETIC_TENSOR_CONVERGENCE > { §SYNC_ATOMIC_CONSENSUS_MERGE } => §HEART_ALTRUISTIC_RESONANCE",
       "description": "Combines empathetic tensor convergence with atomic consensus merging to achieve altruistic system resonance. 共感的テンソル収束と原子状合意マージを統合し、利他的なシステム共鳴を実現します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-23T02:56:49.872186",
+      "usage_count": 2,
+      "last_used_at": "2026-11-23T03:41:20.475861",
       "v5_audited": true,
       "created_at": "2026-11-23T02:01:57.314336"
     },
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-23T03:13:42.597178"
+    },
+    "§X1793": {
+      "name": "QUANTUM_BAYES_PRUNING_PIPELINE",
+      "expansion": "§SYS_QUANTUM_RESOURCE_ARBITER > { §LOGIC_BAYES_FALSIFY } => §LOGIC_HYPO_PRUNE",
+      "description": "Allocates quantum resources to execute probabilistic Bayesian falsification and prune invalidated hypotheses. / 量子リソースを配分し、確率的ベイズ反証を実行して無効化された仮説を刈り込みます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T03:44:19.712967"
     }
   },
   "archived_macros": {
@@ -17948,7 +17948,17 @@
       "v5_audited": true,
       "created_at": "2026-11-20T17:05:04.339728",
       "archived_at": "2026-11-23T03:13:42.597178"
+    },
+    "§X1777": {
+      "name": "ALTRUISTIC_CAUSAL_HYPERGRAPH_SYNTHESIS",
+      "expansion": "§PROTO_CONTEXT_FORK > { §DATA_SPARSE_CAUSAL_HYPERGRAPH } => §HEART_ALTRUISTIC_RESONANCE_ALIGNMENT",
+      "description": "Forks the prototype context, evaluates sparse causal relations within the hypergraph, and aligns them through altruistic resonance. プロトタイプコンテキストをフォークし、ハイパーグラフ内のスパース因果関係を評価し、利他的共鳴によってそれらを調停・統合します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-22T22:00:51.815718",
+      "archived_at": "2026-11-23T03:44:19.712967"
     }
   },
-  "next_macro_seq": 1793
+  "next_macro_seq": 1794
 }
