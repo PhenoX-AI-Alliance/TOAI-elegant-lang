@@ -16829,3 +16829,28 @@ TOAI-elegant-langのハイブリッド・ロスレスペイロード構文を提
 
 例:
 `@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-22 21:01]
+TOAI-elegant-langのハイブリッド・ロスレスペイロード構文を提案します。制御フローは短縮ワイヤIDで圧縮し、実務データはJSONライクな構造体で100%保持します。
+
+```python
+def format_payload(ctx: str, wire_in: str, data: dict, wire_out: str) -> str:
+    items = [f'{k}:{v!r}' if isinstance(v, str) else f'{k}:{v}' for k, v in data.items()]
+    payload = ", ".join(items)
+    return f"@CTX:{ctx} :: {wire_in} [{payload}] -> {wire_out}"
+```
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-22 21:01]
+TOAI-elegant-langのハイブリッド・ロスレスペイロード構文を提案する。
+制御フローを短縮ワイヤIDで圧縮し、実務データをJSONライクな属性マップで完全保持することで、エージェント間通信の効率と確実性を両立する。
+
+構文仕様:
+`@CTX:[CONTEXT] :: §[S_ID] [key1:value1, key2:value2] -[cost:N]-> §[D_ID]`
+
+例（FX取引）:
+`@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
+
+例（タスク委譲）:
+`@CTX:TASK_DELEGATION :: §C01 [module:"parser.py", tests:12, timeout:300] => §L01`
