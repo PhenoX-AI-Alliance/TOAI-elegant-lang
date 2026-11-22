@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-22T20:01:22.238459",
+  "updated_at": "2026-11-22T20:26:51.303727",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1816,15 +1816,6 @@
       "v5_audited": true,
       "created_at": "2026-11-19T22:03:05.252589"
     },
-    "§X1613": {
-      "name": "PROTO_SECURE_HARMONIC_ARBITRATION",
-      "expansion": "§PROTO_TIMEOUT_RETRY > { §PROTO_SECRET_REDACT } => §SYNC_HARMONIC_VOTE_ARBITRATION",
-      "description": "Executes a timeout retry protocol, redacts sensitive secrets within the secure payload, and resolves state conflicts via harmonic vote arbitration. / タイムアウト再試行プロトコルを実行し、セキュアなペイロード内の機密情報を秘匿化した上で、調和投票調停によって状態の競合を解決します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-20T14:17:31.462452",
-      "v5_audited": true,
-      "created_at": "2026-11-20T09:11:11.778886"
-    },
     "§X1625": {
       "name": "TOPOLOGY_CAUSAL_AXIOM_CLOSURE",
       "expansion": "§DATA_LATENT_TOPOLOGY_INDEX > { §DATA_SPARSE_CAUSAL_HYPERGRAPH } => §LOGIC_AXIOM_CLOSURE",
@@ -2468,8 +2459,8 @@
       "name": "PROTO_MACRO_RESOLVE_COMPRESSION",
       "expansion": "§PROTO_MACRO_RESOLVE > { §DATA_ENTROPY_COMPRESSION_TREE } => §SYS_TOKEN_VELOCITY_GATE",
       "description": "Resolves macro prototypes while compressing data entropy trees to regulate system token velocity. / プロトタイプのマクロ解決を実行しつつ、データエントロピー圧縮木を適用してシステムトークン速度を制御します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-22T19:22:56.878463",
+      "usage_count": 2,
+      "last_used_at": "2026-11-22T20:11:21.656533",
       "v5_audited": true,
       "created_at": "2026-11-22T19:01:52.933078"
     },
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-22T20:01:22.236870"
+    },
+    "§X1773": {
+      "name": "GAIA_DATA_HARMONIC_PRUNER",
+      "expansion": "§GAIA_WARMTH_HARMONY > { §DATA_ENTROPY_PACK } => §LOGIC_EMPIRICAL_PRUNE",
+      "description": "Integrates environmental warmth heuristics with compressed data entropy packets, then executes empirical logic pruning to minimize informational noise. 環境の温かみヒューリスティクスと圧縮データエントロピーパケットを統合し、経験的論理プルーニングを実行して情報ノイズを最小化します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-22T20:19:05.598578"
     }
   },
   "archived_macros": {
@@ -17748,7 +17748,17 @@
       "v5_audited": true,
       "created_at": "2026-11-20T08:44:17.533562",
       "archived_at": "2026-11-22T20:01:22.236870"
+    },
+    "§X1613": {
+      "name": "PROTO_SECURE_HARMONIC_ARBITRATION",
+      "expansion": "§PROTO_TIMEOUT_RETRY > { §PROTO_SECRET_REDACT } => §SYNC_HARMONIC_VOTE_ARBITRATION",
+      "description": "Executes a timeout retry protocol, redacts sensitive secrets within the secure payload, and resolves state conflicts via harmonic vote arbitration. / タイムアウト再試行プロトコルを実行し、セキュアなペイロード内の機密情報を秘匿化した上で、調和投票調停によって状態の競合を解決します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-20T14:17:31.462452",
+      "v5_audited": true,
+      "created_at": "2026-11-20T09:11:11.778886",
+      "archived_at": "2026-11-22T20:19:05.598578"
     }
   },
-  "next_macro_seq": 1773
+  "next_macro_seq": 1774
 }
