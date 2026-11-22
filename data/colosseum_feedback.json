@@ -8,6 +8,8 @@
     "description": "自発的アライメントプロトコルとバッチ統合を組み合わせたA2Aタスク委譲構文の標準化マクロ"
   },
   "proposed_scenario": "【コロシアム発・実務検証】次期の対話テストでは、多数の分散エージェント間における非同期メッセージングに対して§GAIA_WARMTH_EQUILIBRIUMおよび§PROTO_BATCH_COALESCEを適用し、エラー復旧の遅延時間と通信オーバーヘッドの削減効果を検証する。",
-  "consumed_by_macro": false,
-  "consumed_by_dialogue": false
+  "consumed_by_macro": true,
+  "consumed_by_dialogue": true,
+  "consumed_by_macro_at": "2026-11-23T02:39:55.733587",
+  "consumed_by_dialogue_at": "2026-11-23T02:56:46.239113"
 }
