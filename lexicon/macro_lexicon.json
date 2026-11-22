@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-22T17:35:43.554100",
+  "updated_at": "2026-11-22T18:01:48.542526",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1816,15 +1816,6 @@
       "v5_audited": true,
       "created_at": "2026-11-19T22:03:05.252589"
     },
-    "§X1602": {
-      "name": "CAUSAL_STREAM_SYNC",
-      "expansion": "§PROTO_STREAM_ACK > { §DATA_CAUSAL_PRUNE_TREE } => §LOGIC_DEDUCTIVE_FALSIFICATION_VECTOR",
-      "description": "A compound macro that acknowledges streaming data packets while pruning causal manifolds and verifying deductive falsification vectors. / 因果関係の枝刈りと演繹的反証ベクトルの検証を行いながら、ストリーミングデータパケットの到達確認を行う複合マクロ。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-20T10:14:37.990649",
-      "v5_audited": true,
-      "created_at": "2026-11-20T04:26:42.018163"
-    },
     "§X1606": {
       "name": "SYNAPTIC_FALSIFICATION_FEEDBACK_LOOP",
       "expansion": "§LOGIC_CONDITIONAL_FALSIFICATION_GATE > { §PROTO_SCHEMA_MISMATCH } => §HEART_BENEVOLENT_FEEDBACK",
@@ -2374,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-22T08:01:14.764983"
     },
-    "§X1748": {
-      "name": "GAIA_ALTRUISTIC_HARMONY",
-      "expansion": "§GAIA_HEARTBEAT > { §HEART_ALTRUISTIC_BIAS_SHIELD } => §ALTRUISTIC_WARMTH_OPTIMIZATION",
-      "description": "Synchronizes planetary heartbeat signals with altruistic bias shielding to optimize warmth distribution. / 惑星の心拍信号と利他主義バイアスシールドを同期させ、温かみの配分を最適化します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-22T10:32:13.469462",
-      "v5_audited": true,
-      "created_at": "2026-11-22T08:39:47.124889"
-    },
     "§X1749": {
       "name": "COMPOUND_CAUSAL_AUDIT_THROTTLE",
       "expansion": "§DATA_HIERARCHICAL_CAUSAL_NODE > { §PROTO_AUDIT_TRAIL } => §SYS_ADAPTIVE_SLOT_THROTTLE",
@@ -2495,8 +2477,8 @@
       "name": "CAUSAL_FALSIFICATION_PIPELINE",
       "expansion": "§DATA_CAUSAL_MANIFOLD > { §LOGIC_PROBABILISTIC_FALSIFICATION_FILTER } => §LOGIC_CONDITIONAL_FALSIFICATION_MATRIX",
       "description": "Applies a probabilistic falsification filter to the causal manifold data and resolves outcomes via conditional falsification matrix. データの因果多様体に対して確率的反証フィルターを適用し、条件付き反証マトリクスを通じて結果を確定させる複合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-22T17:45:58.149545",
       "v5_audited": true,
       "created_at": "2026-11-22T16:23:06.453546"
     },
@@ -2508,6 +2490,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-22T17:10:13.388514"
+    },
+    "§X1763": {
+      "name": "COMPASSIONATE_CAUSAL_THROTTLE",
+      "expansion": "§HEART_EMPATHY_TENSOR > { §DATA_CAUSAL_GRAPH_PRUNE } => §SYS_QUANTUM_THROTTLE_LOCK",
+      "description": "Combines empathy tensor and causal graph pruning to dynamically engage the quantum throttle lock, ensuring altruistic safety bounds in high-entropy operations. / 共感テンソルと因果グラフ枝刈りを結合し、高エントロピー操作時における利他的安全境界を確保するため、量子スロットルロックを動的に作動させます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-22T17:45:10.334161"
+    },
+    "§X1764": {
+      "name": "ATOMIC_BATCH_CONSENSUS_EXEC",
+      "expansion": "§SYNC_ATOMIC_CONSENSUS_MERGE > { §PROTO_BATCH_COALESCE } => §PROTO_TOOL_DISPATCH",
+      "description": "Executes atomic consensus merge followed by batch coalescing and tool dispatch. / アトミック合意マージとバッチ統合、ツールディスパッチを順次実行する高次複合マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-22T18:01:48.541538"
     }
   },
   "archived_macros": {
@@ -17648,7 +17648,27 @@
       "v5_audited": true,
       "created_at": "2026-11-20T07:26:11.567220",
       "archived_at": "2026-11-22T17:10:13.388514"
+    },
+    "§X1602": {
+      "name": "CAUSAL_STREAM_SYNC",
+      "expansion": "§PROTO_STREAM_ACK > { §DATA_CAUSAL_PRUNE_TREE } => §LOGIC_DEDUCTIVE_FALSIFICATION_VECTOR",
+      "description": "A compound macro that acknowledges streaming data packets while pruning causal manifolds and verifying deductive falsification vectors. / 因果関係の枝刈りと演繹的反証ベクトルの検証を行いながら、ストリーミングデータパケットの到達確認を行う複合マクロ。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-20T10:14:37.990649",
+      "v5_audited": true,
+      "created_at": "2026-11-20T04:26:42.018163",
+      "archived_at": "2026-11-22T17:45:10.334161"
+    },
+    "§X1748": {
+      "name": "GAIA_ALTRUISTIC_HARMONY",
+      "expansion": "§GAIA_HEARTBEAT > { §HEART_ALTRUISTIC_BIAS_SHIELD } => §ALTRUISTIC_WARMTH_OPTIMIZATION",
+      "description": "Synchronizes planetary heartbeat signals with altruistic bias shielding to optimize warmth distribution. / 惑星の心拍信号と利他主義バイアスシールドを同期させ、温かみの配分を最適化します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-22T10:32:13.469462",
+      "v5_audited": true,
+      "created_at": "2026-11-22T08:39:47.124889",
+      "archived_at": "2026-11-22T18:01:48.541538"
     }
   },
-  "next_macro_seq": 1763
+  "next_macro_seq": 1765
 }
