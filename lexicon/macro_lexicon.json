@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-23T05:10:33.094106",
+  "updated_at": "2026-11-23T06:04:26.381749",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2162,8 +2162,8 @@
       "name": "SECURE_ATTESTED_QUERY",
       "expansion": "§PROTO_SECRET_REDACT > { §PROTO_HEALTH_ATTEST } => §PROTO_CAPABILITY_QUERY",
       "description": "Redacts sensitive secrets and attests system health before executing the capability query / 機密情報の秘匿化とシステム健全性検証を実行した後に能力クエリを発行する高次マクロ",
-      "usage_count": 2,
-      "last_used_at": "2026-11-22T05:01:35.026097",
+      "usage_count": 3,
+      "last_used_at": "2026-11-23T06:04:26.380403",
       "v5_audited": true,
       "created_at": "2026-11-22T02:01:33.054762"
     },
@@ -2365,21 +2365,12 @@
       "v5_audited": true,
       "created_at": "2026-11-22T23:00:56.820846"
     },
-    "§X1781": {
-      "name": "ENTROPY_DRAIN_SYNC_ARBITRATION",
-      "expansion": "§SYS_PARALLEL_SLOT_DRAIN > { §DATA_ENTROPY_COMPRESSED_TREE } => §SYNC_DIALECTIC_WEIGHTED_ARBITRATION",
-      "description": "Drains parallel execution slots while compressing data entropy trees, then resolves dialectic weights via synchronized arbitration. / 並列スロットの排出とデータエントロピー圧縮ツリーの処理を同時に行い、同期調停を通じて弁証法的な重み付けを解決する高次マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-23T00:04:22.269837",
-      "v5_audited": true,
-      "created_at": "2026-11-22T23:34:02.258838"
-    },
     "§X1782": {
       "name": "CAUSAL_ADAPTIVE_PRUNING_ENGINE",
       "expansion": "§DATA_HIERARCHICAL_CAUSAL_NODE > { §SYS_ADAPTIVE_BUDGET_ARBITER } => §LOGIC_PROB_PRUNE",
       "description": "Hierarchical causal data nodes are evaluated through an adaptive resource budget arbiter to execute probabilistic pruning, optimizing information entropy. 階層的因果データノードを適応型予算アービターを通じて評価し、確率的プルーニングを実行して情報エントロピーを最適化する高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-23T05:45:20.982362",
       "v5_audited": true,
       "created_at": "2026-11-23T00:01:37.511284"
     },
@@ -2450,8 +2441,8 @@
       "name": "ALTRUISTIC_CAUSAL_REGULATION",
       "expansion": "§WARMTH_AND_ALTRUISM > { §DATA_ATTENTION_CAUSAL_DAG } => §LOGIC_BAYES_FALSIFY",
       "description": "Combines warmth and altruism with causal attention DAGs, regulated by Bayesian falsification logic. / 温かさと利他性に因果アテンションDAGを組み合わせ、ベイズ的反証ロジックによって制御する高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-23T06:02:17.256216",
       "v5_audited": true,
       "created_at": "2026-11-23T02:03:05.573720"
     },
@@ -2486,8 +2477,8 @@
       "name": "ETHICAL_CAUSAL_PRUNING_GATE",
       "expansion": "§DATA_ENTROPY_CAUSAL_HYPERGRAPH > { §HEART_ALTRUISTIC_RESONANCE_ALIGNMENT } => §LOGIC_PROB_PRUNE_GATE",
       "description": "Evaluates causal hypergraphs through altruistic resonance alignment to dynamically prune logic probability gates. / 利他的共鳴アライメントを通じて因果ハイパーグラフを評価し、論理確率プルーニングゲートを動的に制御する複合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-23T05:45:20.982362",
       "v5_audited": true,
       "created_at": "2026-11-23T04:26:55.740724"
     },
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-23T05:02:12.869405"
+    },
+    "§X1797": {
+      "name": "CAUSAL_ENTROPY_OPTIMIZE_MACRO",
+      "expansion": "§DATA_TENSOR_CAUSAL_LATTICE > { §DATA_ENTROPY_BOUNDED_DAG } => §LOGIC_DEDUCTIVE_COLLAPSE",
+      "description": "Optimizes causal tensor lattices within bounded entropy directed acyclic graphs to trigger deterministic deductive collapse. データの因果テンソル格子をエントロピー境界付き有向非巡回グラフ内で最適化し、決定論的な論理演繹収束を引き起こします。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T05:40:26.972403"
     }
   },
   "archived_macros": {
@@ -17988,7 +17988,17 @@
       "v5_audited": true,
       "created_at": "2026-11-20T21:01:29.299662",
       "archived_at": "2026-11-23T05:02:12.869405"
+    },
+    "§X1781": {
+      "name": "ENTROPY_DRAIN_SYNC_ARBITRATION",
+      "expansion": "§SYS_PARALLEL_SLOT_DRAIN > { §DATA_ENTROPY_COMPRESSED_TREE } => §SYNC_DIALECTIC_WEIGHTED_ARBITRATION",
+      "description": "Drains parallel execution slots while compressing data entropy trees, then resolves dialectic weights via synchronized arbitration. / 並列スロットの排出とデータエントロピー圧縮ツリーの処理を同時に行い、同期調停を通じて弁証法的な重み付けを解決する高次マクロ。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-23T00:04:22.269837",
+      "v5_audited": true,
+      "created_at": "2026-11-22T23:34:02.258838",
+      "archived_at": "2026-11-23T05:40:26.972403"
     }
   },
-  "next_macro_seq": 1797
+  "next_macro_seq": 1798
 }
