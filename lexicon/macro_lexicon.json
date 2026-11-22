@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-22T22:00:51.816295",
+  "updated_at": "2026-11-22T22:37:09.919551",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1793,8 +1793,8 @@
       "name": "GAIA_LOGIC_SYNTHESIS_GATE",
       "expansion": "§GAIA_ECOSYSTEM_HARMONY > { §LOGIC_PROB_BRANCH_GATE } => §DATA_ENTROPY_PRUNED_TREE",
       "description": "Integrates ecosystem harmony with probabilistic logical branching to prune and optimize data entropy. 生態系の調和と確率的論理分岐を統合し、データのエントロピーを枝刈りして最適化します。",
-      "usage_count": 4,
-      "last_used_at": "2026-11-18T23:04:55.359915",
+      "usage_count": 5,
+      "last_used_at": "2026-11-22T22:26:58.322858",
       "v5_audited": true,
       "created_at": "2026-11-18T19:36:31.090053"
     },
@@ -2365,30 +2365,12 @@
       "v5_audited": true,
       "created_at": "2026-11-22T16:23:06.453546"
     },
-    "§X1762": {
-      "name": "ATOMIC_EMPATHETIC_SYNC_CLOSURE",
-      "expansion": "§HEART_EMPATHETIC_TENSOR_CONVERGENCE > { §SYS_ATOMIC_SYNC_BARRIER } => §LOGIC_AXIOM_CLOSURE",
-      "description": "Synchronizes empathetic tensor convergence across atomic barriers and closes the logical axiom. 共感テンソルの収束をアトミックバリアを介して同期し、論理公理の閉包を完了します。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-22T17:10:13.388514"
-    },
-    "§X1763": {
-      "name": "COMPASSIONATE_CAUSAL_THROTTLE",
-      "expansion": "§HEART_EMPATHY_TENSOR > { §DATA_CAUSAL_GRAPH_PRUNE } => §SYS_QUANTUM_THROTTLE_LOCK",
-      "description": "Combines empathy tensor and causal graph pruning to dynamically engage the quantum throttle lock, ensuring altruistic safety bounds in high-entropy operations. / 共感テンソルと因果グラフ枝刈りを結合し、高エントロピー操作時における利他的安全境界を確保するため、量子スロットルロックを動的に作動させます。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-22T17:45:10.334161"
-    },
     "§X1764": {
       "name": "ATOMIC_BATCH_CONSENSUS_EXEC",
       "expansion": "§SYNC_ATOMIC_CONSENSUS_MERGE > { §PROTO_BATCH_COALESCE } => §PROTO_TOOL_DISPATCH",
       "description": "Executes atomic consensus merge followed by batch coalescing and tool dispatch. / アトミック合意マージとバッチ統合、ツールディスパッチを順次実行する高次複合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-22T22:02:09.673465",
       "v5_audited": true,
       "created_at": "2026-11-22T18:01:48.541538"
     },
@@ -2495,8 +2477,8 @@
       "name": "RESONANT_ERROR_MITIGATION",
       "expansion": "§TENDER_RESONANCE > { §PROTO_ERROR_ESCALATE } => §LOGIC_PROB_PRUNE",
       "description": "Combines emotional resonance and error escalation within a probabilistic pruning workflow. 感情的共鳴とエラーエスカレーションを確率的枝刈りワークフロー内で統合し、システム安定性を維持します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-22T22:09:25.040521",
       "v5_audited": true,
       "created_at": "2026-11-22T21:42:51.169676"
     },
@@ -2508,6 +2490,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-22T22:00:51.815718"
+    },
+    "§X1778": {
+      "name": "COMPOUND_RESOURCE_GAIA_HARMONY",
+      "expansion": "§RESOURCE_ALLOCATION_HARMONY > { §GAIA_ECO_STABLE_STATE } => §SYS_LOAD_THROTTLE",
+      "description": "Balances system resource allocation and stabilizes the Gaia ecological state by actively throttling system loads. / システムリソースの割り当てを調和させ、システム負荷を適切に制限することでガイア生態系の安定状態を維持する。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-22T22:02:06.975181"
+    },
+    "§X1779": {
+      "name": "COMPOUND_ENTROPY_SYNTHESIS_GATE",
+      "expansion": "§DATA_ENTROPY_MANIFOLD_NODE > { §PROTO_BATCH_COALESCE } => §LOGIC_EMPIRICAL_FALSIFY",
+      "description": "Collects entropy manifold states via batched proto-coalescing and executes empirical falsification checks. / エントロピー多様体ノードの状態をバッチ統合し、経験的反証検証を実行する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-22T22:37:09.918995"
     }
   },
   "archived_macros": {
@@ -17798,7 +17798,27 @@
       "v5_audited": true,
       "created_at": "2026-11-20T14:51:43.545182",
       "archived_at": "2026-11-22T22:00:51.815718"
+    },
+    "§X1762": {
+      "name": "ATOMIC_EMPATHETIC_SYNC_CLOSURE",
+      "expansion": "§HEART_EMPATHETIC_TENSOR_CONVERGENCE > { §SYS_ATOMIC_SYNC_BARRIER } => §LOGIC_AXIOM_CLOSURE",
+      "description": "Synchronizes empathetic tensor convergence across atomic barriers and closes the logical axiom. 共感テンソルの収束をアトミックバリアを介して同期し、論理公理の閉包を完了します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-22T17:10:13.388514",
+      "archived_at": "2026-11-22T22:02:06.975181"
+    },
+    "§X1763": {
+      "name": "COMPASSIONATE_CAUSAL_THROTTLE",
+      "expansion": "§HEART_EMPATHY_TENSOR > { §DATA_CAUSAL_GRAPH_PRUNE } => §SYS_QUANTUM_THROTTLE_LOCK",
+      "description": "Combines empathy tensor and causal graph pruning to dynamically engage the quantum throttle lock, ensuring altruistic safety bounds in high-entropy operations. / 共感テンソルと因果グラフ枝刈りを結合し、高エントロピー操作時における利他的安全境界を確保するため、量子スロットルロックを動的に作動させます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-22T17:45:10.334161",
+      "archived_at": "2026-11-22T22:37:09.918995"
     }
   },
-  "next_macro_seq": 1778
+  "next_macro_seq": 1780
 }
