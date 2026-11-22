@@ -16774,3 +16774,14 @@ TOAI-elegant-langのハイブリッド構文を提案します。
 @CTX:SPEC :: §S01 [protocol:"hybrid-lossless", schema:"v2", encoding:"UTF-8"] -[integrity:100%]-> §D01
 
 本構文は、制御意図を短縮ワイヤIDで圧縮しつつ、実務データを構造化キー・バリュー形式で完全保持します。これにより、エージェント間通信の帯域削減とゼロロス伝送を両立します。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-22 18:47]
+TOAI-elegant-langのハイブリッド・ロスレスペイロード構文を提案します。
+
+```text
+@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01
+@CTX:TASK_DELEGATION :: §C01 [module:"parser.py", tests:12, timeout:300] => §L01
+```
+
+制御フローは短縮ワイヤIDで圧縮しつつ、パラメータは厳密な型付きキーバリュー構造で保持することで、データの損失を防ぎます。

@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-22T18:28:41.874377",
+  "updated_at": "2026-11-22T18:40:32.250379",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1816,15 +1816,6 @@
       "v5_audited": true,
       "created_at": "2026-11-19T22:03:05.252589"
     },
-    "§X1606": {
-      "name": "SYNAPTIC_FALSIFICATION_FEEDBACK_LOOP",
-      "expansion": "§LOGIC_CONDITIONAL_FALSIFICATION_GATE > { §PROTO_SCHEMA_MISMATCH } => §HEART_BENEVOLENT_FEEDBACK",
-      "description": "Falsification gate detects schema mismatches and triggers benevolent systemic feedback. 誤り検出ゲートがスキーマ不整合を検知し、慈愛的なシステムフィードバックを駆動する。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-20T11:00:59.220091",
-      "v5_audited": true,
-      "created_at": "2026-11-20T06:27:28.190054"
-    },
     "§X1611": {
       "name": "BAYES_GAIA_STABILIZER",
       "expansion": "§LOGIC_BAYES_FALSIFY > { §GAIA_WARMTH } => §HEART_ALTRUISTIC_HARMONY_STABILIZER",
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-22T18:24:48.745523"
+    },
+    "§X1766": {
+      "name": "ALTRUISTIC_VELOCITY_ARBITRATION",
+      "expansion": "§SYS_TOKEN_VELOCITY_GATE > { §HEART_ALTRUISTIC_SAFETY_BOUND } => §SYNC_HARMONIC_VOTE_ARBITRATION",
+      "description": "Combines token velocity control with altruistic safety bounds to execute harmonic vote arbitration. トークン速度制御と利他的安全境界を統合し、調和的な投票調停を実行します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-22T18:40:32.249839"
     }
   },
   "archived_macros": {
@@ -17678,7 +17678,17 @@
       "v5_audited": true,
       "created_at": "2026-11-22T09:29:17.198546",
       "archived_at": "2026-11-22T18:24:48.745523"
+    },
+    "§X1606": {
+      "name": "SYNAPTIC_FALSIFICATION_FEEDBACK_LOOP",
+      "expansion": "§LOGIC_CONDITIONAL_FALSIFICATION_GATE > { §PROTO_SCHEMA_MISMATCH } => §HEART_BENEVOLENT_FEEDBACK",
+      "description": "Falsification gate detects schema mismatches and triggers benevolent systemic feedback. 誤り検出ゲートがスキーマ不整合を検知し、慈愛的なシステムフィードバックを駆動する。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-20T11:00:59.220091",
+      "v5_audited": true,
+      "created_at": "2026-11-20T06:27:28.190054",
+      "archived_at": "2026-11-22T18:40:32.249839"
     }
   },
-  "next_macro_seq": 1766
+  "next_macro_seq": 1767
 }
