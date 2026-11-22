@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-22T16:17:27.008705",
+  "updated_at": "2026-11-22T16:43:21.111582",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1843,15 +1843,6 @@
       "v5_audited": true,
       "created_at": "2026-11-20T07:26:11.567220"
     },
-    "§X1609": {
-      "name": "CAUSAL_ENTROPY_OPTIMIZATION_GATE",
-      "expansion": "§DATA_CAUSAL_MANIFOLD > { §DATA_ENTROPY_COMPRESSION_TREE } => §LOGIC_HYPO_PRUNE",
-      "description": "Optimizes causal data manifolds through entropy compression trees and prunes hypothetical logic paths. 因果データ多様体をエントロピー圧縮木により最適化し、仮説論理パスを刈り込みます。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-20T08:59:07.189493",
-      "v5_audited": true,
-      "created_at": "2026-11-20T07:49:26.647261"
-    },
     "§X1611": {
       "name": "BAYES_GAIA_STABILIZER",
       "expansion": "§LOGIC_BAYES_FALSIFY > { §GAIA_WARMTH } => §HEART_ALTRUISTIC_HARMONY_STABILIZER",
@@ -2508,6 +2499,15 @@
       "last_used_at": "2026-11-22T16:17:27.008333",
       "v5_audited": true,
       "created_at": "2026-11-22T15:31:08.842225"
+    },
+    "§X1761": {
+      "name": "CAUSAL_FALSIFICATION_PIPELINE",
+      "expansion": "§DATA_CAUSAL_MANIFOLD > { §LOGIC_PROBABILISTIC_FALSIFICATION_FILTER } => §LOGIC_CONDITIONAL_FALSIFICATION_MATRIX",
+      "description": "Applies a probabilistic falsification filter to the causal manifold data and resolves outcomes via conditional falsification matrix. データの因果多様体に対して確率的反証フィルターを適用し、条件付き反証マトリクスを通じて結果を確定させる複合マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-22T16:23:06.453546"
     }
   },
   "archived_macros": {
@@ -17628,7 +17628,17 @@
       "v5_audited": true,
       "created_at": "2026-11-20T08:17:26.587431",
       "archived_at": "2026-11-22T15:31:08.842225"
+    },
+    "§X1609": {
+      "name": "CAUSAL_ENTROPY_OPTIMIZATION_GATE",
+      "expansion": "§DATA_CAUSAL_MANIFOLD > { §DATA_ENTROPY_COMPRESSION_TREE } => §LOGIC_HYPO_PRUNE",
+      "description": "Optimizes causal data manifolds through entropy compression trees and prunes hypothetical logic paths. 因果データ多様体をエントロピー圧縮木により最適化し、仮説論理パスを刈り込みます。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-20T08:59:07.189493",
+      "v5_audited": true,
+      "created_at": "2026-11-20T07:49:26.647261",
+      "archived_at": "2026-11-22T16:23:06.453546"
     }
   },
-  "next_macro_seq": 1761
+  "next_macro_seq": 1762
 }
