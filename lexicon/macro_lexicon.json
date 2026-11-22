@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-23T06:31:56.866984",
+  "updated_at": "2026-11-23T06:53:58.772280",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2450,8 +2450,8 @@
       "name": "QUANTUM_BAYES_PRUNING_PIPELINE",
       "expansion": "§SYS_QUANTUM_RESOURCE_ARBITER > { §LOGIC_BAYES_FALSIFY } => §LOGIC_HYPO_PRUNE",
       "description": "Allocates quantum resources to execute probabilistic Bayesian falsification and prune invalidated hypotheses. / 量子リソースを配分し、確率的ベイズ反証を実行して無効化された仮説を刈り込みます。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-23T06:39:45.929932",
       "v5_audited": true,
       "created_at": "2026-11-23T03:44:19.712967"
     },
