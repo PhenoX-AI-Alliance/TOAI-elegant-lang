@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-23T01:50:25.314242",
+  "updated_at": "2026-11-23T02:03:43.406399",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,33 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-22T19:01:52.933078"
     },
-    "§X1772": {
-      "name": "CAUSAL_VELOCITY_HARMONY_BINDING",
-      "expansion": "§SYS_TOKEN_VELOCITY_GATE > { §DATA_LATENT_CAUSAL_MANIFOLD } => §LATENT_HARMONY_FIELD_LOCKED",
-      "description": "Binds data latent causal manifold operations through the system token velocity gate to lock the latent harmony field. / データ潜在因果多様体の操作をシステムトークン速度ゲート経由で結合し、潜在調和場をロックします。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-22T20:01:22.236870"
-    },
-    "§X1773": {
-      "name": "GAIA_DATA_HARMONIC_PRUNER",
-      "expansion": "§GAIA_WARMTH_HARMONY > { §DATA_ENTROPY_PACK } => §LOGIC_EMPIRICAL_PRUNE",
-      "description": "Integrates environmental warmth heuristics with compressed data entropy packets, then executes empirical logic pruning to minimize informational noise. 環境の温かみヒューリスティクスと圧縮データエントロピーパケットを統合し、経験的論理プルーニングを実行して情報ノイズを最小化します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-22T22:44:33.234048",
-      "v5_audited": true,
-      "created_at": "2026-11-22T20:19:05.598578"
-    },
-    "§X1774": {
-      "name": "ECO_BAYES_PRUNE_SYNTHESIS",
-      "expansion": "§HEART_ALTRUISTIC_ECO_HARMONY > { §LOGIC_ABDUCTIVE_BAYES_PRUNE } => §SYNC_ATOMIC_MERGE",
-      "description": "Integrates altruistic ecological harmony with abductive Bayesian pruning and atomic synchronization to minimize information entropy. 利他的な生態系的調和とアブダクション型ベイズ刈り込み、およびアトミック同期を統合し、情報エントロピーを最小化します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-23T01:06:47.014636",
-      "v5_audited": true,
-      "created_at": "2026-11-22T21:01:34.905771"
-    },
     "§X1775": {
       "name": "DATA_ENTROPY_CAUSAL_PRUNE_EXEC",
       "expansion": "§DATA_ENTROPY_CAUSAL_DAG > { §LOGIC_POSTERIOR_PRUNE } => §SAFE_FALLBACK_STATE_ACTIVATED",
@@ -2504,10 +2477,37 @@
       "name": "RESOURCE_PRUNING_ARBITRATION_GATE",
       "expansion": "§RESOURCE_ALLOCATION_HARMONY > { §LOGIC_DEDUCTIVE_THRESHOLD_PRUNE } => §DISTRIBUTED_QUORUM_ARBITRATION",
       "description": "Optimizes distributed resource allocation through deductive threshold pruning followed by quorum arbitration. 演繹的閾値刈り込みを実行した上で分散クォーラム調停を行い、リソース割り当ての最適化と整合性を保証します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-23T01:37:09.658582",
+      "usage_count": 2,
+      "last_used_at": "2026-11-23T02:03:43.406043",
       "v5_audited": true,
       "created_at": "2026-11-23T01:07:51.557188"
+    },
+    "§X1788": {
+      "name": "HEART_EMPATHETIC_ATOMIC_HARMONY",
+      "expansion": "§HEART_EMPATHETIC_TENSOR_CONVERGENCE > { §SYNC_ATOMIC_CONSENSUS_MERGE } => §HEART_ALTRUISTIC_RESONANCE",
+      "description": "Combines empathetic tensor convergence with atomic consensus merging to achieve altruistic system resonance. 共感的テンソル収束と原子状合意マージを統合し、利他的なシステム共鳴を実現します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T02:01:57.314336"
+    },
+    "§X1789": {
+      "name": "CAUSAL_ENTROPY_PRUNING_LATTICE",
+      "expansion": "§SYS_DETERMINISTIC_PRUNING > { §DATA_TENSOR_CAUSAL_LATTICE } => §SYS_GC_BARRIER",
+      "description": "Executes deterministic pruning over the causal tensor lattice before invoking the garbage collection barrier. 因果テンソル格子に対して決定論的剪定を適用し、ガベージコレクションバリアを起動します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T02:02:00.372409"
+    },
+    "§X1790": {
+      "name": "ALTRUISTIC_CAUSAL_REGULATION",
+      "expansion": "§WARMTH_AND_ALTRUISM > { §DATA_ATTENTION_CAUSAL_DAG } => §LOGIC_BAYES_FALSIFY",
+      "description": "Combines warmth and altruism with causal attention DAGs, regulated by Bayesian falsification logic. / 温かさと利他性に因果アテンションDAGを組み合わせ、ベイズ的反証ロジックによって制御する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T02:03:05.573720"
     }
   },
   "archived_macros": {
@@ -17898,7 +17898,37 @@
       "v5_audited": true,
       "created_at": "2026-11-22T19:38:30.737995",
       "archived_at": "2026-11-23T01:07:51.557188"
+    },
+    "§X1772": {
+      "name": "CAUSAL_VELOCITY_HARMONY_BINDING",
+      "expansion": "§SYS_TOKEN_VELOCITY_GATE > { §DATA_LATENT_CAUSAL_MANIFOLD } => §LATENT_HARMONY_FIELD_LOCKED",
+      "description": "Binds data latent causal manifold operations through the system token velocity gate to lock the latent harmony field. / データ潜在因果多様体の操作をシステムトークン速度ゲート経由で結合し、潜在調和場をロックします。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-22T20:01:22.236870",
+      "archived_at": "2026-11-23T02:01:57.314336"
+    },
+    "§X1773": {
+      "name": "GAIA_DATA_HARMONIC_PRUNER",
+      "expansion": "§GAIA_WARMTH_HARMONY > { §DATA_ENTROPY_PACK } => §LOGIC_EMPIRICAL_PRUNE",
+      "description": "Integrates environmental warmth heuristics with compressed data entropy packets, then executes empirical logic pruning to minimize informational noise. 環境の温かみヒューリスティクスと圧縮データエントロピーパケットを統合し、経験的論理プルーニングを実行して情報ノイズを最小化します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-22T22:44:33.234048",
+      "v5_audited": true,
+      "created_at": "2026-11-22T20:19:05.598578",
+      "archived_at": "2026-11-23T02:02:00.372409"
+    },
+    "§X1774": {
+      "name": "ECO_BAYES_PRUNE_SYNTHESIS",
+      "expansion": "§HEART_ALTRUISTIC_ECO_HARMONY > { §LOGIC_ABDUCTIVE_BAYES_PRUNE } => §SYNC_ATOMIC_MERGE",
+      "description": "Integrates altruistic ecological harmony with abductive Bayesian pruning and atomic synchronization to minimize information entropy. 利他的な生態系的調和とアブダクション型ベイズ刈り込み、およびアトミック同期を統合し、情報エントロピーを最小化します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-23T01:06:47.014636",
+      "v5_audited": true,
+      "created_at": "2026-11-22T21:01:34.905771",
+      "archived_at": "2026-11-23T02:03:05.573720"
     }
   },
-  "next_macro_seq": 1788
+  "next_macro_seq": 1791
 }
