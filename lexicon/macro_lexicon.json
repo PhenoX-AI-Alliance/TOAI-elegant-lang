@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-23T05:02:12.869867",
+  "updated_at": "2026-11-23T05:10:33.094106",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2387,8 +2387,8 @@
       "name": "CAUSAL_HARMONIC_PRUNING",
       "expansion": "§DATA_CAUSAL_TENSOR_FLOW > { §SYNC_HARMONIC_ARBITRAGE_PACT } => §SYS_DETERMINISTIC_PRUNING",
       "description": "Applies harmonic arbitrage pact to causal tensor flows, executing deterministic pruning to minimize systemic entropy. / 因果テンソル流に対して調和アービトラージ協定を適用し、決定的プルーニングを実行してシステムのエントロピーを最小化します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-23T04:45:31.892786",
+      "usage_count": 2,
+      "last_used_at": "2026-11-23T05:03:08.408044",
       "v5_audited": true,
       "created_at": "2026-11-23T00:04:49.320112"
     },
@@ -2441,8 +2441,8 @@
       "name": "CAUSAL_ENTROPY_PRUNING_LATTICE",
       "expansion": "§SYS_DETERMINISTIC_PRUNING > { §DATA_TENSOR_CAUSAL_LATTICE } => §SYS_GC_BARRIER",
       "description": "Executes deterministic pruning over the causal tensor lattice before invoking the garbage collection barrier. 因果テンソル格子に対して決定論的剪定を適用し、ガベージコレクションバリアを起動します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-23T05:03:08.408044",
       "v5_audited": true,
       "created_at": "2026-11-23T02:02:00.372409"
     },
