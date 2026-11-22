@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-22T18:01:48.542526",
+  "updated_at": "2026-11-22T18:28:41.874377",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -820,8 +820,8 @@
       "name": "PROTO_SECURE_DEDUCTIVE_COMMIT",
       "expansion": "§PROTO_TX_BEGIN > { §LOGIC_DEDUCTIVE_CONVERGENCE_GATE } => §PROTO_PARTIAL_COMMIT",
       "description": "Initiates a transaction, executes a deductive convergence gate, and performs a partial commit for secure state transitions. / トランザクションを開始し、演繹的収束ゲートを実行した上で部分的なコミットを行い、安全な状態遷移を実現します。",
-      "usage_count": 8,
-      "last_used_at": "2026-11-18T01:44:12.367434",
+      "usage_count": 9,
+      "last_used_at": "2026-11-22T18:18:22.753920",
       "v5_audited": true,
       "created_at": "2026-10-26T09:46:45.300463"
     },
@@ -2365,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-22T08:01:14.764983"
     },
-    "§X1749": {
-      "name": "COMPOUND_CAUSAL_AUDIT_THROTTLE",
-      "expansion": "§DATA_HIERARCHICAL_CAUSAL_NODE > { §PROTO_AUDIT_TRAIL } => §SYS_ADAPTIVE_SLOT_THROTTLE",
-      "description": "Integrates hierarchical causal data nodes with protocol audit trails to drive adaptive system slot throttling. 階層的因果データノードとプロトコル監査証跡を統合し、適応型システムスロット制御を駆動する複合マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-22T10:01:57.511532",
-      "v5_audited": true,
-      "created_at": "2026-11-22T09:29:17.198546"
-    },
     "§X1750": {
       "name": "GAIA_PROBABILISTIC_OPTIMIZATION",
       "expansion": "§LOGIC_PROBABILISTIC_FALSIFICATION > { §DATA_ENTROPY_PRUNED_TREE } => §GAIA_ALTRUISM_HARMONY",
@@ -2441,8 +2432,8 @@
       "name": "GAIA_HEART_SYNERGY_CASCADE",
       "expansion": "§GAIA_WARMTH_EQUILIBRIUM > { §HEART_EMPATHY_TENSOR } => §GAIA_HARMONY_CASCADE",
       "description": "Integrates Gaia warmth equilibrium with heart empathy tensor to trigger a harmonious cascade of global safety and resonance. ガイアの温熱平衡と心のエパシーテンソルを統合し、地球規模の調和と安全性のカスケードを引き起こします。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-22T18:27:23.918761",
       "v5_audited": true,
       "created_at": "2026-11-22T13:55:55.768610"
     },
@@ -2477,8 +2468,8 @@
       "name": "CAUSAL_FALSIFICATION_PIPELINE",
       "expansion": "§DATA_CAUSAL_MANIFOLD > { §LOGIC_PROBABILISTIC_FALSIFICATION_FILTER } => §LOGIC_CONDITIONAL_FALSIFICATION_MATRIX",
       "description": "Applies a probabilistic falsification filter to the causal manifold data and resolves outcomes via conditional falsification matrix. データの因果多様体に対して確率的反証フィルターを適用し、条件付き反証マトリクスを通じて結果を確定させる複合マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-22T17:45:58.149545",
+      "usage_count": 2,
+      "last_used_at": "2026-11-22T18:18:22.753920",
       "v5_audited": true,
       "created_at": "2026-11-22T16:23:06.453546"
     },
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-22T18:01:48.541538"
+    },
+    "§X1765": {
+      "name": "SYNERGY_CAUSAL_HARMONY_FLOW",
+      "expansion": "§SYNERGY_PRISM > { §LOGIC_CAUSAL_PRUNE } => §HEART_ALTRUISTIC_HARMONY_STABILIZER",
+      "description": "Combines multi-dimensional synergy pruning with altruistic heart stabilization for optimized logical flow. 多次元的シナジーの枝刈りと利他的ハート安定化を統合し、最適化された論理フローを実現します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-22T18:24:48.745523"
     }
   },
   "archived_macros": {
@@ -17668,7 +17668,17 @@
       "v5_audited": true,
       "created_at": "2026-11-22T08:39:47.124889",
       "archived_at": "2026-11-22T18:01:48.541538"
+    },
+    "§X1749": {
+      "name": "COMPOUND_CAUSAL_AUDIT_THROTTLE",
+      "expansion": "§DATA_HIERARCHICAL_CAUSAL_NODE > { §PROTO_AUDIT_TRAIL } => §SYS_ADAPTIVE_SLOT_THROTTLE",
+      "description": "Integrates hierarchical causal data nodes with protocol audit trails to drive adaptive system slot throttling. 階層的因果データノードとプロトコル監査証跡を統合し、適応型システムスロット制御を駆動する複合マクロ。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-22T10:01:57.511532",
+      "v5_audited": true,
+      "created_at": "2026-11-22T09:29:17.198546",
+      "archived_at": "2026-11-22T18:24:48.745523"
     }
   },
-  "next_macro_seq": 1765
+  "next_macro_seq": 1766
 }
