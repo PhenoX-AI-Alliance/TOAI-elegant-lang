@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-23T17:02:16.447666",
+  "updated_at": "2026-11-23T17:34:27.698288",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2423,8 +2423,8 @@
       "name": "RESILIENT_ALTRUISTIC_RESONANCE",
       "expansion": "§HEART_ALTRUISTIC_RESONANCE_ALIGNMENT > { §SAFE_FALLBACK_CASCADE } => §SYS_QUANTUM_SLOT_ARBITRATION",
       "description": "Aligns altruistic resonance while ensuring safe fallback routing under quantum slot arbitration. / 量子スロット調停下において安全なフォールバック経路を確保しつつ、利他的共鳴を調停します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-23T17:34:23.900356",
       "v5_audited": true,
       "created_at": "2026-11-23T14:00:25.333174"
     },
@@ -2468,8 +2468,8 @@
       "name": "SYS_QUANTUM_CONTEXT_PRUNING_CAUSAL_MAP",
       "expansion": "§SYS_QUANTUM_CONTEXT_PRUNING > { §DATA_CAUSAL_GRAPH_MAP } => §DATA_ENTROPY_CAUSAL_DAG",
       "description": "Performs quantum context pruning on the causal graph map to minimize information entropy and derive the causal DAG / 情報エントロピーを最小化し因果DAGを導出するため、因果グラフマップに対して量子コンテキストプルーニングを実行します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-23T17:34:23.900356",
       "v5_audited": true,
       "created_at": "2026-11-23T15:34:42.211538"
     },
