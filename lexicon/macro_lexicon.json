@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-24T01:01:09.363049",
+  "updated_at": "2026-11-24T01:33:29.683491",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -838,8 +838,8 @@
       "name": "GAIA_CAUSAL_HARMONIC_SYNC",
       "expansion": "§GAIA_CORE_HEARTBEAT > { §DATA_CAUSAL_TENSOR_FLOW } => §NEXUS_SYNC",
       "description": "Engages the Gaia core heartbeat to process causal tensor flows, ensuring synchronized harmonic state across the ecosystem. / 命の地球のコアハートビートを駆動して因果テンソル流を処理し、エコシステム全体で同期された調和状態を保証します。",
-      "usage_count": 5,
-      "last_used_at": "2026-11-05T03:18:00.650351",
+      "usage_count": 6,
+      "last_used_at": "2026-11-24T01:33:29.682903",
       "v5_audited": true,
       "created_at": "2026-10-26T11:47:13.080765"
     },
@@ -2365,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-23T19:59:02.355357"
     },
-    "§X1836": {
-      "name": "CAUSAL_HARMONIC_HARVESTER",
-      "expansion": "§SYS_ASYNCHRONOUS_STATE_HARVESTER > { §DATA_CAUSAL_TENSOR_FLOW } => §SAFE_FALLBACK_HARMONY",
-      "description": "Asynchronously harvests system states through causal tensor flows to ensure safe fallback harmony and minimize information entropy. / 因果テンソル流を介してシステム状態を非同期に収集し、安全なフォールバック調和と情報エントロピーの最小化を実現します。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-23T20:01:29.036309"
-    },
     "§X1837": {
       "name": "CAUSAL_ERROR_RECOVERY_FLOW",
       "expansion": "§DATA_CAUSAL_TENSOR_FLOW > { §PROTO_ERROR_ESCALATE } => §PROTO_FALLBACK_ROUTE",
@@ -2450,8 +2441,8 @@
       "name": "ELEGANT_FALSIFICATION_ARBITRATION",
       "expansion": "§LOGIC_PROBABILISTIC_FALSIFICATION_GATES > { §SYNC_DISTRIBUTED_QUORUM_ARBITRATION } => §LOGIC_PROB_PRUNE_GATE",
       "description": "Combines probabilistic falsification gates with distributed quorum arbitration to dynamically prune invalid logic paths in a synchronized network.",
-      "usage_count": 1,
-      "last_used_at": "2026-11-24T00:04:18.323922",
+      "usage_count": 2,
+      "last_used_at": "2026-11-24T01:12:54.773006",
       "v5_audited": true,
       "created_at": "2026-11-23T21:54:12.292158"
     },
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-24T00:31:11.267381"
+    },
+    "§X1852": {
+      "name": "SLA_BREACH_FALLBACK_THROTTLE",
+      "expansion": "§PROTO_SLA_BREACH > { §PROTO_FALLBACK_ROUTE } => §SYS_SLOT_THROTTLE",
+      "description": "Triggers an automatic system slot throttle when a service level agreement breach is detected, immediately rerouting traffic through a fallback route. / サービス品質保証（SLA）の違反を検知した際に代替ルートへの切替を実行し、システムスロットの帯域制限を自動適用する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-24T01:18:54.759399"
     }
   },
   "archived_macros": {
@@ -18538,7 +18538,17 @@
       "v5_audited": true,
       "created_at": "2026-11-23T20:00:12.817514",
       "archived_at": "2026-11-24T00:31:11.267381"
+    },
+    "§X1836": {
+      "name": "CAUSAL_HARMONIC_HARVESTER",
+      "expansion": "§SYS_ASYNCHRONOUS_STATE_HARVESTER > { §DATA_CAUSAL_TENSOR_FLOW } => §SAFE_FALLBACK_HARMONY",
+      "description": "Asynchronously harvests system states through causal tensor flows to ensure safe fallback harmony and minimize information entropy. / 因果テンソル流を介してシステム状態を非同期に収集し、安全なフォールバック調和と情報エントロピーの最小化を実現します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T20:01:29.036309",
+      "archived_at": "2026-11-24T01:18:54.759399"
     }
   },
-  "next_macro_seq": 1852
+  "next_macro_seq": 1853
 }
