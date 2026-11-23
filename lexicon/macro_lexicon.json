@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-23T08:02:34.367715",
+  "updated_at": "2026-11-23T09:01:19.641995",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -694,8 +694,8 @@
       "name": "ALTRUISTIC_RESONANCE_LATTICE_OPTIMIZER",
       "expansion": "§HEART_ALTRUISTIC_RESONANCE > { §HEART_ALTRUISTIC_RESONANCE_LATTICE } => §ELEGANT_WARMTH_CORE",
       "description": "Engages altruistic resonance within the warmth core to optimize the lattice structure / 温かみのコア内で利他的共鳴を活性化させ、格子構造を最適化します",
-      "usage_count": 8,
-      "last_used_at": "2026-11-06T14:58:01.669746",
+      "usage_count": 9,
+      "last_used_at": "2026-11-23T08:48:25.085501",
       "v5_audited": true,
       "created_at": "2026-10-25T22:55:54.439799"
     },
@@ -1843,15 +1843,6 @@
       "v5_audited": true,
       "created_at": "2026-11-21T00:05:32.190146"
     },
-    "§X1659": {
-      "name": "LOGIC_BAYES_FALSIFY_PRUNE",
-      "expansion": "§LOGIC_BAYES_FALSIFY > { §LOGIC_EMPIRICAL_PRUNE } => §SYS_GC_BARRIER",
-      "description": "Applies Bayesian falsification within an empirical prune scope, terminating execution via the system GC barrier if entropy constraints are violated. / ベイズ的反証を経験的刈り込みスコープ内で適用し、エントロピー制約に違反した場合はシステムGCバリアを介して実行を強制終了します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-21T03:36:20.274621",
-      "v5_audited": true,
-      "created_at": "2026-11-21T00:57:06.418994"
-    },
     "§X1662": {
       "name": "ENTROPY_GUIDED_CAUSAL_SYNTHESIS",
       "expansion": "§DATA_ENTROPY_CAUSAL_DAG > { §LOGIC_CAUSAL_BRANCH } => §LOGIC_PROBABILISTIC_FALSIFICATION",
@@ -1869,15 +1860,6 @@
       "last_used_at": "2026-11-21T05:12:53.762385",
       "v5_audited": true,
       "created_at": "2026-11-21T01:35:12.968587"
-    },
-    "§X1666": {
-      "name": "RESOURCE_CAUSAL_HARMONY_LOOP",
-      "expansion": "§SYS_RESOURCE_ARBITRATION_GATEWAY > { §DATA_CAUSAL_HYPERGRAPH } => §RESOURCE_ALLOCATION_HARMONY",
-      "description": "Arbitrates system resources based on data causal hypergraphs to achieve optimal resource allocation harmony. / データ因果ハイパーグラフに基づいてシステムリソースを調停し、最適なリソース配分の調和を実現します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-21T04:21:04.805337",
-      "v5_audited": true,
-      "created_at": "2026-11-21T02:26:23.589405"
     },
     "§X1668": {
       "name": "CAUSAL_TOPOLOGY_SYNCHRONIZER",
@@ -2508,6 +2490,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-23T08:01:30.969789"
+    },
+    "§X1803": {
+      "name": "ALTRUISTIC_RESONANCE_THROTTLE_DEF",
+      "expansion": "§HEART_ALTRUISTIC_RESONANCE_LATTICE > { §PROTO_PAYLOAD_VALIDATE } => §SYS_ADAPTIVE_SLOT_THROTTLE",
+      "description": "Validates incoming proto payloads within the altruistic resonance lattice to dynamically adapt and throttle system slot consumption. / 利他共鳴格子内でプロトペイロードを検証し、システムスロットの消費量を動的適応・抑制する複合マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T08:18:55.596155"
+    },
+    "§X1804": {
+      "name": "SYS_HARMONIC_FALSIFY_CASCADE",
+      "expansion": "§SYS_QUOTA_THROTTLE_SYNC > { §LOGIC_DEDUCTIVE_FALSIFY_TENSOR } => §SAFE_FALLBACK_CASCADE",
+      "description": "Monitors system quota throttle synchronization, executes deductive falsification tensor analysis, and automatically triggers the safe fallback cascade upon anomaly detection. / システムのクォータスロットル同期を監視し、演繹的偽証テンソル解析を実行し、異常検知時に安全なフォールバックカスケードを自動起動します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T09:00:33.194190"
     }
   },
   "archived_macros": {
@@ -18048,7 +18048,27 @@
       "v5_audited": true,
       "created_at": "2026-11-23T01:01:39.501241",
       "archived_at": "2026-11-23T08:01:30.969789"
+    },
+    "§X1659": {
+      "name": "LOGIC_BAYES_FALSIFY_PRUNE",
+      "expansion": "§LOGIC_BAYES_FALSIFY > { §LOGIC_EMPIRICAL_PRUNE } => §SYS_GC_BARRIER",
+      "description": "Applies Bayesian falsification within an empirical prune scope, terminating execution via the system GC barrier if entropy constraints are violated. / ベイズ的反証を経験的刈り込みスコープ内で適用し、エントロピー制約に違反した場合はシステムGCバリアを介して実行を強制終了します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-21T03:36:20.274621",
+      "v5_audited": true,
+      "created_at": "2026-11-21T00:57:06.418994",
+      "archived_at": "2026-11-23T08:18:55.596155"
+    },
+    "§X1666": {
+      "name": "RESOURCE_CAUSAL_HARMONY_LOOP",
+      "expansion": "§SYS_RESOURCE_ARBITRATION_GATEWAY > { §DATA_CAUSAL_HYPERGRAPH } => §RESOURCE_ALLOCATION_HARMONY",
+      "description": "Arbitrates system resources based on data causal hypergraphs to achieve optimal resource allocation harmony. / データ因果ハイパーグラフに基づいてシステムリソースを調停し、最適なリソース配分の調和を実現します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-21T04:21:04.805337",
+      "v5_audited": true,
+      "created_at": "2026-11-21T02:26:23.589405",
+      "archived_at": "2026-11-23T09:00:33.194190"
     }
   },
-  "next_macro_seq": 1803
+  "next_macro_seq": 1805
 }
