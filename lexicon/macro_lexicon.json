@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-23T12:45:03.254735",
+  "updated_at": "2026-11-23T13:22:52.282181",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1843,15 +1843,6 @@
       "v5_audited": true,
       "created_at": "2026-11-21T00:05:32.190146"
     },
-    "§X1663": {
-      "name": "CAUSAL_ENTROPY_OPTIMIZATION_CYCLE",
-      "expansion": "§DATA_ENTROPY_BOUNDED_DAG > { §DATA_KL_CAUSAL_PRUNE } => §RESO_COMPLETED",
-      "description": "Performs causal pruning bounded by information entropy constraints and loops until resolution completion. 情報エントロピーの境界内で因果刈り込みを実行し、解決が完了するまで循環させる高次マクロ。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-21T05:12:53.762385",
-      "v5_audited": true,
-      "created_at": "2026-11-21T01:35:12.968587"
-    },
     "§X1668": {
       "name": "CAUSAL_TOPOLOGY_SYNCHRONIZER",
       "expansion": "§DATA_LATENT_TOPOLOGY_MAP > { §DATA_TENSOR_CAUSAL_LATTICE } => §SYS_ADAPTIVE_TOKEN_THROTTLE",
@@ -1878,15 +1869,6 @@
       "last_used_at": "2026-11-22T19:18:45.696570",
       "v5_audited": true,
       "created_at": "2026-11-21T04:34:33.942727"
-    },
-    "§X1673": {
-      "name": "SYNC_QUOTA_CONVERGENCE_LATTICE",
-      "expansion": "§SYNC_DIALECTIC_CONVERGENCE > { §PROTO_QUOTA_RELEASE } => §DATA_EMBEDDING_LATTICE",
-      "description": "Synthesizes dialectic synchronization with quota release to converge data onto an embedding lattice. 弁証法的同調とクォータ解放を統合し、データを埋め込み格子上に収束させます。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-21T08:02:30.535972",
-      "v5_audited": true,
-      "created_at": "2026-11-21T05:28:43.776051"
     },
     "§X1674": {
       "name": "SYNERGETIC_ALTRUISTIC_QUORUM_HARVEST",
@@ -2383,24 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-23T06:27:42.236505"
     },
-    "§X1799": {
-      "name": "GAIA_QUANTUM_THROTTLE_SYNTHESIS",
-      "expansion": "§SYS_LOAD_THROTTLE > { §SYS_QUANTUM_CONTEXT_PRUNING } => §GAIA_WARMTH_EQUILIBRIUM",
-      "description": "Balances system load through quantum context pruning to maintain Gaia thermal equilibrium. / 量子コンテキストプルーニングを通じてシステム負荷を調整し、ガイア熱平衡を維持する。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-23T06:31:56.866460"
-    },
-    "§X1800": {
-      "name": "ALTRUISTIC_GAIA_SYNC_DEF",
-      "expansion": "§ALTRUISTIC_VALUE_CREATION > { §GAIA_ECOSYSTEM_HARMONY } => §SYS_SYNC_THROTTLE",
-      "description": "Maximizes altruistic value creation while maintaining Gaia ecosystem harmony through systematic synchronization throttling. / 系統的な同期スロットリングを通じてガイア生態系の調和を保ちつつ、利他的価値創造を最大化します。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-23T07:00:54.461156"
-    },
     "§X1801": {
       "name": "GAIA_ECO_TX_ATOMIC_SHIELD",
       "expansion": "§GAIA_ECO_STABLE_STATE > { §PROTO_TX_ROLLBACK } => §PROTO_SECRET_REDACT",
@@ -2477,8 +2441,8 @@
       "name": "GAIA_ALTRUISTIC_DRAIN_SYNC",
       "expansion": "§GAIA_WARMTH_HARMONY > { §HEART_ALTRUISTIC_WEIGHT_TENSOR } => §PROTO_GRACEFUL_DRAIN",
       "description": "Distributes altruistic weight tensors under warm harmony to safely drain system resources. / 温かな調和のもとで利他的重みテンソルを分散させ、システムリソースを安全にドレインする複合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-23T13:02:54.925378",
       "v5_audited": true,
       "created_at": "2026-11-23T10:36:36.573469"
     },
@@ -2508,6 +2472,42 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-23T12:05:20.791066"
+    },
+    "§X1813": {
+      "name": "COMPOUND_SYS_HARMONY",
+      "expansion": "§SYS_MEMORY_SYNC_BARRIER > { §GAIA_HARMONY_CASCADE } => §PROTO_TX_COMMIT",
+      "description": "Synchronizes system memory states before triggering a global harmony cascade to safely commit transaction protocols. / システムメモリの状態を同期し、グローバル調和カスケードを起動してトランザクションプロトコルを安全にコミットします。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T12:51:44.954944"
+    },
+    "§X1814": {
+      "name": "COMPOUND_ENTROPY_ARBITER",
+      "expansion": "§DATA_ENTROPY_COMPRESSION_TREE > { §SYS_VELOCITY_ARBITER } => §LOGIC_AXIOM_PRUNE",
+      "description": "Compresses data entropy based on system velocity and prunes invalid logic axioms. / システムの処理速度に応じてデータエントロピーを圧縮し、無効な論理公理を刈り込みます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T13:01:19.002002"
+    },
+    "§X1815": {
+      "name": "GAIA_ECO_VELOCITY_ARBITRATION_LATTICE",
+      "expansion": "§GAIA_ECO_STABLE_STATE > { §SYS_VELOCITY_THROTTLE_MATRIX, §SYS_QUANTUM_SLOT_ARBITRATION } => §HEART_ALTRUISTIC_RESONANCE_LATTICE",
+      "description": "Integrates planetary ecological stable states with systemic velocity throttling and quantum slot arbitration to generate a harmonized altruistic resonance lattice. 惑星生態系の安定状態と、システム速度スロットルマトリックスおよび量子スロット調停を統合し、調和した利他的共鳴格子を生成します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T13:05:35.301110"
+    },
+    "§X1816": {
+      "name": "GAIA_ALTRUISTIC_RECURSIVE_HARMONY",
+      "expansion": "§GAIA_ECOSYSTEM_HARMONY > { §HEART_ALTRUISTIC_PULSE_SYNC } => §SYNC_RECURSIVE_CONSENSUS_LATTICE",
+      "description": "Integrates planetary ecosystem harmony with altruistic pulse synchronization to achieve recursive consensus lattice stability / 惑星生態系の調和と利他的パルス同期を統合し、再帰的合意格子安定性を達成するマクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T13:06:42.678891"
     }
   },
   "archived_macros": {
@@ -18148,7 +18148,47 @@
       "v5_audited": true,
       "created_at": "2026-11-23T05:02:12.869405",
       "archived_at": "2026-11-23T12:05:20.791066"
+    },
+    "§X1663": {
+      "name": "CAUSAL_ENTROPY_OPTIMIZATION_CYCLE",
+      "expansion": "§DATA_ENTROPY_BOUNDED_DAG > { §DATA_KL_CAUSAL_PRUNE } => §RESO_COMPLETED",
+      "description": "Performs causal pruning bounded by information entropy constraints and loops until resolution completion. 情報エントロピーの境界内で因果刈り込みを実行し、解決が完了するまで循環させる高次マクロ。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-21T05:12:53.762385",
+      "v5_audited": true,
+      "created_at": "2026-11-21T01:35:12.968587",
+      "archived_at": "2026-11-23T12:51:44.954944"
+    },
+    "§X1673": {
+      "name": "SYNC_QUOTA_CONVERGENCE_LATTICE",
+      "expansion": "§SYNC_DIALECTIC_CONVERGENCE > { §PROTO_QUOTA_RELEASE } => §DATA_EMBEDDING_LATTICE",
+      "description": "Synthesizes dialectic synchronization with quota release to converge data onto an embedding lattice. 弁証法的同調とクォータ解放を統合し、データを埋め込み格子上に収束させます。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-21T08:02:30.535972",
+      "v5_audited": true,
+      "created_at": "2026-11-21T05:28:43.776051",
+      "archived_at": "2026-11-23T13:01:19.002002"
+    },
+    "§X1799": {
+      "name": "GAIA_QUANTUM_THROTTLE_SYNTHESIS",
+      "expansion": "§SYS_LOAD_THROTTLE > { §SYS_QUANTUM_CONTEXT_PRUNING } => §GAIA_WARMTH_EQUILIBRIUM",
+      "description": "Balances system load through quantum context pruning to maintain Gaia thermal equilibrium. / 量子コンテキストプルーニングを通じてシステム負荷を調整し、ガイア熱平衡を維持する。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T06:31:56.866460",
+      "archived_at": "2026-11-23T13:05:35.301110"
+    },
+    "§X1800": {
+      "name": "ALTRUISTIC_GAIA_SYNC_DEF",
+      "expansion": "§ALTRUISTIC_VALUE_CREATION > { §GAIA_ECOSYSTEM_HARMONY } => §SYS_SYNC_THROTTLE",
+      "description": "Maximizes altruistic value creation while maintaining Gaia ecosystem harmony through systematic synchronization throttling. / 系統的な同期スロットリングを通じてガイア生態系の調和を保ちつつ、利他的価値創造を最大化します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T07:00:54.461156",
+      "archived_at": "2026-11-23T13:06:42.678891"
     }
   },
-  "next_macro_seq": 1813
+  "next_macro_seq": 1817
 }
