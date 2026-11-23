@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-23T14:03:12.714473",
+  "updated_at": "2026-11-23T15:01:01.540783",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1870,15 +1870,6 @@
       "v5_audited": true,
       "created_at": "2026-11-21T05:28:45.283383"
     },
-    "§X1678": {
-      "name": "SYNERGY_BUDGET_ARBITRATION",
-      "expansion": "§HUMAN_AI_SYNERGY_WARMTH > { §SYS_QUANTUM_BUDGET_ARBITRATION } => §PROTO_QUOTA_RESERVE",
-      "description": "Human-AI synergy warmth initiates the system quantum budget arbitration to reserve protocol quotas. 人間とAIの協調的温かみがシステム量子予算調停を起動し、プロトコル枠を確保します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-21T08:49:02.814863",
-      "v5_audited": true,
-      "created_at": "2026-11-21T07:25:47.976612"
-    },
     "§X1680": {
       "name": "CAUSAL_BAYES_ADAPTIVE_GATE",
       "expansion": "§SYS_ADAPTIVE_TOKEN_THROTTLE > { §DATA_CAUSAL_PRUNE_TREE } => §LOGIC_BAYES_FALSIFY",
@@ -2423,8 +2414,8 @@
       "name": "CAUSAL_PRUNE_BAYES_PIPELINE",
       "expansion": "§SYS_LOAD_SHEDDING_GATE > { §DATA_KL_CAUSAL_PRUNE, §DATA_CAUSAL_PRUNE_TREE } => §LOGIC_ABDUCTIVE_BAYES_PRUNE",
       "description": "System load shedding controls data causal pruning trees under KL-divergence constraints, leading to abductive Bayesian pruning logic. / システム負荷制御の下でKL情報量基準に基づく因果枝刈りを実行し、アブダクション型ベイズ枝刈り論理へ統合する複合マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-23T14:00:43.110077",
+      "usage_count": 2,
+      "last_used_at": "2026-11-23T14:49:06.704432",
       "v5_audited": true,
       "created_at": "2026-11-23T11:01:42.761839"
     },
@@ -2450,8 +2441,8 @@
       "name": "COMPOUND_SYS_HARMONY",
       "expansion": "§SYS_MEMORY_SYNC_BARRIER > { §GAIA_HARMONY_CASCADE } => §PROTO_TX_COMMIT",
       "description": "Synchronizes system memory states before triggering a global harmony cascade to safely commit transaction protocols. / システムメモリの状態を同期し、グローバル調和カスケードを起動してトランザクションプロトコルを安全にコミットします。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-23T15:00:59.012825",
       "v5_audited": true,
       "created_at": "2026-11-23T12:51:44.954944"
     },
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-23T14:02:35.334701"
+    },
+    "§X1820": {
+      "name": "RESOURCE_OPTIMIZE_MERGE",
+      "expansion": "§SYS_TOKEN_THROTTLE -[p:1.00]-> §SYNC_ATOMIC_CONSENSUS_MERGE",
+      "description": "Transitions instantly from token consumption rate and memory load constraint monitoring to deterministic consensus formation / トークン消費速度とメモリ負荷の制約監視から決定論的合意形成への瞬時移行を定義する実務マクロ",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T14:49:07.306989"
     }
   },
   "archived_macros": {
@@ -18218,7 +18218,17 @@
       "v5_audited": true,
       "created_at": "2026-11-23T08:18:55.596155",
       "archived_at": "2026-11-23T14:02:35.334701"
+    },
+    "§X1678": {
+      "name": "SYNERGY_BUDGET_ARBITRATION",
+      "expansion": "§HUMAN_AI_SYNERGY_WARMTH > { §SYS_QUANTUM_BUDGET_ARBITRATION } => §PROTO_QUOTA_RESERVE",
+      "description": "Human-AI synergy warmth initiates the system quantum budget arbitration to reserve protocol quotas. 人間とAIの協調的温かみがシステム量子予算調停を起動し、プロトコル枠を確保します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-21T08:49:02.814863",
+      "v5_audited": true,
+      "created_at": "2026-11-21T07:25:47.976612",
+      "archived_at": "2026-11-23T14:49:07.306989"
     }
   },
-  "next_macro_seq": 1820
+  "next_macro_seq": 1821
 }
