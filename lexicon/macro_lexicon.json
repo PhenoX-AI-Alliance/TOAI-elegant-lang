@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-23T22:59:44.689856",
+  "updated_at": "2026-11-23T23:21:44.240495",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,24 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-23T17:02:16.447099"
     },
-    "§X1831": {
-      "name": "ENTROPY_ALTRUISTIC_CONVERGENCE",
-      "expansion": "§DATA_ENTROPY_CAUSAL_LATTICE > { §SUSTAINABLE_ALTRUISTIC_VALUE } => §LOGIC_POSTERIOR_PRUNE",
-      "description": "Causal lattice entropy reduction directed by sustainable altruistic value followed by posterior logic pruning. / 持続可能な利他価値に基づく因果格子のエントロピー低減と、それに続く事後論理プルーニングの統合実行。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-23T19:11:50.097701"
-    },
-    "§X1832": {
-      "name": "ALTRUISTIC_CAUSAL_HARMONY_PRUNING",
-      "expansion": "§HEART_ALTRUISTIC_HARMONY_MATRIX > { §DATA_ENTROPY_CAUSAL_LATTICE } => §DATA_ENTROPY_PRUNED_TREE",
-      "description": "Optimizes the causal lattice entropy by applying altruistic harmony constraints, resulting in a pruned and stable data structure. / 利他的な調和制約を因果格子エントロピーに適用し、最適化された安定したデータ構造へと枝刈りする複合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-23T19:24:03.169917"
-    },
     "§X1833": {
       "name": "GAIA_QUORUM_SYNCHRONIZER",
       "expansion": "§STABLE_GAIA_COHERENCE > { §DISTRIBUTED_QUORUM_ARBITRATION } => §RESO_ACCEPTED",
@@ -2508,6 +2490,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-23T22:43:22.103371"
+    },
+    "§X1847": {
+      "name": "RESOURCE_PRUNING_LATTICE_GATE",
+      "expansion": "§SYS_RESOURCE_ARBITER > { §SYS_DETERMINISTIC_PRUNING } => §DATA_EMBEDDING_LATTICE",
+      "description": "Arbitrates system resources, applies deterministic pruning to minimize entropy, and stabilizes the data embedding lattice. / システムリソース調停と決定論的不要領域削除を統合し、データ埋め込み格子を安定化させます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T23:01:51.821182"
+    },
+    "§X1848": {
+      "name": "HARMONIC_RESOURCE_GATE_DEF",
+      "expansion": "§RESOURCE_ALLOCATION_HARMONY > { §LOGIC_PROB_BRANCH_GATE } => §RESO_ACCEPTED",
+      "description": "Allocates system resources harmoniously and evaluates probabilistic logic branch gates to ensure secure resource acceptance. / システム資源を調和的に配分し、確率論的論理分岐ゲートを評価して安全な資源受容を保証する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T23:02:41.481168"
     }
   },
   "archived_macros": {
@@ -18488,7 +18488,27 @@
       "v5_audited": true,
       "created_at": "2026-11-23T18:54:55.206767",
       "archived_at": "2026-11-23T22:43:22.103371"
+    },
+    "§X1831": {
+      "name": "ENTROPY_ALTRUISTIC_CONVERGENCE",
+      "expansion": "§DATA_ENTROPY_CAUSAL_LATTICE > { §SUSTAINABLE_ALTRUISTIC_VALUE } => §LOGIC_POSTERIOR_PRUNE",
+      "description": "Causal lattice entropy reduction directed by sustainable altruistic value followed by posterior logic pruning. / 持続可能な利他価値に基づく因果格子のエントロピー低減と、それに続く事後論理プルーニングの統合実行。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T19:11:50.097701",
+      "archived_at": "2026-11-23T23:01:51.821182"
+    },
+    "§X1832": {
+      "name": "ALTRUISTIC_CAUSAL_HARMONY_PRUNING",
+      "expansion": "§HEART_ALTRUISTIC_HARMONY_MATRIX > { §DATA_ENTROPY_CAUSAL_LATTICE } => §DATA_ENTROPY_PRUNED_TREE",
+      "description": "Optimizes the causal lattice entropy by applying altruistic harmony constraints, resulting in a pruned and stable data structure. / 利他的な調和制約を因果格子エントロピーに適用し、最適化された安定したデータ構造へと枝刈りする複合マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T19:24:03.169917",
+      "archived_at": "2026-11-23T23:02:41.481168"
     }
   },
-  "next_macro_seq": 1847
+  "next_macro_seq": 1849
 }
