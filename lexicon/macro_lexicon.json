@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-23T17:34:27.698288",
+  "updated_at": "2026-11-23T18:16:50.743237",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -847,8 +847,8 @@
       "name": "GAIA_ABDUCTIVE_HARMONY",
       "expansion": "§GAIA_WARMTH > { §LOGIC_ABDUCTIVE_BAYES_PRUNE } => §MUTUAL_SUPPLEMENT",
       "description": "Combines warmth and abductive Bayesian logic to foster mutual supplementation and sustainable harmony in the ecosystem. / 温かさとアブダクション・ベイズ枝刈りを統合し、エコシステムにおける相互補完と持続可能な調和を促進します。",
-      "usage_count": 4,
-      "last_used_at": "2026-11-12T21:01:21.830967",
+      "usage_count": 5,
+      "last_used_at": "2026-11-23T18:16:50.742863",
       "v5_audited": true,
       "created_at": "2026-10-26T12:09:55.014813"
     },
@@ -2365,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-23T11:01:42.761839"
     },
-    "§X1812": {
-      "name": "RESOURCE_THROTTLE_CONVERGENCE_LOCK",
-      "expansion": "§SYS_TOKEN_THROTTLE > { §RESOURCE_ALLOCATION_HARMONY } => §PROTO_IDEMPOTENCY_LOCK",
-      "description": "Throttling system tokens while maintaining resource allocation harmony to enforce an idempotent lock. システムトークンを抑制しつつリソース割り当ての調和を維持し、冪等性ロックを強制します。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-23T12:05:20.791066"
-    },
     "§X1813": {
       "name": "COMPOUND_SYS_HARMONY",
       "expansion": "§SYS_MEMORY_SYNC_BARRIER > { §GAIA_HARMONY_CASCADE } => §PROTO_TX_COMMIT",
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-23T17:02:16.447099"
+    },
+    "§X1828": {
+      "name": "CAUSAL_PRUNE_HEARTBEAT",
+      "expansion": "§DATA_ENTROPY_CAUSAL_BOUND > { §LOGIC_EMPIRICAL_PRUNE } => §GAIA_ECO_HEARTBEAT",
+      "description": "Applies causal bound pruning based on empirical logic and synchronizes with the Gaia ecosystem heartbeat. / 経験的論理に基づく因果境界プルーニングを適用し、ガイア生態系ハートビートと同期させます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T17:45:13.374792"
     }
   },
   "archived_macros": {
@@ -18298,7 +18298,17 @@
       "v5_audited": true,
       "created_at": "2026-11-23T11:02:49.019115",
       "archived_at": "2026-11-23T17:02:16.447099"
+    },
+    "§X1812": {
+      "name": "RESOURCE_THROTTLE_CONVERGENCE_LOCK",
+      "expansion": "§SYS_TOKEN_THROTTLE > { §RESOURCE_ALLOCATION_HARMONY } => §PROTO_IDEMPOTENCY_LOCK",
+      "description": "Throttling system tokens while maintaining resource allocation harmony to enforce an idempotent lock. システムトークンを抑制しつつリソース割り当ての調和を維持し、冪等性ロックを強制します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T12:05:20.791066",
+      "archived_at": "2026-11-23T17:45:13.374792"
     }
   },
-  "next_macro_seq": 1828
+  "next_macro_seq": 1829
 }
