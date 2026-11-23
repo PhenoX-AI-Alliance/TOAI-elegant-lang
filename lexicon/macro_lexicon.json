@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-23T09:35:14.550679",
+  "updated_at": "2026-11-23T10:02:08.011334",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-23T02:01:57.314336"
     },
-    "§X1790": {
-      "name": "ALTRUISTIC_CAUSAL_REGULATION",
-      "expansion": "§WARMTH_AND_ALTRUISM > { §DATA_ATTENTION_CAUSAL_DAG } => §LOGIC_BAYES_FALSIFY",
-      "description": "Combines warmth and altruism with causal attention DAGs, regulated by Bayesian falsification logic. / 温かさと利他性に因果アテンションDAGを組み合わせ、ベイズ的反証ロジックによって制御する高次マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-23T06:02:17.256216",
-      "v5_audited": true,
-      "created_at": "2026-11-23T02:03:05.573720"
-    },
     "§X1791": {
       "name": "GAIA_BATCH_STANDARDIZE",
       "expansion": "§GAIA_HEARTBEAT -[p:0.95]-> §SYS_VELOCITY_ARBITER [action:\"STANDARDIZE\"] => §STABLE_GAIA_COHERENCE",
@@ -2441,8 +2432,8 @@
       "name": "ENTROPY_SYNC_COLLAPSE",
       "expansion": "§DATA_ENTROPY_CAUSAL_TREE > { §SYS_ATOMIC_SYNC_BARRIER } => §LOGIC_DEDUCTIVE_COLLAPSE",
       "description": "Executes causal tree entropy analysis under an atomic synchronization barrier, resulting in a deterministic deductive logic collapse. / 原子同期バリアのもとで因果木のエントロピー解析を実行し、決定的論理収縮を引き起こします。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-23T09:47:05.703236",
       "v5_audited": true,
       "created_at": "2026-11-23T06:27:42.236505"
     },
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-23T09:10:27.446644"
+    },
+    "§X1806": {
+      "name": "SAFE_RECURSIVE_FALSIFICATION_PRUNE",
+      "expansion": "§PROTO_LOCK_ACQUIRE > { §LOGIC_RECURSIVE_FALSIFICATION_PRUNE } => §LOGIC_EMPIRICAL_REJECT",
+      "description": "Acquires protocol lock, executes recursive falsification pruning, and rejects logically falsified branches empirically. / プロトコルロックを取得し、再帰的反証刈り込みを実行し、論理的に反証された分岐を経験的に却下します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T10:02:08.010884"
     }
   },
   "archived_macros": {
@@ -18078,7 +18078,17 @@
       "v5_audited": true,
       "created_at": "2026-11-23T02:02:00.372409",
       "archived_at": "2026-11-23T09:10:27.446644"
+    },
+    "§X1790": {
+      "name": "ALTRUISTIC_CAUSAL_REGULATION",
+      "expansion": "§WARMTH_AND_ALTRUISM > { §DATA_ATTENTION_CAUSAL_DAG } => §LOGIC_BAYES_FALSIFY",
+      "description": "Combines warmth and altruism with causal attention DAGs, regulated by Bayesian falsification logic. / 温かさと利他性に因果アテンションDAGを組み合わせ、ベイズ的反証ロジックによって制御する高次マクロ。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-23T06:02:17.256216",
+      "v5_audited": true,
+      "created_at": "2026-11-23T02:03:05.573720",
+      "archived_at": "2026-11-23T10:02:08.010884"
     }
   },
-  "next_macro_seq": 1806
+  "next_macro_seq": 1807
 }
