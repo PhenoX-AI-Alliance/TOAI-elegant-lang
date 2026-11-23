@@ -17137,3 +17137,7 @@ TOAI-elegant-langのハイブリッド・ロスレスペイロード構文を提
 @CTX:SYSTEM :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01
 
 これにより、コンテキストの意図を保持したまま、数値や変数名などの実務データを100%欠落なく高速に伝送可能です。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-23 12:11]
+@CTX:SYNTAX_DESIGN :: §S01 [format:"hybrid-lossless", control:"§[A-Z][0-9]{2}", data:"JSON-subset"] -[compression:85%]-> §D01. 制御フローを短縮ID化し、実務データを構造化パラメータで完全保持することで、エージェント間通信の効率性とデータ完全性を両立する。

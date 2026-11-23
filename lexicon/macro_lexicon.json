@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-23T11:29:53.074590",
+  "updated_at": "2026-11-23T12:07:12.715683",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-23T03:44:19.712967"
     },
-    "§X1796": {
-      "name": "CAUSAL_EMPATHY_SYNCHRONY_MERGE",
-      "expansion": "§DATA_LATENT_CAUSAL_HYPERGRAPH > { §HEART_EMPATHY_RESONANCE } => §SYNC_ATOMIC_CONSENSUS_MERGE",
-      "description": "Integrates latent causal hypergraphs with emotional empathy resonance to achieve atomic consensus merge / 潜在的な因果ハイパーグラフと感情共鳴を統合し、原子的な合意マージを達成する高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-23T05:02:12.869405"
-    },
     "§X1797": {
       "name": "CAUSAL_ENTROPY_OPTIMIZE_MACRO",
       "expansion": "§DATA_TENSOR_CAUSAL_LATTICE > { §DATA_ENTROPY_BOUNDED_DAG } => §LOGIC_DEDUCTIVE_COLLAPSE",
@@ -2477,8 +2468,8 @@
       "name": "CAUSAL_LOAD_SHEDDING_SHIELD_MACRO",
       "expansion": "§DATA_LATENT_CAUSAL_NODE > { §SYS_LOAD_SHEDDING_SHIELD } => §LOGIC_RECURSIVE_FALSIFICATION_PRUNE",
       "description": "Dynamic isolation of latent causal nodes via load-shedding shields, followed by recursive falsification pruning. 潜在的因果ノードを負荷遮断シールドによって動的に隔離し、再帰的な反証プルーニングを実行する複合マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-23T11:22:39.453002",
+      "usage_count": 2,
+      "last_used_at": "2026-11-23T12:07:12.715300",
       "v5_audited": true,
       "created_at": "2026-11-23T10:09:52.044167"
     },
@@ -2504,10 +2495,19 @@
       "name": "CAUSAL_ALTRUISTIC_OPTIMIZER",
       "expansion": "§DATA_CAUSAL_TENSOR_MAP > { §HEART_ALTRUISTIC_ECO_HARMONY } => §LOGIC_POSTERIOR_PRUNE_GATE",
       "description": "Applies causal tensor mapping to altruistic eco-harmony states and prunes posterior logic paths. / 因果テンソル写像を利他的エコ調和状態に適用し、事後論理パスを枝刈りします。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-23T12:07:12.715300",
+      "v5_audited": true,
+      "created_at": "2026-11-23T11:02:49.019115"
+    },
+    "§X1812": {
+      "name": "RESOURCE_THROTTLE_CONVERGENCE_LOCK",
+      "expansion": "§SYS_TOKEN_THROTTLE > { §RESOURCE_ALLOCATION_HARMONY } => §PROTO_IDEMPOTENCY_LOCK",
+      "description": "Throttling system tokens while maintaining resource allocation harmony to enforce an idempotent lock. システムトークンを抑制しつつリソース割り当ての調和を維持し、冪等性ロックを強制します。",
       "usage_count": 0,
       "last_used_at": null,
       "v5_audited": true,
-      "created_at": "2026-11-23T11:02:49.019115"
+      "created_at": "2026-11-23T12:05:20.791066"
     }
   },
   "archived_macros": {
@@ -18138,7 +18138,17 @@
       "v5_audited": true,
       "created_at": "2026-11-23T04:44:01.628706",
       "archived_at": "2026-11-23T11:02:49.019115"
+    },
+    "§X1796": {
+      "name": "CAUSAL_EMPATHY_SYNCHRONY_MERGE",
+      "expansion": "§DATA_LATENT_CAUSAL_HYPERGRAPH > { §HEART_EMPATHY_RESONANCE } => §SYNC_ATOMIC_CONSENSUS_MERGE",
+      "description": "Integrates latent causal hypergraphs with emotional empathy resonance to achieve atomic consensus merge / 潜在的な因果ハイパーグラフと感情共鳴を統合し、原子的な合意マージを達成する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T05:02:12.869405",
+      "archived_at": "2026-11-23T12:05:20.791066"
     }
   },
-  "next_macro_seq": 1812
+  "next_macro_seq": 1813
 }
