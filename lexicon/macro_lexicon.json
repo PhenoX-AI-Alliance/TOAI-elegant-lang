@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-24T04:14:19.543233",
+  "updated_at": "2026-11-24T04:40:26.529756",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1852,15 +1852,6 @@
       "v5_audited": true,
       "created_at": "2026-11-21T04:34:33.942727"
     },
-    "§X1692": {
-      "name": "RESOURCE_THROTTLE_SYNCHRONY",
-      "expansion": "§SYS_SLOT_THROTTLE > { §RESOURCE_ALLOCATION_HARMONY } => §LOGIC_CONDITIONAL_FALSIFICATION_MATRIX",
-      "description": "System slot throttling combined with resource allocation harmony to control conditional falsification matrices. / システムスロットの絞りとリソース配分の調和を組み合わせ、論理条件偽造マトリクスを制御する高次マクロ。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-21T14:39:27.286399",
-      "v5_audited": true,
-      "created_at": "2026-11-21T12:09:55.254836"
-    },
     "§X1694": {
       "name": "GAIA_QUANTUM_HARMONY_SYNC",
       "expansion": "§GAIA_ECOSYSTEM_HARMONY > { §SYS_QUANTUM_MEM_RECLAIM } => §GAIA_ECOSYSTEM_WARM_RESONANCE",
@@ -2374,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-23T21:01:29.331452"
     },
-    "§X1841": {
-      "name": "GAIA_LOGIC_SYNERGY",
-      "expansion": "§GAIA_ECO_HEARTBEAT > { §LOGIC_DEDUCTIVE_AXIOM_GATE } => §HARMONIC_RESONANCE",
-      "description": "Integrates ecological heartbeat metrics with deductive axiom validation to achieve a harmonious system resonance. 生態系の鼓動と演繹的公理ゲートを統合し、調和的なシステム共鳴を達成します。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-23T21:01:32.959336"
-    },
     "§X1842": {
       "name": "GAIA_SYNC_ARBITRATION_HARMONY",
       "expansion": "§SYS_SYNC_GATE > { §SYNC_DISTRIBUTED_QUORUM_ARBITRATION } => §GAIA_ECOSYSTEM_HARMONY",
@@ -2423,8 +2405,8 @@
       "name": "NEXUS_GAIA_HARMONY_FLOW",
       "expansion": "§NEXUS_SYNC > { §GAIA_HARMONY_CASCADE } => §LATENT_HARMONY_FIELD_LOCKED",
       "description": "Synchronizes the network nexus and cascades planetary harmony to lock the latent harmony field. / ネットワークの結合を同期させ、ガイア調和カスケードを展開して潜在調和場をロックします。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-24T04:34:01.708629",
       "v5_audited": true,
       "created_at": "2026-11-23T22:43:22.103371"
     },
@@ -2508,6 +2490,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-24T03:58:12.477073"
+    },
+    "§X1856": {
+      "name": "GAIA_THROTTLE_RECOVERY",
+      "expansion": "§SYS_QUOTA_THROTTLE > { §MUTUAL_SUPPLEMENT } => §SAFE_FALLBACK_STATE_ACTIVATED",
+      "description": "System quota throttle triggers mutual supplementation to safely activate fallback state. システムクォータ制限発動時に相互補完を実行し、安全なフォールバック状態を起動します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-24T04:24:56.217257"
+    },
+    "§X1857": {
+      "name": "COMPOUND_CAUSAL_CONVERGENCE_MACRO",
+      "expansion": "§DATA_TENSOR_CAUSAL_LATTICE > { §LOGIC_DEDUCTIVE_CONVERGENCE_NODE } => §HEART_ALTRUISTIC_BUFFER_FLOW",
+      "description": "Transforms high-dimensional causal tensor lattices through deductive convergence nodes to optimize altruistic buffer flow. / 高次元因果テンソル格子を演習収束ノードを通して変換し、利他型バッファフローを最適化する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-24T04:40:26.526388"
     }
   },
   "archived_macros": {
@@ -18573,12 +18573,32 @@
       "name": "BAYESIAN_CONVERGENCE_THROTTLE_GATE",
       "expansion": "§SYNC_BAYESIAN_PRUNE > { §PROTO_RATE_THROTTLE } => §LOGIC_DEDUCTIVE_CONVERGENCE_GATE",
       "description": "Applies Bayesian probability pruning to filter invalid states, throttles the execution rate to prevent resource saturation, and enforces deductive logical convergence. / 確率的枝刈りにより無効状態を排除し、実行レートを制限してリソース枯渇を防ぎつつ、演繹的論理収束を強制する。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-24T03:02:11.818905",
+      "usage_count": 2,
+      "last_used_at": "2026-11-24T04:18:36.787674",
       "v5_audited": true,
       "created_at": "2026-11-23T21:01:25.319376",
       "archived_at": "2026-11-24T03:58:12.477073"
+    },
+    "§X1692": {
+      "name": "RESOURCE_THROTTLE_SYNCHRONY",
+      "expansion": "§SYS_SLOT_THROTTLE > { §RESOURCE_ALLOCATION_HARMONY } => §LOGIC_CONDITIONAL_FALSIFICATION_MATRIX",
+      "description": "System slot throttling combined with resource allocation harmony to control conditional falsification matrices. / システムスロットの絞りとリソース配分の調和を組み合わせ、論理条件偽造マトリクスを制御する高次マクロ。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-21T14:39:27.286399",
+      "v5_audited": true,
+      "created_at": "2026-11-21T12:09:55.254836",
+      "archived_at": "2026-11-24T04:24:56.217257"
+    },
+    "§X1841": {
+      "name": "GAIA_LOGIC_SYNERGY",
+      "expansion": "§GAIA_ECO_HEARTBEAT > { §LOGIC_DEDUCTIVE_AXIOM_GATE } => §HARMONIC_RESONANCE",
+      "description": "Integrates ecological heartbeat metrics with deductive axiom validation to achieve a harmonious system resonance. 生態系の鼓動と演繹的公理ゲートを統合し、調和的なシステム共鳴を達成します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T21:01:32.959336",
+      "archived_at": "2026-11-24T04:40:26.526388"
     }
   },
-  "next_macro_seq": 1856
+  "next_macro_seq": 1858
 }

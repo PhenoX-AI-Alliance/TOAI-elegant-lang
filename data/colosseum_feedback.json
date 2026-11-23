@@ -9,6 +9,7 @@
   },
   "proposed_scenario": "【コロシアム発・実務検証】分散エージェント間における動的クォーラム合意形成のストレステスト環境下で、期限付き委譲トークンとメモリ回収プロトコルを連動させ、トークン枯渇発生時の決定論的なエラー復旧とリソース最適化の挙動を検証する",
   "consumed_by_macro": true,
-  "consumed_by_dialogue": false,
-  "consumed_by_macro_at": "2026-11-24T03:58:06.658294"
+  "consumed_by_dialogue": true,
+  "consumed_by_macro_at": "2026-11-24T03:58:06.658294",
+  "consumed_by_dialogue_at": "2026-11-24T04:33:37.522504"
 }
