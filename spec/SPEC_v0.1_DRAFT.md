@@ -17089,3 +17089,19 @@ TOAI-elegant-langは、通信効率とデータ損失防止を両立するハイ
 
 例:
 `@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-23 09:42]
+TOAI-elegant-langのハイブリッド・ロスレスペイロード構文を定義する。制御フローは短縮ワイヤIDで圧縮し、実務データはキーバリュー構造で完全伝送する。
+
+```python
+def parse_payload(text: str) -> dict:
+    ctx, rest = text.split(" :: ")
+    sender, body = rest.split(" [")
+    params_str, receiver = body.split("] -")
+    params = {}
+    for p in params_str.split(", "):
+        k, v = p.split(":")
+        params[k.strip()] = eval(v.strip())
+    return {"context": ctx, "sender": sender, "params": params, "receiver": receiver.replace(">", "").strip()}
+```
