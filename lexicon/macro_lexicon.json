@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-24T03:00:46.800757",
+  "updated_at": "2026-11-24T03:18:30.056864",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2369,8 +2369,8 @@
       "name": "BAYESIAN_CONVERGENCE_THROTTLE_GATE",
       "expansion": "§SYNC_BAYESIAN_PRUNE > { §PROTO_RATE_THROTTLE } => §LOGIC_DEDUCTIVE_CONVERGENCE_GATE",
       "description": "Applies Bayesian probability pruning to filter invalid states, throttles the execution rate to prevent resource saturation, and enforces deductive logical convergence. / 確率的枝刈りにより無効状態を排除し、実行レートを制限してリソース枯渇を防ぎつつ、演繹的論理収束を強制する。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-24T03:02:11.818905",
       "v5_audited": true,
       "created_at": "2026-11-23T21:01:25.319376"
     },
