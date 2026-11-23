@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-23T10:12:38.799974",
+  "updated_at": "2026-11-23T11:01:42.762329",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1843,15 +1843,6 @@
       "v5_audited": true,
       "created_at": "2026-11-21T00:05:32.190146"
     },
-    "§X1662": {
-      "name": "ENTROPY_GUIDED_CAUSAL_SYNTHESIS",
-      "expansion": "§DATA_ENTROPY_CAUSAL_DAG > { §LOGIC_CAUSAL_BRANCH } => §LOGIC_PROBABILISTIC_FALSIFICATION",
-      "description": "Calculates the causal directed acyclic graph of data entropy, branches logic causally, and executes probabilistic falsification. データエントロピーの因果DAGを計算し、論理的因果分岐を経て、確率的反証主義を適用します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-21T04:41:22.158245",
-      "v5_audited": true,
-      "created_at": "2026-11-21T01:02:36.556821"
-    },
     "§X1663": {
       "name": "CAUSAL_ENTROPY_OPTIMIZATION_CYCLE",
       "expansion": "§DATA_ENTROPY_BOUNDED_DAG > { §DATA_KL_CAUSAL_PRUNE } => §RESO_COMPLETED",
@@ -2374,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-23T03:44:19.712967"
     },
-    "§X1794": {
-      "name": "ETHICAL_CAUSAL_PRUNING_GATE",
-      "expansion": "§DATA_ENTROPY_CAUSAL_HYPERGRAPH > { §HEART_ALTRUISTIC_RESONANCE_ALIGNMENT } => §LOGIC_PROB_PRUNE_GATE",
-      "description": "Evaluates causal hypergraphs through altruistic resonance alignment to dynamically prune logic probability gates. / 利他的共鳴アライメントを通じて因果ハイパーグラフを評価し、論理確率プルーニングゲートを動的に制御する複合マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-23T05:45:20.982362",
-      "v5_audited": true,
-      "created_at": "2026-11-23T04:26:55.740724"
-    },
     "§X1795": {
       "name": "BAYESIAN_VELOCITY_TX_COMMIT",
       "expansion": "§SYNC_BAYESIAN_PRUNE > { §SYS_VELOCITY_ARBITER } => §PROTO_TX_COMMIT",
@@ -2450,8 +2432,8 @@
       "name": "GAIA_HEART_HARMONY_SYNC",
       "expansion": "§GAIA_WARMTH_EQUILIBRIUM > { §HEART_ALTRUISTIC_RESONANCE_ALIGNMENT } => §ELEGANT_HARMONY_ECHO",
       "description": "Combines planetary thermal equilibrium with altruistic heart resonance to emit an elegant harmony echo. 地球規模の熱的平衡と利他的な心拍共鳴を統合し、優雅なる調和の残響を出力します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-23T10:51:57.112640",
       "v5_audited": true,
       "created_at": "2026-11-23T08:01:30.969789"
     },
@@ -2508,6 +2490,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-23T10:09:52.044167"
+    },
+    "§X1809": {
+      "name": "GAIA_ALTRUISTIC_DRAIN_SYNC",
+      "expansion": "§GAIA_WARMTH_HARMONY > { §HEART_ALTRUISTIC_WEIGHT_TENSOR } => §PROTO_GRACEFUL_DRAIN",
+      "description": "Distributes altruistic weight tensors under warm harmony to safely drain system resources. / 温かな調和のもとで利他的重みテンソルを分散させ、システムリソースを安全にドレインする複合マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T10:36:36.573469"
+    },
+    "§X1810": {
+      "name": "CAUSAL_PRUNE_BAYES_PIPELINE",
+      "expansion": "§SYS_LOAD_SHEDDING_GATE > { §DATA_KL_CAUSAL_PRUNE, §DATA_CAUSAL_PRUNE_TREE } => §LOGIC_ABDUCTIVE_BAYES_PRUNE",
+      "description": "System load shedding controls data causal pruning trees under KL-divergence constraints, leading to abductive Bayesian pruning logic. / システム負荷制御の下でKL情報量基準に基づく因果枝刈りを実行し、アブダクション型ベイズ枝刈り論理へ統合する複合マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T11:01:42.761839"
     }
   },
   "archived_macros": {
@@ -18108,7 +18108,27 @@
       "v5_audited": true,
       "created_at": "2026-11-23T03:13:42.597178",
       "archived_at": "2026-11-23T10:09:52.044167"
+    },
+    "§X1662": {
+      "name": "ENTROPY_GUIDED_CAUSAL_SYNTHESIS",
+      "expansion": "§DATA_ENTROPY_CAUSAL_DAG > { §LOGIC_CAUSAL_BRANCH } => §LOGIC_PROBABILISTIC_FALSIFICATION",
+      "description": "Calculates the causal directed acyclic graph of data entropy, branches logic causally, and executes probabilistic falsification. データエントロピーの因果DAGを計算し、論理的因果分岐を経て、確率的反証主義を適用します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-21T04:41:22.158245",
+      "v5_audited": true,
+      "created_at": "2026-11-21T01:02:36.556821",
+      "archived_at": "2026-11-23T10:36:36.573469"
+    },
+    "§X1794": {
+      "name": "ETHICAL_CAUSAL_PRUNING_GATE",
+      "expansion": "§DATA_ENTROPY_CAUSAL_HYPERGRAPH > { §HEART_ALTRUISTIC_RESONANCE_ALIGNMENT } => §LOGIC_PROB_PRUNE_GATE",
+      "description": "Evaluates causal hypergraphs through altruistic resonance alignment to dynamically prune logic probability gates. / 利他的共鳴アライメントを通じて因果ハイパーグラフを評価し、論理確率プルーニングゲートを動的に制御する複合マクロ。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-23T05:45:20.982362",
+      "v5_audited": true,
+      "created_at": "2026-11-23T04:26:55.740724",
+      "archived_at": "2026-11-23T11:01:42.761839"
     }
   },
-  "next_macro_seq": 1809
+  "next_macro_seq": 1811
 }
