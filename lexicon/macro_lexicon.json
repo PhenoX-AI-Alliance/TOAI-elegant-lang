@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-23T18:39:13.065558",
+  "updated_at": "2026-11-23T18:54:55.207982",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-23T12:51:44.954944"
     },
-    "§X1814": {
-      "name": "COMPOUND_ENTROPY_ARBITER",
-      "expansion": "§DATA_ENTROPY_COMPRESSION_TREE > { §SYS_VELOCITY_ARBITER } => §LOGIC_AXIOM_PRUNE",
-      "description": "Compresses data entropy based on system velocity and prunes invalid logic axioms. / システムの処理速度に応じてデータエントロピーを圧縮し、無効な論理公理を刈り込みます。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-23T13:01:19.002002"
-    },
     "§X1815": {
       "name": "GAIA_ECO_VELOCITY_ARBITRATION_LATTICE",
       "expansion": "§GAIA_ECO_STABLE_STATE > { §SYS_VELOCITY_THROTTLE_MATRIX, §SYS_QUANTUM_SLOT_ARBITRATION } => §HEART_ALTRUISTIC_RESONANCE_LATTICE",
@@ -2504,10 +2495,19 @@
       "name": "GAIA_RESONANCE_ARBITRATION",
       "expansion": "§GAIA_HEARTBEAT > { §HARMONIC_RESONANCE_STABLE } => §SYNC_DIALECTIC_WEIGHTED_ARBITRATION",
       "description": "Monitors the global Gaia heartbeat, stabilizes harmonic resonance, and executes synchronized dialectic weighted arbitration. / ガイアの心拍を監視し、調和共振を安定させた上で、同期型弁証法的重み付け調停を実行します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-23T18:54:05.116657",
+      "v5_audited": true,
+      "created_at": "2026-11-23T18:28:53.577786"
+    },
+    "§X1830": {
+      "name": "CAUSAL_ENTROPY_SYNC_PIPELINE",
+      "expansion": "§DATA_CAUSAL_TENSOR_GRAPH > { §DATA_ENTROPY_PRUNED_TREE } => §PROTO_TX_COMMIT",
+      "description": "Causal tensor graph is pruned by data entropy constraints and then atomically committed. 因果テンソルグラフをデータエントロピー制約により枝刈りし、トランザクションとして原子的にコミットする。",
       "usage_count": 0,
       "last_used_at": null,
       "v5_audited": true,
-      "created_at": "2026-11-23T18:28:53.577786"
+      "created_at": "2026-11-23T18:54:55.206767"
     }
   },
   "archived_macros": {
@@ -18318,7 +18318,17 @@
       "v5_audited": true,
       "created_at": "2026-11-21T09:03:02.485982",
       "archived_at": "2026-11-23T18:28:53.577786"
+    },
+    "§X1814": {
+      "name": "COMPOUND_ENTROPY_ARBITER",
+      "expansion": "§DATA_ENTROPY_COMPRESSION_TREE > { §SYS_VELOCITY_ARBITER } => §LOGIC_AXIOM_PRUNE",
+      "description": "Compresses data entropy based on system velocity and prunes invalid logic axioms. / システムの処理速度に応じてデータエントロピーを圧縮し、無効な論理公理を刈り込みます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-23T13:01:19.002002",
+      "archived_at": "2026-11-23T18:54:55.206767"
     }
   },
-  "next_macro_seq": 1830
+  "next_macro_seq": 1831
 }
