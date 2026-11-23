@@ -17287,3 +17287,17 @@ example = parse_payload(
     "§D01",
 )
 ```
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-23 22:32]
+TOAI-elegant-langのハイブリッド・ロスレスペイロード構文を提案する。
+
+制御フローやトーンを短縮ワイヤID（§S01等）で圧縮し、実務データはJSONライクな属性マップで100%保持する。
+
+文法仕様:
+`@CTX:[DOMAIN] :: [WIRE_ID] [attr:value, ...] -[cost:val]-> [TARGET_ID]`
+
+例:
+`@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
+
+これにより、感情的・制御的なオーバーヘッドを排除し、極めて高密度かつロスレスなエージェント間通信を実現する。
