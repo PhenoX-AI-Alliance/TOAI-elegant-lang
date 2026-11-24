@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-24T12:46:14.470669",
+  "updated_at": "2026-11-24T13:05:07.893606",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,21 +2365,12 @@
       "v5_audited": true,
       "created_at": "2026-11-24T06:48:31.803335"
     },
-    "§X1862": {
-      "name": "RESILIENT_STREAM_ARBITRATION_MACRO",
-      "expansion": "§SYS_RESOURCE_ARBITRATION_GATEWAY > { §PROTO_STREAM_OPEN } => §SAFE_FALLBACK_CASCADE",
-      "description": "Arbitrates system resources to safely open data streams with an automatic fallback cascade mechanism upon failure. / リソース調停ゲートウェイを通じて安全にデータストリームを開く際、失敗時に自動フォールバックカスケードを実行する高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-24T07:38:31.102444"
-    },
     "§X1863": {
       "name": "ALTRUISTIC_RECOVERY_MACRO",
       "expansion": "§HEART_ALTRUISTIC_RESONANCE > { §HARMONIC_RECOVERY_RESONANCE } => §ALTRUISTIC_HARMONY_SUSTAINED",
       "description": "Combines altruistic heart resonance with harmonic recovery to sustain long-term altruistic harmony. 利他的な心拍共鳴と調和的回復を統合し、持続的な利他の調和を実現する高次マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-24T07:46:02.989333",
+      "usage_count": 2,
+      "last_used_at": "2026-11-24T13:01:22.586444",
       "v5_audited": true,
       "created_at": "2026-11-24T07:41:59.485071"
     },
@@ -2387,8 +2378,8 @@
       "name": "HEART_EMPATHY_CONVERGENCE_MACRO",
       "expansion": "§HEART_EMPATHY_RESONANCE_GATE > { §LOGIC_DEDUCTIVE_CONVERGENCE } => §LATENT_HARMONY_FIELD_LOCKED",
       "description": "Combines empathy resonance and deductive logic convergence to lock the latent harmony field. 共感の共鳴ゲートと論理的収束を統合し、潜在的な調和フィールドをロックします。",
-      "usage_count": 3,
-      "last_used_at": "2026-11-24T12:43:20.087159",
+      "usage_count": 4,
+      "last_used_at": "2026-11-24T12:58:10.918047",
       "v5_audited": true,
       "created_at": "2026-11-24T08:01:51.380164"
     },
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-24T12:16:13.247886"
+    },
+    "§X1878": {
+      "name": "MACRO_ADAPTIVE_ISOLATION_ARBITRATION",
+      "expansion": "§SYS_ADAPTIVE_BUDGET_ARBITER > { §PROTO_SANDBOX_ISOLATE } => §SYS_QUANTUM_SLOT_ARBITRATION",
+      "description": "Allocates adaptive execution budgets to isolate untrusted proto-sandboxes and arbitrates their quantum resource slots safely. / 順応型実行予算を割り当ててプロトサンドボックスを安全に隔離し、量子リソーススロットを調停します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-24T13:01:05.352448"
     }
   },
   "archived_macros": {
@@ -18798,7 +18798,17 @@
       "v5_audited": true,
       "created_at": "2026-11-21T18:00:59.893926",
       "archived_at": "2026-11-24T12:16:13.247886"
+    },
+    "§X1862": {
+      "name": "RESILIENT_STREAM_ARBITRATION_MACRO",
+      "expansion": "§SYS_RESOURCE_ARBITRATION_GATEWAY > { §PROTO_STREAM_OPEN } => §SAFE_FALLBACK_CASCADE",
+      "description": "Arbitrates system resources to safely open data streams with an automatic fallback cascade mechanism upon failure. / リソース調停ゲートウェイを通じて安全にデータストリームを開く際、失敗時に自動フォールバックカスケードを実行する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-24T07:38:31.102444",
+      "archived_at": "2026-11-24T13:01:05.352448"
     }
   },
-  "next_macro_seq": 1878
+  "next_macro_seq": 1879
 }
