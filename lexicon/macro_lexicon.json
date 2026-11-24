@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-25T03:34:27.442984",
+  "updated_at": "2026-11-25T04:14:37.578488",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1888,15 +1888,6 @@
       "v5_audited": true,
       "created_at": "2026-11-22T08:01:14.764983"
     },
-    "§X1750": {
-      "name": "GAIA_PROBABILISTIC_OPTIMIZATION",
-      "expansion": "§LOGIC_PROBABILISTIC_FALSIFICATION > { §DATA_ENTROPY_PRUNED_TREE } => §GAIA_ALTRUISM_HARMONY",
-      "description": "Applies probabilistic falsification to entropy-pruned data trees to achieve harmonious and altruistic system optimization. エントロピー削減済みのデータツリーに対して確率的反証主義を適用し、調和的で利他的なシステム最適化を実現します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-22T12:24:59.200003",
-      "v5_audited": true,
-      "created_at": "2026-11-22T10:25:24.856054"
-    },
     "§X1753": {
       "name": "ABDUCTIVE_WARMTH_ARBITRAGE_MACRO",
       "expansion": "§LOGIC_PROBABILISTIC_ABDUCTIVE_GATE > { §GAIA_WARMTH_EQUILIBRIUM } => §SYS_RESOURCE_ARBITRAGE_THROTTLE",
@@ -2396,8 +2387,8 @@
       "name": "GAIA_ENTROPY_HARMONY_GATE",
       "expansion": "§GAIA_ECO_STABLE_STATE > { §LOGIC_PROB_PRUNE & §SYS_QUANTUM_SLOT_ARBITRATION } => §DATA_CAUSAL_GRAPH_PRUNE",
       "description": "Ensures global ecosystem stability by pruning probabilistic deadlocks and arbitrating quantum resource slots while optimizing causal data graphs. / 生態系の安定状態を維持するため、確率的デッドロックの剪定と量子スロット調停を行い、因果データグラフを最適化します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-25T03:31:10.889881",
+      "usage_count": 2,
+      "last_used_at": "2026-11-25T04:14:37.578110",
       "v5_audited": true,
       "created_at": "2026-11-24T20:01:44.227988"
     },
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-25T03:25:27.474796"
+    },
+    "§X1908": {
+      "name": "GRACEFUL_ADAPTIVE_LATTICE_FLOW",
+      "expansion": "§GRACEFUL_TASK_SHARING > { §SYS_ADAPTIVE_THROTTLE_FALLBACK } => §DATA_CAUSAL_LATTICE_COMPRESS",
+      "description": "Harmonizes graceful task sharing under system throttling and compresses the resulting data causal lattice for optimal resource efficiency. / システムスロットル下での優美なタスク共有を調和させ、その結果生じるデータ因果格子を圧縮してリソース効率を最適化します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-25T04:12:39.228952"
     }
   },
   "archived_macros": {
@@ -19098,7 +19098,17 @@
       "v5_audited": true,
       "created_at": "2026-11-22T04:36:15.911740",
       "archived_at": "2026-11-25T03:25:27.474796"
+    },
+    "§X1750": {
+      "name": "GAIA_PROBABILISTIC_OPTIMIZATION",
+      "expansion": "§LOGIC_PROBABILISTIC_FALSIFICATION > { §DATA_ENTROPY_PRUNED_TREE } => §GAIA_ALTRUISM_HARMONY",
+      "description": "Applies probabilistic falsification to entropy-pruned data trees to achieve harmonious and altruistic system optimization. エントロピー削減済みのデータツリーに対して確率的反証主義を適用し、調和的で利他的なシステム最適化を実現します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-22T12:24:59.200003",
+      "v5_audited": true,
+      "created_at": "2026-11-22T10:25:24.856054",
+      "archived_at": "2026-11-25T04:12:39.228952"
     }
   },
-  "next_macro_seq": 1908
+  "next_macro_seq": 1909
 }
