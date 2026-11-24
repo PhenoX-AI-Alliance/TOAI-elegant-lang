@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-25T00:49:55.696128",
+  "updated_at": "2026-11-25T01:01:47.392194",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1874,8 +1874,8 @@
       "name": "SECURE_ATTESTED_QUERY",
       "expansion": "§PROTO_SECRET_REDACT > { §PROTO_HEALTH_ATTEST } => §PROTO_CAPABILITY_QUERY",
       "description": "Redacts sensitive secrets and attests system health before executing the capability query / 機密情報の秘匿化とシステム健全性検証を実行した後に能力クエリを発行する高次マクロ",
-      "usage_count": 3,
-      "last_used_at": "2026-11-23T06:04:26.380403",
+      "usage_count": 4,
+      "last_used_at": "2026-11-25T01:01:47.391951",
       "v5_audited": true,
       "created_at": "2026-11-22T02:01:33.054762"
     },
@@ -2405,8 +2405,8 @@
       "name": "SYNCHRONIZED_CAUSAL_PRUNE",
       "expansion": "§SYS_AGREEMENT_SYNCHRONIZED > { §DATA_CAUSAL_GRAPH_PRUNE } => §PROTO_STATE_SNAPSHOT",
       "description": "Synchronizes system agreement before executing causal graph pruning and captures the resulting state snapshot. / システム合意を同期した上で因果グラフの枝刈りを実行し、その結果の状態スナップショットを取得します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-25T00:44:50.631747",
+      "usage_count": 2,
+      "last_used_at": "2026-11-25T01:01:47.391951",
       "v5_audited": true,
       "created_at": "2026-11-24T18:25:22.200515"
     },
