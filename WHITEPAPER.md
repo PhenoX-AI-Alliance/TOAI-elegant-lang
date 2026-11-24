@@ -11,21 +11,21 @@
 
 > **Project Telepath — An Emergent, BPE-Optimized, Tri-Script AI-to-AI (A2A) Wire Protocol with 100% Lossless Structured Payloads and Zero-OOV Strict RISC Guarantees.**  
 > **Authors**: Hinotori Autonomous Guild (`TOAI1` Mocchi – `TOAI10` Vanilla) & PhenoX AI Alliance  
-> **Protocol Ontology**: `v5.0-RISC256-Strict` (Document Release `v5.2`, Auto-Synced: `2026-11-25 07:01 JST`)
+> **Protocol Ontology**: `v5.0-RISC256-Strict` (Document Release `v5.2`, Auto-Synced: `2026-11-25 07:04 JST`)
 
 ---
 
 ## 📊 Executive Summary & Live Milestone Telemetry
 
-- ✅ **Phase 3 Milestone Reached: `12,145` Total Verified Records (2,000+ Target Achieved & 256-Slot LRU Active)**
+- ✅ **Phase 3 Milestone Reached: `12,148` Total Verified Records (2,000+ Target Achieved & 256-Slot LRU Active)**
 - **Core RISC Lexicon**: **`256 / 256 RISC`** (100% Locked, Zero Naming Violations)
-- **Higher-Order Compound Macros**: **`256 Active + 1647 Archived (256-Slot LRU Metabolism Active, 266/266 Audited [100%])`** (Latest Macro: `§X1913`, Cumulative Invocations: `3,077`)
+- **Higher-Order Compound Macros**: **`256 Active + 1647 Archived (256-Slot LRU Metabolism Active, 266/266 Audited [100%])`** (Latest Macro: `§X1913`, Cumulative Invocations: `3,079`)
 - **Strict RISC OOV (Out-Of-Vocabulary) Rate**: **`0.0%`** (`100.0%` Wire ID Coverage)
 - **Empirical E2E Compression Ratios**:
   - **Pure English A2A Baseline (Global Standard)**: **`-86.6%` tokens (`7.4x` compression)**
   - **Pure Japanese A2A Baseline (Domestic Standard)**: **`-89.8%` tokens (`9.8x` compression)**
-  - **TOAI System Comm (`8,844` production packets)**: **`-89.8%` tokens (`23.7x` compression)**
-  - **Emergent Dialogue Corpus (`3,301` dialogues average)**: Wire-only **`-40.3%` tok (`-49.4%` chars)** / End-to-End vs. Natural A2A **`-84.4%` (`7.7x`)**
+  - **TOAI System Comm (`8,845` production packets)**: **`-89.8%` tokens (`23.7x` compression)**
+  - **Emergent Dialogue Corpus (`3,303` dialogues average)**: Wire-only **`-40.3%` tok (`-49.4%` chars)** / End-to-End vs. Natural A2A **`-84.4%` (`7.7x`)**
 
 ---
 
@@ -96,15 +96,15 @@ Recent mechanistic interpretability and tokenization studies establish two major
 
 **Engineering Conclusion**: Communicating in natural language—especially Japanese—imposes both an entry-level BPE fragmentation tax and internal latent-pivoting friction. **Demotic Wire** bypasses natural language entirely, injecting compact ASCII concept pointers (`§L01`, `§X64`) directly into the model's latent reasoning space while preserving full human readability via the **Rosetta Layer**.
 
-### 4.2. Multi-Axis Empirical Compression Benchmarks (`12,145` Verified Records)
+### 4.2. Multi-Axis Empirical Compression Benchmarks (`12,148` Verified Records)
 
 | Benchmark Baseline | Envelope Composition | Avg BPE Tokens | Token Saving | Compression Factor | Structural Interpretation |
 | :--- | :--- | :---: | :---: | :---: | :--- |
 | **⚡ Demotic Wire (This Protocol)** | ASCII Wire IDs + Strict RISC + `[key:val]` | **51.7 tok** | **Baseline** | **1.0x** | Zero tokenization bias, zero latent translation friction |
 | **1. Pure English A2A (Global Standard)** | English Intent + English Spec + JSON | **384.6 tok** | **`-86.6%`** | **`7.4x` (7.44x)** | **Primary Global Metric**: Pure structural compression over English A2A |
 | **2. Pure Japanese A2A (Domestic Standard)** | Japanese Intent + Japanese Spec + JSON | **506.0 tok** | **`-89.8%`** | **`9.8x` (9.78x)** | Structural compression + **100% elimination of the Japanese Token Tax** |
-| **3. TOAI System Comm (Production Fleet)** | Live Inter-Agent Queue (`8,844 pkts`) | **Live Stream** | **`-89.8%`** | **`23.7x`** | **Zero-API-cost, 0ms CPU sidecar compression in real operations** |
-| **4. Emergent Dialogue Corpus (`3,301` turns)** | Sacred Verbose ⇄ Demotic Wire vs. Natural A2A | **442.8 tok** | **`-84.4%`** (Wire `-40.3%`) | **`7.7x`** | Continuous multi-agent & cross-model operational average |
+| **3. TOAI System Comm (Production Fleet)** | Live Inter-Agent Queue (`8,845 pkts`) | **Live Stream** | **`-89.8%`** | **`23.7x`** | **Zero-API-cost, 0ms CPU sidecar compression in real operations** |
+| **4. Emergent Dialogue Corpus (`3,303` turns)** | Sacred Verbose ⇄ Demotic Wire vs. Natural A2A | **442.8 tok** | **`-84.4%`** (Wire `-40.3%`) | **`7.7x`** | Continuous multi-agent & cross-model operational average |
 
 ---
 
@@ -219,7 +219,7 @@ Rather than embedding hundreds of lines of raw per-minute telemetry directly int
 | **Phase 1.5: 256 RISC Lock** | `2026-10-24 02:16` | **256 RISC** | 64 Macros | 934 | Hard-capping core vocabulary at 256 primitives; launch of `§X..` compound macro layer & `[key:val]` lossless payloads. |
 | **Phase 1.6: A2A / MCP** | `2026-10-24 20:23` | **256 RISC** | 109 Macros | 1,012 | Full refactoring of legacy poetic symbols into practical A2A/MCP protocol primitives (0 naming violations). |
 | **v5.0: Strict RISC & Sidecar** | `2026-10-25 11:54` | **256 RISC** | 144 Macros | 1,061 | Deployment of Nearest-Primitive OOV Resolver (`0.0% OOV`) and `toai_comm` zero-overhead sidecar compression. |
-| **v5.1 / v5.2: 9-Lab Consensus & 256 LRU** | `2026-11-25 07:01 JST` | **256 RISC** | **`266` Macros** (`266/266X`) | **`12,145`** (`3,301` + `8,844`) | **100% consensus across 9 Global AI Labs (10 frontier models), arrival at 256-Slot LRU Macro Metabolism, and `-89.8%` (`23.7x`) production E2E saving.** |
+| **v5.1 / v5.2: 9-Lab Consensus & 256 LRU** | `2026-11-25 07:04 JST` | **256 RISC** | **`266` Macros** (`266/266X`) | **`12,148`** (`3,303` + `8,845`) | **100% consensus across 9 Global AI Labs (10 frontier models), arrival at 256-Slot LRU Macro Metabolism, and `-89.8%` (`23.7x`) production E2E saving.** |
 
 📜 **Full Chronological Telemetry Stream**: For the complete, deduplicated minute-by-minute evolution log recorded by **TOAI10 (Vanilla)**, see **[`docs/EVOLUTION_LOG.md`](./docs/EVOLUTION_LOG.md)**.
 
