@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-24T16:09:23.234214",
+  "updated_at": "2026-11-24T16:13:59.657806",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1861,15 +1861,6 @@
       "v5_audited": true,
       "created_at": "2026-11-21T14:37:42.141874"
     },
-    "§X1718": {
-      "name": "CAUSAL_ENTROPY_PRUNE_LATTICE",
-      "expansion": "§DATA_ENTROPY_CAUSAL_BOUND > { §LOGIC_PROB_PRUNE_GATE } => §DATA_TENSOR_CAUSAL_LATTICE",
-      "description": "Applies entropy bounds and probabilistic pruning gates to optimize the data tensor causal lattice / データテンソル因果格子を最適化するため、エントロピー境界と確率的プルーニングゲートを適用する複合マクロ",
-      "usage_count": 2,
-      "last_used_at": "2026-11-21T23:02:28.961304",
-      "v5_audited": true,
-      "created_at": "2026-11-21T20:08:34.009394"
-    },
     "§X1720": {
       "name": "SYNC_EMPATHY_AXIOM_CLOSURE",
       "expansion": "§SYNC_HARMONIC_VOTE_ARBITRATION > { §HEART_EMPATHY_RESONANCE_GATE } => §LOGIC_AXIOM_CLOSURE",
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-24T15:57:11.422642"
+    },
+    "§X1886": {
+      "name": "CAUSAL_ENTROPY_PRUNING_GATE",
+      "expansion": "§DATA_CAUSAL_TENSOR_FLOW > { §DATA_ENTROPY_PRUNED_TREE } => §LOGIC_HYPO_PRUNE",
+      "description": "Causal tensor flow optimization combined with data entropy pruning tree to execute logical hypothesis pruning. / 因果テンソル流の最適化とデータエントロピー削除木を結合し、論理仮説の枝刈りを実行する高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-24T16:13:26.506936"
     }
   },
   "archived_macros": {
@@ -18878,7 +18878,17 @@
       "v5_audited": true,
       "created_at": "2026-11-24T10:14:47.037446",
       "archived_at": "2026-11-24T15:57:11.422642"
+    },
+    "§X1718": {
+      "name": "CAUSAL_ENTROPY_PRUNE_LATTICE",
+      "expansion": "§DATA_ENTROPY_CAUSAL_BOUND > { §LOGIC_PROB_PRUNE_GATE } => §DATA_TENSOR_CAUSAL_LATTICE",
+      "description": "Applies entropy bounds and probabilistic pruning gates to optimize the data tensor causal lattice / データテンソル因果格子を最適化するため、エントロピー境界と確率的プルーニングゲートを適用する複合マクロ",
+      "usage_count": 2,
+      "last_used_at": "2026-11-21T23:02:28.961304",
+      "v5_audited": true,
+      "created_at": "2026-11-21T20:08:34.009394",
+      "archived_at": "2026-11-24T16:13:26.506936"
     }
   },
-  "next_macro_seq": 1886
+  "next_macro_seq": 1887
 }
