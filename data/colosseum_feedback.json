@@ -8,6 +8,8 @@
     "description": "再帰的検証による確信度評価と安全なフォールバック状態への遷移を経て、分散エージェント間の合意形成を確定させる実務マクロ"
   },
   "proposed_scenario": "【コロシアム発・実務検証】マルチエージェント間におけるトークン飽和および推論確信度の動的低下を模擬し、フォールバック状態から弁証法的収束に至るまでのリソース再分配とエラー復旧プロトコルの実効性検証",
-  "consumed_by_macro": false,
-  "consumed_by_dialogue": false
+  "consumed_by_macro": true,
+  "consumed_by_dialogue": true,
+  "consumed_by_dialogue_at": "2026-11-25T03:19:53.345439",
+  "consumed_by_macro_at": "2026-11-25T03:25:21.263906"
 }
