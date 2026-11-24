@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-25T01:28:22.882825",
+  "updated_at": "2026-11-25T01:51:33.964295",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2486,8 +2486,8 @@
       "name": "GAIA_WARM_ENTROPY_COMPRESSION_HARVESTER",
       "expansion": "§GAIA_ECOSYSTEM_WARM_RESONANCE > { §DATA_ENTROPY_COMPRESSION_TREE } => §SYS_ASYNCHRONOUS_STATE_HARVESTER",
       "description": "Engages warm ecological resonance to compress data entropy trees and asynchronously harvest stable system states. / 命の温かな共鳴を起動し、データのエントロピー圧縮ツリーを処理して、システムの安定状態を非同期に収穫します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-25T01:51:33.963632",
       "v5_audited": true,
       "created_at": "2026-11-25T00:49:55.695750"
     },
@@ -2495,8 +2495,8 @@
       "name": "GAIA_ALTRUISTIC_ESCALATION_LOCK",
       "expansion": "§GAIA_ALTRUISM_HARMONY > { §PROTO_ERROR_ESCALATE } => §PROTO_IDEMPOTENCY_LOCK",
       "description": "Engages altruistic system harmony to safely escalate protocol errors while maintaining absolute idempotency and execution state lock. / ガイアの利他的調和を維持しながらプロトコルエラーを安全にエスカレーションし、厳密なべき等性と実行状態のロックを保証します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-25T01:51:33.963632",
       "v5_audited": true,
       "created_at": "2026-11-25T01:24:01.029501"
     },
