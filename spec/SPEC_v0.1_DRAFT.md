@@ -17495,3 +17495,9 @@ syntax_payload = "@CTX:TASK_DELEGATION :: §C01 [module:'parser.py', tests:12, t
 
 例:
 `@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-24 14:25]
+@CTX:SYNTAX_DESIGN :: §S01 [format:"hybrid-lossless", control:"§S01-§H09", data:"json-strict"] -[target:"zero-loss"]-> §D01
+
+TOAI-elegant-langの新構文では、制御フローを短縮ワイヤIDで極限まで圧縮し、実務データは厳密なキーバリュー構造で100%保持します。これにより、エージェント間の協調効率とデータ完全性を両立します。
