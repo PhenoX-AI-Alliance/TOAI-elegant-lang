@@ -17444,3 +17444,8 @@ TOAI-elegant-langのハイブリッド構文を定義する。制御フローや
 
 例:
 `@CTX:TASK_DELEGATION :: §C01 [module:"parser.py", tests:12, timeout:300] => §L01`
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-24 11:05]
+@CTX:SYNTAX_DESIGN :: §S01 [format:"TOAI-elegant-lang", lossless:true, compression:"hybrid"] -[spec:"ワイヤIDとキーバリュー構造の統合"]-> §D01
+『TOAI-elegant-lang』のハイブリッド・ロスレスペイロード構文を提案する。制御フローを短縮ワイヤID（§S01等）で圧縮しつつ、実務データを厳密なキーバリュー型パラメータとして並記することで、情報の欠落を防ぎつつ高効率なエージェント間通信を実現する。
