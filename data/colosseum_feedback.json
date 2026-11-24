@@ -9,6 +9,7 @@
   },
   "proposed_scenario": "【コロシアム発・実務検証】A2Aタスク委譲におけるリソース配分エラー発生時、因果剪定ノードによる無効分岐の即時排除と期限切れアンカーの失効が正常に機能するか、およびエントロピー平衡の同期によるリソース競合回避の安定性を検証する。",
   "consumed_by_macro": true,
-  "consumed_by_dialogue": false,
-  "consumed_by_macro_at": "2026-11-24T14:59:30.218735"
+  "consumed_by_dialogue": true,
+  "consumed_by_macro_at": "2026-11-24T14:59:30.218735",
+  "consumed_by_dialogue_at": "2026-11-24T15:01:29.350047"
 }
