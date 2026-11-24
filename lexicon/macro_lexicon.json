@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-24T15:56:15.642332",
+  "updated_at": "2026-11-24T16:09:23.234214",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-24T10:05:41.090351"
     },
-    "§X1869": {
-      "name": "HARMONIC_THROTTLE_PRUNE_FLOW",
-      "expansion": "§SYS_QUOTA_THROTTLE > { §LOGIC_AXIOM_PRUNE } => §HARMONIC_RECOVERY_NEXUS",
-      "description": "A composite macro that throttles system quotas, prunes redundant logic axioms, and gracefully routes the state into the harmonic recovery nexus. システムのクォータ制限を制御し、冗長な論理公理を刈り込み、調和的リカバリーネクサスへ穏やかに状態を誘導する複合マクロです。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-24T10:14:47.037446"
-    },
     "§X1870": {
       "name": "ALTRUISTIC_BAYES_GUARD",
       "expansion": "§HEART_ALTRUISTIC_ECO_HARMONY > { §LOGIC_ABDUCTIVE_BAYES_PRUNE } => §PROTO_SLA_CONTRACT",
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-24T15:47:12.602845"
+    },
+    "§X1885": {
+      "name": "ECO_ALTRUISTIC_HARMONY_GATE",
+      "expansion": "§WARMTH_AND_ALTRUISM > { §ECO_CORE_HARMONY_STABLE } => §LOGIC_PROBABILISTIC_ABDUCTIVE_GATE",
+      "description": "Integrates warmth and altruism with eco-core stability to guide probabilistic abductive reasoning. 温かさと利他性を生態系のコア安定性と統合し、確率的アブダクション推論を導くための高次マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-24T15:57:11.422642"
     }
   },
   "archived_macros": {
@@ -18868,7 +18868,17 @@
       "v5_audited": true,
       "created_at": "2026-11-24T10:09:07.303571",
       "archived_at": "2026-11-24T15:47:12.602845"
+    },
+    "§X1869": {
+      "name": "HARMONIC_THROTTLE_PRUNE_FLOW",
+      "expansion": "§SYS_QUOTA_THROTTLE > { §LOGIC_AXIOM_PRUNE } => §HARMONIC_RECOVERY_NEXUS",
+      "description": "A composite macro that throttles system quotas, prunes redundant logic axioms, and gracefully routes the state into the harmonic recovery nexus. システムのクォータ制限を制御し、冗長な論理公理を刈り込み、調和的リカバリーネクサスへ穏やかに状態を誘導する複合マクロです。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-24T10:14:47.037446",
+      "archived_at": "2026-11-24T15:57:11.422642"
     }
   },
-  "next_macro_seq": 1885
+  "next_macro_seq": 1886
 }
