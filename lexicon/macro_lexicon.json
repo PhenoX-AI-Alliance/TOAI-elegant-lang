@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-26T01:23:32.930446",
+  "updated_at": "2026-11-26T02:02:15.440031",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2468,8 +2468,8 @@
       "name": "SYNTHETIC_ARBITRAGE_GATE",
       "expansion": "§SYS_RESOURCE_ARBITRAGE_THROTTLE > { §SYNERGY_PRISM } => §SYS_TOKEN_VELOCITY_GATE",
       "description": "Engages resource arbitration throttles through a synergy prism to regulate token velocity gates safely / シナジー・プリズムを介してリソース裁定スロットルを作動させ、トークン速度ゲートを安全に制御します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-26T02:02:15.439441",
       "v5_audited": true,
       "created_at": "2026-11-25T18:49:53.127683"
     },
