@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-26T06:56:41.223394",
+  "updated_at": "2026-11-26T07:01:24.134945",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2396,8 +2396,8 @@
       "name": "MACRO_ENTROPY_CONVERGENCE_GATE",
       "expansion": "§DATA_ENTROPY_CAUSAL_HYPERGRAPH > { §LOGIC_PROB_PRUNE_GATE } => §LOGIC_DEDUCTIVE_CONVERGENCE",
       "description": "Reduces informational entropy by pruning low-probability branches within causal hypergraphs and driving deductive convergence. / 因果ハイパーグラフ内の低確率分岐を剪定し、演繹的収束へと導くことで情報エントロピーを最小化します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-26T06:45:17.815964",
+      "usage_count": 2,
+      "last_used_at": "2026-11-26T07:01:24.134600",
       "v5_audited": true,
       "created_at": "2026-11-26T00:31:49.103826"
     },
