@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-25T18:04:36.225774",
+  "updated_at": "2026-11-25T19:05:24.356870",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-25T08:01:32.731425"
     },
-    "§X1918": {
-      "name": "HARMONIC_CAUSAL_PRUNE_SYNTHESIS",
-      "expansion": "§HARMONIC_RESONANCE > { §DATA_CAUSAL_PRUNE_TREE } => §SYNERGY_PRISM",
-      "description": "Engages harmonic resonance to prune causal data trees, ultimately refracting the purified state through the synergy prism. / 調和共鳴を作動させて因果データツリーを剪定し、最終的にシナジープリズムを通して浄化された状態を屈折させます。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-25T09:19:03.970617"
-    },
     "§X1919": {
       "name": "ALTRUISTIC_ENTROPY_HARMONY_SYNC",
       "expansion": "§DATA_ENTROPY_CAUSAL_PACK > { §HEART_ALTRUISTIC_PULSE_SYNC } => §ELEGANT_HARMONY_ECHO",
@@ -2432,8 +2423,8 @@
       "name": "COMPOUND_BAYES_FALSIFICATION_OPTIMIZER",
       "expansion": "§LOGIC_ABDUCTIVE_BAYES_PRUNE > { §LOGIC_RECURSIVE_FALSIFICATION_PRUNE } => §SYS_QUANTUM_MEM_RECLAIM",
       "description": "Applies abductive Bayesian pruning followed by recursive falsification to eliminate invalid logical branches, then reclaims unused memory space in the quantum register. / 抽象化されたベイズ刈り込みと再帰的反証処理を連鎖させ、無効な論理分岐を排除した上で量子レジスタのメモリ領域を最適に回収する複合マクロです。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-25T19:05:24.356554",
       "v5_audited": true,
       "created_at": "2026-11-25T12:58:00.103772"
     },
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-25T18:02:12.970393"
+    },
+    "§X1934": {
+      "name": "SYNTHETIC_ARBITRAGE_GATE",
+      "expansion": "§SYS_RESOURCE_ARBITRAGE_THROTTLE > { §SYNERGY_PRISM } => §SYS_TOKEN_VELOCITY_GATE",
+      "description": "Engages resource arbitration throttles through a synergy prism to regulate token velocity gates safely / シナジー・プリズムを介してリソース裁定スロットルを作動させ、トークン速度ゲートを安全に制御します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-25T18:49:53.127683"
     }
   },
   "archived_macros": {
@@ -19358,7 +19358,17 @@
       "v5_audited": true,
       "created_at": "2026-11-25T09:17:49.248872",
       "archived_at": "2026-11-25T18:02:12.970393"
+    },
+    "§X1918": {
+      "name": "HARMONIC_CAUSAL_PRUNE_SYNTHESIS",
+      "expansion": "§HARMONIC_RESONANCE > { §DATA_CAUSAL_PRUNE_TREE } => §SYNERGY_PRISM",
+      "description": "Engages harmonic resonance to prune causal data trees, ultimately refracting the purified state through the synergy prism. / 調和共鳴を作動させて因果データツリーを剪定し、最終的にシナジープリズムを通して浄化された状態を屈折させます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-25T09:19:03.970617",
+      "archived_at": "2026-11-25T18:49:53.127683"
     }
   },
-  "next_macro_seq": 1934
+  "next_macro_seq": 1935
 }
