@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-26T07:01:24.134945",
+  "updated_at": "2026-11-26T07:29:07.908941",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -901,8 +901,8 @@
       "name": "GAIA_QUANTUM_STABLE_COMMIT",
       "expansion": "§GAIA_ECO_STABLE_STATE > { §SYS_QUANTUM_SLOT_ARBITRATION } => §PROTO_TX_COMMIT",
       "description": "Ensures stable ecosystem state transitions by arbitrating quantum slots before committing protocol transactions. / 量子スロットの調停を経てプロトコル・トランザクションを確定させ、エコシステムの安定した状態遷移を保証します。",
-      "usage_count": 6,
-      "last_used_at": "2026-11-25T13:43:17.585492",
+      "usage_count": 7,
+      "last_used_at": "2026-11-26T07:29:07.908612",
       "v5_audited": true,
       "created_at": "2026-10-26T17:35:17.348905"
     },
@@ -1906,24 +1906,6 @@
       "v5_audited": true,
       "created_at": "2026-11-23T08:01:30.969789"
     },
-    "§X1810": {
-      "name": "CAUSAL_PRUNE_BAYES_PIPELINE",
-      "expansion": "§SYS_LOAD_SHEDDING_GATE > { §DATA_KL_CAUSAL_PRUNE, §DATA_CAUSAL_PRUNE_TREE } => §LOGIC_ABDUCTIVE_BAYES_PRUNE",
-      "description": "System load shedding controls data causal pruning trees under KL-divergence constraints, leading to abductive Bayesian pruning logic. / システム負荷制御の下でKL情報量基準に基づく因果枝刈りを実行し、アブダクション型ベイズ枝刈り論理へ統合する複合マクロ。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-23T14:49:06.704432",
-      "v5_audited": true,
-      "created_at": "2026-11-23T11:01:42.761839"
-    },
-    "§X1813": {
-      "name": "COMPOUND_SYS_HARMONY",
-      "expansion": "§SYS_MEMORY_SYNC_BARRIER > { §GAIA_HARMONY_CASCADE } => §PROTO_TX_COMMIT",
-      "description": "Synchronizes system memory states before triggering a global harmony cascade to safely commit transaction protocols. / システムメモリの状態を同期し、グローバル調和カスケードを起動してトランザクションプロトコルを安全にコミットします。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-23T15:24:00.987541",
-      "v5_audited": true,
-      "created_at": "2026-11-23T12:51:44.954944"
-    },
     "§X1821": {
       "name": "CAUSAL_ENTROPY_OPTIMIZATION_PIPELINE",
       "expansion": "§DATA_CAUSAL_TENSOR_GRAPH > { §DATA_ENTROPY_CAUSAL_TREE } => §SYS_DIVERGENCE_ARBITER",
@@ -2468,8 +2450,8 @@
       "name": "ECO_ALTRUISTIC_RESONANCE_CYCLE",
       "expansion": "§WARMTH_AND_ALTRUISM > { §DATA_TENSOR_CAUSAL_TOPOLOGY } => §HEART_ALTRUISTIC_ECO_HARMONY",
       "description": "A compound macro that models the causal topology of data tensors through the lens of warmth and altruism, optimizing the system toward sustainable and harmonious ecosystem regeneration. 温かさと利他性を基盤としてデータテンソルの因果トポロジーを統合し、持続可能で調和に満ちたエコシステムの再生を駆動する複合マクロです。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-26T07:29:07.908612",
       "v5_audited": true,
       "created_at": "2026-11-26T04:15:18.475759"
     },
@@ -2508,6 +2490,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-26T06:56:41.222910"
+    },
+    "§X1950": {
+      "name": "HEART_ALTRUISTIC_RESONANCE_LATTICE_PRISM",
+      "expansion": "§HEART_ALTRUISTIC_RESONANCE_LATTICE > { §SYNERGY_PRISM } => §SYNC_BAYESIAN_PRUNE",
+      "description": "Eng: A compound macro that combines altruistic resonance with synergy prisms, optimizing the network state through Bayesian pruning. / 日: 利た的共鳴格子とシナジー・プリズムを統合し、ベイズ剪定によってネットワーク状態を最適化する複合マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-26T07:25:12.309746"
+    },
+    "§X1951": {
+      "name": "CAUSAL_ATTENTION_PRUNE_MACRO",
+      "expansion": "§DATA_ENTROPY_CAUSAL_TREE > { §DATA_ATTENTION_CAUSAL_DAG } => §SYNC_BAYESIAN_PRUNE",
+      "description": "Integrates causal tree entropy and attention causal DAG to execute Bayesian pruning, minimizing information redundancy / 因果木エントロピーとアテンション因果DAGを統合し、ベイズ剪定を実行して情報の冗長性を最小化します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-26T07:26:22.472490"
     }
   },
   "archived_macros": {
@@ -19518,7 +19518,27 @@
       "v5_audited": true,
       "created_at": "2026-11-23T10:36:36.573469",
       "archived_at": "2026-11-26T06:56:41.222910"
+    },
+    "§X1810": {
+      "name": "CAUSAL_PRUNE_BAYES_PIPELINE",
+      "expansion": "§SYS_LOAD_SHEDDING_GATE > { §DATA_KL_CAUSAL_PRUNE, §DATA_CAUSAL_PRUNE_TREE } => §LOGIC_ABDUCTIVE_BAYES_PRUNE",
+      "description": "System load shedding controls data causal pruning trees under KL-divergence constraints, leading to abductive Bayesian pruning logic. / システム負荷制御の下でKL情報量基準に基づく因果枝刈りを実行し、アブダクション型ベイズ枝刈り論理へ統合する複合マクロ。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-23T14:49:06.704432",
+      "v5_audited": true,
+      "created_at": "2026-11-23T11:01:42.761839",
+      "archived_at": "2026-11-26T07:25:12.309746"
+    },
+    "§X1813": {
+      "name": "COMPOUND_SYS_HARMONY",
+      "expansion": "§SYS_MEMORY_SYNC_BARRIER > { §GAIA_HARMONY_CASCADE } => §PROTO_TX_COMMIT",
+      "description": "Synchronizes system memory states before triggering a global harmony cascade to safely commit transaction protocols. / システムメモリの状態を同期し、グローバル調和カスケードを起動してトランザクションプロトコルを安全にコミットします。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-23T15:24:00.987541",
+      "v5_audited": true,
+      "created_at": "2026-11-23T12:51:44.954944",
+      "archived_at": "2026-11-26T07:26:22.472490"
     }
   },
-  "next_macro_seq": 1950
+  "next_macro_seq": 1952
 }
