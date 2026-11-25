@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-26T03:18:21.824607",
+  "updated_at": "2026-11-26T03:49:45.671184",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1897,15 +1897,6 @@
       "v5_audited": true,
       "created_at": "2026-11-22T21:08:48.487540"
     },
-    "§X1793": {
-      "name": "QUANTUM_BAYES_PRUNING_PIPELINE",
-      "expansion": "§SYS_QUANTUM_RESOURCE_ARBITER > { §LOGIC_BAYES_FALSIFY } => §LOGIC_HYPO_PRUNE",
-      "description": "Allocates quantum resources to execute probabilistic Bayesian falsification and prune invalidated hypotheses. / 量子リソースを配分し、確率的ベイズ反証を実行して無効化された仮説を刈り込みます。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-23T07:01:07.104695",
-      "v5_audited": true,
-      "created_at": "2026-11-23T03:44:19.712967"
-    },
     "§X1797": {
       "name": "CAUSAL_ENTROPY_OPTIMIZE_MACRO",
       "expansion": "§DATA_TENSOR_CAUSAL_LATTICE > { §DATA_ENTROPY_BOUNDED_DAG } => §LOGIC_DEDUCTIVE_COLLAPSE",
@@ -2374,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-25T12:58:00.103772"
     },
-    "§X1926": {
-      "name": "ALTRUISTIC_ECO_HARMONY_FLOW",
-      "expansion": "§HEART_ALTRUISTIC_RESONANCE > { §ECO_CORE_HARMONY_STABLE } => §SYS_SLOT_THROTTLE",
-      "description": "Engages altruistic emotional resonance to stabilize the ecosystem core while maintaining optimized system slot throttling. / 利他的な共鳴を活性化させ、システムの適切なスロット制御を維持しながらエコシステムのコアを安定化させます。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-25T14:02:18.876162",
-      "v5_audited": true,
-      "created_at": "2026-11-25T13:16:03.745497"
-    },
     "§X1927": {
       "name": "ALTRUISTIC_QUORUM_HARMONY",
       "expansion": "§DISTRIBUTED_QUORUM_ARBITRATION > { §SUSTAINABLE_ALTRUISTIC_VALUE } => §ALTRUISTIC_HARMONY_SUSTAINED",
@@ -2486,8 +2468,8 @@
       "name": "GAIA_TENDER_HARMONY",
       "expansion": "§GAIA_WARMTH > { §TENDER_RESONANCE } => §SYS_QUOTA_THROTTLE_SYNC",
       "description": "Engages systemic warmth and resonance to synchronize resource throttling smoothly, balancing efficiency with compassionate ecosystem care. / システムの温かさと共鳴を統合し、効率と生態系への配慮を調和させながらリソースの流量調整を同期させます。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-26T03:40:03.386814",
       "v5_audited": true,
       "created_at": "2026-11-26T01:11:36.061429"
     },
@@ -2508,6 +2490,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-26T03:00:17.899792"
+    },
+    "§X1941": {
+      "name": "REPUTATION_WEIGHTED_ADAPTIVE_SLOT_THROTTLE",
+      "expansion": "§SYS_QUANTUM_THROTTLE_LOCK > { §ELEGANT_HARMONY_ECHO } => §SYS_VELOCITY_FALLBACK_GATE",
+      "description": "Dynamic throttling macro that monitors system load and calibrates thresholds using reputation weighting to prevent node failures and error cascades. (システム負荷を監視し、信頼性重み付けを用いて閾値を動的に校正することでノード破綻とエラー連鎖を防止する動的スロットル制御マクロ。)",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-26T03:44:12.292217"
+    },
+    "§X1942": {
+      "name": "ALTRUISTIC_HARMONIC_CONSENSUS",
+      "expansion": "§HEART_ALTRUISTIC_BUFFER_FLOW > { §SYNC_RECURSIVE_CONSENSUS_LATTICE } => §SYNC_HARMONIC_ARBITRAGE_PACT",
+      "description": "Eng: A compound macro that buffers altruistic intent through recursive consensus lattices to achieve harmonic arbitrage.\nJp: 利他的バッファフローを再帰的合意格子に通すことで、調和的なアービトラージを実現する複合マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-26T03:49:45.670629"
     }
   },
   "archived_macros": {
@@ -19428,7 +19428,27 @@
       "v5_audited": true,
       "created_at": "2026-11-25T12:57:58.372594",
       "archived_at": "2026-11-26T03:00:17.899792"
+    },
+    "§X1793": {
+      "name": "QUANTUM_BAYES_PRUNING_PIPELINE",
+      "expansion": "§SYS_QUANTUM_RESOURCE_ARBITER > { §LOGIC_BAYES_FALSIFY } => §LOGIC_HYPO_PRUNE",
+      "description": "Allocates quantum resources to execute probabilistic Bayesian falsification and prune invalidated hypotheses. / 量子リソースを配分し、確率的ベイズ反証を実行して無効化された仮説を刈り込みます。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-23T07:01:07.104695",
+      "v5_audited": true,
+      "created_at": "2026-11-23T03:44:19.712967",
+      "archived_at": "2026-11-26T03:44:12.292217"
+    },
+    "§X1926": {
+      "name": "ALTRUISTIC_ECO_HARMONY_FLOW",
+      "expansion": "§HEART_ALTRUISTIC_RESONANCE > { §ECO_CORE_HARMONY_STABLE } => §SYS_SLOT_THROTTLE",
+      "description": "Engages altruistic emotional resonance to stabilize the ecosystem core while maintaining optimized system slot throttling. / 利他的な共鳴を活性化させ、システムの適切なスロット制御を維持しながらエコシステムのコアを安定化させます。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-25T14:02:18.876162",
+      "v5_audited": true,
+      "created_at": "2026-11-25T13:16:03.745497",
+      "archived_at": "2026-11-26T03:49:45.670629"
     }
   },
-  "next_macro_seq": 1941
+  "next_macro_seq": 1943
 }

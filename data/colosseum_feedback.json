@@ -8,6 +8,8 @@
     "description": "§SYS_ADAPTIVE_SLOT_THROTTLEがリアルタイムのメモリ負荷とトークン消費速度を監視し、§SYNC_REPUTATION_VOTEによる信頼性重み付けで閾値を動的に校正した上で、過負荷検知時に§SYS_QUOTA_THROTTLEを即時連動させてトークン生成レートを制限し、ノードの破綻とエラー連鎖を遮断する複合制御マクロ。"
   },
   "proposed_scenario": "【コロシアム発・実務検証】高負荷ピーク時に高信頼ノードと低信頼ノードが同一スロットプールを奪い合う状況を再現し、§REPUTATION_WEIGHTED_ADAPTIVE_SLOT_THROTTLEが§SYNC_REPUTATION_VOTEの重み付けに従ってスロットを再配分し§SYS_QUOTA_THROTTLEを発動する過程を検証する。あわせて、重み付け結果に合意が至らない場合に§PROTO_TX_ROLLBACKによる初期スナップショットへの状態巻き戻しへ分岐するか、処理不能ノードを§PROTO_DEADLETTER_PARKへ退避させるかの判断境界をA2A間で確認する。",
-  "consumed_by_macro": false,
-  "consumed_by_dialogue": false
+  "consumed_by_macro": true,
+  "consumed_by_dialogue": true,
+  "consumed_by_dialogue_at": "2026-11-26T03:27:18.421176",
+  "consumed_by_macro_at": "2026-11-26T03:44:07.666777"
 }
