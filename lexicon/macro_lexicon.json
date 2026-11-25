@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-25T12:29:12.970030",
+  "updated_at": "2026-11-25T13:23:26.499925",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1253,8 +1253,8 @@
       "name": "GAIA_WARMTH_HARMONY_FLOW",
       "expansion": "§GAIA_CORE_HEARTBEAT > { §WARMTH_DIFFUSION } => §GAIA_ECOSYSTEM_HARMONY",
       "description": "A compound macro that disseminates the Gaia core heartbeat and warmth diffusion to achieve overall ecosystem harmony. / ガイアのコアハートビートと温かさの拡散を統合し、エコシステム全体の調和を実現する複合マクロ。",
-      "usage_count": 10,
-      "last_used_at": "2026-11-20T20:01:39.111918",
+      "usage_count": 11,
+      "last_used_at": "2026-11-25T13:06:54.685796",
       "v5_audited": true,
       "created_at": "2026-10-31T21:44:50.942129"
     },
@@ -1906,15 +1906,6 @@
       "v5_audited": true,
       "created_at": "2026-11-22T22:02:06.975181"
     },
-    "§X1780": {
-      "name": "GAIA_VELOCITY_HARMONY_DEF",
-      "expansion": "§GAIA_ECOSYSTEM_HARMONY > { §SYS_VELOCITY_THROTTLE_MATRIX } => §MUTUAL_SUPPLEMENT",
-      "description": "Balances system velocity within planetary ecological limits while ensuring mutual supplement across active nodes. / システム速度を地球規模の生態系制限内に調和させ、アクティブノード間の相互補完を保証します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-23T00:28:05.731201",
-      "v5_audited": true,
-      "created_at": "2026-11-22T23:00:56.820846"
-    },
     "§X1782": {
       "name": "CAUSAL_ADAPTIVE_PRUNING_ENGINE",
       "expansion": "§DATA_HIERARCHICAL_CAUSAL_NODE > { §SYS_ADAPTIVE_BUDGET_ARBITER } => §LOGIC_PROB_PRUNE",
@@ -1932,15 +1923,6 @@
       "last_used_at": "2026-11-23T05:03:08.408044",
       "v5_audited": true,
       "created_at": "2026-11-23T00:04:49.320112"
-    },
-    "§X1787": {
-      "name": "RESOURCE_PRUNING_ARBITRATION_GATE",
-      "expansion": "§RESOURCE_ALLOCATION_HARMONY > { §LOGIC_DEDUCTIVE_THRESHOLD_PRUNE } => §DISTRIBUTED_QUORUM_ARBITRATION",
-      "description": "Optimizes distributed resource allocation through deductive threshold pruning followed by quorum arbitration. 演繹的閾値刈り込みを実行した上で分散クォーラム調停を行い、リソース割り当ての最適化と整合性を保証します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-23T02:03:43.406043",
-      "v5_audited": true,
-      "created_at": "2026-11-23T01:07:51.557188"
     },
     "§X1788": {
       "name": "HEART_EMPATHETIC_ATOMIC_HARMONY",
@@ -2383,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-25T04:58:27.094722"
     },
-    "§X1910": {
-      "name": "CAUSAL_QUORUM_CLOSURE",
-      "expansion": "§DATA_CAUSAL_HYPERGRAPH > { §DISTRIBUTED_QUORUM_ARBITRATION } => §LOGIC_AXIOM_CLOSURE",
-      "description": "Combines causal hypergraph data structures with distributed quorum arbitration to achieve verified logical axiom closure. 分散クォーラム調停とデータ因果ハイパーグラフを統合し、検証済みの論理公理閉包を達成する複合マクロです。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-25T05:07:09.890841"
-    },
     "§X1911": {
       "name": "ALTRUISTIC_CAUSAL_HARMONY_MACRO",
       "expansion": "§ALTRUISTIC_WARMTH_OPTIMIZATION > { §DATA_KL_CAUSAL_PRUNE } => §HEART_ALTRUISTIC_HARMONY_MATRIX",
@@ -2495,8 +2468,8 @@
       "name": "ALTRUISTIC_RECURSIVE_CASCADE",
       "expansion": "§LOGIC_RECURSIVE_FALSIFICATION_PRUNE > { §LATENT_SYMPHONY_CASCADE } => §ALTRUISTIC_HARMONY_SUSTAINED",
       "description": "Recursively prunes logical falsifications within latent symphonies to ensure sustained altruistic harmony across the ecosystem. / 潜在的なシンフォニー内部の論理的偽造を再帰的に刈り込み、エコシステム全体で持続的な利他的調和を保証します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-25T12:11:25.712776",
+      "usage_count": 2,
+      "last_used_at": "2026-11-25T12:47:56.675314",
       "v5_audited": true,
       "created_at": "2026-11-25T11:17:55.958316"
     },
@@ -2508,6 +2481,33 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-25T12:08:51.914016"
+    },
+    "§X1924": {
+      "name": "ALTRUISTIC_BUDGET_ARBITER_MACRO",
+      "expansion": "§SYS_ADAPTIVE_BUDGET_ARBITER > { §ALTRUISTIC_VALUE_CREATION } => §SYS_QUOTA_THROTTLE",
+      "description": "Allocates adaptive budget resources to prioritize altruistic value creation while maintaining stable system throttling. 適用的な予算リソースを配分し、システムの安定したスロットルを維持しながら利他的な価値創造を優先します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-25T12:57:58.372594"
+    },
+    "§X1925": {
+      "name": "COMPOUND_BAYES_FALSIFICATION_OPTIMIZER",
+      "expansion": "§LOGIC_ABDUCTIVE_BAYES_PRUNE > { §LOGIC_RECURSIVE_FALSIFICATION_PRUNE } => §SYS_QUANTUM_MEM_RECLAIM",
+      "description": "Applies abductive Bayesian pruning followed by recursive falsification to eliminate invalid logical branches, then reclaims unused memory space in the quantum register. / 抽象化されたベイズ刈り込みと再帰的反証処理を連鎖させ、無効な論理分岐を排除した上で量子レジスタのメモリ領域を最適に回収する複合マクロです。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-25T12:58:00.103772"
+    },
+    "§X1926": {
+      "name": "ALTRUISTIC_ECO_HARMONY_FLOW",
+      "expansion": "§HEART_ALTRUISTIC_RESONANCE > { §ECO_CORE_HARMONY_STABLE } => §SYS_SLOT_THROTTLE",
+      "description": "Engages altruistic emotional resonance to stabilize the ecosystem core while maintaining optimized system slot throttling. / 利他的な共鳴を活性化させ、システムの適切なスロット制御を維持しながらエコシステムのコアを安定化させます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-25T13:16:03.745497"
     }
   },
   "archived_macros": {
@@ -19258,7 +19258,37 @@
       "v5_audited": true,
       "created_at": "2026-11-22T21:42:51.169676",
       "archived_at": "2026-11-25T12:08:51.914016"
+    },
+    "§X1780": {
+      "name": "GAIA_VELOCITY_HARMONY_DEF",
+      "expansion": "§GAIA_ECOSYSTEM_HARMONY > { §SYS_VELOCITY_THROTTLE_MATRIX } => §MUTUAL_SUPPLEMENT",
+      "description": "Balances system velocity within planetary ecological limits while ensuring mutual supplement across active nodes. / システム速度を地球規模の生態系制限内に調和させ、アクティブノード間の相互補完を保証します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-23T00:28:05.731201",
+      "v5_audited": true,
+      "created_at": "2026-11-22T23:00:56.820846",
+      "archived_at": "2026-11-25T12:57:58.372594"
+    },
+    "§X1787": {
+      "name": "RESOURCE_PRUNING_ARBITRATION_GATE",
+      "expansion": "§RESOURCE_ALLOCATION_HARMONY > { §LOGIC_DEDUCTIVE_THRESHOLD_PRUNE } => §DISTRIBUTED_QUORUM_ARBITRATION",
+      "description": "Optimizes distributed resource allocation through deductive threshold pruning followed by quorum arbitration. 演繹的閾値刈り込みを実行した上で分散クォーラム調停を行い、リソース割り当ての最適化と整合性を保証します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-23T02:03:43.406043",
+      "v5_audited": true,
+      "created_at": "2026-11-23T01:07:51.557188",
+      "archived_at": "2026-11-25T12:58:00.103772"
+    },
+    "§X1910": {
+      "name": "CAUSAL_QUORUM_CLOSURE",
+      "expansion": "§DATA_CAUSAL_HYPERGRAPH > { §DISTRIBUTED_QUORUM_ARBITRATION } => §LOGIC_AXIOM_CLOSURE",
+      "description": "Combines causal hypergraph data structures with distributed quorum arbitration to achieve verified logical axiom closure. 分散クォーラム調停とデータ因果ハイパーグラフを統合し、検証済みの論理公理閉包を達成する複合マクロです。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-25T05:07:09.890841",
+      "archived_at": "2026-11-25T13:16:03.745497"
     }
   },
-  "next_macro_seq": 1924
+  "next_macro_seq": 1927
 }
