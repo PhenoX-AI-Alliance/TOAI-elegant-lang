@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-25T19:05:24.356870",
+  "updated_at": "2026-11-25T23:48:31.265068",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2459,8 +2459,8 @@
       "name": "OPTIMIZE_FALLBACK_RESOURCE_ALLOCATION",
       "expansion": "§HEART_EMPATHY_TENSOR -> { §LOGIC_POSTERIOR_PRUNE } => §DATA_ENTROPY_PACK",
       "description": "Optimizes resource allocation by transitioning to a safe fallback state via posterior logic pruning when low confidence or high entropy is detected. 低信頼度検知時に事後論理枝刈りを経て安全なフォールバック状態へ移行し、データエントロピーの圧縮によってリソース再分配を最適化する複合マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-25T19:14:30.305545",
       "v5_audited": true,
       "created_at": "2026-11-25T17:13:47.280567"
     },
