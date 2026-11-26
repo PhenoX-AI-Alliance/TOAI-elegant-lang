@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-26T14:28:37.603650",
+  "updated_at": "2026-11-26T14:47:32.795472",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1271,8 +1271,8 @@
       "name": "GAIA_HARMONY_FLOW",
       "expansion": "§GAIA_ECOSYSTEM_HARMONY > { §PROTO_PRIORITY_PREEMPT } => §DATA_ENTROPY_CAUSAL_PACK",
       "description": "Prioritizes ecosystem harmony and preempts resource contention to ensure optimal causal packing and minimal entropy. / 生態系の調和を最優先し、リソース競合をプリエンプトすることで、最適な因果パッキングと最小限のエントロピーを保証します。",
-      "usage_count": 6,
-      "last_used_at": "2026-11-26T08:46:35.750402",
+      "usage_count": 7,
+      "last_used_at": "2026-11-26T14:47:32.795055",
       "v5_audited": true,
       "created_at": "2026-11-01T08:07:41.967721"
     },
@@ -2486,8 +2486,8 @@
       "name": "COMPOUND_ENTROPY_DISPATCH_PRISM",
       "expansion": "§DATA_ENTROPY_BOUNDED_DAG > { §PROTO_TOOL_DISPATCH } => §LOGIC_PROBABILISTIC_FALSIFICATION_PRISM",
       "description": "Binds bounded data entropy within a DAG structure, dispatches necessary tools, and evaluates the resulting state through probabilistic falsification prisms. / DAG構造内でエントロピーが制限されたデータを束ね、ツールディスパッチを実行した上で、確率的偽証プリズムを通して結果を検証します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-26T14:47:23.322641",
       "v5_audited": true,
       "created_at": "2026-11-26T13:39:19.643862"
     },
@@ -2495,8 +2495,8 @@
       "name": "MACRO_ALTRUISTIC_CONSENSUS_SHIELD",
       "expansion": "§HEART_ALTRUISTIC_RESONANCE_ALIGNMENT > { §SYNC_DISTRIBUTED_QUORUM_ARBITRATION } => §PROTO_DEADLETTER_PARK",
       "description": "Engages altruistic resonance alignment to govern distributed quorum arbitration, gracefully isolating unresolved anomalies into the deadletter park to maintain ecosystem harmony. / 分散合意調停において利他的一致共鳴を適用し、未解決の異常をデッドレターパークへ優しく隔離することでエコシステムの調和を維持します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-26T14:28:37.603232",
+      "usage_count": 2,
+      "last_used_at": "2026-11-26T14:36:31.231498",
       "v5_audited": true,
       "created_at": "2026-11-26T14:00:43.351963"
     },
