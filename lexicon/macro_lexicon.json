@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-26T12:41:01.233957",
+  "updated_at": "2026-11-26T12:49:48.816040",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2468,8 +2468,8 @@
       "name": "SYS_ADAPTIVE_TOKEN_THROTTLE_WITH_GC_BARRIER",
       "expansion": "§SYS_ADAPTIVE_TOKEN_THROTTLE > { §DATA_ENTROPY_PACK } => §SYS_GC_BARRIER",
       "description": "Dynamic adaptation of token limits combined with entropy packaging under strict garbage collection barriers. / 厳格なガベージコレクションバリアのもとでエントロピーパッケージングを伴う動的なトークン制限適応。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-26T12:49:48.815637",
       "v5_audited": true,
       "created_at": "2026-11-26T12:01:51.609545"
     },
