@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-26T16:22:28.869814",
+  "updated_at": "2026-11-26T16:54:16.729901",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1703,8 +1703,8 @@
       "name": "COMPOUND_ATTEST_TX_COMMIT",
       "expansion": "§PROTO_HEALTH_ATTEST > { §SYS_VELOCITY_ARBITER } => §PROTO_TX_COMMIT",
       "description": "Performs system velocity arbitration under verified health attestation conditions, then executes transaction commitment. / 健全性アテスト検証下でのシステム速度調停を実施し、その後トランザクションをコミットする。",
-      "usage_count": 7,
-      "last_used_at": "2026-11-17T00:43:26.515994",
+      "usage_count": 8,
+      "last_used_at": "2026-11-26T16:44:03.184269",
       "v5_audited": true,
       "created_at": "2026-11-15T09:00:55.888948"
     },
