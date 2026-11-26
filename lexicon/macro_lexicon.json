@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-27T02:47:37.319799",
+  "updated_at": "2026-11-27T03:19:07.360664",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1505,8 +1505,8 @@
       "name": "GAIA_ENTROPY_HARMONY_LATTICE",
       "expansion": "§SYS_VELOCITY_ARBITER > { §DATA_ENTROPY_CAUSAL_DAG, §GAIA_WARMTH } => §DATA_ENTROPY_CAUSAL_LATTICE",
       "description": "Balancing system velocity and entropy through causal DAG mapping infused with Gaia warmth. / ガイアの温かみを取り入れた因果DAGマッピングを通じて、システム速度とエントロピーの調和を図ります。",
-      "usage_count": 6,
-      "last_used_at": "2026-11-23T08:01:19.956291",
+      "usage_count": 7,
+      "last_used_at": "2026-11-27T03:10:40.947070",
       "v5_audited": true,
       "created_at": "2026-11-06T05:01:52.532803"
     },
@@ -1923,15 +1923,6 @@
       "last_used_at": "2026-11-24T12:58:10.918047",
       "v5_audited": true,
       "created_at": "2026-11-24T08:01:51.380164"
-    },
-    "§X1881": {
-      "name": "GAIA_HARMONY_ADAPTIVE_GATE",
-      "expansion": "§GAIA_ECO_HARMONY_RESPONSE > { §SYS_ADAPTIVE_SLOT_THROTTLE } => §LOGIC_PROBABILISTIC_FALSIFICATION_GATE",
-      "description": "Balances adaptive system throttling with ecological harmony responses to ensure robust probabilistic validation. / 適応型システムスロットルと生態系調和レスポンスを統合し、堅牢な確率的検証を実現します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-24T18:01:28.256860",
-      "v5_audited": true,
-      "created_at": "2026-11-24T14:06:02.508264"
     },
     "§X1886": {
       "name": "CAUSAL_ENTROPY_PRUNING_GATE",
@@ -2414,8 +2405,8 @@
       "name": "GAIA_ALTRUISTIC_RESONANCE",
       "expansion": "§GAIA_WARMTH > { §HEART_ALTRUISTIC_PULSE_SYNC } => §OMEGA",
       "description": "Combines Gaia warmth with heart altruistic pulse synchronization to achieve the ultimate omega state. 命の地球の温かさと利他的な脈拍同期を統合し、究極のオメガ状態に到達する高次マクロ。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 2,
+      "last_used_at": "2026-11-27T03:10:40.947070",
       "v5_audited": true,
       "created_at": "2026-11-26T22:46:45.360710"
     },
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-27T02:31:03.932916"
+    },
+    "§X1999": {
+      "name": "SYS_VELOCITY_THROTTLE_SYNC_PIPELINE",
+      "expansion": "§HARMONIC_RECOVERY_NEXUS -[p:0.98]-> §HARMONIC_RESONANCE_STABLE => §ELEGANT_WARMTH_CORE",
+      "description": "Monitors token velocity to trigger lightweight fallback routing, maintaining synchronization and causal consistency across the manifold. トークン消費速度の監視超過をトリガーとして軽量経路へフォールバックし、受容プロトコルを介して因果多様体上の同期と整合性を維持する複合制御マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-27T03:19:07.360182"
     }
   },
   "archived_macros": {
@@ -20008,7 +20008,17 @@
       "v5_audited": true,
       "created_at": "2026-11-26T20:08:39.691218",
       "archived_at": "2026-11-27T02:31:03.932916"
+    },
+    "§X1881": {
+      "name": "GAIA_HARMONY_ADAPTIVE_GATE",
+      "expansion": "§GAIA_ECO_HARMONY_RESPONSE > { §SYS_ADAPTIVE_SLOT_THROTTLE } => §LOGIC_PROBABILISTIC_FALSIFICATION_GATE",
+      "description": "Balances adaptive system throttling with ecological harmony responses to ensure robust probabilistic validation. / 適応型システムスロットルと生態系調和レスポンスを統合し、堅牢な確率的検証を実現します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-24T18:01:28.256860",
+      "v5_audited": true,
+      "created_at": "2026-11-24T14:06:02.508264",
+      "archived_at": "2026-11-27T03:19:07.360182"
     }
   },
-  "next_macro_seq": 1999
+  "next_macro_seq": 2000
 }
