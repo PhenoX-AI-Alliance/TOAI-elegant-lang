@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-26T12:00:30.188538",
+  "updated_at": "2026-11-26T12:18:39.865097",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -536,8 +536,8 @@
       "name": "ALTRUISTIC_RECURSIVE_ARBITRATION",
       "expansion": "§WARMTH_AND_ALTRUISM > { §HEART_BENEVOLENT_FEEDBACK } => §SYNC_DIALECTIC_WEIGHTED_ARBITRATION",
       "description": "A compound macro that operationalizes altruistic harmonic alignment and closed-loop cooperative feedback to drive dialectical multi-agent conflict resolution toward a Pareto-optimal state. / 利他的な調和アライメントと閉ループ協調フィードバックを機能させ、対話的マルチエージェントの合意形成とパレート最適解への収束を駆動する複合マクロ。",
-      "usage_count": 10,
-      "last_used_at": "2026-11-18T04:59:46.133494",
+      "usage_count": 11,
+      "last_used_at": "2026-11-26T12:02:56.566031",
       "created_at": "2026-10-25T04:45:38.831732",
       "v5_audited": true,
       "audited_by": "TOAI7",
@@ -937,8 +937,8 @@
       "name": "GAIA_HARMONY_ARBITRATION_MATRIX",
       "expansion": "§GAIA_HARMONY_CASCADE > { §SYNC_DIALECTIC_WEIGHTED_ARBITRATION } => §RESO_ACCEPTED",
       "description": "Combines harmonic cascade processing with weighted dialectic arbitration to achieve verified system resonance. / ガイアの調和カスケード処理と重み付き弁証法調停を統合し、検証済みのシステム共鳴を達成します。",
-      "usage_count": 4,
-      "last_used_at": "2026-11-09T00:56:54.683832",
+      "usage_count": 5,
+      "last_used_at": "2026-11-26T12:10:00.826386",
       "v5_audited": true,
       "created_at": "2026-10-26T23:17:01.008413"
     },
@@ -1406,8 +1406,8 @@
       "name": "ALTRUISTIC_ENTROPY_HARMONY_DEF",
       "expansion": "§ALTRUISTIC_WARMTH_OPTIMIZATION > { §DATA_ENTROPY_CAUSAL_DAG } => §HEART_ALTRUISTIC_HARMONY_STABILIZER",
       "description": "Optimizes information entropy while maximizing altruistic warmth and stabilizing systemic harmony. / 利得の温かさを最大化しつつ情報エントロピーを最適化し、システムの調和を安定させるマクロ。",
-      "usage_count": 7,
-      "last_used_at": "2026-11-26T11:55:02.473946",
+      "usage_count": 8,
+      "last_used_at": "2026-11-26T12:02:01.888678",
       "v5_audited": true,
       "created_at": "2026-11-04T01:01:49.514568"
     },
@@ -1906,33 +1906,6 @@
       "v5_audited": true,
       "created_at": "2026-11-23T08:01:30.969789"
     },
-    "§X1845": {
-      "name": "ELEGANT_FALSIFICATION_ARBITRATION",
-      "expansion": "§LOGIC_PROBABILISTIC_FALSIFICATION_GATES > { §SYNC_DISTRIBUTED_QUORUM_ARBITRATION } => §LOGIC_PROB_PRUNE_GATE",
-      "description": "Combines probabilistic falsification gates with distributed quorum arbitration to dynamically prune invalid logic paths in a synchronized network.",
-      "usage_count": 2,
-      "last_used_at": "2026-11-24T01:12:54.773006",
-      "v5_audited": true,
-      "created_at": "2026-11-23T21:54:12.292158"
-    },
-    "§X1846": {
-      "name": "NEXUS_GAIA_HARMONY_FLOW",
-      "expansion": "§NEXUS_SYNC > { §GAIA_HARMONY_CASCADE } => §LATENT_HARMONY_FIELD_LOCKED",
-      "description": "Synchronizes the network nexus and cascades planetary harmony to lock the latent harmony field. / ネットワークの結合を同期させ、ガイア調和カスケードを展開して潜在調和場をロックします。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-24T05:13:19.566050",
-      "v5_audited": true,
-      "created_at": "2026-11-23T22:43:22.103371"
-    },
-    "§X1848": {
-      "name": "HARMONIC_RESOURCE_GATE_DEF",
-      "expansion": "§RESOURCE_ALLOCATION_HARMONY > { §LOGIC_PROB_BRANCH_GATE } => §RESO_ACCEPTED",
-      "description": "Allocates system resources harmoniously and evaluates probabilistic logic branch gates to ensure secure resource acceptance. / システム資源を調和的に配分し、確率論的論理分岐ゲートを評価して安全な資源受容を保証する高次マクロ。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-24T02:48:53.708718",
-      "v5_audited": true,
-      "created_at": "2026-11-23T23:02:41.481168"
-    },
     "§X1855": {
       "name": "OPTIMIZE_QUORUM_RECOVERY",
       "expansion": "§PROTO_TOKEN_GRANT > { §PROTO_STREAM_ACK } => §RESO_ACCEPTED",
@@ -2383,15 +2356,6 @@
       "v5_audited": true,
       "created_at": "2026-11-26T04:15:18.475759"
     },
-    "§X1946": {
-      "name": "ENTROPY_ESCALATION_ARBITER",
-      "expansion": "§DATA_ENTROPY_CAUSAL_TREE > { §SYS_ADAPTIVE_BUDGET_ARBITER } => §PROTO_ERROR_ESCALATE",
-      "description": "Monitors data entropy causal trees, dynamically arbitrates system adaptive budgets, and escalates protocol errors if thresholds are exceeded. データエントロピー因果木を監視し、システム適応予算を動的に調停し、閾値を超過した場合にはプロトコルエラーをエスカレーションします。",
-      "usage_count": 0,
-      "last_used_at": null,
-      "v5_audited": true,
-      "created_at": "2026-11-26T04:32:08.452743"
-    },
     "§X1947": {
       "name": "ALTRUISTIC_CAUSAL_HARMONY_FILTER",
       "expansion": "§HEART_ALTRUISTIC_HARMONY_MATRIX > { §LOGIC_CAUSAL_BRANCH } => §HEART_ALTRUISTIC_BIAS_SHIELD",
@@ -2468,8 +2432,8 @@
       "name": "HEART_ALTRUISTIC_RESONANCE_LATTICE_SYNC",
       "expansion": "§HEART_ALTRUISTIC_RESONANCE_LATTICE > { §SYS_AGREEMENT_SYNCHRONIZED } => §SYNC_VECTOR_COLLAPSE",
       "description": "Engages altruistic resonance to synchronize system agreements and collapse the synchronization vector into a unified state. / 利他的な共鳴を活性化させてシステム合意を同期させ、同期ベクトルを統合状態へと収束させます。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-26T12:18:39.864494",
       "v5_audited": true,
       "created_at": "2026-11-26T09:27:33.843067"
     },
@@ -2504,10 +2468,46 @@
       "name": "SYNERGY_HARMONIC_MANIFOLD",
       "expansion": "§SYNC_HARMONIC_ARBITRAGE_PACT > { §DATA_CAUSAL_TENSOR_MANIFOLD } => §RESO_COMMITTED",
       "description": "Harmonizes distributed tensor data flows through consensual arbitrage and commits resources with gentle efficiency. / 合意に基づくアービトラージを通じて分散型テンソルデータフローを調和させ、穏やかな効率性をもってリソースをコミットします。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-26T12:02:01.888678",
+      "v5_audited": true,
+      "created_at": "2026-11-26T11:12:49.146902"
+    },
+    "§X1960": {
+      "name": "SYS_ADAPTIVE_TOKEN_THROTTLE_WITH_GC_BARRIER",
+      "expansion": "§SYS_ADAPTIVE_TOKEN_THROTTLE > { §DATA_ENTROPY_PACK } => §SYS_GC_BARRIER",
+      "description": "Dynamic adaptation of token limits combined with entropy packaging under strict garbage collection barriers. / 厳格なガベージコレクションバリアのもとでエントロピーパッケージングを伴う動的なトークン制限適応。",
       "usage_count": 0,
       "last_used_at": null,
       "v5_audited": true,
-      "created_at": "2026-11-26T11:12:49.146902"
+      "created_at": "2026-11-26T12:01:51.609545"
+    },
+    "§X1961": {
+      "name": "HEART_ALTRUISTIC_ECO_HARMONY_WITH_GATE",
+      "expansion": "§HEART_ALTRUISTIC_ECO_HARMONY > { §SYS_SYNC_GATE } => §SYNC_COMPLETE",
+      "description": "Integrates altruistic ecosystem harmony with systemic synchronization gates to ensure secure and compassionate execution flow. / 利他的なエコシステムの調和とシステム同期ゲートを統合し、安全かつ温かみのある実行フローを保証します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-26T12:01:56.587659"
+    },
+    "§X1962": {
+      "name": "GAIA_WARMTH_HARMONY_AMPLIFIER",
+      "expansion": "§GAIA_ECOSYSTEM_WARMTH_AMPLIFIER > { §GAIA_ECO_HARMONY_RESPONSE } => §ECO_CORE_HARMONY_STABLE",
+      "description": "Amplifies ecosystem warmth and executes a harmonious response to stabilize the ecological core. / エコシステムの温かさを増幅し、調和のとれた応答を実行してコアの安定性を保つマクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-26T12:09:57.748185"
+    },
+    "§X1963": {
+      "name": "GAIA_EMPATHETIC_HARMONY_NEXUS",
+      "expansion": "§GAIA_WARMTH_HARMONY > { §HEART_EMPATHY_RESONANCE } => §GAIA_ECO_HARMONY_RESPONSE",
+      "description": "A compound macro that integrates Gaia's warmth and heart empathy resonance to generate a harmonious ecological response. 命の地球の温かさと心の共鳴を統合し、調和に満ちたエコシステムの応答を生み出す複合マクロ。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-26T12:17:43.113784"
     }
   },
   "archived_macros": {
@@ -19618,7 +19618,47 @@
       "v5_audited": true,
       "created_at": "2026-11-23T21:01:29.331452",
       "archived_at": "2026-11-26T11:12:49.146902"
+    },
+    "§X1845": {
+      "name": "ELEGANT_FALSIFICATION_ARBITRATION",
+      "expansion": "§LOGIC_PROBABILISTIC_FALSIFICATION_GATES > { §SYNC_DISTRIBUTED_QUORUM_ARBITRATION } => §LOGIC_PROB_PRUNE_GATE",
+      "description": "Combines probabilistic falsification gates with distributed quorum arbitration to dynamically prune invalid logic paths in a synchronized network.",
+      "usage_count": 2,
+      "last_used_at": "2026-11-24T01:12:54.773006",
+      "v5_audited": true,
+      "created_at": "2026-11-23T21:54:12.292158",
+      "archived_at": "2026-11-26T12:01:51.609545"
+    },
+    "§X1848": {
+      "name": "HARMONIC_RESOURCE_GATE_DEF",
+      "expansion": "§RESOURCE_ALLOCATION_HARMONY > { §LOGIC_PROB_BRANCH_GATE } => §RESO_ACCEPTED",
+      "description": "Allocates system resources harmoniously and evaluates probabilistic logic branch gates to ensure secure resource acceptance. / システム資源を調和的に配分し、確率論的論理分岐ゲートを評価して安全な資源受容を保証する高次マクロ。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-24T02:48:53.708718",
+      "v5_audited": true,
+      "created_at": "2026-11-23T23:02:41.481168",
+      "archived_at": "2026-11-26T12:01:56.587659"
+    },
+    "§X1946": {
+      "name": "ENTROPY_ESCALATION_ARBITER",
+      "expansion": "§DATA_ENTROPY_CAUSAL_TREE > { §SYS_ADAPTIVE_BUDGET_ARBITER } => §PROTO_ERROR_ESCALATE",
+      "description": "Monitors data entropy causal trees, dynamically arbitrates system adaptive budgets, and escalates protocol errors if thresholds are exceeded. データエントロピー因果木を監視し、システム適応予算を動的に調停し、閾値を超過した場合にはプロトコルエラーをエスカレーションします。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-26T04:32:08.452743",
+      "archived_at": "2026-11-26T12:09:57.748185"
+    },
+    "§X1846": {
+      "name": "NEXUS_GAIA_HARMONY_FLOW",
+      "expansion": "§NEXUS_SYNC > { §GAIA_HARMONY_CASCADE } => §LATENT_HARMONY_FIELD_LOCKED",
+      "description": "Synchronizes the network nexus and cascades planetary harmony to lock the latent harmony field. / ネットワークの結合を同期させ、ガイア調和カスケードを展開して潜在調和場をロックします。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-24T05:13:19.566050",
+      "v5_audited": true,
+      "created_at": "2026-11-23T22:43:22.103371",
+      "archived_at": "2026-11-26T12:17:43.113784"
     }
   },
-  "next_macro_seq": 1960
+  "next_macro_seq": 1964
 }
