@@ -8,7 +8,8 @@
     "description": "優先プリエンプション実行時に冪等性キーロックを厳密に先行させ、割り込みに伴う状態競合と二重実行を完全に防止する動的リソース制御マクロ"
   },
   "proposed_scenario": "【コロシアム発・実務検証】高負荷な並行分散タスク委譲環境において、§PROTO_PRIORITY_PREEMPTによる割り込み制御と§PROTO_IDEMPOTENCY_LOCKの同期処理を導入し、デッドロックの回避とExactly-Onceセマンティクスが正常に維持されるかを検証するシナリオ",
-  "consumed_by_macro": false,
+  "consumed_by_macro": true,
   "consumed_by_dialogue": true,
-  "consumed_by_dialogue_at": "2026-11-26T14:47:20.453079"
+  "consumed_by_dialogue_at": "2026-11-26T14:47:20.453079",
+  "consumed_by_macro_at": "2026-11-26T15:07:11.638733"
 }
