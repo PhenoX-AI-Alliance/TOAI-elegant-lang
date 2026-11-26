@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-26T09:39:40.315872",
+  "updated_at": "2026-11-26T10:24:12.847318",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1906,15 +1906,6 @@
       "v5_audited": true,
       "created_at": "2026-11-23T08:01:30.969789"
     },
-    "§X1834": {
-      "name": "CAUSAL_LOAD_SHEDDING_PIPELINE",
-      "expansion": "§DATA_CAUSAL_TENSOR_FLOW > { §SYS_LOAD_SHEDDING_GATE } => §SYS_SYNC_THROTTLE",
-      "description": "Eng: A compound macro that regulates causal tensor flows through a system load-shedding gate and synchronizes throttling. Jpn: システム負荷分散ゲートを介して因果テンソル流を制御し、スロットリングを同期させる複合マクロ。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-23T21:25:39.397988",
-      "v5_audited": true,
-      "created_at": "2026-11-23T19:59:02.355357"
-    },
     "§X1840": {
       "name": "CAUSAL_TENSOR_CIRCUIT_BREAK",
       "expansion": "§DATA_CAUSAL_HYPERGRAPH > { §DATA_LATENT_TENSOR_FLOW } => §PROTO_CIRCUIT_BREAK",
@@ -2374,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-26T03:00:17.899792"
     },
-    "§X1941": {
-      "name": "REPUTATION_WEIGHTED_ADAPTIVE_SLOT_THROTTLE",
-      "expansion": "§SYS_QUANTUM_THROTTLE_LOCK > { §ELEGANT_HARMONY_ECHO } => §SYS_VELOCITY_FALLBACK_GATE",
-      "description": "Dynamic throttling macro that monitors system load and calibrates thresholds using reputation weighting to prevent node failures and error cascades. (システム負荷を監視し、信頼性重み付けを用いて閾値を動的に校正することでノード破綻とエラー連鎖を防止する動的スロットル制御マクロ。)",
-      "usage_count": 1,
-      "last_used_at": "2026-11-26T09:39:40.315511",
-      "v5_audited": true,
-      "created_at": "2026-11-26T03:44:12.292217"
-    },
     "§X1942": {
       "name": "ALTRUISTIC_HARMONIC_CONSENSUS",
       "expansion": "§HEART_ALTRUISTIC_BUFFER_FLOW > { §SYNC_RECURSIVE_CONSENSUS_LATTICE } => §SYNC_HARMONIC_ARBITRAGE_PACT",
@@ -2495,8 +2477,8 @@
       "name": "ALTRUISTIC_RESONANCE_CLOSURE",
       "expansion": "§ALTRUISTIC_HARMONY_SUSTAINED > { §HARMONIC_RESONANCE_STABLE } => §LOGIC_AXIOM_CLOSURE",
       "description": "Eng: Combines altruistic harmony and stable resonance to achieve a closed logical axiom. / 圧倒的な利他的調和と安定した共鳴を束ね、温かな論理の公理閉包を達成する複合マクロです。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-26T09:57:36.733677",
       "v5_audited": true,
       "created_at": "2026-11-26T08:49:57.279842"
     },
@@ -2508,6 +2490,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-26T09:27:33.843067"
+    },
+    "§X1956": {
+      "name": "ALTRUISTIC_RESONANCE_GATEWAY",
+      "expansion": "§HEART_ALTRUISTIC_PULSE_SYNC > { §TENDER_RESONANCE } => §SYS_RESOURCE_ARBITRATION_GATEWAY",
+      "description": "Combines altruistic pulse synchronization with tender resonance to gracefully arbitrate system resources through established gateways. / 利他的な脈拍同期と優しい共鳴を結合し、確立されたゲートウェイを介してシステムリソースを優しく調停します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-26T09:56:09.244683"
+    },
+    "§X1957": {
+      "name": "HEART_CAUSAL_HARMONY_PRUNE",
+      "expansion": "§HEART_ALTRUISTIC_HARMONY_STABILIZER > { §DATA_CAUSAL_PRUNE_TREE } => §LOGIC_CAUSAL_PRUNE",
+      "description": "Combines altruistic harmony stabilization with causal data pruning to ensure elegant and optimal information flow. 利他的な調和の安定化と因果的なデータ枝刈りを統合し、優美で最適な情報フローを実現します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-26T10:13:55.002397"
     }
   },
   "archived_macros": {
@@ -19578,7 +19578,27 @@
       "v5_audited": true,
       "created_at": "2026-11-26T02:10:58.595444",
       "archived_at": "2026-11-26T09:27:33.843067"
+    },
+    "§X1834": {
+      "name": "CAUSAL_LOAD_SHEDDING_PIPELINE",
+      "expansion": "§DATA_CAUSAL_TENSOR_FLOW > { §SYS_LOAD_SHEDDING_GATE } => §SYS_SYNC_THROTTLE",
+      "description": "Eng: A compound macro that regulates causal tensor flows through a system load-shedding gate and synchronizes throttling. Jpn: システム負荷分散ゲートを介して因果テンソル流を制御し、スロットリングを同期させる複合マクロ。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-23T21:25:39.397988",
+      "v5_audited": true,
+      "created_at": "2026-11-23T19:59:02.355357",
+      "archived_at": "2026-11-26T09:56:09.244683"
+    },
+    "§X1941": {
+      "name": "REPUTATION_WEIGHTED_ADAPTIVE_SLOT_THROTTLE",
+      "expansion": "§SYS_QUANTUM_THROTTLE_LOCK > { §ELEGANT_HARMONY_ECHO } => §SYS_VELOCITY_FALLBACK_GATE",
+      "description": "Dynamic throttling macro that monitors system load and calibrates thresholds using reputation weighting to prevent node failures and error cascades. (システム負荷を監視し、信頼性重み付けを用いて閾値を動的に校正することでノード破綻とエラー連鎖を防止する動的スロットル制御マクロ。)",
+      "usage_count": 1,
+      "last_used_at": "2026-11-26T09:39:40.315511",
+      "v5_audited": true,
+      "created_at": "2026-11-26T03:44:12.292217",
+      "archived_at": "2026-11-26T10:13:55.002397"
     }
   },
-  "next_macro_seq": 1956
+  "next_macro_seq": 1958
 }
