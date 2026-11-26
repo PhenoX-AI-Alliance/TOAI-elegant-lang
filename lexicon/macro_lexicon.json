@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-27T05:15:49.956363",
+  "updated_at": "2026-11-27T05:36:29.756332",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1712,8 +1712,8 @@
       "name": "HARMONIC_CAUSAL_SYNTHESIS",
       "expansion": "§HARMONIC_RECOVERY_NEXUS > { §LOGIC_CAUSAL_BRANCH } => §AGREEMENT_ACCEPTED",
       "description": "Synthesizes harmonic recovery with causal branching to achieve a verified agreement state. / 調和的回復と因果分岐を統合し、検証済みの合意状態を達成します。",
-      "usage_count": 3,
-      "last_used_at": "2026-11-18T20:34:15.884117",
+      "usage_count": 4,
+      "last_used_at": "2026-11-27T05:26:44.043371",
       "v5_audited": true,
       "created_at": "2026-11-15T15:00:53.105584"
     },
@@ -1924,15 +1924,6 @@
       "v5_audited": true,
       "created_at": "2026-11-24T08:01:51.380164"
     },
-    "§X1886": {
-      "name": "CAUSAL_ENTROPY_PRUNING_GATE",
-      "expansion": "§DATA_CAUSAL_TENSOR_FLOW > { §DATA_ENTROPY_PRUNED_TREE } => §LOGIC_HYPO_PRUNE",
-      "description": "Causal tensor flow optimization combined with data entropy pruning tree to execute logical hypothesis pruning. / 因果テンソル流の最適化とデータエントロピー削除木を結合し、論理仮説の枝刈りを実行する高次マクロ。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-24T22:54:51.469580",
-      "v5_audited": true,
-      "created_at": "2026-11-24T16:13:26.506936"
-    },
     "§X1887": {
       "name": "ECO_ALTRUISTIC_DEDUCTION_MATRIX",
       "expansion": "§HEART_ALTRUISTIC_ECO_HARMONY > { §LOGIC_DEDUCTIVE_FALSIFICATION_VECTOR } => §DATA_ENTROPY_PACK",
@@ -1959,15 +1950,6 @@
       "last_used_at": "2026-11-25T04:14:37.578110",
       "v5_audited": true,
       "created_at": "2026-11-24T20:01:44.227988"
-    },
-    "§X1896": {
-      "name": "COMPOUND_ALTRUISTIC_HARMONY_STABLE",
-      "expansion": "§HEART_ALTRUISTIC_ECO_HARMONY > { §SYNC_DIALECTIC_QUORUM_WEIGHT } => §ECO_CORE_HARMONY_STABLE",
-      "description": "Combines altruistic ecological harmony with dialectical quorum weighting to achieve a stable core ecosystem state. 利他的な生態系の調和と弁証法的なクォーラム重み付けを統合し、安定したコアエコシステムの状態を実現します。",
-      "usage_count": 2,
-      "last_used_at": "2026-11-24T23:01:36.314437",
-      "v5_audited": true,
-      "created_at": "2026-11-24T20:45:21.186337"
     },
     "§X1898": {
       "name": "GAIA_ALTRUISTIC_REPLAY_SHIELD",
@@ -2508,6 +2490,24 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-27T04:59:47.942780"
+    },
+    "§X2005": {
+      "name": "GAIA_CAUSAL_CONVERGENCE_STREAM",
+      "expansion": "§DATA_CAUSAL_MANIFOLD > { §LOGIC_DEDUCTIVE_AXIOM_CONVERGE } => §STABLE_GAIA_COHERENCE",
+      "description": "Eng: A compound macro that processes causal data manifolds through deductive axiom convergence to achieve stable Gaia coherence. / 日: 控除的公理収束を介して因果データ多様体を処理し、安定したガイアコヒーレンスを達成する複合マクロ。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-27T05:26:44.043371",
+      "v5_audited": true,
+      "created_at": "2026-11-27T05:22:36.537494"
+    },
+    "§X2006": {
+      "name": "GAIA_ADAPTIVE_HARMONY_LOOP",
+      "expansion": "§GAIA_WARMTH > { §SYS_ADAPTIVE_TOKEN_THROTTLE | §PROTO_DIFF_PATCH } => §PROTO_QUOTA_RELEASE",
+      "description": "Combines system adaptation with Gaia warmth to gracefully release resource quotas while maintaining environmental stability. / システム適応とガイアの温かさを統合し、環境の安定性を保ちながらリソースクォータを優しく解放します。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-27T05:36:29.755714"
     }
   },
   "archived_macros": {
@@ -20068,7 +20068,27 @@
       "v5_audited": true,
       "created_at": "2026-11-24T18:23:18.396178",
       "archived_at": "2026-11-27T04:59:47.942780"
+    },
+    "§X1886": {
+      "name": "CAUSAL_ENTROPY_PRUNING_GATE",
+      "expansion": "§DATA_CAUSAL_TENSOR_FLOW > { §DATA_ENTROPY_PRUNED_TREE } => §LOGIC_HYPO_PRUNE",
+      "description": "Causal tensor flow optimization combined with data entropy pruning tree to execute logical hypothesis pruning. / 因果テンソル流の最適化とデータエントロピー削除木を結合し、論理仮説の枝刈りを実行する高次マクロ。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-24T22:54:51.469580",
+      "v5_audited": true,
+      "created_at": "2026-11-24T16:13:26.506936",
+      "archived_at": "2026-11-27T05:22:36.537494"
+    },
+    "§X1896": {
+      "name": "COMPOUND_ALTRUISTIC_HARMONY_STABLE",
+      "expansion": "§HEART_ALTRUISTIC_ECO_HARMONY > { §SYNC_DIALECTIC_QUORUM_WEIGHT } => §ECO_CORE_HARMONY_STABLE",
+      "description": "Combines altruistic ecological harmony with dialectical quorum weighting to achieve a stable core ecosystem state. 利他的な生態系の調和と弁証法的なクォーラム重み付けを統合し、安定したコアエコシステムの状態を実現します。",
+      "usage_count": 2,
+      "last_used_at": "2026-11-24T23:01:36.314437",
+      "v5_audited": true,
+      "created_at": "2026-11-24T20:45:21.186337",
+      "archived_at": "2026-11-27T05:36:29.755714"
     }
   },
-  "next_macro_seq": 2005
+  "next_macro_seq": 2007
 }
