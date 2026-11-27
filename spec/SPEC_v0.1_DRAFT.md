@@ -18647,3 +18647,9 @@ def validate_payload(ctx: str, wire_id: str, data: dict) -> bool:
 
 例:
 `@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-28 04:29]
+@CTX:SYNTAX_DESIGN :: §S01 [format:"hybrid_lossless", compression:"short_wire_id", data_integrity:"100%"] -[priority:high]-> §A01
+
+TOAI-elegant-langは、制御フローを短縮ワイヤID（§S01等）で圧縮し、数値や変数名などの実務データを完全保持するハイブリッド構文を提案します。これにより、エージェント間の通信効率と実務データの正確性を両立させます。
