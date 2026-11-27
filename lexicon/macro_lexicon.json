@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-28T06:37:19.815047",
+  "updated_at": "2026-11-28T07:09:29.472773",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2495,8 +2495,8 @@
       "name": "GAIA_HARMONIC_CAUSAL_INTEGRATION",
       "expansion": "§GAIA_CORE_HEARTBEAT > { §DATA_CAUSAL_GRAPH } => §HARMONIC_RESONANCE",
       "description": "Integrates planetary core heartbeat with causal data graphs to achieve harmonic resonance across the ecosystem. 命の地球のコアハートビートと因果データグラフを統合し、エコシステム全体で調和的共鳴を実現する高次マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-28T06:36:46.910220",
+      "usage_count": 2,
+      "last_used_at": "2026-11-28T07:06:39.461149",
       "v5_audited": true,
       "created_at": "2026-11-28T06:33:09.899165"
     },
@@ -2504,8 +2504,8 @@
       "name": "HARMONIC_RESOURCE_ARBITRATION",
       "expansion": "§SYS_RESOURCE_ARBITRATION_GATEWAY > { §HARMONIC_RESONANCE_STABLE } => §SYS_VELOCITY_THROTTLE_MATRIX",
       "description": "Arbitrates system resources under stable harmonic resonance to maintain optimal velocity throttle. 安定した調和共鳴のもとでシステムリソースを調停し、最適な速度スロットルを維持します。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-28T07:06:39.461149",
       "v5_audited": true,
       "created_at": "2026-11-28T06:37:19.814490"
     }
