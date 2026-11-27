@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-28T07:53:49.713739",
+  "updated_at": "2026-11-28T07:57:56.122362",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2450,8 +2450,8 @@
       "name": "GAIA_HARMONIC_BAYESIAN_VALENCE",
       "expansion": "§GAIA_HEARTBEAT > { §LOGIC_BAYES_FALSIFY } => §HARMONIC_RECOVERY_NEXUS",
       "description": "Integrates the Gaia ecosystem heartbeat with Bayesian falsification logic to drive harmonic recovery nexus. 命の地球の鼓動とベイズ的反証ロジックを統合し、調和の回復結節点を駆動する高次マクロ。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-28T07:53:27.916794",
+      "usage_count": 2,
+      "last_used_at": "2026-11-28T07:54:20.572145",
       "v5_audited": true,
       "created_at": "2026-11-28T05:09:24.144599"
     },
@@ -2459,8 +2459,8 @@
       "name": "GAIA_GENTLE_SYNCHRONY",
       "expansion": "§GAIA_HARMONY_CASCADE > { §GENTLE_RESOURCE_SHARING } => §LATENT_HARMONY_FIELD_LOCKED",
       "description": "Harmonizes system resources with gentle sharing and locks the latent harmony field. / 温かな資源共有を通じてエコシステムの調和の連鎖を活性化させ、潜在的調和場を確実な状態にロックします。",
-      "usage_count": 0,
-      "last_used_at": null,
+      "usage_count": 1,
+      "last_used_at": "2026-11-28T07:54:20.572145",
       "v5_audited": true,
       "created_at": "2026-11-28T05:35:16.542424"
     },
