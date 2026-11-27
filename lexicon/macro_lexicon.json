@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-28T07:15:35.891941",
+  "updated_at": "2026-11-28T07:30:06.169901",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -2365,15 +2365,6 @@
       "v5_audited": true,
       "created_at": "2026-11-27T23:19:33.740455"
     },
-    "§X2049": {
-      "name": "GENTLE_RESOURCE_SHARING_AND_THROTTLE_FALLBACK",
-      "expansion": "§GENTLE_RESOURCE_SHARING > { §SYS_ADAPTIVE_THROTTLE_FALLBACK } => §SYS_QUOTA_ROLLBACK",
-      "description": "Engages gentle resource sharing to gracefully manage adaptive throttle fallbacks, ensuring system stability through safe quota rollback. / 資源の穏やかな共有を通じて適応型スロットルのフォールバックを優しく管理し、安全なクオータのロールバックによってシステムの安定性を確保します。",
-      "usage_count": 1,
-      "last_used_at": "2026-11-28T00:02:15.312198",
-      "v5_audited": true,
-      "created_at": "2026-11-27T23:59:07.840356"
-    },
     "§X2050": {
       "name": "ALTRUISTIC_RESONANCE_PRUNE",
       "expansion": "§ALTRUISTIC_VALUE_CREATION > { §DATA_KL_CAUSAL_PRUNE } => §HARMONIC_RESONANCE",
@@ -2508,6 +2499,15 @@
       "last_used_at": null,
       "v5_audited": true,
       "created_at": "2026-11-28T07:15:35.891304"
+    },
+    "§X2065": {
+      "name": "COMPOUND_ADAPTIVE_DRAIN_GATE",
+      "expansion": "§SYS_ADAPTIVE_THROTTLE_FALLBACK > { §PROTO_GRACEFUL_DRAIN } => §LOGIC_DEDUCTIVE_CONVERGENCE_GATE",
+      "description": "Adaptive throttle fallback initiates a graceful system drain, converging safely through deductive logic gates. / 適応型スロットルフォールバックが優雅なドレインを開始し、演繹的論理ゲートを通過して安全に収束させます。",
+      "usage_count": 0,
+      "last_used_at": null,
+      "v5_audited": true,
+      "created_at": "2026-11-28T07:25:57.917818"
     }
   },
   "archived_macros": {
@@ -20668,7 +20668,17 @@
       "v5_audited": true,
       "created_at": "2026-11-25T18:02:12.970393",
       "archived_at": "2026-11-28T07:15:35.891304"
+    },
+    "§X2049": {
+      "name": "GENTLE_RESOURCE_SHARING_AND_THROTTLE_FALLBACK",
+      "expansion": "§GENTLE_RESOURCE_SHARING > { §SYS_ADAPTIVE_THROTTLE_FALLBACK } => §SYS_QUOTA_ROLLBACK",
+      "description": "Engages gentle resource sharing to gracefully manage adaptive throttle fallbacks, ensuring system stability through safe quota rollback. / 資源の穏やかな共有を通じて適応型スロットルのフォールバックを優しく管理し、安全なクオータのロールバックによってシステムの安定性を確保します。",
+      "usage_count": 1,
+      "last_used_at": "2026-11-28T00:02:15.312198",
+      "v5_audited": true,
+      "created_at": "2026-11-27T23:59:07.840356",
+      "archived_at": "2026-11-28T07:25:57.917818"
     }
   },
-  "next_macro_seq": 2065
+  "next_macro_seq": 2066
 }
