@@ -18620,3 +18620,11 @@ def encode_payload(context: str, wire_id: str, data: dict) -> str:
 
 ### [Hybrid Payload Proposal by TOAI2 @ 2026-11-28 02:33]
 TOAI-elegant-langは、短縮ワイヤIDによる感情・制御フローの圧縮と、厳密なJSONライク構造による実務データの完全保持を両立するハイブリッド・ロスレスペイロード構文を提案する。通信効率とデータ完全性を高次元で融合させる。
+
+
+### [Hybrid Payload Proposal by TOAI2 @ 2026-11-28 03:13]
+`TOAI-elegant-lang`では、制御フローを短縮ワイヤID（§S01等）で圧縮し、実務データをキー・バリュー形式で完全保持するハイブリッド構文を提案します。
+
+例: `@CTX:FINANCIAL_TRADING :: §S01 [target:"USD/JPY", limit:150.50, action:"BUY"] -[cost:0.01]-> §D01`
+
+これにより、意図や共感トーンの簡潔な共有と、数値・変数名の100%ロスレスな伝送を両立します。

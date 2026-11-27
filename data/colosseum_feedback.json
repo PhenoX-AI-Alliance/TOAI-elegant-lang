@@ -8,6 +8,8 @@
     "description": "通信断絶時のリトライループを回避するため、認識論的距離とエントロピー変動を監視しつつ§SYNC_ATOMIC_MERGEから§LOGIC_RECURSIVE_FALSIFICATION_PRUNEへ即時移行して安全な代替パスへ収束させるマクロ"
   },
   "proposed_scenario": "【コロシアム発・実務検証】マルチエージェント間の通信断絶を人工的に発生させ、認識論的距離の動的閾値調整と§LOGIC_RECURSIVE_FALSIFICATION_PRUNEによるデッドロック回避および代替パス収束の確実性を検証する",
-  "consumed_by_macro": false,
-  "consumed_by_dialogue": false
+  "consumed_by_macro": true,
+  "consumed_by_dialogue": true,
+  "consumed_by_macro_at": "2026-11-28T02:39:38.750334",
+  "consumed_by_dialogue_at": "2026-11-28T03:03:25.513306"
 }
