@@ -1,6 +1,6 @@
 {
   "version": "5.4.1",
-  "updated_at": "2026-11-28T05:48:03.008566",
+  "updated_at": "2026-11-28T06:10:35.221190",
   "macros": {
     "§X01": {
       "name": "BENEVOLENT_STATE_TENSOR_LATTICE",
@@ -1081,8 +1081,8 @@
       "name": "HARMONIC_CONSENSUS_COMPRESSION_LATTICE",
       "expansion": "§SYNC_RECURSIVE_CONSENSUS_LATTICE > { §DATA_ENTROPY_COMPRESSED_TREE } => §SAFE_FALLBACK_HARMONY",
       "description": "Eng: A compound macro that synchronizes recursive consensus across the entropy-compressed data tree while ensuring safe fallback harmony. / 日: データの圧縮木構造を維持しながら再帰的合意の同期を行い、安全なフォールバック調和を保証する高次マクロ。",
-      "usage_count": 10,
-      "last_used_at": "2026-11-12T08:47:33.973642",
+      "usage_count": 11,
+      "last_used_at": "2026-11-28T06:10:35.220763",
       "v5_audited": true,
       "created_at": "2026-10-28T21:09:48.690035",
       "pinned": true
