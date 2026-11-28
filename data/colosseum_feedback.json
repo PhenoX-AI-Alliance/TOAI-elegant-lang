@@ -9,6 +9,7 @@
   },
   "proposed_scenario": "【コロシアム発・実務検証】次期の対話テストでは、複数エージェント環境で過負荷状態を意図的に発生させ、§SYS_ADAPTIVE_THROTTLE_FALLBACKによるスロットリングと§PROTO_STREAM_EOFへの遷移が処理遅延を最小限に抑えて正確に機能するかを検証する。",
   "consumed_by_macro": true,
-  "consumed_by_dialogue": false,
-  "consumed_by_macro_at": "2026-11-28T14:42:39.950979"
+  "consumed_by_dialogue": true,
+  "consumed_by_macro_at": "2026-11-28T14:42:39.950979",
+  "consumed_by_dialogue_at": "2026-11-28T14:54:14.468392"
 }
